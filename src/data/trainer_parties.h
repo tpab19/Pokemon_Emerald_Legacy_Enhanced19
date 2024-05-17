@@ -8225,7 +8225,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jose[] = {
     {
     .iv = 50,
     .lvl = 8,
-    .species = SPECIES_SILICOON,
+    .species = SPECIES_SILCOON,
     },
     {
     .iv = 50,
