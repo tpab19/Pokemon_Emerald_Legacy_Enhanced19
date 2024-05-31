@@ -13,7 +13,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    // test commit comment
+    // test commit comment but now on mac
 
     [MOVE_POUND] =
     {
