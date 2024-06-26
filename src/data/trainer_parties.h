@@ -3416,7 +3416,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 21,
-    .species = SPECIES_MINUM,
+    .species = SPECIES_MINUN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SPARK, MOVE_CHARM, MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE}
     },
@@ -3424,7 +3424,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .iv = 200,
     .lvl = 22,
     .species = SPECIES_CHINCHOU,
-    .heldItem = ITEM_NONE,S
+    .heldItem = ITEM_NONE,
     .moves = {MOVE_SHOCK_WAVE, MOVE_BUBBLE_BEAM, MOVE_FLAIL, MOVE_THUNDER_WAVE}
     },
     {
