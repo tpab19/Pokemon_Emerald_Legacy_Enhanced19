@@ -8968,12 +8968,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_SABLEYE] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 80,
-        .baseDefense   = 80,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 70,
+        .baseHP        = 70,
+        .baseAttack    = 75,
+        .baseDefense   = 95,
+        .baseSpeed     = 40,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 95,
         .types = { TYPE_DARK, TYPE_GHOST },
         .catchRate = 45,
         .expYield = 98,
@@ -9958,7 +9958,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_MAWILE] =
     {
-        .baseHP        = 60,
+        .baseHP        = 70,
         .baseAttack    = 105,
         .baseDefense   = 105,
         .baseSpeed     = 50,

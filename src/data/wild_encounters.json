@@ -1329,7 +1329,7 @@
               {
                 "min_level": 7,
                 "max_level": 8,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_VULPIX"
               },
               {
                 "min_level": 7,
@@ -1379,7 +1379,7 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_SKITTY"
               }
             ]
           }
@@ -1864,7 +1864,12 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_WHISMUR"
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_IGGLYBUFF"
               },
               {
                 "min_level": 6,
@@ -1872,24 +1877,9 @@
                 "species": "SPECIES_WHISMUR"
               },
               {
-                "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_WHISMUR"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_WHISMUR"
-              },
-              {
-                "min_level": 7,
-                "max_level": 7,
-                "species": "SPECIES_WHISMUR"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_WHISMUR"
+                "min_level": 8,
+                "max_level": 8,
+                "species": "SPECIES_GEODUDE"
               },
               {
                 "min_level": 8,
@@ -1914,6 +1904,16 @@
               {
                 "min_level": 8,
                 "max_level": 8,
+                "species": "SPECIES_WHISMUR"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
+                "species": "SPECIES_WHISMUR"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
                 "species": "SPECIES_WHISMUR"
               }
             ]
@@ -2459,28 +2459,28 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 10,
-                "max_level": 15,
-                "species": "SPECIES_GEODUDE"
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 10,
-                "max_level": 20,
+                "min_level": 20,
+                "max_level": 25,
                 "species": "SPECIES_NOSEPASS"
               },
               {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_GEODUDE"
-              },
-              {
-                "min_level": 15,
+                "min_level": 20,
                 "max_level": 20,
                 "species": "SPECIES_GEODUDE"
               },
               {
-                "min_level": 15,
-                "max_level": 20,
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
                 "species": "SPECIES_GEODUDE"
               }
             ]

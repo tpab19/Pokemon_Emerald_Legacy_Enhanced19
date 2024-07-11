@@ -2158,6 +2158,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Takao[] = {
     .lvl = 14,
     .species = SPECIES_MACHOP,
     }
+    {
+    .iv = 127,
+    .lvl = 14,
+    .species = SPECIES_MACHOP,
+    }
 };
 // Route 134 Black Belt
 static const struct TrainerMonNoItemDefaultMoves sParty_Hitoshi[] = {
@@ -4539,18 +4544,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Claude[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Elliot1[] = {
     {
     .iv = 0,
-    .lvl = 10,
-    .species = SPECIES_MAGIKARP,
+    .lvl = 12,
+    .species = SPECIES_CORPHISH,
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 11,
     .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 0,
-    .lvl = 10,
-    .species = SPECIES_MAGIKARP,
+    .lvl = 12,
+    .species = SPECIES_CORPHISH,
     }
 };
 // Route 106 Fisherman 1
@@ -4558,8 +4563,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ned[] = {
     {
     .iv = 10,
     .lvl = 11,
-    .species = SPECIES_TENTACOOL,
-    }
+    .species = SPECIES_HORSEA,
+    },
+    {
+    .iv = 10,
+    .lvl = 12,
+    .species = SPECIES_WINGULL,
+    },
+    {
+    .iv = 10,
+    .lvl = 12,
+    .species = SPECIES_HORSEA,
+    },
 };
 // Route 110 Fisherman
 static const struct TrainerMonNoItemDefaultMoves sParty_Dale[] = {
@@ -7722,12 +7737,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cristian[] = {
     {
     .iv = 127,
     .lvl = 12,
-    .species = SPECIES_TYROGUE,
+    .species = SPECIES_MACHOP,
     },
     {
     .iv = 200,
     .lvl = 14,
     .species = SPECIES_MAKUHITA,
+    },
+    {
+    .iv = 127,
+    .lvl = 12,
+    .species = SPECIES_MACHOP,
     }
 };
 // Mossdeep Gym Hex Maniac 2 - Northwest (Double Battle w Hannah or Virgil)
