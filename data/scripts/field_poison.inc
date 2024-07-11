@@ -8,6 +8,7 @@ EventScript_FieldPoison::
 	end
 
 EventScript_FieldWhiteOut::
+	goto_if_set FLAG_NUZLOCKE, EventScript_WhiteOutSoftReset
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
@@ -24,6 +25,7 @@ EventScript_SetRespawnLavaridgePkmnCenter::
 	return
 
 EventScript_FrontierFieldWhiteOut::
+	goto_if_set FLAG_NUZLOCKE, EventScript_WhiteOutSoftReset
 	message gText_PlayerWhitedOut
 	waitmessage
 	waitbuttonpress
@@ -39,4 +41,8 @@ EventScript_FrontierFieldWhiteOut::
 	fadescreen FADE_TO_BLACK
 	special SetCB2WhiteOut
 	waitstate
+	end
+
+EventScript_WhiteOutSoftReset::
+	special DoSoftReset
 	end

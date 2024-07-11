@@ -35,6 +35,23 @@ gText_Birch_BoyOrGirl::
 	.string "Are you a boy?\n"
 	.string "Or are you a girl?$"
 
+gText_Birch_Nuzlocke::
+	.string "Select difficulty.$"
+
+gText_Birch_AreYouSure_Normal::
+	.string "Are you sure?\n"
+	.string "Classic POKéMON rules.$"
+
+gText_Birch_AreYouSure_Hard::
+	.string "Are you sure?\n"
+	.string "SET mode, no items in battle,\l"
+	.string "GYM level caps.$"
+
+gText_Birch_AreYouSure_Hardcore::
+	.string "Are you sure?\n"
+	.string "Hard mode, but POKéMON can't\l"
+	.string "be revived.$"
+
 gText_Birch_WhatsYourName::
 	.string "All right.\n"
 	.string "What's your name?$"

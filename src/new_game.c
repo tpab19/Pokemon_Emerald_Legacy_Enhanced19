@@ -148,6 +148,8 @@ void ResetMenuAndMonGlobals(void)
 
 void NewGameInitData(void)
 {
+    bool8 nuzlockePrev = FlagGet(FLAG_NUZLOCKE);
+    bool8 hardPrev = FlagGet(FLAG_HARD);  // A function lower down here clears these, so retain it and reset it at the end
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
         RtcReset();
 
@@ -204,6 +206,8 @@ void NewGameInitData(void)
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
     ResetContestLinkResults();
+    nuzlockePrev ? FlagSet(FLAG_NUZLOCKE) : FlagClear(FLAG_NUZLOCKE);
+    hardPrev ? FlagSet(FLAG_HARD) : FlagClear(FLAG_HARD);
 }
 
 static void ResetMiniGamesRecords(void)
