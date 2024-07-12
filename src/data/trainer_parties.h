@@ -2157,7 +2157,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Takao[] = {
     .iv = 127,
     .lvl = 14,
     .species = SPECIES_MACHOP,
-    }
+    },
     {
     .iv = 127,
     .lvl = 14,
