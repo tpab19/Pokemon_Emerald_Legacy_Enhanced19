@@ -101,6 +101,7 @@ PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
 	return
 
 PlayersHouse_2F_EventScript_CheckWallClock::
+	goto_if_set FLAG_NUZLOCKE, EventScript_WhiteOutSoftReset
 	incrementgamestat GAME_STAT_CHECKED_CLOCK
 	fadescreen FADE_TO_BLACK
 	special Special_ViewWallClock

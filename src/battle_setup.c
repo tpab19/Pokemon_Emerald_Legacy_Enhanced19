@@ -1886,3 +1886,45 @@ u16 CountBattledRematchTeams(u16 trainerId)
 
     return i;
 }
+
+static u8 getLevelCap(void){
+    u8 levelCap = 0;
+    u16 nextLeader, i;
+    const struct TrainerMonItemCustomMoves *partyData;
+    if (!FlagGet(FLAG_HARD) || FlagGet(FLAG_IS_CHAMPION))
+        return 100;
+    if (!FlagGet(FLAG_BADGE01_GET))
+        nextLeader = TRAINER_ROXANNE_1;
+    else if (!FlagGet(FLAG_BADGE02_GET))
+        nextLeader = TRAINER_BRAWLY_1;
+    else if (!FlagGet(FLAG_BADGE03_GET))
+        nextLeader = TRAINER_WATTSON_1;
+    else if (!FlagGet(FLAG_BADGE04_GET))
+        nextLeader = TRAINER_FLANNERY_1;
+    else if (!FlagGet(FLAG_BADGE05_GET))
+        nextLeader = TRAINER_NORMAN_1;
+    else if (!FlagGet(FLAG_BADGE06_GET))
+        nextLeader = TRAINER_WINONA_1;
+    else if (!FlagGet(FLAG_BADGE07_GET))
+        nextLeader = TRAINER_TATE_AND_LIZA_1;
+    else if (!FlagGet(FLAG_BADGE08_GET))
+        nextLeader = TRAINER_JUAN_1;
+    else if (!FlagGet(FLAG_IS_CHAMPION))
+        nextLeader = TRAINER_WALLACE;
+
+    partyData = gTrainers[nextLeader].party.ItemCustomMoves;
+    for (i = 0; i < gTrainers[nextLeader].partySize; i++){
+        if (partyData[i].lvl > levelCap)
+            levelCap = partyData[i].lvl;
+    }
+    return levelCap;
+}
+
+bool8 levelCappedNuzlocke(u8 level){
+    u8 levelCap = getLevelCap();
+    if (!FlagGet(FLAG_HARD) || FlagGet(FLAG_IS_CHAMPION))
+        return FALSE;  //Redundant since getLevelCap would already return 100 for these, but better to be explicit
+    if (level >= levelCap)
+        return TRUE;
+    return FALSE;
+}
