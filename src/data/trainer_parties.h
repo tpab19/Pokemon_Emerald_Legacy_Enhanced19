@@ -10169,11 +10169,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Johnson[] = {
     .iv = 0,
     .lvl = 8,
     .species = SPECIES_LOTAD,
-    },
-    {
-    .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_SEEDOT,
+    }
     }
 };
 // Route 117 TriathleteF 2
