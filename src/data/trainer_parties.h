@@ -214,25 +214,25 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntWeatherInst3[] = {
     .species = SPECIES_CARVANHA,
     }
 };
-
+//Slateport Museum Grunt 1
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum1[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 17,
     .species = SPECIES_CARVANHA,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
-    {
-    .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_ZUBAT,
     },
     {
     .iv = 0,
-    .lvl = 14,
-    .species = SPECIES_CARVANHA,
+    .lvl = 18,
+    .species = SPECIES_ZUBAT,
+    }
+};
+//Slateport Museum Grunt 2
+static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
+    {
+    .iv = 0,
+    .lvl = 20,
+    .species = SPECIES_GYARADOS,
     }
 };
 
@@ -3420,7 +3420,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
-    .lvl = 21,
+    .lvl = 23,
     .species = SPECIES_MINUN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SPARK, MOVE_CHARM, MOVE_QUICK_ATTACK, MOVE_THUNDER_WAVE}
@@ -3434,7 +3434,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     },
     {
     .iv = 220,
-    .lvl = 21,
+    .lvl = 23,
     .species = SPECIES_MAGNETON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SUPERSONIC, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
