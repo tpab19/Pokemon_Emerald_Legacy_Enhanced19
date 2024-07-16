@@ -1137,10 +1137,12 @@ const u16 gEggMoves[] = {
 
     egg_moves(PLUSLE,
               MOVE_SUBSTITUTE,
+              MOVE_MAGICAL_LEAF,
               MOVE_WISH),
 
     egg_moves(MINUN,
               MOVE_SUBSTITUTE,
+              MOVE_MAGICAL_LEAF,
               MOVE_WISH),
 
     egg_moves(MAWILE,
