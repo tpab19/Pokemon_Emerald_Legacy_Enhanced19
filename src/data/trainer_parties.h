@@ -6719,7 +6719,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Hector[] = {
     .lvl = 23,
     .species = SPECIES_ZANGOOSE,
     }
-    }
 };
 // Magma Admin Space Center (Double Battle w)
 static const struct TrainerMonNoItemDefaultMoves sParty_TabithaMossdeep[] = {
@@ -10170,7 +10169,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Johnson[] = {
     .iv = 0,
     .lvl = 8,
     .species = SPECIES_LOTAD,
-    }
     }
 };
 // Route 117 TriathleteF 2
