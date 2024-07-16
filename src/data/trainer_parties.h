@@ -7706,12 +7706,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Brenden[] = {
     {
     .iv = 100,
     .lvl = 13,
-    .species = SPECIES_MACHOP,
+    .species = SPECIES_MEDITITE,
     },
     {
     .iv = 120,
     .lvl = 13,
-    .species = SPECIES_WINGULL,
+    .species = SPECIES_,
     }
 };
 // Dewford Gym Battle Girl 2 (Double Battle w Brenden)
@@ -7724,7 +7724,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Lilith[] = {
     {
     .iv = 100,
     .lvl = 13,
-    .species = SPECIES_MEDITITE,
+    .species = SPECIES_ARON,
     }
 };
 // Dewford Gym Black Belt 2 (Top Middle)

@@ -2815,13 +2815,13 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "min_level": 8,
+                "max_level": 12,
+                "species": "SPECIES_HORSEA"
               },
               {
-                "min_level": 5,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 12,
                 "species": "SPECIES_TENTACOOL"
               },
               {
@@ -2904,8 +2904,8 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 12,
                 "species": "SPECIES_MAGIKARP"
               },
               {
@@ -3082,13 +3082,13 @@
             "encounter_rate": 30,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MAGIKARP"
+                "min_level": 9,
+                "max_level": 14,
+                "species": "SPECIES_CORPHISH"
               },
               {
-                "min_level": 5,
-                "max_level": 10,
+                "min_level": 9,
+                "max_level": 14,
                 "species": "SPECIES_TENTACOOL"
               },
               {
@@ -8577,13 +8577,13 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 12,
                 "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 5,
-                "max_level": 10,
+                "min_level": 8,
+                "max_level": 12,
                 "species": "SPECIES_TENTACOOL"
               },
               {
