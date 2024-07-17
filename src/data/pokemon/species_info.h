@@ -10858,12 +10858,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_CASTFORM] =
     {
-        .baseHP        = 70,
+        .baseHP        = 75,
         .baseAttack    = 70,
-        .baseDefense   = 70,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 70,
-        .baseSpDefense = 70,
+        .baseDefense   = 75,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 75,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .catchRate = 45,
         .expYield = 145,
@@ -10888,12 +10888,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_VOLBEAT] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 73,
+        .baseHP        = 70,
+        .baseAttack    = 88,
         .baseDefense   = 55,
         .baseSpeed     = 85,
-        .baseSpAttack  = 47,
-        .baseSpDefense = 75,
+        .baseSpAttack  = 87,
+        .baseSpDefense = 65,
         .types = { TYPE_BUG, TYPE_BUG },
         .catchRate = 150,
         .expYield = 146,
@@ -10918,12 +10918,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_ILLUMISE] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 47,
-        .baseDefense   = 55,
+        .baseHP        = 80,
+        .baseAttack    = 73,
+        .baseDefense   = 75,
         .baseSpeed     = 85,
-        .baseSpAttack  = 73,
-        .baseSpDefense = 75,
+        .baseSpAttack  = 47,
+        .baseSpDefense = 90,
         .types = { TYPE_BUG, TYPE_BUG },
         .catchRate = 150,
         .expYield = 146,
