@@ -3492,20 +3492,20 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     .lvl = 29,
     .species = SPECIES_GIRAFARIG,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FACADE, MOVE_PSYBEAM, MOVE_BITE, MOVE_CALM_MIND}
+    .moves = {MOVE_FACADE, MOVE_PSYBEAM, MOVE_BITE, MOVE_CURSE}
     },
     {
     .iv = 200,
     .lvl = 29,
     .species = SPECIES_LINOONE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SLASH, MOVE_BELLY_DRUM, MOVE_FACADE, MOVE_DIG}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_PURSUIT, MOVE_BELLY_DRUM, MOVE_FACADE, MOVE_DIG}
     },
     {
     .iv = 250,
     .lvl = 32,
     .species = SPECIES_SLAKING,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_COUNTER, MOVE_YAWN, MOVE_FACADE, MOVE_FAINT_ATTACK}
     }
 };
