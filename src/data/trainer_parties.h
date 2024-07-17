@@ -7711,7 +7711,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Brenden[] = {
     {
     .iv = 120,
     .lvl = 13,
-    .species = SPECIES_,
+    .species = SPECIES_ARON,
     }
 };
 // Dewford Gym Battle Girl 2 (Double Battle w Brenden)
