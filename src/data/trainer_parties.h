@@ -3421,7 +3421,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 23,
-    .species = SPECIES_MINUN,
+    .species = SPECIES_PLUSLE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_SPARK, MOVE_CHARM, MOVE_QUICK_ATTACK, MOVE_MAGICAL_LEAF}
     },
