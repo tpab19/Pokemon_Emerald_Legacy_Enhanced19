@@ -3513,37 +3513,37 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     {
     .iv = 210,
-    .lvl = 29,
-    .species = SPECIES_SWABLU,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_PERISH_SONG, MOVE_MIRROR_MOVE, MOVE_SAFEGUARD, MOVE_AERIAL_ACE}
-    },
-    {
-    .iv = 210,
-    .lvl = 29,
+    .lvl = 32,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SUNNY_DAY, MOVE_AERIAL_ACE, MOVE_SOLAR_BEAM, MOVE_SYNTHESIS}
-    },
-    {
-    .iv = 210,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_GUN, MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_AERIAL_ACE}
+    .moves = {MOVE_AERIAL_ACE, MOVE_MAGICAL_LEAF, MOVE_EARTHQUAKE, MOVE_WHIRLWIND}
     },
     {
     .iv = 220,
-    .lvl = 31,
-    .species = SPECIES_SKARMORY,
+    .lvl = 33,
+    .species = SPECIES_SWELLOW,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SAND_ATTACK, MOVE_FURY_ATTACK, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
+    .moves = {MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_TAKE_DOWN, MOVE_WHIRLWIND}
+    },
+    {
+    .iv = 210,
+    .lvl = 32,
+    .species = SPECIES_PELIPPER,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_PULSE, MOVE_SHOCK_WAVE, MOVE_ICE_BEAM, MOVE_AERIAL_ACE}
+    },
+    {
+    .iv = 245,
+    .lvl = 33,
+    .species = SPECIES_SKARMORY,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_SPIKES, MOVE_MUD_SLAP, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
-    .lvl = 33,
+    .lvl = 35,
     .species = SPECIES_ALTARIA,
-    .heldItem = ITEM_ORAN_BERRY,
+    .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_BREATH, MOVE_DRAGON_DANCE, MOVE_AERIAL_ACE}
     }
 };
@@ -3562,6 +3562,13 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     .species = SPECIES_XATU,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PSYCHIC, MOVE_SUNNY_DAY, MOVE_CONFUSE_RAY, MOVE_CALM_MIND}
+    },
+    {
+    .iv = 250,
+    .lvl = 41,
+    .species = SPECIES_CHIMECHO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WISH, MOVE_HEAL_BELL, MOVE_HELPING_HAND, MOVE_PSYCHIC}
     },
     {
     .iv = 250,
@@ -4484,6 +4491,44 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     .species = SPECIES_MILOTIC,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_RECOVER, MOVE_SURF, MOVE_ICE_BEAM, MOVE_TOXIC}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Wallace2[] = {
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 43,
+    .species = SPECIES_MASQUERAIN,
+    .heldItem = ITEM_SILVER_POWDER,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
+    },
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_WHISCASH,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
+    },
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_LUDICOLO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
     }
 };
 // Route 103 Fisherman
