@@ -9688,12 +9688,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_SNORUNT] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 50,
-        .baseDefense   = 50,
-        .baseSpeed     = 50,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 50,
+        .baseHP        = 60,
+        .baseAttack    = 60,
+        .baseDefense   = 60,
+        .baseSpeed     = 60,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 60,
         .types = { TYPE_ICE, TYPE_ICE },
         .catchRate = 190,
         .expYield = 74,
@@ -9718,12 +9718,12 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_GLALIE] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 80,
-        .baseDefense   = 80,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 80,
+        .baseHP        = 85,
+        .baseAttack    = 85,
+        .baseDefense   = 85,
+        .baseSpeed     = 85,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 85,
         .types = { TYPE_ICE, TYPE_ICE },
         .catchRate = 75,
         .expYield = 187,
@@ -9740,7 +9740,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FAIRY, EGG_GROUP_MINERAL },
-        .abilities = {ABILITY_INNER_FOCUS, ABILITY_NONE},
+        .abilities = {ABILITY_LEVITATE, ABILITY_INTIMIDATE},
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
