@@ -8178,6 +8178,7 @@ const union {
         .SHOCK_WAVE = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
+        .SHADOW_BALL = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
