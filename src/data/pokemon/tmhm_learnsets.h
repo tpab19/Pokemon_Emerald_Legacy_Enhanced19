@@ -9517,6 +9517,7 @@ const union {
         .DOUBLE_TEAM = TRUE,
         .SLUDGE_BOMB = TRUE,
         .SANDSTORM = TRUE,
+        .ROCK_TOMB = TRUE,
         .FACADE = TRUE,
         .SECRET_POWER = TRUE,
         .REST = TRUE,
