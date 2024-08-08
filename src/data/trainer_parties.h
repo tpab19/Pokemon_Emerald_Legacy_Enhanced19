@@ -7770,7 +7770,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brenden[] = {
     .lvl = 13,
     .species = SPECIES_CORPHISH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROCK_SMASH, MOVE_BUBBLE, MOVE_HARDEN, MOVE_VICEGRIP}
+    .moves = {MOVE_ROCK_SMASH, MOVE_BUBBLE, MOVE_HARDEN, MOVE_VICE_GRIP}
     }
 };
 // Dewford Gym Battle Girl 2 (Double Battle w Brenden)
@@ -9651,7 +9651,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Marcos[] = {
     {
     .iv = 100,
     .lvl = 17,
-    .species = SPECIES_WHIMSUR,
+    .species = SPECIES_WHISMUR,
     },
 };
 // Route 103 Cut Black Belt (Double Battle w Marcos)
