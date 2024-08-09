@@ -13,8 +13,6 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = 0,
     },
 
-    // test commit comment but now on mac
-
     [MOVE_POUND] =
     {
         .effect = EFFECT_HIT,
