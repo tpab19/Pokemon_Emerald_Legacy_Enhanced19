@@ -915,6 +915,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
+        .FLASH = TRUE,
     } },
 
     [SPECIES_NINETALES] = { .learnset = {
@@ -937,6 +938,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
+        .FLASH = TRUE,
     } },
 
     [SPECIES_JIGGLYPUFF] = { .learnset = {
@@ -6745,6 +6747,7 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -6771,6 +6774,7 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -6800,6 +6804,7 @@ const union {
         .OVERHEAT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -9349,6 +9354,7 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -9376,6 +9382,7 @@ const union {
         .ATTRACT = TRUE,
         .CUT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -9416,6 +9423,7 @@ const union {
         .CUT = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 

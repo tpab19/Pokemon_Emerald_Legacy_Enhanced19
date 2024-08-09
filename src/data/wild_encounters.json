@@ -707,14 +707,14 @@
                 "species": "SPECIES_WINGULL"
               },
               {
-                "min_level": 12,
-                "max_level": 13,
-                "species": "SPECIES_WINGULL"
+                "min_level": 13,
+                "max_level": 14,
+                "species": "SPECIES_PLUSLE"
               },
               {
                 "min_level": 15,
                 "max_level": 15,
-                "species": "SPECIES_PLUSLE"
+                "species": "SPECIES_WINGULL"
               },
               {
                 "min_level": 15,
