@@ -237,6 +237,16 @@ DewfordTown_Gym_EventScript_CristianBrightenRoom::
 	release
 	end
 
+DewfordTown_Gym_EventScript_Kenji::
+	trainerbattle_single TRAINER_KENJI, DewfordTown_Gym_Text_KenjiIntro, DewfordTown_Gym_Text_KenjiDefeat, DewfordTown_Gym_EventScript_KenjiBrightenRoom
+	msgbox DewfordTown_Gym_Text_KenjiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DewfordTown_Gym_EventScript_KenjiBrightenRoom::
+	call DewfordTown_Gym_EventScript_BrightenRoom
+	release
+	end
+
 DewfordTown_Gym_EventScript_Lilith::
 	trainerbattle_single TRAINER_LILITH, DewfordTown_Gym_Text_LilithIntro, DewfordTown_Gym_Text_LilithDefeat, DewfordTown_Gym_EventScript_LilithBrightenRoom
 	msgbox DewfordTown_Gym_Text_LilithPostBattle, MSGBOX_AUTOCLOSE
@@ -378,6 +388,18 @@ DewfordTown_Gym_Text_CristianDefeat:
 DewfordTown_Gym_Text_CristianPostBattle:
 	.string "You win!\n"
 	.string "Go after that BADGE!$"
+
+DewfordTown_Gym_Text_KenjiIntro:
+	.string "You dare challenge me in the dark?\n"
+	.string "Let's see if your spirit shines bright!$"
+
+DewfordTown_Gym_Text_KenjiDefeat:
+	.string "Argh… My training\n"
+	.string "wasn't enough…$"
+
+DewfordTown_Gym_Text_KenjiPostBattle:
+	.string "Even in the dark, I sense your power.\n"
+	.string "You’ve earned the path forward.$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
 	.string "I'm BRAWLY!\n"

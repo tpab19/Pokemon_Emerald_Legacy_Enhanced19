@@ -9,3 +9,7 @@ GraniteCave_B1F_SetHoleWarp:
 	setholewarp MAP_GRANITE_CAVE_B2F
 	end
 
+DewfordTown_EventScript_Daniel::
+	trainerbattle_single TRAINER_DANIEL, GraniteCaveB1F_Text_DanielIntro, GraniteCaveB1F_Text_DanielDefeated
+	msgbox GraniteCaveB1F_Text_DanielPostBattle, MSGBOX_AUTOCLOSE
+	end

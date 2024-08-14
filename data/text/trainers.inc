@@ -576,6 +576,44 @@ Route106_Text_NedPostBattle:
 	.string "Oh, no! I've got this feeling I'll hook\n"
 	.string "a big one!$"
 
+DewfordTown_Text_TullyIntro:
+	.string "The sea is full of mysteries…\n"
+	.string "Will you be one of them?$"
+
+DewfordTown_Text_TullyDefeated:
+	.string "Looks like you reeled me in…\n"
+	.string "Hook, line, and sinker!$"
+
+DewfordTown_Text_TullyPostBattle:
+	.string "Even the best fishermen lose a catch now\n"
+	.string "and then. You’re a real challenge!$"
+
+GraniteCaveB1F_Text_DanielIntro:
+	.string "The rugged path ahead tests both\n"
+	.string "your strength and endurance!\p"
+	.string "Are you ready to face the mountain?$"
+
+GraniteCaveB1F_Text_DanielDefeated:
+	.string "Whoo…\n"
+	.string "You’re as solid as a boulder!$"
+
+GraniteCaveB1F_Text_DanielPostBattle:
+	.string "You’ve got the spirit of a true adventurer!\n"
+	.string "Keep climbing, and you’ll reach the peak!$"
+
+GraniteCaveB2F_Text_TobinIntro:
+	.string "Granite Cave’s secrets are for those\n"
+	.string "who dare to dig deep!\p"
+	.string "Let’s see how far you can go!$"
+
+GraniteCaveB2F_Text_TobinDefeated:
+	.string "Whoa… The earth shook beneath me!\n"
+	.string "You're unstoppable!$"
+
+GraniteCaveB2F_Text_TobinPostBattle:
+	.string "Not bad, kid! You’ve got the\n"
+	.string "makings of a true spelunker!$"
+
 Route106_Text_DouglasIntro:
 	.string "Hahahah! I'm a lousy runner, but in\n"
 	.string "the water you can't catch me!$"

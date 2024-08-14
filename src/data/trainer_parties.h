@@ -12600,3 +12600,56 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+// Dewford Gym Black Belt 3 (Top Left)
+static const struct TrainerMon sParty_Kenji[] = {
+    {
+    .iv = 127,
+    .lvl = 12,
+    .species = SPECIES_MACHOP,
+    },
+    {
+    .iv = 200,
+    .lvl = 14,
+    .species = SPECIES_MAKUHITA,
+    },
+    {
+    .iv = 127,
+    .lvl = 12,
+    .species = SPECIES_MACHOP,
+    }
+};
+
+// Dewford Town Fisherman
+static const struct TrainerMon sParty_Tully[] = {
+    {
+    .iv = 10,
+    .lvl = 11,
+    .species = SPECIES_HORSEA,
+    },
+    {
+    .iv = 10,
+    .lvl = 11,
+    .species = SPECIES_TENTACOOL,
+    },
+    {
+    .iv = 10,
+    .lvl = 11,
+    .species = SPECIES_HORSEA,
+    },
+};
+
+static const struct TrainerMon sParty_Daniel[] = {
+    {
+    .iv = 0,
+    .lvl = 25,
+    .species = SPECIES_GRAVELER,
+    }
+};
+
+static const struct TrainerMon sParty_Tobin[] = {
+    {
+    .iv = 0,
+    .lvl = 25,
+    .species = SPECIES_GRAVELER,
+    }
+};

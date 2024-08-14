@@ -10232,7 +10232,7 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_LEAF,
         .trainerName = _("LEAF"),
         .items = {},
-        .doubleBattle = FALSE,
+        .doubleBattle = FALSE, 
         .aiFlags = 0,
         .party = TRAINER_MON(sParty_Leaf),
     },
@@ -10259,5 +10259,53 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = 0,
         .party = TRAINER_MON(sParty_MayLinkPlaceholder),
+    },
+
+    [TRAINER_KENJI] =
+    {
+        .trainerClass = TRAINER_CLASS_BLACK_BELT,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .trainerName = _("KENJI"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Kenji),
+    },
+
+    [TRAINER_TULLY] =
+    {
+        .trainerClass = TRAINER_CLASS_FISHERMAN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_FISHERMAN,
+        .trainerName = _("TULLY"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Tully),
+    },
+
+    [TRAINER_DANIEL] =
+    {
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("DANIEL"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Daniel),
+    },
+
+    [TRAINER_TOBIN] =
+    {
+        .trainerClass = TRAINER_CLASS_HIKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerName = _("TOBIN"),
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Tobin),
     },
 };
