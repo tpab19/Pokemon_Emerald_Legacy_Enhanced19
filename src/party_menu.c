@@ -5113,6 +5113,12 @@ static void Task_TryLearningNextMove(u8 taskId)
     }
 }
 
+static void CB2_ReturnToPartyMenuUsingRareCandy(void)
+{
+    gItemUseCB = ItemUseCB_RareCandy;
+    SetMainCallback2(CB2_ShowPartyMenuForItemUse);
+}
+
 static void PartyMenuTryEvolution(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5139,12 +5145,6 @@ static void PartyMenuTryEvolution(u8 taskId)
         else
             gTasks[taskId].func = Task_ClosePartyMenuAfterText;
     }
-}
-
-static void CB2_ReturnToPartyMenuUsingRareCandy(void)
-{
-    gItemUseCB = ItemUseCB_RareCandy;
-    SetMainCallback2(CB2_ShowPartyMenuForItemUse);
 }
 
 static void DisplayMonNeedsToReplaceMove(u8 taskId)
