@@ -115,7 +115,6 @@ static bool8 HandleStartMenuInput(void);
 // Save dialog callbacks
 static u8 SaveConfirmSaveCallback(void);
 static u8 SaveYesNoCallback(void);
-static u8 SaveConfirmInputCallback(void);
 static u8 SaveFileExistsCallback(void);
 static u8 SaveConfirmOverwriteDefaultNoCallback(void);
 static u8 SaveConfirmOverwriteCallback(void);
@@ -987,47 +986,36 @@ static u8 SaveConfirmSaveCallback(void)
     }
     else
     {
-        ShowSaveMessage(gText_ConfirmSave, SaveYesNoCallback);
+        SaveYesNoCallback();
     }
 
+    return SAVE_IN_PROGRESS;
+}
+
+static u8 DoSaveCallback(void)
+{
+    switch (gSaveFileStatus)
+    {
+    case SAVE_STATUS_EMPTY:
+    case SAVE_STATUS_CORRUPT:
+        if (gDifferentSaveFile == FALSE)
+        {
+            sSaveDialogCallback = SaveFileExistsCallback;
+            return SAVE_IN_PROGRESS;
+        }
+
+        sSaveDialogCallback = SaveSavingMessageCallback;
+        return SAVE_IN_PROGRESS;
+    default:
+        sSaveDialogCallback = SaveFileExistsCallback;
+        return SAVE_IN_PROGRESS;
+    }
     return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveYesNoCallback(void)
 {
-    DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
-    sSaveDialogCallback = SaveConfirmInputCallback;
-    return SAVE_IN_PROGRESS;
-}
-
-static u8 SaveConfirmInputCallback(void)
-{
-    switch (Menu_ProcessInputNoWrapClearOnChoose())
-    {
-    case 0: // Yes
-        switch (gSaveFileStatus)
-        {
-        case SAVE_STATUS_EMPTY:
-        case SAVE_STATUS_CORRUPT:
-            if (gDifferentSaveFile == FALSE)
-            {
-                sSaveDialogCallback = SaveFileExistsCallback;
-                return SAVE_IN_PROGRESS;
-            }
-
-            sSaveDialogCallback = SaveSavingMessageCallback;
-            return SAVE_IN_PROGRESS;
-        default:
-            sSaveDialogCallback = SaveFileExistsCallback;
-            return SAVE_IN_PROGRESS;
-        }
-    case MENU_B_PRESSED:
-    case 1: // No
-        HideSaveInfoWindow();
-        HideSaveMessageWindow();
-        return SAVE_CANCELED;
-    }
-
+    sSaveDialogCallback = DoSaveCallback;
     return SAVE_IN_PROGRESS;
 }
 
@@ -1040,7 +1028,7 @@ static u8 SaveFileExistsCallback(void)
     }
     else
     {
-        ShowSaveMessage(gText_AlreadySavedFile, SaveConfirmOverwriteCallback);
+        sSaveDialogCallback = SaveSavingMessageCallback;
     }
 
     return SAVE_IN_PROGRESS;
