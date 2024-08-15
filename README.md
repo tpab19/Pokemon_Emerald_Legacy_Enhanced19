@@ -95,6 +95,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - paccy - [Change the Clock Time](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-18#post-10481737)
 - dunsparce9 - [Less annoying berries](https://github.com/dunsparce9/pokeemerald-tweaks/commit/40685e31e4d50722a922ec1201a8397f81fc17d2)
 - LOuroboros - [DPPt Bike (a 2-in-1 Bike)](https://github.com/LOuroboros/pokeemerald/commit/ab27f6ff1663a07ea8a8d96c877bbb9279f72f53)
+- FieryMewtwo - [Fast heal](https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy)
 
 
 ### Other Credits:
