@@ -93,6 +93,26 @@ MeteorFalls_1F_1R_EventScript_MagmaStealsMeteoriteScene::
 	setflag FLAG_MET_ARCHIE_METEOR_FALLS
 	setflag FLAG_HIDE_FALLARBOR_TOWN_BATTLE_TENT_SCOTT
 	setvar VAR_METEOR_FALLS_STATE, 1
+	applymovement OBJ_EVENT_ID_PLAYER, MeteorFalls_1F_1R_Movement_PlayerToProf
+	waitmovement 0
+	applymovement 10, MeteorFalls_1F_1R_Movement_Prof
+	waitmovement 0
+	setflag FLAG_MET_PROF_COZMO
+	msgbox MeteorFalls_1F_1R_Text_MeetProfCozmo, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MeteorFalls_1F_1R_WarpToFallarbor
+	goto_if_eq VAR_RESULT, NO, MeteorFalls_1F_1R_ProfCozmoDontWalkToFallarbor
+MeteorFalls_1F_1R_ProfCozmoDontWalkToFallarbor:
+	msgbox MeteorFalls_1F_1R_Text_ProfCozmoDontWalkToFallarbor, MSGBOX_DEFAULT
+	releaseall
+	end
+
+MeteorFalls_1F_1R_WarpToFallarbor:
+	msgbox MeteorFalls_1F_1R_Text_ProfCozmoWalkToFallarbor, MSGBOX_DEFAULT
+	delay 30
+	warp MAP_FALLARBOR_TOWN_COZMOS_HOUSE, 7, 4
+	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
+	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
+	waitstate
 	releaseall
 	end
 
@@ -213,6 +233,20 @@ MeteorFalls_1F_1R_Movement_AquaGrunt2ApproachArchie:
 	walk_in_place_faster_up
 	step_end
 
+MeteorFalls_1F_1R_Movement_PlayerToProf:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	face_down
+	step_end
+
+MeteorFalls_1F_1R_Movement_Prof:
+	face_up
+	step_end
+
 MeteorFalls_1F_1R_Movement_PushPlayerOutOfWay:
 	walk_in_place_faster_down
 	delay_4
@@ -233,7 +267,9 @@ MeteorFalls_1F_1R_EventScript_ProfCozmo::
 	end
 
 MeteorFalls_1F_1R_EventScript_MetCozmo::
-	msgbox MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney, MSGBOX_DEFAULT
+	msgbox MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MeteorFalls_1F_1R_WarpToFallarbor
+	goto_if_eq VAR_RESULT, NO, MeteorFalls_1F_1R_ProfCozmoDontWalkToFallarbor
 	release
 	end
 
@@ -307,9 +343,27 @@ MeteorFalls_1F_1R_Text_MeetProfCozmo:
 	.string "I don't understand any of it.\p"
 	.string "But that TEAM MAGMA…\p"
 	.string "What are they going to do with that\n"
-	.string "METEORITE at MT. CHIMNEY?$"
+	.string "METEORITE at MT. CHIMNEY?\p"
+	.string "I don't know what to do…\n"
+	.string "Could you walk me back to my lab\l"
+	.string "in FALLARBOR TOWN?$"
+
+MeteorFalls_1F_1R_Text_ProfCozmoWalkToFallarbor:
+	.string "Thank you.\n"
+	.string "I feel safer with you.\p"
+	.string "Let's head back together.$"
+
+MeteorFalls_1F_1R_Text_ProfCozmoDontWalkToFallarbor:
+	.string "Oh… I see…\n"
+	.string "I guess I'll try to\l"
+	.string "manage on my own…\p"
+	.string "Please be careful out there.$"
+
 
 MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
 	.string "PROF. COZMO: But that TEAM MAGMA…\p"
-	.string "What are they going to do with that\n"
-	.string "METEORITE at MT. CHIMNEY?$"
+	.string "What are they going to do with that\l"
+	.string "METEORITE at MT. CHIMNEY?\p"
+	.string "I don't know what to do…\n"
+	.string "Could you walk me back to my lab\l"
+	.string "in FALLARBOR TOWN?$"

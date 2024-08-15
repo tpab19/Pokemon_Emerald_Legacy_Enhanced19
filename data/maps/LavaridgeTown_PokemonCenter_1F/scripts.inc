@@ -30,6 +30,39 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo, MSGBOX_NPC
 	end
 
+LavaridgeTown_PokemonCenter_1F_EventScript_May::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_MayTravelToPetalburg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavaridgeTown_PokemonCenter_1F_EventScript_TravelToPetalburg
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_PokemonCenter_1F_EventScript_RivalWaits
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_Brendan::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_BrendanTravelToPetalburg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavaridgeTown_PokemonCenter_1F_EventScript_TravelToPetalburg
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_PokemonCenter_1F_EventScript_RivalWaits
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_TravelToPetalburg::
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_RivalTravelToPetalburgLeaves, MSGBOX_DEFAULT
+	warp MAP_PETALBURG_CITY, 15, 12
+	waitstate
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_BRENDAN
+	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_MAY
+	releaseall
+	end
+
+LavaridgeTown_PokemonCenter_1F_EventScript_RivalWaits:
+	msgbox LavaridgeTown_PokemonCenter_1F_Text_RivalWaits, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
 LavaridgeTown_PokemonCenter_1F_Text_TrainersPokemonSpendTimeTogether:
 	.string "I think POKéMON get closer to their\n"
 	.string "TRAINERS if they spend time together.\p"
@@ -48,3 +81,24 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
 	.string "If POKéMON are getting rest, so too\n"
 	.string "should their TRAINERS.$"
 
+LavaridgeTown_PokemonCenter_1F_Text_MayTravelToPetalburg:
+	.string "MAY: I'm headed to PETALBURG'S GYM\n"
+	.string "next...\p"
+	.string "Do you want to go back together?\n"
+	.string "Back to PETALBURG?$"
+
+LavaridgeTown_PokemonCenter_1F_Text_BrendanTravelToPetalburg:
+	.string "BRENDAN: I'm headed to PETALBURG'S GYM\n"
+	.string "next...\p"
+	.string "Do you want to go back together?\n"
+	.string "Back to PETALBURG?$"
+
+LavaridgeTown_PokemonCenter_1F_Text_RivalTravelToPetalburgLeaves:
+	.string "Aye aye!\n"
+	.string "Then let's hit the road!$"
+
+LavaridgeTown_PokemonCenter_1F_Text_RivalWaits:
+	.string "Oh, that's okay,\p"
+	.string "I'll be here for a while, just in\n"
+	.string "case you change your mind.\p"
+	.string "See you around!$"
