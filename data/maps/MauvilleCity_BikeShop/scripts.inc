@@ -4,6 +4,12 @@ MauvilleCity_BikeShop_MapScripts::
 MauvilleCity_BikeShop_EventScript_Rydel::
 	lock
 	faceplayer
+	goto_if_unset FLAG_IS_CHAMPION, MauvilleCity_BikeShop_EventScript_Rydel_Main
+	goto_if_set FLAG_UNLOCKED_BIKE_SWITCHING, MauvilleCity_BikeShop_EventScript_Rydel_Main
+	msgbox MauvilleCity_BikeShop_Text_GiveUpgradedBike, MSGBOX_DEFAULT
+	setflag FLAG_UNLOCKED_BIKE_SWITCHING
+	end
+MauvilleCity_BikeShop_EventScript_Rydel_Main::
 	goto_if_set FLAG_RECEIVED_BIKE, MauvilleCity_BikeShop_EventScript_AskSwitchBikes
 	goto_if_set FLAG_DECLINED_BIKE, MauvilleCity_BikeShop_EventScript_SkipGreeting
 	msgbox MauvilleCity_BikeShop_Text_RydelGreeting, MSGBOX_DEFAULT
@@ -318,3 +324,19 @@ MauvilleCity_BikeShop_Text_Jumps:
 	.string "change directions while jumping.\p"
 	.string "Want to read a different page?$"
 
+MauvilleCity_BikeShop_Text_GiveUpgradedBike:
+	.string "RYDEL: Well, well! The CHAMPION of\n"
+	.string "HOENN in my shop! What an honor!\p"
+	.string "As the region's CHAMPION, you deserve\n"
+	.string "something truly special!\p"
+	.string "This upgrade allows you to switch\n"
+	.string "between the MACH BIKE and the ACRO\n"
+	.string "BIKE on the fly!\p"
+	.string "Speed or tricks? Now you can have\n"
+	.string "both, anytime, anywhere!\p"
+	.string "Consider it a token of appreciation\n"
+	.string "for showing everyone that RYDEL'S\n"
+	.string "BIKES are the choice of CHAMPIONS!\p"
+	.string "Go ahead, give it a try!\n"
+	.string "And remember, it's not just a BIKE,\n"
+	.string "it's a RYDEL!$"
