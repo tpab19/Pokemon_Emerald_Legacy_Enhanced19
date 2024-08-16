@@ -48,6 +48,19 @@ LavaridgeTown_PokemonCenter_1F_EventScript_Brendan::
 
 LavaridgeTown_PokemonCenter_1F_EventScript_TravelToPetalburg::
 	msgbox LavaridgeTown_PokemonCenter_1F_Text_RivalTravelToPetalburgLeaves, MSGBOX_DEFAULT
+	setvar VAR_PETALBURG_CITY_STATE, 6
+	setflag FLAG_HIDE_PETALBURG_CITY_MAY
+	setflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgCity_LoadMay
+	call_if_eq VAR_RESULT, FEMALE, LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgCity_LeadBrendan
+LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgCity_LoadMay::
+	clearflag FLAG_HIDE_PETALBURG_CITY_MAY
+	goto LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgWarp
+LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgCity_LeadBrendan::
+	clearflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+LavaridgeTown_PokemonCenter_1F_EventScript_PetalburgWarp::
+	special HealPlayerParty
 	warp MAP_PETALBURG_CITY, 15, 12
 	waitstate
 	savebgm MUS_DUMMY

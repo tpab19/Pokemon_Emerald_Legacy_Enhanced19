@@ -82,6 +82,19 @@ LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 
 LavaridgeTown_EventScript_TravelToPetalburg::
 	msgbox LavaridgeTown_Text_RivalTravelToPetalburgLeaves, MSGBOX_DEFAULT
+	setvar VAR_PETALBURG_CITY_STATE, 6
+	setflag FLAG_HIDE_PETALBURG_CITY_MAY
+	setflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PetalburgCity_LoadMay
+	call_if_eq VAR_RESULT, FEMALE, PetalburgCity_LeadBrendan
+PetalburgCity_LoadMay::
+	clearflag FLAG_HIDE_PETALBURG_CITY_MAY
+	goto LavaridgeTown_EventScript_PetalburgWarp
+PetalburgCity_LeadBrendan::
+	clearflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+LavaridgeTown_EventScript_PetalburgWarp::
+	special HealPlayerParty
 	warp MAP_PETALBURG_CITY, 15, 12
 	waitstate
 	goto LavaridgeTown_EventScript_RivalExitEnd

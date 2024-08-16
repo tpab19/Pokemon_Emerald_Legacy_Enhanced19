@@ -24,7 +24,7 @@ PetalburgCity_WallysHouse_EventScript_GiveHMSurf::
 	giveitem ITEM_HM_SURF
 	setflag FLAG_RECEIVED_HM_SURF
 	msgbox PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
-	setvar VAR_PETALBURG_CITY_STATE, 5
+	setvar VAR_PETALBURG_CITY_STATE, 7
 	releaseall
 	end
 

@@ -12653,3 +12653,11 @@ static const struct TrainerMon sParty_Tobin[] = {
     .species = SPECIES_GRAVELER,
     }
 };
+
+static const struct TrainerMon sParty_WallyPetalburg[] = {
+    {
+    .iv = 30,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
+    }
+};
