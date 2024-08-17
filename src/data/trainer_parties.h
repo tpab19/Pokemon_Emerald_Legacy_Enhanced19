@@ -12605,16 +12605,11 @@ static const struct TrainerMon sParty_Kenji[] = {
     {
     .iv = 127,
     .lvl = 12,
-    .species = SPECIES_MACHOP,
+    .species = SPECIES_MAKUHITA,
     },
     {
     .iv = 200,
     .lvl = 14,
-    .species = SPECIES_MAKUHITA,
-    },
-    {
-    .iv = 127,
-    .lvl = 12,
     .species = SPECIES_MACHOP,
     }
 };
@@ -12624,40 +12619,50 @@ static const struct TrainerMon sParty_Tully[] = {
     {
     .iv = 10,
     .lvl = 11,
-    .species = SPECIES_HORSEA,
+    .species = SPECIES_GOLDEEN,
     },
     {
     .iv = 10,
     .lvl = 11,
     .species = SPECIES_TENTACOOL,
-    },
-    {
-    .iv = 10,
-    .lvl = 11,
-    .species = SPECIES_HORSEA,
-    },
+    }
 };
 
 static const struct TrainerMon sParty_Daniel[] = {
     {
-    .iv = 0,
-    .lvl = 25,
-    .species = SPECIES_GRAVELER,
+    .iv = 100,
+    .lvl = 15,
+    .species = SPECIES_GEODUDE,
     }
 };
 
 static const struct TrainerMon sParty_Tobin[] = {
     {
-    .iv = 0,
-    .lvl = 25,
-    .species = SPECIES_GRAVELER,
+    .iv = 50,
+    .lvl = 13,
+    .species = SPECIES_GEODUDE,
+    },
+    {
+    .iv = 50,
+    .lvl = 13,
+    .species = SPECIES_MACHOP,
     }
 };
 
 static const struct TrainerMon sParty_WallyPetalburg[] = {
     {
     .iv = 30,
-    .lvl = 16,
-    .species = SPECIES_RALTS,
+    .lvl = 26,
+    .species = SPECIES_SWABLU,
+    },
+    {
+    .iv = 30,
+    .lvl = 25,
+    .species = SPECIES_DELCATTY,
+    },
+    {
+    .iv = 30,
+    .lvl = 27,
+    .species = SPECIES_KIRLIA,
     }
 };
