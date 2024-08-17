@@ -598,7 +598,8 @@ GraniteCaveB1F_Text_DanielDefeated:
 	.string "You’re as solid as a boulder!$"
 
 GraniteCaveB1F_Text_DanielPostBattle:
-	.string "You’ve got the spirit of a true adventurer!\n"
+	.string "You’ve got the spirit of a true\n"
+	.string "adventurer!\p"
 	.string "Keep climbing, and you’ll reach the peak!$"
 
 GraniteCaveB2F_Text_TobinIntro:
