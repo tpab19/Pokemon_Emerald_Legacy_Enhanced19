@@ -64,6 +64,7 @@ LavaridgeTown_EventScript_MayGiveGoGoggles::
 	msgbox LavaridgeTown_Text_MayNiceBadgesTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_GO_GOGGLES
 	setflag FLAG_RECEIVED_GO_GOGGLES
+	setvar VAR_PETALBURG_CITY_STATE, 8
 	msgbox LavaridgeTown_Text_MayExplainGoGogglesChallengeDad, MSGBOX_DEFAULT
 	msgbox LavaridgeTown_Text_RivalTravelToPetalburg, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LavaridgeTown_EventScript_TravelToPetalburg
@@ -74,6 +75,7 @@ LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 	msgbox LavaridgeTown_Text_BrendanNiceBadgesTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_GO_GOGGLES
 	setflag FLAG_RECEIVED_GO_GOGGLES
+	setvar VAR_PETALBURG_CITY_STATE, 8
 	msgbox LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad, MSGBOX_DEFAULT
 	msgbox LavaridgeTown_Text_RivalTravelToPetalburg, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LavaridgeTown_EventScript_TravelToPetalburg
