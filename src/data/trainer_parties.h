@@ -12620,14 +12620,14 @@ static const struct TrainerMon sParty_Tully[] = {
     .iv = 10,
     .lvl = 11,
     .species = SPECIES_TENTACOOL,
-    },
+    }
 };
 // Granite Cave Hiker 1 (added) 
 static const struct TrainerMon sParty_Daniel[] = {
     {
     .iv = 100,
-    .lvl = 14,
-    .species = SPECIES_RHYHORN,
+    .lvl = 15,
+    .species = SPECIES_GEODUDE,
     }
 };
 // Granite Cave Hiker 2 (added) 
@@ -12641,5 +12641,23 @@ static const struct TrainerMon sParty_Tobin[] = {
     .iv = 50,
     .lvl = 13,
     .species = SPECIES_MACHOP,
+    }
+};
+
+static const struct TrainerMon sParty_WallyPetalburg[] = {
+    {
+    .iv = 30,
+    .lvl = 26,
+    .species = SPECIES_SWABLU,
+    },
+    {
+    .iv = 30,
+    .lvl = 25,
+    .species = SPECIES_DELCATTY,
+    },
+    {
+    .iv = 30,
+    .lvl = 27,
+    .species = SPECIES_KIRLIA,
     }
 };

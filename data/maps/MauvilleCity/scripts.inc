@@ -1,10 +1,16 @@
 .set LOCALID_WALLY, 6
 .set LOCALID_WALLYS_UNCLE, 7
 .set LOCALID_SCOTT, 11
+.set LOCALID_WALLY2, 12
 
 MauvilleCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MauvilleCity_OnFrame
 	.byte 0
+
+MauvilleCity_OnFrame:
+	map_script_2 VAR_MAUVILLE_CITY_STATE, 1, MauvilleCity_ArrivedWithWally
+	.2byte 0
 
 MauvilleCity_OnTransition:
 	setflag FLAG_VISITED_MAUVILLE_CITY
@@ -226,6 +232,33 @@ MauvilleCity_EventScript_WallyRequestBattleAgain::
 	msgbox MauvilleCity_Text_WallyPleaseBattleMe, MSGBOX_YESNO
 	goto MauvilleCity_EventScript_BattleWallyPrompt
 	end
+
+MauvilleCity_ArrivedWithWally::
+	applymovement OBJ_EVENT_ID_PLAYER, MauvilleCity_Movement_FaceEight
+	waitmovement 0
+	msgbox MauvilleCity_Text_WallyLeaves, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_WALLY2, MauvilleCity_Movement_WallyExitsEast3
+	waitmovement 0
+	removeobject LOCALID_WALLY2
+	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY2
+	setvar VAR_MAUVILLE_CITY_STATE, 0
+	releaseall
+	end
+
+MauvilleCity_Movement_FaceEight:
+	face_right
+	step_end
+
+MauvilleCity_Movement_WallyExitsEast3:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 MauvilleCity_Movement_WallyExitNorth1:
 	walk_left
@@ -665,3 +698,13 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+MauvilleCity_Text_WallyLeaves:
+	.string "We made it!\p"
+	.string "Thanks for coming with me,\n"
+	.string "{PLAYER}{KUN}!\p"
+	.string "I’ve got some training I need to do\n"
+	.string "around here.\p"
+	.string "I want to be even stronger for our next\n"
+	.string "battle.\p"
+	.string "Take care, {PLAYER}{KUN}!$"

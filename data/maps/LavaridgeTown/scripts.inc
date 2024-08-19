@@ -64,15 +64,49 @@ LavaridgeTown_EventScript_MayGiveGoGoggles::
 	msgbox LavaridgeTown_Text_MayNiceBadgesTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_GO_GOGGLES
 	setflag FLAG_RECEIVED_GO_GOGGLES
+	setvar VAR_PETALBURG_CITY_STATE, 8
 	msgbox LavaridgeTown_Text_MayExplainGoGogglesChallengeDad, MSGBOX_DEFAULT
-	goto LavaridgeTown_EventScript_RivalExit
+	msgbox LavaridgeTown_Text_RivalTravelToPetalburg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavaridgeTown_EventScript_TravelToPetalburg
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_RivalWaits
 	end
 
 LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 	msgbox LavaridgeTown_Text_BrendanNiceBadgesTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_GO_GOGGLES
 	setflag FLAG_RECEIVED_GO_GOGGLES
+	setvar VAR_PETALBURG_CITY_STATE, 8
 	msgbox LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad, MSGBOX_DEFAULT
+	msgbox LavaridgeTown_Text_RivalTravelToPetalburg, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavaridgeTown_EventScript_TravelToPetalburg
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_RivalWaits
+	end
+
+LavaridgeTown_EventScript_TravelToPetalburg::
+	msgbox LavaridgeTown_Text_RivalTravelToPetalburgLeaves, MSGBOX_DEFAULT
+	setvar VAR_PETALBURG_CITY_STATE, 6
+	setflag FLAG_HIDE_PETALBURG_CITY_MAY
+	setflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, PetalburgCity_LoadMay
+	call_if_eq VAR_RESULT, FEMALE, PetalburgCity_LeadBrendan
+PetalburgCity_LoadMay::
+	clearflag FLAG_HIDE_PETALBURG_CITY_MAY
+	goto LavaridgeTown_EventScript_PetalburgWarp
+PetalburgCity_LeadBrendan::
+	clearflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
+LavaridgeTown_EventScript_PetalburgWarp::
+	special HealPlayerParty
+	setvar VAR_LAVARIDGE_TOWN_STATE, 2
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	warp MAP_PETALBURG_CITY, 15, 12
+	waitstate
+	goto LavaridgeTown_EventScript_RivalExitEnd
+	end
+
+LavaridgeTown_EventScript_RivalWaits:
+	msgbox LavaridgeTown_Text_RivalWaits, MSGBOX_DEFAULT
+	closemessage
 	goto LavaridgeTown_EventScript_RivalExit
 	end
 
@@ -84,6 +118,15 @@ LavaridgeTown_EventScript_RivalExit::
 	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit1
 	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit2
 	removeobject LOCALID_RIVAL_ON_BIKE
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, LavaridgeTown_EventScript_MayAppearInPokecenter
+	goto_if_eq VAR_RESULT, FEMALE, LavaridgeTown_EventScript_BrendanAppearInPokecenter
+LavaridgeTown_EventScript_MayAppearInPokecenter:
+	clearflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_MAY
+	goto LavaridgeTown_EventScript_RivalExitEnd
+LavaridgeTown_EventScript_BrendanAppearInPokecenter:
+	clearflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_BRENDAN
+LavaridgeTown_EventScript_RivalExitEnd::
 	setvar VAR_LAVARIDGE_TOWN_STATE, 2
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_DUMMY
@@ -295,8 +338,7 @@ LavaridgeTown_Text_MayExplainGoGogglesChallengeDad:
 	.string "You're trying hard because you don't\n"
 	.string "want to lose to me, I bet!\p"
 	.string "{PLAYER}{KUN}, I think I should challenge\n"
-	.string "your dad in PETALBURG GYM.\p"
-	.string "See you again!$"
+	.string "your dad in PETALBURG GYM.$"
 
 LavaridgeTown_Text_BrendanNiceBadgesTakeThis:
 	.string "BRENDAN: {PLAYER}, hey, it's been a while.\n"
@@ -317,7 +359,22 @@ LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad:
 	.string "I'm considering challenging NORMAN,\l"
 	.string "the GYM LEADER of PETALBURG.\p"
 	.string "Unlike you, {PLAYER}, your dad looks like\n"
-	.string "he really is tough.\p"
+	.string "he really is tough.$"
+
+LavaridgeTown_Text_RivalTravelToPetalburg:
+	.string "I'm headed to PETALBURG'S GYM next\n"
+	.string "myself...\p"
+	.string "Do you want to go back together?\n"
+	.string "Back to PETALBURG?$"
+
+LavaridgeTown_Text_RivalTravelToPetalburgLeaves:
+	.string "Aye aye!\n"
+	.string "Then let's hit the road!$"
+
+LavaridgeTown_Text_RivalWaits:
+	.string "Oh, that's okay,\p"
+	.string "I'll be at the POKéCENTER for a while,\n"
+	.string "just in case you change your mind.\p"
 	.string "See you around!$"
 
 LavaridgeTown_Text_HaveEggWillYouTakeIt:

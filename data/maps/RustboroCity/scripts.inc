@@ -70,6 +70,11 @@ RustboroCity_EventScript_ScientistAddMatchCall::
 	applymovement LOCALID_SCIENTIST, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox RustboroCity_Text_AddedMatchCallPleaseCallMrStone, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_PokenavTutorialSkip, MSGBOX_YESNO
+	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
+	switch VAR_RESULT
+	case YES, RustboroCity_EventScript_EndMatchCallTutorial
+	msgbox RustboroCity_Text_PokenavTutorialStart, MSGBOX_DEFAULT
 	closemessage
 	delay 20
 	goto RustboroCity_EventScript_MatchCallTutorial
@@ -81,7 +86,6 @@ RustboroCity_EventScript_PleaseSelectPokenav::
 	goto RustboroCity_EventScript_MatchCallTutorial
 
 RustboroCity_EventScript_MatchCallTutorial::
-	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
 	special ScriptMenu_CreateStartMenuForPokenavTutorial
 	waitstate
 	switch VAR_RESULT
@@ -95,6 +99,8 @@ RustboroCity_EventScript_MatchCallTutorial::
 	case MULTI_B_PRESSED, RustboroCity_EventScript_PleaseSelectPokenav
 	special OpenPokenavForTutorial
 	waitstate
+RustboroCity_EventScript_EndMatchCallTutorial:
+	setflag FLAG_ENABLE_MR_STONE_POKENAV
 	delay 20
 	msgbox RustboroCity_Text_IdBetterGetBackToWork, MSGBOX_DEFAULT
 	closemessage
@@ -1277,7 +1283,13 @@ RustboroCity_Text_AddedMatchCallPleaseCallMrStone:
 	.string "you can chat with people who have\l"
 	.string "been registered in your POKéNAV.\p"
 	.string "{PLAYER}, our PRESIDENT STONE should\n"
-	.string "be registered in your POKéNAV.\p"
+	.string "be registered in your POKéNAV.$"
+
+RustboroCity_Text_PokenavTutorialSkip:
+	.string "Do you already know how to use\n"
+	.string "MATCH CALL?$"
+
+RustboroCity_Text_PokenavTutorialStart:
 	.string "Test it out.\n"
 	.string "Please give our PRESIDENT a call.$"
 

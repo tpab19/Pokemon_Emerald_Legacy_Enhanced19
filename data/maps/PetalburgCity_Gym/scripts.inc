@@ -394,6 +394,8 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	delay 30
 	msgbox PetalburgCity_Gym_Text_DadHappyAndSad, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_BRENDAN
+	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_MAY
 	delay 40
 	playse SE_DOOR
 	delay 10
