@@ -334,6 +334,8 @@ MauvilleCity_BikeShop_Text_GiveUpgradedBike:
 	.string "BIKE on the fly!\p"
 	.string "Speed or tricks? Now you can have\n"
 	.string "both, anytime, anywhere!\p"
+	.string "And with the ACRO BIKE, you can now\n"
+	.string "jump over ledges too!\p"
 	.string "Consider it a token of appreciation\n"
 	.string "for showing everyone that RYDEL'S\l"
 	.string "BIKES are the choice of CHAMPIONS!\p"
