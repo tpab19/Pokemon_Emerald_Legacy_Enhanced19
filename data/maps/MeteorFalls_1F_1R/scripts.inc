@@ -107,11 +107,11 @@ MeteorFalls_1F_1R_ProfCozmoDontWalkToFallarbor:
 	end
 
 MeteorFalls_1F_1R_WarpToFallarbor:
+	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
+	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
 	msgbox MeteorFalls_1F_1R_Text_ProfCozmoWalkToFallarbor, MSGBOX_DEFAULT
 	delay 30
 	warp MAP_FALLARBOR_TOWN_COZMOS_HOUSE, 7, 4
-	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
-	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
 	waitstate
 	releaseall
 	end

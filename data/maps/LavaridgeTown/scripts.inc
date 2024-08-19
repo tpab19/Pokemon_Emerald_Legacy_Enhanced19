@@ -97,6 +97,8 @@ PetalburgCity_LeadBrendan::
 	clearflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
 LavaridgeTown_EventScript_PetalburgWarp::
 	special HealPlayerParty
+	setvar VAR_LAVARIDGE_TOWN_STATE, 2
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	warp MAP_PETALBURG_CITY, 15, 12
 	waitstate
 	goto LavaridgeTown_EventScript_RivalExitEnd
