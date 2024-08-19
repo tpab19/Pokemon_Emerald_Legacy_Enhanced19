@@ -100,6 +100,7 @@ PetalburgCity_EndWallyScene::
 	end
 
 PetalburgCity_RecievedSurfWallyFastTravel::
+	setvar VAR_PETALBURG_CITY_STATE, 5
 	setobjectxyperm LOCALID_WALLY, 7, 12
 	addobject LOCALID_WALLY
 	applymovement LOCALID_WALLY, PetalburgCity_Movement_WallyWalksToPlayer2
@@ -122,7 +123,6 @@ PetalburgCity_WallyLeaves::
 	applymovement LOCALID_WALLY, PetalburgCity_Movement_RivalLeaves
 	waitmovement 0
 PetalburgCity_EndWallyScene2::
-	setvar VAR_PETALBURG_CITY_STATE, 5
 	releaseall
 	end
 
