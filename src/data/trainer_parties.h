@@ -4607,21 +4607,16 @@ static const struct TrainerMon sParty_Claude[] = {
     .species = SPECIES_BARBOACH,
     }
 };
-// Route 106 Fisherman  2
+// Route 106 Fisherman 2
 static const struct TrainerMon sParty_Elliot1[] = {
     {
     .iv = 0,
-    .lvl = 11,
-    .species = SPECIES_GOLDEEN,
-    },
-    {
-    .iv = 0,
-    .lvl = 11,
+    .lvl = 12,
     .species = SPECIES_TENTACOOL,
     },
     {
     .iv = 0,
-    .lvl = 11,
+    .lvl = 12,
     .species = SPECIES_CORPHISH,
     }
 };
@@ -12600,7 +12595,7 @@ static const struct TrainerMon sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
-// Dewford Gym Black Belt 3 (Top Left)
+// Dewford Gym (added) Black Belt 3 (Top Left)
 static const struct TrainerMon sParty_Kenji[] = {
     {
     .iv = 127,
@@ -12614,7 +12609,7 @@ static const struct TrainerMon sParty_Kenji[] = {
     }
 };
 
-// Dewford Town Fisherman
+// Route 106 Fisherman 3 (added) 
 static const struct TrainerMon sParty_Tully[] = {
     {
     .iv = 10,
@@ -12627,7 +12622,7 @@ static const struct TrainerMon sParty_Tully[] = {
     .species = SPECIES_TENTACOOL,
     }
 };
-
+// Granite Cave Hiker 1 (added) 
 static const struct TrainerMon sParty_Daniel[] = {
     {
     .iv = 100,
@@ -12635,7 +12630,7 @@ static const struct TrainerMon sParty_Daniel[] = {
     .species = SPECIES_GEODUDE,
     }
 };
-
+// Granite Cave Hiker 2 (added) 
 static const struct TrainerMon sParty_Tobin[] = {
     {
     .iv = 50,
