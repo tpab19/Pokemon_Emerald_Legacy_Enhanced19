@@ -123,6 +123,7 @@ PetalburgCity_WallyLeaves::
 	applymovement LOCALID_WALLY, PetalburgCity_Movement_RivalLeaves
 	waitmovement 0
 PetalburgCity_EndWallyScene2::
+	removeobject LOCALID_WALLY 
 	releaseall
 	end
 

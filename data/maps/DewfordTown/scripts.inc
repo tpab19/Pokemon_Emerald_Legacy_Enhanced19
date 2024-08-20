@@ -638,11 +638,6 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	release
 	end
 
-DewfordTown_EventScript_Tully::
-	trainerbattle_single TRAINER_TULLY, DewfordTown_Text_TullyIntro, DewfordTown_Text_TullyDefeated
-	msgbox DewfordTown_Text_TullyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 DewfordTown_Text_TinyIslandCommunity:
 	.string "DEWFORD is a tiny island community.\n"
 	.string "If something gets trendy here,\l"

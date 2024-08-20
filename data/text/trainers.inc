@@ -576,15 +576,15 @@ Route106_Text_NedPostBattle:
 	.string "Oh, no! I've got this feeling I'll hook\n"
 	.string "a big one!$"
 
-DewfordTown_Text_TullyIntro:
+Route106_Text_TullyIntro:
 	.string "The sea is full of mysteries…\n"
 	.string "Will you be one of them?$"
 
-DewfordTown_Text_TullyDefeated:
+Route106_Text_TullyDefeated:
 	.string "Looks like you reeled me in…\n"
 	.string "Hook, line, and sinker!$"
 
-DewfordTown_Text_TullyPostBattle:
+Route106_Text_TullyPostBattle:
 	.string "Even the best fishermen lose a catch now\n"
 	.string "and then. You’re a real challenge!$"
 

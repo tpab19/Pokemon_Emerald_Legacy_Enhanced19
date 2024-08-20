@@ -41,6 +41,11 @@ Route106_EventScript_Ned::
 	msgbox Route106_Text_NedPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route106_EventScript_Tully::
+	trainerbattle_single TRAINER_TULLY, Route106_Text_TullyIntro, Route106_Text_TullyDefeated
+	msgbox Route106_Text_TullyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route106_Text_TrainerTips:
 	.string "TRAINER TIPS\p"
 	.string "Advice on catching POKéMON with a ROD:\n"
