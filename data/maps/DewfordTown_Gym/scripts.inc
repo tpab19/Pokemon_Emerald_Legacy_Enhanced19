@@ -238,13 +238,8 @@ DewfordTown_Gym_EventScript_CristianBrightenRoom::
 	end
 
 DewfordTown_Gym_EventScript_Kenji::
-	trainerbattle_single TRAINER_KENJI, DewfordTown_Gym_Text_KenjiIntro, DewfordTown_Gym_Text_KenjiDefeat, DewfordTown_Gym_EventScript_KenjiBrightenRoom
+	trainerbattle_single TRAINER_KENJI, DewfordTown_Gym_Text_KenjiIntro, DewfordTown_Gym_Text_KenjiDefeat
 	msgbox DewfordTown_Gym_Text_KenjiPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-DewfordTown_Gym_EventScript_KenjiBrightenRoom::
-	call DewfordTown_Gym_EventScript_BrightenRoom
-	release
 	end
 
 DewfordTown_Gym_EventScript_Lilith::
