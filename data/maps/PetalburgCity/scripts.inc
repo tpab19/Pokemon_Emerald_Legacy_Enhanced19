@@ -187,7 +187,7 @@ PetalburgCity_Movement_FaceRight:
 	step_end
 
 PetalburgCity_Text_Hello:
-	.string "Hey {PLAYER}{KUN}!$"
+	.string "Hey, {PLAYER}{KUN}!$"
 
 PetalburgCity_Text_RivalWeMadeIt:
 	.string "Well, we made it!\n"
@@ -235,7 +235,7 @@ PetalburgCity_Text_WallyPostBattle:
     .string "Good luck with your GYM battle!$"
 
 PetalburgCity_Text_WallyAfterSurf:
-    .string "Hi {PLAYER}{KUN}! Great job at the GYM!\p"
+    .string "Hi, {PLAYER}{KUN}! Great job at the GYM!\p"
     .string "I was just about to head back to\n"
 	.string "MAUVILLE.\p"
     .string "Would you like to come with me?\n"
