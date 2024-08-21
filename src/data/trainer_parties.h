@@ -3457,7 +3457,7 @@ static const struct TrainerMon sParty_Wattson1[] = {
     .lvl = 23,
     .species = SPECIES_MAGNETON,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SUPERSONIC, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
+    .moves = {MOVE_THUNDER_SHOCK, MOVE_THUNDER_WAVE, MOVE_SUPERSONIC, MOVE_REFLECT}
     },
     {
     .iv = 200,
@@ -3519,7 +3519,7 @@ static const struct TrainerMon sParty_Norman1[] = {
     .lvl = 29,
     .species = SPECIES_GIRAFARIG,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FACADE, MOVE_PSYBEAM, MOVE_BITE, MOVE_CURSE}
+    .moves = {MOVE_FACADE, MOVE_PSYBEAM, MOVE_BITE, MOVE_SHOCK_WAVE}
     },
     {
     .iv = 200,
@@ -3564,7 +3564,7 @@ static const struct TrainerMon sParty_Winona1[] = {
     .lvl = 33,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_SPIKES, MOVE_MUD_SLAP, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
+    .moves = {MOVE_WHIRLWIND, MOVE_MUD_SLAP, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
