@@ -3300,7 +3300,7 @@ static const struct TrainerMon sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 50,
-    .species = SPECIES_NINETAILS,
+    .species = SPECIES_NINETALES,
     .heldItem = ITEM_WHITE_HERB,
     .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY}
     },
@@ -3385,7 +3385,7 @@ static const struct TrainerMon sParty_Drake[] = {
     .lvl = 55,
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_DRAGONBREATH}
+    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_DRAGON_BREATH}
     },
     {
     .iv = 255,
