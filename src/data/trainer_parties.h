@@ -83,12 +83,7 @@ static const struct TrainerMon sParty_Gabrielle1[] = {
     {
     .iv = 0,
     .lvl = 29,
-    .species = SPECIES_LINNONE,
-    },
-    {
-    .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_LINNONE,
+    .species = SPECIES_LINOONE,
     },
     {
     .iv = 0,
@@ -98,7 +93,12 @@ static const struct TrainerMon sParty_Gabrielle1[] = {
     {
     .iv = 0,
     .lvl = 29,
-    .species = SPECIES_LINNONE,
+    .species = SPECIES_LINOONE,
+    },
+    {
+    .iv = 0,
+    .lvl = 29,
+    .species = SPECIES_LINOONE,
     }
 };
 //Petalburg Woods Team Aqua Grunt 
