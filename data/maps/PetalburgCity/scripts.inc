@@ -37,6 +37,8 @@ PetalburgCity_BrendanAppears::
 	waitmovement 0
 PetalburgCity_RivalAppears::
 	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
 	msgbox PetalburgCity_Text_Hello, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalksToRival

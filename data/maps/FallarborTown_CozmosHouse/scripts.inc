@@ -1,3 +1,5 @@
+.set LOCALID_PROFCOZMO, 1
+
 FallarborTown_CozmosHouse_MapScripts::
 	.byte 0
 
@@ -41,9 +43,80 @@ FallarborTown_CozmosHouse_EventScript_DeclineGiveMeteorite::
 	end
 
 FallarborTown_CozmosHouse_EventScript_GaveMeteorite::
+	goto_if_set FLAG_RECEIVED_AURORA_TICKET, FallarborTown_CozmosHouse_EventScript_GaveMeteorite_Continued
+	checkpartymon SPECIES_RAYQUAZA
+	goto_if_eq VAR_RESULT, TRUE, EventScript_GotRayquaza
+	goto EventScript_GotRayquaza
+FallarborTown_CozmosHouse_EventScript_GaveMeteorite_Continued::
 	msgbox FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT
 	release
 	end
+
+EventScript_GotRayquaza::
+	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 5   @ shake delay
+	special ShakeCamera
+	waitstate
+	applymovement LOCALID_PROFCOZMO, LavaridgeTown_Movement_ProfCozmoFaceLeft
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, LavaridgeTown_Movement_ProfCozmoFaceRight
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, LavaridgeTown_Movement_ProfCozmoFaceLeft
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, LavaridgeTown_Movement_ProfCozmoWalkToCabinet
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, LavaridgeTown_Movement_ProfCozmoWalkToPlayer
+	waitmovement 0
+	applymovement LOCALID_PROFCOZMO, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza2, MSGBOX_DEFAULT
+	checkitemspace ITEM_AURORA_TICKET
+	vgoto_if_eq VAR_RESULT, FALSE, FallarborTown_CozmosHouse_Text_AuroraTicketBagFull
+	giveitem ITEM_AURORA_TICKET
+	setflag FLAG_RECEIVED_AURORA_TICKET
+	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza3, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LavaridgeTown_Movement_ProfCozmoWalkToCabinet:
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	step_end
+
+LavaridgeTown_Movement_ProfCozmoWalkToPlayer:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+LavaridgeTown_Movement_ProfCozmoFaceLeft:
+	face_left
+	step_end
+
+LavaridgeTown_Movement_ProfCozmoFaceRight:
+	face_right
+	step_end
 
 FallarborTown_CozmosHouse_EventScript_CozmosWife::
 	lock
@@ -103,6 +176,42 @@ FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
 	.string "I'm not asking for it for free.\n"
 	.string "How about in exchange for this TM?$"
 
+FallarborTown_CozmosHouse_Text_GotRayquaza:
+	.string "PROF. COZMO: Oh my…\n"
+	.string "Is that... RAYQUAZA?!\p"
+	.string "You're truly full of surprises,\n"
+	.string "CHAMPION.\p"
+	.string "Wait, what's this?\n"
+	.string "The METEORITE... it's reacting...\l"
+	.string "It’s shaking! But why?\p"
+	.string "This has never happened before...\p"
+	.string "Could it be that the presence of\n"
+	.string "RAYQUAZA is triggering something?\p"
+	.string "Hold on...$"
+
+FallarborTown_CozmosHouse_Text_GotRayquaza2:
+	.string "My equipment is picking up seismic\n"
+	.string "activity coming from an area called\l"
+	.string "BIRTH ISLAND.\p"
+	.string "The timing can't be a coincidence...\n"
+	.string "RAYQUAZA’s presence must be connected.\p"
+	.string "Here, take this.$"
+
+FallarborTown_CozmosHouse_Text_GotRayquaza3:
+	.string "This TICKET should allow you to reach\n"
+	.string "BIRTH ISLAND. You can use it at\l"
+	.string "LILYCOVE CITY port.\p"
+	.string "Please, CHAMPION, investigate this for\n"
+	.string "me!\p"
+	.string "We may be on the verge of a\n"
+	.string "groundbreaking discovery!$"
+
+FallarborTown_CozmosHouse_Text_AuroraTicketBagFull:
+	.string "Oh, I'm sorry, {PLAYER}.\n"
+	.string "Your BAG's KEY ITEMS POCKET is full.\p"
+	.string "Please store something on your PC,\n"
+	.string "then come back for this.$"
+
 FallarborTown_CozmosHouse_Text_CozmoWentToMeteorFalls:
 	.string "PROF. COZMO went off to METEOR FALLS\n"
 	.string "on ROUTE 114 with some people from\l"
@@ -115,4 +224,3 @@ FallarborTown_CozmosHouse_Text_FeelSorryForCozmo:
 FallarborTown_CozmosHouse_Text_CozmoIsSoHappy:
 	.string "Look at PROF. COZMO…\n"
 	.string "He's so happy! I think it's cute.$"
-

@@ -1729,6 +1729,12 @@
 	.2byte \quantity
 	.endm
 
+	@ Checks to see if the player has a Pokemon in their party. Result returns to VAR_RESULT
+    .macro checkpartymon species:req
+    .byte 0xe3
+    .2byte \species
+    .endm
+
 	@ Checks if the player has enough space in their PC to hold quantity more of the specified item. Sets VAR_RESULT to
 	@ TRUE if there is room, or FALSE is there is no room.
 	.macro checkpcspace itemId:req, quantity=1
