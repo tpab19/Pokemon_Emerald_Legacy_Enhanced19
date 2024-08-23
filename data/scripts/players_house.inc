@@ -470,6 +470,7 @@ PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV::
 	closemessage
 	clearflag FLAG_SYS_TV_LATIAS_LATIOS
 	setflag FLAG_LATIOS_OR_LATIAS_ROAMING
+	setflag FLAG_ENABLE_SHIP_SOUTHERN_ISLAND
 	special TurnOffTVScreen
 	call_if_eq VAR_0x8008, MALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVMale
 	call_if_eq VAR_0x8008, FEMALE, PlayersHouse_1F_EventScript_MomApproachPlayerAfterTVFemale

@@ -83,11 +83,18 @@ EventScript_GotRayquaza::
 	waitmovement 0
 	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza2, MSGBOX_DEFAULT
 	checkitemspace ITEM_AURORA_TICKET
-	vgoto_if_eq VAR_RESULT, FALSE, FallarborTown_CozmosHouse_Text_AuroraTicketBagFull
+	vgoto_if_eq VAR_RESULT, FALSE, FallarborTown_CozmosHouse_EventScript_AuroraTicketBagFull
 	giveitem ITEM_AURORA_TICKET
 	setflag FLAG_RECEIVED_AURORA_TICKET
 	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza3, MSGBOX_DEFAULT
 	releaseall
+	end
+
+FallarborTown_CozmosHouse_EventScript_AuroraTicketBagFull:
+	vmessage FallarborTown_CozmosHouse_Text_AuroraTicketBagFull
+	waitmessage
+	waitbuttonpress
+	release
 	end
 
 LavaridgeTown_Movement_ProfCozmoWalkToCabinet:
