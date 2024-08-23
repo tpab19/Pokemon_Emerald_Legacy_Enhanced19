@@ -3396,6 +3396,17 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     break;
                 }
             }
+
+            // Boost Defense for Ice-types in Hail
+            if ((gBattleWeather & B_WEATHER_HAIL) && (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE))
+            {
+                defense *= 1.5;
+            }
+             // Boost Special Defense for Rock-types in Hail
+            if ((gBattleWeather & B_WEATHER_SANDSTORM) && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK))
+            {
+                spDefense *= 1.5;
+            }
         }
 
         // Flash fire triggered
