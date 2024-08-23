@@ -133,7 +133,16 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
+	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, DewfordTown_Gym_EventScript_BeatWattson
+	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, DewfordTown_Gym_EventScript_BeatFlannery
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	goto DewfordTown_Gym_EventScript_ContinueBrawly
+DewfordTown_Gym_EventScript_BeatWattson::
+	trainerbattle_single TRAINER_BRAWLY_1_2, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	goto DewfordTown_Gym_EventScript_ContinueBrawly
+DewfordTown_Gym_EventScript_BeatFlannery::
+	trainerbattle_single TRAINER_BRAWLY_1_3, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+DewfordTown_Gym_EventScript_ContinueBrawly::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
@@ -147,6 +156,9 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
+	settrainerflag TRAINER_BRAWLY_1
+	settrainerflag TRAINER_BRAWLY_1_2
+	settrainerflag TRAINER_BRAWLY_1_3
 	setflag FLAG_DEFEATED_DEWFORD_GYM
 	setflag FLAG_BADGE02_GET
 	addvar VAR_PETALBURG_GYM_STATE, 1
