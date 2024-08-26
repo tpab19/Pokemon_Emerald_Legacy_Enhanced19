@@ -6101,6 +6101,12 @@ static void InitJumpSpecial(struct ObjectEvent *objectEvent, struct Sprite *spri
     StartSpriteAnim(sprite, GetJumpSpecialDirectionAnimNum(direction));
 }
 
+static void InitJumpSpecialInPlace(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 direction)
+{
+    InitJump(objectEvent, sprite, direction, JUMP_DISTANCE_IN_PLACE, JUMP_TYPE_HIGH);
+    StartSpriteAnim(sprite, GetJumpSpecialDirectionAnimNum(direction));
+}
+
 bool8 MovementAction_JumpSpecialDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     InitJumpSpecial(objectEvent, sprite, DIR_SOUTH);
@@ -8972,4 +8978,140 @@ u8 MovementAction_FlyDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *
 u8 MovementAction_Fly_Finish(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     return TRUE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_SOUTH);
+    return MovementAction_JumpSpecialInPlaceDown_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_NORTH);
+    return MovementAction_JumpSpecialInPlaceUp_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceUp_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_WEST);
+    return MovementAction_JumpSpecialInPlaceLeft_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_EAST);
+    return MovementAction_JumpSpecialInPlaceRight_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceRight_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceDownUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_SOUTH);
+    return MovementAction_JumpSpecialInPlaceDownUp_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceDownUp_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceUpDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_NORTH);
+    return MovementAction_JumpSpecialInPlaceUpDown_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceUpDown_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceLeftRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_WEST);
+    return MovementAction_JumpSpecialInPlaceLeftRight_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceLeftRight_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+bool8 MovementAction_JumpSpecialInPlaceRightLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    InitJumpSpecialInPlace(objectEvent, sprite, DIR_EAST);
+    return MovementAction_JumpSpecialInPlaceRightLeft_Step1(objectEvent, sprite);
+}
+
+bool8 MovementAction_JumpSpecialInPlaceRightLeft_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    if (DoJumpAnim(objectEvent, sprite))
+    {
+        sprite->sActionFuncId = 2;
+        objectEvent->landingJump = FALSE;
+        return TRUE;
+    }
+    return FALSE;
 }

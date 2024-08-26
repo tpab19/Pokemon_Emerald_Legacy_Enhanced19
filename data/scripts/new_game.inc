@@ -277,5 +277,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_PETALBURG_CITY_MAY
 	setflag FLAG_HIDE_PETALBURG_CITY_BRENDAN
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY2
+	setflag FLAG_HIDE_JIRACHI
+	setflag FLAG_HIDE_MOSSDEEP_CITY_BIRCH
 	call EventScript_ResetAllBerries
 	end

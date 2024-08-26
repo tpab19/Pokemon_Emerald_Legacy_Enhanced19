@@ -203,9 +203,17 @@ LittlerootTown_ProfessorBirchsLab_EventScript_UpgradeToNationalDex::
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_StrangeRockInMossdeep
 	closemessage
+	applymovement LOCALID_BIRCH, LittlerootTown_ProfessorBirchsLab_Movement_BirchLeaves
+	waitmovement 0
+	removeobject LOCALID_BIRCH
+	setvar VAR_MOSSDEEP_CITY_STATE, 4
+	setvar VAR_BIRCH_STATE, 8
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCH
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_RIVAL
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_BIRCH
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2
 	setvar VAR_SCOTT_BF_CALL_STEP_COUNTER, 0
 	setflag FLAG_SCOTT_CALL_BATTLE_FRONTIER
@@ -221,6 +229,18 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanUpgradeComment::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BrendanYouCanThankMe, MSGBOX_DEFAULT
 	closemessage
 	return
+
+LittlerootTown_ProfessorBirchsLab_Movement_BirchLeaves:
+	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
 
 LittlerootTown_ProfessorBirchsLab_Movement_BirchRetrievePokedexes:
 	walk_left
@@ -868,6 +888,19 @@ LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2:
 	.string "that is POKéMON.\p"
 	.string "Somewhere, there is a grassy patch\n"
 	.string "that's waiting for you!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_StrangeRockInMossdeep:
+	.string "PROF. BIRCH: Oh, before I forget...\n"
+	.string "I've been researching something\n"
+	.string "quite curious in MOSSDEEP CITY.\p"
+	.string "There's a strange rock there that\n"
+	.string "has puzzled me for some time.\p"
+	.string "It’s unlike anything I’ve seen before,\n"
+	.string "and I believe it may be connected\l"
+	.string "to a rare phenomenon.\p"
+	.string "Would you mind coming to MOSSDEEP\n"
+	.string "to take a look? I'd like to show it\l"
+	.string "to you personally.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_MayTakeBreakFromFieldwork:
 	.string "MAY: I think I'll take a short break\n"

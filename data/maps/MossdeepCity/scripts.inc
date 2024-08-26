@@ -1,9 +1,12 @@
+.set LOCALID_GIRL, 8
 .set LOCALID_GRUNT_1, 10
 .set LOCALID_GRUNT_2, 11
 .set LOCALID_GRUNT_3, 12
 .set LOCALID_GRUNT_4, 13
 .set LOCALID_MAXIE, 14
 .set LOCALID_SCOTT, 16
+.set LOCALID_JIRACHI, 18
+.set LOCALID_BIRCH, 19
 
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -56,7 +59,11 @@ MossdeepCity_EventScript_Girl::
 	end
 
 MossdeepCity_EventScript_Woman::
+	goto_if_set FLAG_BATTLED_JIRACHI, MossdeepCity_Text_SpecialSpaceCenterRockPostJirachi
 	msgbox MossdeepCity_Text_SpecialSpaceCenterRock, MSGBOX_NPC
+	end
+MossdeepCity_Text_SpecialSpaceCenterRockPostJirachi::
+	msgbox MossdeepCity_Text_SpecialSpaceCenterRockAfterEvent, MSGBOX_NPC
 	end
 
 MossdeepCity_EventScript_WhiteRock::
@@ -279,6 +286,291 @@ MossdeepCity_EventScript_ScottExitEast::
 	waitmovement 0
 	return
 
+MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou1::
+	lock
+	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWatksToPlayerL
+	waitmovement 0
+	msgbox MossdeepCity_Text_BirchYouMadeIt, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToRockL
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_Movement_PlayerWalksToRockL
+	waitmovement 0
+	goto MossdeepCity_SceneWithBirch_EventScript_Birch
+
+MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou2::
+	lock
+	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWatksToPlayerR
+	waitmovement 0
+	msgbox MossdeepCity_Text_BirchYouMadeIt, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToRockR
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_Movement_PlayerWalksToRockR
+	waitmovement 0
+
+MossdeepCity_SceneWithBirch_EventScript_Birch::
+	setvar VAR_MOSSDEEP_CITY_STATE, 3
+	msgbox MossdeepCity_SceneWithBirch_Text_RockExplanation, MSGBOX_DEFAULT
+	msgbox MossdeepCity_SceneWithBirch_Text_WhoKnowsWhatMightHappen, MSGBOX_DEFAULT
+	msgbox MossdeepCity_SceneWithBirch_Text_MakeAWish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_SceneWithBirch_EventScript_JustTryIt
+	goto_if_eq VAR_RESULT, YES, MossdeepCity_SceneWithBirch_Text_JirachiAppears
+	closemessage
+	releaseall
+	end
+
+MossdeepCity_SceneWithBirch_EventScript_JustTryIt::
+	msgbox MossdeepCity_SceneWithBirch_Text_JustTryIt, MSGBOX_DEFAULT
+	msgbox MossdeepCity_SceneWithBirch_Text_MakeAWish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_SceneWithBirch_EventScript_JustTryIt
+	goto_if_eq VAR_RESULT, YES, MossdeepCity_SceneWithBirch_Text_JirachiAppears
+	end
+
+MossdeepCity_SceneWithBirch_Text_JirachiAppears::
+	closemessage
+	fadescreen FADE_TO_WHITE
+	addobject LOCALID_JIRACHI
+	fadescreen FADE_FROM_WHITE
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiAppears
+	waitmovement 0
+	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_START
+	waitmoncry
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_END
+	delay 40
+	waitmoncry
+	msgbox MossdeepCity_Text_Jirachi, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 5   @ shake delay
+	special ShakeCamera
+	delay 20
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_Spinning1
+	applymovement LOCALID_GIRL, MossdeepCity_Movement_Spinning2
+	delay 80
+	fadescreen FADE_TO_WHITE
+	delay 180
+	fadescreen FADE_FROM_WHITE
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJump
+	waitmovement 0
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	msgbox MossdeepCity_Text_Jirachi, MSGBOX_DEFAULT
+	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
+	msgbox MossdeepCity_Text_BirchSeesJirachi, MSGBOX_DEFAULT
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJumpsAroundBirch1
+	waitmovement 0
+	applymovement LOCALID_BIRCH, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	msgbox MossdeepCity_Text_BirchWhatChanges, MSGBOX_DEFAULT
+	applymovement LOCALID_BIRCH, Common_Movement_FaceLeft
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJumpsAroundBirch2
+	msgbox MossdeepCity_Text_BirchTouchedTheRegion, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox MossdeepCity_Text_GirlSeesJirachi, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	msgbox MossdeepCity_Text_BirchNewDiscoveries, MSGBOX_DEFAULT
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiWantsToFight
+	waitmovement 0
+	msgbox MossdeepCity_Text_BirchTestBond, MSGBOX_DEFAULT
+	applymovement LOCALID_BIRCH, Common_Movement_FaceLeft
+	msgbox MossdeepCity_Text_BirchAreYouReady, MSGBOX_DEFAULT
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_JIRACHI
+	seteventmon SPECIES_JIRACHI, 30
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MossdeepCity_EventScript_JirachiRunsAway
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MossdeepCity_EventScript_JirachiRunsAway
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MossdeepCity_EventScript_JirachiRunsAway
+	setflag FLAG_BATTLED_JIRACHI
+	goto MossdeepCity_EventScript_EndJirachiEvent
+	end
+
+MossdeepCity_EventScript_JirachiRunsAway::
+	setflag FLAG_BATTLED_JIRACHI
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	msgbox gText_LegendaryFlewAway, MSGBOX_DEFAULT
+	msgbox MossdeepCity_Text_BirchJirachiFled, MSGBOX_DEFAULT
+	goto MossdeepCity_EventScript_EndJirachiEvent
+	end
+
+MossdeepCity_EventScript_EndJirachiEvent:
+	msgbox MossdeepCity_Text_BirchLeaves, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchLeaves
+	waitmovement 0
+	setflag FLAG_HIDE_MOSSDEEP_CITY_BIRCH
+	removeobject LOCALID_BIRCH
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	setvar VAR_MOSSDEEP_CITY_STATE, 3
+	releaseall
+	end
+
+MossdeepCity_Movement_BirchLeaves:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+MossdeepCity_Movement_JirachiJump:
+	jump_special_in_place_right_left
+	jump_special_in_place_left_right
+	jump_special_in_place_down
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundBirch1:
+	jump_special_right
+	jump_special_down
+	jump_special_in_place_up_down
+	jump_special_in_place_down_up
+	jump_special_right
+	jump_special_down
+	face_left
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundBirch2:
+	jump_special_in_place_left_right
+	jump_special_in_place_right_left
+	jump_special_down
+	jump_special_left
+	jump_special_in_place_down_up
+	jump_special_in_place_up_down
+	jump_special_left
+	jump_special_left
+	jump_special_up
+	jump_special_in_place_down_up
+	jump_special_in_place_up_down
+	jump_special_left
+	jump_special_up
+	jump_special_in_place_right_left
+	jump_special_in_place_left_right
+	jump_special_up
+	jump_special_right
+	jump_special_right
+	jump_special_in_place_right_left
+	jump_special_in_place_left_right
+	jump_special_in_place_down
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundGirl:
+	step_end
+
+MossdeepCity_Movement_JirachiWantsToFight:
+	jump_special_in_place_right_left
+	jump_special_in_place_left_right
+	jump_special_in_place_Up_Down
+	jump_special_down
+	step_end
+
+MossdeepCity_Movement_Spinning1:
+	face_down
+	delay_16
+	face_right
+	delay_16
+	face_down
+	delay_16
+	face_right
+	delay_16
+	face_down
+	delay_16
+	face_right
+	delay_16
+	face_left
+	step_end
+
+MossdeepCity_Movement_Spinning2:
+	face_down
+	delay_16
+	face_left
+	delay_16
+	face_down
+	delay_16
+	face_left
+	delay_16
+	face_down
+	delay_16
+	face_left
+	delay_16
+	face_right
+	step_end
+
+MossdeepCity_Movement_JirachiAppears:
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	walk_slow_down
+	delay_4
+	levitate
+	step_end
+
+MossdeepCity_Movement_PlayerWalksToRockL:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MossdeepCity_Movement_PlayerWalksToRockR:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MossdeepCity_Movement_BirchWalksToRockL:
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+MossdeepCity_Movement_BirchWalksToRockR:
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	step_end
+
+MossdeepCity_Movement_BirchWatksToPlayerL:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+MossdeepCity_Movement_BirchWatksToPlayerR:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
 MossdeepCity_Movement_PlayerWatchScottExit:
 	delay_16
 	delay_16
@@ -394,8 +686,120 @@ MossdeepCity_Text_SpecialSpaceCenterRock:
 	.string "I use a wish tag to make it happen.\n"
 	.string "That's what I do.$"
 
+MossdeepCity_Text_SpecialSpaceCenterRockAfterEvent:
+	.string "Did you see that?\n"
+	.string "JIRACHI appeared right here!\p"
+	.string "The people at the SPACE CENTER always\n"
+	.string "believed this rock held a special\l"
+	.string "meaning, and now I know why.\p"
+	.string "It means our rockets are going to fly...\n"
+	.string "We'll really reach the stars!$"
+
 MossdeepCity_Text_ItsAWhiteRock:
 	.string "It's a white rock.$"
+
+MossdeepCity_Text_BirchYouMadeIt:
+	.string "PROF. BIRCH: Ah, {PLAYER}{KUN}!\n"
+	.string "I'm glad you could make it!$"
+
+MossdeepCity_SceneWithBirch_Text_RockExplanation:
+	.string "This is the rock I mentioned.\p"
+
+	.string "This rock holds a special meaning to\n"
+	.string "the people here in MOSSDEEP.\p"
+
+	.string "They say it's a symbol of their wish for\n"
+	.string "their rockets to fly through the stars.\l"
+	.string "Quite poetic, isn't it?\p"
+
+	.string "That got me thinking… what if this rock\n"
+	.string "is more than just a symbol?\p"
+
+	.string "I’ve done some research, and there are\n"
+	.string "ancient legends that speak of a rare\l"
+	.string "POKéMON that can grant wishes.\p"
+
+	.string "Some believe it sleeps within a star,\n"
+	.string "awakening only once every thousand\l"
+	.string "years.\p"
+
+	.string "I believe this rock might be connected\n"
+	.string "to that POKéMON. But, what truly lies\l"
+	.string "within… We may never know.$"
+
+MossdeepCity_SceneWithBirch_Text_WhoKnowsWhatMightHappen:
+	.string "Try making a wish upon this rock.\n"
+	.string "Who knows what might happen?$"
+
+MossdeepCity_SceneWithBirch_Text_MakeAWish:
+	.string "Make a wish?$"
+
+MossdeepCity_SceneWithBirch_Text_JustTryIt:
+	.string "Oh, come on, {PLAYER}{KUN}! What’s the\n"
+	.string "harm in trying?\p"
+	.string "Even the greatest discoveries start\n"
+	.string "with a small step. Just give it a shot!$"
+
+MossdeepCity_Text_Jirachi:
+	.string "JIRACHI!$"
+
+MossdeepCity_Text_BirchSeesJirachi:
+	.string "PROF. BIRCH: Incredible... Could it be...?\n"
+	.string "JIRACHI... did you really hear our\l"
+	.string " wishes?$"
+
+MossdeepCity_Text_BirchWhatChanges:
+	.string "This must be the POKéMON connected to\n"
+	.string "the rock's legends. But more than that...\l"
+	.string "I sense something different in the air.$"
+
+MossdeepCity_Text_BirchTouchedTheRegion:
+	.string "Could it be... your wish has touched the\n"
+	.string "entire region? I wonder what changes\l"
+	.string "might be happening now...$"
+
+MossdeepCity_Text_GirlSeesJirachi:
+	.string "GIRL: Does this mean... we really will fly\n"
+	.string "through the stars?$"
+
+MossdeepCity_Text_BirchNewDiscoveries:
+	.string "PROF. BIRCH: Your wish to befriend all\n"
+	.string "kinds of POKéMON... It feels like JIRACHI\l"
+	.string "has made that possible, {PLAYER}{KUN}.\p"
+	.string "Who knows what new discoveries await\n"
+	.string "you now?$"
+
+MossdeepCity_Text_BirchTestBond:
+	.string "It looks like JIRACHI wants to test\n"
+	.string "your bond.$"
+
+MossdeepCity_Text_BirchAreYouReady:
+	.string "Are you ready? This may be your only\n"
+	.string "chance!$"
+
+MossdeepCity_Text_BirchJirachiFled:
+	.string "PROF. BIRCH: Oh... It seems JIRACHI has\n"
+	.string "disappeared.\p"
+	.string "But don't be disheartened, {PLAYER}{KUN}.\n"
+	.string "Even witnessing such a rare POKéMON is\l"
+	.string "an incredible experience.$"
+
+MossdeepCity_Text_BirchLeaves:
+	.string "PROF. BIRCH: What an extraordinary\n"
+	.string "event, {PLAYER}{KUN}.\p"
+	.string "To think we’ve just witnessed the\n"
+	.string "legendary JIRACHI...\p"
+	.string "The legends, the wishes... They all feel\n"
+	.string "more real now, don’t they?\p"
+	.string "More than anything, it feels like a\n"
+	.string "reminder of how vast and mysterious\l"
+	.string "our universe is.\p"
+	.string "Well, I must return to my research.\n"
+	.string "There's much to document and so many\l"
+	.string "new questions to explore.\p"
+	.string "Thank you, {PLAYER}{KUN}, for\n"
+	.string "everything. I'm sure we'll cross paths\l"
+	.string "again soon.$"
 
 MossdeepCity_Text_GymSign:
 	.string "MOSSDEEP CITY POKéMON GYM\n"
