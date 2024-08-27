@@ -8,7 +8,23 @@ Route103_MapScripts::
 Route103_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call ProfBirch_EventScript_UpdateLocation
+	call Route103_EventScript_UpdateAlteringCaveMewtwo
 	end
+
+Route103_EventScript_UpdateAlteringCaveMewtwo::
+	goto_if_unset FLAG_COLLECTED_ALL_SILVER_SYMBOLS, Route103_EventScript_UpdateAlteringCave
+	goto_if_set FLAG_BATTLED_MEWTWO, Route103_EventScript_UpdateAlteringCave
+	setvar VAR_ALTERING_CAVE_WILD_SET, 9
+	return
+
+Route103_EventScript_UpdateAlteringCave::
+	goto_if_unset FLAG_BATTLED_JIRACHI, Route103_EventScript_AlteringCaveDefault
+	setvar VAR_ALTERING_CAVE_WILD_SET, VAR_BIRCH_STATE
+	return
+
+Route103_EventScript_AlteringCaveDefault::
+	setvar VAR_ALTERING_CAVE_WILD_SET, 0
+	return
 
 Route103_OnLoad:
 	call_if_set FLAG_SYS_GAME_CLEAR, Route103_EventScript_OpenAlteringCave

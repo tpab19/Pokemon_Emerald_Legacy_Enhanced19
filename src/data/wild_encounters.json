@@ -11424,6 +11424,10 @@
           }
         },
         {
+          "map": "MAP_ALTERING_CAVE",
+          "base_label": "gAlteringCave10"
+        },
+        {
           "map": "MAP_METEOR_FALLS_STEVENS_CAVE",
           "base_label": "gMeteorFalls_StevensCave",
           "land_mons": {
