@@ -13,7 +13,8 @@ Route103_OnTransition:
 
 Route103_EventScript_UpdateAlteringCaveMewtwo::
 	goto_if_unset FLAG_COLLECTED_ALL_SILVER_SYMBOLS, Route103_EventScript_UpdateAlteringCave
-	goto_if_set FLAG_BATTLED_MEWTWO, Route103_EventScript_UpdateAlteringCave
+	goto_if_set FLAG_CAUGHT_MEWTWO, Route103_EventScript_UpdateAlteringCave
+	goto_if_set FLAG_DEFEATED_MEWTWO, Route103_EventScript_UpdateAlteringCave
 	setvar VAR_ALTERING_CAVE_WILD_SET, 9
 	return
 

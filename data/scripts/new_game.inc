@@ -279,5 +279,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY2
 	setflag FLAG_HIDE_JIRACHI
 	setflag FLAG_HIDE_MOSSDEEP_CITY_BIRCH
+	setflag FLAG_HIDE_MEWTWO
 	call EventScript_ResetAllBerries
 	end
