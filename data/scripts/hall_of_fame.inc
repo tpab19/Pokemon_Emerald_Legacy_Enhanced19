@@ -1,8 +1,6 @@
 EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	special SetChampionSaveWarp
 	setflag FLAG_IS_CHAMPION
-	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
-	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
 	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
 	call EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries
 	call_if_eq VAR_FOSSIL_MANIAC_STATE, 0, EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady

@@ -4714,8 +4714,8 @@ bool16 HasAllMons(void)
             return FALSE;
     }
 
-    // -3 excludes Lugia, Ho-Oh, and Celebi
-    for (i = KANTO_DEX_COUNT; i < JOHTO_DEX_COUNT - 3; i++)
+    // -1 excludes Celebi
+    for (i = KANTO_DEX_COUNT; i < JOHTO_DEX_COUNT - 1; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;

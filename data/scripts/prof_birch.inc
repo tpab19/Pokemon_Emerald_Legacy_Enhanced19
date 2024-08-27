@@ -76,4 +76,65 @@ ProfBirch_EventScript_RatePokedex::
 	buffernumberstring STR_VAR_1, VAR_0x8008  @ Num National seen
 	buffernumberstring STR_VAR_2, VAR_0x8009  @ Num National caught
 	msgbox gBirchDexRatingText_OnANationwideBasis, MSGBOX_DEFAULT
+	@ specialvar VAR_RESULT, HasAllMons
+	@ goto_if_eq VAR_RESULT, TRUE, ProfBirch_EventScript_CompletedNationalDex
+	goto ProfBirch_EventScript_CompletedNationalDex
 	return
+
+ProfBirch_EventScript_CompletedNationalDex::
+	goto_if_set FLAG_RECEIVED_OLD_SEA_MAP, Common_EventScript_NopReturn
+	msgbox gBirchDexRatingText_DexCompletedNationwide, MSGBOX_DEFAULT
+	checkitemspace ITEM_OLD_SEA_MAP
+	vgoto_if_eq VAR_RESULT, FALSE, ProfBirch_EventScript_OldSeaMapBagFull
+	giveitem ITEM_OLD_SEA_MAP
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+	msgbox gBirchDexRatingText_JourneyNotOverYet, MSGBOX_DEFAULT
+	releaseall
+	return
+
+ProfBirch_EventScript_OldSeaMapBagFull:
+	vmessage ProfBirch_Text_OldSeaMapBagFull
+	waitmessage
+	waitbuttonpress
+	releaseall
+	return
+
+gBirchDexRatingText_DexCompletedNationwide::
+	.string "Well now, {PLAYER}{KUN},\n"
+	.string "this is truly remarkable!\p"
+	.string "You've completed the POKéDEX on a\n"
+	.string "nationwide basis…\p"
+	.string "I never thought I'd see this day!\n"
+	.string "Your dedication is inspiring.\p"
+	.string "Ah, that reminds me... There's something\n"
+	.string "I've been holding onto.\l"
+	.string "It's an OLD SEA MAP.\p"
+	.string "I came across it years ago during one\n"
+	.string "of my field expeditions, but I\l"
+	.string "never quite knew what to make of it.\p"
+	.string "It’s a curious thing, really. I was never\n"
+	.string "quite sure of its origin.\p"
+	.string "The map seems to point to a mysterious\n"
+	.string "island...\p"
+	.string "But when I tried to follow it, there was\n"
+	.string "nothing there, just endless sea.\p"
+	.string "I started to think it was just an old\n"
+	.string "sailor's tall tale, and perhaps that's\l"
+	.string "why I never pursued it further.\p"
+	.string "But seeing your dedication and skill, I\n"
+	.string "believe you might be the one to solve\l"
+	.string "this mystery.\p"
+	.string "Who knows, there could be something\n"
+	.string "incredible hidden there.\p"
+	.string "Take this OLD SEA MAP, {PLAYER}{KUN}.$"
+
+ProfBirch_Text_OldSeaMapBagFull:
+	.string "Oh, I'm sorry, {PLAYER}.\n"
+	.string "Your BAG's KEY ITEMS POCKET is full.\p"
+	.string "Please store something on your PC,\n"
+	.string "then come back for this.$"
+
+gBirchDexRatingText_JourneyNotOverYet:
+	.string "Perhaps your journey isn't quite over"
+	.string "just yet.$"
