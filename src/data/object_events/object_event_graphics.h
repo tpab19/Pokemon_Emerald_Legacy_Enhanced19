@@ -362,3 +362,5 @@ const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokem
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
 const u16 gObjectEventPic_Mewtwo[] = INCBIN_U16("graphics/object_events/pics/pokemon/mewtwo.4bpp");
 const u16 gObjectEventPal_Mewtwo[] = INCBIN_U16("graphics/object_events/pics/pokemon/mewtwo.gbapal");
+const u32 gObjectEventPic_Jirachi[] = INCBIN_U32("graphics/object_events/pics/pokemon/jirachi.4bpp");
+const u16 gObjectEventPal_Jirachi[] = INCBIN_U16("graphics/object_events/pics/pokemon/jirachi.gbapal");

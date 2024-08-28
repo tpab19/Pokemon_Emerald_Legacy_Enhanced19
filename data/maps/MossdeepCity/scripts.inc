@@ -10,6 +10,7 @@
 
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, MossdeepCity_OnResume
 	.byte 0
 
 MossdeepCity_OnTransition:
@@ -19,6 +20,16 @@ MossdeepCity_OnTransition:
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 	end
+
+MossdeepCity_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MossdeepCity_EventScript_TryRemoveJirachi
+	end
+
+MossdeepCity_EventScript_TryRemoveJirachi::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_JIRACHI
+	return
 
 MossdeepCity_EventScript_PokefanF::
 	lock
@@ -287,10 +298,10 @@ MossdeepCity_EventScript_ScottExitEast::
 	return
 
 MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou1::
-	lock
+	lockall
 	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWatksToPlayerL
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToPlayerL
 	waitmovement 0
 	msgbox MossdeepCity_Text_BirchYouMadeIt, MSGBOX_DEFAULT
 	closemessage
@@ -300,10 +311,10 @@ MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou1::
 	goto MossdeepCity_SceneWithBirch_EventScript_Birch
 
 MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou2::
-	lock
+	lockall
 	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWatksToPlayerR
+	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToPlayerR
 	waitmovement 0
 	msgbox MossdeepCity_Text_BirchYouMadeIt, MSGBOX_DEFAULT
 	closemessage
@@ -333,17 +344,21 @@ MossdeepCity_SceneWithBirch_Text_JirachiAppears::
 	closemessage
 	fadescreen FADE_TO_WHITE
 	addobject LOCALID_JIRACHI
+	special Script_FadeOutMapMusic
 	fadescreen FADE_FROM_WHITE
 	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiAppears
 	waitmovement 0
 	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
-	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_START
-	waitmoncry
-	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_END
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
 	msgbox MossdeepCity_Text_Jirachi, MSGBOX_DEFAULT
 	closemessage
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiThirdEye
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_START
+	waitmoncry
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ECHO_END
+	waitmovement 0
 	setvar VAR_0x8004, 1   @ vertical pan
 	setvar VAR_0x8005, 3   @ horizontal pan
 	setvar VAR_0x8006, 20  @ num shakes
@@ -354,13 +369,16 @@ MossdeepCity_SceneWithBirch_Text_JirachiAppears::
 	applymovement LOCALID_GIRL, MossdeepCity_Movement_Spinning2
 	delay 80
 	fadescreen FADE_TO_WHITE
-	delay 180
+	delay 120
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJump
+	waitmovement 0
 	fadescreen FADE_FROM_WHITE
 	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJump
 	waitmovement 0
 	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
+	special Overworld_PlaySpecialMapMusic
 	msgbox MossdeepCity_Text_Jirachi, MSGBOX_DEFAULT
 	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
 	msgbox MossdeepCity_Text_BirchSeesJirachi, MSGBOX_DEFAULT
@@ -376,6 +394,7 @@ MossdeepCity_SceneWithBirch_Text_JirachiAppears::
 	msgbox MossdeepCity_Text_GirlSeesJirachi, MSGBOX_DEFAULT
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 	msgbox MossdeepCity_Text_BirchNewDiscoveries, MSGBOX_DEFAULT
+	closemessage
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	applymovement LOCALID_BIRCH, Common_Movement_FaceUp
@@ -425,64 +444,47 @@ MossdeepCity_EventScript_EndJirachiEvent:
 	releaseall
 	end
 
-MossdeepCity_Movement_BirchLeaves:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+MossdeepCity_Movement_BirchWalksToPlayerL:
 	walk_down
 	walk_down
 	walk_down
 	step_end
 
-MossdeepCity_Movement_JirachiJump:
-	jump_special_in_place_right_left
-	jump_special_in_place_left_right
-	jump_special_in_place_down
+MossdeepCity_Movement_BirchWalksToPlayerR:
+	walk_right
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
-MossdeepCity_Movement_JirachiJumpsAroundBirch1:
-	jump_special_right
-	jump_special_down
-	jump_special_in_place_up_down
-	jump_special_in_place_down_up
-	jump_special_right
-	jump_special_down
+MossdeepCity_Movement_PlayerWalksToRockL:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+MossdeepCity_Movement_PlayerWalksToRockR:
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	step_end
+
+MossdeepCity_Movement_BirchWalksToRockL:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
 	face_left
 	step_end
 
-MossdeepCity_Movement_JirachiJumpsAroundBirch2:
-	jump_special_in_place_left_right
-	jump_special_in_place_right_left
-	jump_special_down
-	jump_special_left
-	jump_special_in_place_down_up
-	jump_special_in_place_up_down
-	jump_special_left
-	jump_special_left
-	jump_special_up
-	jump_special_in_place_down_up
-	jump_special_in_place_up_down
-	jump_special_left
-	jump_special_up
-	jump_special_in_place_right_left
-	jump_special_in_place_left_right
-	jump_special_up
-	jump_special_right
-	jump_special_right
-	jump_special_in_place_right_left
-	jump_special_in_place_left_right
-	jump_special_in_place_down
-	step_end
-
-MossdeepCity_Movement_JirachiJumpsAroundGirl:
-	step_end
-
-MossdeepCity_Movement_JirachiWantsToFight:
-	jump_special_in_place_right_left
-	jump_special_in_place_left_right
-	jump_special_in_place_Up_Down
-	jump_special_down
+MossdeepCity_Movement_BirchWalksToRockR:
+	walk_up
+	walk_up
+	walk_up
+	face_left
 	step_end
 
 MossdeepCity_Movement_Spinning1:
@@ -524,48 +526,72 @@ MossdeepCity_Movement_JirachiAppears:
 	walk_slow_down
 	walk_slow_down
 	walk_slow_down
+	jump_special_in_place_down
 	delay_4
 	levitate
 	step_end
 
-MossdeepCity_Movement_PlayerWalksToRockL:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+MossdeepCity_Movement_JirachiThirdEye:
+	walk_in_place_faster_down
+	walk_in_place_faster_down
+	walk_in_place_faster_down
+	walk_in_place_faster_up
 	step_end
 
-MossdeepCity_Movement_PlayerWalksToRockR:
+MossdeepCity_Movement_JirachiJump:
+	jump_special_in_place_right_left
+	jump_special_in_place_left_right
+	jump_special_in_place_down
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundBirch1:
+	walk_right
+	walk_down
+	jump_special_in_place_down_up
+	jump_special_in_place_down_up
+	walk_right
+	walk_down
+	face_left
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundBirch2:
+	jump_special_in_place_left_right
+	jump_special_in_place_left_right
+	jump_special_down
+	walk_left
+	jump_special_in_place_up_down
+	jump_special_in_place_up_down
+	walk_left
 	walk_left
 	walk_up
+	jump_special_in_place_up_down
+	jump_special_in_place_up_down
+	walk_left
 	walk_up
+	jump_special_in_place_right_left
+	jump_special_in_place_right_left
 	walk_up
-	walk_up
-	step_end
-
-MossdeepCity_Movement_BirchWalksToRockL:
 	walk_right
-	walk_up
-	walk_up
-	walk_up
-	face_left
-	step_end
-
-MossdeepCity_Movement_BirchWalksToRockR:
-	walk_up
-	walk_up
-	walk_up
-	face_left
-	step_end
-
-MossdeepCity_Movement_BirchWatksToPlayerL:
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-MossdeepCity_Movement_BirchWatksToPlayerR:
+	jump_special_in_place_Down_Up
+	jump_special_in_place_Down_Up
 	walk_right
+	jump_special_in_place_Down_Up
+	jump_special_in_place_Down_Up
+	jump_special_in_place_down
+	step_end
+
+MossdeepCity_Movement_JirachiWantsToFight:
+	jump_special_in_place_Down_Up
+	jump_special_in_place_Down_Up
+	jump_special_in_place_Down_Up
+	jump_special_down
+	step_end
+
+MossdeepCity_Movement_BirchLeaves:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
