@@ -386,13 +386,19 @@ MossdeepCity_SceneWithBirch_Text_JirachiAppears::
 	waitmovement 0
 	applymovement LOCALID_BIRCH, Common_Movement_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	waitmovement 0
 	msgbox MossdeepCity_Text_BirchWhatChanges, MSGBOX_DEFAULT
 	applymovement LOCALID_BIRCH, Common_Movement_FaceLeft
+	waitmovement 0
 	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJumpsAroundBirch2
 	msgbox MossdeepCity_Text_BirchTouchedTheRegion, MSGBOX_DEFAULT
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJumpsAroundGirl
 	msgbox MossdeepCity_Text_GirlSeesJirachi, MSGBOX_DEFAULT
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	applymovement LOCALID_JIRACHI, MossdeepCity_Movement_JirachiJumpsBackToCenter
 	msgbox MossdeepCity_Text_BirchNewDiscoveries, MSGBOX_DEFAULT
 	closemessage
 	waitmovement 0
@@ -561,6 +567,9 @@ MossdeepCity_Movement_JirachiJumpsAroundBirch2:
 	walk_left
 	jump_special_in_place_up_down
 	jump_special_in_place_up_down
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsAroundGirl:
 	walk_left
 	walk_left
 	walk_up
@@ -570,10 +579,11 @@ MossdeepCity_Movement_JirachiJumpsAroundBirch2:
 	walk_up
 	jump_special_in_place_right_left
 	jump_special_in_place_right_left
+	step_end
+
+MossdeepCity_Movement_JirachiJumpsBackToCenter:
 	walk_up
 	walk_right
-	jump_special_in_place_Down_Up
-	jump_special_in_place_Down_Up
 	walk_right
 	jump_special_in_place_Down_Up
 	jump_special_in_place_Down_Up
@@ -786,7 +796,9 @@ MossdeepCity_Text_BirchTouchedTheRegion:
 
 MossdeepCity_Text_GirlSeesJirachi:
 	.string "GIRL: Does this mean... we really will fly\n"
-	.string "through the stars?$"
+	.string "through the stars?\p"
+	.string "To think our dreams could actually\n"
+	.string "come true...$"
 
 MossdeepCity_Text_BirchNewDiscoveries:
 	.string "PROF. BIRCH: Your wish to befriend all\n"
