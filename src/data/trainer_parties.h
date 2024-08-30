@@ -9,7 +9,7 @@ trainer_control by surskitty
     .shiny = TRUE if you want shinies :)
     .friendship should be set to TRAINER_MON_FRIENDLY or TRAINER_MON_UNFRIENDLY to adjust Return/Frustration.
 */
-
+// Mt Chimney Hiker
 static const struct TrainerMon sParty_Sawyer1[] = {
     {
     .iv = 0,
@@ -17,41 +17,41 @@ static const struct TrainerMon sParty_Sawyer1[] = {
     .species = SPECIES_GRAVELER,
     }
 };
-// Above is Mt Chimney Hiker
+// Aqua Hideout Entrance GruntM
 static const struct TrainerMon sParty_GruntAquaHideout1[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 36,
+    .species = SPECIES_ELECTRODE,
     }
 };
-
+// Aqua Hideout B1F 3 GruntM
 static const struct TrainerMon sParty_GruntAquaHideout2[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
+    .lvl = 35,
+    .species = SPECIES_WAILMER,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 35,
+    .species = SPECIES_SEADRA,
     }
 };
-// Test
+// Aqua Hideout B1F 6 GruntM
 static const struct TrainerMon sParty_GruntAquaHideout3[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 37,
+    .species = SPECIES_WAILMER,
     }
 };
-
+// Aqua Hideout Submarine Room 1 GruntM
 static const struct TrainerMon sParty_GruntAquaHideout4[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 36,
+    .species = SPECIES_SNEASEL,
     }
 };
 
@@ -165,7 +165,7 @@ static const struct TrainerMon sParty_GruntSeafloorCavern4[] = {
 static const struct TrainerMon sParty_Declan[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 37,
     .species = SPECIES_GYARADOS,
     }
 };
@@ -297,20 +297,25 @@ static const struct TrainerMon sParty_GruntWeatherInst4[] = {
     .species = SPECIES_SEVIPER,
     }
 };
-
+// Aqua Hideout B1F 3 GruntF
 static const struct TrainerMon sParty_GruntAquaHideout5[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 38,
+    .species = SPECIES_MUK,
     }
 };
-
+// Aqua Hideout Submarine Room 4 GruntF (Double)
 static const struct TrainerMon sParty_GruntAquaHideout6[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 34,
+    .species = SPECIES_TENTACRUEL,
+    },
+    {
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_GOLBAT,
     }
 };
 // Route 123 (via 122 from Mt Pyre) Expert
@@ -326,17 +331,27 @@ static const struct TrainerMon sParty_Fredrick[] = {
     .species = SPECIES_MACHOKE,
     }
 };
-
+// Aqua Hideout Aqua Admin Matt
 static const struct TrainerMon sParty_Matt[] = {
     {
     .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 39,
+    .species = SPECIES_CRAWDAUNT,
     },
     {
     .iv = 50,
-    .lvl = 34,
-    .species = SPECIES_GOLBAT,
+    .lvl = 38,
+    .species = SPECIES_ELECTRODE,
+    },
+    {
+    .iv = 50,
+    .lvl = 38,
+    .species = SPECIES_MACHAMP,
+    },
+    {
+    .iv = 50,
+    .lvl = 40,
+    .species = SPECIES_HUNTAIL,
     }
 };
 // Mt Pyre Interior 2f Blackbelt
@@ -1967,28 +1982,28 @@ static const struct TrainerMon sParty_David[] = {
 static const struct TrainerMon sParty_Spencer[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_TENTACOOL,
+    .lvl = 36,
+    .species = SPECIES_SEAKING,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 36,
+    .species = SPECIES_PELIPPER,
     }
 };
 // Route 124 SwimmerM
 static const struct TrainerMon sParty_Roland[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_CARVANHA,
+    .lvl = 37,
+    .species = SPECIES_LANTURN,
     }
 };
 // Route 125 SwimmerM
 static const struct TrainerMon sParty_Nolen[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 37,
     .species = SPECIES_TENTACRUEL,
     }
 };
@@ -1996,15 +2011,20 @@ static const struct TrainerMon sParty_Nolen[] = {
 static const struct TrainerMon sParty_Stan[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_HORSEA,
+    .lvl = 37,
+    .species = SPECIES_SEADRA,
+    },
+    {
+    .iv = 0,
+    .lvl = 37,
+    .species = SPECIES_GYARADOS,
     }
 };
 // Route 126 SwimmerM
 static const struct TrainerMon sParty_Barry[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 38,
     .species = SPECIES_GYARADOS,
     }
 };
@@ -2012,17 +2032,17 @@ static const struct TrainerMon sParty_Barry[] = {
 static const struct TrainerMon sParty_Dean[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 36,
+    .species = SPECIES_SHARPEDO,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_WINGULL,
+    .lvl = 36,
+    .species = SPECIES_CRAWDAUNT,
     },
     {
     .iv = 0,
-    .lvl = 31,
+    .lvl = 36,
     .species = SPECIES_CARVANHA,
     }
 };
@@ -2030,7 +2050,7 @@ static const struct TrainerMon sParty_Dean[] = {
 static const struct TrainerMon sParty_Rodney[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 42,
     .species = SPECIES_GYARADOS,
     }
 };
@@ -2038,7 +2058,7 @@ static const struct TrainerMon sParty_Rodney[] = {
 static const struct TrainerMon sParty_Richard[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 43,
     .species = SPECIES_PELIPPER,
     }
 };
@@ -2046,12 +2066,12 @@ static const struct TrainerMon sParty_Richard[] = {
 static const struct TrainerMon sParty_Herman[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 42,
+    .species = SPECIES_PELIPPER,
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 42,
     .species = SPECIES_TENTACRUEL,
     }
 };
@@ -2059,13 +2079,13 @@ static const struct TrainerMon sParty_Herman[] = {
 static const struct TrainerMon sParty_Santiago[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 40,
     .species = SPECIES_TENTACRUEL,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WAILMER,
+    .lvl = 42,
+    .species = SPECIES_WAILORD,
     }
 };
 // Route 132 SwimmerM
@@ -2088,8 +2108,8 @@ static const struct TrainerMon sParty_Franklin[] = {
 static const struct TrainerMon sParty_Kevin[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_SPHEAL,
+    .lvl = 42,
+    .species = SPECIES_RELICANTH,
     }
 };
 // Route 134 SwimmerM
@@ -2122,12 +2142,12 @@ static const struct TrainerMon sParty_Dudley[] = {
 static const struct TrainerMon sParty_Chad[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_TENTACOOL,
+    .lvl = 36,
+    .species = SPECIES_TENTACRUEL,
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 38,
     .species = SPECIES_WAILMER,
     }
 };
@@ -2338,25 +2358,30 @@ static const struct TrainerMon sParty_Kirk[] = {
     .moves = {MOVE_QUICK_ATTACK, MOVE_HOWL, MOVE_SHOCK_WAVE, MOVE_LEER}
     }
 };
-
+// Aqua Hideout B1F 3 GruntF
 static const struct TrainerMon sParty_GruntAquaHideout7[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 34,
+    .species = SPECIES_ELECTRODE,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
+    .lvl = 34,
+    .species = SPECIES_GOLBAT,
     }
 };
-
+// Aqua Hideout Submarine Room 4 GruntM (Double)
 static const struct TrainerMon sParty_GruntAquaHideout8[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 34,
+    .species = SPECIES_GYARADOS,
+    },
+    {
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_MURKROW,
     }
 };
 // Mauville Gym Guitarist 2
@@ -5031,13 +5056,13 @@ static const struct TrainerMon sParty_Maria5[] = {
 static const struct TrainerMon sParty_Camden[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_STARYU,
+    .lvl = 38,
+    .species = SPECIES_STARMIE,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_STARYU,
+    .lvl = 38,
+    .species = SPECIES_LUVDISC,
     }
 };
 
@@ -5057,34 +5082,29 @@ static const struct TrainerMon sParty_Demetrius[] = {
 static const struct TrainerMon sParty_Isaiah1[] = {
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_STARYU,
+    .lvl = 40,
+    .species = SPECIES_STARMIE,
     }
 };
 // Route 126 Triathlete
 static const struct TrainerMon sParty_Pablo1[] = {
     {
-    .iv = 0,
-    .lvl = 33,
+    .iv = 50,
+    .lvl = 38,
     .species = SPECIES_STARYU,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_STARYU,
+    .lvl = 38,
+    .species = SPECIES_STARMIE,
     }
 };
 // Route 129 TriathleteM
 static const struct TrainerMon sParty_Chase[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_WINGULL,
-    },
-    {
-    .iv = 80,
-    .lvl = 34,
-    .species = SPECIES_STARYU,
+    .lvl = 41,
+    .species = SPECIES_RELICANTH,
     }
 };
 
@@ -5123,20 +5143,20 @@ static const struct TrainerMon sParty_Isaiah5[] = {
 static const struct TrainerMon sParty_Isobel[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_STARYU,
+    .lvl = 39,
+    .species = SPECIES_GOLDUCK,
     }
 };
 // Route 127 TriathleteF
 static const struct TrainerMon sParty_Donny[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_WINGULL,
+    .lvl = 38,
+    .species = SPECIES_PELIPPER,
     },
     {
-    .iv = 160,
-    .lvl = 34,
+    .iv = 200,
+    .lvl = 38,
     .species = SPECIES_STARYU,
     }
 };
@@ -5144,29 +5164,29 @@ static const struct TrainerMon sParty_Donny[] = {
 static const struct TrainerMon sParty_Talia[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_STARYU,
+    .lvl = 42,
+    .species = SPECIES_GYARADOS,
     }
 };
 // Route 128 TriathleteF
 static const struct TrainerMon sParty_Katelyn1[] = {
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_STARYU,
+    .lvl = 40,
+    .species = SPECIES_WAIlORD,
     }
 };
 // Route 129 TriathleteF
 static const struct TrainerMon sParty_Allison[] = {
     {
     .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_WINGULL,
+    .lvl = 40,
+    .species = SPECIES_PELIPPER,
     },
     {
     .iv = 240,
-    .lvl = 33,
-    .species = SPECIES_STARYU,
+    .lvl = 40,
+    .species = SPECIES_SEAKING,
     }
 };
 
@@ -5342,12 +5362,12 @@ static const struct TrainerMon sParty_Humberto[] = {
 static const struct TrainerMon sParty_Presley[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 38,
     .species = SPECIES_TROPIUS,
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 38,
     .species = SPECIES_XATU,
     }
 };
@@ -5955,23 +5975,33 @@ static const struct TrainerMon sParty_Alice[] = {
 static const struct TrainerMon sParty_Jenny1[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_WAILMER,
+    .lvl = 36,
+    .species = SPECIES_AZUMARILL,
+    },
+    {
+    .iv = 0,
+    .lvl = 36,
+    .species = SPECIES_AZUMARILL,
     }
 };
 // Route 124 SwimmerF
 static const struct TrainerMon sParty_Grace[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_MARILL,
+    .lvl = 36,
+    .species = SPECIES_WHISCASH,
+    },
+    {
+    .iv = 0,
+    .lvl = 36,
+    .species = SPECIES_WHISCASH,
     }
 };
 // Route 125 SwimmerF
 static const struct TrainerMon sParty_Tanya[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 39,
     .species = SPECIES_LUVDISC,
     }
 };
@@ -5979,7 +6009,7 @@ static const struct TrainerMon sParty_Tanya[] = {
 static const struct TrainerMon sParty_Sharon[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 38,
     .species = SPECIES_SEAKING,
     }
 };
@@ -5987,13 +6017,13 @@ static const struct TrainerMon sParty_Sharon[] = {
 static const struct TrainerMon sParty_Nikki[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_MARILL,
+    .lvl = 38,
+    .species = SPECIES_AZUARILL,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_SPHEAL,
+    .lvl = 38,
+    .species = SPECIES_SEALEO,
     }
 };
 
@@ -6008,20 +6038,20 @@ static const struct TrainerMon sParty_Brenda[] = {
 static const struct TrainerMon sParty_Katie[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_GOLDEEN,
+    .lvl = 40,
+    .species = SPECIES_SEAKING,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_SPHEAL,
+    .lvl = 42,
+    .species = SPECIES_WALREIN,
     }
 };
 // Route 131 SwimmerF
 static const struct TrainerMon sParty_Susie[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 45,
     .species = SPECIES_LUVDISC,
     }
 };
@@ -6029,7 +6059,7 @@ static const struct TrainerMon sParty_Susie[] = {
 static const struct TrainerMon sParty_Kara[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 42,
     .species = SPECIES_SEAKING,
     }
 };
@@ -6045,13 +6075,13 @@ static const struct TrainerMon sParty_Dana[] = {
 static const struct TrainerMon sParty_Sienna[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_LUVDISC,
+    .lvl = 38,
+    .species = SPECIES_LUDICOLO,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_LUVDISC,
+    .lvl = 38,
+    .species = SPECIES_PELIPPER,
     }
 };
 // Route 133 SwimmerF
@@ -6105,8 +6135,8 @@ static const struct TrainerMon sParty_Laurel[] = {
 static const struct TrainerMon sParty_Carlee[] = {
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_SEAKING,
+    .lvl = 40,
+    .species = SPECIES_GOREBYSS,
     }
 };
 
@@ -6487,12 +6517,12 @@ static const struct TrainerMon sParty_Edmond[] = {
 static const struct TrainerMon sParty_Ernest1[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 37,
+    .species = SPECIES_HARIYAMA,
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 37,
     .species = SPECIES_MACHOKE,
     }
 };
@@ -6685,13 +6715,18 @@ static const struct TrainerMon sParty_Kayley[] = {
 static const struct TrainerMon sParty_Auron[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 38,
     .species = SPECIES_MANECTRIC,
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 38,
     .species = SPECIES_MACHAMP,
+    },
+    {
+    .iv = 0,
+    .lvl = 38,
+    .species = SPECIES_BANNETTE,
     }
 };
 // Route 134 Sailor
@@ -6776,18 +6811,18 @@ static const struct TrainerMon sParty_Hector[] = {
 static const struct TrainerMon sParty_TabithaMossdeep[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_CAMERUPT,
+    .lvl = 44,
+    .species = SPECIES_NINETALES,
     },
     {
     .iv = 100,
-    .lvl = 38,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 44,
+    .species = SPECIES_SHIFTRY,
     },
     {
     .iv = 100,
-    .lvl = 40,
-    .species = SPECIES_GOLBAT,
+    .lvl = 45,
+    .species = SPECIES_CASTFORM,
     }
 };
 
@@ -7803,33 +7838,40 @@ static const struct TrainerMon sParty_Sylvia[] = {
 static const struct TrainerMon sParty_Leonardo[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_CARVANHA,
+    .lvl = 38,
+    .species = SPECIES_SHARPEDO,
     }
 };
 // Route 127 CooltrainerF 
 static const struct TrainerMon sParty_Athena[] = {
     {
     .iv = 100,
-    .lvl = 32,
+    .lvl = 38,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SURF, MOVE_RAIN_DANCE, MOVE_SLUDGE, MOVE_NONE}
+    },
+    {
+    .iv = 100,
+    .lvl = 38,
     .species = SPECIES_MANECTRIC,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDER, MOVE_THUNDER_WAVE, MOVE_QUICK_ATTACK, MOVE_NONE}
     },
     {
     .iv = 100,
-    .lvl = 32,
+    .lvl = 38,
     .species = SPECIES_LINOONE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SURF, MOVE_THIEF, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_SURF, MOVE_HEADBUTT, MOVE_NONE, MOVE_NONE}
     }
 };
 // Route 128 SwimmerM
 static const struct TrainerMon sParty_Harrison[] = {
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_TENTACRUEL,
+    .lvl = 40,
+    .species = SPECIES_HUNTAIL,
     }
 };
 
@@ -7844,7 +7886,7 @@ static const struct TrainerMon sParty_GruntMtChimney2[] = {
 static const struct TrainerMon sParty_Clarence[] = {
     {
     .iv = 0,
-    .lvl = 34,
+    .lvl = 42,
     .species = SPECIES_SHARPEDO,
     }
 };
@@ -7984,8 +8026,8 @@ static const struct TrainerMon sParty_Paxton[] = {
 static const struct TrainerMon sParty_Isabella[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_STARYU,
+    .lvl = 38,
+    .species = SPECIES_STARMIE,
     }
 };
 // Weather Institute Aqua GruntF (2nd floor double)
@@ -8068,16 +8110,26 @@ static const struct TrainerMon sParty_MaxieMagmaHideout[] = {
     {
     .iv = 150,
     .lvl = 37,
-    .species = SPECIES_MIGHTYENA,
+    .species = SPECIES_HOUNDOOM,
     },
     {
     .iv = 150,
     .lvl = 38,
-    .species = SPECIES_CROBAT,
+    .species = SPECIES_CACTURN,
+    },
+    {
+    .iv = 150,
+    .lvl = 37,
+    .species = SPECIES_LAIRON,
     },
     {
     .iv = 150,
     .lvl = 39,
+    .species = SPECIES_CROBAT,
+    },
+    {
+    .iv = 150,
+    .lvl = 40,
     .species = SPECIES_CAMERUPT,
     }
 };
@@ -9148,17 +9200,17 @@ static const struct TrainerMon sParty_MayLilycoveTorchic[] = {
 static const struct TrainerMon sParty_Jonah[] = {
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 36,
+    .species = SPECIES_TENTACRUEL,
+    },
+    {
+    .iv = 0,
+    .lvl = 38,
     .species = SPECIES_WAILMER,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_TENTACOOL,
-    },
-    {
-    .iv = 0,
-    .lvl = 32,
+    .lvl = 40,
     .species = SPECIES_SHARPEDO,
     }
 };
@@ -9166,26 +9218,41 @@ static const struct TrainerMon sParty_Jonah[] = {
 static const struct TrainerMon sParty_Henry[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CARVANHA,
+    .lvl = 38,
+    .species = SPECIES_CLAMPEARL,
     },
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_TENTACRUEL,
+    .lvl = 38,
+    .species = SPECIES_SEAKING,
+    },
+    {
+    .iv = 0,
+    .lvl = 38,
+    .species = SPECIES_WAILMER,
     }
 };
 // Route 127 Fisherman 2
 static const struct TrainerMon sParty_Roger[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 35,
     .species = SPECIES_MAGIKARP,
     },
     {
     .iv = 0,
-    .lvl = 25,
-    .species = SPECIES_MAGIKARP,
+    .lvl = 35,
+    .species = SPECIES_GYARADOS,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
+    .species = SPECIES_GYARADOS,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
+    .species = SPECIES_GYARADOS,
     },
     {
     .iv = 0,
@@ -9197,25 +9264,25 @@ static const struct TrainerMon sParty_Roger[] = {
 static const struct TrainerMon sParty_Alexa[] = {
     {
     .iv = 100,
-    .lvl = 34,
-    .species = SPECIES_GLOOM,
+    .lvl = 40,
+    .species = SPECIES_BELLOSOM,
     },
     {
     .iv = 100,
-    .lvl = 34,
-    .species = SPECIES_AZUMARILL,
+    .lvl = 40,
+    .species = SPECIES_VILEPLUME,
     }
 };
 // Route 128 CooltrainerM
 static const struct TrainerMon sParty_Ruben[] = {
     {
     .iv = 100,
-    .lvl = 34,
-    .species = SPECIES_SHIFTRY,
+    .lvl = 40,
+    .species = SPECIES_MASQUERAIN,
     },
     {
     .iv = 100,
-    .lvl = 34,
+    .lvl = 40,
     .species = SPECIES_NOSEPASS,
     }
 };
@@ -9223,60 +9290,65 @@ static const struct TrainerMon sParty_Ruben[] = {
 static const struct TrainerMon sParty_Koji1[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_MACHOKE,
+    .lvl = 40,
+    .species = SPECIES_BRELOOM,
     }
 };
 // Route 128 Fisherman 
 static const struct TrainerMon sParty_Wayne[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_TENTACOOL,
+    .lvl = 38,
+    .species = SPECIES_TENTACRUEL,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_TENTACOOL,
+    .lvl = 38,
+    .species = SPECIES_TENTACRUEL,
     },
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_WAILMER,
+    .lvl = 40,
+    .species = SPECIES_WAILORD,
     }
 };
 // Route 127 Bird Keeper
 static const struct TrainerMon sParty_Aidan[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_SWELLOW,
+    .lvl = 38,
+    .species = SPECIES_TROPIS,
     },
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 38,
     .species = SPECIES_SKARMORY,
     }
 };
-// Route 129 SwimmerM
+// Route 129 SwimmerM note we need to give all these mons surf lol
 static const struct TrainerMon sParty_Reed[] = {
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_SPHEAL,
+    .lvl = 40,
+    .species = SPECIES_LINOONE,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_SHARPEDO,
+    .lvl = 40,
+    .species = SPECIES_ZANGOOSE,
+    },
+    {
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_EXPLOUD,
     }
 };
 // Route 129 SwimmerF
 static const struct TrainerMon sParty_Tisha[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_CHINCHOU,
+    .lvl = 42,
+    .species = SPECIES_LANTURN,
     }
 };
 // Route 113 Twins
@@ -9296,14 +9368,14 @@ static const struct TrainerMon sParty_ToriAndTia[] = {
 static const struct TrainerMon sParty_KimAndIris[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_SWABLU,
-    .moves = {MOVE_SING, MOVE_FURY_ATTACK, MOVE_SAFEGUARD, MOVE_AERIAL_ACE}
+    .lvl = 38,
+    .species = SPECIES_ALTARIA,
+    .moves = {MOVE_SING, MOVE_DRAGONBREAH, MOVE_SAFEGUARD, MOVE_AERIAL_ACE}
     },
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_NUMEL,
+    .lvl = 38,
+    .species = SPECIES_CAMERUPT,
     .moves = {MOVE_FLAMETHROWER, MOVE_TAKE_DOWN, MOVE_REST, MOVE_EARTHQUAKE}
     }
 };
@@ -9412,30 +9484,30 @@ static const struct TrainerMon sParty_JohnAndJay5[] = {
     .moves = {MOVE_FOCUS_PUNCH, MOVE_ROCK_TOMB, MOVE_REST, MOVE_BELLY_DRUM}
     }
 };
-// Route 131 Sis and Bro
+// Route 131 Sis and Bro note linoone needs surf
 static const struct TrainerMon sParty_ReliAndIan[] = {
     {
     .iv = 0,
-    .lvl = 35,
-    .species = SPECIES_AZUMARILL,
+    .lvl = 42,
+    .species = SPECIES_LINOONE,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_WINGULL,
+    .lvl = 42,
+    .species = SPECIES_LINOONE,
     }
 };
 // Route 124 Sis and Bro
 static const struct TrainerMon sParty_LilaAndRoy1[] = {
     {
-    .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_CHINCHOU,
+    .iv = 100,
+    .lvl = 36,
+    .species = SPECIES_CORSOLA,
     },
     {
     .iv = 0,
-    .lvl = 33,
-    .species = SPECIES_CARVANHA,
+    .lvl = 36,
+    .species = SPECIES_RELICANTH,
     }
 };
 
@@ -9775,165 +9847,195 @@ static const struct TrainerMon sParty_Deandre[] = {
     .species = SPECIES_ELECTRIKE,
     }
 };
-
+// Magma Hideout Entrance (Elevated Level)
 static const struct TrainerMon sParty_GruntMagmaHideout1[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_ZUBAT,
+    .lvl = 34,
+    .species = SPECIES_GRAVELER,
     }
 };
-
+// Magma Hideout Entrance Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout2[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 34,
+    .species = SPECIES_ZANGOOSE,
     }
 };
-
+// Magma Hideout 1F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout3[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_NUMEL,
+    .lvl = 34,
+    .species = SPECIES_TORKOAL,
     }
 };
-
+// Magma Hideout 1F Magma GruntM (Double)
 static const struct TrainerMon sParty_GruntMagmaHideout4[] = {
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_BALTOY,
+    .lvl = 33,
+    .species = SPECIES_DONPHAN,
     },
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_ZUBAT,
+    .lvl = 33,
+    .species = SPECIES_GOLBAT,
     }
 };
-
+// Magma Hideout 1F Magma GruntM (Double)
 static const struct TrainerMon sParty_GruntMagmaHideout5[] = {
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_BALTOY,
+    .lvl = 34,
+    .species = SPECIES_MIGHTYENA,
     },
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_NUMEL,
+    .lvl = 32,
+    .species = SPECIES_CACTURN,
     }
 };
-
+// Magma Hideout 1F Magma GruntF
 static const struct TrainerMon sParty_GruntMagmaHideout6[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 34,
+    .species = SPECIES_NINETALES,
     }
 };
-
+// Magma Hideout B1F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout7[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_ZUBAT,
+    .lvl = 33,
+    .species = SPECIES_RHYHORN,
+    },
+    {
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_KOFFING,
     }
 };
-
+// Magma Hideout B1F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout8[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 34,
+    .species = SPECIES_LAIRON,
     }
 };
-
+// Magma Hideout B2F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout9[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_ZUBAT,
+    .lvl = 34,
+    .species = SPECIES_GRAVELER,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
+    .species = SPECIES_MAGCARGO,
     }
 };
-
+// Magma Hideout B1F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout10[] = {
     {
     .iv = 0,
-    .lvl = 29,
+    .lvl = 35,
     .species = SPECIES_MIGHTYENA,
     }
 };
-
+// Magma Hideout B2F Magma GruntF
 static const struct TrainerMon sParty_GruntMagmaHideout11[] = {
     {
     .iv = 0,
-    .lvl = 29,
+    .lvl = 34,
+    .species = SPECIES_ZANGOOSE,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
     .species = SPECIES_BALTOY,
     }
 };
-
+// Magma Hideout B1F Magma GruntF
 static const struct TrainerMon sParty_GruntMagmaHideout12[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_NUMEL,
+    .lvl = 33,
+    .species = SPECIES_MURKROW,
+    },
+    {
+    .iv = 0,
+    .lvl = 33,
+    .species = SPECIES_RHYHORN,
     }
 };
-
+// Magma Hideout B4F Magma GruntM (DOUBLE)
 static const struct TrainerMon sParty_GruntMagmaHideout13[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_ZUBAT,
+    .lvl = 34,
+    .species = SPECIES_MAGCARGO,
+    },
+    {
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_GOLBAT,
     }
 };
-
+// Magma Hideout B1F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout14[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 35,
+    .species = SPECIES_WEEZING,
     }
 };
-
+// Magma Hideout B4F Magma GruntM (DOUBLE)
 static const struct TrainerMon sParty_GruntMagmaHideout15[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_NUMEL,
+    .lvl = 34,
+    .species = SPECIES_MURKROW,
+    },
+    {
+    .iv = 0,
+    .lvl = 34,
+    .species = SPECIES_LAIRON,
     }
 };
-
+// Magma Hideout B4F Magma GruntM
 static const struct TrainerMon sParty_GruntMagmaHideout16[] = {
     {
     .iv = 0,
-    .lvl = 29,
-    .species = SPECIES_BALTOY,
+    .lvl = 36,
+    .species = SPECIES_CLAYDOL,
     }
 };
 // Magma Admin Magma Hideout
 static const struct TrainerMon sParty_TabithaMagmaHideout[] = {
     {
-    .iv = 75,
-    .lvl = 26,
-    .species = SPECIES_NUMEL,
+    .iv = 50,
+    .lvl = 36,
+    .species = SPECIES_MAGCARGO,
     },
     {
-    .iv = 75,
-    .lvl = 28,
-    .species = SPECIES_MIGHTYENA,
+    .iv = 50,
+    .lvl = 35,
+    .species = SPECIES_SHIFTRY,
     },
     {
-    .iv = 75,
-    .lvl = 30,
-    .species = SPECIES_ZUBAT,
+    .iv = 50,
+    .lvl = 36,
+    .species = SPECIES_CLAYDOL,
     },
     {
-    .iv = 75,
-    .lvl = 33,
-    .species = SPECIES_CAMERUPT,
+    .iv = 50,
+    .lvl = 37,
+    .species = SPECIES_ZANGOOSE,
     }
 };
 // Route 132 CooltrainerF
@@ -9953,18 +10055,18 @@ static const struct TrainerMon sParty_Darcy[] = {
 static const struct TrainerMon sParty_MaxieMossdeep[] = {
     {
     .iv = 150,
-    .lvl = 42,
-    .species = SPECIES_MIGHTYENA,
-    },
-    {
-    .iv = 150,
-    .lvl = 43,
+    .lvl = 45,
     .species = SPECIES_CROBAT,
     },
     {
     .iv = 150,
-    .lvl = 44,
-    .species = SPECIES_CAMERUPT,
+    .lvl = 45,
+    .species = SPECIES_HOUNDOOM,
+    },
+    {
+    .iv = 150,
+    .lvl = 46,
+    .species = SPECIES_AGGRON,
     }
 };
 // Route 103 Surf SwimmerM
