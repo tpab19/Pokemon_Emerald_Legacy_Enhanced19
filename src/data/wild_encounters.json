@@ -4595,7 +4595,7 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BELDUM"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 10,
@@ -4643,9 +4643,9 @@
                 "species": "SPECIES_ARON"
               },
               {
-                "min_level": 10,
-                "max_level": 10,
-                "species": "SPECIES_BELDUM"
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_ARON"
               },
               {
                 "min_level": 10,
