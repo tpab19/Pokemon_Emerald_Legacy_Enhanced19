@@ -58,24 +58,24 @@ static const struct TrainerMon sParty_GruntAquaHideout4[] = {
 static const struct TrainerMon sParty_GruntSeafloorCavern1[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 44,
+    .species = SPECIES_SEVIPER,
     }
 };
 
 static const struct TrainerMon sParty_GruntSeafloorCavern2[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 44,
+    .species = SPECIES_ELECTRODE,
     }
 };
 
 static const struct TrainerMon sParty_GruntSeafloorCavern3[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_ZUBAT,
+    .lvl = 44,
+    .species = SPECIES_GOLBAT,
     }
 };
 // Mt Pyre Interior 3F BreederF
@@ -157,8 +157,8 @@ static const struct TrainerMon sParty_Ed[] = {
 static const struct TrainerMon sParty_GruntSeafloorCavern4[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_CARVANHA,
+    .lvl = 44,
+    .species = SPECIES_MUK,
     }
 };
 // Route 124 SwimmerM
@@ -252,12 +252,12 @@ static const struct TrainerMon sParty_GruntMuseum2[] = {
     .species = SPECIES_TENTACOOL,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter1[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .lvl = 42,
+    .species = SPECIES_CAMERUPT,
     }
 };
 // Mt Pyre Summit Aqua Grunt 2
@@ -384,30 +384,60 @@ static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
 static const struct TrainerMon sParty_ShellySeafloorCavern[] = {
     {
     .iv = 100,
-    .lvl = 37,
-    .species = SPECIES_SHARPEDO,
+    .lvl = 42,
+    .species = SPECIES_TENTACRUEL,
     },
     {
     .iv = 100,
     .lvl = 37,
-    .species = SPECIES_MIGHTYENA,
+    .species = SPECIES_CASTFORM,
+    },
+    {
+    .iv = 100,
+    .lvl = 37,
+    .species = SPECIES_SEVIPER,
+    },
+    {
+    .iv = 100,
+    .lvl = 37,
+    .species = SPECIES_SNEASEL,
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_GOREBYSS,
     }
 };
 // Aqua Leader Seafloor Cavern
 static const struct TrainerMon sParty_Archie[] = {
     {
     .iv = 150,
-    .lvl = 41,
+    .lvl = 47,
     .species = SPECIES_MIGHTYENA,
     },
     {
     .iv = 150,
-    .lvl = 41,
-    .species = SPECIES_CROBAT,
+    .lvl = 47,
+    .species = SPECIES_ELECTRODE,
     },
     {
     .iv = 150,
-    .lvl = 43,
+    .lvl = 47,
+    .species = SPECIES_WAILORD,
+    },
+    {
+    .iv = 150,
+    .lvl = 47,
+    .species = SPECIES_MACHAMP,
+    },
+    {
+    .iv = 150,
+    .lvl = 47,
+    .species = SPECIES_CROBAT,
+    },
+    {
+    .iv = 200,
+    .lvl = 48,
     .species = SPECIES_SHARPEDO,
     }
 };
@@ -1515,22 +1545,22 @@ static const struct TrainerMon sParty_Daphne[] = {
     .moves = {MOVE_ATTRACT, MOVE_SAFEGUARD, MOVE_TAKE_DOWN, MOVE_WATER_PULSE}
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter2[] = {
     {
     .iv = 0,
-    .lvl = 26,
+    .lvl = 40,
     .species = SPECIES_MIGHTYENA,
     },
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 40,
+    .species = SPECIES_GOLEM,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_NUMEL,
+    .lvl = 40,
+    .species = SPECIES_MAGCARGO,
     }
 };
 //Route 104 Lady Rematch
@@ -2950,23 +2980,23 @@ static const struct TrainerMon sParty_Edward[] = {
 static const struct TrainerMon sParty_Preston[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_KIRLIA,
+    .lvl = 40,
+    .species = SPECIES_GARDEVOIR,
     }
 };
 // Mossdeep Gym PsychicM 4 - Northwest (Double Battle w Nate or Sylvia)
 static const struct TrainerMon sParty_Virgil[] = {
     {
-    .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_RALTS,
+    .iv = 200,
+    .lvl = 40,
+    .species = SPECIES_KADBRA,
     }
 };
 // Mossdeep Gym PsychicM 2 - West Central (Double Battle w Samantha)
 static const struct TrainerMon sParty_Blake[] = {
     {
     .iv = 100,
-    .lvl = 36,
+    .lvl = 40,
     .species = SPECIES_GIRAFARIG,
     }
 };
@@ -3074,23 +3104,23 @@ static const struct TrainerMon sParty_Jaclyn[] = {
 static const struct TrainerMon sParty_Hannah[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_KIRLIA,
+    .lvl = 41,
+    .species = SPECIES_ABSOL,
     }
 };
 // Mossdeep Gym PsychicF 2 - West Central (Double Battle w Blake)
 static const struct TrainerMon sParty_Samantha[] = {
     {
     .iv = 100,
-    .lvl = 36,
+    .lvl = 41,
     .species = SPECIES_XATU,
     }
 };
 // Mossdeep Gym PsychicF 1 - Entrance Room (Double Battle w Preston)
 static const struct TrainerMon sParty_Maura[] = {
     {
-    .iv = 100,
-    .lvl = 36,
+    .iv = 200,
+    .lvl = 40,
     .species = SPECIES_KADABRA,
     }
 };
@@ -6844,7 +6874,7 @@ static const struct TrainerMon sParty_Hector[] = {
     .species = SPECIES_ZANGOOSE,
     }
 };
-// Magma Admin Space Center (Double Battle w)
+// Magma Admin Space Center (Maxie Double)
 static const struct TrainerMon sParty_TabithaMossdeep[] = {
     {
     .iv = 100,
@@ -6854,12 +6884,12 @@ static const struct TrainerMon sParty_TabithaMossdeep[] = {
     {
     .iv = 100,
     .lvl = 44,
-    .species = SPECIES_SHIFTRY,
+    .species = SPECIES_CASTFORM,
     },
     {
     .iv = 100,
     .lvl = 45,
-    .species = SPECIES_CASTFORM,
+    .species = SPECIES_SHIFTRY,
     }
 };
 
@@ -7750,7 +7780,7 @@ static const struct TrainerMon sParty_Julio[] = {
     .species = SPECIES_MAGNEMITE,
     }
 };
-
+// Seafloor Cavern
 static const struct TrainerMon sParty_GruntSeafloorCavern5[] = {
     {
     .iv = 50,
@@ -7867,8 +7897,8 @@ static const struct TrainerMon sParty_Cristian[] = {
 static const struct TrainerMon sParty_Sylvia[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_MEDITITE,
+    .lvl = 40,
+    .species = SPECIES_MEDICHAM,
     }
 };
 // Route 126 SwimmerM
@@ -7939,23 +7969,23 @@ static const struct TrainerMon sParty_Terry[] = {
 static const struct TrainerMon sParty_Nate[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_SPOINK,
+    .lvl = 41,
+    .species = SPECIES_GRUMPIG,
     }
 };
 // Mossdeep Gym Hex Maniac - Southeast (Double Battle w Clifford or Nicholas)
 static const struct TrainerMon sParty_Kathleen[] = {
     {
-    .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_KADABRA,
+    .iv = 50,
+    .lvl = 42,
+    .species = SPECIES_ALAKAZAM,
     }
 };
 // Mossdeep Gym Gentleman 1 - Southeast (Double Battle w Macey or Kathleen)
 static const struct TrainerMon sParty_Clifford[] = {
     {
-    .iv = 0,
-    .lvl = 36,
+    .iv = 50,
+    .lvl = 42,
     .species = SPECIES_GIRAFARIG,
     }
 };
@@ -7963,40 +7993,40 @@ static const struct TrainerMon sParty_Clifford[] = {
 static const struct TrainerMon sParty_Nicholas[] = {
     {
     .iv = 0,
-    .lvl = 36,
+    .lvl = 42,
     .species = SPECIES_WOBBUFFET,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter3[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
+    .lvl = 41,
+    .species = SPECIES_GOLBAT,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 41,
+    .species = SPECIES_MIGHTYENA,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter4[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_BALTOY,
+    .lvl = 42,
+    .species = SPECIES_RHYDON,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter5[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 42,
+    .species = SPECIES_NINETALES,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter6[] = {
     {
     .iv = 0,
@@ -8004,20 +8034,20 @@ static const struct TrainerMon sParty_GruntSpaceCenter6[] = {
     .species = SPECIES_MIGHTYENA,
     }
 };
-
+// Space Center
 static const struct TrainerMon sParty_GruntSpaceCenter7[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_BALTOY,
+    .lvl = 42,
+    .species = SPECIES_CLAYDOL,
     }
 };
 // Mossdeep Gym PsychicF 4 - Southeast (Double Battle w Clifford)
 static const struct TrainerMon sParty_Macey[] = {
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_NATU,
+    .lvl = 42,
+    .species = SPECIES_XATU,
     }
 };
 // Rival 2 Torchic & Lotad
@@ -10103,7 +10133,7 @@ static const struct TrainerMon sParty_Darcy[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-// Magma Leader Space Center
+// Magma Leader Space Center (Maxie Double)
 static const struct TrainerMon sParty_MaxieMossdeep[] = {
     {
     .iv = 150,
