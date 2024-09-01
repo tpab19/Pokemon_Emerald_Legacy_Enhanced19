@@ -8231,7 +8231,7 @@ static const struct TrainerMon sParty_MaxieMagmaHideout[] = {
     .lvl = 39,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLY, MOVE_POISON_FAND, MOVE_GIGA_DRAIN, MOVE_HAZE}
+    .moves = {MOVE_FLY, MOVE_POISON_FANG, MOVE_GIGA_DRAIN, MOVE_HAZE}
     },
     {
     .iv = 150,
@@ -9335,7 +9335,7 @@ static const struct TrainerMon sParty_Henry[] = {
     {
     .iv = 0,
     .lvl = 38,
-    .species = SPECIES_CLAMPEARL,
+    .species = SPECIES_CLAMPERL,
     },
     {
     .iv = 0,
