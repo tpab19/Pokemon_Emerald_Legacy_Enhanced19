@@ -280,5 +280,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_JIRACHI
 	setflag FLAG_HIDE_MOSSDEEP_CITY_BIRCH
 	setflag FLAG_HIDE_MEWTWO
+	setflag FLAG_HIDE_CHAMPIONS_ROOM_WALLACE
+	setflag FLAG_HIDE_HALL_OF_FAME_WALLACE
 	call EventScript_ResetAllBerries
 	end
