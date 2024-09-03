@@ -26,6 +26,8 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	clearflag FLAG_HIDE_HALL_OF_FAME_WALLACE
 	setflag FLAG_HIDE_CHAMPIONS_ROOM_STEVEN
 	setflag FLAG_HIDE_HALL_OF_FAME_STEVEN
+	setflag FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE
+	clearflag FLAG_HIDE_SOOTOPOLIS_GYM_JUAN
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	return
 

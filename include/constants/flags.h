@@ -49,8 +49,8 @@
 #define FLAG_HIDE_CHAMPIONS_ROOM_WALLACE    0x24
 #define FLAG_HIDE_HALL_OF_FAME_STEVEN       0x25
 #define FLAG_HIDE_HALL_OF_FAME_WALLACE      0x26 
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE    0x27 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

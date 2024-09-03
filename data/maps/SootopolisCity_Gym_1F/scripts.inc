@@ -89,8 +89,20 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	release
 	end
 
+SootopolisCity_Gym_1F_EventScript_Wallace::
+	trainerbattle_single TRAINER_WALLACE_1, SootopolisCity_Gym_1F_Text_WallaceIntro, SootopolisCity_Gym_1F_Text_WallaceDefeat, SootopolisCity_Gym_1F_EventScript_WallaceDefeated, NO_MUSIC
+	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
+	goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
+	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
 SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
+	goto SootopolisCity_Gym_1F_EventScript_LeaderDefeated
+SootopolisCity_Gym_1F_EventScript_WallaceDefeated::
+	message SootopolisCity_Gym_1F_Text_ReceivedRainBadgeWallace
+SootopolisCity_Gym_1F_EventScript_LeaderDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
@@ -106,12 +118,12 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	call SootopolisCity_Gym_1F_EventScript_GiveWaterPulse
 	closemessage
 	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox SootopolisCity_Gym_1F_Text_RegisteredJuan, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	@playfanfare MUS_REGISTER_MATCH_CALL
+	@msgbox SootopolisCity_Gym_1F_Text_RegisteredJuan, MSGBOX_DEFAULT
+	@waitfanfare
+	@closemessage
+	@delay 30
+	@setflag FLAG_ENABLE_JUAN_MATCH_CALL
 	release
 	end
 
@@ -213,6 +225,23 @@ SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "A grand illusion of water sculpted\n"
 	.string "by POKéMON and myself!$"
 
+SootopolisCity_Gym_1F_Text_WallaceIntro:
+	.string "Allow me to formally introduce\n"
+	.string "myself.\p"
+	.string "I am WALLACE.\n"
+	.string "The GYM LEADER of SOOTOPOLIS.\p"
+	.string "There's something about you...\n"
+	.string "A difference in your demeanor.\p"
+	.string "I think I sense that in you.\p"
+	.string "What happened on top of the SKY\n"
+	.string "PILLER, and what you did, I will likely\l"
+	.string "learn through our upcoming battle.\p"
+	.string "Now, show me. Show me the power you\n"
+	.string "wield with your POKéMON.\p"
+	.string "And I, in turn, shall present you with\n"
+	.string "a performance of illusions in water\l"
+	.string "by me and my POKéMON!$"
+
 @ NOTE: This defeat text actually causes a buffer overflow. It's about 50 bytes too long for
 @ the gDisplayedStringBattle buffer that it's put into, and it stomps all over the gBattleTextBuffs
 @ after, as well as the otherwise unused array after that. One wonders if that's the reason for
@@ -232,9 +261,22 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "Rather than my clothes, I shall reward\n"
 	.string "you with this, the RAIN BADGE!$"
 
+SootopolisCity_Gym_1F_Text_WallaceDefeat:
+	.string "Bravo.\p"
+	.string "I realize now your authenticity and\n"
+	.string "magnificence as a POKéMON TRAINER.\p"
+	.string "I find much joy in having met you and\n"
+	.string "your POKéMON.\p"
+	.string "You have proven yourself worthy of\n"
+	.string "the RAIN BADGE. Accept it.$"
+
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
 	.string "{PLAYER} received the RAIN BADGE\n"
 	.string "from JUAN.$"
+
+SootopolisCity_Gym_1F_Text_ReceivedRainBadgeWallace:
+	.string "{PLAYER} received the RAIN BADGE\n"
+	.string "from WALLACE.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "Having the RAIN BADGE shall assure you\n"
@@ -255,6 +297,10 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "Registered GYM LEADER JUAN\n"
+	.string "in the POKéNAV.$"
+
+SootopolisCity_Gym_1F_Text_RegisteredWallace:
+	.string "Registered GYM LEADER WALLACE\n"
 	.string "in the POKéNAV.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:

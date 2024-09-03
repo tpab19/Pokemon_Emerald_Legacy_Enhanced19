@@ -4556,7 +4556,47 @@ static const struct TrainerMon sParty_Timmy[] = {
     }
 };
 
-static const struct TrainerMon sParty_Wallace[] = {
+// Wallace gym leader
+static const struct TrainerMon sParty_Wallace1[] = {
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_MASQUERAIN,
+    .heldItem = ITEM_SILVER_POWDER,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_WHISCASH,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_LUDICOLO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 46,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
+    }
+};
+
+// Wallace champion
+static const struct TrainerMon sParty_Wallace2[] = {
     {
     .iv = 255,
     .lvl = 57,
@@ -4600,44 +4640,7 @@ static const struct TrainerMon sParty_Wallace[] = {
     .moves = {MOVE_RECOVER, MOVE_SURF, MOVE_ICE_BEAM, MOVE_TOXIC}
     }
 };
-//temporary holder for wallace gym leader
-static const struct TrainerMon sParty_Wallace2[] = {
-    {
-    .iv = 255,
-    .lvl = 45,
-    .species = SPECIES_TENTACRUEL,
-    .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 44,
-    .species = SPECIES_MASQUERAIN,
-    .heldItem = ITEM_SILVER_POWDER,
-    .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
-    },
-    {
-    .iv = 255,
-    .lvl = 45,
-    .species = SPECIES_WHISCASH,
-    .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
-    },
-    {
-    .iv = 255,
-    .lvl = 45,
-    .species = SPECIES_LUDICOLO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_MILOTIC,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
-    }
-};
+
 // Route 103 Fisherman
 static const struct TrainerMon sParty_Andrew[] = {
     {
