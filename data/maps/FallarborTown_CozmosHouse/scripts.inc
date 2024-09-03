@@ -85,7 +85,6 @@ EventScript_GotRayquaza::
 	checkitemspace ITEM_AURORA_TICKET
 	vgoto_if_eq VAR_RESULT, FALSE, FallarborTown_CozmosHouse_EventScript_AuroraTicketBagFull
 	giveitem ITEM_AURORA_TICKET
-	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
 	setflag FLAG_RECEIVED_AURORA_TICKET
 	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza3, MSGBOX_DEFAULT
 	releaseall

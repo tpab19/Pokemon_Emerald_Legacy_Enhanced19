@@ -4556,7 +4556,47 @@ static const struct TrainerMon sParty_Timmy[] = {
     }
 };
 
-static const struct TrainerMon sParty_Wallace[] = {
+// Wallace gym leader
+static const struct TrainerMon sParty_Wallace1[] = {
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 44,
+    .species = SPECIES_MASQUERAIN,
+    .heldItem = ITEM_SILVER_POWDER,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_WHISCASH,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
+    },
+    {
+    .iv = 255,
+    .lvl = 45,
+    .species = SPECIES_LUDICOLO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
+    },
+    {
+    .iv = 255,
+    .lvl = 46,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
+    }
+};
+
+// Wallace champion
+static const struct TrainerMon sParty_Wallace2[] = {
     {
     .iv = 255,
     .lvl = 57,
@@ -4600,44 +4640,7 @@ static const struct TrainerMon sParty_Wallace[] = {
     .moves = {MOVE_RECOVER, MOVE_SURF, MOVE_ICE_BEAM, MOVE_TOXIC}
     }
 };
-//temporary holder for wallace gym team
-static const struct TrainerMon sParty_Wallace2[] = {
-    {
-    .iv = 255,
-    .lvl = 47,
-    .species = SPECIES_TENTACRUEL,
-    .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_MASQUERAIN,
-    .heldItem = ITEM_SILVER_POWDER,
-    .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
-    },
-    {
-    .iv = 255,
-    .lvl = 47,
-    .species = SPECIES_WHISCASH,
-    .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
-    },
-    {
-    .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_LUDICOLO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 48,
-    .species = SPECIES_MILOTIC,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
-    }
-};
+
 // Route 103 Fisherman
 static const struct TrainerMon sParty_Andrew[] = {
     {
@@ -11962,7 +11965,52 @@ static const struct TrainerMon sParty_Darius[] = {
     }
 };
 
-static const struct TrainerMon sParty_Steven[] = {
+static const struct TrainerMon sParty_Steven1[] = {
+    {
+    .iv = 255,
+    .lvl = 57,
+    .species = SPECIES_SKARMORY,
+    .heldItem = ITEM_LIECHI_BERRY,
+    .moves = {MOVE_TOXIC, MOVE_SKY_ATTACK, MOVE_STEEL_WING, MOVE_PROTECT}
+    },
+    {
+    .iv = 255,
+    .lvl = 56,
+    .species = SPECIES_CLAYDOL,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_PSYCHIC, MOVE_EARTHQUAKE, MOVE_LIGHT_SCREEN, MOVE_EXPLOSION}
+    },
+    {
+    .iv = 255,
+    .lvl = 56,
+    .species = SPECIES_AGGRON,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL}
+    },
+    {
+    .iv = 255,
+    .lvl = 57,
+    .species = SPECIES_CRADILY,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_ANCIENT_POWER, MOVE_LEECH_SEED, MOVE_RECOVER, MOVE_CURSE}
+    },
+    {
+    .iv = 255,
+    .lvl = 57,
+    .species = SPECIES_ARMALDO,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_EARTHQUAKE, MOVE_FACADE}
+    },
+    {
+    .iv = 255,
+    .lvl = 58,
+    .species = SPECIES_METAGROSS,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_AGILITY}
+    }
+}; 
+
+static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
     .lvl = 77,
@@ -12924,3 +12972,4 @@ static const struct TrainerMon sParty_Brawly1_3[] = {
     .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
     }
 };
+

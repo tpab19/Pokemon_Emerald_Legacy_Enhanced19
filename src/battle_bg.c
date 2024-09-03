@@ -802,6 +802,13 @@ void DrawMainBattleBackground(void)
                 LoadCompressedPalette(gBattleTerrainPalette_StadiumWallace, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
                 return;
             }
+            else if (trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
+            {
+                LZDecompressVram(gBattleTerrainTiles_Stadium, (void *)(BG_CHAR_ADDR(2)));
+                LZDecompressVram(gBattleTerrainTilemap_Stadium, (void *)(BG_SCREEN_ADDR(26)));
+                LoadCompressedPalette(gBattleTerrainPalette_StadiumWallace, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+                return;
+            }
         }
 
         switch (GetCurrentMapBattleScene())
@@ -1191,6 +1198,12 @@ void DrawBattleEntryBackground(void)
                 LZDecompressVram(gBattleTerrainAnimTilemap_Building, (void *)(BG_SCREEN_ADDR(28)));
                 return;
             }
+            else if (trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
+            {
+                LZDecompressVram(gBattleTerrainAnimTiles_Building, (void *)(BG_CHAR_ADDR(1)));
+                LZDecompressVram(gBattleTerrainAnimTilemap_Building, (void *)(BG_SCREEN_ADDR(28)));
+                return;
+            }
         }
 
         if (GetCurrentMapBattleScene() == MAP_BATTLE_SCENE_NORMAL)
@@ -1242,6 +1255,11 @@ bool8 LoadChosenBattleElement(u8 caseId)
                     break;
                 }
                 else if (trainerClass == TRAINER_CLASS_CHAMPION)
+                {
+                    LZDecompressVram(gBattleTerrainTiles_Stadium, (void *)(BG_CHAR_ADDR(2)));
+                    break;
+                }
+                else if (trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
                 {
                     LZDecompressVram(gBattleTerrainTiles_Stadium, (void *)(BG_CHAR_ADDR(2)));
                     break;
@@ -1308,6 +1326,11 @@ bool8 LoadChosenBattleElement(u8 caseId)
                     LZDecompressVram(gBattleTerrainTilemap_Stadium, (void *)(BG_SCREEN_ADDR(26)));
                     break;
                 }
+                else if (trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
+                {
+                    LZDecompressVram(gBattleTerrainTilemap_Stadium, (void *)(BG_SCREEN_ADDR(26)));
+                    break;
+                }
             }
 
             switch (GetCurrentMapBattleScene())
@@ -1366,6 +1389,11 @@ bool8 LoadChosenBattleElement(u8 caseId)
                     break;
                 }
                 else if (trainerClass == TRAINER_CLASS_CHAMPION)
+                {
+                    LoadCompressedPalette(gBattleTerrainPalette_StadiumWallace, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+                    break;
+                }
+                else if (trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
                 {
                     LoadCompressedPalette(gBattleTerrainPalette_StadiumWallace, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
                     break;

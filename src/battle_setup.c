@@ -335,7 +335,7 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
     [REMATCH_PHOEBE] = REMATCH(TRAINER_PHOEBE, TRAINER_PHOEBE, TRAINER_PHOEBE, TRAINER_PHOEBE, TRAINER_PHOEBE, EVER_GRANDE_CITY),
     [REMATCH_GLACIA] = REMATCH(TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, TRAINER_GLACIA, EVER_GRANDE_CITY),
     [REMATCH_DRAKE] = REMATCH(TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, TRAINER_DRAKE, EVER_GRANDE_CITY),
-    [REMATCH_WALLACE] = REMATCH(TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, TRAINER_WALLACE, EVER_GRANDE_CITY),
+    [REMATCH_WALLACE] = REMATCH(TRAINER_WALLACE_2, TRAINER_WALLACE_2, TRAINER_WALLACE_2, TRAINER_WALLACE_2, TRAINER_WALLACE_2, EVER_GRANDE_CITY),
 };
 
 static const u16 sBadgeFlags[NUM_BADGES] =
@@ -802,6 +802,8 @@ static u8 GetTrainerBattleTransition(void)
 
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         return B_TRANSITION_CHAMPION;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION_STEVEN)
+        return B_TRANSITION_CHAMPION_STEVEN;
 
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TEAM_MAGMA
         || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MAGMA_LEADER
@@ -1877,9 +1879,9 @@ static u8 getLevelCap(void){
     else if (!FlagGet(FLAG_BADGE07_GET))
         nextLeader = TRAINER_TATE_AND_LIZA_1;
     else if (!FlagGet(FLAG_BADGE08_GET))
-        nextLeader = TRAINER_JUAN_1;
+        nextLeader = TRAINER_WALLACE_1;
     else if (!FlagGet(FLAG_IS_CHAMPION))
-        nextLeader = TRAINER_WALLACE;
+        nextLeader = TRAINER_STEVEN_1;
 
     partyData = gTrainers[nextLeader].party.TrainerMon;
     for (i = 0; i < gTrainers[nextLeader].partySize; i++){
