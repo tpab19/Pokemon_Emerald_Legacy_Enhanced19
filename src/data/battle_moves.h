@@ -3981,7 +3981,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_CRUSH_CLAW] =
     {
         .effect = EFFECT_DEFENSE_DOWN_HIT,
-        .power = 85,
+        .power = 80,
         .type = TYPE_NORMAL,
         .accuracy = 95,
         .pp = 15,
@@ -4526,7 +4526,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_LEAF_BLADE] =
     {
-        .effect = EFFECT_HIGH_CRITICAL,
+        .effect = EFFECT_LEAF_BLADE,
         .power = 80,
         .type = TYPE_GRASS,
         .accuracy = 100,
