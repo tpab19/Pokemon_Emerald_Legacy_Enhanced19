@@ -242,6 +242,7 @@
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_MEWTWO                     239
 #define OBJ_EVENT_GFX_JIRACHI                    240
+#define OBJ_EVENT_GFX_CELEBI                     241
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //

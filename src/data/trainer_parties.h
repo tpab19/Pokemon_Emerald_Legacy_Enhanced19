@@ -6995,7 +6995,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .iv = 150,
     .lvl = 48,
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_PERISM_BERRY,
+    .heldItem = ITEM_PERSIM_BERRY,
     .moves = {MOVE_PETAL_DANCE, MOVE_LEECH_SEED, MOVE_SLUDGE_BOMB, MOVE_TOXIC}
     },
     {
@@ -7010,7 +7010,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .lvl = 50,
     .species = SPECIES_GARDEVOIR,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_THUNDER_BOLT, MOVE_CALM_MIND, MOVE_DOUBLE_TEAM}
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_DOUBLE_TEAM}
     }
 };
 // Rival 1

@@ -2202,3 +2202,15 @@ static const struct SpriteFrameImage sPicTable_Jirachi[] = {
     overworld_frame(gObjectEventPic_Jirachi, 4, 4, 8),
     overworld_frame(gObjectEventPic_Jirachi, 4, 4, 11),
 };
+
+static const struct SpriteFrameImage sPicTable_Celebi[] = {
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Celebi, 2, 2, 0),
+};

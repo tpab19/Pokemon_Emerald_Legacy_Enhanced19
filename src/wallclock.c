@@ -862,8 +862,47 @@ static void Task_SetClock_Confirmed(u8 taskId)
 {
     RtcInitLocalTimeOffset(gTasks[taskId].tHours, gTasks[taskId].tMinutes);
 
-    // Celebi event checks go here
-
+    if (!FlagGet(FLAG_BATTLED_CELEBI))
+    {
+        // Time code for Celebi event
+        if (!FlagGet(FLAG_CELEBI_CLOCK_1) && !FlagGet(FLAG_CELEBI_CLOCK_2))
+        {
+            if (gTasks[taskId].tHours == 4 && gTasks[taskId].tMinutes == 0)
+            {
+                // Increment the step if the time is correct
+                FlagSet(FLAG_CELEBI_CLOCK_1);
+            }
+        }
+        else if (FlagGet(FLAG_CELEBI_CLOCK_1) && !FlagGet(FLAG_CELEBI_CLOCK_2))
+        {
+            if (gTasks[taskId].tHours == 10 && gTasks[taskId].tMinutes == 0)
+            {
+                // Increment the step if the time is correct
+                FlagSet(FLAG_CELEBI_CLOCK_2);
+            }
+            else
+            {
+                // Reset the step if the time is incorrect
+                FlagClear(FLAG_CELEBI_CLOCK_1);
+            }
+        }
+        else if (FlagGet(FLAG_CELEBI_CLOCK_1) && FlagGet(FLAG_CELEBI_CLOCK_2))
+        {
+            if (gTasks[taskId].tHours == 18 && gTasks[taskId].tMinutes == 0)
+            {
+                // Trigger the event if the final step is correct
+                FlagSet(FLAG_CELEBI_EVENT);
+                FlagClear(FLAG_CELEBI_CLOCK_1);
+                FlagClear(FLAG_CELEBI_CLOCK_2);
+            }
+            else
+            {
+                // Reset the step if the time is incorrect
+                FlagClear(FLAG_CELEBI_CLOCK_1);
+                FlagClear(FLAG_CELEBI_CLOCK_2);
+            }
+        }
+    }
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_SetClock_Exit;
 }

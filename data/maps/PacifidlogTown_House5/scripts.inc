@@ -6,6 +6,7 @@ PacifidlogTown_House5_EventScript_MirageIslandWatcher::
 	faceplayer
 	specialvar VAR_RESULT, IsMirageIslandPresent
 	goto_if_eq VAR_RESULT, TRUE, PacifidlogTown_House5_EventScript_MirageIslandPresent
+	goto_if_set FLAG_SHOW_MIRAGE_ISLAND, PacifidlogTown_House5_EventScript_MirageIslandPresent
 	msgbox PacifidlogTown_House5_Text_CantSeeMirageIslandToday, MSGBOX_DEFAULT
 	release
 	end
@@ -17,6 +18,10 @@ PacifidlogTown_House5_EventScript_MirageIslandPresent::
 
 PacifidlogTown_House5_EventScript_Gentleman::
 	msgbox PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather, MSGBOX_NPC
+	end
+
+PacifidlogTown_EventScript_OldWoman::
+	msgbox PacifidlogTown_House5_Text_OldWoman, MSGBOX_NPC
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
@@ -34,3 +39,9 @@ PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather:
 	.string "Or is it really appearing and\n"
 	.string "disappearing?$"
 
+PacifidlogTown_House5_Text_OldWoman:
+	.string "I heard some people talking about how\n"
+	.string "time doesn't flow the same everywhere.\p"
+	.string "They say clocks can do funny things. I\n"
+	.string "tried staring at my clock once, but\l"
+	.string "nothing happened.$"

@@ -49,14 +49,14 @@
 #define FLAG_HIDE_CHAMPIONS_ROOM_WALLACE    0x24
 #define FLAG_HIDE_HALL_OF_FAME_STEVEN       0x25
 #define FLAG_HIDE_HALL_OF_FAME_WALLACE      0x26 
-#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE    0x27 // Unused Flag
-#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE    0x27
+#define FLAG_HIDE_SOOTOPOLIS_GYM_JUAN       0x28
+#define FLAG_SHOW_MIRAGE_ISLAND             0x29
+#define FLAG_CELEBI_EVENT                   0x2A
+#define FLAG_CELEBI_CLOCK_1                 0x2B
+#define FLAG_CELEBI_CLOCK_2                 0x2C
+#define FLAG_HIDE_CELEBI     0x2D
+#define FLAG_BATTLED_CELEBI  0x2E
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

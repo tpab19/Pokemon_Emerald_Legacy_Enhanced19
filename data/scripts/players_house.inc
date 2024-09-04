@@ -101,9 +101,32 @@ PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
 	return
 
 PlayersHouse_2F_EventScript_CheckWallClock::
+	goto_if_set FLAG_CELEBI_EVENT, PlayersHouse_2F_EventScript_GoToMirageIsland
 	incrementgamestat GAME_STAT_CHECKED_CLOCK
 	fadescreen FADE_TO_BLACK
 	special Special_ViewWallClock
+	waitstate
+	releaseall
+	end
+
+PlayersHouse_2F_EventScript_GoToMirageIsland::
+	setvar VAR_ROUTE130_STATE, 1
+	Setflag FLAG_SHOW_MIRAGE_ISLAND
+	ClearFlag FLAG_CELEBI_EVENT
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 5   @ shake delay
+	special ShakeCamera
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	delay 20
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	delay 20
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	delay 40
+	waitmoncry
+	warp MAP_ROUTE130, 36, 25
 	waitstate
 	releaseall
 	end
