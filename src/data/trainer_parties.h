@@ -6101,12 +6101,12 @@ static const struct TrainerMon sParty_Nikki[] = {
     .species = SPECIES_SEALEO,
     }
 };
-
+// Route 126
 static const struct TrainerMon sParty_Brenda[] = {
     {
     .iv = 0,
-    .lvl = 34,
-    .species = SPECIES_GOLDEEN,
+    .lvl = 39,
+    .species = SPECIES_SEAKING,
     }
 };
 // Route 130 SwimmerF (Potential Double with Santiago)
