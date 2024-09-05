@@ -8066,7 +8066,7 @@ static const struct TrainerMon sParty_GruntSpaceCenter5[] = {
 static const struct TrainerMon sParty_GruntSpaceCenter6[] = {
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 43,
     .species = SPECIES_MIGHTYENA,
     }
 };
