@@ -93,7 +93,11 @@ LilycoveCity_LilycoveMuseum_2F_Movement_FaceExhibitHall:
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_Curator::
 	lockall
-	goto_if_set FLAG_RECEIVED_GLASS_ORNAMENT, LilycoveCity_LilycoveMuseum_2F_EventScript_ReceivedGlassOrnament
+	goto_if_unset FLAG_RECEIVED_GLASS_ORNAMENT, LilycoveCity_LilycoveMuseum_2F_EventScript_CuratorRewards
+	goto_if_unset FLAG_RECEIVED_MYSTIC_TICKET, LilycoveCity_LilycoveMuseum_2F_EventScript_CuratorRewards
+	goto LilycoveCity_LilycoveMuseum_2F_EventScript_ReceivedGlassOrnament
+
+LilycoveCity_LilycoveMuseum_2F_EventScript_CuratorRewards::
 	specialvar VAR_0x8004, CountPlayerMuseumPaintings
 	switch VAR_0x8004
 	case 1, LilycoveCity_LilycoveMuseum_2F_EventScript_AddedPainting
@@ -119,10 +123,20 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_ThankPlayer::
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_GiveGlassOrnament::
 	applymovement LOCALID_CURATOR, Common_Movement_FacePlayer
+	goto_if_set FLAG_RECEIVED_GLASS_ORNAMENT, LilycoveCity_LilycoveMuseum_2F_EventScript_GiveMysticTicket
 	msgbox LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude, MSGBOX_DEFAULT
 	givedecoration DECOR_GLASS_ORNAMENT
 	goto_if_eq VAR_RESULT, FALSE, LilycoveCity_LilycoveMuseum_2F_EventScript_NoRoomForGlassOrnament
 	setflag FLAG_RECEIVED_GLASS_ORNAMENT
+LilycoveCity_LilycoveMuseum_2F_EventScript_GiveMysticTicket::
+	goto_if_set FLAG_RECEIVED_MYSTIC_TICKET, LilycoveCity_LilycoveMuseum_2F_EventScript_CuratorEnd
+	msgbox LilycoveCity_LilycoveMuseum_2F_Text_SpecialTicket, MSGBOX_DEFAULT
+	checkitemspace ITEM_MYSTIC_TICKET
+	vgoto_if_eq VAR_RESULT, FALSE, LilycoveCity_LilycoveMuseum_2F_EventScript_MysticTicketBagFull
+	giveitem ITEM_MYSTIC_TICKET
+	setflag FLAG_RECEIVED_MYSTIC_TICKET
+	msgbox LilycoveCity_LilycoveMuseum_2F_Text_WitnessTrueLegends, MSGBOX_DEFAULT
+LilycoveCity_LilycoveMuseum_2F_EventScript_CuratorEnd::
 	closemessage
 	releaseall
 	end
@@ -133,6 +147,13 @@ LilycoveCity_LilycoveMuseum_2F_EventScript_NoRoomForGlassOrnament::
 	closemessage
 	releaseall
 	end
+
+LilycoveCity_LilycoveMuseum_2F_EventScript_MysticTicketBagFull:
+	vmessage LilycoveCity_LilycoveMuseum_2F_Text_MysticTicketBagFull
+	waitmessage
+	waitbuttonpress
+	releaseall
+	return
 
 LilycoveCity_LilycoveMuseum_2F_EventScript_ReceivedGlassOrnament::
 	msgbox LilycoveCity_LilycoveMuseum_2F_Text_HonorToHaveYouVisit, MSGBOX_NPC
@@ -275,6 +296,38 @@ LilycoveCity_LilycoveMuseum_2F_Text_PaintingsAttractedMoreGuests:
 
 LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude:
 	.string "This is merely a token of my gratitude.$"
+
+LilycoveCity_LilycoveMuseum_2F_Text_SpecialTicket::
+	.string "But...\p"
+	.string "Your accomplishments in mastering\n"
+	.string "every category of the CONTESTS are so\l"
+	.string "remarkable, they demand something even\l"
+	.string "more extraordinary.\p"
+	.string "In recognition of your skill and\n"
+	.string "dedication, please accept this special\l"
+	.string "ticket...$"
+
+LilycoveCity_LilycoveMuseum_2F_Text_WitnessTrueLegends::
+	.string "With it, you can journey to Navel Rock,\n"
+	.string "where two legendary POKéMON reside.\p"
+	.string "It is said that HO-OH, the rainbow\n"
+	.string "POKéMON, brings life and beauty to the\l"
+	.string "world and the guardian of the seas\l"
+	.string "LUGIA embodies the balance and\l"
+	.string "harmony of nature.\p"
+	.string "I believe a true master must witness\n"
+	.string "the grace of HO-OH'S wings and the\l"
+	.string "power in LUGIA'S calm presence.\p"
+	.string "These legends inspire the very essence\n"
+	.string "of POKéMON coordination.\p"
+	.string "Good luck, and may you find beauty in\n"
+	.string "their strength and grace.$"
+
+LilycoveCity_LilycoveMuseum_2F_Text_MysticTicketBagFull:
+	.string "Oh, I'm sorry, {PLAYER}.\n"
+	.string "Your BAG's KEY ITEMS POCKET is full.\p"
+	.string "Please store something on your PC,\n"
+	.string "then come back for this.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_KeepThisForYou:
 	.string "I will keep this for you until we\n"

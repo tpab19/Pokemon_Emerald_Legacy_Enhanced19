@@ -66,10 +66,225 @@ LilycoveCity_ContestLobby_EventScript_TakePaintingToMuseum::
 	applymovement LOCALID_ARTIST, LilycoveCity_ContestLobby_Movement_ArtistExit
 	waitmovement 0
 	removeobject LOCALID_ARTIST
+	switch VAR_CONTEST_CATEGORY
+	case CONTEST_CATEGORY_COOL, LilycoveCity_ContestLobby_EventScript_TryCoolReward
+	case CONTEST_CATEGORY_BEAUTY, LilycoveCity_ContestLobby_EventScript_TryBeautyReward
+	case CONTEST_CATEGORY_CUTE, LilycoveCity_ContestLobby_EventScript_TryCuteReward
+	case CONTEST_CATEGORY_SMART, LilycoveCity_ContestLobby_EventScript_TrySmartReward
+	case CONTEST_CATEGORY_TOUGH, LilycoveCity_ContestLobby_EventScript_TryToughReward
+LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum::
 	call LilycoveCity_ContestLobby_EventScript_UpdateMuseumPatrons
 	call LilycoveCity_ContestLobby_EventScript_SetPaintingFlag
 	releaseall
 	end
+
+
+
+LilycoveCity_ContestLobby_EventScript_TryCoolReward::
+	call_if_set FLAG_COOL_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	givemon SPECIES_SLAKING, 50
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveCoolParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveCoolPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveCoolParty::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedCoolFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceiveParty
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveCoolPC::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedCoolFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceivePC
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceivedCoolFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LilycoveCity_ContestLobby_Text_PlayerReceivedCoolReward
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_SLAKING
+	return
+
+LilycoveCity_ContestLobby_Text_PlayerReceivedCoolReward:
+	.string "{PLAYER} received SLAKING!$"
+
+
+
+LilycoveCity_ContestLobby_EventScript_TryBeautyReward::
+	call_if_set FLAG_BEAUTY_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	givemon SPECIES_MILOTIC, 50
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveBeautyParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveBeautyPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveBeautyParty::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedBeautyFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceiveParty
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveBeautyPC::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedBeautyFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceivePC
+	end	
+
+LilycoveCity_ContestLobby_EventScript_ReceivedBeautyFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LilycoveCity_ContestLobby_Text_PlayerReceivedBeautyReward
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MILOTIC
+	return
+
+LilycoveCity_ContestLobby_Text_PlayerReceivedBeautyReward:
+	.string "{PLAYER} received MILOTIC!$"
+
+
+
+
+LilycoveCity_ContestLobby_EventScript_TryCuteReward::
+	call_if_set FLAG_CUTE_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	givemon SPECIES_DELCATTY, 50
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveCuteParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveCutePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveCuteParty::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedCuteFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceiveParty
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveCutePC::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedCuteFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceivePC
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceivedCuteFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LilycoveCity_ContestLobby_Text_PlayerReceivedCuteReward
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_DELCATTY
+	return
+
+LilycoveCity_ContestLobby_Text_PlayerReceivedCuteReward:
+	.string "{PLAYER} received DELCATTY!$"
+
+
+
+LilycoveCity_ContestLobby_EventScript_TrySmartReward::
+	call_if_set FLAG_SMART_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	givemon SPECIES_GARDEVOIR, 50
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveSmartParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveSmartPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveSmartParty::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedSmartFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceiveParty
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveSmartPC::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedSmartFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceivePC
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceivedSmartFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LilycoveCity_ContestLobby_Text_PlayerReceivedSmartReward
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_GARDEVOIR
+	return
+
+LilycoveCity_ContestLobby_Text_PlayerReceivedSmartReward:
+	.string "{PLAYER} received GARDEVOIR!$"
+
+
+
+LilycoveCity_ContestLobby_EventScript_TryToughReward::
+	call_if_set FLAG_TOUGH_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	givemon SPECIES_AGGRON, 50
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveToughParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveToughPC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveToughParty::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedToughFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceiveParty
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceiveToughPC::
+	call LilycoveCity_ContestLobby_EventScript_ReceivedToughFanfare
+	goto LilycoveCity_ContestLobby_EventScript_ReceivePC
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceivedToughFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message LilycoveCity_ContestLobby_Text_PlayerReceivedToughReward
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_AGGRON
+	return
+
+LilycoveCity_ContestLobby_Text_PlayerReceivedToughReward:
+	.string "{PLAYER} received AGGRON!$"
+
+
+
+LilycoveCity_ContestLobby_EventScript_ReceiveParty::
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	msgbox LilycoveCity_ContestLobby_Text_RewardEnd, MSGBOX_DEFAULT
+	waitmessage
+	goto LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	end
+
+LilycoveCity_ContestLobby_EventScript_ReceivePC::
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_ContestLobby_EventScript_SendToPC
+	call Common_EventScript_NameReceivedBoxMon
+	msgbox LilycoveCity_ContestLobby_Text_RewardEnd, MSGBOX_DEFAULT
+	waitmessage
+	goto Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+	end
+
+LilycoveCity_ContestLobby_EventScript_SendToPC::
+	call Common_EventScript_TransferredToPC
+	msgbox LilycoveCity_ContestLobby_Text_RewardEnd, MSGBOX_DEFAULT
+	waitmessage
+	goto LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
+	end
+
+LilycoveCity_ContestLobby_Text_Reward:
+	.string "You've just won a MASTER RIBBON\n"
+	.string "That’s an incredible accomplishment!\p"
+	.string "You and your POKéMON truly shone during\n"
+	.string "those appeals.\p"
+	.string "To commemorate your POKéMON’s\n"
+	.string "performance, we’d like to present you\l"
+	.string "with this!\p"
+	.string "It's a special POKéMON, just for\n"
+	.string "trainers who reach this milestone.$"
+
+LilycoveCity_ContestLobby_Text_RewardEnd:
+	.string "Take good care of it!$"
 
 LilycoveCity_ContestLobby_EventScript_ConfirmDontTakePainting::
 	msgbox LilycoveCity_ContestLobby_Text_TakeHomeButIdLikeToTakeToMuseum, MSGBOX_YESNO
