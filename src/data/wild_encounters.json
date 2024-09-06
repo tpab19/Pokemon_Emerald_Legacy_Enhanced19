@@ -2645,12 +2645,12 @@
               {
                 "min_level": 38,
                 "max_level": 38,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_MAWILE"
               },
               {
-                "min_level": 40,
+                "min_level": 39,
                 "max_level": 40,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_MAWILE"
               },
               {
                 "min_level": 38,
@@ -7611,9 +7611,9 @@
                 "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 14,
-                "max_level": 14,
-                "species": "SPECIES_ZUBAT"
+                "min_level": 18,
+                "max_level": 20,
+                "species": "SPECIES_MAWILE"
               },
               {
                 "min_level": 18,
