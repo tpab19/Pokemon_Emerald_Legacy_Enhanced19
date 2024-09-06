@@ -383,32 +383,18 @@ static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
 // Aqua Admin Seafloor Cavern
 static const struct TrainerMon sParty_ShellySeafloorCavern[] = {
     {
-    .iv = 100,
+    .iv = 50,
     .lvl = 44,
-    .species = SPECIES_TENTACRUEL,
+    .species = SPECIES_MIGHTYENA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RAIN_DANCE, MOVE_SLUDGE_BOMB}
+    .moves = {MOVE_CRUNCH, MOVE_TAKE_DOWN, MOVE_PROTECT, MOVE_SCARY_FACE}
     },
     {
     .iv = 100,
-    .lvl = 43,
+    .lvl = 44,
     .species = SPECIES_CASTFORM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_WEATHER_BALL, MOVE_RAIN_DANCE, MOVE_HEADBUTT, MOVE_AURORA_BEAM}
-    },
-    {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_SEVIPER,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_POISON_TAIL, MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE}
-    },
-    {
-    .iv = 100,
-    .lvl = 43,
-    .species = SPECIES_SNEASEL,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FAINT_ATTACK, MOVE_BLIZZARD, MOVE_METAL_CLAW, MOVE_SLASH}
     },
     {
     .iv = 100,
@@ -7811,17 +7797,28 @@ static const struct TrainerMon sParty_Julio[] = {
     .species = SPECIES_MAGNEMITE,
     }
 };
-// Seafloor Cavern
+// Seafloor Cavern (Double with shelly)
 static const struct TrainerMon sParty_GruntSeafloorCavern5[] = {
     {
-    .iv = 50,
-    .lvl = 35,
-    .species = SPECIES_MIGHTYENA,
+    .iv = 100,
+    .lvl = 43,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RAIN_DANCE, MOVE_SLUDGE_BOMB}
+    }, 
+    {
+    .iv = 100,
+    .lvl = 43,
+    .species = SPECIES_SNEASEL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_FAINT_ATTACK, MOVE_BLIZZARD, MOVE_METAL_CLAW, MOVE_SLASH}
     },
     {
-    .iv = 50,
-    .lvl = 35,
-    .species = SPECIES_GOLBAT,
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_SEVIPER,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_POISON_TAIL, MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE}
     }
 };
 
