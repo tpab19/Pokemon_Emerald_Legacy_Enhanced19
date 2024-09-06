@@ -1882,14 +1882,14 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
     {40, 10}, // +6, MAX_STAT_STAGE
 };
 
-static const u16 sDeoxysBaseStats[] =
+static const u16 sDeoxysBaseStats[] = // set back to default
 {
     [STAT_HP]    = 50,
-    [STAT_ATK]   = 95,
-    [STAT_DEF]   = 90,
-    [STAT_SPEED] = 180,
-    [STAT_SPATK] = 95,
-    [STAT_SPDEF] = 90,
+    [STAT_ATK]   = 150,
+    [STAT_DEF]   = 50,
+    [STAT_SPEED] = 150,
+    [STAT_SPATK] = 150,
+    [STAT_SPDEF] = 50,
 };
 
 // The classes used by other players in the Union Room.
