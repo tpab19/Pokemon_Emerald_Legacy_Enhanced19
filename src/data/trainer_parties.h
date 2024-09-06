@@ -8253,7 +8253,7 @@ static const struct TrainerMon sParty_MaxieMtChimney[] = {
     {
     .iv = 150,
     .lvl = 26,
-    .species = SPECIES_HOUNDOOM,
+    .species = SPECIES_MIGHTYENA,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_BITE, MOVE_SAND_ATTACK, MOVE_HEADBUTT, MOVE_ROAR}
     },
