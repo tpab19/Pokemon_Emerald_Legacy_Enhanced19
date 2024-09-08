@@ -4568,6 +4568,36 @@ static const union AnimCmd sAnim_Deoxys_2[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_Deoxys_Speed_1[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 26),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Deoxys_Attack_1[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 26),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_Deoxys_Defense_1[] =
+{
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 26),
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(0, 16),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd sAnim_Chimecho_1[] =
 {
     ANIMCMD_FRAME(0, 15),
@@ -5222,6 +5252,9 @@ DOUBLE_ANIMATION(Latias);
 DOUBLE_ANIMATION(Latios);
 DOUBLE_ANIMATION(Jirachi);
 DOUBLE_ANIMATION(Deoxys);
+SINGLE_ANIMATION(Deoxys_Speed);
+SINGLE_ANIMATION(Deoxys_Attack);
+SINGLE_ANIMATION(Deoxys_Defense);
 SINGLE_ANIMATION(Chimecho);
 SINGLE_ANIMATION(Egg);
 SINGLE_ANIMATION(UnownB);
@@ -5665,6 +5698,9 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_LATIOS]      = sAnims_Latios,
     [SPECIES_JIRACHI]     = sAnims_Jirachi,
     [SPECIES_DEOXYS]      = sAnims_Deoxys,
+    [SPECIES_DEOXYS_SPEED]      = sAnims_Deoxys_Speed,
+    [SPECIES_DEOXYS_ATTACK]     = sAnims_Deoxys_Attack,
+    [SPECIES_DEOXYS_DEFENSE]    = sAnims_Deoxys_Defense,
     [SPECIES_CHIMECHO]    = sAnims_Chimecho,
     [SPECIES_EGG]         = sAnims_Egg,
     [SPECIES_UNOWN_B]     = sAnims_UnownB,

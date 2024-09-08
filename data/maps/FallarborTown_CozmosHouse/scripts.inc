@@ -47,10 +47,67 @@ FallarborTown_CozmosHouse_EventScript_GaveMeteorite::
 	checkpartymon SPECIES_RAYQUAZA
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GotRayquaza
 	goto EventScript_GotRayquaza
+
 FallarborTown_CozmosHouse_EventScript_GaveMeteorite_Continued::
+	goto_if_set FLAG_BATTLED_DEOXYS, FallarborTown_CozmosHouse_EventScript_ChangeDeoxysForm
+	goto_if_set FLAG_DEFEATED_DEOXYS, FallarborTown_CozmosHouse_EventScript_ChangeDeoxysForm
 	msgbox FallarborTown_CozmosHouse_Text_ReallyGoingToHelpMyResearch, MSGBOX_DEFAULT
 	release
 	end
+
+FallarborTown_CozmosHouse_EventScript_ChangeDeoxysForm::
+	goto_if_set FLAG_COZMO_CAUGHT_DEOXYS, FallarborTown_CozmosHouse_EventScript_ChangeDeoxysForm2
+	setflag FLAG_COZMO_CAUGHT_DEOXYS
+	msgbox FallarborTown_CozmosHouse_Text_CozmoSurprised, MSGBOX_DEFAULT
+FallarborTown_CozmosHouse_EventScript_ChangeDeoxysForm2::
+	msgbox ChangeDeoxysForm_Text_Beginning, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq ChangeDeoxysForm_Start
+ChangeDeoxysForm_End:
+	msgbox ChangeDeoxysForm_Text_End, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ChangeDeoxysForm_Start:
+	msgbox ChangeDeoxysForm_Text_Select, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, 255
+	goto_if_eq ChangeDeoxysForm_End
+	special TryChangeDeoxysForm
+	compare VAR_RESULT, TRUE
+	faceplayer
+	goto_if_eq ChangeDeoxysForm_Success
+	goto ChangeDeoxysForm_End
+
+ChangeDeoxysForm_Success:
+	playmoncry SPECIES_DEOXYS, 0
+	msgbox ChangeDeoxysForm_Text_Success, MSGBOX_DEFAULT
+	waitmoncry
+	goto ChangeDeoxysForm_End
+
+ChangeDeoxysForm_Text_Beginning:
+	.string "Would you like to see what happens if\n"
+	.string "we expose it to this meteorite?$"
+
+ChangeDeoxysForm_Text_End:
+	.string "Come back anytime.$"
+
+ChangeDeoxysForm_Text_Select:
+	.string "Show me your DEOXYS.$"
+
+ChangeDeoxysForm_Text_Success:
+	.string "The experiment was a success!\nYour DEOXYS has transformed!$"
+
+FallarborTown_CozmosHouse_Text_CozmoSurprised:
+	.string "PROF. COZMO: Incredible! You caught\n"
+	.string "DEOXYS, didn't you?\p"
+	.string "I've been studying the METEORITE while\n"
+	.string "you were away, and I think there's a\l"
+	.string "strange connection between it and\l"
+	.string "DEOXYS.\p"
+	.string "Can you feel it? It’s as if they…\n"
+	.string "resonate.$"
 
 EventScript_GotRayquaza::
 	msgbox FallarborTown_CozmosHouse_Text_GotRayquaza, MSGBOX_DEFAULT

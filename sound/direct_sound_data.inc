@@ -1935,6 +1935,18 @@ Cry_Deoxys::
 	.incbin "sound/direct_sound_samples/cries/deoxys.bin"
 
 	.align 2
+Cry_Deoxys_Speed::
+	.incbin "sound/direct_sound_samples/cries/deoxys.bin"
+
+	.align 2
+Cry_Deoxys_Attack::
+	.incbin "sound/direct_sound_samples/cries/deoxys.bin"
+
+	.align 2
+Cry_Deoxys_Defense::
+	.incbin "sound/direct_sound_samples/cries/deoxys.bin"
+
+	.align 2
 Cry_Chimecho::
 	.incbin "sound/direct_sound_samples/cries/chimecho.bin"
 

@@ -2705,6 +2705,27 @@ const u16 gMonUnusedGarbage[] = INCBIN_U16("graphics/pokemon/unused_garbage.bin"
 
 const u8 gMonFootprint_Deoxys[] = INCBIN_U8("graphics/pokemon/deoxys/footprint.1bpp");
 
+const u32 gMonStillFrontPic_Deoxys_Speed[] = INCBIN_U32("graphics/pokemon/deoxys_speed/front.4bpp.lz");
+const u32 gMonPalette_Deoxys_Speed[] = INCBIN_U32("graphics/pokemon/deoxys_speed/normal.gbapal.lz");
+const u32 gMonBackPic_Deoxys_Speed[] = INCBIN_U32("graphics/pokemon/deoxys_speed/back.4bpp.lz");
+const u32 gMonShinyPalette_Deoxys_Speed[] = INCBIN_U32("graphics/pokemon/deoxys_speed/shiny.gbapal.lz");
+const u8 gMonIcon_Deoxys_Speed[] = INCBIN_U8("graphics/pokemon/deoxys_speed/icon.4bpp");
+const u8 gMonFootprint_Deoxys_Speed[] = INCBIN_U8("graphics/pokemon/deoxys_speed/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Deoxys_Attack[] = INCBIN_U32("graphics/pokemon/deoxys_attack/front.4bpp.lz");
+const u32 gMonPalette_Deoxys_Attack[] = INCBIN_U32("graphics/pokemon/deoxys_attack/normal.gbapal.lz");
+const u32 gMonBackPic_Deoxys_Attack[] = INCBIN_U32("graphics/pokemon/deoxys_attack/back.4bpp.lz");
+const u32 gMonShinyPalette_Deoxys_Attack[] = INCBIN_U32("graphics/pokemon/deoxys_attack/shiny.gbapal.lz");
+const u8 gMonIcon_Deoxys_Attack[] = INCBIN_U8("graphics/pokemon/deoxys_attack/icon.4bpp");
+const u8 gMonFootprint_Deoxys_Attack[] = INCBIN_U8("graphics/pokemon/deoxys_attack/footprint.1bpp");
+
+const u32 gMonStillFrontPic_Deoxys_Defense[] = INCBIN_U32("graphics/pokemon/deoxys_defense/front.4bpp.lz");
+const u32 gMonPalette_Deoxys_Defense[] = INCBIN_U32("graphics/pokemon/deoxys_defense/normal.gbapal.lz");
+const u32 gMonBackPic_Deoxys_Defense[] = INCBIN_U32("graphics/pokemon/deoxys_defense/back.4bpp.lz");
+const u32 gMonShinyPalette_Deoxys_Defense[] = INCBIN_U32("graphics/pokemon/deoxys_defense/shiny.gbapal.lz");
+const u8 gMonIcon_Deoxys_Defense[] = INCBIN_U8("graphics/pokemon/deoxys_defense/icon.4bpp");
+const u8 gMonFootprint_Deoxys_Defense[] = INCBIN_U8("graphics/pokemon/deoxys_defense/footprint.1bpp");
+
 const u32 gMonStillFrontPic_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/front.4bpp.lz");
 const u32 gMonPalette_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/normal.gbapal.lz");
 const u32 gMonBackPic_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/back.4bpp.lz");
