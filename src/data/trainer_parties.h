@@ -3393,7 +3393,7 @@ static const struct TrainerMon sParty_Glacia[] = {
     .lvl = 54,
     .species = SPECIES_GLALIE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_EXPLOSION}
+    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_HAIL}
     },
     {
     .iv = 250,
@@ -3407,7 +3407,7 @@ static const struct TrainerMon sParty_Glacia[] = {
     .lvl = 53,
     .species = SPECIES_CASTFORM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WEATHER_BALL, MOVE_HYDRO_PUMP, MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT}
+    .moves = {MOVE_WEATHER_BALL, MOVE_HYDRO_PUMP, MOVE_HAIL, MOVE_THUNDERBOLT}
     },
     {
     .iv = 250,
@@ -3421,7 +3421,7 @@ static const struct TrainerMon sParty_Glacia[] = {
     .lvl = 55,
     .species = SPECIES_WALREIN,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_YAWN, MOVE_SHEER_COLD}
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_HAIL, MOVE_SHEER_COLD}
     }
 };
 // Elite Four Drake
