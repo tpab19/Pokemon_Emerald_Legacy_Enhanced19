@@ -10368,4 +10368,28 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = TRAINER_MON(sParty_Wallace2),
     },
+
+    [TRAINER_COURTNEY_1] =
+    {
+        .trainerClass = TRAINER_CLASS_MAGMA_ADMIN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_ADMIN_F,
+        .trainerName = _("COURTNEY"),
+        .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Courtney1),
+    },
+
+    [TRAINER_COURTNEY_2] =
+    {
+        .trainerClass = TRAINER_CLASS_MAGMA_ADMIN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_ADMIN_F,
+        .trainerName = _("COURTNEY"),
+        .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .party = TRAINER_MON(sParty_Courtney2),
+    },
 };

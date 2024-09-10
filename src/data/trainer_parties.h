@@ -12963,3 +12963,52 @@ static const struct TrainerMon sParty_Brawly1_3[] = {
     }
 };
 
+// Magma Admin Courtney (Magma Hideout)
+static const struct TrainerMon sParty_Courtney1[] = {
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
+    },
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_ZANGOOSE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRUSH_CLAW, MOVE_SUNNY_DAY, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE}
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
+    }
+};
+
+// Magma Admin Courtney (Space Center)
+static const struct TrainerMon sParty_Courtney2[] = {
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
+    },
+    {
+    .iv = 100,
+    .lvl = 44,
+    .species = SPECIES_ZANGOOSE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRUSH_CLAW, MOVE_SUNNY_DAY, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE}
+    },
+    {
+    .iv = 100,
+    .lvl = 45,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
+    }
+};

@@ -8,6 +8,7 @@
 .set LOCALID_GRUNT_7, 7
 .set LOCALID_TABITHA, 8
 .set LOCALID_MAXIE, 9
+.set LOCALID_COURTNEY, 10
 
 MossdeepCity_SpaceCenter_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_SpaceCenter_2F_OnTransition
@@ -54,6 +55,11 @@ MossdeepCity_SpaceCenter_2F_EventScript_ThreeMagmaGrunts::
 	warp MAP_MOSSDEEP_CITY_SPACE_CENTER_1F, 13, 1
 	waitstate
 	releaseall
+	end
+
+MossdeepCity_SpaceCenter_2F_EventScript_Courtney::
+	trainerbattle_single TRAINER_COURTNEY_2, MossdeepCity_SpaceCenter_2F_Text_CourtneyIntro, MossdeepCity_SpaceCenter_2F_Text_CourtneyDefeated
+	msgbox MossdeepCity_SpaceCenter_2F_Text_CourtneyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_SpaceCenter_2F_Movement_PlayerExit:

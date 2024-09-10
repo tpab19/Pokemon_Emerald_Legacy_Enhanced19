@@ -1867,7 +1867,12 @@ static u8 getLevelCap(void){
     if (!FlagGet(FLAG_BADGE01_GET))
         nextLeader = TRAINER_ROXANNE_1;
     else if (!FlagGet(FLAG_BADGE02_GET))
-        nextLeader = TRAINER_BRAWLY_1;
+        if (FlagGet(FLAG_BADGE04_GET))
+            nextLeader = TRAINER_FLANNERY_1;
+        else if (FlagGet(FLAG_BADGE03_GET))
+            nextLeader = TRAINER_WATTSON_1;
+        else
+            nextLeader = TRAINER_BRAWLY_1;
     else if (!FlagGet(FLAG_BADGE03_GET))
         nextLeader = TRAINER_WATTSON_1;
     else if (!FlagGet(FLAG_BADGE04_GET))

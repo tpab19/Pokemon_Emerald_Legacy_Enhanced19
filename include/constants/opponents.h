@@ -865,12 +865,14 @@
 #define TRAINER_BRAWLY_1_3                  861
 #define TRAINER_STEVEN_2                    862
 #define TRAINER_WALLACE_2                   863
+#define TRAINER_COURTNEY_1                  864
+#define TRAINER_COURTNEY_2                  865
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      863
+#define TRAINERS_COUNT                      866
 #define MAX_TRAINERS_COUNT                  960
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
