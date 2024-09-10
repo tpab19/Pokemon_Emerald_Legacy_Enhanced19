@@ -16,6 +16,11 @@ MagmaHideout_1F_EventScript_Grunt2::
 	msgbox MagmaHideout_1F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MagmaHideout_1F_EventScript_Courtney::
+	trainerbattle_single TRAINER_COURTNEY_1, MagmaHideout_1F_Text_CourtneyIntro, MagmaHideout_1F_Text_CourtneyDefeat
+	msgbox MagmaHideout_1F_Text_CourtneyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 MagmaHideout_1F_Text_Grunt1Intro:
 	.string "When TEAM MAGMA has roll call, we get\n"
 	.string "important guarding assignments in\l"
@@ -51,3 +56,20 @@ MagmaHideout_1F_Text_Grunt2PostBattle:
 	.string "It'd be better if you saved surprises\n"
 	.string "to the end, don't you think?$"
 
+MagmaHideout_1F_Text_CourtneyIntro:
+	.string "Ahahahaha!\p"
+	.string "You dare intrude on TEAM MAGMA’s\n"
+	.string "hideout?\p"
+	.string "You must be either incredibly brave or\n"
+	.string "utterly foolish to challenge me here.$"
+
+MagmaHideout_1F_Text_CourtneyDefeat:
+	.string "Ahahahaha!\n"
+	.string "You’re stronger than I expected...\p"
+	.string "But TEAM MAGMA will not be so easily\n"
+	.string "stopped!$"
+
+MagmaHideout_1F_Text_CourtneyPostBattle:
+	.string "Ahahahaha!\p"
+	.string "You managed to get past me, but don’t\n"
+	.string "think you’re done.$"
