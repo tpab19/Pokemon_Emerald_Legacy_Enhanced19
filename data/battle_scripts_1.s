@@ -898,6 +898,36 @@ BattleScript_EffectFocusEnergy::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectLeafBlade::
+	jumpifnotmove MOVE_SURF, BattleScript_BladeHitFromAtkCanceler
+	jumpifnostatus3 BS_TARGET, STATUS3_UNDERWATER, BattleScript_BladeHitFromAtkCanceler
+	orword gHitMarker, HITMARKER_IGNORE_UNDERWATER
+	setbyte sDMG_MULTIPLIER, 2
+BattleScript_BladeHitFromAtkCanceler::
+	attackcanceler
+BattleScript_BladeHitFromAccCheck::
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+BattleScript_BladeHitFromAtkString::
+	attackstring
+	ppreduce
+BattleScript_BladeHitFromCritCalc::
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+BattleScript_LeafBladeHitFromAtkAnimation::
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	seteffectwithchance
+	tryfaintmon BS_TARGET
 	ppreduce
 	jumpifstatus2 BS_ATTACKER, STATUS2_FOCUS_ENERGY, BattleScript_EffectLeafBlade2
 	leafbladesetfocusenergy
@@ -909,7 +939,7 @@ BattleScript_EffectGettingPumped::
 BattleScript_EffectLeafBlade2::
 	attackcanceler
 	attackstring
-	goto BattleScript_EffectHit
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectRecoil::
 	setmoveeffect MOVE_EFFECT_RECOIL_25 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
