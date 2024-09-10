@@ -6871,28 +6871,28 @@ static const struct TrainerMon sParty_Hector[] = {
     .species = SPECIES_ZANGOOSE,
     }
 };
-// Magma Admin Space Center (Double)
+// Magma Admin Space Center (Double SC)
 static const struct TrainerMon sParty_TabithaMossdeep[] = {
     {
-    .iv = 100,
+    .iv = 150,
     .lvl = 44,
-    .species = SPECIES_NINETALES,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
+    .species = SPECIES_CROBAT,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_WING_ATTACK, MOVE_GIGA_DRAIN, MOVE_POISON_FANG, MOVE_CONFUSE_RAY}
     },
     {
-    .iv = 100,
+    .iv = 150,
     .lvl = 44,
+    .species = SPECIES_AGGRON,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL, MOVE_PROTECT}
+    },
+    {
+    .iv = 150,
+    .lvl = 45,
     .species = SPECIES_ZANGOOSE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRUSH_CLAW, MOVE_SUNNY_DAY, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE}
-    },
-    {
-    .iv = 100,
-    .lvl = 45,
-    .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
+    .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY,  MOVE_SWORDS_DANCE}
     }
 };
 
@@ -8145,22 +8145,17 @@ static const struct TrainerMon sParty_GruntWeatherInst5[] = {
 static const struct TrainerMon sParty_TabithaMtChimney[] = {
     {
     .iv = 50,
-    .lvl = 23,
-    .species = SPECIES_BALTOY,
-    },
-    {
-    .iv = 50,
-    .lvl = 24,
-    .species = SPECIES_VULPIX,
-    },
-    {
-    .iv = 50,
-    .lvl = 23,
-    .species = SPECIES_NUZLEAF,
+    .lvl = 25,
+    .species = SPECIES_CACNEA,
     },
     {
     .iv = 50,
     .lvl = 25,
+    .species = SPECIES_LAIRON,
+    },
+    {
+    .iv = 50,
+    .lvl = 26,
     .species = SPECIES_ZANGOOSE,
     }
 };
@@ -8218,16 +8213,16 @@ static const struct TrainerMon sParty_MaxieMagmaHideout[] = {
     .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_SUNNY_DAY, MOVE_ROAR}
     },
     {
-    .iv = 150,
+    .iv = 200,
     .lvl = 38,
-    .species = SPECIES_CACTURNE,
+    .species = SPECIES_SHIFTRY,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_NEEDLE_ARM, MOVE_FAINT_ATTACK, MOVE_PIN_MISSILE, MOVE_COTTON_SPORE}
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
     },
     {
     .iv = 150,
-    .lvl = 37,
-    .species = SPECIES_LAIRON,
+    .lvl = 38,
+    .species = SPECIES_AGGRON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_IRON_TAIL, MOVE_ROCK_THROW, MOVE_EARTHQUAKE, MOVE_IRON_DEFENSE}
     },
@@ -8263,11 +8258,10 @@ static const struct TrainerMon sParty_MaxieMtChimney[] = {
     .moves = {MOVE_WING_ATTACK, MOVE_CONFUSE_RAY, MOVE_BITE, MOVE_LEECH_LIFE}
     },
     {
-    .iv = 150,
-    .lvl = 27,
-    .species = SPECIES_LAIRON,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_TAKE_DOWN, MOVE_METAL_CLAW, MOVE_ROCK_THROW, MOVE_IRON_DEFENSE}
+    .iv = 50,
+    .lvl = 25,
+    .species = SPECIES_NUZLEAF,
+    .moves = {MOVE_RAZOR_LEAF, MOVE_LEECH_SEED, MOVE_ROCK_TOMB, MOVE_GROWTH}
     },
     {
     .iv = 150,
@@ -10141,17 +10135,17 @@ static const struct TrainerMon sParty_TabithaMagmaHideout[] = {
     {
     .iv = 50,
     .lvl = 36,
-    .species = SPECIES_NINETALES,
+    .species = SPECIES_CROBAT,
     },
     {
     .iv = 50,
     .lvl = 35,
-    .species = SPECIES_SHIFTRY,
+    .species = SPECIES_LAIRON,
     },
     {
     .iv = 50,
-    .lvl = 36,
-    .species = SPECIES_CLAYDOL,
+    .lvl = 35,
+    .species = SPECIES_CACTURNE,
     },
     {
     .iv = 50,
@@ -10177,28 +10171,28 @@ static const struct TrainerMon sParty_Darcy[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-// Magma Leader Space Center (Double)
+// Magma Leader Space Center (Double SC)
 static const struct TrainerMon sParty_MaxieMossdeep[] = {
     {
-    .iv = 150,
+    .iv = 200,
     .lvl = 45,
-    .species = SPECIES_CROBAT,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_FLY, MOVE_GIGA_DRAIN, MOVE_POISON_FANG, MOVE_CONFUSE_RAY}
-    },
-    {
-    .iv = 150,
-    .lvl = 45,
-    .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_CRUNCH, MOVE_SUNNY_DAY, MOVE_ROCK_SMASH}
-    },
-    {
-    .iv = 150,
-    .lvl = 46,
-    .species = SPECIES_AGGRON,
+    .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_SALAC_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL, MOVE_PROTECT}
+    .moves = {MOVE_HEAT_WAVE, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_CRUNCH}
+    },
+    {
+    .iv = 200,
+    .lvl = 45,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
+    },
+    {
+    .iv = 200,
+    .lvl = 46,
+    .species = SPECIES_CAMERUPT,
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_HEAT_WAVE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SUNNY_DAY}
     }
 };
 // Route 103 Surf SwimmerM
@@ -12963,52 +12957,66 @@ static const struct TrainerMon sParty_Brawly1_3[] = {
     }
 };
 
-// Magma Admin Courtney (Magma Hideout)
+// Magma Admin (Magma Hideout)
 static const struct TrainerMon sParty_Courtney1[] = {
     {
     .iv = 100,
-    .lvl = 44,
+    .lvl = 37,
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WING_ATTACK, MOVE_FAINT_ATTACK, MOVE_ICY_WIND, MOVE_STEEL_WING}
+    },
+    {
+    .iv = 100,
+    .lvl = 37,
+    .species = SPECIES_ROSELIA,
+    .heldItem = ITEM_PERISM_BERRY,
+    .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_GRASS_WHISTLE, MOVE_SYNTHESIS}
+    },
+    {
+    .iv = 100,
+    .lvl = 37,
+    .species = SPECIES_CLAYDOL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_PSYCHIC, MOVE_ANCIENT_POWER, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
+    },
+    {
+    .iv = 150,
+    .lvl = 38,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
-    },
-    {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_ZANGOOSE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRUSH_CLAW, MOVE_SUNNY_DAY, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE}
-    },
-    {
-    .iv = 100,
-    .lvl = 45,
-    .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
     }
 };
 
-// Magma Admin Courtney (Space Center)
+// Magma Admin (Space Center)
 static const struct TrainerMon sParty_Courtney2[] = {
+     {
+    .iv = 100,
+    .lvl = 42,
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_DRILL_PECK, MOVE_FAINT_ATTACK, MOVE_ICY_WIND, MOVE_STEEL_WING}
+    },
     {
     .iv = 100,
+    .lvl = 43,
+    .species = SPECIES_ROSELIA,
+    .heldItem = ITEM_PERISM_BERRY,
+    .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_GRASS_WHISTLE, MOVE_SYNTHESIS}
+    },
+    {
+    .iv = 100,
+    .lvl = 42,
+    .species = SPECIES_CLAYDOL,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_PSYCHIC, MOVE_EARTHQUAKE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY}
+    },
+    {
+    .iv = 150,
     .lvl = 44,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
-    },
-    {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_ZANGOOSE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRUSH_CLAW, MOVE_SUNNY_DAY, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE}
-    },
-    {
-    .iv = 100,
-    .lvl = 45,
-    .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
     }
 };

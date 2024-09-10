@@ -827,6 +827,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(HOUNDOUR,
               MOVE_FIRE_SPIN,
+              MOVE_HEAT_WAVE,
               MOVE_RAGE,
               MOVE_PURSUIT,
               MOVE_COUNTER,
@@ -1095,6 +1096,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(NUMEL,
               MOVE_HOWL,
+              MOVE_HEAT_WAVE,
               MOVE_SCARY_FACE,
               MOVE_BODY_SLAM,
               MOVE_ROLLOUT,
