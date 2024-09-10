@@ -12970,7 +12970,7 @@ static const struct TrainerMon sParty_Courtney1[] = {
     .iv = 100,
     .lvl = 37,
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_PERISM_BERRY,
+    .heldItem = ITEM_PERSIM_BERRY,
     .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_GRASS_WHISTLE, MOVE_SYNTHESIS}
     },
     {
@@ -13002,7 +13002,7 @@ static const struct TrainerMon sParty_Courtney2[] = {
     .iv = 100,
     .lvl = 43,
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_PERISM_BERRY,
+    .heldItem = ITEM_PERSIM_BERRY,
     .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_GRASS_WHISTLE, MOVE_SYNTHESIS}
     },
     {
