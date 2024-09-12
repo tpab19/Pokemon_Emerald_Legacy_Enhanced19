@@ -1,10 +1,40 @@
+.set LOCALID_SUICUNE, 5
+
 AbandonedShip_HiddenFloorRooms_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, AbandonedShip_HiddenFloorRooms_OnFrame
+	map_script MAP_SCRIPT_ON_TRANSITION, AbandonedShip_HiddenFloorRooms_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, AbandonedShip_HiddenFloorRooms_OnResume
 	.byte 0
 
 AbandonedShip_HiddenFloorRooms_OnFrame:
 	map_script_2 VAR_TEMP_1, 0, AbandonedShip_HiddenFloorRooms_EventScript_DoHiddenItemSparkle
 	.2byte 0
+
+AbandonedShip_HiddenFloorRooms_OnTransition:
+	call_if_set FLAG_CAUGHT_SUICUNE, AbandonedShip_HiddenFloorRooms_EventScript_HideSuicune
+	call_if_unset FLAG_STARTED_FINAL_PURITY_READING, AbandonedShip_HiddenFloorRooms_EventScript_HideSuicune
+	call_if_unset FLAG_CAUGHT_SUICUNE, AbandonedShip_HiddenFloorRooms_EventScript_TryShowSuicune
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_HideSuicune::
+	setflag FLAG_HIDE_SUICUNE
+	return
+
+AbandonedShip_HiddenFloorRooms_EventScript_TryShowSuicune::
+	goto_if_set FLAG_DEFEATED_SUICUNE, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_SUICUNE
+	return
+
+AbandonedShip_HiddenFloorRooms_OnResume:
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, AbandonedShip_HiddenFloorRooms_EventScript_TryRemoveSuicune
+	setdivewarp MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS, 0, 10
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_TryRemoveSuicune::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_SUICUNE
+	return
 
 @ After the below calculation, VAR_TEMP_4 is the room number of the door the player entered
 @ Bottom row, left column   (Rm 1)
@@ -109,6 +139,35 @@ AbandonedShip_HiddenFloorRooms_EventScript_Trash::
 	lockall
 	msgbox AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash, MSGBOX_DEFAULT
 	releaseall
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_Suicune::
+	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_SUICUNE
+	seteventmon SPECIES_SUICUNE, 50
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, AbandonedShip_HiddenFloorRooms_EventScript_DefeatedSuicune
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, AbandonedShip_HiddenFloorRooms_EventScript_RanFromSuicune
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, AbandonedShip_HiddenFloorRooms_EventScript_RanFromSuicune
+	setflag FLAG_CAUGHT_SUICUNE
+	releaseall
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_DefeatedSuicune::
+	setflag FLAG_DEFEATED_SUICUNE
+	setvar VAR_0x8004, SPECIES_SUICUNE
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+AbandonedShip_HiddenFloorRooms_EventScript_RanFromSuicune::
+	setvar VAR_0x8004, SPECIES_SUICUNE
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash:

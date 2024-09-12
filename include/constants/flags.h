@@ -58,14 +58,14 @@
 #define FLAG_HIDE_CELEBI                    0x2D
 #define FLAG_BATTLED_CELEBI                 0x2E
 #define FLAG_COZMO_CAUGHT_DEOXYS            0x2F
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
+#define FLAG_STARTED_FIRST_PURITY_READING   0x30
+#define FLAG_GOT_FIRST_PURITY_READING       0x31
+#define FLAG_STARTED_SECOND_PURITY_READING  0x32
+#define FLAG_GOT_SECOND_PURITY_READING      0x33
+#define FLAG_HIDE_SUICUNE                   0x34
+#define FLAG_CAUGHT_SUICUNE                 0x35
+#define FLAG_DEFEATED_SUICUNE               0x36
+#define FLAG_STARTED_FINAL_PURITY_READING   0x37
 #define FLAG_UNUSED_0x038    0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
