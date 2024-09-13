@@ -1283,11 +1283,7 @@ static s32 HideGameDisplay(void)
     case 1:
         if (!IsLinkTaskFinished())
             return 0;
-        // fall through
-        // This will call BeginNormalPaletteFade() twice.
-#ifdef BUGFIX
         break;
-#endif
     case 2:
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         UpdatePaletteFade();
@@ -2746,11 +2742,7 @@ static void HandlePlayerInput(struct BerryCrushGame *game)
     {
         // BUG: The wrong field is used twice below
         // As a result, only a sparkleAmount of 0, 1, or 4 is attainable
-        #ifdef BUGFIX
         #define field sparkleAmount
-        #else
-        #define field sparkleCounter
-        #endif
 
         if (game->sparkleCounter < sSparkleThresholds[game->playerCount - 2][0])
             game->sparkleAmount = 0;
