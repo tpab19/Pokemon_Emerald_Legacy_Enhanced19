@@ -211,6 +211,7 @@ Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	end
 
 Route119_WeatherInstitute_2F_EventScript_InstituteWorker3::
+	faceplayer
 	goto_if_set FLAG_CAUGHT_RAIKOU, Route119_WeatherInstitute_2F_EventScriptCaughtRaikou
 	goto_if_set FLAG_DEFEATED_RAIKOU, Route119_WeatherInstitute_2F_EventScriptCaughtRaikou
 	goto_if_set FLAG_GOT_SECOND_LIGHTNING_SEARCH, Route119_WeatherInstitute_2F_EventScriptRoute119
@@ -244,6 +245,7 @@ Route119_WeatherInstitute_2F_EventScriptCaughtRaikou::
 	end
 
 Route119_WeatherInstitute_2F_EventScript_InstituteWorker4::
+	faceplayer
 	goto_if_set FLAG_CAUGHT_ENTEI, Route119_WeatherInstitute_2F_EventScriptCaughtEntei
 	goto_if_set FLAG_DEFEATED_ENTEI, Route119_WeatherInstitute_2F_EventScriptCaughtEntei
 	goto_if_set FLAG_GOT_ASH_SAMPLE, Route119_WeatherInstitute_2F_EventScriptScorchedSlab
