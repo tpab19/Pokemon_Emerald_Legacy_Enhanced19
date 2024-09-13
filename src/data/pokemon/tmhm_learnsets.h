@@ -1034,6 +1034,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
+        .FLY = TRUE
     } },
 
     [SPECIES_GOLBAT] = { .learnset = {
@@ -1059,6 +1060,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SNATCH = TRUE,
+        .FLY = TRUE
     } },
 
     [SPECIES_ODDISH] = { .learnset = {
@@ -3336,6 +3338,7 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
+        .FLY = TRUE
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
@@ -4633,6 +4636,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SKILL_SWAP = TRUE,
+        .FLY = TRUE
         .FLASH = TRUE,
     } },
 
@@ -7027,6 +7031,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
+        .FLY = TRUE
         .FLASH = TRUE,
     } },
 
@@ -7503,6 +7508,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
+        .FLY = TRUE
         .FLASH = TRUE,
     } },
 
