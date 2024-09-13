@@ -6971,6 +6971,7 @@ const union {
         .THIEF = TRUE,
         .CUT = TRUE,
         .SURF = TRUE,
+        .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
