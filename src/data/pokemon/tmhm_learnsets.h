@@ -8047,6 +8047,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE
         .ROCK_SMASH = TRUE,
     } },
 
@@ -8072,6 +8073,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE
         .ROCK_SMASH = TRUE,
     } },
 
@@ -8101,6 +8103,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
+        .FLASH = TRUE
         .ROCK_SMASH = TRUE,
     } },
 
