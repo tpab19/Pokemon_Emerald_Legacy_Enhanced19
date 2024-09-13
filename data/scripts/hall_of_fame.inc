@@ -29,6 +29,7 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	setflag FLAG_HIDE_HALL_OF_FAME_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE
 	clearflag FLAG_HIDE_SOOTOPOLIS_GYM_JUAN
+	clearflag FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	return
 
@@ -38,6 +39,10 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_DEOXYS
 	clearflag FLAG_DEFEATED_LUGIA
 	clearflag FLAG_DEFEATED_HO_OH
+	clearflag FLAG_DEFEATED_MEWTWO
+	clearflag FLAG_DEFEATED_SUICUNE
+	clearflag FLAG_DEFEATED_ENTEI
+	clearflag FLAG_DEFEATED_RAIKOU
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::

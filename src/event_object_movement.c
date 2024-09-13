@@ -462,6 +462,8 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_MEWTWO                  0x1124
 #define OBJ_EVENT_PAL_TAG_JIRACHI                 0x1125
 #define OBJ_EVENT_PAL_TAG_CELEBI                  0x1126
+#define OBJ_EVENT_PAL_TAG_SUICUNE                 0x1127
+#define OBJ_EVENT_PAL_TAG_ENTEI                   0x1128
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -511,6 +513,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Mewtwo,                OBJ_EVENT_PAL_TAG_MEWTWO},
     {gObjectEventPal_Jirachi,               OBJ_EVENT_PAL_TAG_JIRACHI},
     {gObjectEventPal_Celebi,                OBJ_EVENT_PAL_TAG_CELEBI},
+    {gObjectEventPal_Suicune,               OBJ_EVENT_PAL_TAG_SUICUNE},
+    {gObjectEventPal_Entei,                 OBJ_EVENT_PAL_TAG_ENTEI},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

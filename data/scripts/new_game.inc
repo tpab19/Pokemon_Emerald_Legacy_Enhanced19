@@ -284,5 +284,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_HALL_OF_FAME_WALLACE
 	setflag FLAG_HIDE_SOOTOPOLIS_GYM_JUAN
 	setflag FLAG_HIDE_CELEBI
+	setflag FLAG_HIDE_SUICUNE
+	setflag FLAG_HIDE_ENTEI
+	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS
 	call EventScript_ResetAllBerries
 	end

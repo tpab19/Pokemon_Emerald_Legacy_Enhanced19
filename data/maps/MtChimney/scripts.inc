@@ -16,7 +16,13 @@ MtChimney_OnTransition:
 
 MtChimney_OnResume:
 	setstepcallback STEP_CB_ASH
+	call MtChimney_CheckSeismicActivity
 	end
+
+MtChimney_CheckSeismicActivity::
+	goto_if_unset FLAG_STARTED_FIRST_SEISMIC_READING, Common_EventScript_NopReturn
+	setflag FLAG_GOT_FIRST_SEISMIC_READING
+	return
 
 MtChimney_EventScript_Archie::
 	lock

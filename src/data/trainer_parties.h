@@ -3514,7 +3514,7 @@ static const struct TrainerMon sParty_Wattson1[] = {
     .lvl = 24,
     .species = SPECIES_CHINCHOU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SHOCK_WAVE, MOVE_BUBBLE_BEAM, MOVE_FLAIL, MOVE_THUNDER_WAVE}
+    .moves = {MOVE_SHOCK_WAVE, MOVE_BUBBLE_BEAM, MOVE_ICY_WIND, MOVE_THUNDER_WAVE}
     },
     {
     .iv = 220,

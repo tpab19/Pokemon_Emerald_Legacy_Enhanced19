@@ -5,7 +5,13 @@ Route113_MapScripts::
 
 Route113_OnResume:
 	setstepcallback STEP_CB_ASH
+	call Route113_CheckGetAshSample
 	end
+
+Route113_CheckGetAshSample::
+	goto_if_unset FLAG_STARTED_ASH_SAMPLE, Common_EventScript_NopReturn
+	setflag FLAG_GOT_ASH_SAMPLE
+	return
 
 Route113_OnTransition:
 	clearflag FLAG_FORCE_MIRAGE_TOWER_VISIBLE
