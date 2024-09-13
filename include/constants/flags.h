@@ -66,23 +66,23 @@
 #define FLAG_CAUGHT_SUICUNE                 0x35
 #define FLAG_DEFEATED_SUICUNE               0x36
 #define FLAG_STARTED_FINAL_PURITY_READING   0x37
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
+#define FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS    0x38
+#define FLAG_STARTED_FIRST_LIGHTNING_SEARCH                 0x39
+#define FLAG_GOT_FIRST_LIGHTNING_SEARCH                     0x3A
+#define FLAG_STARTED_SECOND_LIGHTNING_SEARCH                0x3B
+#define FLAG_GOT_SECOND_LIGHTNING_SEARCH                    0x3C
+#define FLAG_STARTED_FINAL_LIGHTNING_SEARCH                 0x3D
+#define FLAG_HIDE_RAIKOU                    0x3E
+#define FLAG_CAUGHT_RAIKOU                  0x3F
+#define FLAG_DEFEATED_RAIKOU                0x40
+#define FLAG_STARTED_FIRST_SEISMIC_READING  0x41
+#define FLAG_GOT_FIRST_SEISMIC_READING      0x42
+#define FLAG_STARTED_ASH_SAMPLE             0x43
+#define FLAG_GOT_ASH_SAMPLE                 0x44
+#define FLAG_STARTED_FINAL_SEISMIC_READING  0x45
+#define FLAG_HIDE_ENTEI                     0x46
+#define FLAG_CAUGHT_ENTEI                   0x47
+#define FLAG_DEFEATED_ENTEI                 0x48
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag

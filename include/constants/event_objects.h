@@ -244,6 +244,7 @@
 #define OBJ_EVENT_GFX_JIRACHI                    240
 #define OBJ_EVENT_GFX_CELEBI                     241
 #define OBJ_EVENT_GFX_SUICUNE                    242
+#define OBJ_EVENT_GFX_ENTEI                      243
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //

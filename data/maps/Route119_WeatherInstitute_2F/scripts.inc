@@ -210,6 +210,72 @@ Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
 	end
 
+Route119_WeatherInstitute_2F_EventScript_InstituteWorker3::
+	goto_if_set FLAG_CAUGHT_RAIKOU, Route119_WeatherInstitute_2F_EventScriptCaughtRaikou
+	goto_if_set FLAG_DEFEATED_RAIKOU, Route119_WeatherInstitute_2F_EventScriptCaughtRaikou
+	goto_if_set FLAG_GOT_SECOND_LIGHTNING_SEARCH, Route119_WeatherInstitute_2F_EventScriptRoute119
+	goto_if_set FLAG_GOT_FIRST_LIGHTNING_SEARCH, Route119_WeatherInstitute_2F_EventScriptBattleFrontier
+	goto_if_set FLAG_STARTED_FIRST_LIGHTNING_SEARCH, Route119_WeatherInstitute_2F_EventScriptRoute123
+	msgbox Route119_WeatherInstitute_2F_Text_LightningPatterns, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_InstituteWorker3End
+Route119_WeatherInstitute_2F_EventScriptRoute123::
+	msgbox Route119_WeatherInstitute_2F_Text_Route123, MSGBOX_DEFAULT
+	setflag FLAG_STARTED_FIRST_LIGHTNING_SEARCH
+	Route119_WeatherInstitute_2F_EventScript_InstituteWorker3End:
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptBattleFrontier::
+	msgbox Route119_WeatherInstitute_2F_Text_BattleFrontier, MSGBOX_DEFAULT
+	setflag FLAG_STARTED_SECOND_LIGHTNING_SEARCH
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptRoute119::
+	msgbox Route119_WeatherInstitute_2F_Text_Route119, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_RAIKOU
+	setflag FLAG_STARTED_FINAL_LIGHTNING_SEARCH
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptCaughtRaikou::
+	msgbox Route119_WeatherInstitute_2F_Text_FoundRaikou, MSGBOX_DEFAULT
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScript_InstituteWorker4::
+	goto_if_set FLAG_CAUGHT_ENTEI, Route119_WeatherInstitute_2F_EventScriptCaughtEntei
+	goto_if_set FLAG_DEFEATED_ENTEI, Route119_WeatherInstitute_2F_EventScriptCaughtEntei
+	goto_if_set FLAG_GOT_ASH_SAMPLE, Route119_WeatherInstitute_2F_EventScriptScorchedSlab
+	goto_if_set FLAG_GOT_FIRST_SEISMIC_READING, Route119_WeatherInstitute_2F_EventScriptRoute113
+	goto_if_set FLAG_STARTED_FIRST_SEISMIC_READING, Route119_WeatherInstitute_2F_EventScriptMtChimney
+	msgbox Route119_WeatherInstitute_2F_Text_SeismicActivity, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_InstituteWorker4End
+Route119_WeatherInstitute_2F_EventScriptMtChimney::
+	msgbox Route119_WeatherInstitute_2F_Text_MtChimney, MSGBOX_DEFAULT
+	setflag FLAG_STARTED_FIRST_SEISMIC_READING
+	Route119_WeatherInstitute_2F_EventScript_InstituteWorker4End:
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptRoute113::
+	msgbox Route119_WeatherInstitute_2F_Text_Route113, MSGBOX_DEFAULT
+	setflag FLAG_STARTED_ASH_SAMPLE
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptScorchedSlab::
+	msgbox Route119_WeatherInstitute_2F_Text_ScorchedSlab, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_ENTEI
+	setflag FLAG_STARTED_FINAL_SEISMIC_READING
+	release
+	end
+
+Route119_WeatherInstitute_2F_EventScriptCaughtEntei::
+	msgbox Route119_WeatherInstitute_2F_Text_FoundEntei, MSGBOX_DEFAULT
+	release
+	end
+
 Route119_WeatherInstitute_2F_Text_Grunt2Intro:
 	.string "The INSTITUTE created a type of\n"
 	.string "POKéMON that has something to do with\l"
@@ -331,3 +397,93 @@ Route119_WeatherInstitute_2F_Text_NoAbnormalWeather:
 	.string "The occasional rainfall is a blessing,\n"
 	.string "really.$"
 
+Route119_WeatherInstitute_2F_Text_LightningPatterns:
+	.string "Hey there!\p"
+	.string "We've brought on some extra hands here\n"
+	.string "to monitor any unusual weather patterns.\p"
+	.string "Actually, I've been tracking some\n"
+	.string "strange thunder and lightning patterns\l"
+	.string "across the region.\p"
+	.string "It might be a lingering effect from the\n"
+	.string "rainstorms, but we need more data to be\l"
+	.string "sure.\p"
+	.string "Could you investigate for us?$"
+
+Route119_WeatherInstitute_2F_Text_Route123:
+	.string "Great! We've seen activity around\n"
+	.string "ROUTE 123.\p"
+	.string "Head over there and see if you can find\n"
+	.string "anything unusual.$"
+
+Route119_WeatherInstitute_2F_Text_BattleFrontier:
+	.string "Ah, you're back!\p"
+	.string "While you were gone, the lightning\n"
+	.string "around ROUTE 123 just stopped\l"
+	.string "suddenly.\p"
+	.string "But now, we're getting reports from the\n"
+	.string "BATTLE FRONTIER!\p"
+	.string "Could you head there next? We need to\n"
+	.string "get to the bottom of this.$"
+
+Route119_WeatherInstitute_2F_Text_Route119:
+	.string "You're back already?\n"
+	.string "Thanks, but just as before...\p"
+	.string "The lightning at the BATTLE FRONTIER\n"
+	.string "disappeared shortly after you arrived.\p"
+	.string "Now, we're seeing reports near ROUTE\n"
+	.string "119. Can you check that out for us?\p"
+	.string "I don't know what's going on, but it's\n"
+	.string "like the storms are running from you!$"
+
+Route119_WeatherInstitute_2F_Text_FoundRaikou:
+	.string "What!? You saw a RAIKOU!?\p"
+	.string "That explains the strange thunder and\n"
+	.string "why it kept moving around!\p"
+	.string "Amazing... You’ve been tracking a\n"
+	.string "LEGENDARY POKéMON this whole time!$"
+
+Route119_WeatherInstitute_2F_Text_SeismicActivity:
+	.string "Oh, hey!\p"
+	.string "With all the recent weather anomalies,\n"
+	.string "we've expanded our team to monitor any\l"
+	.string "strange environmental activity.\p"
+	.string "But listen, there's something worrying\n"
+	.string "me. It's possible the weather incidents\l"
+	.string "have irritated MT CHIMNEY, and we're\l"
+	.string "worried it could lead to an eruption.\p"
+	.string "Could you head up to the summit and\n"
+	.string "check for signs of seismic activity?$"
+
+Route119_WeatherInstitute_2F_Text_MtChimney:
+	.string "If you notice anything unusual, please\n"
+	.string "report back as soon as possible.$"
+
+Route119_WeatherInstitute_2F_Text_Route113:
+	.string "You're back! So, no major tremors...\n"
+	.string "That's a relief, but I'd like to be sure.\p"
+	.string "Could you collect an ash sample from\n"
+	.string "Route 113 for us?\p"
+	.string "It could tell us if any changes are\n"
+	.string "happening beneath the surface.$"
+
+Route119_WeatherInstitute_2F_Text_ScorchedSlab:
+	.string "Ah, welcome back!\p"
+	.string "That ash sample is normal, but we’ve\n"
+	.string "just had reports of seismic activity\l"
+	.string "near the SCORCHED SLAB.\p"
+	.string "It could be the early formation of a\n"
+	.string "parasitic cone.\p"
+	.string "Can you investigate? Just be cautious.$"
+
+Route119_WeatherInstitute_2F_Text_FoundEntei:
+	.string "Wait, what!? You found an ENTEI?\p"
+	.string "I can’t believe a LEGENDARY POKéMON\n"
+	.string "was behind this...\p"
+	.string "ENTEI'S roar is said to cause eruptions.\n"
+	.string "That explains the seismic readings!\p"
+	.string "Fortunately, there’s no parasitic cone\n"
+	.string "forming.\p"
+	.string "ENTEI must have been drawn here by the\n"
+	.string "recent activity.\p"
+	.string "Thank you for checking! It looks like\n"
+	.string "everything's under control now.$"

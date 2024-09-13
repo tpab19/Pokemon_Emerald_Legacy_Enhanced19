@@ -146,7 +146,7 @@ AbandonedShip_HiddenFloorRooms_EventScript_Suicune::
 	delay 40
 	waitmoncry
 	setvar VAR_LAST_TALKED, LOCALID_SUICUNE
-	seteventmon SPECIES_SUICUNE, 50
+	seteventmon SPECIES_SUICUNE, 40
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
