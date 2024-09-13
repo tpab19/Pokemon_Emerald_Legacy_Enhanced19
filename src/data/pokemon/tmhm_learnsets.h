@@ -7085,7 +7085,11 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .SURF = TRUE,
+        .STRENGTH = TRUE,
         .FLASH = TRUE,
+        .ROCK_SMASH = TRUE,
+        .WATERFALL = TRUE,
+        .DIVE = TRUE,
     } },
 
     [SPECIES_LOMBRE] = { .learnset = {
@@ -7167,6 +7171,8 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
+        .CUT = TRUE,
+        .STRENGTH = TRUE,
         .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
