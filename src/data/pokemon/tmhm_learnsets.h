@@ -7359,6 +7359,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .SNATCH = TRUE,
+        .CUT = TRUE,
         .FLASH = TRUE,
     } },
 
