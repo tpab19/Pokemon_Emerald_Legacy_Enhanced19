@@ -8370,14 +8370,14 @@
                 "species": "SPECIES_SWINUB"
               },
               {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_PILOSWINE"
+                "min_level": 30,
+                "max_level": 32,
+                "species": "SPECIES_SWINUB"
               },
               {
-                "min_level": 34,
-                "max_level": 36,
-                "species": "SPECIES_PILOSWINE"
+                "min_level": 33,
+                "max_level": 33,
+                "species": "SPECIES_SWINUB"
               },
               {
                 "min_level": 35,
@@ -8390,8 +8390,8 @@
                 "species": "SPECIES_GOLBAT"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 34,
+                "max_level": 34,
                 "species": "SPECIES_SPHEAL"
               },
               {
