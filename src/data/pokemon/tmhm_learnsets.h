@@ -3338,7 +3338,7 @@ const union {
         .SECRET_POWER = TRUE,
         .REST = TRUE,
         .ATTRACT = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
@@ -4636,7 +4636,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .SKILL_SWAP = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -7032,7 +7032,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -7516,7 +7516,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .THIEF = TRUE,
-        .FLY = TRUE
+        .FLY = TRUE,
         .FLASH = TRUE,
     } },
 
@@ -8058,7 +8058,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -8084,7 +8084,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
@@ -8114,7 +8114,7 @@ const union {
         .STEEL_WING = TRUE,
         .FLY = TRUE,
         .STRENGTH = TRUE,
-        .FLASH = TRUE
+        .FLASH = TRUE,
         .ROCK_SMASH = TRUE,
     } },
 
