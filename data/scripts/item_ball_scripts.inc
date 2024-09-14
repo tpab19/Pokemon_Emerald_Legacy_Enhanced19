@@ -303,7 +303,7 @@ Route134_EventScript_ItemStarPiece::
 	end
 
 PetalburgCity_EventScript_ItemMaxRevive::
-	finditem ITEM_MAX_REVIVE
+	finditem ITEM_WATER_STONE
 	end
 
 PetalburgCity_EventScript_ItemEther::
