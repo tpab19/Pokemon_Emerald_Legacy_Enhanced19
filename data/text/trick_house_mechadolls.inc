@@ -50,7 +50,7 @@ gTrickHouse_Mechadoll_Zubat2::
 	.string "ZUBAT$"
 
 gTrickHouse_Mechadoll_Carvanha::
-	.string "CARVANHA$"
+	.string "SHARPEDO$"
 
 gTrickHouse_Mechadoll_BurnHeal::
 	.string "BURN HEAL$"

@@ -7,6 +7,7 @@ MauvilleCity_BikeShop_EventScript_Rydel::
 	goto_if_unset FLAG_IS_CHAMPION, MauvilleCity_BikeShop_EventScript_Rydel_Main
 	goto_if_set FLAG_UNLOCKED_BIKE_SWITCHING, MauvilleCity_BikeShop_EventScript_Rydel_Main
 	msgbox MauvilleCity_BikeShop_Text_GiveUpgradedBike, MSGBOX_DEFAULT
+	release
 	setflag FLAG_UNLOCKED_BIKE_SWITCHING
 	end
 MauvilleCity_BikeShop_EventScript_Rydel_Main::
