@@ -6,6 +6,7 @@
 .set LOCALID_CAMPER, 14
 .set LOCALID_FISHERMAN_2, 18
 .set LOCALID_MAN_4, 23
+.set LOCALID_RAIKOU2, 25
 
 BattleFrontier_OutsideWest_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_OutsideWest_OnTransition
@@ -306,6 +307,27 @@ BattleFrontier_OutsideWest_EventScript_Man4::
 BattleFrontier_OutsideWest_EventScript_PokefanF::
 	msgbox BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier, MSGBOX_NPC
 	end
+
+BattleFrontier_OutsideWest_EventScript_Raikou::
+	faceplayer
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	applymovement LOCALID_RAIKOU2, BattleFrontier_OutsideWest_Movement_Raikou
+	waitmovement 0
+	setflag FLAG_HIDE_RAIKOU2
+	setflag FLAG_GOT_SECOND_LIGHTNING_SEARCH
+	removeobject LOCALID_RAIKOU2
+	end
+
+BattleFrontier_OutsideWest_Movement_Raikou:
+	jump_2_right
+	jump_2_right
+	jump_2_down
+	jump_2_down
+	jump_2_right
+	jump_2_down
+	step_end
 
 BattleFrontier_OutsideWest_Text_BattleDomeSign:
 	.string "This is the BATTLE DOME!\n"

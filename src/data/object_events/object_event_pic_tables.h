@@ -2238,3 +2238,15 @@ static const struct SpriteFrameImage sPicTable_Entei[] = {
     overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
     overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
 };
+
+static const struct SpriteFrameImage sPicTable_Raikou[] = {
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 1),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 2),
+    overworld_frame(gObjectEventPic_Raikou, 2, 2, 2),
+};

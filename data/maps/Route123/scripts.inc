@@ -1,3 +1,5 @@
+.set LOCALID_RAIKOU1, 44
+
 Route123_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route123_OnTransition
 	.byte 0
@@ -169,6 +171,24 @@ Route123_EventScript_RematchFernando::
 	trainerbattle_rematch TRAINER_FERNANDO_1, Route123_Text_FernandoRematchIntro, Route123_Text_FernandoRematchDefeat
 	msgbox Route123_Text_FernandoPostRematch, MSGBOX_AUTOCLOSE
 	end
+
+Route123_EventScript_Raikou::
+	faceplayer
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	applymovement LOCALID_RAIKOU1, Route123_Movement_Raikou
+	waitmovement 0
+	setflag FLAG_HIDE_RAIKOU1
+	setflag FLAG_GOT_FIRST_LIGHTNING_SEARCH
+	removeobject LOCALID_RAIKOU1
+	end
+
+Route123_Movement_Raikou:
+	jump_2_up
+	jump_2_up
+	jump_2_up
+	step_end
 
 Route123_Text_LoveGrassMonsHaveAny:
 	.string "I love GRASS-type POKéMON!\p"

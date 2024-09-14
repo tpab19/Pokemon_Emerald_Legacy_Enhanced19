@@ -72,7 +72,7 @@
 #define FLAG_STARTED_SECOND_LIGHTNING_SEARCH                0x3B
 #define FLAG_GOT_SECOND_LIGHTNING_SEARCH                    0x3C
 #define FLAG_STARTED_FINAL_LIGHTNING_SEARCH                 0x3D
-#define FLAG_HIDE_RAIKOU                    0x3E
+#define FLAG_HIDE_RAIKOU1                   0x3E
 #define FLAG_CAUGHT_RAIKOU                  0x3F
 #define FLAG_DEFEATED_RAIKOU                0x40
 #define FLAG_STARTED_FIRST_SEISMIC_READING  0x41
@@ -83,8 +83,8 @@
 #define FLAG_HIDE_ENTEI                     0x46
 #define FLAG_CAUGHT_ENTEI                   0x47
 #define FLAG_DEFEATED_ENTEI                 0x48
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
+#define FLAG_HIDE_RAIKOU2                   0x49
+#define FLAG_HIDE_RAIKOU3                   0x4A
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag

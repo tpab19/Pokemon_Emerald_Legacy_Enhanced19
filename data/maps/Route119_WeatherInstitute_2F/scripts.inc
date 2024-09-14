@@ -221,6 +221,7 @@ Route119_WeatherInstitute_2F_EventScript_InstituteWorker3::
 	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_InstituteWorker3End
 Route119_WeatherInstitute_2F_EventScriptRoute123::
 	msgbox Route119_WeatherInstitute_2F_Text_Route123, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_RAIKOU1
 	setflag FLAG_STARTED_FIRST_LIGHTNING_SEARCH
 	Route119_WeatherInstitute_2F_EventScript_InstituteWorker3End:
 	release
@@ -228,13 +229,14 @@ Route119_WeatherInstitute_2F_EventScriptRoute123::
 
 Route119_WeatherInstitute_2F_EventScriptBattleFrontier::
 	msgbox Route119_WeatherInstitute_2F_Text_BattleFrontier, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_RAIKOU2
 	setflag FLAG_STARTED_SECOND_LIGHTNING_SEARCH
 	release
 	end
 
 Route119_WeatherInstitute_2F_EventScriptRoute119::
 	msgbox Route119_WeatherInstitute_2F_Text_Route119, MSGBOX_DEFAULT
-	clearflag FLAG_HIDE_RAIKOU
+	clearflag FLAG_HIDE_RAIKOU3
 	setflag FLAG_STARTED_FINAL_LIGHTNING_SEARCH
 	release
 	end

@@ -286,7 +286,9 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_CELEBI
 	setflag FLAG_HIDE_SUICUNE
 	setflag FLAG_HIDE_ENTEI
-	setflag FLAG_HIDE_RAIKOU
+	setflag FLAG_HIDE_RAIKOU1
+	setflag FLAG_HIDE_RAIKOU2
+	setflag FLAG_HIDE_RAIKOU3
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS
 	call EventScript_ResetAllBerries
 	end

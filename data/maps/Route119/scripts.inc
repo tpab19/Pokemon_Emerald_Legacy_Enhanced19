@@ -1,6 +1,7 @@
 .set LOCALID_RIVAL, 16
 .set LOCALID_RIVAL_ON_BIKE, 25
 .set LOCALID_SCOTT, 43
+.set LOCALID_RAIKOU, 44
 
 Route119_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, Route119_OnResume
@@ -9,6 +10,7 @@ Route119_MapScripts::
 
 Route119_OnResume:
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route119_EventScript_TryRemoveKecleon
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route119_EventScript_TryRemoveRaikou
 	end
 
 Route119_EventScript_TryRemoveKecleon::
@@ -17,7 +19,16 @@ Route119_EventScript_TryRemoveKecleon::
 	removeobject VAR_LAST_TALKED
 	return
 
+Route119_EventScript_TryRemoveRaikou::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
+	removeobject LOCALID_RAIKOU
+	return
+
 Route119_OnTransition:
+	call_if_set FLAG_CAUGHT_RAIKOU, Route119_EventScript_HideRaikou
+	call_if_unset FLAG_STARTED_FINAL_LIGHTNING_SEARCH, Route119_EventScript_HideRaikou
+	call_if_unset FLAG_CAUGHT_RAIKOU, Route119_EventScript_TryShowRaikou
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_EventScript_MoveInstituteWorkersDownstairs
@@ -28,6 +39,15 @@ Route119_EventScript_MoveInstituteWorkersDownstairs::
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS
 	clearflag FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS
 	setvar VAR_WEATHER_INSTITUTE_STATE, 2
+	return
+
+Route119_EventScript_HideRaikou::
+	setflag FLAG_HIDE_RAIKOU3
+	return
+
+Route119_EventScript_TryShowRaikou::
+	goto_if_set FLAG_DEFEATED_RAIKOU, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_RAIKOU3
 	return
 
 Route119_EventScript_RivalTrigger1::
@@ -479,6 +499,35 @@ Route119_EventScript_ScottWonAtFortreeGymCall::
 	releaseall
 	end
 
+Route119_EventScript_Raikou::
+	faceplayer
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_RAIKOU
+	seteventmon SPECIES_RAIKOU, 40
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route119_EventScript_DefeatedRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route119_EventScript_RanFromRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route119_EventScript_RanFromRaikou
+	setflag FLAG_CAUGHT_RAIKOU
+	releaseall
+	end
+
+Route119_EventScript_DefeatedRaikou::
+	setflag FLAG_DEFEATED_RAIKOU
+	setvar VAR_0x8004, SPECIES_RAIKOU
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+Route119_EventScript_RanFromRaikou::
+	setvar VAR_0x8004, SPECIES_RAIKOU
+	goto Common_EventScript_LegendaryFlewAway
+	end
 Route119_Text_MayIntro:
 	.string "MAY: {PLAYER}{KUN}!\n"
 	.string "Where were you? I was looking for you!\p"

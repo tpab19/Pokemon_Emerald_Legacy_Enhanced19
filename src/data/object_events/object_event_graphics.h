@@ -370,3 +370,5 @@ const u16 gObjectEventPic_Suicune[] = INCBIN_U16("graphics/object_events/pics/po
 const u16 gObjectEventPal_Suicune[] = INCBIN_U16("graphics/object_events/pics/pokemon/suicune.gbapal");
 const u16 gObjectEventPic_Entei[] = INCBIN_U16("graphics/object_events/pics/pokemon/entei.4bpp");
 const u16 gObjectEventPal_Entei[] = INCBIN_U16("graphics/object_events/pics/pokemon/entei.gbapal");
+const u32 gObjectEventPic_Raikou[] = INCBIN_U32("graphics/object_events/pics/pokemon/raikou.4bpp");
+const u16 gObjectEventPal_Raikou[] = INCBIN_U16("graphics/object_events/pics/pokemon/raikou.gbapal");

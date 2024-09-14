@@ -2005,7 +2005,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_FURY_SWIPES] =
     {
         .effect = EFFECT_MULTI_HIT,
-        .power = 20,
+        .power = 18,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 15,
