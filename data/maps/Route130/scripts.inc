@@ -127,6 +127,17 @@ Route130_EventScript_CelebiRunsAway::
 Route130_EventScript_EndCelebiEvent::
 	ClearFlag FLAG_SHOW_MIRAGE_ISLAND
 	setvar VAR_ROUTE130_STATE, 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Route130_EventScript_EndCelebiEventBrenden
+	goto_if_eq VAR_RESULT, FEMALE, Route130_EventScript_EndCelebiEventMaysHouse
+Route130_EventScript_EndCelebiEventBrendensHouse::
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 5, 3
+	waitstate
+	releaseall
+	end
+Route130_EventScript_EndCelebiEventMaysHouse::
+	warp MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F, 3, 3
+	waitstate
 	releaseall
 	end
 
