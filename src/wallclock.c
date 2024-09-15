@@ -862,7 +862,7 @@ static void Task_SetClock_Confirmed(u8 taskId)
 {
     RtcInitLocalTimeOffset(gTasks[taskId].tHours, gTasks[taskId].tMinutes);
 
-    if (!FlagGet(FLAG_BATTLED_CELEBI))
+    if ((!FlagGet(FLAG_BATTLED_CELEBI)) && FlagGet(FLAG_IS_CHAMPION))
     {
         // Time code for Celebi event
         if (!FlagGet(FLAG_CELEBI_CLOCK_1) && !FlagGet(FLAG_CELEBI_CLOCK_2))

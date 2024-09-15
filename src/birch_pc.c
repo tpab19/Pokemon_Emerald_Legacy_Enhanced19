@@ -61,9 +61,9 @@ const u8 *GetPokedexRatingText(u16 count)
         return gBirchDexRatingText_LessThan180;
     if (count < 190)
         return gBirchDexRatingText_LessThan190;
-    if (count < 200)
+    if (count < 208)
         return gBirchDexRatingText_LessThan200;
-    if (count == 200)
+    if (count == 208)
     {
         if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_JIRACHI), FLAG_GET_CAUGHT)
          || GetSetPokedexFlag(SpeciesToNationalPokedexNum(SPECIES_DEOXYS), FLAG_GET_CAUGHT)) // Jirachi or Deoxys is not counted towards the dex completion. If either of these flags are enabled, it means the actual count is less than 200.
