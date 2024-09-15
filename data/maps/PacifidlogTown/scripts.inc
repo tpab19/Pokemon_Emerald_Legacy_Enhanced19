@@ -53,8 +53,8 @@ PacifidlogTown_Text_SkyPillarTooScary:
 
 PacifidlogTown_Text_OldMan:
 	.string "The waves are quietest before sunrise…\n"
-	.string "calm after noon… and still again before\l"
-	.string "night falls.\p"
+	.string "calm at the turn of day… and still again\l"
+	.string "before night falls.\p"
 	.string "It all feels like a peaceful dance,\n"
 	.string "doesn’t it?\p"
 	.string "I've always thought MIRAGE ISLAND\n"
