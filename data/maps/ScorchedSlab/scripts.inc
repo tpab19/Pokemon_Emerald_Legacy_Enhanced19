@@ -7,9 +7,9 @@ ScorchedSlab_MapScripts::
 
 ScorchedSlab_OnTransition:
 	setflag FLAG_LANDMARK_SCORCHED_SLAB
+	call_if_unset FLAG_CAUGHT_ENTEI, ScorchedSlab_EventScript_TryShowEntei
 	call_if_set FLAG_CAUGHT_ENTEI, ScorchedSlab_EventScript_HideEntei
 	call_if_unset FLAG_STARTED_FINAL_SEISMIC_READING, ScorchedSlab_EventScript_HideEntei
-	call_if_unset FLAG_CAUGHT_ENTEI, ScorchedSlab_EventScript_TryShowEntei
 	end
 
 ScorchedSlab_EventScript_HideEntei::

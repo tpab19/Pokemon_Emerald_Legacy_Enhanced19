@@ -7,9 +7,9 @@ AlteringCave_MapScripts::
 
 AlteringCave_OnTransition:
 	setflag FLAG_LANDMARK_ALTERING_CAVE
+	call_if_unset FLAG_CAUGHT_MEWTWO, AlteringCave_EventScript_TryShowMewtwo
 	call_if_set FLAG_CAUGHT_MEWTWO, AlteringCave_EventScript_HideMewtwo
 	call_if_unset FLAG_COLLECTED_ALL_SILVER_SYMBOLS, AlteringCave_EventScript_HideMewtwo
-	call_if_unset FLAG_CAUGHT_MEWTWO, AlteringCave_EventScript_TryShowMewtwo
 	end
 
 AlteringCave_EventScript_HideMewtwo::

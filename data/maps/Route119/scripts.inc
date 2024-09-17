@@ -26,9 +26,9 @@ Route119_EventScript_TryRemoveRaikou::
 	return
 
 Route119_OnTransition:
+	call_if_unset FLAG_CAUGHT_RAIKOU, Route119_EventScript_TryShowRaikou
 	call_if_set FLAG_CAUGHT_RAIKOU, Route119_EventScript_HideRaikou
 	call_if_unset FLAG_STARTED_FINAL_LIGHTNING_SEARCH, Route119_EventScript_HideRaikou
-	call_if_unset FLAG_CAUGHT_RAIKOU, Route119_EventScript_TryShowRaikou
 	call Common_EventScript_SetupRivalGfxId
 	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_EventScript_MoveInstituteWorkersDownstairs
