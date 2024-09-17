@@ -6875,21 +6875,21 @@ static const struct TrainerMon sParty_Hector[] = {
 static const struct TrainerMon sParty_TabithaMossdeep[] = {
     {
     .iv = 150,
-    .lvl = 44,
+    .lvl = 43,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_WING_ATTACK, MOVE_GIGA_DRAIN, MOVE_POISON_FANG, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 150,
-    .lvl = 44,
+    .lvl = 43,
     .species = SPECIES_AGGRON,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL, MOVE_PROTECT}
     },
     {
     .iv = 150,
-    .lvl = 45,
+    .lvl = 43,
     .species = SPECIES_ZANGOOSE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY,  MOVE_SWORDS_DANCE}
@@ -10170,21 +10170,21 @@ static const struct TrainerMon sParty_Darcy[] = {
 static const struct TrainerMon sParty_MaxieMossdeep[] = {
     {
     .iv = 200,
-    .lvl = 45,
+    .lvl = 44,
     .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_SALAC_BERRY,
-    .moves = {MOVE_HEAT_WAVE, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_CRUNCH}
+    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_CRUNCH}
     },
     {
     .iv = 200,
-    .lvl = 45,
+    .lvl = 44,
     .species = SPECIES_SHIFTRY,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_LEAF_BLADE, MOVE_EXTRASENSORY, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY}
     },
     {
     .iv = 200,
-    .lvl = 46,
+    .lvl = 45,
     .species = SPECIES_CAMERUPT,
     .heldItem = ITEM_FOCUS_BAND,
     .moves = {MOVE_HEAT_WAVE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SUNNY_DAY}
