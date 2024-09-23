@@ -1447,9 +1447,9 @@
                 "species": "SPECIES_ROSELIA"
               },
               {
-                "min_level": 16,
+                "min_level": 15,
                 "max_level": 16,
-                "species": "SPECIES_ODDISH"
+                "species": "SPECIES_PAHNPY"
               },
               {
                 "min_level": 16,
