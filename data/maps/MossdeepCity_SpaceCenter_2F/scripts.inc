@@ -303,6 +303,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_DefeatedMaxieTabitha::
 	removeobject LOCALID_GRUNT_5
 	removeobject LOCALID_TABITHA
 	removeobject LOCALID_MAXIE
+	removeobject LOCALID_COURTNEY
 	setobjectxy LOCALID_SCIENTIST, 5, 6
 	turnobject LOCALID_SCIENTIST, DIR_SOUTH
 	setobjectxy LOCALID_GENTLEMAN, 11, 8
