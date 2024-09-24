@@ -3015,6 +3015,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMons[i].ability = gBattleMons[gActiveBattler].ability;
                             gLastUsedAbility = gBattleMons[gActiveBattler].ability;
                             effect++;
+                            RecordAbilityBattle(i, gBattleMons[gActiveBattler].ability);
                         }
                         else if (gBattleMons[target1].ability != ABILITY_NONE && gBattleMons[target1].hp != 0)
                         {
@@ -3022,6 +3023,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMons[i].ability = gBattleMons[gActiveBattler].ability;
                             gLastUsedAbility = gBattleMons[gActiveBattler].ability;
                             effect++;
+                            RecordAbilityBattle(i, gBattleMons[gActiveBattler].ability);
                         }
                         else if (gBattleMons[target2].ability != ABILITY_NONE && gBattleMons[target2].hp != 0)
                         {
@@ -3029,6 +3031,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMons[i].ability = gBattleMons[gActiveBattler].ability;
                             gLastUsedAbility = gBattleMons[gActiveBattler].ability;
                             effect++;
+                            RecordAbilityBattle(i, gBattleMons[gActiveBattler].ability);
                         }
                     }
                     else
@@ -3039,6 +3042,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                             gBattleMons[i].ability = gBattleMons[target1].ability;
                             gLastUsedAbility = gBattleMons[target1].ability;
                             effect++;
+                            RecordAbilityBattle(i, gBattleMons[gActiveBattler].ability);
                         }
                     }
                     if (effect != 0)

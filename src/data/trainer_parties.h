@@ -13021,32 +13021,39 @@ static const struct TrainerMon sParty_Courtney2[] = {
 
 // Archie and Matt Double Battle (Mt Pyre)
 static const struct TrainerMon sParty_ArchieAndMatt[] = {
-     {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_MURKROW,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_DRILL_PECK, MOVE_FAINT_ATTACK, MOVE_ICY_WIND, MOVE_STEEL_WING}
-    },
     {
-    .iv = 100,
-    .lvl = 43,
-    .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_PERSIM_BERRY,
-    .moves = {MOVE_PETAL_DANCE, MOVE_SLUDGE_BOMB, MOVE_GRASS_WHISTLE, MOVE_SYNTHESIS}
-    },
-    {
-    .iv = 100,
-    .lvl = 42,
-    .species = SPECIES_CLAYDOL,
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_MIGHTYENA,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_EARTHQUAKE, MOVE_LIGHT_SCREEN, MOVE_SUNNY_DAY}
+    .moves = {MOVE_SUPER_FANG, MOVE_CRUNCH, MOVE_TAKE_DOWN, MOVE_ROAR}
     },
     {
     .iv = 150,
-    .lvl = 44,
-    .species = SPECIES_NINETALES,
+    .lvl = 35,
+    .species = SPECIES_WAILORD,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
+    .moves = {MOVE_WATER_SPOUT, MOVE_AMNESIA, MOVE_SURF, MOVE_REST}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_MACHAMP,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_CROBAT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_AIR_CUTTER, MOVE_BITE, MOVE_SLUDGE_BOMB, MOVE_HAZE}
+    },
+    {
+    .iv = 220,
+    .lvl = 37,
+    .species = SPECIES_SHARPEDO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SURF, MOVE_CRUNCH, MOVE_SLASH, MOVE_ICE_BEAM}
     }
 };

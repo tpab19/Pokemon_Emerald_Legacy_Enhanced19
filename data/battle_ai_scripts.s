@@ -2723,20 +2723,12 @@ AI_PreferBatonPass:
 	get_how_powerful_move_is
 	if_not_equal MOVE_POWER_OTHER, AI_PreferBatonPassEnd
 	if_has_move_with_effect AI_USER, EFFECT_BATON_PASS, AI_PreferBatonPass_GoForBatonPass
-	if_random_less_than 80, AI_Risky_End
+	if_random_less_than 80, AI_PreferBatonPassEnd
 AI_PreferBatonPass_GoForBatonPass:
-	if_move MOVE_SWORDS_DANCE, AI_PreferBatonPass2
-	if_move MOVE_DRAGON_DANCE, AI_PreferBatonPass2
-	if_move MOVE_CALM_MIND, AI_PreferBatonPass2
 	if_effect EFFECT_PROTECT, AI_PreferBatonPass_End
 	if_move MOVE_BATON_PASS, AI_PreferBatonPass_EncourageIfHighStats
-	if_random_less_than 20, AI_Risky_End
-	score +3
-AI_PreferBatonPass2:
-	get_turn_count
-	if_equal 0, Score_Plus5
-	if_hp_less_than AI_USER, 60, Score_Minus10
-	goto Score_Plus1
+	if_random_less_than 20, AI_PreferBatonPassEnd
+	goto AI_PreferBatonPassEnd
 
 AI_PreferBatonPass_End:
 	get_last_used_bank_move AI_USER
