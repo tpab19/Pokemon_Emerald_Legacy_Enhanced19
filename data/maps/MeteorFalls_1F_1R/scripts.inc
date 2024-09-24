@@ -108,6 +108,7 @@ MeteorFalls_1F_1R_ProfCozmoDontWalkToFallarbor:
 
 MeteorFalls_1F_1R_WarpToFallarbor:
 	clearflag FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO
+	clearflag FLAG_RECEIVED_AURORA_TICKET
 	setflag FLAG_HIDE_METEOR_FALLS_1F_1R_COZMO
 	msgbox MeteorFalls_1F_1R_Text_ProfCozmoWalkToFallarbor, MSGBOX_DEFAULT
 	delay 30
