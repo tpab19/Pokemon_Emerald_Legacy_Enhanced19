@@ -481,6 +481,7 @@
                                (item) == ITEM_DRAGON_SCALE || \
                                (item) == ITEM_KINGS_ROCK || \
                                (item) == ITEM_DEEP_SEA_SCALE || \
+                               (item) == ITEM_DEEP_SEA_TOOTH || \
                                (item) == ITEM_METAL_COAT || \
                                (item) == ITEM_UP_GRADE)
 

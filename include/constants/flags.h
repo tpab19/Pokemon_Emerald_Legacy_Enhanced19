@@ -1219,7 +1219,7 @@
 #define FLAG_HIDE_ROUTE_116_TREE_3                                  0x497
 #define FLAG_HIDE_ROUTE_116_TREE_4                                  0x498
 #define FLAG_HIDE_ROUTE_116_TREE_5                                  0x499
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x49A
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag

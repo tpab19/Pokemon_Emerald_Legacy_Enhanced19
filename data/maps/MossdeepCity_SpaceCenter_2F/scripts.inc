@@ -453,24 +453,23 @@ MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou:
 	.string "we'll take care of you at the same time!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieDontInterfere:
-	.string "MAXIE: Clear out of the way!\n"
-	.string "Don't you dare interfere!$"
+	.string "MAXIE: Out of my way!\n"
+	.string "I don't have time for this!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel:
 	.string "STEVEN: TEAM MAGMA…\p"
-	.string "What's the point of stealing rocket\n"
-	.string "fuel?$"
+	.string "What are you doing here?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano:
-	.string "MAXIE: Fufufu… Since you're so\n"
-	.string "curious, you deserve an explanation.\p"
-	.string "We're going to jettison the entire\n"
-	.string "load into MT. CHIMNEY!\p"
-	.string "With GROUDON gone, we have no need\n"
-	.string "for that slag heap of a mountain!\p"
-	.string "So we'll use the fuel's power to make\n"
-	.string "the volcano erupt!\p"
-	.string "It will be savage!$"
+	.string "MAXIE: Hmph... You're persistent, but\n"
+	.string "you cannot comprehend the scale of our\l"
+	.string "mission.\p"
+	.string "I don't have time to explain myself to\n"
+	.string "you. You're meddling in something far\l"
+	.string "beyond your understanding.\p"
+	.string "We are on the verge of something\n"
+	.string "critical...\p"
+	.string "and you won't stand in our way.$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle:
 	.string "STEVEN: {PLAYER}{KUN}!\n"
@@ -484,37 +483,35 @@ MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly:
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand:
 	.string "All I want…\n"
-	.string "I just want to expand the land mass…$"
+	.string "I just want to prevent disaster…$"
 
 MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "I'm with our leader…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
-	.string "MAXIE: We failed to make the volcano\n"
-	.string "erupt…\p"
-	.string "We failed to control GROUDON after\n"
-	.string "we had awoken it…\p"
-	.string "Is our goal to expand the land\n"
-	.string "misguided?\p"
-	.string "… … … … … …\n"
-	.string "… … … … … …\p"
-	.string "If…\n"
-	.string "If we, TEAM MAGMA, are wrong…\l"
-	.string "… … … … … …\p"
-	.string "Then might TEAM AQUA's goal to expand\n"
-	.string "the sea also be equally misguided?$"
+	.string "MAXIE: You fools!\n"
+	.string "Precious time... wasted!\p"
+	.string "We were going to use this facility to\n"
+	.string "track down ARCHIE.\p"
+	.string "He is on the verge of awakening\n"
+	.string "KYOGRE...  If it clashes with GROUDON...\p"
+	.string "The world will be torn apart by\n"
+	.string "unrelenting chaos!\p"
+	.string "I sought to stop him… but now…\n"
+	.string "It may already be too late!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
-	.string "MAXIE: All right…\n"
-	.string "We will give up on the fuel…\p"
-	.string "There appear to be more important\n"
-	.string "matters that I must examine…$"
+	.string "MAXIE: Hmph…\n"
+	.string "There's no time left. I must act now.\p"
+	.string "Perhaps there is still a chance to stop\n"
+	.string "he impending disaster…\p"
+	.string "I suggest you stay out of this!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome:
 	.string "STEVEN: Whew, that was too tense.\n"
 	.string "{PLAYER}{KUN}, thank you.\p"
-	.string "I have something to give you as\n"
-	.string "thanks for your support.\p"
+	.string "But what did MAXIE mean?\n"
+	.string "We need to investigate.\p"
 	.string "Please come see me at home\n"
 	.string "after this.\p"
 	.string "Oh, yes, I don't live in RUSTBORO CITY.\n"

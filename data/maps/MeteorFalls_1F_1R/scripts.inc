@@ -287,7 +287,7 @@ MeteorFalls_1F_1R_Text_DontExpectMercyFromMagma:
 MeteorFalls_1F_1R_Text_HoldItRightThereMagma:
 	.string "Hold it right there, TEAM MAGMA!\p"
 	.string "You're badly mistaken if you think you\n"
-	.string "can have your way with the world!$"
+	.string "can have your way with the world!$" @ we can't both have our way?
 
 MeteorFalls_1F_1R_Text_BeSeeingYouTeamAqua:
 	.string "Hehehe!\n"
@@ -308,26 +308,33 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
 	.string "of TEAM MAGMA's goons.\p"
 	.string "Humph…\n"
 	.string "You're one odd kid.\p"
-	.string "TEAM MAGMA is a dangerous group of\n"
-	.string "total fanatics.\p"
-	.string "They engage in destruction, claiming\n"
-	.string "to expand the land mass.\p"
-	.string "They are the rivals to us,\n"
-	.string "the sea-loving TEAM AQUA!$"
+	.string "TEAM MAGMA... they're misguided, \n"
+	.string "believing they can free the ancient\l"
+	.string "force that once saved us, convinced it\l"
+	.string "will bring good again.\p"
+	.string "But they're blind.\p"
+	.string "These ancient powers, their rivalry will\n"
+	.string "only bring ruin.\p"
+	.string "Our savior, the protector from the\n"
+	.string "droughts, must be the one to awaken.\p"
+	.string "It's the only way to stop this drought\n"
+	.string "and bring peace.\p"
+	.string "That’s why they’re our enemies! We can't\n"
+	.string "let them win!$"
 
 MeteorFalls_1F_1R_Text_BossWeShouldChaseMagma:
 	.string "BOSS, we should give chase to\n"
 	.string "TEAM MAGMA…$"
 
 MeteorFalls_1F_1R_Text_ArchieYesNoTellingWhatMagmaWillDo:
-	.string "ARCHIE: Yes, yes, we must!\n"
-	.string "We've got to hurry.\p"
+	.string "ARCHIE: Yes, yes, we must!\p"
 	.string "There's no telling what TEAM MAGMA\n"
 	.string "will do at MT. CHIMNEY!$"
 
 MeteorFalls_1F_1R_Text_ArchieFarewell:
 	.string "ARCHIE: {PLAYER}, you should keep\n"
-	.string "an eye out for TEAM MAGMA, too.\p"
+	.string "an eye out for TEAM MAGMA, too. They're\l"
+	.string "more dangerous than you realize.\p"
 	.string "Farewell!$"
 
 MeteorFalls_1F_1R_Text_MeetProfCozmo:

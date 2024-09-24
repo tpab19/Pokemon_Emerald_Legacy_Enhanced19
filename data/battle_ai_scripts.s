@@ -532,9 +532,10 @@ AI_CBM_WillOWisp:
 	get_ability AI_TARGET
 	if_equal ABILITY_WATER_VEIL, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, Score_Minus10
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, Score_Minus10
+	get_target_type1
+	if_in_bytes AI_CV_SpAtkDown_SpecialTypeList, Score_Minus10
+	get_target_type2
+	if_in_bytes AI_CV_SpAtkDown_SpecialTypeList, Score_Minus10
 	if_side_affecting AI_TARGET, SIDE_STATUS_SAFEGUARD, Score_Minus10
 	end
 
