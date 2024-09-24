@@ -12,8 +12,6 @@ MtPyre_Summit_MapScripts::
 	.byte 0
 
 MtPyre_Summit_OnTransition:
-	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE @TEMP remove later
-	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT @TEMP remove later
 	call_if_eq VAR_MT_PYRE_STATE, 2, MtPyre_Summit_EventScript_SetArchieMaxiePositions
 	end
 
