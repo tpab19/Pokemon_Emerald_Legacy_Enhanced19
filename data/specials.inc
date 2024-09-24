@@ -537,3 +537,4 @@ gSpecials::
 	def_special TrySetBattleTowerLinkType
 	def_special TryChangeDeoxysForm
 	def_special HasAllMons
+	def_special CheckSpecies
