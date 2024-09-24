@@ -84,6 +84,7 @@ LilycoveCity_ContestLobby_EventScript_TryCoolReward::
 	call_if_set FLAG_COOL_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SLAKING
 	givemon SPECIES_SLAKING, 50
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveCoolParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveCoolPC
@@ -117,6 +118,7 @@ LilycoveCity_ContestLobby_EventScript_TryBeautyReward::
 	call_if_set FLAG_BEAUTY_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MILOTIC
 	givemon SPECIES_MILOTIC, 50
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveBeautyParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveBeautyPC
@@ -151,6 +153,7 @@ LilycoveCity_ContestLobby_EventScript_TryCuteReward::
 	call_if_set FLAG_CUTE_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_DELCATTY
 	givemon SPECIES_DELCATTY, 50
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveCuteParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveCutePC
@@ -184,6 +187,7 @@ LilycoveCity_ContestLobby_EventScript_TrySmartReward::
 	call_if_set FLAG_SMART_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_GARDEVOIR
 	givemon SPECIES_GARDEVOIR, 50
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveSmartParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveSmartPC
@@ -217,6 +221,7 @@ LilycoveCity_ContestLobby_EventScript_TryToughReward::
 	call_if_set FLAG_TOUGH_PAINTING_MADE, LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	msgbox LilycoveCity_ContestLobby_Text_Reward, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_AGGRON
 	givemon SPECIES_AGGRON, 50
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LilycoveCity_ContestLobby_EventScript_ReceiveToughParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LilycoveCity_ContestLobby_EventScript_ReceiveToughPC
