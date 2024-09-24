@@ -13023,37 +13023,44 @@ static const struct TrainerMon sParty_Courtney2[] = {
 static const struct TrainerMon sParty_ArchieAndMatt[] = {
     {
     .iv = 150,
-    .lvl = 36,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 35,
+    .species = SPECIES_ELECTRODE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SUPER_FANG, MOVE_CRUNCH, MOVE_TAKE_DOWN, MOVE_ROAR}
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
     },
     {
     .iv = 150,
     .lvl = 35,
     .species = SPECIES_WAILORD,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_SPOUT, MOVE_AMNESIA, MOVE_SURF, MOVE_REST}
+    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_ICE_BEAM}
     },
     {
     .iv = 150,
     .lvl = 36,
-    .species = SPECIES_MACHAMP,
+    .species = SPECIES_CRAWDAUNT,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_VITAL_THROW, MOVE_KNOCK_OFF, MOVE_EARTHQUAKE, MOVE_ROCK_TOMB}
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_AIR_CUTTER, MOVE_BITE, MOVE_SLUDGE_BOMB, MOVE_HAZE}
+    .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_TOXIC, MOVE_FLY}
+    },
+    {
+    .iv = 150,
+    .lvl = 37,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     },
     {
     .iv = 220,
     .lvl = 37,
     .species = SPECIES_SHARPEDO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SURF, MOVE_CRUNCH, MOVE_SLASH, MOVE_ICE_BEAM}
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
     }
 };
