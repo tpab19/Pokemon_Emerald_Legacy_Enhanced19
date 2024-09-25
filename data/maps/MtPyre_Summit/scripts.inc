@@ -1,11 +1,21 @@
 .set LOCALID_ARCHIE, 2
 .set LOCALID_OLD_LADY, 3
-.set LOCALID_GRUNT_1, 4
-.set LOCALID_GRUNT_2, 5
-.set LOCALID_GRUNT_3, 6
-.set LOCALID_GRUNT_4, 7
-.set LOCALID_MAXIE, 8
-.set LOCALID_MATT, 9
+.set LOCALID_AQUA_GRUNT_1, 4
+.set LOCALID_AQUA_GRUNT_2, 5
+.set LOCALID_MAXIE, 6
+.set LOCALID_MATT, 7
+.set LOCALID_POOCHYENA_1, 8
+.set LOCALID_AQUA_GRUNT_3, 9
+.set LOCALID_POOCHYENA_2, 10
+.set LOCALID_MAGMA_GRUNT_1, 11
+.set LOCALID_MAGMA_GRUNT_2, 12
+.set LOCALID_POOCHYENA_3, 13
+.set LOCALID_POOCHYENA_4, 14
+.set LOCALID_POOCHYENA_5, 15
+.set LOCALID_MAGMA_GRUNT_3, 16
+.set LOCALID_POOCHYENA_6, 17
+.set LOCALID_MAGMA_GRUNT_4, 18
+
 
 MtPyre_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtPyre_Summit_OnTransition
@@ -58,15 +68,25 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	msgbox MtPyre_Summit_Text_MaxieLeaves, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
-	dofieldeffect FLDEFF_NPCFLY_OUT
-	delay 15
+	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_MAXIE
-	waitfieldeffect FLDEFF_NPCFLY_OUT
+	removeobject LOCALID_MAGMA_GRUNT_1
+	removeobject LOCALID_MAGMA_GRUNT_2
+	removeobject LOCALID_MAGMA_GRUNT_3
+	removeobject LOCALID_MAGMA_GRUNT_4
+	removeobject LOCALID_POOCHYENA_1
+	removeobject LOCALID_POOCHYENA_2
+	removeobject LOCALID_POOCHYENA_3
+	removeobject LOCALID_POOCHYENA_4
+	removeobject LOCALID_POOCHYENA_5
+	removeobject LOCALID_POOCHYENA_6
+	fadedefaultbgm
+	fadescreen FADE_FROM_BLACK
+	delay 20
 	msgbox MtPyre_Summit_Text_ArchieKyogreWillAwaken, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ARCHIE, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
-	addobject LOCALID_MATT
 	delay 50
 	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_ArchieFacePlayer0
 	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_ArchieFacePlayer1
@@ -82,15 +102,15 @@ MtPyre_Summit_EventScript_TeamAquaExits2::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ARCHIE
-	removeobject LOCALID_GRUNT_1
-	removeobject LOCALID_GRUNT_2
-	removeobject LOCALID_GRUNT_3
-	removeobject LOCALID_GRUNT_4
+	removeobject LOCALID_AQUA_GRUNT_1
+	removeobject LOCALID_AQUA_GRUNT_2
+	removeobject LOCALID_AQUA_GRUNT_3
 	removeobject LOCALID_MATT
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	delay 20
@@ -191,8 +211,6 @@ MtPyre_Summit_Movement_MattFacePlayer2:
 	step_end
 
 MtPyre_Summit_Movement_MattWalksToPlayer:
-	walk_up
-	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -497,30 +515,30 @@ MtPyre_Summit_EventScript_Grunt4::
 	msgbox MtPyre_Summit_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MtPyre_Summit_EventScript_BusyAquaGrunt::
+	msgbox MtPyre_Summit_Text_Grunt3Defeat, MSGBOX_SIGN
+	end
+
 MtPyre_Summit_Text_Grunt1Intro:
-	.string "No! Those TEAM MAGMA goons got\n"
-	.string "here ahead of us!\p"
-	.string "We can't fall behind!$"
+	.string "TEAM AQUA?! They're trying to get\n"
+	.string "ahead of us!\p"
+	.string "I won’t let them take the ORB!$"
 
 MtPyre_Summit_Text_Grunt1Defeat:
-	.string "I thought you were one of the MAGMAS\n"
-	.string "who happened to come back…$"
+	.string "Ugh… I thought you were just another\n"
+	.string "AQUA goon…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
-	.string "Yeah, so you are strong…\n"
-	.string "But there're a lot of us!$"
+	.string "Yeah, you’re tough...\n"
+	.string "But TEAM MAGMA won’t give up!$"
 
 MtPyre_Summit_Text_Grunt2Intro:
-	.string "Hah!\n"
-	.string "Too bad for you!\p"
-	.string "If you came earlier, you only would've\n"
-	.string "had to battle the wimpy TEAM MAGMA.\p"
-	.string "But since you arrived now, you have\n"
-	.string "to take on us toughies!$"
+	.string "You’re caught in the middle now!\n"
+	.string "We’ll take that ORB before MAGMA does!$"
 
 MtPyre_Summit_Text_Grunt2Defeat:
-	.string "Urgh… I should've let you take on\n"
-	.string "TEAM MAGMA first…$"
+	.string "I should’ve let MAGMA wear you down\n"
+	.string "first…$"
 
 MtPyre_Summit_Text_Grunt2PostBattle:
 	.string "You don't know anything!\n"

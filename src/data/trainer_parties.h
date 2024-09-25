@@ -260,7 +260,7 @@ static const struct TrainerMon sParty_GruntSpaceCenter1[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-// Mt Pyre Summit Aqua Grunt 2
+// Mt Pyre Summit Magma Grunt 1
 static const struct TrainerMon sParty_GruntMtPyre1[] = {
     {
     .iv = 0,
@@ -276,7 +276,7 @@ static const struct TrainerMon sParty_GruntMtPyre2[] = {
     .species = SPECIES_SHARPEDO,
     }
 };
-// Mt Pyre Summit Aqua GruntM 3 (Double Battle w GruntF)
+// UNUSED Mt Pyre Summit Aqua GruntM 3 (Double Battle w GruntF)
 static const struct TrainerMon sParty_GruntMtPyre3[] = {
     {
     .iv = 0,
@@ -7832,7 +7832,7 @@ static const struct TrainerMon sParty_GruntUnused[] = {
     .species = SPECIES_ZUBAT,
     }
 };
-// Mt Pyre Summit Aqua GruntF (Double Battle with GruntM 3)
+// UNUSED Mt Pyre Summit Aqua GruntF (Double Battle with GruntM 3)
 static const struct TrainerMon sParty_GruntMtPyre4[] = {
     {
     .iv = 0,

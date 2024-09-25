@@ -279,9 +279,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_GRUNT_MT_PYRE_1] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
+        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
+        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
         .trainerName = _("GRUNT"),
         .items = {},
         .doubleBattle = FALSE,

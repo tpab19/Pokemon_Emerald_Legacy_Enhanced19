@@ -1220,7 +1220,7 @@
 #define FLAG_HIDE_ROUTE_116_TREE_4                                  0x498
 #define FLAG_HIDE_ROUTE_116_TREE_5                                  0x499
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x49A
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
+#define FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA                         0x49B
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
