@@ -252,7 +252,8 @@ Route128_Text_ArchieWhatHappened:
 
 Route128_Text_ArchieIOnlyWanted:
 	.string "I…\n"
-	.string "I only wanted…$"
+	.string "I only wanted to help…\p"
+	.string "To free our savior…$"
 
 Route128_Text_MaxieDoYouUnderstandNow:
 	.string "MAXIE: Do you understand now,\n"
@@ -267,6 +268,7 @@ Route128_Text_MaxieResposibilityFallsToArchieAndMe:
 	.string "MAXIE: {PLAYER}, don't say anything.\p"
 	.string "I know that I have no right to be\n"
 	.string "critical of ARCHIE…\p"
+	.string "After all, I awakened GROUDON.\p"
 	.string "But the way things are now, I doubt\n"
 	.string "that we humans will be capable of\l"
 	.string "doing anything about it.\p"
@@ -301,6 +303,6 @@ Route128_Text_StevenImGoingToSootopolis:
 	.string "{PLAYER}{KUN}…\n"
 	.string "I don't know what you intend to do,\l"
 	.string "but don't do anything reckless.\p"
-	.string "Okay.\n"
-	.string "I'm going to SOOTOPOLIS.$"
+	.string "Okay.$"
+
 

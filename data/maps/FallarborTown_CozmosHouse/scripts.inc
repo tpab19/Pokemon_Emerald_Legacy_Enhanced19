@@ -44,7 +44,8 @@ FallarborTown_CozmosHouse_EventScript_DeclineGiveMeteorite::
 
 FallarborTown_CozmosHouse_EventScript_GaveMeteorite::
 	goto_if_set FLAG_RECEIVED_AURORA_TICKET, FallarborTown_CozmosHouse_EventScript_GaveMeteorite_Continued
-	checkpartymon SPECIES_RAYQUAZA
+	setvar 0x8005, SPECIES_RAYQUAZA
+	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, EventScript_GotRayquaza
 
 FallarborTown_CozmosHouse_EventScript_GaveMeteorite_Continued::

@@ -1,10 +1,21 @@
 .set LOCALID_ARCHIE, 2
 .set LOCALID_OLD_LADY, 3
-.set LOCALID_GRUNT_1, 4
-.set LOCALID_GRUNT_2, 5
-.set LOCALID_GRUNT_3, 6
-.set LOCALID_GRUNT_4, 7
-.set LOCALID_MAXIE, 8
+.set LOCALID_AQUA_GRUNT_1, 4
+.set LOCALID_AQUA_GRUNT_2, 5
+.set LOCALID_MAXIE, 6
+.set LOCALID_MATT, 7
+.set LOCALID_POOCHYENA_1, 8
+.set LOCALID_AQUA_GRUNT_3, 9
+.set LOCALID_POOCHYENA_2, 10
+.set LOCALID_MAGMA_GRUNT_1, 11
+.set LOCALID_MAGMA_GRUNT_2, 12
+.set LOCALID_POOCHYENA_3, 13
+.set LOCALID_POOCHYENA_4, 14
+.set LOCALID_POOCHYENA_5, 15
+.set LOCALID_MAGMA_GRUNT_3, 16
+.set LOCALID_POOCHYENA_6, 17
+.set LOCALID_MAGMA_GRUNT_4, 18
+
 
 MtPyre_Summit_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MtPyre_Summit_OnTransition
@@ -17,6 +28,9 @@ MtPyre_Summit_OnTransition:
 MtPyre_Summit_EventScript_SetArchieMaxiePositions::
 	setobjectxyperm LOCALID_MAXIE, 23, 6
 	setobjectxyperm LOCALID_ARCHIE, 22, 6
+	applymovement LOCALID_ARCHIE, Common_Movement_FaceUp
+	applymovement LOCALID_MAXIE, Common_Movement_FaceUp
+	waitmovement 0
 	end
 
 MtPyre_Summit_EventScript_TeamAquaTrigger0::
@@ -38,25 +52,65 @@ MtPyre_Summit_EventScript_TeamAquaTrigger2::
 	end
 
 MtPyre_Summit_EventScript_TeamAquaExits::
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, MtPyre_Summit_EventScript_ArchieSaysGoAway
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	msgbox MtPyre_Summit_Text_MaxieDangerousFolly, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ARCHIE, MtPyre_Summit_Movement_ArchieWalksRight
 	waitmovement 0
+	msgbox MtPyre_Summit_Text_ArchieDroughtsWillEnd, MSGBOX_DEFAULT
+	msgbox MtPyre_Summit_Text_MaxieConsequences, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ARCHIE, MtPyre_Summit_Movement_ArchieWalksRight
+	waitmovement 0
+	msgbox MtPyre_Summit_Text_ArchieSelfRighteousness, MSGBOX_DEFAULT
+	msgbox MtPyre_Summit_Text_MaxieLeaves, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_LAST_TALKED, LOCALID_MAXIE
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_MAXIE
+	removeobject LOCALID_MAGMA_GRUNT_1
+	removeobject LOCALID_MAGMA_GRUNT_2
+	removeobject LOCALID_MAGMA_GRUNT_3
+	removeobject LOCALID_MAGMA_GRUNT_4
+	removeobject LOCALID_POOCHYENA_1
+	removeobject LOCALID_POOCHYENA_2
+	removeobject LOCALID_POOCHYENA_3
+	removeobject LOCALID_POOCHYENA_4
+	removeobject LOCALID_POOCHYENA_5
+	removeobject LOCALID_POOCHYENA_6
+	fadedefaultbgm
+	fadescreen FADE_FROM_BLACK
+	delay 20
+	msgbox MtPyre_Summit_Text_ArchieKyogreWillAwaken, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_ARCHIE, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 50
 	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_ArchieFacePlayer0
 	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_ArchieFacePlayer1
 	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_ArchieFacePlayer2
+	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalksToPlayer
+	waitmovement 0
+	trainerbattle_double TRAINER_ARCHIE_AND_MATT, MtPyre_Summit_Text_ArchieBumpsIntoPlayer, MossdeepCity_Gym_Text_ArchieAndMattDefeat, MtPyre_Summit_Text_ArchieSaysGoAway, MtPyre_Summit_EventScript_TeamAquaExits2
+	releaseall
+	end
+
+MtPyre_Summit_EventScript_TeamAquaExits2::
 	msgbox MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ARCHIE
-	removeobject LOCALID_GRUNT_1
-	removeobject LOCALID_GRUNT_2
-	removeobject LOCALID_GRUNT_3
-	removeobject LOCALID_GRUNT_4
+	removeobject LOCALID_AQUA_GRUNT_1
+	removeobject LOCALID_AQUA_GRUNT_2
+	removeobject LOCALID_AQUA_GRUNT_3
+	removeobject LOCALID_MATT
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
 	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
+	setflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA
 	fadedefaultbgm
 	fadescreen FADE_FROM_BLACK
 	delay 20
@@ -71,8 +125,25 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	releaseall
 	end
 
+MtPyre_Summit_EventScript_ArchieSaysGoAway::
+	msgbox MtPyre_Summit_Text_ArchieSaysGoAway, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, MtPyre_Summit_Movement_PlayerWalksAway
+	waitmovement 0
+	releaseall
+	end
+
+MtPyre_Summit_Movement_ArchieWalksRight:
+	walk_right
+	step_end
+
+MtPyre_Summit_Movement_PlayerWalksAway:
+	walk_down
+	step_end
+
 MtPyre_Summit_EventScript_ArchieFacePlayer0::
 	applymovement LOCALID_ARCHIE, MtPyre_Summit_Movement_ArchieFacePlayer0
+	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattFacePlayer0
 	waitmovement 0
 	return
 
@@ -82,6 +153,7 @@ MtPyre_Summit_EventScript_ArchieFacePlayer1::
 
 MtPyre_Summit_EventScript_ArchieFacePlayer2::
 	applymovement LOCALID_ARCHIE, MtPyre_Summit_Movement_ArchieFacePlayer2
+	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattFacePlayer2
 	waitmovement 0
 	return
 
@@ -128,6 +200,20 @@ MtPyre_Summit_Movement_ArchieFacePlayer0:
 MtPyre_Summit_Movement_ArchieFacePlayer2:
 	walk_right
 	walk_in_place_faster_down
+	step_end
+
+MtPyre_Summit_Movement_MattFacePlayer0:
+	walk_left
+	step_end
+
+MtPyre_Summit_Movement_MattFacePlayer2:
+	walk_right
+	step_end
+
+MtPyre_Summit_Movement_MattWalksToPlayer:
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 MtPyre_Summit_EventScript_OldMan::
@@ -429,30 +515,30 @@ MtPyre_Summit_EventScript_Grunt4::
 	msgbox MtPyre_Summit_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
+MtPyre_Summit_EventScript_BusyAquaGrunt::
+	msgbox MtPyre_Summit_Text_Grunt3Defeat, MSGBOX_SIGN
+	end
+
 MtPyre_Summit_Text_Grunt1Intro:
-	.string "No! Those TEAM MAGMA goons got\n"
-	.string "here ahead of us!\p"
-	.string "We can't fall behind!$"
+	.string "TEAM AQUA?! They're trying to get\n"
+	.string "ahead of us!\p"
+	.string "I won’t let them take the ORB!$"
 
 MtPyre_Summit_Text_Grunt1Defeat:
-	.string "I thought you were one of the MAGMAS\n"
-	.string "who happened to come back…$"
+	.string "Ugh… I thought you were just another\n"
+	.string "AQUA goon…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
-	.string "Yeah, so you are strong…\n"
-	.string "But there're a lot of us!$"
+	.string "Yeah, you’re tough...\n"
+	.string "But TEAM MAGMA won’t give up!$"
 
 MtPyre_Summit_Text_Grunt2Intro:
-	.string "Hah!\n"
-	.string "Too bad for you!\p"
-	.string "If you came earlier, you only would've\n"
-	.string "had to battle the wimpy TEAM MAGMA.\p"
-	.string "But since you arrived now, you have\n"
-	.string "to take on us toughies!$"
+	.string "You’re caught in the middle now!\n"
+	.string "We’ll take that ORB before MAGMA does!$"
 
 MtPyre_Summit_Text_Grunt2Defeat:
-	.string "Urgh… I should've let you take on\n"
-	.string "TEAM MAGMA first…$"
+	.string "I should’ve let MAGMA wear you down\n"
+	.string "first…$"
 
 MtPyre_Summit_Text_Grunt2PostBattle:
 	.string "You don't know anything!\n"
@@ -489,10 +575,85 @@ MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "We have a great combination going\n"
 	.string "with us members and our leader.$"
 
+MtPyre_Summit_Text_ArchieSaysGoAway:
+	.string "ARCHIE: Hmph, you again?\p"
+	.string "You think you can stand in my way\n"
+	.string "with just one POKéMON?\p"
+	.string "This isn't some child's game, kid.\n"
+	.string "Go home before you get hurt.$"
+
+MtPyre_Summit_Text_MaxieDangerousFolly:
+	.string "MAXIE: Hmph! Still clinging to your\n"
+	.string "naive ideals, ARCHIE?\p"
+	.string "Your pursuit of KYOGRE will only bring\n"
+	.string "devastation.\p"
+	.string "With the RED ORB in my possession,\n"
+	.string "GROUDON will awaken and bring true\l"
+	.string "balance.\p"
+	.string "Think of the farmland we could\n"
+	.string "reclaim.\p"
+	.string "Farmland that could feed millions!\p"
+	.string "Your shortsightedness blinds you,\n"
+	.string "ARCHIE.$"
+
+MtPyre_Summit_Text_ArchieDroughtsWillEnd:
+	.string "ARCHIE: You're the one who's blind,\n"
+	.string "MAXIE! KYOGRE is the key to healing\l"
+	.string "this world!\p"
+	.string "The BLUE ORB will awaken it, and the\n"
+	.string "droughts will end!\p"
+	.string "Water will revive barren lands, quenching\n"
+	.string "the thirst of countless lives!$"
+
+MtPyre_Summit_Text_MaxieConsequences:
+	.string "MAXIE: You fail to comprehend the\n"
+	.string "consequences of your actions.\p"
+	.string "Awakening KYOGRE will bring ruin.\p"
+	.string "Only GROUDON can reclaim the land and\n"
+	.string "secure prosperity.\p"
+	.string "You would drown the world in chaos!$"
+
+MtPyre_Summit_Text_ArchieSelfRighteousness:
+	.string "ARCHIE: Enough of your self\n"
+	.string "righteousness!\p"
+	.string "The world needs water to survive!\p"
+	.string "With KYOGRE's help, deserts will bloom\n"
+	.string "and famine will end!\p"
+	.string "You can't see that because you're\n"
+	.string "blinded by your obsession with land!$"
+
+MtPyre_Summit_Text_MaxieLeaves:
+	.string "MAXIE: I've indulged your ignorance\n"
+	.string "long enough. There's no reasoning with\l"
+	.string "someone so deluded.\p"
+	.string "I have work to do... real work.\n"
+	.string "Farewell, ARCHIE.$"
+
+MtPyre_Summit_Text_ArchieKyogreWillAwaken:
+	.string "ARCHIE: MAXIE! Curse him!\n"
+	.string "He refuses to see reason.\p"
+	.string "No matter. With the BLUE ORB, KYOGRE\n"
+	.string "will awaken, and I'll prove him wrong!\p"
+	.string "Time is of the essence... I must act\n"
+	.string "quickly.$"
+
+MtPyre_Summit_Text_ArchieBumpsIntoPlayer:
+	.string "ARCHIE: You?!\n"
+	.string "I can't afford any delays now!\p"
+	.string "Every second counts in awakening\n"
+	.string "KYOGRE.\p"
+	.string "If you're here to interfere, we'll have\n"
+	.string "to deal with you swiftly!\p"
+	.string "Prepare yourself!$"
+
+MossdeepCity_Gym_Text_ArchieAndMattDefeat:
+	.string "ARCHIE: Tch… Don’t think this changes\n"
+	.string "anything! We’ll still awaken KYOGRE!$"
+
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "ARCHIE: TEAM MAGMA's MAXIE got ahead\n"
 	.string "of us, but we also got what we wanted.\p"
-	.string "The RED ORB preserved at MT. PYRE…\n"
+	.string "The BLUE ORB preserved at MT. PYRE…\n"
 	.string "I, ARCHIE, now have it in my possession!\p"
 	.string "Fufufu… Now we can bring our ultimate\n"
 	.string "objective to fruition!\p"
@@ -502,16 +663,16 @@ MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Oh, no…\n"
 	.string "This cannot happen…\p"
-	.string "Not only the BLUE ORB, but even\n"
-	.string "the RED ORB has been taken…\p"
-	.string "The BLUE ORB and RED ORB must never\n"
-	.string "be separated. They belong together.\p"
+	.string "Not only the RED ORB, but even\n"
+	.string "the BLUE ORB has been taken…\p"
+	.string "Those ORBS hold the key to\n"
+	.string "keeping KYOGRE and GROUDON at peace.\p"
 	.string "What are those men trying to do with\n"
 	.string "the two ORBS?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "Oh, yes. Was it TEAM MAGMA who came\n"
-	.string "and took the BLUE ORB first?\p"
+	.string "Oh, yes. Was it TEAM MAGMA who left\n"
+	.string "first?\p"
 	.string "Well, in their haste, they left this\n"
 	.string "behind.\p"
 	.string "I couldn't imagine what exactly it\n"
@@ -521,8 +682,8 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 
 MtPyre_Summit_Text_OrbsHaveBeenTaken:
 	.string "The BLUE ORB and RED ORB taken by\n"
-	.string "those sinister men…\p"
-	.string "They must never be apart…\n"
+	.string "those people…\p"
+	.string "They must not be misused…\n"
 	.string "I fear something terrible will happen…$"
 
 MtPyre_Summit_Text_GroudonKyogreAwakened:

@@ -260,7 +260,7 @@ static const struct TrainerMon sParty_GruntSpaceCenter1[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-// Mt Pyre Summit Aqua Grunt 2
+// Mt Pyre Summit Magma Grunt 1
 static const struct TrainerMon sParty_GruntMtPyre1[] = {
     {
     .iv = 0,
@@ -276,7 +276,7 @@ static const struct TrainerMon sParty_GruntMtPyre2[] = {
     .species = SPECIES_SHARPEDO,
     }
 };
-// Mt Pyre Summit Aqua GruntM 3 (Double Battle w GruntF)
+// UNUSED Mt Pyre Summit Aqua GruntM 3 (Double Battle w GruntF)
 static const struct TrainerMon sParty_GruntMtPyre3[] = {
     {
     .iv = 0,
@@ -7832,7 +7832,7 @@ static const struct TrainerMon sParty_GruntUnused[] = {
     .species = SPECIES_ZUBAT,
     }
 };
-// Mt Pyre Summit Aqua GruntF (Double Battle with GruntM 3)
+// UNUSED Mt Pyre Summit Aqua GruntF (Double Battle with GruntM 3)
 static const struct TrainerMon sParty_GruntMtPyre4[] = {
     {
     .iv = 0,
@@ -13016,5 +13016,51 @@ static const struct TrainerMon sParty_Courtney2[] = {
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_SHADOW_BALL}
+    }
+};
+
+// Archie and Matt Double Battle (Mt Pyre)
+static const struct TrainerMon sParty_ArchieAndMatt[] = {
+    {
+    .iv = 150,
+    .lvl = 35,
+    .species = SPECIES_ELECTRODE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
+    },
+    {
+    .iv = 150,
+    .lvl = 35,
+    .species = SPECIES_WAILORD,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_CRAWDAUNT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_CROBAT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_TOXIC, MOVE_FLY}
+    },
+    {
+    .iv = 150,
+    .lvl = 37,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
+    },
+    {
+    .iv = 220,
+    .lvl = 37,
+    .species = SPECIES_SHARPEDO,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
     }
 };
