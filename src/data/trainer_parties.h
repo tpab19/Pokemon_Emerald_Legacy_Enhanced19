@@ -383,11 +383,11 @@ static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
 // Aqua Admin Seafloor Cavern
 static const struct TrainerMon sParty_ShellySeafloorCavern[] = {
     {
-    .iv = 50,
+    .iv = 100,
     .lvl = 44,
-    .species = SPECIES_MIGHTYENA,
+    .species = SPECIES_SEVIPER,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRUNCH, MOVE_TAKE_DOWN, MOVE_PROTECT, MOVE_SCARY_FACE}
+    .moves = {MOVE_POISON_TAIL, MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE}
     },
     {
     .iv = 100,
@@ -435,7 +435,7 @@ static const struct TrainerMon sParty_Archie[] = {
     .moves = {MOVE_AIR_CUTTER, MOVE_BITE, MOVE_SLUDGE_BOMB, MOVE_HAZE}
     },
     {
-    .iv = 220,
+    .iv = 255,
     .lvl = 47,
     .species = SPECIES_SHARPEDO,
     .heldItem = ITEM_LIECHI_BERRY,
@@ -1876,12 +1876,12 @@ static const struct TrainerMon sParty_Mark[] = {
     .species = SPECIES_RHYHORN,
     }
 };
-
+// Mt Chimney GruntF (double)
 static const struct TrainerMon sParty_GruntMtChimney1[] = {
     {
     .iv = 0,
     .lvl = 26,
-    .species = SPECIES_NUMEL,
+    .species = SPECIES_VULPIX,
     }
 };
 
@@ -7798,6 +7798,13 @@ static const struct TrainerMon sParty_Julio[] = {
 // Seafloor Cavern (Double with shelly)
 static const struct TrainerMon sParty_GruntSeafloorCavern5[] = {
     {
+    .iv = 50,
+    .lvl = 44,
+    .species = SPECIES_MIGHTYENA,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRUNCH, MOVE_TAKE_DOWN, MOVE_PROTECT, MOVE_SCARY_FACE}
+    },
+    {
     .iv = 100,
     .lvl = 43,
     .species = SPECIES_TENTACRUEL,
@@ -7810,13 +7817,6 @@ static const struct TrainerMon sParty_GruntSeafloorCavern5[] = {
     .species = SPECIES_SNEASEL,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_FAINT_ATTACK, MOVE_BLIZZARD, MOVE_METAL_CLAW, MOVE_SLASH}
-    },
-    {
-    .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_SEVIPER,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_POISON_TAIL, MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE}
     }
 };
 
@@ -7967,7 +7967,7 @@ static const struct TrainerMon sParty_Harrison[] = {
     .species = SPECIES_HUNTAIL,
     }
 };
-
+// Mt Chimney GruntM (double)
 static const struct TrainerMon sParty_GruntMtChimney2[] = {
     {
     .iv = 0,
