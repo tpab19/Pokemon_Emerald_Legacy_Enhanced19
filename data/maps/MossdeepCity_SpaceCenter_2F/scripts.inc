@@ -378,8 +378,8 @@ MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets:
 	.string "rockets.$"
 
 MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel:
-	.string "Why would TEAM MAGMA want to steal\n"
-	.string "our rocket fuel in the first place?$"
+	.string "Why would TEAM MAGMA be here\n"
+	.string "at our Space Center in the first place?$"
 
 MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "If only I was a little younger, I would\n"
@@ -388,10 +388,11 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "I can and will try!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
-	.string "If TEAM MAGMA takes the rocket fuel,\n"
-	.string "I won't be able to go to space!\p"
-	.string "They can't be allowed to get away\n"
-	.string "with such an outrage!$"
+	.string "If TEAM MAGMA takes over our satellite,\n"
+	.string "systems we won't be able to continue\l"
+	.string "our research!"
+	.string "They can't be allowed to get away with\n"
+	.string "such an outrage!$"
 
 MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace:
 	.string "I wish ordinary people could go into\n"
@@ -448,8 +449,8 @@ MossdeepCity_SpaceCenter_2F_Text_Grunt5PostBattle:
 
 MossdeepCity_SpaceCenter_2F_Text_WellTakeCareOfYou:
 	.string "Hehehe!\p"
-	.string "We come all the way here to get some\n"
-	.string "fuel, and we're interfered with again!\p"
+	.string "We come all the way here for our mission,\n"
+	.string "and we're interfered with again!\p"
 	.string "If you're going to mess with us too,\n"
 	.string "we'll take care of you at the same time!$"
 
