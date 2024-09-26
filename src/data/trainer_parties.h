@@ -12902,7 +12902,7 @@ static const struct TrainerMon sParty_WallyPetalburg[] = {
 static const struct TrainerMon sParty_Brawly1_2[] = {
     {
     .iv = 150,
-    .lvl = 26,
+    .lvl = 24,
     .species = SPECIES_MEDITITE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CONFUSION, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
@@ -12916,14 +12916,14 @@ static const struct TrainerMon sParty_Brawly1_2[] = {
     },
     {
     .iv = 100,
-    .lvl = 26,
+    .lvl = 24,
     .species = SPECIES_BRELOOM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_MACH_PUNCH, MOVE_MEGA_DRAIN, MOVE_BULK_UP, MOVE_STUN_SPORE}
     },
     {
     .iv = 200,
-    .lvl = 27,
+    .lvl = 26,
     .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
