@@ -4546,35 +4546,35 @@ static const struct TrainerMon sParty_Timmy[] = {
 static const struct TrainerMon sParty_Wallace1[] = {
     {
     .iv = 255,
-    .lvl = 47,
+    .lvl = 48,
     .species = SPECIES_TENTACRUEL,
     .heldItem = ITEM_PETAYA_BERRY,
     .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_GIGA_DRAIN, MOVE_ICE_BEAM}
     },
     {
     .iv = 255,
-    .lvl = 46,
+    .lvl = 47,
     .species = SPECIES_MASQUERAIN,
     .heldItem = ITEM_SILVER_POWDER,
     .moves = {MOVE_HYDRO_PUMP, MOVE_SIGNAL_BEAM, MOVE_STUN_SPORE, MOVE_BLIZZARD}
     },
     {
     .iv = 255,
-    .lvl = 47,
+    .lvl = 48,
     .species = SPECIES_WHISCASH,
     .heldItem = ITEM_QUICK_CLAW,
     .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
     },
     {
     .iv = 255,
-    .lvl = 47,
+    .lvl = 49,
     .species = SPECIES_LUDICOLO,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_GIGA_DRAIN, MOVE_WATER_PULSE, MOVE_LEECH_SEED, MOVE_DOUBLE_TEAM}
     },
     {
     .iv = 255,
-    .lvl = 48,
+    .lvl = 50,
     .species = SPECIES_MILOTIC,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_RECOVER, MOVE_DIVE, MOVE_ICE_BEAM, MOVE_TOXIC}
