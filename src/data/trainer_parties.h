@@ -3642,35 +3642,42 @@ static const struct TrainerMon sParty_Winona1[] = {
 static const struct TrainerMon sParty_TateAndLiza1[] = {
     {
     .iv = 250,
-    .lvl = 42,
+    .lvl = 44,
     .species = SPECIES_CLAYDOL,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_ANCIENT_POWER, MOVE_PSYCHIC, MOVE_LIGHT_SCREEN}
     },
     {
     .iv = 250,
-    .lvl = 42,
+    .lvl = 44,
     .species = SPECIES_XATU,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SUNNY_DAY, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 250,
-    .lvl = 42,
-    .species = SPECIES_CHIMECHO,
+    .lvl = 43,
+    .species = SPECIES_MEDICHAM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_WISH, MOVE_HEAL_BELL }
+    .moves = {MOVE_MOVE_EXTRASENSORY, MOVE_HI_JUMP_KICK, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH}
     },
     {
     .iv = 250,
     .lvl = 43,
+    .species = SPECIES_CHIMECHO,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_WISH, MOVE_HEAL_BELL }
+    },
+    {
+    .iv = 250,
+    .lvl = 45,
     .species = SPECIES_LUNATONE,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_PSYCHIC, MOVE_LIGHT_SCREEN, MOVE_HYPNOSIS, MOVE_CALM_MIND}
     },
     {
     .iv = 250,
-    .lvl = 43,
+    .lvl = 45,
     .species = SPECIES_SOLROCK,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_PSYCHIC, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY}
