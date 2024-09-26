@@ -13071,3 +13071,95 @@ static const struct TrainerMon sParty_ArchieAndMatt[] = {
     .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
     }
 };
+
+// Archie Marine Cave (Post Game)
+static const struct TrainerMon sParty_ArchieMarineCave[] = {
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_TENTACRUEL,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_RAIN_DANCE, MOVE_SURF, MOVE_GIGA_DRAIN, MOVE_BLIZZARD}
+    },
+    {
+    .iv = 150,
+    .lvl = 67,
+    .species = SPECIES_MACHAMP,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_BULK_UP, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_CROSS_CHOP}
+    },
+    {
+    .iv = 150,
+    .lvl = 67,
+    .species = SPECIES_WAILORD,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_WATER_SPOUT, MOVE_RAIN_DANCE, MOVE_EARTHQUAKE, MOVE_ICE_BEAM}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_MUK,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_THUNDER, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_MINIMIZE}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_GYARADOS,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_REST, MOVE_EARTHQUAKE, MOVE_THUNDER_WAVE, MOVE_HYDRO_PUMP}
+    },
+    {
+    .iv = 220,
+    .lvl = 67,
+    .species = SPECIES_SHARPEDO,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_SURF, MOVE_FACADE}
+    }
+};
+
+// Maxie Terra Cave (Post Game)
+static const struct TrainerMon sParty_MaxieTerraCave[] = {
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_SUNNY_DAY, MOVE_FIRE_BLAST, MOVE_BODY_SLAM, MOVE_REST}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXPLOSION, MOVE_FAINT_ATTACK, MOVE_EXTRASENSORY}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_SOLAR_BEAM, MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_CRUNCH}
+    },
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_WEEZING,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_EXPLOSION, MOVE_SUNNY_DAY, MOVE_SHADOW_BALL, MOVE_FIRE_BLAST}
+    },
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_STEELIX,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
+    },
+    {
+    .iv = 220,
+    .lvl = 67,
+    .species = SPECIES_CAMERUPT,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_ERUPTION, MOVE_EARTHQUAKE, MOVE_HEAT_WAVE, MOVE_ROCK_SLIDE}
+    }
+};

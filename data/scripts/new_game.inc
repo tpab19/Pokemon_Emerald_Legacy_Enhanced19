@@ -289,5 +289,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_RAIKOU2
 	setflag FLAG_HIDE_RAIKOU3
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS
+	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
+	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	call EventScript_ResetAllBerries
 	end
