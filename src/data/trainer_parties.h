@@ -6896,7 +6896,7 @@ static const struct TrainerMon sParty_TabithaMossdeep[] = {
     },
     {
     .iv = 150,
-    .lvl = 43,
+    .lvl = 44,
     .species = SPECIES_ZANGOOSE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_SUNNY_DAY,  MOVE_SWORDS_DANCE}
