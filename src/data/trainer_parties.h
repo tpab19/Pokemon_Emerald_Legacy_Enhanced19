@@ -3652,7 +3652,7 @@ static const struct TrainerMon sParty_TateAndLiza1[] = {
     .lvl = 44,
     .species = SPECIES_XATU,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SUNNY_DAY, MOVE_CONFUSE_RAY}
+    .moves = {MOVE_PSYCHIC, MOVE_CALM_MIND, MOVE_SUNNY_DAY, MOVE_GIGA_DRAIN}
     },
     {
     .iv = 250,
