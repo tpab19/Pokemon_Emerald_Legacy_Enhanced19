@@ -12901,22 +12901,29 @@ static const struct TrainerMon sParty_WallyPetalburg[] = {
 // Dewford Gym Leader if beat Wattson prior
 static const struct TrainerMon sParty_Brawly1_2[] = {
     {
-    .iv = 100,
-    .lvl = 25,
+    .iv = 150,
+    .lvl = 26,
     .species = SPECIES_MEDITITE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CONFUSION, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
     },
     {
     .iv = 100,
-    .lvl = 24,
+    .lvl = 25,
+    .species = SPECIES_MACHOKE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_KARATE_CHOP, MOVE_ROCK_TOMB, MOVE_SEISMIC_TOSS, MOVE_REVENGE}
+    },
+    {
+    .iv = 100,
+    .lvl = 26,
     .species = SPECIES_BRELOOM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_MACH_PUNCH, MOVE_MEGA_DRAIN, MOVE_BULK_UP, MOVE_STUN_SPORE}
     },
     {
     .iv = 200,
-    .lvl = 26,
+    .lvl = 27,
     .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
@@ -12926,29 +12933,29 @@ static const struct TrainerMon sParty_Brawly1_2[] = {
 // Dewford Gym Leader if beat Flannery prior
 static const struct TrainerMon sParty_Brawly1_3[] = {
    {
-    .iv = 100,
-    .lvl = 29,
+    .iv = 180,
+    .lvl = 31,
     .species = SPECIES_MEDITITE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_CONFUSION, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_EXTRASENSORY, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
     },
     {
     .iv = 100,
-    .lvl = 28,
+    .lvl = 30,
     .species = SPECIES_MACHOKE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_KARATE_CHOP, MOVE_ROCK_TOMB, MOVE_SEISMIC_TOSS, MOVE_REVENGE}
     },
     {
     .iv = 100,
-    .lvl = 29,
+    .lvl = 31,
     .species = SPECIES_BRELOOM,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_MACH_PUNCH, MOVE_MEGA_DRAIN, MOVE_BULK_UP, MOVE_STUN_SPORE}
     },
     {
     .iv = 200,
-    .lvl = 31,
+    .lvl = 32,
     .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
