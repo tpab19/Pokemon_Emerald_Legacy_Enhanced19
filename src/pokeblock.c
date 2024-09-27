@@ -1407,15 +1407,26 @@ s16 GetPokeblockData(const struct Pokeblock *pokeblock, u8 field)
 s16 PokeblockGetGain(u8 nature, const struct Pokeblock *pokeblock)
 {
     u8 flavor;
-    s16 curGain, totalGain = 0;
+    s16 curGain, totalGain, reduction_steps, i = 0;
 
     for (flavor = 0; flavor < FLAVOR_COUNT; flavor++)
     {
         curGain = GetPokeblockData(pokeblock, flavor + PBLOCK_SPICY);
         if (curGain > 0)
             totalGain += curGain * gPokeblockFlavorCompatibilityTable[FLAVOR_COUNT * nature + flavor];
+        if (MON_DATA_SHEEN > 100)
+        {
+            reduction_steps = (MON_DATA_SHEEN - 100) / 50;  // Each step reduces gain by 10%
+            // Apply 10% reduction for each step
+            for (i = 0; i < reduction_steps; i++)
+            {
+                // Reduce totalGain by 10%, rounding down
+                totalGain -= totalGain / 10;
+                if (totalGain < 1)
+                    totalGain = 1;
+            }
+        }
     }
-
     return totalGain;
 }
 

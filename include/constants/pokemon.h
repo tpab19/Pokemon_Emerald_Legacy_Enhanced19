@@ -229,7 +229,7 @@
 #define STANDARD_FRIENDSHIP 70
 
 #define MAX_FRIENDSHIP  255
-#define MAX_SHEEN       255
+#define MAX_SHEEN       32766
 #define MAX_CONDITION   255
 
 #define MAX_PER_STAT_IVS 31
