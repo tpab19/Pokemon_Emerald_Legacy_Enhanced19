@@ -2250,21 +2250,21 @@
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_ODDISH"
+                "species": "SPECIES_GIRAFARIG"
               },
               {
-                "min_level": 25,
-                "max_level": 25,
+                "min_level": 28,
+                "max_level": 28,
                 "species": "SPECIES_GIRAFARIG"
               },
               {
                 "min_level": 27,
                 "max_level": 27,
-                "species": "SPECIES_GIRAFARIG"
+                "species": "SPECIES_MURKROW"
               },
               {
-                "min_level": 25,
-                "max_level": 25,
+                "min_level": 26,
+                "max_level": 26,
                 "species": "SPECIES_NATU"
               },
               {
