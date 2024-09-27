@@ -334,24 +334,28 @@ static const struct TrainerMon sParty_Fredrick[] = {
 // Aqua Hideout Aqua Admin Matt
 static const struct TrainerMon sParty_Matt[] = {
     {
-    .iv = 50,
-    .lvl = 39,
-    .species = SPECIES_CRAWDAUNT,
-    },
-    {
-    .iv = 50,
+    .iv = 150,
     .lvl = 38,
     .species = SPECIES_ELECTRODE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_EXPLOSION, MOVE_MIRROR_COAT}
     },
     {
-    .iv = 50,
+    .iv = 150,
+    .lvl = 39,
+    .species = SPECIES_CRAWDAUNT,
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_BRICK_BREAK}
+    },
+    {
+    .iv = 150,
     .lvl = 38,
     .species = SPECIES_MACHAMP,
+    .moves = {MOVE_BODY_SLAM, MOVE_SUBMISSION, MOVE_ROCK_TOMB, MOVE_FOCUS_ENERGY}
     },
     {
-    .iv = 50,
+    .iv = 190,
     .lvl = 40,
     .species = SPECIES_HUNTAIL,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     }
 };
 // Mt Pyre Interior 2f Blackbelt
@@ -368,16 +372,19 @@ static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
     .iv = 50,
     .lvl = 32,
     .species = SPECIES_MIGHTYENA,
+    .moves = {MOVE_BITE, MOVE_TAKE_DOWN, MOVE_DIG, MOVE_SCARY_FACE}
     },
     {
     .iv = 50,
     .lvl = 31,
     .species = SPECIES_SEVIPER,
+    .moves = {MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE, MOVE_CRUNCH}
     },
     {
-    .iv = 50,
+    .iv = 100,
     .lvl = 33,
     .species = SPECIES_GOREBYSS,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_PSYCHIC, MOVE_WATER_PULSE, MOVE_AMNESIA}
     }
 };
 // Aqua Admin Seafloor Cavern
@@ -5605,7 +5612,7 @@ static const struct TrainerMon sParty_Dianne[] = {
     .lvl = 48,
     .species = SPECIES_LANTURN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_SURF, MOVE_NONE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_SURF, MOVE_NONE}
     }
 };
 // Abandoned Ship
@@ -8154,16 +8161,19 @@ static const struct TrainerMon sParty_TabithaMtChimney[] = {
     .iv = 50,
     .lvl = 25,
     .species = SPECIES_CACNEA,
+    .moves = {MOVE_LEECH_SEED, MOVE_PURSUIT, MOVE_PIN_MISSILE, MOVE_INGRAIN}
     },
     {
     .iv = 50,
     .lvl = 25,
     .species = SPECIES_LAIRON,
+    .moves = {MOVE_METAL_CLAW, MOVE_ROCK_THROW, MOVE_MUD_SLAP, MOVE_HEADBUTT}
     },
     {
     .iv = 50,
     .lvl = 26,
     .species = SPECIES_ZANGOOSE,
+    .moves = {MOVE_SLASH, MOVE_PURSUIT, MOVE_BULK_UP, MOVE_QUICK_ATTACK}
     }
 };
 // Route 132 CooltrainerM
@@ -10138,21 +10148,25 @@ static const struct TrainerMon sParty_TabithaMagmaHideout[] = {
     .iv = 50,
     .lvl = 36,
     .species = SPECIES_CROBAT,
+    .moves = {MOVE_WING_ATTACK, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 50,
     .lvl = 35,
     .species = SPECIES_LAIRON,
+    .moves = {MOVE_IRON_TAIL, MOVE_ROCK_TOMB, MOVE_SANDSTORM, MOVE_MUD_SLAP}
     },
     {
     .iv = 50,
     .lvl = 35,
     .species = SPECIES_CACTURNE,
+    .moves = {MOVE_NEEDLE_ARM, MOVE_FAINT_ATTACK, MOVE_LEECH_SEED, MOVE_INGRAIN}
     },
     {
     .iv = 50,
     .lvl = 37,
     .species = SPECIES_ZANGOOSE,
+    .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_BULK_UP, MOVE_METAL_CLAW}
     }
 };
 // Route 132 CooltrainerF
