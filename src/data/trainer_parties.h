@@ -4983,7 +4983,7 @@ static const struct TrainerMon sParty_Jasmine[] = {
     {
     .iv = 80,
     .lvl = 20,
-    .species = SPECIES_STARYU,
+    .species = SPECIES_PONYTA,
     },
     {
     .iv = 0,
