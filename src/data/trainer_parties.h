@@ -5033,7 +5033,7 @@ static const struct TrainerMon sParty_Dylan1[] = {
     {
     .iv = 0,
     .lvl = 17,
-    .species = SPECIES_MACHOP,
+    .species = SPECIES_PONYTA,
     }
 };
 
@@ -5106,6 +5106,11 @@ static const struct TrainerMon sParty_Maria5[] = {
     .iv = 40,
     .lvl = 37,
     .species = SPECIES_DODRIO,
+    },
+    {
+    .iv = 40,
+    .lvl = 37,
+    .species = SPECIES_RAPIDASH,
     }
 };
 // Route 127 TriathleteM
@@ -10379,8 +10384,8 @@ static const struct TrainerMon sParty_Shayla[] = {
 static const struct TrainerMon sParty_Kyra[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_DODUO,
+    .lvl = 28,
+    .species = SPECIES_PONYTA,
     },
     {
     .iv = 0,
@@ -10471,7 +10476,7 @@ static const struct TrainerMon sParty_Melina[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_DODUO,
+    .species = SPECIES_PONYTA,
     }
 };
 // Route 117 Psychic
