@@ -19,8 +19,6 @@ CaveOfOrigin_B1F_EventScript_Wallace::
 	delay 30
 	applymovement LOCALID_WALLACE, Common_Movement_FacePlayer
 	waitmovement 0
-	message CaveOfOrigin_B1F_Text_WhereIsRayquaza
-	waitmessage
 	msgbox CaveOfOrigin_B1F_Text_WellHeadToSkyPillar, MSGBOX_DEFAULT
 	closemessage
 	playse SE_EXIT
@@ -36,7 +34,7 @@ CaveOfOrigin_B1F_EventScript_Wallace::
 CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "Ah, so you are {PLAYER}{KUN}?\p"
 	.string "I've heard such marvelous tales of your\n"
-	.string "exploits."
+	.string "exploits.\p"
 	.string "My name is WALLACE.\p"
 	.string "As the GYM LEADER of SOOTOPOLIS, I've\n"
 	.string "spent my life immersed in its mysteries,\l"
@@ -54,7 +52,7 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "It is said that in times of strife, this\n"
 	.string "ethereal being descended from the\l"
 	.string "heavens to quell the chaos below.\p"
-	.string "I believe that seeking out the\n"
+	.string "I believe that seeking out this\n"
 	.string "DRAGON LORD may be our only hope.\p"
 	.string "The SKY PILLAR, a monument to its\n"
 	.string "majesty, lies waiting on ROUTE 131.\p"
@@ -64,15 +62,13 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "last...\p"
 	.string "I believe I know how to unlock its\n"
 	.string "secrets.$"
-	
-CaveOfOrigin_B1F_Text_WhereIsRayquaza:
-	.string "WALLACE: {PLAYER}{KUN}, will you\n"
-	.string "accompany me?\p"
-	.string "There's not a moment to lose!$"
 
 CaveOfOrigin_B1F_Text_WellHeadToSkyPillar:
-	.string "WALLACE: Let us make haste to the\n"
-	.string "SKY PILLAR. Time is of the essence!\p"
+	.string "WALLACE: {PLAYER}{KUN}, will you\n"
+	.string "accompany me?\p"
+	.string "There's not a moment to lose!\p"
+	.string "Let us make haste to the SKY PILLAR.\n"
+	.string "Time is of the essence!\p"
 	.string "I will go ahead and prepare to open\n"
 	.string "its entrance.\p"
 	.string "Please meet me there as soon as you can.$"

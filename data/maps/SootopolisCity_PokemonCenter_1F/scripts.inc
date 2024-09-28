@@ -49,7 +49,7 @@ SootopolisCity_PokemonCenter_1F_EventScript_WomanNoLegendaries::
 	release
 	end
 
-SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn
+SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn:
 	.string "WALLACE is the leader of this town's\n"
 	.string "GYM, and he's one of the toughest\n"
 	.string "TRAINERS in the whole HOENN region.\p"
