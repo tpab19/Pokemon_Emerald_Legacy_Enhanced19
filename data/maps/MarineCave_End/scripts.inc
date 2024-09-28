@@ -19,11 +19,20 @@ MarineCave_End_EventScript_TryRemoveKyogre::
 MarineCave_End_OnTransition:
 	call_if_unset FLAG_DEFEATED_KYOGRE, MarineCave_End_EventScript_ShowKyogre
 	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
+	call_if_set FLAG_DEFEATED_KYOGRE, TerraCave_End_EventScript_CheckShowArchie
 	end
 
 MarineCave_End_EventScript_ShowKyogre::
 	clearflag FLAG_HIDE_MARINE_CAVE_KYOGRE
 	setvar VAR_TEMP_1, 1
+	return
+
+TerraCave_End_EventScript_CheckShowArchie::
+	goto_if_set FLAG_BEAT_ARCHIE_MARINE_CAVE, Common_EventScript_NopReturn
+	clearflag FLAG_HIDE_ARCHIE_MARINE_CAVE
+	setobjectxyperm LOCALID_ARCHIE, 9, 26
+	setobjectxy LOCALID_ARCHIE, 9, 26
+	applymovement LOCALID_ARCHIE, Common_Movement_FaceUp
 	return
 
 MarineCave_End_EventScript_Kyogre::
@@ -47,9 +56,9 @@ MarineCave_End_EventScript_Kyogre::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, MarineCave_End_EventScript_DefeatedKyogre
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, MarineCave_End_EventScript_RanFromKyogre
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MarineCave_End_EventScript_RanFromKyogre
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	setflag FLAG_DEFEATED_KYOGRE
+	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
 	releaseall
 	end
 
@@ -57,9 +66,9 @@ MarineCave_End_EventScript_DefeatedKyogre::
 	fadescreenswapbuffers FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreenswapbuffers FADE_FROM_BLACK
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	setflag FLAG_DEFEATED_KYOGRE
+	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
 	end
 
 MarineCave_End_EventScript_RanFromKyogre::
@@ -73,16 +82,16 @@ MarineCave_End_EventScript_Archie::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-	trainerbattle_single TRAINER_ARCHIE_MARINE_CAVE, MarineCave_End_Text_ArchieIntro, MarineCave_End_Text_ArchieDefeat, MarineCave_End_EventScript_ArchieDefeated
-	releaseall
-	end
-
-MarineCave_End_EventScript_ArchieDefeated::
+MarineCave_End_EventScript_StartArchieFight::
+	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
+	faceplayer
+	msgbox MarineCave_End_Text_ArchieIntro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ARCHIE_MARINE_CAVE, MarineCave_End_Text_ArchieDefeat
 	msgbox MarineCave_End_Text_ArchiePostBattle, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE
-	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
-	setflag FLAG_DEFEATED_KYOGRE
+	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	call MarineCave_End_EventScript_SetMtPyre
 	applymovement LOCALID_ARCHIE, MarineCave_End_Movement_ArchieLeaves
 	waitmovement 0
