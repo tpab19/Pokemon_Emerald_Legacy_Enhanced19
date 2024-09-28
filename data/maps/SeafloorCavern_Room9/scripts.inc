@@ -240,7 +240,7 @@ SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 	.string "KYOGRE will bring balance to our world,\n"
 	.string "just like the oceans once did before\l"
 	.string "they were driven back by reckless\l"
-	.string "ambition\p."
+	.string "ambition.\p"
 	.string "Think of those barren places, the\n"
 	.string "regions dried up by misguided land\l"
 	.string "reclamation. It's time to set things\l"
