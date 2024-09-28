@@ -27,8 +27,12 @@ SootopolisCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 SootopolisCity_PokemonCenter_1F_EventScript_GentlemanNoLegendaries::
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_PokemonCenter_1F_EventScript_GentlemanNoLegendaries2
 	msgbox SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn, MSGBOX_DEFAULT
 	release
+	end
+SootopolisCity_PokemonCenter_1F_EventScript_GentlemanNoLegendaries2::
+	msgbox SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn2, MSGBOX_DEFAULT
 	end
 
 SootopolisCity_PokemonCenter_1F_EventScript_Woman::
@@ -45,7 +49,12 @@ SootopolisCity_PokemonCenter_1F_EventScript_WomanNoLegendaries::
 	release
 	end
 
-SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn:
+SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn
+	.string "WALLACE is the leader of this town's\n"
+	.string "GYM, and he's one of the toughest\n"
+	.string "TRAINERS in the whole HOENN region.\p"
+
+SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn2:
 	.string "WALLACE is rumored to be the toughest\n"
 	.string "TRAINER in the whole HOENN region.\p"
 	.string "This town's GYM is led by the TRAINER\n"
