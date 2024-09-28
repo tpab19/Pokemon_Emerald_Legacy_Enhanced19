@@ -158,7 +158,7 @@ MarineCave_End_Text_ArchiePostBattle:
 	.string "seeing the ripples they'd cause.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "Maybe Maxie had a point.\p"
+	.string "Maybe MAXIE had a point.\p"
 	.string "Charging ahead without understanding\n"
 	.string "the delicate balance of things was\l"
 	.string "foolish.\p"

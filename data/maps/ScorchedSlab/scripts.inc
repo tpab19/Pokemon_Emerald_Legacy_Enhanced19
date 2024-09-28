@@ -53,10 +53,10 @@ ScorchedSlab_EventScript_Entei::
 ScorchedSlab_EventScript_DefeatedEntei::
 	setflag FLAG_DEFEATED_ENTEI
 	setvar VAR_0x8004, SPECIES_ENTEI
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end
 
 ScorchedSlab_EventScript_RanFromEntei::
 	setvar VAR_0x8004, SPECIES_ENTEI
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end

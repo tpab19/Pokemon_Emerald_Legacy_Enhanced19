@@ -521,12 +521,12 @@ Route119_EventScript_Raikou::
 Route119_EventScript_DefeatedRaikou::
 	setflag FLAG_DEFEATED_RAIKOU
 	setvar VAR_0x8004, SPECIES_RAIKOU
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end
 
 Route119_EventScript_RanFromRaikou::
 	setvar VAR_0x8004, SPECIES_RAIKOU
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end
 Route119_Text_MayIntro:
 	.string "MAY: {PLAYER}{KUN}!\n"

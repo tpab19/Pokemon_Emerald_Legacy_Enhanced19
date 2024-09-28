@@ -162,12 +162,12 @@ AbandonedShip_HiddenFloorRooms_EventScript_Suicune::
 AbandonedShip_HiddenFloorRooms_EventScript_DefeatedSuicune::
 	setflag FLAG_DEFEATED_SUICUNE
 	setvar VAR_0x8004, SPECIES_SUICUNE
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_RanFromSuicune::
 	setvar VAR_0x8004, SPECIES_SUICUNE
-	goto Common_EventScript_LegendaryFlewAway
+	goto Common_EventScript_LegendaryRanAway
 	end
 
 AbandonedShip_HiddenFloorRooms_Text_BrightShinyTrash:
