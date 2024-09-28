@@ -10393,16 +10393,28 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_MON(sParty_Courtney2),
     },
 
-    [TRAINER_ARCHIE_AND_MATT] =
+    [TRAINER_ARCHIE_MT_PYRE] =
     {
         .trainerClass = TRAINER_CLASS_AQUA_LEADER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_ARCHIE_AND_MATT,
-        .trainerName = _("ARCHIE&MATT"),
+        .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
+        .trainerName = _("ARCHIE"),
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = TRUE,
+        .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_PREFER_POWER_EXTREMES,
-        .party = TRAINER_MON(sParty_ArchieAndMatt),
+        .party = TRAINER_MON(sParty_ArchieMtPyre),
+    },
+
+    [TRAINER_MATT_MT_PYRE] =
+    {
+        .trainerClass = TRAINER_CLASS_AQUA_ADMIN,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+        .trainerPic = TRAINER_PIC_AQUA_ADMIN_M,
+        .trainerName = _("MATT"),
+        .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_RISKY,
+        .party = TRAINER_MON(sParty_MattMyPyre),
     },
 
     [TRAINER_ARCHIE_MARINE_CAVE] =

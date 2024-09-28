@@ -91,10 +91,30 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	call_if_eq VAR_0x8008, 0, MtPyre_Summit_EventScript_ArchieFacePlayer0
 	call_if_eq VAR_0x8008, 1, MtPyre_Summit_EventScript_ArchieFacePlayer1
 	call_if_eq VAR_0x8008, 2, MtPyre_Summit_EventScript_ArchieFacePlayer2
+	msgbox MtPyre_Summit_Text_ArchieBumpsIntoPlayer, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalksToPlayer
 	waitmovement 0
-	trainerbattle_double TRAINER_ARCHIE_AND_MATT, MtPyre_Summit_Text_ArchieBumpsIntoPlayer, MossdeepCity_Gym_Text_ArchieAndMattDefeat, MtPyre_Summit_Text_ArchieSaysGoAway, MtPyre_Summit_EventScript_TeamAquaExits2
+	setvar VAR_0x8004, SPECIAL_BATTLE_ARCHIE_AND_MATT
+	setvar VAR_0x8005, 0
+	special DoSpecialTrainerBattle
+	waitstate
+	frontier_saveparty
+	special LoadPlayerParty
+	switch VAR_RESULT
+	case 1, MtPyre_Summit_EventScript_TeamAquaExits2
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
 	releaseall
+	end
+
+MtPyre_Summit_EventScript_ArchieTrainer::
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_A, TRAINER_ARCHIE_MT_PYRE, 0, MossdeepCity_Gym_Text_ArchieDefeat, MossdeepCity_Gym_Text_ArchieDefeat
+	end
+
+MtPyre_Summit_EventScript_MattTrainer::
+	trainerbattle TRAINER_BATTLE_SET_TRAINER_B, TRAINER_MATT_MT_PYRE, 0, MossdeepCity_Gym_Text_MattDefeat, MossdeepCity_Gym_Text_MattDefeat
 	end
 
 MtPyre_Summit_EventScript_TeamAquaExits2::
@@ -519,6 +539,47 @@ MtPyre_Summit_EventScript_BusyAquaGrunt::
 	msgbox MtPyre_Summit_Text_Grunt3Defeat, MSGBOX_SIGN
 	end
 
+MtPyre_Summit_EventScript_BusyMagmaGrunt1::
+	msgbox MtPyre_Summit_Text_BusyMagmaGrunt1, MSGBOX_SIGN
+	end
+
+MtPyre_Summit_EventScript_BusyMagmaGrunt2::
+	msgbox MtPyre_Summit_Text_BusyMagmaGrunt2, MSGBOX_SIGN
+	end
+
+MtPyre_Summit_EventScript_BusyMagmaGrunt3::
+	msgbox MtPyre_Summit_Text_BusyMagmaGrunt3, MSGBOX_SIGN
+	end
+
+MtPyre_Summit_EventScript_BusyAquaGrunt1::
+	msgbox MtPyre_Summit_Text_BusyAquaGrunt1, MSGBOX_SIGN
+	end
+
+MtPyre_Summit_EventScript_BusyAquaGrunt2::
+	msgbox MtPyre_Summit_Text_BusyAquaGrunt2, MSGBOX_SIGN
+	end
+
+MtPyre_Summit_Text_BusyMagmaGrunt1:
+	.string "We're in the middle of a crucial mission!\p"
+	.string "Can't you see TEAM AQUA is trying toan\n"
+	.string "stop us?$"
+
+MtPyre_Summit_Text_BusyMagmaGrunt2: 
+	.string "The RED ORB will be ours!\n"
+	.string "No time to waste on you!$"
+
+MtPyre_Summit_Text_BusyMagmaGrunt3: 
+	.string "Out of our way! The expansion of land\n"
+	.string "depends on this moment!$"
+
+MtPyre_Summit_Text_BusyAquaGrunt1: 
+	.string "Step aside! We have to get the BLUE ORB\n"
+	.string "before TEAM MAGMA does!$"
+
+MtPyre_Summit_Text_BusyAquaGrunt2:
+	.string "Can't talk now! The fate of the world is\n"
+	.string "at stake!$"
+
 MtPyre_Summit_Text_Grunt1Intro:
 	.string "TEAM AQUA?! They're trying to get\n"
 	.string "ahead of us!\p"
@@ -526,7 +587,7 @@ MtPyre_Summit_Text_Grunt1Intro:
 
 MtPyre_Summit_Text_Grunt1Defeat:
 	.string "Ugh… I thought you were just another\n"
-	.string "AQUA goon…$"
+	.string "TEAM AQUA goon…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
 	.string "Yeah, you’re tough...\n"
@@ -537,8 +598,8 @@ MtPyre_Summit_Text_Grunt2Intro:
 	.string "We’ll take that ORB before MAGMA does!$"
 
 MtPyre_Summit_Text_Grunt2Defeat:
-	.string "I should’ve let MAGMA wear you down\n"
-	.string "first…$"
+	.string "I should’ve let TEAM MAGMA wear you\n"
+	.string "down first…$"
 
 MtPyre_Summit_Text_Grunt2PostBattle:
 	.string "You don't know anything!\n"
@@ -646,9 +707,13 @@ MtPyre_Summit_Text_ArchieBumpsIntoPlayer:
 	.string "to deal with you swiftly!\p"
 	.string "Prepare yourself!$"
 
-MossdeepCity_Gym_Text_ArchieAndMattDefeat:
+MossdeepCity_Gym_Text_ArchieDefeat:
 	.string "ARCHIE: Tch… Don’t think this changes\n"
 	.string "anything! We’ll still awaken KYOGRE!$"
+
+MossdeepCity_Gym_Text_MattDefeat:
+	.string "MATT: So you think you've won? This\n"
+	.string "changes nothing! KYOGRE will be ours!$"
 
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
 	.string "ARCHIE: TEAM MAGMA's MAXIE got ahead\n"

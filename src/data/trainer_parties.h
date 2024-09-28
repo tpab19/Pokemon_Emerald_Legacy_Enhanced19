@@ -13053,14 +13053,7 @@ static const struct TrainerMon sParty_Courtney2[] = {
 };
 
 // Archie and Matt Double Battle (Mt Pyre)
-static const struct TrainerMon sParty_ArchieAndMatt[] = {
-    {
-    .iv = 150,
-    .lvl = 35,
-    .species = SPECIES_ELECTRODE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
-    },
+static const struct TrainerMon sParty_ArchieMtPyre[] = {
     {
     .iv = 150,
     .lvl = 35,
@@ -13071,23 +13064,9 @@ static const struct TrainerMon sParty_ArchieAndMatt[] = {
     {
     .iv = 150,
     .lvl = 36,
-    .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
-    },
-    {
-    .iv = 150,
-    .lvl = 36,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_TOXIC, MOVE_FLY}
-    },
-    {
-    .iv = 150,
-    .lvl = 37,
-    .species = SPECIES_HUNTAIL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     },
     {
     .iv = 220,
@@ -13095,6 +13074,30 @@ static const struct TrainerMon sParty_ArchieAndMatt[] = {
     .species = SPECIES_SHARPEDO,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
+    }
+};
+
+static const struct TrainerMon sParty_MattMyPyre[] = {
+    {
+    .iv = 150,
+    .lvl = 35,
+    .species = SPECIES_ELECTRODE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_CRAWDAUNT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
+    },
+    {
+    .iv = 150,
+    .lvl = 37,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     }
 };
 
