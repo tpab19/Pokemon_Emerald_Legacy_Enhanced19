@@ -299,6 +299,7 @@ MossdeepCity_EventScript_ScottExitEast::
 
 MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou1::
 	lockall
+	playse SE_PIN
 	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToPlayerL
@@ -312,6 +313,7 @@ MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou1::
 
 MossdeepCity_SceneWithBirch_EventScript_BirchNoticesYou2::
 	lockall
+	playse SE_PIN
 	applymovement LOCALID_BIRCH, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_BIRCH, MossdeepCity_Movement_BirchWalksToPlayerR
