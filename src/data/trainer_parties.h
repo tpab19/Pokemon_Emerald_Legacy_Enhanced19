@@ -7031,16 +7031,19 @@ static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     .iv = 50,
     .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
     .iv = 50,
     .lvl = 18,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_SMOG, MOVE_TACKLE, MOVE_SMOKESCREEN, MOVE_FIRE_SPIN}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_GROVYLE,
+    .moves = {MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE, MOVE_RAZOR_LEAF}
     }
 };
 // Route 119 Rival 4 w Treecko
@@ -7049,21 +7052,25 @@ static const struct TrainerMon sParty_BrendanRoute119Mudkip[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_CURSE, MOVE_BODY_SLAM, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_GROVYLE,
+    .moves = {MOVE_ROCK_TOMB, MOVE_RAZOR_LEAF, MOVE_GROWTH, MOVE_SLASH}
     }
 };
 // Rival 1
@@ -7080,16 +7087,19 @@ static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     .iv = 50,
     .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
     .iv = 10,
     .lvl = 18,
     .species = SPECIES_WAILMER,
+    .moves = {MOVE_GROWL, MOVE_WATER_GUN, MOVE_WHIRLPOOL, MOVE_ASTONISH}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_COMBUSKEN,
+    .moves = {MOVE_PECK, MOVE_FOCUS_ENERGY, MOVE_EMBER, MOVE_DOUBLE_KICK}
     }
 };
 // Route 119 Rival 4 w Torchic
@@ -7098,21 +7108,25 @@ static const struct TrainerMon sParty_BrendanRoute119Treecko[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_WAILMER,
+    .moves = {MOVE_WATER_PULSE, MOVE_ICE_BEAM, MOVE_GROWL, MOVE_ASTONISH}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_COMBUSKEN,
+    .moves = {MOVE_FIRE_PUNCH, MOVE_ROLLING_KICK, MOVE_BULK_UP, MOVE_SUNNY_DAY}
     }
 };
 // Rival 1
@@ -7129,16 +7143,19 @@ static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     .iv = 50,
     .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
     .iv = 220,
     .lvl = 18,
     .species = SPECIES_SHROOMISH,
+    .moves = {MOVE_TACKLE, MOVE_STUN_SPORE, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_MARSHTOMP,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_WATER_GUN, MOVE_TACKLE}
     }
 };
 // Route 119 Rival 4 w Mudkip
@@ -7147,21 +7164,25 @@ static const struct TrainerMon sParty_BrendanRoute119Torchic[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_BRELOOM,
+    .moves = {MOVE_MEGA_DRAIN, MOVE_HEADBUTT, MOVE_MACH_PUNCH, MOVE_LEECH_SEED}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_MARSHTOMP,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLEBEAM}
     }
 };
 // Rival 1
@@ -7176,18 +7197,21 @@ static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
 static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 18,
+    .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
-    .iv = 10,
+    .iv = 50,
     .lvl = 18,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_SMOG, MOVE_TACKLE, MOVE_SMOKESCREEN, MOVE_FIRE_SPIN}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_GROVYLE,
+    .moves = {MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE, MOVE_RAZOR_LEAF}
     }
 };
 // Route 119 Rival 4 w Treecko
@@ -7196,21 +7220,25 @@ static const struct TrainerMon sParty_MayRoute119Mudkip[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_CURSE, MOVE_BODY_SLAM, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_GROVYLE,
+    .moves = {MOVE_ROCK_TOMB, MOVE_RAZOR_LEAF, MOVE_GROWTH, MOVE_SLASH}
     }
 };
 // Rival 1
@@ -7225,18 +7253,21 @@ static const struct TrainerMon sParty_MayRoute103Treecko[] = {
 static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 18,
+    .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
-    .iv = 50,
+    .iv = 10,
     .lvl = 18,
     .species = SPECIES_WAILMER,
+    .moves = {MOVE_GROWL, MOVE_WATER_GUN, MOVE_WHIRLPOOL, MOVE_ASTONISH}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_COMBUSKEN,
+    .moves = {MOVE_PECK, MOVE_FOCUS_ENERGY, MOVE_EMBER, MOVE_DOUBLE_KICK}
     }
 };
 // Route 119 Rival 4 w Torchic
@@ -7245,21 +7276,25 @@ static const struct TrainerMon sParty_MayRoute119Treecko[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_WAILMER,
+    .moves = {MOVE_WATER_PULSE, MOVE_ICE_BEAM, MOVE_GROWL, MOVE_ASTONISH}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_COMBUSKEN,
+    .moves = {MOVE_FIRE_PUNCH, MOVE_ROLLING_KICK, MOVE_BULK_UP, MOVE_SUNNY_DAY}
     }
 };
 // Rival 1 
@@ -7276,16 +7311,19 @@ static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     .iv = 50,
     .lvl = 19,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
     {
     .iv = 220,
     .lvl = 18,
     .species = SPECIES_SHROOMISH,
+    .moves = {MOVE_TACKLE, MOVE_STUN_SPORE, MOVE_LEECH_SEED, MOVE_MEGA_DRAIN}
     },
     {
     .iv = 100,
     .lvl = 20,
     .species = SPECIES_MARSHTOMP,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_WATER_GUN, MOVE_TACKLE}
     }
 };
 // Route 119 Rival 4 w Mudkip
@@ -7294,21 +7332,25 @@ static const struct TrainerMon sParty_MayRoute119Torchic[] = {
     .iv = 100,
     .lvl = 33,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYBEAM}
     },
     {
     .iv = 100,
     .lvl = 32,
     .species = SPECIES_BRELOOM,
+    .moves = {MOVE_MEGA_DRAIN, MOVE_HEADBUTT, MOVE_MACH_PUNCH, MOVE_LEECH_SEED}
     },
     {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_MARSHTOMP,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLEBEAM}
     }
 };
 // Route 117 BreederM
@@ -9237,26 +9279,31 @@ static const struct TrainerMon sParty_BrendanLilycoveMudkip[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_HERACROSS,
+    .moves = {MOVE_BRICK_BREAK, MOVE_COUNTER, MOVE_TWINEEDLE, MOVE_TAKE_DOWN}
     },
     {
     .iv = 150,
-    .lvl = 34,
+    .lvl = 36,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_CURSE, MOVE_BODY_SLAM, MOVE_FLAMETHROWER, MOVE_AMNESIA}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_SCEPTILE,
+    .moves = {MOVE_GROWTH, MOVE_SLASH, MOVE_ROCK_TOMB, MOVE_LEAF_BLADE}
     }
 };
 // Lilycove Rival 5
@@ -9265,26 +9312,31 @@ static const struct TrainerMon sParty_BrendanLilycoveTreecko[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_DONPHAN,
+    .moves = {MOVE_EARTHQUAKE, MOVE_FLAIL, MOVE_TAKE_DOWN, MOVE_ROLLOUT}
     },
     {
     .iv = 150,
-    .lvl = 34,
+    .lvl = 36,
     .species = SPECIES_WAILORD,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_ASTONISH, MOVE_AMNESIA}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_BLAZIKEN,
+    .moves = {MOVE_BLAZE_KICK, MOVE_ROLLING_KICK, MOVE_BULK_UP, MOVE_MACH_PUNCH}
     }
 };
 // Lilycove Rival 5
@@ -9293,26 +9345,31 @@ static const struct TrainerMon sParty_BrendanLilycoveTorchic[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_PINSIR,
+    .moves = {MOVE_SEISMIC_TOSS, MOVE_REVENGE, MOVE_TWINEEDLE, MOVE_BRICK_BREAK}
     },
     {
     .iv = 150,
-    .lvl = 34,
+    .lvl = 36,
     .species = SPECIES_BRELOOM,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_HEADBUTT, MOVE_COUNTER, MOVE_BRICK_BREAK}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_SWAMPERT,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_MUDDY_WATER}
     }
 };
 // Lilycove Rival 5
@@ -9321,26 +9378,31 @@ static const struct TrainerMon sParty_MayLilycoveMudkip[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_HERACROSS,
+    .moves = {MOVE_BRICK_BREAK, MOVE_COUNTER, MOVE_TWINEEDLE, MOVE_TAKE_DOWN}
     },
     {
     .iv = 150,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_TORKOAL,
+    .moves = {MOVE_CURSE, MOVE_BODY_SLAM, MOVE_FLAMETHROWER, MOVE_AMNESIA}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_SCEPTILE,
+    .moves = {MOVE_GROWTH, MOVE_SLASH, MOVE_ROCK_TOMB, MOVE_LEAF_BLADE}
     }
 };
 // Lilycove Rival 5
@@ -9349,26 +9411,31 @@ static const struct TrainerMon sParty_MayLilycoveTreecko[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_DONPHAN,
+    .moves = {MOVE_EARTHQUAKE, MOVE_FLAIL, MOVE_TAKE_DOWN, MOVE_ROLLOUT}
     },
     {
     .iv = 150,
-    .lvl = 34,
+    .lvl = 36,
     .species = SPECIES_WAILORD,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_ASTONISH, MOVE_AMNESIA}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_BLAZIKEN,
+    .moves = {MOVE_BLAZE_KICK, MOVE_ROLLING_KICK, MOVE_BULK_UP, MOVE_MACH_PUNCH}
     }
 };
 // Lilycove Rival 5
@@ -9377,26 +9444,31 @@ static const struct TrainerMon sParty_MayLilycoveTorchic[] = {
     .iv = 100,
     .lvl = 36,
     .species = SPECIES_KECLEON,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SUBSTITUTE, MOVE_SLASH, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 37,
     .species = SPECIES_GRUMPIG,
+    .moves = {MOVE_SHOCK_WAVE, MOVE_REST, MOVE_SLEEP_TALK, MOVE_PSYCHIC}
     },
     {
     .iv = 150,
     .lvl = 36,
     .species = SPECIES_PINSIR,
+    .moves = {MOVE_SEISMIC_TOSS, MOVE_REVENGE, MOVE_TWINEEDLE, MOVE_BRICK_BREAK}
     },
     {
     .iv = 150,
-    .lvl = 34,
+    .lvl = 36,
     .species = SPECIES_BRELOOM,
+    .moves = {MOVE_GIGA_DRAIN, MOVE_HEADBUTT, MOVE_COUNTER, MOVE_BRICK_BREAK}
     },
     {
     .iv = 200,
     .lvl = 38,
     .species = SPECIES_SWAMPERT,
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_MUDDY_WATER}
     }
 };
 // Route 127 Fisherman 1
