@@ -8549,10 +8549,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_SPINDA] =
     {
         .baseHP        = 60,
-        .baseAttack    = 75,
+        .baseAttack    = 60,
         .baseDefense   = 60,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 75,
+        .baseSpeed     = 60,
+        .baseSpAttack  = 60,
         .baseSpDefense = 60,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
         .catchRate = 255,
