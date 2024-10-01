@@ -7280,7 +7280,7 @@ static const struct TrainerMon sParty_Isaac1[] = {
     {
     .iv = 0,
     .lvl = 12,
-    .species = SPECIES_WHISMUR,
+    .species = SPECIES_SNORUNT,
     },
     {
     .iv = 0,
