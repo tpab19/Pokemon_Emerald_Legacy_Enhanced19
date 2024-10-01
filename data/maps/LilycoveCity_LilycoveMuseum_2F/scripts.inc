@@ -308,7 +308,7 @@ LilycoveCity_LilycoveMuseum_2F_Text_SpecialTicket::
 	.string "ticket...$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_WitnessTrueLegends::
-	.string "With it, you can journey to Navel Rock,\n"
+	.string "With it, you can journey to NAVEL ROCK,\n"
 	.string "where two legendary POKéMON reside.\p"
 	.string "It is said that HO-OH, the rainbow\n"
 	.string "POKéMON, brings life and beauty to the\l"

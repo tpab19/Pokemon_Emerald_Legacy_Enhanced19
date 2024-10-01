@@ -334,24 +334,28 @@ static const struct TrainerMon sParty_Fredrick[] = {
 // Aqua Hideout Aqua Admin Matt
 static const struct TrainerMon sParty_Matt[] = {
     {
-    .iv = 50,
-    .lvl = 39,
-    .species = SPECIES_CRAWDAUNT,
-    },
-    {
-    .iv = 50,
+    .iv = 150,
     .lvl = 38,
     .species = SPECIES_ELECTRODE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_EXPLOSION, MOVE_MIRROR_COAT}
     },
     {
-    .iv = 50,
+    .iv = 150,
+    .lvl = 39,
+    .species = SPECIES_CRAWDAUNT,
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_BRICK_BREAK}
+    },
+    {
+    .iv = 150,
     .lvl = 38,
     .species = SPECIES_MACHAMP,
+    .moves = {MOVE_BODY_SLAM, MOVE_SUBMISSION, MOVE_ROCK_TOMB, MOVE_FOCUS_ENERGY}
     },
     {
-    .iv = 50,
+    .iv = 190,
     .lvl = 40,
     .species = SPECIES_HUNTAIL,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     }
 };
 // Mt Pyre Interior 2f Blackbelt
@@ -368,16 +372,19 @@ static const struct TrainerMon sParty_ShellyWeatherInstitute[] = {
     .iv = 50,
     .lvl = 32,
     .species = SPECIES_MIGHTYENA,
+    .moves = {MOVE_BITE, MOVE_TAKE_DOWN, MOVE_DIG, MOVE_SCARY_FACE}
     },
     {
     .iv = 50,
     .lvl = 31,
     .species = SPECIES_SEVIPER,
+    .moves = {MOVE_POISON_FANG, MOVE_IRON_TAIL, MOVE_GLARE, MOVE_CRUNCH}
     },
     {
-    .iv = 50,
+    .iv = 100,
     .lvl = 33,
     .species = SPECIES_GOREBYSS,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_PSYCHIC, MOVE_WATER_PULSE, MOVE_AMNESIA}
     }
 };
 // Aqua Admin Seafloor Cavern
@@ -4976,7 +4983,7 @@ static const struct TrainerMon sParty_Jasmine[] = {
     {
     .iv = 80,
     .lvl = 20,
-    .species = SPECIES_STARYU,
+    .species = SPECIES_PONYTA,
     },
     {
     .iv = 0,
@@ -5026,7 +5033,7 @@ static const struct TrainerMon sParty_Dylan1[] = {
     {
     .iv = 0,
     .lvl = 17,
-    .species = SPECIES_MACHOP,
+    .species = SPECIES_PONYTA,
     }
 };
 
@@ -5099,6 +5106,11 @@ static const struct TrainerMon sParty_Maria5[] = {
     .iv = 40,
     .lvl = 37,
     .species = SPECIES_DODRIO,
+    },
+    {
+    .iv = 40,
+    .lvl = 37,
+    .species = SPECIES_RAPIDASH,
     }
 };
 // Route 127 TriathleteM
@@ -5605,7 +5617,7 @@ static const struct TrainerMon sParty_Dianne[] = {
     .lvl = 48,
     .species = SPECIES_LANTURN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDERBOLT, MOVE_EARTHQUAKE, MOVE_SURF, MOVE_NONE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_SURF, MOVE_NONE}
     }
 };
 // Abandoned Ship
@@ -8154,16 +8166,19 @@ static const struct TrainerMon sParty_TabithaMtChimney[] = {
     .iv = 50,
     .lvl = 25,
     .species = SPECIES_CACNEA,
+    .moves = {MOVE_LEECH_SEED, MOVE_PURSUIT, MOVE_PIN_MISSILE, MOVE_INGRAIN}
     },
     {
     .iv = 50,
     .lvl = 25,
     .species = SPECIES_LAIRON,
+    .moves = {MOVE_METAL_CLAW, MOVE_ROCK_THROW, MOVE_MUD_SLAP, MOVE_HEADBUTT}
     },
     {
     .iv = 50,
     .lvl = 26,
     .species = SPECIES_ZANGOOSE,
+    .moves = {MOVE_SLASH, MOVE_PURSUIT, MOVE_BULK_UP, MOVE_QUICK_ATTACK}
     }
 };
 // Route 132 CooltrainerM
@@ -10138,21 +10153,25 @@ static const struct TrainerMon sParty_TabithaMagmaHideout[] = {
     .iv = 50,
     .lvl = 36,
     .species = SPECIES_CROBAT,
+    .moves = {MOVE_WING_ATTACK, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 50,
     .lvl = 35,
     .species = SPECIES_LAIRON,
+    .moves = {MOVE_IRON_TAIL, MOVE_ROCK_TOMB, MOVE_SANDSTORM, MOVE_MUD_SLAP}
     },
     {
     .iv = 50,
     .lvl = 35,
     .species = SPECIES_CACTURNE,
+    .moves = {MOVE_NEEDLE_ARM, MOVE_FAINT_ATTACK, MOVE_LEECH_SEED, MOVE_INGRAIN}
     },
     {
     .iv = 50,
     .lvl = 37,
     .species = SPECIES_ZANGOOSE,
+    .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_BULK_UP, MOVE_METAL_CLAW}
     }
 };
 // Route 132 CooltrainerF
@@ -10365,8 +10384,8 @@ static const struct TrainerMon sParty_Shayla[] = {
 static const struct TrainerMon sParty_Kyra[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_DODUO,
+    .lvl = 28,
+    .species = SPECIES_PONYTA,
     },
     {
     .iv = 0,
@@ -10457,7 +10476,7 @@ static const struct TrainerMon sParty_Melina[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_DODUO,
+    .species = SPECIES_PONYTA,
     }
 };
 // Route 117 Psychic
@@ -13034,14 +13053,7 @@ static const struct TrainerMon sParty_Courtney2[] = {
 };
 
 // Archie and Matt Double Battle (Mt Pyre)
-static const struct TrainerMon sParty_ArchieAndMatt[] = {
-    {
-    .iv = 150,
-    .lvl = 35,
-    .species = SPECIES_ELECTRODE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
-    },
+static const struct TrainerMon sParty_ArchieMtPyre[] = {
     {
     .iv = 150,
     .lvl = 35,
@@ -13052,23 +13064,9 @@ static const struct TrainerMon sParty_ArchieAndMatt[] = {
     {
     .iv = 150,
     .lvl = 36,
-    .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
-    },
-    {
-    .iv = 150,
-    .lvl = 36,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_TOXIC, MOVE_FLY}
-    },
-    {
-    .iv = 150,
-    .lvl = 37,
-    .species = SPECIES_HUNTAIL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     },
     {
     .iv = 220,
@@ -13076,6 +13074,30 @@ static const struct TrainerMon sParty_ArchieAndMatt[] = {
     .species = SPECIES_SHARPEDO,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
+    }
+};
+
+static const struct TrainerMon sParty_MattMyPyre[] = {
+    {
+    .iv = 150,
+    .lvl = 35,
+    .species = SPECIES_ELECTRODE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
+    },
+    {
+    .iv = 150,
+    .lvl = 36,
+    .species = SPECIES_CRAWDAUNT,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_ICE_BEAM, MOVE_ROCK_SMASH}
+    },
+    {
+    .iv = 150,
+    .lvl = 37,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_CURSE, MOVE_CRUNCH, MOVE_SURF}
     }
 };
 

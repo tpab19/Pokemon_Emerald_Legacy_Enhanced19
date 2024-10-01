@@ -302,7 +302,4 @@ Route128_Text_StevenWholeWorldWillDrown:
 Route128_Text_StevenImGoingToSootopolis:
 	.string "{PLAYER}{KUN}…\n"
 	.string "I don't know what you intend to do,\l"
-	.string "but don't do anything reckless.\p"
-	.string "Okay.$"
-
-
+	.string "but don't do anything reckless.$"

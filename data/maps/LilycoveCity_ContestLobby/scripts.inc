@@ -278,7 +278,7 @@ LilycoveCity_ContestLobby_EventScript_SendToPC::
 	end
 
 LilycoveCity_ContestLobby_Text_Reward:
-	.string "You've just won a MASTER RIBBON\n"
+	.string "You've just won a MASTER RIBBON.\n"
 	.string "That’s an incredible accomplishment!\p"
 	.string "You and your POKéMON truly shone during\n"
 	.string "those appeals.\p"

@@ -235,12 +235,12 @@ SeafloorCavern_Room9_Text_ArchieSoItWasYou:
 SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 	.string "ARCHIE: Behold! KYOGRE! So peaceful, so\n"
 	.string "powerful... the ancient POKéMON that\l"
-	.string "will save us all\p."
+	.string "will save us all.\p"
 	.string "I've waited so long for this moment...\p"
 	.string "KYOGRE will bring balance to our world,\n"
-	.string "just like the oceans once did before\n"
+	.string "just like the oceans once did before\l"
 	.string "they were driven back by reckless\l"
-	.string "ambition\p."
+	.string "ambition.\p"
 	.string "Think of those barren places, the\n"
 	.string "regions dried up by misguided land\l"
 	.string "reclamation. It's time to set things\l"
@@ -263,14 +263,15 @@ SeafloorCavern_Room9_Text_ArchieDefeat:
 SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
 	.string "ARCHIE: You... why can't you see it?!\p"
 	.string "KYOGRE... It's not a threat, it's a\n"
-	.string "savior! It will end the droughts returning\l"
+	.string "savior!\p"
+	.string "It will end the droughts returning\n"
 	.string "life where there's only suffering!\p"
 	.string "The oceans won't destroy the world...\p"
 	.string "They'll save it!\p"
 	.string "Water will nurture the land and bring\n"
 	.string "balance once more!\p"
-	.string "You're the one standing in the way of saving\n"
-	.string "everyone!$"
+	.string "You're the one standing in the way of\n"
+	.string "saving everyone!$"
 
 SeafloorCavern_Room9_Text_RedOrbShinesByItself:
 	.string "The BLUE ORB suddenly began shining!$"
@@ -323,10 +324,9 @@ SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "Don't get all high and mighty with me!\p"
 	.string "Wasn't it you, TEAM MAGMA, that\n"
 	.string "woke GROUDON?\p"
-	.string "I was ready to stop, but the BLUE ORB…\n"
-	.string "No… this wasn’t supposed to happen!\p"
-	.string "I didn't want this!\n"
-	.string "This isn’t my fault!\l"
+	.string "No… this wasn’t supposed to happen!\n"
+	.string "I didn't want this!\p"
+	.string "This isn’t my fault!\n"
 	.string "This can't be my fault!$"
 
 SeafloorCavern_Room9_Text_MaxieWeDontHaveTimeToArgue:

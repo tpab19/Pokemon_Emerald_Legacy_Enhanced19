@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "MtChimney_EventScript_AquaPoochyena",
+      "script": "MtPyre_Summit_EventScript_BusyAquaGrunt1",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_MATT"
     },
     {
@@ -128,7 +128,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtChimney_EventScript_BusyAquaGrunt3",
+      "script": "MtPyre_Summit_EventScript_BusyAquaGrunt2",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
     {
@@ -154,7 +154,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtChimney_EventScript_MagmaPoochyena",
+      "script": "MtPyre_Summit_EventScript_BusyMagmaGrunt1",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
@@ -167,7 +167,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtChimney_EventScript_BusyMagmaGrunt3",
+      "script": "MtPyre_Summit_EventScript_BusyMagmaGrunt2",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {
@@ -219,7 +219,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtChimney_EventScript_BusyMagmaGrunt1",
+      "script": "MtPyre_Summit_EventScript_BusyMagmaGrunt3",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA"
     },
     {

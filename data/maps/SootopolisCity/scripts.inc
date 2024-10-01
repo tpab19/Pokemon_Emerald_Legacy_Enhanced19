@@ -1316,9 +1316,13 @@ SootopolisCity_EventScript_GiveWaterfall::
 	setflag FLAG_RECEIVED_HM_WATERFALL
 	msgbox SootopolisCity_Text_ExplainWaterfallGoToGym, MSGBOX_DEFAULT
 	closemessage
+	opendoor 31, 32
+	waitdooranim
 	applymovement LOCALID_WALLACE, SootopolisCity_MovementWallaceMoveInsideGym
 	waitmovement 0
 	removeobject LOCALID_WALLACE
+	closedoor 31, 32
+	waitdooranim
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
 	release
 	end
@@ -1388,14 +1392,14 @@ SootopolisCity_Movement_DestroyTask::
 
 SootopolisCity_Text_GymSign:
 	.string "SOOTOPOLIS CITY POKéMON GYM\n"
-	.string "LEADER: JUAN\p"
-	.string "“The GYM LEADER with the beauty\n"
-	.string "of pure water!”$"
+	.string "LEADER: WALLACE\p"
+	.string "“Artist, and lover of WATER.”$"
 
 SootopolisCity_Text_GymSignPostGame:
 	.string "SOOTOPOLIS CITY POKéMON GYM\n"
-	.string "LEADER: WALLACE\p"
-	.string "“Artist, and lover of WATER.”$"
+	.string "LEADER: JUAN\p"
+	.string "“The GYM LEADER with the beauty\n"
+	.string "of pure water!”$"
 
 SootopolisCity_Text_CitySign:
 	.string "SOOTOPOLIS CITY\p"
@@ -1589,8 +1593,7 @@ SootopolisCity_Text_GroudonPleaseStop:
 	.string "If you continue, all of HOENN, not just\n"
 	.string "SOOTOPOLIS, will be consumed by ruin!\p"
 	.string "This wasn't what I sought... not like\n"
-	.string "this.\p"
-	.string "SOOTOPOLIS, will be utterly ruined!$"
+	.string "this.$"
 
 SootopolisCity_Text_AfterAllOurScheming:
 	.string "MAXIE: So, it wasn't only GROUDON and\n"
@@ -1670,7 +1673,7 @@ SootopolisCity_Text_NeverBeenToSkyPillar:
 	.string "STEVEN: So, WALLACE believes the\n"
 	.string "DRAGON LORD can help us...\p"
 	.string "The SKY PILLAR...\n"
-	.string "I've heard of it, though I've\n"
+	.string "I've heard of it, though I've\l"
 	.string "never ventured there myself.\p"
 	.string "I must stay here in SOOTOPOLIS\n"
 	.string "to ensure the safety of the people.\p"
@@ -1722,7 +1725,7 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
 	.string "the SOOTOPOLIS GYM LEADER...\l"
-	.string "Me!"
+	.string "Me!\p"
 	.string "When you're ready, please come\n"
 	.string "to the GYM.\p"
 	.string "I shall await your arrival.\p"

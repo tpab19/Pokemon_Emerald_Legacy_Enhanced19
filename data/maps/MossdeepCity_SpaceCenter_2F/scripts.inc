@@ -379,7 +379,7 @@ MossdeepCity_SpaceCenter_2F_Text_MossdeepIdealForRockets:
 
 MossdeepCity_SpaceCenter_2F_Text_WhyWouldMagmaStealRocketFuel:
 	.string "Why would TEAM MAGMA be here\n"
-	.string "at our Space Center in the first place?$"
+	.string "at our SPACE CENTER in the first place?$"
 
 MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "If only I was a little younger, I would\n"
@@ -390,7 +390,7 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
 	.string "If TEAM MAGMA takes over our satellite,\n"
 	.string "systems we won't be able to continue\l"
-	.string "our research!"
+	.string "our research!\p"
 	.string "They can't be allowed to get away with\n"
 	.string "such an outrage!$"
 
@@ -506,7 +506,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
 	.string "MAXIE: Hmph…\n"
 	.string "There's no time left. I must act now.\p"
 	.string "Perhaps there is still a chance to stop\n"
-	.string "he impending disaster…\p"
+	.string "the impending disaster…\p"
 	.string "I suggest you stay out of this!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenThankYouComeSeeMeAtHome:
