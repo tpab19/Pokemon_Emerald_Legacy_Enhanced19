@@ -8053,9 +8053,9 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 28,
-                "max_level": 28,
-                "species": "SPECIES_ZUBAT"
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_SNORUNT"
               },
               {
                 "min_level": 32,
@@ -9207,8 +9207,8 @@
               },
               {
                 "min_level": 36,
-                "max_level": 36,
-                "species": "SPECIES_GOLBAT"
+                "max_level": 38,
+                "species": "SPECIES_GLALIE"
               },
               {
                 "min_level": 37,
