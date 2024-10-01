@@ -7348,9 +7348,9 @@
                 "species": "SPECIES_HARIYAMA"
               },
               {
-                "min_level": 41,
-                "max_level": 43,
-                "species": "SPECIES_GOLEM"
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_RHYDON"
               },
               {
                 "min_level": 40,
@@ -7447,9 +7447,9 @@
                 "species": "SPECIES_SABLEYE"
               },
               {
-                "min_level": 41,
-                "max_level": 42,
-                "species": "SPECIES_GOLEM"
+                "min_level": 42,
+                "max_level": 44,
+                "species": "SPECIES_RHYDON"
               },
               {
                 "min_level": 42,
@@ -7482,9 +7482,9 @@
                 "species": "SPECIES_AGGRON"
               },
               {
-                "min_level": 45,
-                "max_level": 45,
-                "species": "SPECIES_GOLEM"
+                "min_level": 44,
+                "max_level": 46,
+                "species": "SPECIES_RHYDON"
               },
               {
                 "min_level": 45,
