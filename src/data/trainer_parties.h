@@ -494,13 +494,19 @@ static const struct TrainerMon sParty_Felix[] = {
     .iv = 0,
     .lvl = 46,
     .species = SPECIES_MEDICHAM,
-    .moves = {MOVE_PSYCHIC, MOVE_NONE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_PSYCHIC, MOVE_ROLLING_KICK, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 46,
+    .species = SPECIES_SWALOT,
+    .moves = {MOVE_SLUDGE_BOMB, MOVE_YAWN, MOVE_BODY_SLAM, MOVE_NONE}
     },
     {
     .iv = 0,
     .lvl = 46,
     .species = SPECIES_CLAYDOL,
-    .moves = {MOVE_SKILL_SWAP, MOVE_EARTHQUAKE, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_SKILL_SWAP, MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_NONE}
     }
 };
 // Route 123 (via 118 from mauville) Aroma Lady
