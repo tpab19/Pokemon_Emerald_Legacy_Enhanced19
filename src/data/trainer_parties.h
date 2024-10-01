@@ -5449,7 +5449,7 @@ static const struct TrainerMon sParty_Edwardo[] = {
     {
     .iv = 150,
     .lvl = 29,
-    .species = SPECIES_DODUO,
+    .species = SPECIES_VIBRAVA,
     },
     {
     .iv = 150,
@@ -10568,13 +10568,8 @@ static const struct TrainerMon sParty_Callie[] = {
 static const struct TrainerMon sParty_Cale[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_DUSTOX,
-    },
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_BEAUTIFLY,
+    .lvl = 35,
+    .species = SPECIES_VIBRAVA,
     }
 };
 // Route 121 BreederM
