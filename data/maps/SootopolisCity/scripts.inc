@@ -1451,11 +1451,9 @@ SootopolisCity_EventScript_BrendanProfessor::
 	applymovement LOCALID_BRENDAN, SootopolisCity_Movement_RivalMovement2
 	waitmovement 0
 	msgbox SootopolisCity_Text_RivalBecomingProfessor3, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_BRENDAN, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox SootopolisCity_Text_RivalBecomingProfessor4, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_BRENDAN, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox SootopolisCity_Text_RivalBecomingProfessor5, MSGBOX_DEFAULT
