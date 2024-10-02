@@ -66,8 +66,8 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Mogul
 
 
-<!-- ### Sprite Artists:
--  -->
+### Sprite Artists:
+- ZuperZACH
 
 
 ### Where you can find all Pret Tutorials:
@@ -111,6 +111,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - DizzyEgg/tutorial by ExpoSeed - [Colored stats by nature in summary screen](https://github.com/pret/pokeemerald/wiki/Colored-stats-by-nature-in-summary-screen)
 - Ellabrella - [Increase Text Speed Beyond Fast](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-15#post-10400198)
 - Robinlukke - [Feed any number of pokéblocks](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-14#post-10364627)
+- AmbientDinosaur - [Changing encounter groups with map scripts](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-12#post-10315616)
 
 
 ### Other Credits:

@@ -311,6 +311,216 @@ static u16 GetCurrentMapWildMonHeaderId(void)
         if (gWildMonHeaders[i].mapGroup == gSaveBlock1Ptr->location.mapGroup &&
             gWildMonHeaders[i].mapNum == gSaveBlock1Ptr->location.mapNum)
         {
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE101) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE101))
+            {
+                i += VarGet(VAR_ROUTE101_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE102) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE102))
+            {
+                i += VarGet(VAR_ROUTE102_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE103) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE103))
+            {
+                i += VarGet(VAR_ROUTE103_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE104) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE104))
+            {
+                i += VarGet(VAR_ROUTE104_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE110) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE110))
+            {
+                i += VarGet(VAR_ROUTE110_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE111) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE111))
+            {
+                i += VarGet(VAR_ROUTE111_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE112) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE112))
+            {
+                i += VarGet(VAR_ROUTE112_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE114) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE114))
+            {
+                i += VarGet(VAR_ROUTE114_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE116) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE116))
+            {
+                i += VarGet(VAR_ROUTE116_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE117) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE117))
+            {
+                i += VarGet(VAR_ROUTE117_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(PETALBURG_WOODS) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(PETALBURG_WOODS))
+            {
+                i += VarGet(VAR_PETALBURG_WOODS_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(RUSTURF_TUNNEL) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(RUSTURF_TUNNEL))
+            {
+                i += VarGet(VAR_RUSTURF_TUNNEL_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(GRANITE_CAVE_1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(GRANITE_CAVE_1F))
+            {
+                i += VarGet(VAR_GRANITE_CAVE_1F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(GRANITE_CAVE_B1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(GRANITE_CAVE_B1F))
+            {
+                i += VarGet(VAR_GRANITE_CAVE_B1F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VICTORY_ROAD_1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_1F))
+            {
+                i += VarGet(VAR_VICTORY_ROAD_1F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(FIERY_PATH) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(FIERY_PATH))
+            {
+                i += VarGet(VAR_FIERY_PATH_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(JAGGED_PASS) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(JAGGED_PASS))
+            {
+                i += VarGet(VAR_JAGGED_PASS_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE107) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE107))
+            {
+                i += VarGet(VAR_ROUTE107_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE115) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE115))
+            {
+                i += VarGet(VAR_ROUTE115_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(NEW_MAUVILLE_INSIDE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(NEW_MAUVILLE_INSIDE))
+            {
+                i += VarGet(VAR_NEW_MAUVILLE_INSIDE_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE119) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE119))
+            {
+                i += VarGet(VAR_ROUTE119_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE120) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE120))
+            {
+                i += VarGet(VAR_ROUTE120_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE121) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE121))
+            {
+                i += VarGet(VAR_ROUTE121_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE122) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE122))
+            {
+                i += VarGet(VAR_ROUTE122_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE123) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE123))
+            {
+                i += VarGet(VAR_ROUTE123_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_2F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_2F))
+            {
+                i += VarGet(VAR_MT_PYRE_2F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_3F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_3F))
+            {
+                i += VarGet(VAR_MT_PYRE_3F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_4F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_4F))
+            {
+                i += VarGet(VAR_MT_PYRE_4F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_5F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_5F))
+            {
+                i += VarGet(VAR_MT_PYRE_5F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_EXTERIOR) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_EXTERIOR))
+            {
+                i += VarGet(VAR_MT_PYRE_EXTERIOR_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE131) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE131))
+            {
+                i += VarGet(VAR_ROUTE131_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE133) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE133))
+            {
+                i += VarGet(VAR_ROUTE133_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VICTORY_ROAD_B1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_B1F))
+            {
+                i += VarGet(VAR_VICTORY_ROAD_B1F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VICTORY_ROAD_B2F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_B2F))
+            {
+                i += VarGet(VAR_VICTORY_ROAD_B2F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_1F_1R) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_1F_1R))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SLATEPORT_CITY) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SLATEPORT_CITY))
+            {
+                i += VarGet(VAR_SLATEPORT_CITY_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MOSSDEEP_CITY) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MOSSDEEP_CITY))
+            {
+                i += VarGet(VAR_MOSSDEEP_CITY_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(PETALBURG_CITY) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(PETALBURG_CITY))
+            {
+                i += VarGet(VAR_PETALBURG_CITY_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SHOAL_CAVE_LOW_TIDE_ICE_ROOM) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SHOAL_CAVE_LOW_TIDE_ICE_ROOM))
+            {
+                i += VarGet(VAR_SHOAL_CAVE_LOW_TIDE_ICE_ROOM_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SOOTOPOLIS_CITY) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SOOTOPOLIS_CITY))
+            {
+                i += VarGet(VAR_SOOTOPOLIS_CITY_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ARTISAN_CAVE_B1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(ARTISAN_CAVE_B1F))
+            {
+                i += VarGet(VAR_ARTISAN_CAVE_B1F_WILD_SET);
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SHOAL_CAVE_HIGH_TIDE_INNER_ROOM) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SHOAL_CAVE_HIGH_TIDE_INNER_ROOM))
+            {
+                i += VarGet(VAR_SHOAL_CAVE_HIGH_TIDE_INNER_ROOM_WILD_SET);
+            }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ALTERING_CAVE) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ALTERING_CAVE))
             {

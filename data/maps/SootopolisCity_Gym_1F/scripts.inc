@@ -111,7 +111,12 @@ SootopolisCity_Gym_1F_EventScript_LeaderDefeated::
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
+	goto_if_set FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR, SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene1
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 7
+	goto SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene2
+SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene1::
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
+SootopolisCity_Gym_1F_EventScript_SootopolisDoneRivalScene2::
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
 	setvar VAR_0x8008, 8
 	call Common_EventScript_SetGymTrainers

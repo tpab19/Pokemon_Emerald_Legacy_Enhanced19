@@ -1225,9 +1225,9 @@
 #define FLAG_BEAT_MAXIE_TERRA_CAVE                                  0x49D
 #define FLAG_HIDE_ARCHIE_MARINE_CAVE                                0x49E
 #define FLAG_HIDE_MAXIE_TERRA_CAVE                                  0x49F
-#define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
-#define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag
-#define FLAG_UNUSED_0x4A2                                           0x4A2 // Unused Flag
+#define FLAG_HIDE_SOOTOPOLIS_CITY_MAY                               0x4A0
+#define FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN                           0x4A1
+#define FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR                        0x4A2
 #define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
 #define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag

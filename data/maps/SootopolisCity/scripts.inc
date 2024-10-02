@@ -15,6 +15,8 @@
 .set LOCALID_MAXIE, 16
 .set LOCALID_ARCHIE, 17
 .set LOCALID_WALLACE, 18
+.set LOCALID_MAY, 19
+.set LOCALID_BRENDAN, 20
 
 SootopolisCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SootopolisCity_OnLoad
@@ -50,6 +52,8 @@ SootopolisCity_EventScript_LockGymDoor::
 	return
 
 SootopolisCity_OnTransition:
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_HideMapNamePopup
 	call_if_eq VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_HideMapNamePopup
@@ -65,7 +69,21 @@ SootopolisCity_OnTransition:
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 4, SootopolisCity_EventScript_SetExitCaveOfOriginObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 5, SootopolisCity_EventScript_SetOutsideGymObjPos
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
+	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_ShowRival
 	end
+
+SootopolisCity_EventScript_ShowRival::
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, SootopolisCity_EventScript_ShowBrendan
+	goto_if_eq VAR_RESULT, MALE, SootopolisCity_EventScript_ShowMay
+	return
+SootopolisCity_EventScript_ShowMay::
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
+	return
+SootopolisCity_EventScript_ShowBrendan::
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	return
 
 SootopolisCity_EventScript_HideMapNamePopup::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
@@ -183,6 +201,7 @@ SootopolisCity_OnResume:
 SootopolisCity_OnFrame:
 	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 1, SootopolisCity_EventScript_StartLegendariesScene
 	map_script_2 VAR_SKY_PILLAR_STATE, 1, SootopolisCity_EventScript_StartRayquazaScene
+	map_script_2 VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_RivalProfessor
 	.2byte 0
 
 @ If not at PokeCenter, assumed to have arrived via Dive
@@ -1380,6 +1399,96 @@ SootopolisCity_EventScript_MaxieArchieLeave::
 	releaseall
 	end
 
+SootopolisCity_EventScript_RivalProfessor::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, SootopolisCity_EventScript_MayProfessor
+	goto_if_eq VAR_RESULT, FEMALE, SootopolisCity_EventScript_BrendanProfessor
+	end
+
+SootopolisCity_EventScript_MayProfessor::
+	playse SE_PIN
+	applymovement LOCALID_MAY, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_MAY, Common_Movement_FaceUp
+	delay 80
+	waitmovement 0
+	msgbox SootopolisCity_Text_MayBecomingProfessor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, SootopolisCity_Movement_RivalMovement1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_Movement_RivalPlayerMovement1
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, SootopolisCity_Movement_RivalMovement2
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor3, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MAY, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor5, MSGBOX_DEFAULT
+	closemessage
+	goto SootopolisCity_EventScript_RivalProfessorEnd
+
+SootopolisCity_EventScript_BrendanProfessor::
+	playse SE_PIN
+	applymovement LOCALID_BRENDAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox SootopolisCity_Text_BrendanBecomingProfessor, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, SootopolisCity_Movement_RivalMovement1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, SootopolisCity_Movement_RivalPlayerMovement1
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor2, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, SootopolisCity_Movement_RivalMovement2
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor3, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor4, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_BRENDAN, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox SootopolisCity_Text_RivalBecomingProfessor5, MSGBOX_DEFAULT
+	closemessage
+	goto SootopolisCity_EventScript_RivalProfessorEnd
+
+SootopolisCity_EventScript_RivalProfessorEnd::
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_BRENDAN
+	removeobject LOCALID_MAY
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
+	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
+	setflag FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR
+	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+SootopolisCity_Movement_RivalMovement1:
+	walk_left
+	walk_left
+	step_end
+
+SootopolisCity_Movement_RivalPlayerMovement1:
+	walk_down
+	face_left
+	step_end
+
+SootopolisCity_Movement_RivalMovement2:
+	walk_right
+	step_end
+
 @ Unused
 SootopolisCity_Movement_Levitate::
 	levitate
@@ -1736,3 +1845,68 @@ SootopolisCity_Text_DazzledByMentor:
 	.string "WALLACE: I trust you will be\n"
 	.string "dazzled by my breathtakingly\l"
 	.string "elegant battle style.$"
+
+SootopolisCity_Text_MayBecomingProfessor:
+	.string "MAY: {PLAYER}{KUN}!\n"
+	.string "There you are!\p"
+	.string "I heard about what happened with\n"
+	.string "GROUDON and KYOGRE! I was so worried!\p"
+	.string "But... you look totally fine!\n"
+	.string "Actually, you look even stronger!\p"
+	.string "Wait, is that the RAIN BADGE?\n"
+	.string "You already defeated WALLACE?!\p"
+	.string "Wow, {PLAYER}{KUN}, you never cease\n"
+	.string "to amaze me!$"
+
+SootopolisCity_Text_BrendanBecomingProfessor:
+	.string "BRENDAN: {PLAYER}{KUN}!\n"
+	.string "There you are!\p"
+	.string "I heard about what happened with\n"
+	.string "GROUDON and KYOGRE! I was so worried!\p"
+	.string "But... you look totally fine!\n"
+	.string "Actually, you look even stronger!\p"
+	.string "Wait, is that the RAIN BADGE?\n"
+	.string "You already defeated WALLACE?!\p"
+	.string "Wow, {PLAYER}{KUN}, you never cease\n"
+	.string "to amaze me!$"
+
+SootopolisCity_Text_RivalBecomingProfessor2:
+	.string "You know, seeing you grow so much\n"
+	.string "as a TRAINER made me think...\p"
+	.string "I don't have the same talent and drive\n"
+	.string "for battling that you do.\p"
+	.string "And that's okay!\n"
+	.string "We all have our own strengths.\p"
+	.string "I realized my dream isn't about\n"
+	.string "becoming the strongest TRAINER.$"
+
+SootopolisCity_Text_RivalBecomingProfessor3:
+	.string "I want to become friends with POKéMON\n"
+	.string "all over the world, just like I said\l"
+	.string "when we first met.\p"
+	.string "So I've decided... I'm going to become\n"
+	.string "a POKéMON PROFESSOR.\l"
+	.string "Like my Dad!$"
+
+SootopolisCity_Text_RivalBecomingProfessor4:
+	.string "There's so much to learn about POKéMON,\n"
+	.string "and I want to help others understand\l"
+	.string "them better.$"
+
+SootopolisCity_Text_RivalBecomingProfessor5:
+	.string "But don't think I'm giving up on\n"
+	.string "battling entirely!\l"
+	.string "I'll still keep training my POKéMON.\p"
+	.string "Anyway, I just wanted to let you know.\n"
+	.string "I'll be cheering you on as you take on\l"
+	.string "the POKéMON LEAGUE!\p"
+	.string "I know you'll be just fine.\n"
+	.string "You've got what it takes to become the\l"
+	.string "CHAMPION!\p"
+	.string "Well, I should get going.\n"
+	.string "There's so much to learn!\p"
+	.string "Let's meet again sometime!\p"
+	.string "Maybe next time, I'll have some new\n"
+	.string "discoveries to share with you!\p"
+	.string "Good luck with everything,\n"
+	.string "{PLAYER}{KUN}!$"
