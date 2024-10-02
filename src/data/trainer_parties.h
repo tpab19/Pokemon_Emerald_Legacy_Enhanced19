@@ -7182,7 +7182,7 @@ static const struct TrainerMon sParty_BrendanRoute119Torchic[] = {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_MARSHTOMP,
-    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLEBEAM}
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLE_BEAM}
     }
 };
 // Rival 1
@@ -7350,7 +7350,7 @@ static const struct TrainerMon sParty_MayRoute119Torchic[] = {
     .iv = 150,
     .lvl = 34,
     .species = SPECIES_MARSHTOMP,
-    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLEBEAM}
+    .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_TAKE_DOWN, MOVE_BUBBLE_BEAM}
     }
 };
 // Route 117 BreederM
