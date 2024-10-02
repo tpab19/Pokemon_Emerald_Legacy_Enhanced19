@@ -6993,7 +6993,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .lvl = 49,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_SHARP_BEAK,
-    .moves = {MOVE_AERIAL_ACE, MOVE_EARTHQUAKE, MOVE_SUPERPOWER, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_AERIAL_ACE, MOVE_EARTHQUAKE, MOVE_FIRE_BLAST, MOVE_DRAGON_DANCE}
     },
     {
     .iv = 150,
