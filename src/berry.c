@@ -273,7 +273,7 @@ const struct Berry gBerries[] =
         .sweet = 10,
         .bitter = 10,
         .sour = 10,
-        .smoothness = 20,
+        .smoothness = 15,
     },
 
     [ITEM_SITRUS_BERRY - FIRST_BERRY_INDEX] =
