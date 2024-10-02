@@ -66,8 +66,8 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Mogul
 
 
-<!-- ### Sprite Artists:
--  -->
+### Sprite Artists:
+- ZuperZACH
 
 
 ### Where you can find all Pret Tutorials:
