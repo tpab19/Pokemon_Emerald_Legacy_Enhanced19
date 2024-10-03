@@ -3558,7 +3558,7 @@ static const struct TrainerMon sParty_Flannery1[] = {
     .lvl = 29,
     .species = SPECIES_VULPIX,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_QUICK_ATTACK, MOVE_SUNNY_DAY}
+    .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_ROAR, MOVE_SUNNY_DAY}
     },
     {
     .iv = 200,
