@@ -4381,7 +4381,7 @@ static const struct TrainerMon sParty_Tommy[] = {
     .iv = 110,
     .lvl = 10,
     .species = SPECIES_ARON,
-    .moves = {MOVE_WATER_GUN, MOVE_TACKLE, MOVE_HARDEN, MOVE_NONE}
+    .moves = {MOVE_METAL_CLAW, MOVE_TACKLE, MOVE_HARDEN, MOVE_NONE}
     },
 };
 // Route 116 Youngster 1
