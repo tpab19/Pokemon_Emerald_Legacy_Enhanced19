@@ -1002,21 +1002,21 @@ static const struct TrainerMon sParty_Leroy[] = {
     .species = SPECIES_STARMIE,
     }
 };
-
+// Route 111 Northern End
 static const struct TrainerMon sParty_Wilton1[] = {
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 20,
     .species = SPECIES_ELECTRIKE,
     },
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 21,
     .species = SPECIES_WAILMER,
     },
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 20,
     .species = SPECIES_MAKUHITA,
     }
 };
@@ -1259,21 +1259,21 @@ static const struct TrainerMon sParty_Keira[] = {
     .species = SPECIES_MANECTRIC,
     }
 };
-
+// Route 111 Northern End
 static const struct TrainerMon sParty_Brooke1[] = {
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 21,
     .species = SPECIES_WINGULL,
     },
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 21,
     .species = SPECIES_NUMEL,
     },
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 21,
     .species = SPECIES_ROSELIA,
     }
 };
@@ -2387,11 +2387,11 @@ static const struct TrainerMon sParty_Yuji[] = {
     .species = SPECIES_MACHOKE,
     }
 };
-
+// Route 111 Northern End (Mach Bike)
 static const struct TrainerMon sParty_Daisuke[] = {
     {
     .iv = 100,
-    .lvl = 19,
+    .lvl = 23,
     .species = SPECIES_MACHOP,
     }
 };
@@ -4764,7 +4764,7 @@ static const struct TrainerMon sParty_Wade[] = {
     {
     .iv = 0,
     .lvl = 19,
-    .species = SPECIES_SURSKIT,
+    .species = SPECIES_BARBOACH,
     }
 };
 //Route 109 Surf Fisherman 1
