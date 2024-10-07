@@ -2665,12 +2665,12 @@ static const struct TrainerMon sParty_Bernie5[] = {
     .species = SPECIES_PELIPPER,
     }
 };
-
+// Route 111 Desert Camper
 static const struct TrainerMon sParty_Drew[] = {
     {
     .iv = 0,
-    .lvl = 23,
-    .species = SPECIES_SANDSHREW,
+    .lvl = 27,
+    .species = SPECIES_SANDSLASH,
     .moves = {MOVE_DIG, MOVE_SAND_ATTACK, MOVE_POISON_STING, MOVE_SLASH}
     }
 };
@@ -10358,7 +10358,7 @@ static const struct TrainerMon sParty_MaxieMossdeep[] = {
 static const struct TrainerMon sParty_Pete[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 29,
     .species = SPECIES_TENTACOOL,
     }
 };
@@ -10366,7 +10366,7 @@ static const struct TrainerMon sParty_Pete[] = {
 static const struct TrainerMon sParty_Isabelle[] = {
     {
     .iv = 0,
-    .lvl = 15,
+    .lvl = 39,
     .species = SPECIES_MARILL,
     }
 };
