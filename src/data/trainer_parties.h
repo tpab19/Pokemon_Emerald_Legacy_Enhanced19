@@ -3365,7 +3365,7 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .lvl = 52,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WILL_O_WISP, MOVE_CRUNCH, MOVE_PAIN_SPLIT, MOVE_PROTECT}
+    .moves = {MOVE_WILL_O_WISP, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
     },
     {
     .iv = 250,
