@@ -7029,7 +7029,7 @@ static const struct TrainerMon sParty_BrendanRoute103Mudkip[] = {
 static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7041,7 +7041,7 @@ static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_GROVYLE,
     .moves = {MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE, MOVE_RAZOR_LEAF}
     }
@@ -7085,7 +7085,7 @@ static const struct TrainerMon sParty_BrendanRoute103Treecko[] = {
 static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7097,7 +7097,7 @@ static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_COMBUSKEN,
     .moves = {MOVE_PECK, MOVE_FOCUS_ENERGY, MOVE_EMBER, MOVE_DOUBLE_KICK}
     }
@@ -7141,7 +7141,7 @@ static const struct TrainerMon sParty_BrendanRoute103Torchic[] = {
 static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7153,7 +7153,7 @@ static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_MARSHTOMP,
     .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_WATER_GUN, MOVE_TACKLE}
     }
@@ -7197,7 +7197,7 @@ static const struct TrainerMon sParty_MayRoute103Mudkip[] = {
 static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7209,7 +7209,7 @@ static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_GROVYLE,
     .moves = {MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE, MOVE_RAZOR_LEAF}
     }
@@ -7253,7 +7253,7 @@ static const struct TrainerMon sParty_MayRoute103Treecko[] = {
 static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7265,7 +7265,7 @@ static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_COMBUSKEN,
     .moves = {MOVE_PECK, MOVE_FOCUS_ENERGY, MOVE_EMBER, MOVE_DOUBLE_KICK}
     }
@@ -7309,7 +7309,7 @@ static const struct TrainerMon sParty_MayRoute103Torchic[] = {
 static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     {
     .iv = 50,
-    .lvl = 19,
+    .lvl = 20,
     .species = SPECIES_SPOINK,
     .moves = {MOVE_CONFUSION, MOVE_TACKLE, MOVE_CONFUSE_RAY, MOVE_PSYCH_UP}
     },
@@ -7321,7 +7321,7 @@ static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_MARSHTOMP,
     .moves = {MOVE_MUD_SHOT, MOVE_ROCK_TOMB, MOVE_WATER_GUN, MOVE_TACKLE}
     }
