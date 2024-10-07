@@ -8200,7 +8200,7 @@ static const struct TrainerMon sParty_BrendanRustboroMudkip[] = {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TREECKO,
-    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE}
+    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_NONE}
     }
 };
 // Route 132 Expert
@@ -8308,7 +8308,7 @@ static const struct TrainerMon sParty_MayRustboroMudkip[] = {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TREECKO,
-    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE}
+    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_NONE}
     }
 };
 // Magma Leader Magma Hideout
