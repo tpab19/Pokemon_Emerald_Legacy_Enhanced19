@@ -8179,11 +8179,13 @@ static const struct TrainerMon sParty_BrendanRustboroTreecko[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TORCHIC,
+    .moves = {MOVE_GROWL, MOVE_PECK, MOVE_EMBER, MOVE_SAND_ATTACK}
     }
 };
 // Rival 2 Treecko & Wingull
@@ -8192,11 +8194,13 @@ static const struct TrainerMon sParty_BrendanRustboroMudkip[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TREECKO,
+    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE}
     }
 };
 // Route 132 Expert
@@ -8283,11 +8287,13 @@ static const struct TrainerMon sParty_BrendanRustboroTorchic[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_MUDKIP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_MUD_SLAP, MOVE_WATER_GUN}
     }
 };
 // Rival 2 Treecko & Wingull
@@ -8296,11 +8302,13 @@ static const struct TrainerMon sParty_MayRustboroMudkip[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TREECKO,
+    .moves = {MOVE_LEER, MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_FALSE_SWIPE}
     }
 };
 // Magma Leader Magma Hideout
@@ -10780,11 +10788,13 @@ static const struct TrainerMon sParty_MayRustboroTreecko[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_TORCHIC,
+    .moves = {MOVE_GROWL, MOVE_PECK, MOVE_EMBER, MOVE_SAND_ATTACK}
     }
 };
 // Rival 2 Mudkip & Torkoal
@@ -10793,11 +10803,13 @@ static const struct TrainerMon sParty_MayRustboroTorchic[] = {
     .iv = 25,
     .lvl = 13,
     .species = SPECIES_SPOINK,
+    .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_ODOR_SLEUTH, MOVE_NONE}
     },
     {
     .iv = 50,
     .lvl = 15,
     .species = SPECIES_MUDKIP,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_MUD_SLAP, MOVE_WATER_GUN}
     }
 };
 
