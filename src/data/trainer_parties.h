@@ -13197,35 +13197,35 @@ static const struct TrainerMon sParty_Courtney2[] = {
     }
 };
 
-// Archie and Matt Double Battle (Mt Pyre)
+// Archie Double Battle (Mt Pyre)
 static const struct TrainerMon sParty_ArchieMtPyre[] = {
     {
     .iv = 150,
-    .lvl = 35,
+    .lvl = 38,
     .species = SPECIES_WAILORD,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_ICE_BEAM}
     },
     {
     .iv = 150,
-    .lvl = 36,
+    .lvl = 38,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_CONFUSE_RAY, MOVE_SLUDGE_BOMB, MOVE_TOXIC, MOVE_FLY}
     },
     {
     .iv = 220,
-    .lvl = 37,
+    .lvl = 39,
     .species = SPECIES_SHARPEDO,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_SLASH, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE}
     }
 };
-
+// Matt Double Battle (Mt Pyre)
 static const struct TrainerMon sParty_MattMyPyre[] = {
     {
     .iv = 150,
-    .lvl = 35,
+    .lvl = 36,
     .species = SPECIES_ELECTRODE,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_LIGHT_SCREEN, MOVE_MIRROR_COAT}
