@@ -2270,7 +2270,7 @@ static const struct TrainerMon sParty_Hitoshi[] = {
     },
     {
     .iv = 200,
-    .lvl = 32,
+    .lvl = 45,
     .species = SPECIES_BRELOOM,
     }
 };
