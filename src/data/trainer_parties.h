@@ -11338,7 +11338,7 @@ static const struct TrainerMon sParty_Flannery2[] = {
     {
     .iv = 240,
     .lvl = 39,
-    .species = SPECIES_NINETALES
+    .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_HEAT_WAVE, MOVE_SOLAR_BEAM, MOVE_WILL_O_WISP, MOVE_SUNNY_DAY}
     },
