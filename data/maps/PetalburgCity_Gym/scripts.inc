@@ -1331,7 +1331,7 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough:
 	.string "training would ever be enough.$"
 
 PetalburgCity_Gym_Text_GymGuideAdvice:
-	.string "Well {PLAYER}, it must be pretty\n"
+	.string "Well {PLAYER}, it must be\n"
 	.string "surreal to have made it here.\p"
 	.string "As you know, your dad uses\n"
 	.string "NORMAL-type POKéMON!\p"
