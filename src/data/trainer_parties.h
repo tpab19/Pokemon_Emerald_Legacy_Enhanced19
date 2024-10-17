@@ -4061,7 +4061,7 @@ static const struct TrainerMon sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 54,
-    .species = SPECIES_MAGBY
+    .species = SPECIES_MAGBY,
     .heldItem = ITEM_ORAN_BERRY,
     },
     {
