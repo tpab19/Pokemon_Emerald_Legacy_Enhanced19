@@ -257,15 +257,19 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
+	.string "Hey, how's it going, CHAMP-\n"
+	.string "in making?\p"
 	.string "WATTSON, the LEADER of MAUVILLE\n"
 	.string "GYM, uses ELECTRIC-type POKéMON.\p"
-	.string "If you challenge him with WATER-type\n"
-	.string "POKéMON, he'll zap them! Bzzt!\p"
-	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his GYM! Eccentric!\p"
-	.string "Hey, go for it!$"
+	.string "GROUND-types are your best bet\n"
+	.string "to beat him, but be careful!\p"
+	.string "WATTSON is very mindful of\n"
+	.string "this weakness.\p"
+	.string "It's rumored that he even bred a\n"
+	.string "POKéMON to learn magical GRASS-move.\p"
+	.string "Come to think of it, GRASS-type might be\n"
+	.string "really useful for this fight!\p"
+	.string "Listen! You can do this!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa, you're electrifying!\n"
