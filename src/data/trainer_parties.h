@@ -3717,7 +3717,7 @@ static const struct TrainerMon sParty_TateAndLiza1[] = {
     .moves = {MOVE_PSYCHIC, MOVE_SOLAR_BEAM, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY}
     }
 };
-// Sootopolis Gym Leader
+// Original Base Gym Leader Placeholder
 static const struct TrainerMon sParty_Juan1[] = {
     {
     .iv = 200,
@@ -10877,7 +10877,7 @@ static const struct TrainerMon sParty_MayRustboroTorchic[] = {
     .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_MUD_SLAP, MOVE_WATER_GUN}
     }
 };
-
+// Rematch after beating Wattson 
 static const struct TrainerMon sParty_Roxanne2[] = {
     {
     .iv = 150,
@@ -11029,35 +11029,35 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .moves = {MOVE_DOUBLE_TEAM, MOVE_EXPLOSION, MOVE_PROTECT, MOVE_ROCK_SLIDE}
     }
 };
-
+// Rematch after beating Flannery (same as 1_2)
 static const struct TrainerMon sParty_Brawly2[] = {
     {
-    .iv = 255,
-    .lvl = 33,
-    .species = SPECIES_MACHAMP,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_KARATE_CHOP, MOVE_ROCK_SLIDE, MOVE_FOCUS_PUNCH, MOVE_BULK_UP}
-    },
-    {
-    .iv = 255,
-    .lvl = 33,
+    .iv = 180,
+    .lvl = 31,
     .species = SPECIES_MEDITITE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_PSYCHIC, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_FOCUS_PUNCH}
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_EXTRASENSORY, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT}
     },
     {
-    .iv = 255,
-    .lvl = 35,
-    .species = SPECIES_HITMONTOP,
+    .iv = 100,
+    .lvl = 30,
+    .species = SPECIES_MACHOKE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_PURSUIT, MOVE_COUNTER, MOVE_PROTECT, MOVE_TRIPLE_KICK}
+    .moves = {MOVE_KARATE_CHOP, MOVE_ROCK_TOMB, MOVE_SEISMIC_TOSS, MOVE_REVENGE}
     },
     {
-    .iv = 255,
-    .lvl = 37,
+    .iv = 100,
+    .lvl = 31,
+    .species = SPECIES_BRELOOM,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_MACH_PUNCH, MOVE_MEGA_DRAIN, MOVE_BULK_UP, MOVE_STUN_SPORE}
+    },
+    {
+    .iv = 200,
+    .lvl = 32,
     .species = SPECIES_HARIYAMA,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_FAKE_OUT, MOVE_FOCUS_PUNCH, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE}
+    .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
     }
 };
 
@@ -11174,7 +11174,7 @@ static const struct TrainerMon sParty_Brawly5[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_FOCUS_PUNCH, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE}
     }
 };
-
+// Rematch after New Mauville
 static const struct TrainerMon sParty_Wattson2[] = {
     {
     .iv = 210,
@@ -11333,7 +11333,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
     }
 };
-
+// Rematch after Magma Hideout
 static const struct TrainerMon sParty_Flannery2[] = {
     {
     .iv = 240,
@@ -11499,7 +11499,7 @@ static const struct TrainerMon sParty_Flannery5[] = {
     .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
     }
 };
-
+// Rematch after getting all 8 gym badges
 static const struct TrainerMon sParty_Norman2[] = {
     {
     .iv = 250,
@@ -11665,7 +11665,7 @@ static const struct TrainerMon sParty_Norman5[] = {
     .moves = {MOVE_HYPER_BEAM, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL}
     }
 };
-
+// Possible Rematch after Rayquaza Event
 static const struct TrainerMon sParty_Winona2[] = {
     {
     .iv = 250,
@@ -11845,7 +11845,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
     }
 };
-// Probably don't want to use this before champion, but put it in just in case
+// Rematch after becoming Champion?
 static const struct TrainerMon sParty_TateAndLiza2[] = {
     {
     .iv = 250,
@@ -12025,39 +12025,39 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-
+// Rematch after becoming Champion?
 static const struct TrainerMon sParty_Juan2[] = {
     {
-    .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_POLIWAG,
+    .iv = 250,
+    .lvl = 41,
+    .species = SPECIES_LUVDISC,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYPNOSIS, MOVE_RAIN_DANCE, MOVE_PROTECT, MOVE_HYDRO_PUMP}
+    .moves = {MOVE_WATER_PULSE, MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_FLAIL}
     },
     {
-    .iv = 255,
-    .lvl = 46,
+    .iv = 250,
+    .lvl = 41,
     .species = SPECIES_WHISCASH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_FISSURE}
+    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_AMNESIA, MOVE_EARTHQUAKE}
     },
     {
-    .iv = 255,
-    .lvl = 48,
+    .iv = 250,
+    .lvl = 50,
     .species = SPECIES_WALREIN,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT, MOVE_ICE_BEAM}
+    .moves = {MOVE_ENCORE, MOVE_BODY_SLAM, MOVE_AURORA_BEAM, MOVE_WATER_PULSE}
     },
     {
-    .iv = 255,
-    .lvl = 48,
+    .iv = 250,
+    .lvl = 50,
     .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_REST, MOVE_CRABHAMMER, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WATER_PULSE, MOVE_CRABHAMMER, MOVE_TAUNT, MOVE_LEER}
     },
     {
-    .iv = 255,
-    .lvl = 51,
+    .iv = 250,
+    .lvl = 50,
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_CHESTO_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
@@ -12221,7 +12221,7 @@ static const struct TrainerMon sParty_Darius[] = {
     .species = SPECIES_TROPIUS,
     }
 };
-
+// Champion
 static const struct TrainerMon sParty_Steven1[] = {
     {
     .iv = 255,
@@ -12266,7 +12266,7 @@ static const struct TrainerMon sParty_Steven1[] = {
     .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_AGILITY}
     }
 }; 
-
+// Post Game
 static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
