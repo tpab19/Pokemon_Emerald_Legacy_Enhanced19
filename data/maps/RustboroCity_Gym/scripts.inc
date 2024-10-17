@@ -104,12 +104,12 @@ RustboroCity_Gym_EventScript_RegisterRoxanne::
 	end
 
 RustboroCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going?\p"
+	.string "Hey! What's up?\p"
 	.string "Listen, my friend!\n"
 	.string "Would you like to become the CHAMPION?\p"
 	.string "I'm no TRAINER, not me, but I can\n"
 	.string "sure give you winning advice.\p"
-	.string "That's settled, then! We'll aim for the\n"
+	.string "It's settled, then! We'll aim for the\n"
 	.string "POKéMON CHAMPIONSHIP together!\p"
 	.string "It's your job as a TRAINER to collect\n"
 	.string "GYM BADGES, am I right?\p"
@@ -118,12 +118,15 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "I'm here to provide expert advice!\p"
 	.string "ROXANNE, the GYM LEADER, is a user\n"
 	.string "of ROCK-type POKéMON.\p"
-	.string "The ROCK type is very durable, but\n"
-	.string "it can't stand WATER-type and\l"
-	.string "GRASS-type moves.\p"
-	.string "Come see me afterwards, if you beat\n"
-	.string "the GYM LEADER.\p"
-	.string "Well, go for it!$"
+	.string "The ROCK type can't stand WATER-type,\n"
+	.string "FIGHTING-type and GRASS-type moves.\p"
+	.string "ROXANNE uses a combination of\n"
+	.string "dual-type POKéMON that resist these types.\p"
+	.string "You'll need multiple types if you want to\n"
+	.string "take advantage of her weaknesses!\p"
+	.string "Defensively, you just need to\p"
+	.string "watch out for her ROCK TOMB!\n"
+	.string "Let's do it!$"
 
 RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa! What a breathtaking victory!\n"
