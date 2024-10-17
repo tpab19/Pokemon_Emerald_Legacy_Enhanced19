@@ -1602,14 +1602,20 @@ static const struct TrainerMon sParty_Brianna[] = {
     .heldItem = ITEM_NUGGET
     }
 };
-
+// SS Tidal Aroma Lady (nat dex)
 static const struct TrainerMon sParty_Naomi[] = {
     {
-    .iv = 100,
-    .lvl = 45,
-    .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_NUGGET
-    }
+    .iv = 255,
+    .lvl = 53,
+    .species = SPECIES_SUNFLORA,
+    .heldItem = ITEM_SUN_STONE
+    },
+    {
+    .iv = 255,
+    .lvl = 53,
+    .species = SPECIES_SKIPLOOM,
+    .heldItem = ITEM_NONE
+    },
 };
 //Route 104 Lady Rematch
 static const struct TrainerMon sParty_Cindy3[] = {
@@ -1822,12 +1828,18 @@ static const struct TrainerMon sParty_Mollie[] = {
     .species = SPECIES_MEDICHAM,
     }
 };
-
+// SS Tidal Rich Boy (nat dex)
 static const struct TrainerMon sParty_Garret[] = {
     {
-    .iv = 0,
-    .lvl = 45,
-    .species = SPECIES_AZUMARILL,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_CHANSEY,
+    .heldItem = ITEM_NUGGET
+    },
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_PERSIAN,
     .heldItem = ITEM_NUGGET
     }
 };
@@ -3249,32 +3261,32 @@ static const struct TrainerMon sParty_Walter1[] = {
     .species = SPECIES_MANECTRIC,
     }
 };
-
+// SS Tidal Gentleman (nat dex)
 static const struct TrainerMon sParty_Micah[] = {
     {
-    .iv = 0,
-    .lvl = 44,
-    .species = SPECIES_MANECTRIC,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_GROWLITHE,
     },
     {
-    .iv = 0,
-    .lvl = 44,
-    .species = SPECIES_MANECTRIC,
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_ARCANINE,
     }
 };
-
+// SS Tidal Gentleman (nat dex)
 static const struct TrainerMon sParty_Thomas[] = {
     {
-    .iv = 0,
-    .lvl = 45,
-    .species = SPECIES_ZANGOOSE,
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_TAUROS,
     }
 };
 
 static const struct TrainerMon sParty_Walter2[] = {
     {
     .iv = 10,
-    .lvl = 35,
+    .lvl = 34,
     .species = SPECIES_MANECTRIC,
     }
 };
@@ -4026,49 +4038,43 @@ static const struct TrainerMon sParty_Miguel1[] = {
     .heldItem = ITEM_ORAN_BERRY
     }
 };
-
+// SS Tidal Pokefan Colton (all gen 2 baby from nat dex)
 static const struct TrainerMon sParty_Colton[] = {
     {
     .iv = 0,
-    .lvl = 22,
-    .species = SPECIES_SKITTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 53,
+    .species = SPECIES_TOGEPI,
+    .heldItem = ITEM_SITRUS_BERRY,
     },
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_SKITTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 52,
+    .species = SPECIES_SMOOCHUM,
+    .heldItem = ITEM_SITRUS_BERRY,
     },
     {
     .iv = 0,
-    .lvl = 40,
-    .species = SPECIES_SKITTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 53,
+    .species = SPECIES_CLEFFA,
+    .heldItem = ITEM_SITRUS_BERRY,
     },
     {
     .iv = 0,
-    .lvl = 12,
-    .species = SPECIES_SKITTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 54,
+    .species = SPECIES_MAGBY
+    .heldItem = ITEM_SITRUS_BERRY,
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_SKITTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 53,
+    .species = SPECIES_ELEKID,
+    .heldItem = ITEM_SITRUS_BERRY,
     },
     {
     .iv = 0,
-    .lvl = 42,
-    .species = SPECIES_DELCATTY,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK, MOVE_HEAL_BELL}
+    .lvl = 55,
+    .species = SPECIES_TYROGUE,
+    .heldItem = ITEM_SITRUS_BERRY,
     }
 };
 
@@ -6647,35 +6653,40 @@ static const struct TrainerMon sParty_Dwayne[] = {
     .species = SPECIES_CLAMPERL,
     }
 };
-
+// SS Tidal Storage Sailor (nat dex)
 static const struct TrainerMon sParty_Phillip[] = {
     {
-    .iv = 0,
-    .lvl = 44,
-    .species = SPECIES_TENTACRUEL,
+    .iv = 255,
+    .lvl = 48,
+    .species = SPECIES_MANKEY,
+    }
+    {
+    .iv = 255,
+    .lvl = 49,
+    .species = SPECIES_POLIWRATH,
     },
     {
-    .iv = 0,
-    .lvl = 44,
-    .species = SPECIES_MACHOKE,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_PRIMEAPE,
     }
 };
-
+// SS Tidal Storage Sailor (nat dex)
 static const struct TrainerMon sParty_Leonard[] = {
     {
-    .iv = 0,
-    .lvl = 43,
-    .species = SPECIES_MACHOP,
+    .iv = 255,
+    .lvl = 48,
+    .species = SPECIES_POLIWHIRL,
     },
     {
-    .iv = 0,
-    .lvl = 43,
-    .species = SPECIES_PELIPPER,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_HITMONTOP,
     },
     {
-    .iv = 0,
-    .lvl = 43,
-    .species = SPECIES_MACHOKE,
+    .iv = 255,
+    .lvl = 51,
+    .species = SPECIES_QWILFISH,
     }
 };
 // Abandoned Ship Sailor
@@ -8980,17 +8991,17 @@ static const struct TrainerMon sParty_DezAndLuke[] = {
     .species = SPECIES_MANECTRIC,
     }
 };
-
+// SS Tidal Young Couple (nat dex)
 static const struct TrainerMon sParty_LeaAndJed[] = {
     {
-    .iv = 0,
-    .lvl = 45,
-    .species = SPECIES_LUVDISC,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_MILTANK,
     },
     {
-    .iv = 0,
-    .lvl = 45,
-    .species = SPECIES_LUVDISC,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_SLOWBRO,
     }
 };
 // Abandoned Ship
