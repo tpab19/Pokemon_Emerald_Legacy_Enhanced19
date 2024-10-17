@@ -1835,7 +1835,7 @@ static const struct TrainerMon sParty_Garret[] = {
 static const struct TrainerMon sParty_Winston2[] = {
     {
     .iv = 0,
-    .lvl = 27,
+    .lvl = 29,
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_NUGGET
     }
@@ -1844,7 +1844,7 @@ static const struct TrainerMon sParty_Winston2[] = {
 static const struct TrainerMon sParty_Winston3[] = {
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 32,
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_NUGGET
     }
@@ -1853,17 +1853,17 @@ static const struct TrainerMon sParty_Winston3[] = {
 static const struct TrainerMon sParty_Winston4[] = {
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 35,
     .species = SPECIES_VIGOROTH,
     .heldItem = ITEM_NUGGET
-     .moves = {MOVE_FURY_SWIPES, MOVE_FAINT_ATTACK, MOVE_YAWN, MOVE_NONE}
+    .moves = {MOVE_FURY_SWIPES, MOVE_FAINT_ATTACK, MOVE_YAWN, MOVE_THUNDERBOLT}
     }
 };
 
 static const struct TrainerMon sParty_Winston5[] = {
     {
     .iv = 0,
-    .lvl = 36,
+    .lvl = 38,
     .species = SPECIES_SLAKING,
     .heldItem = ITEM_NUGGET,
     .moves = {MOVE_FURY_SWIPES, MOVE_FAINT_ATTACK, MOVE_YAWN, MOVE_THUNDERBOLT}
@@ -3971,7 +3971,6 @@ static const struct TrainerMon sParty_AnnaAndMeg3[] = {
     .species = SPECIES_HARIYAMA,
     .moves = {MOVE_TACKLE, MOVE_FOCUS_ENERGY, MOVE_ARM_THRUST, MOVE_NONE}
     }
-};
 };
 
 static const struct TrainerMon sParty_AnnaAndMeg4[] = {
