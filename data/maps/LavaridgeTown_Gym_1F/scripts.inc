@@ -186,18 +186,24 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	end
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Good to see you again, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "LAVARIDGE's GYM LEADER FLANNERY\n"
 	.string "uses FIRE-type POKéMON.\p"
-	.string "Her passion for POKéMON burns stronger\n"
-	.string "and hotter than a volcano.\p"
-	.string "Don't get too close to her--you'll burn!\n"
-	.string "Hose her down with water and then\l"
-	.string "go for it!$"
+	.string "Weak to rocks, water and ground,\n"
+	.string "the real threat of this fight\l"
+	.string "is her ability to set the sun. \p"
+	.string "If her fox sets up sunlight, even\n"
+	.string "WATER-types will burn to a crisp.\p"
+	.string "Speaking of which, that slug...\p"
+	.string "It burns so hot, water doesn't\n"
+	.string "seem to even bother it!\p"
+	.string "But hey, you're showing promise!\n"
+	.string "I know you got this!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
-	.string "Yow! That was a scorching-hot battle!$"
+	.string "Yow! My eyebrows!\n"
+	.string "That was a scorching-hot battle!$"
 
 LavaridgeTown_Gym_1F_Text_ColeIntro:
 	.string "Owowowowow!\n"
