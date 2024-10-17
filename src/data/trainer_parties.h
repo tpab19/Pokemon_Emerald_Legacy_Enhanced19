@@ -11340,7 +11340,7 @@ static const struct TrainerMon sParty_Flannery2[] = {
     .lvl = 39,
     .species = SPECIES_NINETALES
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_HEAT_WAVE, MOVE_SOLARBEAM, MOVE_WILL_O_WISP, MOVE_SUNNY_DAY}
+    .moves = {MOVE_HEAT_WAVE, MOVE_SOLAR_BEAM, MOVE_WILL_O_WISP, MOVE_SUNNY_DAY}
     },
     {
     .iv = 230,
@@ -11354,7 +11354,7 @@ static const struct TrainerMon sParty_Flannery2[] = {
     .lvl = 39,
     .species = SPECIES_MAGCARGO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_OVERHEAT, MOVE_ROCK_SLIDE, MOVE_YAWN MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_ATTRACT}
     },
     {
     .iv = 240,
@@ -11700,7 +11700,7 @@ static const struct TrainerMon sParty_Winona2[] = {
     .lvl = 48,
     .species = SPECIES_DODRIO,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_DRILL_PECK, MOVE_TRI_ATTACK, MOVE_ENDEAVOUR, MOVE_PURSUIT}
+    .moves = {MOVE_DRILL_PECK, MOVE_TRI_ATTACK, MOVE_ENDEAVOR, MOVE_PURSUIT}
     },
     {
     .iv = 255,
@@ -11864,7 +11864,7 @@ static const struct TrainerMon sParty_TateAndLiza2[] = {
     {
     .iv = 250,
     .lvl = 50,
-    .species = SPECIES_WOBBUFETT,
+    .species = SPECIES_WOBBUFFET,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_ENCORE, MOVE_COUNTER, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND}
     },
