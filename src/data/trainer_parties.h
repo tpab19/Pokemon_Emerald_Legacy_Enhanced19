@@ -4044,37 +4044,37 @@ static const struct TrainerMon sParty_Colton[] = {
     .iv = 0,
     .lvl = 53,
     .species = SPECIES_TOGEPI,
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     },
     {
     .iv = 0,
     .lvl = 52,
     .species = SPECIES_SMOOCHUM,
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     },
     {
     .iv = 0,
     .lvl = 53,
     .species = SPECIES_CLEFFA,
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     },
     {
     .iv = 0,
     .lvl = 54,
     .species = SPECIES_MAGBY
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     },
     {
     .iv = 0,
     .lvl = 53,
     .species = SPECIES_ELEKID,
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     },
     {
     .iv = 0,
     .lvl = 55,
     .species = SPECIES_TYROGUE,
-    .heldItem = ITEM_SITRUS_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     }
 };
 
