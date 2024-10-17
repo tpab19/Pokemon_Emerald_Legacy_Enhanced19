@@ -6659,7 +6659,7 @@ static const struct TrainerMon sParty_Phillip[] = {
     .iv = 255,
     .lvl = 48,
     .species = SPECIES_MANKEY,
-    }
+    },
     {
     .iv = 255,
     .lvl = 49,
