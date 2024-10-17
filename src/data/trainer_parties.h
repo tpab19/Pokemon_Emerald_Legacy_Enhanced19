@@ -1855,7 +1855,7 @@ static const struct TrainerMon sParty_Winston4[] = {
     .iv = 0,
     .lvl = 35,
     .species = SPECIES_VIGOROTH,
-    .heldItem = ITEM_NUGGET
+    .heldItem = ITEM_NUGGET,
     .moves = {MOVE_FURY_SWIPES, MOVE_FAINT_ATTACK, MOVE_YAWN, MOVE_THUNDERBOLT}
     }
 };
