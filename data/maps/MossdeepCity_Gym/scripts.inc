@@ -365,18 +365,21 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch::
 	end
 
 MossdeepCity_Gym_Text_GymGuideAdvice:
-	.string "Yo, how's it going, CHAMPION-bound\n"
+	.string "Ready for lucky number seven,\n"
 	.string "{PLAYER}?\p"
 	.string "The GYM LEADERS here use\n"
 	.string "PSYCHIC-type POKéMON.\p"
-	.string "If you go up against them with\n"
-	.string "FIGHTING- or POISON-type POKéMON,\l"
-	.string "they'll inflict horrible damage!\p"
-	.string "Plus, they'll come at you with\n"
-	.string "outstanding combination attacks.\p"
-	.string "If you want to win, you'll need to show\n"
-	.string "them how tight you are with your\l"
-	.string "POKéMON. Go for it!$"
+	.string "You heard that right, you'll be\n"
+	.string "facing two trainers in a\l"
+	.string "double battle format today!\p"
+	.string "With three teammates each,\n"
+	.string "these two are the real deal.\p"
+	.string "They'll come at you with an\n"
+	.string "outstanding combination of attacks.\p"
+	.string "To win, you'll need to creat a\n"
+	.string "strategy different from the singles\l"
+	.string "format you're used to battling in.\p"
+	.string "Go for it!$"
 
 MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "Wow, you're astounding!\n"
