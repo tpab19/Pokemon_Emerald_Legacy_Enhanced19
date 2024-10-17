@@ -308,17 +308,18 @@ DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "FIGHTING-type POKéMON.\p"
 	.string "Going against him with NORMAL-type\n"
 	.string "POKéMON is asking for trouble.\p"
-	.string "FIGHTING POKéMON will lay a serious\n"
-	.string "smack down on NORMAL POKéMON,\l"
-	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
-	.string "Hey, okay, go for it!$"
+	.string "FLYING-type and PSYCHIC-type will do\n"
+	.string "well, but they should still watch out!\p"
+	.string "His lead loves to go for the feint!\p"
+	.string "And while his ace might have short arms,\n"
+	.string "that doesn't mean it's weak!\p"
+	.string "It's got to be one of the hardest\n"
+	.string "hitting POKéMON in the league!\p"
+	.string "Defeat trainers to light the gym up!\n"
+	.string "You got this!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoah! It's turned too bright in here!\p"
+	.string "Whoah! It's turned so bright in here!\p"
 	.string "Your future is bright, too!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
