@@ -1085,7 +1085,7 @@ static const struct TrainerMon sParty_Vito[] = {
     {
     .iv = 150,
     .lvl = 46,
-    .species = SPECIES_ALAKAZAM
+    .species = SPECIES_ALAKAZAM,
     .moves = {MOVE_SHOCK_WAVE, MOVE_RECOVER, MOVE_CALM_MIND, MOVE_PSYCHIC}
     },
     {
@@ -4128,7 +4128,7 @@ static const struct TrainerMon sParty_Victoria[] = {
     .iv = 150,
     .lvl = 19,
     .species = SPECIES_ROSELIA,
-    .heldItem = ITEM_ORAN_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_POISON_STING, MOVE_STUN_SPORE, MOVE_MEGA_DRAIN, MOVE_LEECH_SEED}
     }
 };
@@ -4289,7 +4289,7 @@ static const struct TrainerMon sParty_Vicky[] = {
     .iv = 200,
     .lvl = 21,
     .species = SPECIES_MEDITITE,
-    .heldItem = ITEM_ORAN_BERRY
+    .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_CONFUSION, MOVE_CALM_MIND}
     }
 };
