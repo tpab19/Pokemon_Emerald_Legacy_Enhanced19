@@ -8448,7 +8448,7 @@ static const struct TrainerMon sParty_Janice[] = {
     .species = SPECIES_MARILL,
     },
 };
-
+// Winstrate
 static const struct TrainerMon sParty_Vivi[] = {
     {
     .iv = 100,
@@ -10432,15 +10432,15 @@ static const struct TrainerMon sParty_Pete[] = {
     {
     .iv = 0,
     .lvl = 29,
-    .species = SPECIES_TENTACOOL,
+    .species = SPECIES_TENTACRUEL,
     }
 };
 // Route 103 Surf SwimmerF 
 static const struct TrainerMon sParty_Isabelle[] = {
     {
     .iv = 0,
-    .lvl = 39,
-    .species = SPECIES_MARILL,
+    .lvl = 29,
+    .species = SPECIES_AZUMARILL,
     }
 };
 // Route 105 Ruin Maniac
