@@ -561,7 +561,7 @@ MtPyre_Summit_EventScript_BusyAquaGrunt2::
 
 MtPyre_Summit_Text_BusyMagmaGrunt1:
 	.string "We're in the middle of a crucial mission!\p"
-	.string "Can't you see TEAM AQUA is trying toan\n"
+	.string "Can't you see TEAM AQUA is trying to\n"
 	.string "stop us?$"
 
 MtPyre_Summit_Text_BusyMagmaGrunt2: 

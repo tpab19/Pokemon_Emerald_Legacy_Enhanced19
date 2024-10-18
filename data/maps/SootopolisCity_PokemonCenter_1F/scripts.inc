@@ -51,8 +51,8 @@ SootopolisCity_PokemonCenter_1F_EventScript_WomanNoLegendaries::
 
 SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn:
 	.string "WALLACE is the leader of this town's\n"
-	.string "GYM, and he's one of the toughest\n"
-	.string "TRAINERS in the whole HOENN region.\p"
+	.string "GYM, and he's one of the toughest\l"
+	.string "TRAINERS in the whole HOENN region.$"
 
 SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn2:
 	.string "WALLACE is rumored to be the toughest\n"

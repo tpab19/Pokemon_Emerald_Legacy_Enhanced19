@@ -1884,7 +1884,7 @@ SootopolisCity_Text_RivalBecomingProfessor3:
 	.string "when we first met.\p"
 	.string "So I've decided... I'm going to become\n"
 	.string "a POKéMON PROFESSOR.\l"
-	.string "Like my Dad!$"
+	.string "Like my DAD!$"
 
 SootopolisCity_Text_RivalBecomingProfessor4:
 	.string "There's so much to learn about POKéMON,\n"

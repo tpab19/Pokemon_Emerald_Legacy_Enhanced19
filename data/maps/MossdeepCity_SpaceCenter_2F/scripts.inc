@@ -388,11 +388,11 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "I can and will try!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
-	.string "If TEAM MAGMA takes over our satellite,\n"
-	.string "systems we won't be able to continue\l"
+	.string "If TEAM MAGMA takes over our satellite\n"
+	.string "systems, we won't be able to continue\l"
 	.string "our research!\p"
 	.string "They can't be allowed to get away with\n"
-	.string "such an outrage!$"
+	.string "such a violation!$"
 
 MossdeepCity_SpaceCenter_2F_Text_WishOrdinaryPeopleCouldGoIntoSpace:
 	.string "I wish ordinary people could go into\n"
