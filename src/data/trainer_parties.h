@@ -976,35 +976,40 @@ static const struct TrainerMon sParty_Braxton[] = {
     .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
     }
 };
-
+// Trick House 8
 static const struct TrainerMon sParty_Vincent[] = {
     {
     .iv = 100,
-    .lvl = 44,
-    .species = SPECIES_SABLEYE,
+    .lvl = 52,
+    .species = SPECIES_BANETTE,
     },
     {
     .iv = 100,
-    .lvl = 44,
+    .lvl = 51,
     .species = SPECIES_MEDICHAM,
     },
     {
     .iv = 100,
-    .lvl = 44,
+    .lvl = 52,
     .species = SPECIES_SHARPEDO,
     }
 };
-
+// Trick House 8
 static const struct TrainerMon sParty_Leroy[] = {
     {
     .iv = 100,
-    .lvl = 46,
+    .lvl = 50,
     .species = SPECIES_MAWILE,
     },
     {
     .iv = 100,
-    .lvl = 46,
+    .lvl = 52,
     .species = SPECIES_STARMIE,
+    },
+    {
+    .iv = 100,
+    .lvl = 50,
+    .species = SPECIES_FLYGON,
     }
 };
 // Route 111 Northern End
@@ -1255,17 +1260,22 @@ static const struct TrainerMon sParty_Wendy[] = {
     .moves = {MOVE_FLY, MOVE_WATER_PULSE, MOVE_MIST, MOVE_NONE}
     }
 };
-
+// Trick House 8
 static const struct TrainerMon sParty_Keira[] = {
     {
     .iv = 100,
-    .lvl = 45,
-    .species = SPECIES_LAIRON,
+    .lvl = 50,
+    .species = SPECIES_AGGRON,
     },
     {
     .iv = 100,
-    .lvl = 45,
+    .lvl = 50,
     .species = SPECIES_MANECTRIC,
+    },
+    {
+    .iv = 100,
+    .lvl = 50,
+    .species = SPECIES_MILOTIC,
     }
 };
 // Route 111 Northern End
@@ -1431,16 +1441,16 @@ static const struct TrainerMon sParty_Brooke5[] = {
     .species = SPECIES_ROSELIA,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Patricia[] = {
     {
     .iv = 0,
-    .lvl = 41,
+    .lvl = 42,
     .species = SPECIES_BANETTE,
     },
     {
     .iv = 0,
-    .lvl = 41,
+    .lvl = 42,
     .species = SPECIES_LUNATONE,
     }
 };
@@ -2399,17 +2409,12 @@ static const struct TrainerMon sParty_Nob5[] = {
     .heldItem = ITEM_BLACK_BELT
     }
 };
-
+// Trick Room 4
 static const struct TrainerMon sParty_Yuji[] = {
     {
     .iv = 100,
-    .lvl = 26,
-    .species = SPECIES_MAKUHITA,
-    },
-    {
-    .iv = 100,
-    .lvl = 26,
-    .species = SPECIES_MACHOKE,
+    .lvl = 27,
+    .species = SPECIES_MEDICHAM,
     }
 };
 // Route 111 Northern End (Mach Bike)
@@ -2738,12 +2743,12 @@ static const struct TrainerMon sParty_Shane[] = {
     .species = SPECIES_NUZLEAF,
     }
 };
-
+// Trick House 3 Camper
 static const struct TrainerMon sParty_Justin[] = {
     {
     .iv = 0,
-    .lvl = 24,
-    .species = SPECIES_KECLEON,
+    .lvl = 25,
+    .species = SPECIES_MACHOKE,
     }
 };
 // Jagged Pass Camper
@@ -3055,16 +3060,16 @@ static const struct TrainerMon sParty_William[] = {
     .species = SPECIES_GARDEVOIR,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Joshua[] = {
     {
     .iv = 0,
-    .lvl = 41,
-    .species = SPECIES_KADABRA,
+    .lvl = 42,
+    .species = SPECIES_ALAKAZAM,
     },
     {
     .iv = 0,
-    .lvl = 41,
+    .lvl = 42,
     .species = SPECIES_SOLROCK,
     }
 };
@@ -3179,16 +3184,16 @@ static const struct TrainerMon sParty_Kayla[] = {
     .species = SPECIES_KADABRA,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Alexis[] = {
     {
     .iv = 0,
-    .lvl = 41,
-    .species = SPECIES_KIRLIA,
+    .lvl = 42,
+    .species = SPECIES_GARDEVOIR,
     },
     {
     .iv = 0,
-    .lvl = 41,
+    .lvl = 42,
     .species = SPECIES_XATU,
     }
 };
@@ -3772,30 +3777,30 @@ static const struct TrainerMon sParty_Jerry1[] = {
     .species = SPECIES_RALTS,
     }
 };
-
+// Trick House 2
 static const struct TrainerMon sParty_Ted[] = {
     {
     .iv = 10,
-    .lvl = 17,
-    .species = SPECIES_RALTS,
+    .lvl = 22,
+    .species = SPECIES_KIRLIA,
     }
 };
-
+// Trick House 2
 static const struct TrainerMon sParty_Paul[] = {
     {
     .iv = 10,
-    .lvl = 15,
+    .lvl = 18,
     .species = SPECIES_NUMEL,
     },
     {
     .iv = 10,
-    .lvl = 15,
+    .lvl = 19,
     .species = SPECIES_ODDISH,
     },
     {
     .iv = 10,
-    .lvl = 15,
-    .species = SPECIES_WINGULL,
+    .lvl = 18,
+    .species = SPECIES_GULPIN,
     }
 };
 
@@ -3863,16 +3868,16 @@ static const struct TrainerMon sParty_Karen1[] = {
     .species = SPECIES_SHROOMISH,
     }
 };
-
+// Trick House 2 
 static const struct TrainerMon sParty_Georgia[] = {
     {
     .iv = 10,
-    .lvl = 16,
-    .species = SPECIES_SHROOMISH,
+    .lvl = 18,
+    .species = SPECIES_SURSKIT,
     },
     {
     .iv = 10,
-    .lvl = 16,
+    .lvl = 20,
     .species = SPECIES_BEAUTIFLY,
     }
 };
@@ -5525,21 +5530,16 @@ static const struct TrainerMon sParty_Robert1[] = {
     .species = SPECIES_XATU,
     }
 };
-
+// Trick Room 6
 static const struct TrainerMon sParty_Benny[] = {
     {
     .iv = 0,
-    .lvl = 36,
+    .lvl = 38,
     .species = SPECIES_SWELLOW,
     },
     {
     .iv = 0,
-    .lvl = 36,
-    .species = SPECIES_PELIPPER,
-    },
-    {
-    .iv = 0,
-    .lvl = 36,
+    .lvl = 38,
     .species = SPECIES_XATU,
     }
 };
@@ -5850,19 +5850,19 @@ static const struct TrainerMon sParty_Cyndy1[] = {
     .species = SPECIES_MEDITITE,
     }
 };
-
+// Trick Room 4
 static const struct TrainerMon sParty_Cora[] = {
     {
     .iv = 100,
-    .lvl = 27,
-    .species = SPECIES_MEDITITE,
+    .lvl = 30,
+    .species = SPECIES_MACHOKE,
     }
 };
-
+// Trick Room 4
 static const struct TrainerMon sParty_Paula[] = {
     {
     .iv = 100,
-    .lvl = 27,
+    .lvl = 29,
     .species = SPECIES_BRELOOM,
     }
 };
@@ -6357,17 +6357,17 @@ static const struct TrainerMon sParty_Nancy[] = {
     .species = SPECIES_LOMBRE,
     }
 };
-
+// Trick House 3 Picknicker
 static const struct TrainerMon sParty_Martha[] = {
     {
     .iv = 0,
-    .lvl = 23,
+    .lvl = 25,
     .species = SPECIES_SKITTY,
     },
     {
     .iv = 0,
-    .lvl = 23,
-    .species = SPECIES_SWABLU,
+    .lvl = 25,
+    .species = SPECIES_SPOINK,
     }
 };
 // Jagged Pass Picnicker
@@ -7789,11 +7789,11 @@ static const struct TrainerMon sParty_Lorenzo[] = {
     .species = SPECIES_SHIFTRY,
     }
 };
-
+// Trick Room 6
 static const struct TrainerMon sParty_Sebastian[] = {
     {
     .iv = 50,
-    .lvl = 39,
+    .lvl = 40,
     .species = SPECIES_CACTURNE,
     }
 };
@@ -7860,12 +7860,12 @@ static const struct TrainerMon sParty_Jenna[] = {
     .species = SPECIES_LUDICOLO,
     }
 };
-
+// Trick Room 6
 static const struct TrainerMon sParty_Sophia[] = {
     {
-    .iv = 50,
+    .iv = 200,
     .lvl = 38,
-    .species = SPECIES_SWABLU,
+    .species = SPECIES_VIBRAVA,
     },
     {
     .iv = 50,
@@ -8533,7 +8533,7 @@ static const struct TrainerMon sParty_Haley5[] = {
 static const struct TrainerMon sParty_Sally[] = {
     {
     .iv = 0,
-    .lvl = 18,
+    .lvl = 17,
     .species = SPECIES_ODDISH,
     }
 };
@@ -8541,17 +8541,17 @@ static const struct TrainerMon sParty_Sally[] = {
 static const struct TrainerMon sParty_Robin[] = {
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 15,
     .species = SPECIES_LOMBRE,
     },
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 15,
     .species = SPECIES_ZIGZAGOON,
     },
     {
     .iv = 0,
-    .lvl = 14,
+    .lvl = 15,
     .species = SPECIES_SANDSHREW,
     }
 };
@@ -8806,21 +8806,21 @@ static const struct TrainerMon sParty_Lucas1[] = {
     .species = SPECIES_NUMEL,
     }
 };
-
+// Trick House 3 Hiker
 static const struct TrainerMon sParty_Alan[] = {
     {
     .iv = 0,
-    .lvl = 22,
+    .lvl = 24,
     .species = SPECIES_GEODUDE,
     },
     {
     .iv = 0,
-    .lvl = 22,
+    .lvl = 25,
     .species = SPECIES_NOSEPASS,
     },
     {
     .iv = 0,
-    .lvl = 22,
+    .lvl = 25,
     .species = SPECIES_GRAVELER,
     }
 };
@@ -13016,28 +13016,28 @@ static const struct TrainerMon sParty_Thalia5[] = {
     .species = SPECIES_KINGDRA,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Mariela[] = {
     {
     .iv = 0,
-    .lvl = 41,
+    .lvl = 43,
     .species = SPECIES_CHIMECHO,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Alvaro[] = {
     {
     .iv = 0,
-    .lvl = 41,
-    .species = SPECIES_BANETTE,
+    .lvl = 42,
+    .species = SPECIES_DUSCLOPS,
     },
     {
     .iv = 0,
     .lvl = 41,
-    .species = SPECIES_KADABRA,
+    .species = SPECIES_ALAKAZAM,
     }
 };
-
+// Trick Room 7
 static const struct TrainerMon sParty_Everett[] = {
     {
     .iv = 0,

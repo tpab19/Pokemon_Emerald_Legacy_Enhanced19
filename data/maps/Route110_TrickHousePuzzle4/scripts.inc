@@ -47,16 +47,17 @@ Route110_TrickHousePuzzle4_Text_CoraPostBattle:
 	.string "anywhere if TRAINERS were there.$"
 
 Route110_TrickHousePuzzle4_Text_YujiIntro:
-	.string "Heh! Boulders like this, I can brush\n"
-	.string "aside with one finger!$"
+	.string "Heh! Boulders like this, I can fling\n"
+	.string "them through the air!$"
 
 Route110_TrickHousePuzzle4_Text_YujiDefeat:
-	.string "I can push boulders, but I can't solve\n"
-	.string "the puzzle…$"
+	.string "I can make boulders fly, but I\n"
+	.string "can't solve the puzzle…$"
 
 Route110_TrickHousePuzzle4_Text_YujiPostBattle:
-	.string "It's not good enough to be brawny…\n"
-	.string "You have to use your head. Be brainy!$"
+	.string "My head has been pounded too much!\n"
+	.string "What if it made me dumber than!\l"
+	.string "already am!?$"
 
 Route110_TrickHousePuzzle4_Text_PaulaIntro:
 	.string "The TRICK HOUSE is getting trickier,\n"
