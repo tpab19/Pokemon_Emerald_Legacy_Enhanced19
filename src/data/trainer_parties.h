@@ -1287,7 +1287,7 @@ static const struct TrainerMon sParty_Jennifer[] = {
     {
     .iv = 200,
     .lvl = 33,
-    .species = SPECIES_SABLEYE,
+    .species = SPECIES_SWALOT,
     }
 };
 // Victory Road CooltrainerF
@@ -4566,7 +4566,7 @@ static const struct TrainerMon sParty_Timmy[] = {
     {
     .iv = 0,
     .lvl = 16,
-    .species = SPECIES_ELECTRIKE,
+    .species = SPECIES_GULPIN,
     }
 };
 
@@ -5680,7 +5680,7 @@ static const struct TrainerMon sParty_Lao1[] = {
     {
     .iv = 0,
     .lvl = 22,
-    .species = SPECIES_KOFFING,
+    .species = SPECIES_GULPIN,
     .moves = {MOVE_POISON_GAS, MOVE_TACKLE, MOVE_SMOG, MOVE_SELF_DESTRUCT}
     },
     {
@@ -9126,7 +9126,7 @@ static const struct TrainerMon sParty_Hideo[] = {
     {
     .iv = 0,
     .lvl = 28,
-    .species = SPECIES_KOFFING,
+    .species = SPECIES_SWALOT,
     .moves = {MOVE_TACKLE, MOVE_POISON_GAS, MOVE_SLUDGE, MOVE_SMOKESCREEN}
     }
 };
@@ -9135,7 +9135,7 @@ static const struct TrainerMon sParty_Keigo[] = {
     {
     .iv = 0,
     .lvl = 28,
-    .species = SPECIES_KOFFING,
+    .species = SPECIES_SWALOT,
     .moves = {MOVE_POISON_GAS, MOVE_SELF_DESTRUCT, MOVE_SLUDGE, MOVE_SMOKESCREEN}
     },
     {
