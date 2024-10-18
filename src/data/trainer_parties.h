@@ -1069,27 +1069,31 @@ static const struct TrainerMon sParty_Samuel[] = {
     .species = SPECIES_ALAKAZAM,
     }
 };
-// Victory Road CooltrainerM
+// Victory Road CooltrainerM Winstrate
 static const struct TrainerMon sParty_Vito[] = {
     {
-    .iv = 100,
-    .lvl = 46,
-    .species = SPECIES_DODRIO,
+    .iv = 200,
+    .lvl = 47,
+    .species = SPECIES_SWELLOW,
+    .moves = {MOVE_STEEL_WING, MOVE_ENDEAVOR, MOVE_AERIAL_ACE, MOVE_FACADE}
     },
     {
-    .iv = 100,
+    .iv = 150,
     .lvl = 46,
-    .species = SPECIES_GRUMPIG,
+    .species = SPECIES_ALAKAZAM
+    .moves = {MOVE_SHOCK_WAVE, MOVE_RECOVER, MOVE_CALM_MIND, MOVE_PSYCHIC}
     },
     {
-    .iv = 100,
-    .lvl = 46,
-    .species = SPECIES_ELECTRODE,
+    .iv = 200,
+    .lvl = 47,
+    .species = SPECIES_MANECTRIC,
+    .moves = {MOVE_SHADOW_BALL, MOVE_CHARGE, MOVE_THUNDERBOLT, MOVE_CRUNCH}
     },
     {
-    .iv = 100,
-    .lvl = 46,
+    .iv = 220,
+    .lvl = 48,
     .species = SPECIES_SHIFTRY,
+    .moves = {MOVE_FAINT_ATTACK, MOVE_FAKE_OUT, MOVE_LEAF_BLADE, MOVE_EXTRASENSORY}
     }
 };
 // Victory Road CooltrainerM
@@ -4014,17 +4018,17 @@ static const struct TrainerMon sParty_AnnaAndMeg5[] = {
     .moves = {MOVE_BODY_SLAM, MOVE_FOCUS_ENERGY, MOVE_BRICK_BREAK, MOVE_NONE}
     }
 };
-
+//Winstrate House
 static const struct TrainerMon sParty_Victor[] = {
     {
-    .iv = 25,
-    .lvl = 16,
+    .iv = 100,
+    .lvl = 17,
     .species = SPECIES_TAILLOW,
     .heldItem = ITEM_ORAN_BERRY
     },
     {
-    .iv = 25,
-    .lvl = 16,
+    .iv = 100,
+    .lvl = 17,
     .species = SPECIES_ZIGZAGOON,
     .heldItem = ITEM_ORAN_BERRY
     }
@@ -4113,13 +4117,14 @@ static const struct TrainerMon sParty_Miguel5[] = {
     .heldItem = ITEM_SITRUS_BERRY
     }
 };
-
+// Winstrate House
 static const struct TrainerMon sParty_Victoria[] = {
     {
-    .iv = 50,
-    .lvl = 17,
+    .iv = 150,
+    .lvl = 19,
     .species = SPECIES_ROSELIA,
     .heldItem = ITEM_ORAN_BERRY
+    .moves = {MOVE_POISON_STING, MOVE_STUN_SPORE, MOVE_MEGA_DRAIN, MOVE_LEECH_SEED}
     }
 };
 // Route 121 PokefanF
@@ -4273,13 +4278,14 @@ static const struct TrainerMon sParty_Timothy5[] = {
     .moves = {MOVE_ARM_THRUST, MOVE_BELLY_DRUM, MOVE_SAND_ATTACK, MOVE_DIG}
     }
 };
-
+// Winstrate House
 static const struct TrainerMon sParty_Vicky[] = {
     {
     .iv = 200,
-    .lvl = 18,
+    .lvl = 21,
     .species = SPECIES_MEDITITE,
-    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_CONFUSION, MOVE_DETECT}
+    .heldItem = ITEM_ORAN_BERRY
+    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEDITATE, MOVE_CONFUSION, MOVE_CALM_MIND}
     }
 };
 // Mt Chimney ExpertF
@@ -8448,21 +8454,21 @@ static const struct TrainerMon sParty_Janice[] = {
     .species = SPECIES_MARILL,
     },
 };
-// Winstrate
+// Winstrate House
 static const struct TrainerMon sParty_Vivi[] = {
     {
     .iv = 100,
-    .lvl = 15,
+    .lvl = 16,
     .species = SPECIES_MARILL,
     },
     {
     .iv = 100,
-    .lvl = 15,
+    .lvl = 16,
     .species = SPECIES_SHROOMISH,
     },
     {
     .iv = 100,
-    .lvl = 15,
+    .lvl = 16,
     .species = SPECIES_NUMEL,
     }
 };
