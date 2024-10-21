@@ -11671,7 +11671,7 @@ static const struct TrainerMon sParty_Norman5[] = {
     .moves = {MOVE_HYPER_BEAM, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL}
     }
 };
-// Possible Rematch after Rayquaza Event
+// Rematch after Rayquaza Event
 static const struct TrainerMon sParty_Winona2[] = {
     {
     .iv = 250,
@@ -11851,7 +11851,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
     }
 };
-// Rematch after becoming Champion?
+// Rematch After 8 badges
 static const struct TrainerMon sParty_TateAndLiza2[] = {
     {
     .iv = 250,
@@ -12031,18 +12031,18 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-// Rematch after becoming Champion?
+// Rematch after 8 badges
 static const struct TrainerMon sParty_Juan2[] = {
     {
     .iv = 250,
-    .lvl = 41,
+    .lvl = 50,
     .species = SPECIES_LUVDISC,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_WATER_PULSE, MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_FLAIL}
     },
     {
     .iv = 250,
-    .lvl = 41,
+    .lvl = 50,
     .species = SPECIES_WHISCASH,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_AMNESIA, MOVE_EARTHQUAKE}
