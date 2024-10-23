@@ -80,7 +80,7 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan::
-	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_WallaceDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
@@ -97,17 +97,15 @@ SootopolisCity_Gym_1F_EventScript_Wallace::
 	release
 	end
 
-SootopolisCity_Gym_1F_EventScript_JuanDefeated::
-	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
-	goto SootopolisCity_Gym_1F_EventScript_LeaderDefeated
 SootopolisCity_Gym_1F_EventScript_WallaceDefeated::
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadgeWallace
-SootopolisCity_Gym_1F_EventScript_LeaderDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_SOOTOPOLIS_GYM
 	setflag FLAG_BADGE08_GET
+	settrainerflag TRAINER_JUAN_1
+	setflag FLAG_REMATCH_READY_NORMAN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE

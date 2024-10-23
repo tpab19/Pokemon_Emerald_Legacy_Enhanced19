@@ -64,5 +64,6 @@ bool8 IsTrainerReadyForRematch(void);
 void ShouldTryGetTrainerScript(void);
 u16 CountBattledRematchTeams(u16 trainerId);
 bool8 levelCappedNuzlocke(u8 level);
+s32 FirstBattleTrainerIdToRematchTableId(const struct RematchTrainer *table, u16 trainerId);
 
 #endif // GUARD_BATTLE_SETUP_H

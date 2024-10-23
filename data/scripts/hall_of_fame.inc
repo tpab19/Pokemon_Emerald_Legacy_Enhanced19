@@ -30,6 +30,15 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	setflag FLAG_HIDE_SOOTOPOLIS_GYM_WALLACE
 	clearflag FLAG_HIDE_SOOTOPOLIS_GYM_JUAN
 	clearflag FLAG_HIDE_WEATHER_INSTITUTE_2F_POST_GAME_WORKERS
+	settrainerflag TRAINER_ROXANNE_2
+	settrainerflag TRAINER_BRAWLY_2
+	settrainerflag TRAINER_WATTSON_2
+	settrainerflag TRAINER_FLANNERY_2
+	settrainerflag TRAINER_NORMAN_2
+	settrainerflag TRAINER_WINONA_2
+	settrainerflag TRAINER_TATE_AND_LIZA_2
+	settrainerflag TRAINER_JUAN_2
+	setflag FLAG_REMATCH_READY_JUAN
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	return
 

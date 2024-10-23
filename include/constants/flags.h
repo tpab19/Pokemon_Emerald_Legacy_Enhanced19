@@ -648,14 +648,14 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
+#define FLAG_REMATCH_READY_ROXANNE      0x264
+#define FLAG_REMATCH_READY_BRAWLY       0x265
+#define FLAG_REMATCH_READY_WATTSON      0x266
+#define FLAG_REMATCH_READY_FLANNERY     0x267
+#define FLAG_REMATCH_READY_NORMAN       0x268
+#define FLAG_REMATCH_READY_WINONA       0x269
+#define FLAG_REMATCH_READY_TATEANDLIZA  0x26A
+#define FLAG_REMATCH_READY_JUAN         0x26B
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
 #define FLAG_UNUSED_0x26E  0x26E // Unused Flag

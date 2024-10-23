@@ -87,5 +87,6 @@ enum {
 #define REMATCH_ELITE_FOUR_ENTRIES      REMATCH_SIDNEY
 
 void UpdateGymLeaderRematch(void);
+bool32 AllFourthFightsCompleted(void);
 
 #endif //GUARD_TRAINER_REMATCH_H
