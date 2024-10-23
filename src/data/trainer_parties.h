@@ -10914,7 +10914,7 @@ static const struct TrainerMon sParty_Roxanne2[] = {
     .moves = {MOVE_ROCK_SLIDE, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SPARK}
     }
 };
-
+// Rematch After Becoming Champion
 static const struct TrainerMon sParty_Roxanne3[] = {
     {
     .iv = 255,
