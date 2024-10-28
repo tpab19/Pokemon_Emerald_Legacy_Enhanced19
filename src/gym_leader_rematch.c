@@ -5,6 +5,7 @@
 #include "gym_leader_rematch.h"
 
 static s32 GetRematchIndex(u32 trainerIdx);
+static void TryReleaseBirds(void);
 
 static const u16 GymLeaderRematches_AfterNewMauville[] = {
     REMATCH_ROXANNE,
@@ -110,6 +111,7 @@ void UpdateGymLeaderRematch(void)
             }
         }
     }
+    TryReleaseBirds();
 };
 
 // Function to check if all 4th fights are completed
@@ -123,6 +125,34 @@ bool32 AllFourthFightsCompleted(void)
             HasTrainerBeenFought(TRAINER_TATE_AND_LIZA_4) &&
             HasTrainerBeenFought(TRAINER_JUAN_4) &&
             HasTrainerBeenFought(TRAINER_WATTSON_4));
+};
+
+// Release the birds if all 3rd gym leader fights are completed
+static void TryReleaseBirds(void)
+{
+    if (HasTrainerBeenFought(TRAINER_ROXANNE_3) &&
+        HasTrainerBeenFought(TRAINER_BRAWLY_3) &&
+        HasTrainerBeenFought(TRAINER_WATTSON_3) &&
+        HasTrainerBeenFought(TRAINER_FLANNERY_3) &&
+        HasTrainerBeenFought(TRAINER_NORMAN_3) &&
+        HasTrainerBeenFought(TRAINER_WINONA_3) &&
+        HasTrainerBeenFought(TRAINER_TATE_AND_LIZA_3) &&
+        HasTrainerBeenFought(TRAINER_JUAN_3))
+    {
+        FlagSet(FLAG_BEAT_ALL_3RD_REMATCHES);
+        if (!(FlagGet(FLAG_DEFEATED_ZAPDOS) || FlagGet(FLAG_CAUGHT_ZAPDOS)))
+        {
+            FlagClear(FLAG_HIDE_ZAPDOS);
+        }
+        if (!(FlagGet(FLAG_DEFEATED_ARTICUNO) || FlagGet(FLAG_CAUGHT_ARTICUNO)))
+        {
+            FlagClear(FLAG_HIDE_ARTICUNO);
+        }
+        if (!(FlagGet(FLAG_DEFEATED_MOLTRES) || FlagGet(FLAG_CAUGHT_MOLTRES)))
+        {
+            FlagClear(FLAG_HIDE_MOLTRES);
+        }
+    }
 };
 
 static s32 GetRematchIndex(u32 trainerIdx)

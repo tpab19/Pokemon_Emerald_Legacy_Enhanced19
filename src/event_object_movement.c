@@ -465,6 +465,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_SUICUNE                 0x1127
 #define OBJ_EVENT_PAL_TAG_ENTEI                   0x1128
 #define OBJ_EVENT_PAL_TAG_RAIKOU                  0x1129
+#define OBJ_EVENT_PAL_TAG_ARTICUNO                0x112A
+#define OBJ_EVENT_PAL_TAG_ZAPDOS                  0x112B
+#define OBJ_EVENT_PAL_TAG_MOLTRES                 0x112C
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -517,6 +520,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Suicune,               OBJ_EVENT_PAL_TAG_SUICUNE},
     {gObjectEventPal_Entei,                 OBJ_EVENT_PAL_TAG_ENTEI},
     {gObjectEventPal_Raikou,                OBJ_EVENT_PAL_TAG_RAIKOU},
+    {gObjectEventPal_Articuno,              OBJ_EVENT_PAL_TAG_ARTICUNO},
+    {gObjectEventPal_Zapdos,                OBJ_EVENT_PAL_TAG_ZAPDOS},
+    {gObjectEventPal_Moltres,               OBJ_EVENT_PAL_TAG_MOLTRES},
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 };
 

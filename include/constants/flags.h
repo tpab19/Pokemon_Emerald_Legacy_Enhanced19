@@ -656,16 +656,16 @@
 #define FLAG_REMATCH_READY_WINONA       0x269
 #define FLAG_REMATCH_READY_TATEANDLIZA  0x26A
 #define FLAG_REMATCH_READY_JUAN         0x26B
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
+#define FLAG_HIDE_ZAPDOS                0x26C
+#define FLAG_CAUGHT_ZAPDOS              0x26D
+#define FLAG_DEFEATED_ZAPDOS            0x26E
+#define FLAG_HIDE_MOLTRES               0x26F
+#define FLAG_CAUGHT_MOLTRES             0x270
+#define FLAG_DEFEATED_MOLTRES           0x271
+#define FLAG_HIDE_ARTICUNO              0x272
+#define FLAG_CAUGHT_ARTICUNO            0x273
+#define FLAG_DEFEATED_ARTICUNO          0x274
+#define FLAG_BEAT_ALL_3RD_REMATCHES     0x275
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
 #define FLAG_UNUSED_0x277  0x277 // Unused Flag
 #define FLAG_UNUSED_0x278  0x278 // Unused Flag

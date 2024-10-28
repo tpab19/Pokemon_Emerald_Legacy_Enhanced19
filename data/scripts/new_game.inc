@@ -293,5 +293,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_MAY
+	setflag FLAG_HIDE_ARTICUNO
+	setflag FLAG_HIDE_ZAPDOS
+	setflag FLAG_HIDE_MOLTRES
 	call EventScript_ResetAllBerries
 	end

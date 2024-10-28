@@ -246,6 +246,9 @@
 #define OBJ_EVENT_GFX_SUICUNE                    242
 #define OBJ_EVENT_GFX_ENTEI                      243
 #define OBJ_EVENT_GFX_RAIKOU                     244
+#define OBJ_EVENT_GFX_ARTICUNO                   245
+#define OBJ_EVENT_GFX_ZAPDOS                     246
+#define OBJ_EVENT_GFX_MOLTRES                    247
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
