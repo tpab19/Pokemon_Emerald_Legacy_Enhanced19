@@ -8,6 +8,7 @@ TerraCave_End_MapScripts::
 
 TerraCave_End_OnResume:
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, TerraCave_End_EventScript_TryRemoveGroudon
+	clearflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	end
 
 TerraCave_End_EventScript_TryRemoveGroudon::
@@ -19,7 +20,6 @@ TerraCave_End_EventScript_TryRemoveGroudon::
 TerraCave_End_OnTransition:
 	call_if_unset FLAG_DEFEATED_GROUDON, TerraCave_End_EventScript_ShowGroudon
 	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
-	call_if_set FLAG_DEFEATED_GROUDON, TerraCave_End_EventScript_CheckShowMaxie
 	end
 
 TerraCave_End_EventScript_ShowGroudon::
@@ -27,16 +27,9 @@ TerraCave_End_EventScript_ShowGroudon::
 	setvar VAR_TEMP_1, 1
 	return
 
-TerraCave_End_EventScript_CheckShowMaxie::
-	goto_if_set FLAG_BEAT_MAXIE_TERRA_CAVE, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_MAXIE_TERRA_CAVE
-	setobjectxyperm LOCALID_MAXIE, 17, 26
-	setobjectxy LOCALID_MAXIE, 17, 26
-	applymovement LOCALID_MAXIE, Common_Movement_FaceUp
-	return
-
 TerraCave_End_EventScript_Groudon::
 	lockall
+	call TerraCave_End_EventScript_Maxie
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_GROUDON, TerraCave_End_Movement_GroudonApproach
@@ -58,22 +51,8 @@ TerraCave_End_EventScript_Groudon::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TerraCave_End_EventScript_RanFromGroudon
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	setflag FLAG_DEFEATED_GROUDON
-	goto_if_unset FLAG_BEAT_MAXIE_TERRA_CAVE, TerraCave_End_EventScript_Maxie
+	goto TerraCave_End_EventScript_MaxieLeaves
 	releaseall
-	end
-
-TerraCave_End_EventScript_DefeatedGroudon::
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject VAR_LAST_TALKED
-	fadescreenswapbuffers FADE_FROM_BLACK
-	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
-	setflag FLAG_DEFEATED_GROUDON
-	goto_if_unset FLAG_BEAT_MAXIE_TERRA_CAVE, TerraCave_End_EventScript_Maxie
-	end
-
-TerraCave_End_EventScript_RanFromGroudon::
-	setvar VAR_0x8004, SPECIES_GROUDON
-	goto Common_EventScript_LegendaryFlewAway
 	end
 
 TerraCave_End_EventScript_Maxie::
@@ -82,7 +61,6 @@ TerraCave_End_EventScript_Maxie::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-MarineCave_End_EventScript_StartMaxieFight::
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
 	faceplayer
 	msgbox TerraCave_End_Text_MaxieIntro, MSGBOX_DEFAULT
@@ -91,6 +69,29 @@ MarineCave_End_EventScript_StartMaxieFight::
 	trainerbattle_no_intro TRAINER_MAXIE_TERRA_CAVE, TerraCave_End_Text_MaxieDefeat
 	msgbox TerraCave_End_Text_MaxiePostBattle, MSGBOX_DEFAULT
 	closemessage
+	return
+
+TerraCave_End_EventScript_DefeatedGroudon::
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
+	setflag FLAG_DEFEATED_GROUDON
+	goto TerraCave_End_EventScript_MaxieLeaves
+	end
+
+TerraCave_End_EventScript_RanFromGroudon::
+	setvar VAR_0x8004, SPECIES_GROUDON
+	goto Common_EventScript_LegendaryFlewAway
+	msgbox TerraCave_End_Text_MaxieRanFromGroudon, MSGBOX_DEFAULT
+	closemessage
+	goto TerraCave_End_EventScript_MaxieLeaves_NoText
+	end
+
+TerraCave_End_EventScript_MaxieLeaves::
+	msgbox TerraCave_End_Text_MaxieCaughtGroudon, MSGBOX_DEFAULT
+	closemessage
+TerraCave_End_EventScript_MaxieLeaves_NoText::
 	setflag FLAG_BEAT_MAXIE_TERRA_CAVE
 	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	call TerraCave_End_EventScript_SetMtPyre
@@ -142,25 +143,27 @@ TerraCave_End_Movement_MaxieLeaves:
 	step_end
 
 TerraCave_End_Text_MaxieIntro:
-	.string "MAXIE: GROUDON.... captured by you?!\n"
-	.string "No! This isn't how it was supposed to\l"
-	.string "be!\p" 
-	.string "You think you can handle that kind of\n"
-	.string "power?\p"
-	.string "Only I, who understands its true\n"
-	.string "potential, can keep it safe from those\l"
-	.string "who would misuse it!\p"
-	.string "You... {PLAYER}{KUN}...\n"
-	.string "You have no idea what you've done!\p"
-	.string "I'll battle you here and now to take\n"
-	.string "back GROUDON! It's my responsibility!$"
+	.string "MAXIE: After all this, you dare approach\n"
+	.string "GROUDON?\p"
+	.string "This is MY responsibility, not yours!\p"
+	.string "I was the one who unleashed its power,\n"
+	.string "and only I can stop it.\p"
+	.string "If you believe otherwise...\n"
+	.string "then show me your strength!$"
 
 TerraCave_End_Text_MaxieDefeat:
-	.string "MAXIE: So, you've bested me...\n"
-	.string "for now.$"
+	.string "MAXIE: I don't believe it...\n"
 
 TerraCave_End_Text_MaxiePostBattle:
-	.string "MAXIE: ...How could this happen?\n"
+	.string "MAXIE: GROUDON in your hands...\n"
+	.string "I never thought I'd see this day.\p"
+	.string "It's my duty to control its power, but...\n"
+	.string "If you think you can handle it, then so\l"
+	.string "be it."
+	.string "I'll be here. Watching.$"
+
+TerraCave_End_Text_MaxieCaughtGroudon:
+	.string "MAXIE: How could this happen?\n"
 	.string "Even after everything...\p"
 	.string "All this time, I believed expanding the\n"
 	.string "land would heal the world, feed the\l"
@@ -186,3 +189,12 @@ TerraCave_End_Text_MaxiePostBattle:
 	.string "I won't abandon my vision, but maybe\n"
 	.string "there's a better path...\p"
 	.string "One that avoids catastrophe.$"
+
+TerraCave_End_Text_MaxieRanFromGroudon:
+    .string "MAXIE: Groudon escaped?\n"
+    .string "I feared this might be beyond us both.\p"
+    .string "Only I understand the depth of its\n"
+    .string "purpose, its place in restoring balance.\p"
+    .string "This proves it… Groudon is my\n"
+    .string "responsibility, and I'll see to it that\l"
+    .string "it's managed properly from now on.$"

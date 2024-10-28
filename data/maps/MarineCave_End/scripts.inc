@@ -8,6 +8,7 @@ MarineCave_End_MapScripts::
 
 MarineCave_End_OnResume:
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MarineCave_End_EventScript_TryRemoveKyogre
+	clearflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	end
 
 MarineCave_End_EventScript_TryRemoveKyogre::
@@ -19,7 +20,6 @@ MarineCave_End_EventScript_TryRemoveKyogre::
 MarineCave_End_OnTransition:
 	call_if_unset FLAG_DEFEATED_KYOGRE, MarineCave_End_EventScript_ShowKyogre
 	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
-	call_if_set FLAG_DEFEATED_KYOGRE, TerraCave_End_EventScript_CheckShowArchie
 	end
 
 MarineCave_End_EventScript_ShowKyogre::
@@ -27,16 +27,9 @@ MarineCave_End_EventScript_ShowKyogre::
 	setvar VAR_TEMP_1, 1
 	return
 
-TerraCave_End_EventScript_CheckShowArchie::
-	goto_if_set FLAG_BEAT_ARCHIE_MARINE_CAVE, Common_EventScript_NopReturn
-	clearflag FLAG_HIDE_ARCHIE_MARINE_CAVE
-	setobjectxyperm LOCALID_ARCHIE, 9, 26
-	setobjectxy LOCALID_ARCHIE, 9, 26
-	applymovement LOCALID_ARCHIE, Common_Movement_FaceUp
-	return
-
 MarineCave_End_EventScript_Kyogre::
 	lockall
+	call MarineCave_End_EventScript_Archie
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_End_Movement_KyogreApproach
@@ -58,22 +51,8 @@ MarineCave_End_EventScript_Kyogre::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MarineCave_End_EventScript_RanFromKyogre
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
 	setflag FLAG_DEFEATED_KYOGRE
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
+	goto MarineCave_End_EventScript_ArchieLeaves
 	releaseall
-	end
-
-MarineCave_End_EventScript_DefeatedKyogre::
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject VAR_LAST_TALKED
-	fadescreenswapbuffers FADE_FROM_BLACK
-	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
-	setflag FLAG_DEFEATED_KYOGRE
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_Archie
-	end
-
-MarineCave_End_EventScript_RanFromKyogre::
-	setvar VAR_0x8004, SPECIES_KYOGRE
-	goto Common_EventScript_LegendaryFlewAway
 	end
 
 MarineCave_End_EventScript_Archie::
@@ -82,14 +61,37 @@ MarineCave_End_EventScript_Archie::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
-MarineCave_End_EventScript_StartArchieFight::
 	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
 	faceplayer
 	msgbox MarineCave_End_Text_ArchieIntro, MSGBOX_DEFAULT
 	closemessage
+	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
 	trainerbattle_no_intro TRAINER_ARCHIE_MARINE_CAVE, MarineCave_End_Text_ArchieDefeat
 	msgbox MarineCave_End_Text_ArchiePostBattle, MSGBOX_DEFAULT
 	closemessage
+	return
+
+MarineCave_End_EventScript_DefeatedKyogre::
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreenswapbuffers FADE_FROM_BLACK
+	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 1
+	setflag FLAG_DEFEATED_KYOGRE
+	goto MarineCave_End_EventScript_ArchieLeaves
+	end
+
+MarineCave_End_EventScript_RanFromKyogre::
+	setvar VAR_0x8004, SPECIES_KYOGRE
+	goto Common_EventScript_LegendaryFlewAway
+	msgbox MarineCave_End_Text_ArchieRanFromKyogre, MSGBOX_DEFAULT
+	closemessage
+	goto MarineCave_End_EventScript_ArchieLeaves_NoText
+	end
+
+MarineCave_End_EventScript_ArchieLeaves::
+	msgbox MarineCave_End_Text_ArchieCaughtKyogre, MSGBOX_DEFAULT
+	closemessage
+MarineCave_End_EventScript_ArchieLeaves_NoText::
 	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE
 	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	call MarineCave_End_EventScript_SetMtPyre
@@ -142,22 +144,35 @@ MarineCave_End_Movement_ArchieLeaves:
 	step_end
 
 MarineCave_End_Text_ArchieIntro:
-	.string "ARCHIE: What?! KYOGRE in your hands?!\n"
-	.string "You don't know what you're dealing with!\p"
-	.string "Only I, who awakened it, can control its\n"
-	.string "rage!\p"
-	.string "You may have captured it, but you've\n"
-	.string "only delayed what I must do.\p"
-	.string "KYOGRE is my responsibility, and I won't\n"
-	.string "let it fall into anyone else's hands!\p"
-	.string "Prepare yourself - this isn't over!$"
+	.string "ARCHIE: So, you're here for KYOGRE?\n"
+	.string "You don't understand-\l"
+	.string "this is my burden to bear!\p"
+	.string "I was the one who woke it.\n"
+	.string "Only I can keep it under control.\p"
+	.string "I won't let you stand in my way.\p"
+	.string "But if you think\n"
+	.string "you can handle this....\p"
+	.string "then prove it to me in battle!$"
 
 MarineCave_End_Text_ArchieDefeat:
-	.string "ARCHIE: Looks like I was wrong... but\n"
-	.string "don't think this is over.$"
+	.string "ARCHIE: I can't believe it...\n"
+	.string "But this isn't over yet. KYOGRE will\l"
+	.string "rise, and you'll see the truth.$"
 
 MarineCave_End_Text_ArchiePostBattle:
-	.string "ARCHIE: So, it's come to this.\p"
+	.string "ARCHIE: So, it's come to this.\n"
+	.string "I've made my mistakes\l"
+	.string "but I can't turn back now.\p"
+	.string "KYOGRE's anger is still my\n"
+	.string "responsibility...\p"
+	.string "But if you're going to try\n"
+	.string "I won't stop you...\p"
+	.string "Just don't think it'll be easy.$"
+
+MarineCave_End_Text_ArchieCaughtKyogre:
+	.string "ARCHIE: You... actually calmed KYOGRE?\n"
+	.string "I never thought anyone could...\p"
+	.string "So, it's come to this.\p"
 	.string "I wanted to save lives, to bring water\n"
 	.string "where it was needed and let deserts\l"
 	.string "bloom.\p"
@@ -182,3 +197,12 @@ MarineCave_End_Text_ArchiePostBattle:
 	.string "there's a better way to achieve it...\p"
 	.string "One that respects the world we belong\n"
 	.string "to.$"
+
+MarineCave_End_Text_ArchieRanFromKyogre:
+	.string "ARCHIE: So, Kyogre escaped?\n"
+	.string "I knew it was beyond anyone's grasp!\p"
+	.string "Only I can understand its power,\n"
+	.string "its purpose... the world will see soon.\p"
+	.string "You just proved it.\n"
+	.string "Kyogre is my responsibility, and I'll see\l"
+	.string "that it's handled correctly from now on.$"

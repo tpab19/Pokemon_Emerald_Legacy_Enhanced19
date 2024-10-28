@@ -52,6 +52,9 @@ EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
 	clearflag FLAG_DEFEATED_SUICUNE
 	clearflag FLAG_DEFEATED_ENTEI
 	clearflag FLAG_DEFEATED_RAIKOU
+	clearflag FLAG_DEFEATED_ARTICUNO
+	clearflag FLAG_DEFEATED_ZAPDOS
+	clearflag FLAG_DEFEATED_MOLTRES
 	return
 
 EverGrandeCity_HallOfFame_EventScript_SetDesertUnderpassCommentReady::
