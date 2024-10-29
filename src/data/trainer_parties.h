@@ -522,7 +522,7 @@ static const struct TrainerMon sParty_Violet[] = {
     .species = SPECIES_GLOOM,
     }
 };
-// Rose Rematch
+
 static const struct TrainerMon sParty_Rose2[] = {
     {
     .iv = 0,
@@ -540,7 +540,7 @@ static const struct TrainerMon sParty_Rose2[] = {
     .species = SPECIES_ROSELIA,
     }
 };
-// Rose Rematch
+
 static const struct TrainerMon sParty_Rose3[] = {
     {
     .iv = 0,
@@ -558,7 +558,7 @@ static const struct TrainerMon sParty_Rose3[] = {
     .species = SPECIES_ROSELIA,
     }
 };
-// Rose Rematch
+
 static const struct TrainerMon sParty_Rose4[] = {
     {
     .iv = 0,
@@ -576,7 +576,7 @@ static const struct TrainerMon sParty_Rose4[] = {
     .species = SPECIES_ROSELIA,
     }
 };
-// Rose Rematch
+
 static const struct TrainerMon sParty_Rose5[] = {
     {
     .iv = 0,
@@ -639,7 +639,7 @@ static const struct TrainerMon sParty_Foster[] = {
     .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
     }
 };
-//Route 111 Desert Ruin Maniac Rematch
+
 static const struct TrainerMon sParty_Dusty2[] = {
     {
     .iv = 60,
@@ -648,7 +648,7 @@ static const struct TrainerMon sParty_Dusty2[] = {
     .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
     }
 };
-//Route 111 Desert Ruin Maniac Rematch
+
 static const struct TrainerMon sParty_Dusty3[] = {
     {
     .iv = 70,
@@ -657,7 +657,7 @@ static const struct TrainerMon sParty_Dusty3[] = {
     .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
     }
 };
-//Route 111 Desert Ruin Maniac Rematch
+
 static const struct TrainerMon sParty_Dusty4[] = {
     {
     .iv = 80,
@@ -666,7 +666,7 @@ static const struct TrainerMon sParty_Dusty4[] = {
     .moves = {MOVE_DIG, MOVE_SLASH, MOVE_SAND_ATTACK, MOVE_POISON_STING}
     }
 };
-//Route 111 Desert Ruin Maniac Rematch
+
 static const struct TrainerMon sParty_Dusty5[] = {
     {
     .iv = 90,
@@ -784,7 +784,7 @@ static const struct TrainerMon sParty_Gwen[] = {
     .species = SPECIES_AZUMARILL,
     }
 };
-// Route 109 TuberF Rematch
+
 static const struct TrainerMon sParty_Lola2[] = {
     {
     .iv = 10,
@@ -797,7 +797,7 @@ static const struct TrainerMon sParty_Lola2[] = {
     .species = SPECIES_AZUMARILL,
     }
 };
-// Route 109 TuberF Rematch
+
 static const struct TrainerMon sParty_Lola3[] = {
     {
     .iv = 20,
@@ -810,7 +810,7 @@ static const struct TrainerMon sParty_Lola3[] = {
     .species = SPECIES_AZUMARILL,
     }
 };
-// Route 109 TuberF Rematch
+
 static const struct TrainerMon sParty_Lola4[] = {
     {
     .iv = 30,
@@ -823,7 +823,7 @@ static const struct TrainerMon sParty_Lola4[] = {
     .species = SPECIES_AZUMARILL,
     }
 };
-// Route 109 TuberF Rematch
+
 static const struct TrainerMon sParty_Lola5[] = {
     {
     .iv = 40,
@@ -1597,7 +1597,7 @@ static const struct TrainerMon sParty_GruntSpaceCenter2[] = {
     .species = SPECIES_MAGCARGO,
     }
 };
-//Route 104 Lady Rematch
+
 static const struct TrainerMon sParty_Cindy2[] = {
     {
     .iv = 0,
@@ -1631,7 +1631,7 @@ static const struct TrainerMon sParty_Naomi[] = {
     .heldItem = ITEM_NONE
     },
 };
-//Route 104 Lady Rematch
+
 static const struct TrainerMon sParty_Cindy3[] = {
     {
     .iv = 10,
@@ -1641,7 +1641,7 @@ static const struct TrainerMon sParty_Cindy3[] = {
     .moves = {MOVE_HEADBUTT, MOVE_SING, MOVE_FAINT_ATTACK, MOVE_SAND_ATTACK}
     }
 };
-//Route 104 Lady Rematch
+
 static const struct TrainerMon sParty_Cindy4[] = {
     {
     .iv = 20,
@@ -1651,7 +1651,7 @@ static const struct TrainerMon sParty_Cindy4[] = {
     .moves = {MOVE_HEADBUTT, MOVE_SING, MOVE_FAINT_ATTACK, MOVE_SAND_ATTACK}
     }
 };
-//Route 104 Lady Rematch
+
 static const struct TrainerMon sParty_Cindy5[] = {
     {
     .iv = 30,
@@ -1661,7 +1661,7 @@ static const struct TrainerMon sParty_Cindy5[] = {
     .moves = {MOVE_DOUBLE_EDGE, MOVE_SING, MOVE_FAINT_ATTACK, MOVE_SAND_ATTACK}
     }
 };
-//Route 104 Lady Rematch
+
 static const struct TrainerMon sParty_Cindy6[] = {
     {
     .iv = 40,
@@ -2513,7 +2513,7 @@ static const struct TrainerMon sParty_Dalton1[] = {
     .species = SPECIES_WHISMUR,
     }
 };
-//Route 118 Mauville Guitarist Rematch
+
 static const struct TrainerMon sParty_Dalton2[] = {
     {
     .iv = 10,
@@ -2531,7 +2531,7 @@ static const struct TrainerMon sParty_Dalton2[] = {
     .species = SPECIES_MAGNEMITE,
     }
 };
-//Route 118 Mauville Guitarist Rematch
+
 static const struct TrainerMon sParty_Dalton3[] = {
     {
     .iv = 20,
@@ -2549,7 +2549,7 @@ static const struct TrainerMon sParty_Dalton3[] = {
     .species = SPECIES_MAGNEMITE,
     }
 };
-//Route 118 Mauville Guitarist Rematch
+
 static const struct TrainerMon sParty_Dalton4[] = {
     {
     .iv = 30,
@@ -2567,7 +2567,7 @@ static const struct TrainerMon sParty_Dalton4[] = {
     .species = SPECIES_MAGNETON,
     }
 };
-//Route 118 Mauville Guitarist Rematch
+
 static const struct TrainerMon sParty_Dalton5[] = {
     {
     .iv = 40,
@@ -10883,7 +10883,7 @@ static const struct TrainerMon sParty_MayRustboroTorchic[] = {
     .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_MUD_SLAP, MOVE_WATER_GUN}
     }
 };
-// Rematch after beating Wattson 
+// Roxanne Rematch 1 after beating Wattson 
 static const struct TrainerMon sParty_Roxanne2[] = {
     {
     .iv = 150,
@@ -10914,7 +10914,7 @@ static const struct TrainerMon sParty_Roxanne2[] = {
     .moves = {MOVE_ROCK_SLIDE, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_SPARK}
     }
 };
-// Rematch After Becoming Champion
+// Roxanne Rematch 2 After Becoming Champion
 static const struct TrainerMon sParty_Roxanne3[] = {
     {
     .iv = 255,
@@ -10952,7 +10952,7 @@ static const struct TrainerMon sParty_Roxanne3[] = {
     .moves = {MOVE_DOUBLE_TEAM, MOVE_EXPLOSION, MOVE_PROTECT, MOVE_ROCK_SLIDE}
     }
 };
-
+// Roxanne Rematch 3
 static const struct TrainerMon sParty_Roxanne4[] = {
     {
     .iv = 255,
@@ -10990,7 +10990,7 @@ static const struct TrainerMon sParty_Roxanne4[] = {
     .moves = {MOVE_DOUBLE_TEAM, MOVE_EXPLOSION, MOVE_PROTECT, MOVE_ROCK_SLIDE}
     }
 };
-
+// Roxanne Rematch 4
 static const struct TrainerMon sParty_Roxanne5[] = {
     {
     .iv = 255,
@@ -11035,7 +11035,7 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .moves = {MOVE_DOUBLE_TEAM, MOVE_EXPLOSION, MOVE_PROTECT, MOVE_ROCK_SLIDE}
     }
 };
-// Rematch after beating Flannery (same as 1_2)
+// Brawly Rematch 1 after beating Flannery (same as 1_2)
 static const struct TrainerMon sParty_Brawly2[] = {
     {
     .iv = 180,
@@ -11066,7 +11066,7 @@ static const struct TrainerMon sParty_Brawly2[] = {
     .moves = {MOVE_VITAL_THROW, MOVE_REVERSAL, MOVE_BULK_UP, MOVE_FAINT_ATTACK}
     }
 };
-
+// Brawly Rematch 2
 static const struct TrainerMon sParty_Brawly3[] = {
     {
     .iv = 255,
@@ -11097,7 +11097,7 @@ static const struct TrainerMon sParty_Brawly3[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_FOCUS_PUNCH, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE}
     }
 };
-
+// Brawly Rematch 3
 static const struct TrainerMon sParty_Brawly4[] = {
     {
     .iv = 255,
@@ -11135,7 +11135,7 @@ static const struct TrainerMon sParty_Brawly4[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_FOCUS_PUNCH, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE}
     }
 };
-
+// Brawly Rematch 4
 static const struct TrainerMon sParty_Brawly5[] = {
     {
     .iv = 255,
@@ -11180,7 +11180,7 @@ static const struct TrainerMon sParty_Brawly5[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_FOCUS_PUNCH, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE}
     }
 };
-// Rematch after New Mauville
+// Wattson Rematch 1 after New Mauville
 static const struct TrainerMon sParty_Wattson2[] = {
     {
     .iv = 210,
@@ -11218,7 +11218,7 @@ static const struct TrainerMon sParty_Wattson2[] = {
     .moves = {MOVE_THUNDERBOLT, MOVE_CRUNCH, MOVE_CHARGE, MOVE_THUNDER_WAVE}
     }
 };
-
+// Wattson Rematch 2 
 static const struct TrainerMon sParty_Wattson3[] = {
     {
     .iv = 255,
@@ -11256,7 +11256,7 @@ static const struct TrainerMon sParty_Wattson3[] = {
     .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
     }
 };
-
+// Wattson Rematch 3
 static const struct TrainerMon sParty_Wattson4[] = {
     {
     .iv = 255,
@@ -11294,7 +11294,7 @@ static const struct TrainerMon sParty_Wattson4[] = {
     .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
     }
 };
-
+// Wattson Rematch 4
 static const struct TrainerMon sParty_Wattson5[] = {
     {
     .iv = 255,
@@ -11339,7 +11339,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
     }
 };
-// Rematch after Magma Hideout
+// Flannery Rematch 1 after Magma Hideout
 static const struct TrainerMon sParty_Flannery2[] = {
     {
     .iv = 240,
@@ -11377,7 +11377,7 @@ static const struct TrainerMon sParty_Flannery2[] = {
     .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB}
     }
 };
-
+// Flannery Rematch 2
 static const struct TrainerMon sParty_Flannery3[] = {
     {
     .iv = 255,
@@ -11415,7 +11415,7 @@ static const struct TrainerMon sParty_Flannery3[] = {
     .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
     }
 };
-
+// Flannery Rematch 3
 static const struct TrainerMon sParty_Flannery4[] = {
     {
     .iv = 255,
@@ -11460,7 +11460,7 @@ static const struct TrainerMon sParty_Flannery4[] = {
     .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
     }
 };
-
+// Flannery Rematch 4
 static const struct TrainerMon sParty_Flannery5[] = {
     {
     .iv = 255,
@@ -11505,7 +11505,7 @@ static const struct TrainerMon sParty_Flannery5[] = {
     .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
     }
 };
-// Rematch after getting all 8 gym badges
+// Norman Rematch 1 after getting all 8 gym badges
 static const struct TrainerMon sParty_Norman2[] = {
     {
     .iv = 250,
@@ -11550,7 +11550,7 @@ static const struct TrainerMon sParty_Norman2[] = {
     .moves = {MOVE_EARTHQUAKE, MOVE_REST, MOVE_FACADE, MOVE_FAINT_ATTACK}
     }
 };
-
+// Norman Rematch 2
 static const struct TrainerMon sParty_Norman3[] = {
     {
     .iv = 255,
@@ -11588,7 +11588,7 @@ static const struct TrainerMon sParty_Norman3[] = {
     .moves = {MOVE_HYPER_BEAM, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL}
     }
 };
-
+// Norman Rematch 3
 static const struct TrainerMon sParty_Norman4[] = {
     {
     .iv = 255,
@@ -11626,7 +11626,7 @@ static const struct TrainerMon sParty_Norman4[] = {
     .moves = {MOVE_HYPER_BEAM, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL}
     }
 };
-
+// Norman Rematch 4
 static const struct TrainerMon sParty_Norman5[] = {
     {
     .iv = 255,
@@ -11671,7 +11671,7 @@ static const struct TrainerMon sParty_Norman5[] = {
     .moves = {MOVE_HYPER_BEAM, MOVE_FLAMETHROWER, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL}
     }
 };
-// Rematch after Rayquaza Event
+// Winona Rematch 1 after Rayquaza Event
 static const struct TrainerMon sParty_Winona2[] = {
     {
     .iv = 250,
@@ -11716,7 +11716,7 @@ static const struct TrainerMon sParty_Winona2[] = {
     .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_DRAGON_DANCE, MOVE_SKY_ATTACK}
     }
 };
-
+// Winona Rematch 2
 static const struct TrainerMon sParty_Winona3[] = {
     {
     .iv = 255,
@@ -11761,7 +11761,7 @@ static const struct TrainerMon sParty_Winona3[] = {
     .moves = {MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
     }
 };
-
+// Winona Rematch 3
 static const struct TrainerMon sParty_Winona4[] = {
     {
     .iv = 255,
@@ -11806,7 +11806,7 @@ static const struct TrainerMon sParty_Winona4[] = {
     .moves = {MOVE_AERIAL_ACE, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
     }
 };
-
+// Winona Rematch 4
 static const struct TrainerMon sParty_Winona5[] = {
     {
     .iv = 255,
@@ -11851,7 +11851,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .moves = {MOVE_SKY_ATTACK, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_EARTHQUAKE}
     }
 };
-// Rematch After 8 badges
+// Tate & Liza Rematch 1 After 8 badges
 static const struct TrainerMon sParty_TateAndLiza2[] = {
     {
     .iv = 250,
@@ -11896,7 +11896,7 @@ static const struct TrainerMon sParty_TateAndLiza2[] = {
     .moves = {MOVE_EARTHQUAKE, MOVE_ANCIENT_POWER, MOVE_PSYCHIC, MOVE_LIGHT_SCREEN}
     }
 };
-
+// Tate & Liza Rematch 2
 static const struct TrainerMon sParty_TateAndLiza3[] = {
     {
     .iv = 255,
@@ -11941,7 +11941,7 @@ static const struct TrainerMon sParty_TateAndLiza3[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-
+// Tate & Liza Rematch 3
 static const struct TrainerMon sParty_TateAndLiza4[] = {
     {
     .iv = 255,
@@ -11986,7 +11986,7 @@ static const struct TrainerMon sParty_TateAndLiza4[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-
+// Tate & Liza Rematch 4
 static const struct TrainerMon sParty_TateAndLiza5[] = {
     {
     .iv = 255,
@@ -12031,7 +12031,7 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-// Rematch after 8 badges
+// Juan Rematch - Not Including
 static const struct TrainerMon sParty_Juan2[] = {
     {
     .iv = 250,
@@ -12069,7 +12069,7 @@ static const struct TrainerMon sParty_Juan2[] = {
     .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
     }
 };
-
+// Juan Rematch 1 - After Becoming Champion
 static const struct TrainerMon sParty_Juan3[] = {
     {
     .iv = 255,
@@ -12107,7 +12107,7 @@ static const struct TrainerMon sParty_Juan3[] = {
     .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
     }
 };
-
+// Juan Rematch 2
 static const struct TrainerMon sParty_Juan4[] = {
     {
     .iv = 255,
@@ -12152,7 +12152,7 @@ static const struct TrainerMon sParty_Juan4[] = {
     .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
     }
 };
-
+// Juan Rematch 3
 static const struct TrainerMon sParty_Juan5[] = {
     {
     .iv = 255,
