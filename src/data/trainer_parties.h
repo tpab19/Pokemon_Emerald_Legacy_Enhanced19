@@ -12031,7 +12031,7 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     .moves = {MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_PSYCHIC, MOVE_FLAMETHROWER}
     }
 };
-// Juan Rematch - Not Including
+// Placeholder, Not Used
 static const struct TrainerMon sParty_Juan2[] = {
     {
     .iv = 250,
