@@ -11010,7 +11010,7 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 65,
-    .species = SPECIES_FLYGON
+    .species = SPECIES_FLYGON,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SUBSTITUTE, MOVE_FIRE_BLAST}
     },
@@ -11190,7 +11190,7 @@ static const struct TrainerMon sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 65,
-    .species = SPECIES_HERACROSS
+    .species = SPECIES_HERACROSS,
     .heldItem = ITEM_QUICK_CLAW,
     .moves = {MOVE_CROSS_CHOP, MOVE_ROCK_SLIDE, MOVE_MEGAHORN, MOVE_SWORDS_DANCE}
     },
