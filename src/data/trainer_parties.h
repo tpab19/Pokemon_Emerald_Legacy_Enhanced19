@@ -11244,121 +11244,128 @@ static const struct TrainerMon sParty_Wattson2[] = {
 static const struct TrainerMon sParty_Wattson3[] = {
     {
     .iv = 255,
-    .lvl = 39,
-    .species = SPECIES_PIKACHU,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_SHOCK_WAVE}
+    .lvl = 55,
+    .species = SPECIES_RAICHU,
+    .heldItem = ITEM_MYSTIC_WATER,
+    .moves = {MOVE_THUNDERBOLT, MOVE_ENCORE, MOVE_FOCUS_PUNCH, MOVE_SURF}
     },
     {
     .iv = 255,
-    .lvl = 41,
-    .species = SPECIES_FLAAFFY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_PROTECT, MOVE_THUNDER_WAVE, MOVE_LIGHT_SCREEN}
+    .lvl = 55,
+    .species = SPECIES_LANTURN,
+    .heldItem = ITEM_WIKI_BERRY,
+    .moves = {MOVE_RAIN_DANCE, MOVE_DIVE, MOVE_THUNDER_WAVE, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 255,
-    .lvl = 41,
-    .species = SPECIES_ELECTRODE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROLLOUT, MOVE_THUNDER, MOVE_EXPLOSION, MOVE_RAIN_DANCE}
+    .lvl = 55,
+    .species = SPECIES_JOLTEON,
+    .heldItem = ITEM_SPELL_TAG,
+    .moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_BATON_PASS, MOVE_SHADOW_BALL}
     },
     {
     .iv = 255,
-    .lvl = 43,
-    .species = SPECIES_MAGNETON,
+    .lvl = 55,
+    .species = SPECIES_ELECTABUZZ,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_THUNDER, MOVE_RAIN_DANCE}
+    .moves = {MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH, MOVE_THUNDER, MOVE_PSYCHIC}
     },
     {
     .iv = 255,
-    .lvl = 45,
+    .lvl = 55,
     .species = SPECIES_MANECTRIC,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_ROAR}
     }
 };
 // Wattson Rematch 3
 static const struct TrainerMon sParty_Wattson4[] = {
     {
     .iv = 255,
-    .lvl = 44,
-    .species = SPECIES_RAICHU,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_PROTECT}
+    .lvl = 60,
+    .species = SPECIES_PLUSLE,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_VOLT_TACKLE, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
     },
     {
     .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_AMPHAROS,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_PROTECT, MOVE_THUNDER_WAVE, MOVE_LIGHT_SCREEN}
+    .lvl = 60,
+    .species = SPECIES_MINUN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
     },
     {
     .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_ELECTRODE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROLLOUT, MOVE_THUNDER, MOVE_EXPLOSION, MOVE_RAIN_DANCE}
+    .lvl = 60,
+    .species = SPECIES_LANTURN,
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .moves = {MOVE_THUNDER, MOVE_SURF, MOVE_CONFUSE_RAY, MOVE_RAIN_DANCE}
     },
     {
     .iv = 255,
-    .lvl = 48,
+    .lvl = 60,
     .species = SPECIES_MAGNETON,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_THUNDER, MOVE_RAIN_DANCE}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_THUNDER_WAVE, MOVE_REFLECT, MOVE_THUNDER, MOVE_RAIN_DANCE}
     },
     {
     .iv = 255,
-    .lvl = 50,
+    .lvl = 60,
+    .species = SPECIES_PORYGON2,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_HYPER_BEAM, MOVE_IRON_TAIL, MOVE_AERIAL_ACE, MOVE_PURSUIT}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
     .species = SPECIES_MANECTRIC,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_ROAR}
     }
 };
 // Wattson Rematch 4
 static const struct TrainerMon sParty_Wattson5[] = {
-    {
+     {
     .iv = 255,
-    .lvl = 50,
-    .species = SPECIES_ELECTABUZZ,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SWIFT, MOVE_FOCUS_PUNCH, MOVE_THUNDER_PUNCH, MOVE_LIGHT_SCREEN}
-    },
-    {
-    .iv = 255,
-    .lvl = 51,
+    .lvl = 60,
     .species = SPECIES_RAICHU,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_SLAM, MOVE_RAIN_DANCE, MOVE_PROTECT}
+    .heldItem = ITEM_MYSTIC_TICKET,
+    .moves = {MOVE_VOLT_TACKLE, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_WISH}
     },
     {
     .iv = 255,
-    .lvl = 51,
-    .species = SPECIES_AMPHAROS,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_PROTECT, MOVE_THUNDER_WAVE, MOVE_LIGHT_SCREEN}
-    },
-    {
-    .iv = 255,
-    .lvl = 53,
-    .species = SPECIES_ELECTRODE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROLLOUT, MOVE_THUNDER, MOVE_EXPLOSION, MOVE_RAIN_DANCE}
-    },
-    {
-    .iv = 255,
-    .lvl = 53,
-    .species = SPECIES_MAGNETON,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SUPERSONIC, MOVE_PROTECT, MOVE_THUNDER, MOVE_RAIN_DANCE}
+    .lvl = 60,
+    .species = SPECIES_LANTURN,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_THUNDER, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_RAIN_DANCE}
     },
     {
     .iv = 255,
     .lvl = 55,
+    .species = SPECIES_JOLTEON,
+    .heldItem = ITEM_SPELL_TAG,
+    .moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_BATON_PASS, MOVE_SHADOW_BALL}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_PORYGON2,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_THUNDER, MOVE_ICE_BEAM, MOVE_THUNDER_WAVE, MOVE_RECOVER}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_ELECTABUZZ,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_THUNDER, MOVE_CROSS_CHOP, MOVE_RAIN_DANCE, MOVE_ICE_PUNCH}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
     .species = SPECIES_MANECTRIC,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_THUNDER, MOVE_PROTECT}
+    .heldItem = ITEM_MAGNET,
+    .moves = {MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
     }
 };
 // Flannery Rematch 1 after Magma Hideout
