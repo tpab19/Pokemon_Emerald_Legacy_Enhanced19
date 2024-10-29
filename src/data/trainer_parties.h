@@ -11410,128 +11410,135 @@ static const struct TrainerMon sParty_Flannery2[] = {
 static const struct TrainerMon sParty_Flannery3[] = {
     {
     .iv = 255,
-    .lvl = 41,
-    .species = SPECIES_GROWLITHE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HELPING_HAND, MOVE_FLAMETHROWER, MOVE_ROAR, MOVE_SUNNY_DAY}
-    },
-    {
-    .iv = 255,
-    .lvl = 43,
+    .lvl = 55,
     .species = SPECIES_MAGCARGO,
-    .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_ATTRACT, MOVE_LIGHT_SCREEN, MOVE_ROCK_SLIDE}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_FIRE_BLAST, MOVE_ROCK_SLIDE, MOVE_AMNESIA, MOVE_SUNNY_DAY}
     },
     {
     .iv = 255,
-    .lvl = 41,
-    .species = SPECIES_PONYTA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_ATTRACT, MOVE_SOLAR_BEAM, MOVE_BOUNCE}
+    .lvl = 55,
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_MIRACLE_SEED,
+    .moves = {MOVE_SYNTHESIS, MOVE_SOLAR_BEAM, MOVE_SLEEP_POWDER, MOVE_SUNNY_DAY}
     },
     {
     .iv = 255,
-    .lvl = 43,
+    .lvl = 55,
     .species = SPECIES_CAMERUPT,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EARTHQUAKE, MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_ATTRACT, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
-    .lvl = 45,
+    .lvl = 55,
+    .species = SPECIES_CHARIZARD,
+    .heldItem = ITEM_HARD_STONE,
+    .moves = {MOVE_OVERHEAT, MOVE_SWORDS_DANCE, MOVE_AERIAL_ACE, MOVE_ROCK_SLIDE}
+    },
+    {
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_MAGMAR,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_FIRE_BLAST, MOVE_PSYCHIC, MOVE_THUNDER_PUNCH, MOVE_CONFUSE_RAY}
+    },
+    {
+    .iv = 255,
+    .lvl = 55,
     .species = SPECIES_TORKOAL,
-    .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_ERUPTION, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_REST}
     }
 };
 // Flannery Rematch 3
 static const struct TrainerMon sParty_Flannery4[] = {
     {
     .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_HOUNDOUR,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROAR, MOVE_SOLAR_BEAM, MOVE_TAUNT, MOVE_SUNNY_DAY}
+    .lvl = 60,
+    .species = SPECIES_CHARIZARD,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_SUNNY_DAY, MOVE_HEAT_WAVE, MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_GROWLITHE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HELPING_HAND, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_ROAR}
-    },
-    {
-    .iv = 255,
-    .lvl = 48,
-    .species = SPECIES_MAGCARGO,
-    .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_ATTRACT, MOVE_LIGHT_SCREEN, MOVE_ROCK_SLIDE}
-    },
-    {
-    .iv = 255,
-    .lvl = 46,
-    .species = SPECIES_RAPIDASH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_ATTRACT, MOVE_SOLAR_BEAM, MOVE_BOUNCE}
-    },
-    {
-    .iv = 255,
-    .lvl = 48,
+    .lvl = 60,
     .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EARTHQUAKE, MOVE_ATTRACT}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_ERUPTION, MOVE_PROTECT, MOVE_EXPLOSION, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
-    .lvl = 50,
-    .species = SPECIES_TORKOAL,
+    .lvl = 60,
+    .species = SPECIES_JUMPLUFF,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SLEEP_POWDER, MOVE_SYNTHESIS, MOVE_LEECH_LIFE, MOVE_PROTECT}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_HOUNDOOM,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_SOLAR_BEAM, MOVE_REST}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_RAPIDASH,
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_FIRE_BLAST, MOVE_HI_JUMP_KICK, MOVE_BATON_PASS, MOVE_AGILITY}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_TORKOAL,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_ERUPTION, MOVE_ROCK_SLIDE, MOVE_YAWN, MOVE_REST}
     }
 };
 // Flannery Rematch 4
 static const struct TrainerMon sParty_Flannery5[] = {
     {
     .iv = 255,
-    .lvl = 51,
+    .lvl = 65,
     .species = SPECIES_ARCANINE,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_HELPING_HAND, MOVE_FLAMETHROWER, MOVE_SUNNY_DAY, MOVE_ROAR}
+    .moves = {MOVE_OVERHEAT, MOVE_EXTREME_SPEED, MOVE_SUNNY_DAY, MOVE_ROAR}
     },
     {
     .iv = 255,
-    .lvl = 53,
+    .lvl = 65,
     .species = SPECIES_MAGCARGO,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_ATTRACT, MOVE_LIGHT_SCREEN, MOVE_ROCK_SLIDE}
+    .moves = {MOVE_HEAT_WAVE, MOVE_SUBSTITUTE, MOVE_REFRESH, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
-    .lvl = 51,
-    .species = SPECIES_HOUNDOOM,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_ROAR, MOVE_SOLAR_BEAM, MOVE_TAUNT, MOVE_SUNNY_DAY}
+    .lvl = 65,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_SYNTHESIS, MOVE_SUNNY_DAY}
     },
     {
     .iv = 255,
-    .lvl = 51,
-    .species = SPECIES_RAPIDASH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_FLAMETHROWER, MOVE_ATTRACT, MOVE_SOLAR_BEAM, MOVE_BOUNCE}
+    .lvl = 65,
+    .species = SPECIES_BLAZIKEN,
+    .heldItem = ITEM_MIRACLE_SEED,
+    .moves = {MOVE_BLAZE_KICK, MOVE_HI_JUMP_KICK, MOVE_THUNDER_PUNCH, MOVE_BOUNCE}
     },
     {
     .iv = 255,
-    .lvl = 53,
-    .species = SPECIES_CAMERUPT,
+    .lvl = 65,
+    .species = SPECIES_TYPHLOSION,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EARTHQUAKE, MOVE_ATTRACT}
+    .moves = {MOVE_ERUPTION, MOVE_ENDURE, MOVE_REVERSAL, MOVE_THUNDER_PUNCH}
     },
     {
     .iv = 255,
-    .lvl = 55,
+    .lvl = 65,
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_WHITE_HERB,
-    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ATTRACT}
+    .moves = {MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_CURSE, MOVE_ROCK_SLIDE}
     }
 };
 // Norman Rematch 1 after getting all 8 gym badges
