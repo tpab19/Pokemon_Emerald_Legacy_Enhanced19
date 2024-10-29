@@ -91,8 +91,8 @@ TerraCave_End_EventScript_RanFromGroudon::
 TerraCave_End_EventScript_MaxieLeaves::
 	msgbox TerraCave_End_Text_MaxieCaughtGroudon, MSGBOX_DEFAULT
 	closemessage
-TerraCave_End_EventScript_MaxieLeaves_NoText::
 	setflag FLAG_BEAT_MAXIE_TERRA_CAVE
+TerraCave_End_EventScript_MaxieLeaves_NoText::
 	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	call TerraCave_End_EventScript_SetMtPyre
 	applymovement LOCALID_MAXIE, TerraCave_End_Movement_MaxieLeaves

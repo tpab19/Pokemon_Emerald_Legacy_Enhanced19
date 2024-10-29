@@ -91,8 +91,8 @@ MarineCave_End_EventScript_RanFromKyogre::
 MarineCave_End_EventScript_ArchieLeaves::
 	msgbox MarineCave_End_Text_ArchieCaughtKyogre, MSGBOX_DEFAULT
 	closemessage
-MarineCave_End_EventScript_ArchieLeaves_NoText::
 	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE
+MarineCave_End_EventScript_ArchieLeaves_NoText::
 	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	call MarineCave_End_EventScript_SetMtPyre
 	applymovement LOCALID_ARCHIE, MarineCave_End_Movement_ArchieLeaves
