@@ -119,7 +119,7 @@
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
 #define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_SHOAL_CAVE_HIGH_TIDE_INNER_ROOM_WILD_SET     0x4066
+#define VAR_SHOAL_CAVE_LOW_TIDE_INNER_ROOM_WILD_SET     0x4066
 #define VAR_ARTISAN_CAVE_B1F_WILD_SET                    0x4067
 #define VAR_SOOTOPOLIS_CITY_WILD_SET                     0x4068
 #define VAR_ROUTE110_STATE                               0x4069
