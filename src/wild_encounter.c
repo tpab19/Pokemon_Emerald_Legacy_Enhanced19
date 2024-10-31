@@ -516,10 +516,10 @@ static u16 GetCurrentMapWildMonHeaderId(void)
             {
                 i += VarGet(VAR_ARTISAN_CAVE_B1F_WILD_SET);
             }
-            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SHOAL_CAVE_HIGH_TIDE_INNER_ROOM) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SHOAL_CAVE_HIGH_TIDE_INNER_ROOM))
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SHOAL_CAVE_LOW_TIDE_INNER_ROOM) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SHOAL_CAVE_LOW_TIDE_INNER_ROOM))
             {
-                i += VarGet(VAR_SHOAL_CAVE_HIGH_TIDE_INNER_ROOM_WILD_SET);
+                i += VarGet(VAR_SHOAL_CAVE_LOW_TIDE_INNER_ROOM_WILD_SET);
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ALTERING_CAVE) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ALTERING_CAVE))
