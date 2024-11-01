@@ -11214,7 +11214,7 @@ static const struct TrainerMon sParty_Wattson2[] = {
     {
     .iv = 210,
     .lvl = 34,
-    .species = SPECIES_PLUSLE,
+    .species = SPECIES_MINUN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDERBOLT, MOVE_WISH, MOVE_ENCORE, MOVE_THUNDER_WAVE}
     },
