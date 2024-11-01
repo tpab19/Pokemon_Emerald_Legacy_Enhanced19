@@ -10535,40 +10535,46 @@ static const struct TrainerMon sParty_Elijah[] = {
 //Route 111 Desert Picnicker 3
 static const struct TrainerMon sParty_Celia[] = {
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_CACNEA,
+    .iv = 150,
+    .lvl = 29,
+    .species = SPECIES_RHYHORN,
+    .moves = {MOVE_SCARY_FACE, MOVE_PROTECT, MOVE_MAGNITUDE, MOVE_ROCK_TOMB}
     },
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_SANDSHREW,
-    }
+    .iv = 50,
+    .lvl = 30,
+    .species = SPECIES_SANDSLASH,
+    .moves = {MOVE_METAL_CLAW, MOVE_DOUBLE_TEAM, MOVE_SLASH, MOVE_CUT}
+    },
 };
 //Route 111 Desert Ruin Maniac 2
 static const struct TrainerMon sParty_Bryan[] = {
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_BALTOY,
+    .iv = 50,
+    .lvl = 30,
+    .species = SPECIES_CACTURNE,
+    .moves = {MOVE_GROWTH, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK}
     },
     {
-    .iv = 0,
-    .lvl = 27,
-    .species = SPECIES_SANDSLASH,
+    .iv = 100,
+    .lvl = 31,
+    .species = SPECIES_NOSEPASS,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_SPARK, MOVE_THUNDER_WAVE, MOVE_HEADBUTT}
     }
 };
 //Route 111 Desert Camper 3
 static const struct TrainerMon sParty_Branden[] = {
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_TAILLOW,
+    .iv = 50,
+    .lvl = 30,
+    .species = SPECIES_GRAVELER,
+    .moves = {MOVE_ROCK_TOMB, MOVE_PROTECT, MOVE_MAGNITUDE, MOVE_ROLLOUT}
     },
     {
-    .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_NUZLEAF,
+    .iv = 50,
+    .lvl = 30,
+    .species = SPECIES_SANDSLASH,
+    .moves = {MOVE_METAL_CLAW, MOVE_DOUBLE_TEAM, MOVE_SLASH, MOVE_CUT}
     }
 };
 // Route 112 North Section Kindler
