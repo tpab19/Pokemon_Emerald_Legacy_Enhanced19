@@ -1047,6 +1047,198 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_SKITTY
+    },
+    [INGAME_TRADE_TORCHIC_MAY_TREECKO] =
+    {
+        .nickname = _("TORCHIC"),
+        .species = SPECIES_TORCHIC,
+        .ivs = {13, 15, 13, 13, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TREECKO
+    },
+    [INGAME_TRADE_TORCHIC_MAY_MUDKIP] =
+    {
+        .nickname = _("TORCHIC"),
+        .species = SPECIES_TORCHIC,
+        .ivs = {13, 15, 13, 13, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_MUDKIP
+    },
+    [INGAME_TRADE_TORCHIC_BRENDEN_TREECKO] =
+    {
+        .nickname = _("TORCHIC"),
+        .species = SPECIES_TORCHIC,
+        .ivs = {13, 15, 13, 13, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TREECKO
+    },
+    [INGAME_TRADE_TORCHIC_BRENDEN_MUDKIP] =
+    {
+        .nickname = _("TORCHIC"),
+        .species = SPECIES_TORCHIC,
+        .ivs = {13, 15, 13, 13, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_MUDKIP
+    },
+    [INGAME_TRADE_MUDKIP_MAY_TREECKO] =
+    {
+        .nickname = _("MUDKIP"),
+        .species = SPECIES_MUDKIP,
+        .ivs = {15, 15, 13, 13, 13, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TREECKO
+    },
+    [INGAME_TRADE_MUDKIP_MAY_TORCHIC] =
+    {
+        .nickname = _("MUDKIP"),
+        .species = SPECIES_MUDKIP,
+        .ivs = {15, 15, 13, 13, 13, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TORCHIC
+    },
+    [INGAME_TRADE_MUDKIP_BRENDEN_TREECKO] =
+    {
+        .nickname = _("MUDKIP"),
+        .species = SPECIES_MUDKIP,
+        .ivs = {15, 15, 13, 13, 13, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TREECKO
+    },
+    [INGAME_TRADE_MUDKIP_BRENDEN_TORCHIC] =
+    {
+        .nickname = _("MUDKIP"),
+        .species = SPECIES_MUDKIP,
+        .ivs = {15, 15, 13, 13, 13, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TORCHIC
+    },
+    [INGAME_TRADE_TREECKO_MAY_MUDKIP] =
+    {
+        .nickname = _("TREECKO"),
+        .species = SPECIES_TREECKO,
+        .ivs = {13, 13, 13, 15, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_MUDKIP
+    },
+    [INGAME_TRADE_TREECKO_MAY_TORCHIC] =
+    {
+        .nickname = _("TREECKO"),
+        .species = SPECIES_TREECKO,
+        .ivs = {13, 13, 13, 15, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("MAY"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TORCHIC
+    },
+    [INGAME_TRADE_TREECKO_BRENDEN_MUDKIP] =
+    {
+        .nickname = _("TREECKO"),
+        .species = SPECIES_TREECKO,
+        .ivs = {13, 13, 13, 15, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_MUDKIP
+    },
+    [INGAME_TRADE_TREECKO_BRENDEN_TORCHIC] =
+    {
+        .nickname = _("TREECKO"),
+        .species = SPECIES_TREECKO,
+        .ivs = {13, 13, 13, 15, 15, 13},
+        .abilityNum = 0,
+        .otId = 42424,
+        .conditions = {5, 5, 5, 30, 5},
+        .personality = 0x7F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("BRENDEN"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_TORCHIC
     }
 };
 

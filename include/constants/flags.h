@@ -1228,8 +1228,8 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAY                               0x4A0
 #define FLAG_HIDE_SOOTOPOLIS_CITY_BRENDAN                           0x4A1
 #define FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR                        0x4A2
-#define FLAG_UNUSED_0x4A3                                           0x4A3 // Unused Flag
-#define FLAG_UNUSED_0x4A4                                           0x4A4 // Unused Flag
+#define FLAG_RIVAL_TRADE_1_COMPLETED                                0x4A3
+#define FLAG_RIVAL_TRADE_2_COMPLETED                                0x4A4
 #define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
 #define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
 #define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
