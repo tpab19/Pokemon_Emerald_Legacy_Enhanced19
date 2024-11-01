@@ -603,7 +603,7 @@ GraniteCaveB1F_Text_DanielPostBattle:
 	.string "Keep climbing, and you’ll reach the peak!$"
 
 GraniteCaveB2F_Text_TobinIntro:
-	.string "Granite Cave’s secrets are for those\n"
+	.string "GRANITE CAVE’s secrets are for those\n"
 	.string "who dare to dig deep!\p"
 	.string "Let’s see how far you can go!$"
 
