@@ -1476,7 +1476,7 @@ static const struct TrainerMon sParty_Tammy[] = {
     },
     {
     .iv = 0,
-    .lvl = 33,
+    .lvl = 34,
     .species = SPECIES_SHUPPET,
     }
 };
@@ -10786,6 +10786,11 @@ static const struct TrainerMon sParty_Cale[] = {
     {
     .iv = 0,
     .lvl = 35,
+    .species = SPECIES_TRAPINCH,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
     .species = SPECIES_VIBRAVA,
     }
 };
@@ -10794,7 +10799,7 @@ static const struct TrainerMon sParty_Myles[] = {
     {
     .iv = 10,
     .lvl = 28,
-    .species = SPECIES_PIKACHU,
+    .species = SPECIES_RAICHU,
     },
     {
     .iv = 10,
@@ -10804,12 +10809,17 @@ static const struct TrainerMon sParty_Myles[] = {
     {
     .iv = 10,
     .lvl = 28,
-    .species = SPECIES_TRAPINCH,
+    .species = SPECIES_NOSEPASS,
     },
     {
     .iv = 10,
     .lvl = 28,
     .species = SPECIES_WIGGLYTUFF,
+    }
+     {
+    .iv = 10,
+    .lvl = 28,
+    .species = SPECIES_BELLOSOM,
     }
 };
 // Route 121 BreederF
@@ -10822,7 +10832,7 @@ static const struct TrainerMon sParty_Pat[] = {
     {
     .iv = 10,
     .lvl = 28,
-    .species = SPECIES_BRELOOM,
+    .species = SPECIES_VILEPLUME,
     },
     {
     .iv = 10,
