@@ -3646,7 +3646,7 @@ static const struct TrainerMon sParty_Norman1[] = {
 // Fortree Gym Leader
 static const struct TrainerMon sParty_Winona1[] = {
     {
-    .iv = 210,
+    .iv = 200,
     .lvl = 36,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_NONE,
@@ -3660,14 +3660,14 @@ static const struct TrainerMon sParty_Winona1[] = {
     .moves = {MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_TAKE_DOWN, MOVE_WHIRLWIND}
     },
     {
-    .iv = 210,
+    .iv = 200,
     .lvl = 36,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_WATER_PULSE, MOVE_SHOCK_WAVE, MOVE_ICE_BEAM, MOVE_AERIAL_ACE}
     },
     {
-    .iv = 245,
+    .iv = 235,
     .lvl = 37,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_QUICK_CLAW,
@@ -5466,12 +5466,12 @@ static const struct TrainerMon sParty_Phil[] = {
 static const struct TrainerMon sParty_Jared[] = {
     {
     .iv = 100,
-    .lvl = 30,
+    .lvl = 32,
     .species = SPECIES_DODUO,
     },
     {
     .iv = 100,
-    .lvl = 30,
+    .lvl = 32,
     .species = SPECIES_TROPIUS,
     }
 };
@@ -5479,7 +5479,7 @@ static const struct TrainerMon sParty_Jared[] = {
 static const struct TrainerMon sParty_Humberto[] = {
     {
     .iv = 250,
-    .lvl = 32,
+    .lvl = 34,
     .species = SPECIES_SKARMORY,
     }
 };
@@ -5500,12 +5500,12 @@ static const struct TrainerMon sParty_Presley[] = {
 static const struct TrainerMon sParty_Edwardo[] = {
     {
     .iv = 150,
-    .lvl = 29,
+    .lvl = 33,
     .species = SPECIES_VIBRAVA,
     },
     {
     .iv = 150,
-    .lvl = 31,
+    .lvl = 32,
     .species = SPECIES_MASQUERAIN,
     }
 };
@@ -9170,25 +9170,25 @@ static const struct TrainerMon sParty_Riley[] = {
 static const struct TrainerMon sParty_Flint[] = {
     {
     .iv = 150,
-    .lvl = 29,
+    .lvl = 32,
     .species = SPECIES_SWELLOW,
     },
     {
     .iv = 150,
-    .lvl = 29,
+    .lvl = 33,
     .species = SPECIES_XATU,
     }
 };
 // Fortree Gym Picknicker
 static const struct TrainerMon sParty_Ashley[] = {
     {
-    .iv = 100,
-    .lvl = 29,
+    .iv = 150,
+    .lvl = 32,
     .species = SPECIES_SWABLU,
     },
     {
     .iv = 100,
-    .lvl = 31,
+    .lvl = 32,
     .species = SPECIES_DODRIO,
     }
 };
@@ -12253,13 +12253,13 @@ static const struct TrainerMon sParty_Angelo[] = {
 // Fortree Gym Bird Keeper 4
 static const struct TrainerMon sParty_Darius[] = {
     {
-    .iv = 200,
-    .lvl = 30,
+    .iv = 150,
+    .lvl = 32,
     .species = SPECIES_PELIPPER,
     },
     {
-    .iv = 200,
-    .lvl = 30,
+    .iv = 150,
+    .lvl = 32,
     .species = SPECIES_TROPIUS,
     }
 };
