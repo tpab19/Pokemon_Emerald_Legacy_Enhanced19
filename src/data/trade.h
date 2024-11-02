@@ -1016,10 +1016,10 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_VOLBEAT
     },
-    [INGAME_TRADE_HORSEA] =
+    [INGAME_TRADE_BAGON] =
     {
         .nickname = _("SEASOR"),
-        .species = SPECIES_HORSEA,
+        .species = SPECIES_BAGON,
         .ivs = {5, 4, 4, 4, 5, 4},
         .abilityNum = 0,
         .otId = 46285,
@@ -1030,7 +1030,7 @@ static const struct InGameTrade sIngameTrades[] =
         .otName = _("SKYLAR"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_BAGON
+        .requestedSpecies = SPECIES_RELICANTH
     },
     [INGAME_TRADE_MEOWTH] =
     {
@@ -1239,6 +1239,54 @@ static const struct InGameTrade sIngameTrades[] =
         .otGender = FEMALE,
         .sheen = 10,
         .requestedSpecies = SPECIES_TORCHIC
+    },
+    [INGAME_TRADE_NUMEL] =
+    {
+        .nickname = _("MEL"),
+        .species = SPECIES_NUMEL,
+        .ivs = {5, 4, 5, 4, 4, 4},
+        .abilityNum = 1,
+        .otId = 38727,
+        .conditions = {30, 5, 5, 5, 5},
+        .personality = 0x84,
+        .heldItem = ITEM_CHESTO_BERRY,
+        .mailNum = -1,
+        .otName = _("MARLI"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_SHROOMISH
+    },
+    [INGAME_TRADE_SNORUNT] =
+    {
+        .nickname = _("NIPPY"),
+        .species = SPECIES_SNORUNT,
+        .ivs = {4, 4, 4, 5, 5, 4},
+        .abilityNum = 0,
+        .otId = 12345,
+        .conditions = {10, 10, 10, 10, 10},
+        .personality = 0x6F,
+        .heldItem = ITEM_NONE,
+        .mailNum = -1,
+        .otName = _("DANIELLA"),
+        .otGender = FEMALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_WHISMUR
+    },
+    [INGAME_TRADE_LOUDRED] =
+    {
+        .nickname = _("ECHO"),
+        .species = SPECIES_LOUDRED,
+        .ivs = {4, 4, 4, 5, 5, 4},
+        .abilityNum = 0,
+        .otId = 73997,
+        .conditions = {5, 5, 30, 5, 5},
+        .personality = 0x8B,
+        .heldItem = ITEM_WOOD_MAIL,
+        .mailNum = 0,
+        .otName = _("ANTON"),
+        .otGender = MALE,
+        .sheen = 10,
+        .requestedSpecies = SPECIES_KECLEON
     }
 };
 

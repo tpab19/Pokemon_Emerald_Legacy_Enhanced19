@@ -11049,7 +11049,7 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .lvl = 65,
     .species = SPECIES_ARMALDO,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE, MOVE_TWINNEEDLE, MOVE_ROCK_BLAST}
+    .moves = {MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE, MOVE_TWINEEDLE, MOVE_ROCK_BLAST}
     },
     {
     .iv = 255,
@@ -11301,14 +11301,14 @@ static const struct TrainerMon sParty_Wattson4[] = {
     .lvl = 60,
     .species = SPECIES_PLUSLE,
     .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_THUNDER_BOLT, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
     },
     {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_MINUN,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_THUNDER_BOLT, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
+    .moves = {MOVE_THUNDERBOLT, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
     },
     {
     .iv = 255,

@@ -5,7 +5,7 @@ RustboroCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_RUSTBORO_NPC_TRADE_COMPLETED, RustboroCity_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_SEEDOT
+	setvar VAR_0x8008, INGAME_TRADE_NUMEL
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -50,28 +50,28 @@ RustboroCity_House1_EventScript_Hiker::
 	end
 
 RustboroCity_House1_Text_IllTradeIfYouWant:
-	.string "Huh? My POKéMON is cute?\n"
-	.string "Sure, I knew that.\p"
-	.string "But if you really want, I'm willing\n"
-	.string "to trade it to you.\p"
+	.string "Oh, do you think my POKéMON is cool?\n"
+	.string "Yeah, I think so too!\p"
+	.string "But hey, if you're interested, I'd be\n"
+	.string "willing to trade it with you.\p"
 	.string "I'll trade you my {STR_VAR_2} for\n"
-	.string "a {STR_VAR_1} if you want.$"
+	.string "a {STR_VAR_1}, what do you say?$"
 
 RustboroCity_House1_Text_PleaseBeGoodToMyPokemon:
-	.string "Eheheh…\n"
-	.string "Please be good to my POKéMON.$"
+	.string "Hehe… Take good care of {STR_VAR_2},\n"
+	.string "okay? It loves adventure!$"
 
 RustboroCity_House1_Text_DoesntLookLikeMonToMe:
-	.string "Huh? That doesn't look anything like\n"
-	.string "a {STR_VAR_1} to me.$"
+	.string "Hmm? That doesn't seem like a\n"
+	.string "{STR_VAR_1} to me…$"
 
 RustboroCity_House1_Text_YouDontWantToThatsOkay:
-	.string "Oh, if you don't want to, that's okay.\n"
-	.string "But my POKéMON is cute, you know…$"
+	.string "Oh, that’s fine if you don’t want to.\n"
+	.string "NUMEL will always be my little explorer.$"
 
 RustboroCity_House1_Text_AnyPokemonCanBeCute:
-	.string "Any POKéMON can be cute if you raise\n"
-	.string "it with care and kindness.$"
+	.string "You know, any POKéMON can be special\n"
+	.string "if you show it love and patience.$"
 
 RustboroCity_House1_Text_AllSortsOfPlaces:
 	.string "In all sorts of places, there are all\n"
