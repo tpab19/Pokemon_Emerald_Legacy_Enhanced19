@@ -11301,14 +11301,14 @@ static const struct TrainerMon sParty_Wattson4[] = {
     .lvl = 60,
     .species = SPECIES_PLUSLE,
     .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_VOLT_TACKLE, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
+    .moves = {MOVE_THUNDER_BOLT, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
     },
     {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_MINUN,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
+    .moves = {MOVE_THUNDER_BOLT, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
     },
     {
     .iv = 255,
@@ -11345,7 +11345,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_RAICHU,
-    .heldItem = ITEM_MYSTIC_TICKET,
+    .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_VOLT_TACKLE, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_WISH}
     },
     {
@@ -11366,7 +11366,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_PORYGON2,
-    .heldItem = ITEM_CHOICE_BAND,
+    .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_THUNDER, MOVE_ICE_BEAM, MOVE_THUNDER_WAVE, MOVE_RECOVER}
     },
     {
@@ -11381,7 +11381,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .lvl = 60,
     .species = SPECIES_MANECTRIC,
     .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
+    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
     }
 };
 // Flannery Rematch 1 after Magma Hideout
