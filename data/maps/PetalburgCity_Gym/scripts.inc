@@ -1180,6 +1180,15 @@ PetalburgCity_Gym_EventScript_GymStatue::
 	releaseall
 	end
 
+PetalburgCity_Gym_EventScript_NormanRematchCall::
+	lockall
+	pokenavcall PetalburgCity_Gym_Text_NormanRematchCall
+	waitmessage
+	closemessage
+	clearflag FLAG_ENABLE_NORMAN_REMATCH_CALL
+	releaseall
+	end
+
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "DAD: Hm?\p"
 	.string "Well, if it isn't {PLAYER}!\n"
@@ -1633,3 +1642,20 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two POKéMON.$"
 
+PetalburgCity_Gym_Text_NormanRematchCall:
+	.string "… … … … … …\n"
+	.string "… … … … … Beep!\p"
+	.string "NORMAN: Hello, {PLAYER}?\n"
+	.string "I heard that you've collected\l"
+	.string "all eight GYM BADGES.\p"
+	.string "That's an impressive feat, I\n"
+	.string "can't tell you how proud I am.\p"
+	.string "But, as a GYM LEADER, I won't\n"
+	.string "rest until I've tested how far\l"
+	.string "you've come.\p"
+	.string "Come by PETALBURG GYM anytime.\n"
+	.string "I'll be waiting for your challenge.\p"
+	.string "Let's see just how strong my child\n"
+	.string "has become.\p"
+	.string "… … … … … …\n"
+	.string "… … … … … Click!$"
