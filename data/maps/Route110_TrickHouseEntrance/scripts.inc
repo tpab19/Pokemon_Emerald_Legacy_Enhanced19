@@ -404,6 +404,8 @@ Route110_TrickHouseEntrance_EventScript_GotReward::
 Route110_TrickHouseEntrance_EventScript_MechadollReward::
 	applymovement LOCALID_TRICK_MASTER, Common_Movement_FacePlayer
 	waitmovement 0
+	call_if_unset FLAG_TRICK_HOUSE_PRIZE_EEVEE, Route110_TrickHouseEntrance_EventScript_GiveEevee
+	call_if_set FLAG_TRICK_HOUSE_PRIZE_TENT, Route110_TrickHouseEntrance_EventScript_ReceivedTent
 	msgbox Route110_TrickHouseEntrance_Text_MechadollWhichTent, MSGBOX_DEFAULT
 	call Route110_TrickHouseEntrance_EventScript_ChooseTent
 	goto_if_eq VAR_RESULT, TRUE, Route110_TrickHouseEntrance_EventScript_ReceivedTent
@@ -424,6 +426,48 @@ Route110_TrickHouseEntrance_EventScript_GiveRedTent::
 
 Route110_TrickHouseEntrance_EventScript_GiveBlueTent::
 	givedecoration DECOR_BLUE_TENT
+	return
+
+Route110_TrickHouseEntrance_EventScript_GiveEevee::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
+	givemon SPECIES_EEVEE, 25
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route110_TrickHouseEntrance_EventScript_ReceiveEeveeParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route110_TrickHouseEntrance_EventScript_ReceiveEeveePC
+	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 1
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+Route110_TrickHouseEntrance_EventScript_ReceiveEeveeParty::
+	call Route110_TrickHouseEntrance_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_TrickHouseEntrance_EventScript_Return
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route110_TrickHouseEntrance_EventScript_Return
+	end
+
+Route110_TrickHouseEntrance_EventScript_ReceiveEeveePC::
+	call Route110_TrickHouseEntrance_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_TrickHouseEntrance_EventScript_SendEeveeToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route110_TrickHouseEntrance_EventScript_SendEeveeToPC
+	end
+
+Route110_TrickHouseEntrance_EventScript_SendEeveeToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route110_TrickHouseEntrance_EventScript_Return
+	end
+
+Route110_TrickHouseEntrance_EventScript_ReceivedEeveeFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message Route110_TrickHouseEntrance_Text_PlayerReceivedEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
+	return
+
+Route110_TrickHouseEntrance_EventScript_Return::
+	setflag FLAG_TRICK_HOUSE_PRIZE_EEVEE
 	return
 
 Route110_TrickHouseEntrance_EventScript_ReceivedTent::
@@ -824,3 +868,6 @@ Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere:
 	.string "The door is locked.\p"
 	.string "…On closer inspection, this is written\n"
 	.string "on it: “Write the secret code here.”$"
+
+Route110_TrickHouseEntrance_Text_PlayerReceivedEevee:
+	.string "{PLAYER} received EEVEE!$"

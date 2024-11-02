@@ -154,10 +154,13 @@ Route110_TrickHouseEnd_EventScript_CompletedPuzzle8::
 	applymovement LOCALID_TRICK_MASTER, Common_Movement_FacePlayer
 	waitmovement 0
 	delay 30
-	msgbox Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent, MSGBOX_DEFAULT
 	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 0
+	msgbox Route110_TrickHouseEnd_Text_DefeatedMeEeveeReward, MSGBOX_DEFAULT
+	call Route110_TrickHouseEnd_EventScript_GiveEevee
+	msgbox Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent, MSGBOX_DEFAULT
 	call Route110_TrickHouseEnd_EventScript_ChooseTent
 	call_if_eq VAR_RESULT, FALSE, Route110_TrickHouseEnd_EventScript_NoRoomForTent
+	setflag FLAG_TRICK_HOUSE_PRIZE_TENT
 	msgbox Route110_TrickHouseEnd_Text_LeavingOnJourney, MSGBOX_DEFAULT
 	call Route110_TrickHouseEnd_EventScript_TrickMasterExit
 	special ResetTrickHouseNuggetFlag
@@ -176,6 +179,48 @@ Route110_TrickHouseEnd_EventScript_GiveRedTent::
 
 Route110_TrickHouseEnd_EventScript_GiveBlueTent::
 	givedecoration DECOR_BLUE_TENT
+	return
+
+Route110_TrickHouseEnd_EventScript_GiveEevee::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
+	givemon SPECIES_EEVEE, 25
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route110_TrickHouseEnd_EventScript_ReceiveEeveeParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route110_TrickHouseEnd_EventScript_ReceiveEeveePC
+	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 1
+	goto Common_EventScript_NoMoreRoomForPokemon
+
+Route110_TrickHouseEnd_EventScript_ReceiveEeveeParty::
+	call Route110_TrickHouseEnd_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_TrickHouseEnd_EventScript_Return
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto Route110_TrickHouseEnd_EventScript_Return
+	end
+
+Route110_TrickHouseEnd_EventScript_ReceiveEeveePC::
+	call Route110_TrickHouseEnd_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route110_TrickHouseEnd_EventScript_SendEeveeToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto Route110_TrickHouseEnd_EventScript_SendEeveeToPC
+	end
+
+Route110_TrickHouseEnd_EventScript_SendEeveeToPC::
+	call Common_EventScript_TransferredToPC
+	goto Route110_TrickHouseEnd_EventScript_Return
+	end
+
+Route110_TrickHouseEnd_EventScript_ReceivedEeveeFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message Route110_TrickHouseEnd_Text_PlayerReceivedEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
+	return
+
+Route110_TrickHouseEnd_EventScript_Return::
+	setflag FLAG_TRICK_HOUSE_PRIZE_EEVEE
 	return
 
 Route110_TrickHouseEnd_EventScript_TrickMasterExit::
@@ -304,7 +349,7 @@ Route110_TrickHouseEnd_Text_FountainOfIdeasRunDry:
 	.string "Perhaps it is time I toured the country\n"
 	.string "on a quest to devise new tricks…$"
 
-Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
+Route110_TrickHouseEnd_Text_DefeatedMeEeveeReward:
 	.string "I hate to admit defeat, but you have\n"
 	.string "bested me!\p"
 	.string "Still, you must have been reeled in by\n"
@@ -314,10 +359,16 @@ Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
 	.string "losing!\p"
 	.string "In recognition of the friendship\n"
 	.string "between you, the driven, and the genius\l"
-	.string "that is myself, I demand that you take\l"
-	.string "this keepsake!\p"
-	.string "Actually there are two--\n"
-	.string "a RED TENT and a BLUE TENT.\l"
+	.string "that is myself,\p"
+	.string "I demand that you take this rare and\n"
+	.string "cherished Pokémon.\p"
+	.string "Take good care of it!$"
+
+Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:
+	.string "Oh, you're still here? Wonderful!\n"
+	.string "Actually, there is one more gift.\p"
+	.string "A keepsake for your achievements:\n"
+	.string "a RED TENT or a BLUE TENT.\l"
 	.string "Which do you prefer?$"
 
 Route110_TrickHouseEnd_Text_NoRoomInPC:
@@ -356,3 +407,5 @@ Route110_TrickHouseEnd_Text_YoureIgnoringMe:
 	.string "Now, now! You're ignoring me now?\n"
 	.string "Now that, I consider heartbreaking!$"
 
+Route110_TrickHouseEnd_Text_PlayerReceivedEevee:
+	.string "{PLAYER} received EEVEE!$"
