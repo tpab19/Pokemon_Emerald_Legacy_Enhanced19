@@ -10760,7 +10760,7 @@ static const struct TrainerMon sParty_Dayton[] = {
 // Route 119 Parasol Lady
 static const struct TrainerMon sParty_Rachel[] = {
     {
-    .iv = 0,
+    .iv = 150,
     .lvl = 26,
     .species = SPECIES_GOLDEEN,
     }
@@ -10966,7 +10966,7 @@ static const struct TrainerMon sParty_Roxanne3[] = {
     .lvl = 55,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDERBOLT, MOVE_SPARK}
+    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE}
     }
 };
 // Roxanne Rematch 3
@@ -11011,7 +11011,7 @@ static const struct TrainerMon sParty_Roxanne4[] = {
     .lvl = 60,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDER, MOVE_ICE_PUNCH}
+    .moves = {MOVE_ROCK_SLIDE, MOVE_PROTECT, MOVE_THUNDER, MOVE_ICE_PUNCH}
     }
 };
 // Roxanne Rematch 4
@@ -11041,15 +11041,15 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .iv = 255,
     .lvl = 65,
     .species = SPECIES_CRADILY,
-    .heldItem = ITEM_LEFTOVERS,
+    .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_INGRAIN, MOVE_ANCIENT_POWER, MOVE_GIGA_DRAIN, MOVE_PROTECT}
     },
     {
     .iv = 255,
     .lvl = 65,
     .species = SPECIES_ARMALDO,
-    .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_EXPLOSION, MOVE_CRUNCH, MOVE_EARTHQUAKE}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE, MOVE_TWINNEEDLE, MOVE_ROCK_BLAST}
     },
     {
     .iv = 255,
@@ -11301,14 +11301,14 @@ static const struct TrainerMon sParty_Wattson4[] = {
     .lvl = 60,
     .species = SPECIES_PLUSLE,
     .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_VOLT_TACKLE, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
+    .moves = {MOVE_THUNDER_BOLT, MOVE_MAGICAL_LEAF, MOVE_THUNDER_WAVE, MOVE_SUBSTITUTE}
     },
     {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_MINUN,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
+    .moves = {MOVE_THUNDER_BOLT, MOVE_WISH, MOVE_THUNDER_WAVE, MOVE_FOLLOW_ME}
     },
     {
     .iv = 255,
@@ -11345,7 +11345,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_RAICHU,
-    .heldItem = ITEM_MYSTIC_TICKET,
+    .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_VOLT_TACKLE, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_WISH}
     },
     {
@@ -11366,7 +11366,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_PORYGON2,
-    .heldItem = ITEM_CHOICE_BAND,
+    .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_THUNDER, MOVE_ICE_BEAM, MOVE_THUNDER_WAVE, MOVE_RECOVER}
     },
     {
@@ -11381,7 +11381,7 @@ static const struct TrainerMon sParty_Wattson5[] = {
     .lvl = 60,
     .species = SPECIES_MANECTRIC,
     .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
+    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
     }
 };
 // Flannery Rematch 1 after Magma Hideout
