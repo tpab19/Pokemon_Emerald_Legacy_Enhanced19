@@ -10821,11 +10821,11 @@ static const struct TrainerMon sParty_Myles[] = {
     .iv = 10,
     .lvl = 28,
     .species = SPECIES_WIGGLYTUFF,
-    }
-     {
+    },
+    {
     .iv = 10,
     .lvl = 28,
-    .species = SPECIES_BELLOSOM,
+    .species = SPECIES_BELLOSSOM,
     }
 };
 // Route 121 BreederF

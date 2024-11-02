@@ -105,9 +105,51 @@ MossdeepCity_Gym_EventScript_GiveCalmMind::
 	return
 
 MossdeepCity_Gym_EventScript_TateAndLizaRematch::
+	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue
+	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
+MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue::
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
 	end
+MossdeepCity_Gym_EventScript_GiveRematchReward::
+	msgbox MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_KINGS_ROCK, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_Gym_EventScript_NoRoom
+	msgbox MossdeepCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_TATEANDLIZA_REMATCH_REWARD
+	end
+MossdeepCity_Gym_EventScript_NoRoom::
+	msgbox MossdeepCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward:
+	.string "TATE: Your skills truly resonate with\n"
+	.string "the strength of mind and heart,\l"
+	.string "{PLAYER}.\p"
+	.string "LIZA: As a sign of our respect and to\n"
+	.string "celebrate this match, we wish to give\l"
+	.string "you something special.\p"
+	.string "TATE: Please accept this KING'S ROCK.\n"
+	.string "It holds power that can turn the tide\l"
+	.string "of battle.$"
+
+MossdeepCity_Gym_Text_NoRoomForReward:
+	.string "TATE: Oh…\n"
+	.string "LIZA: Your BAG is full.\p"
+	.string "TATE: Clear some space and come back,\n"
+	.string "and we will keep it safe for you.$"
+
+MossdeepCity_Gym_Text_GaveReward:
+	.string "TATE: This item can cause flinching…\n"
+	.string "LIZA: And even bring evolution!\p"
+	.string "TATE: Use it wisely in your journey,\n"
+	.string "for it holds great potential.$"
 
 @ All the below switch scripts are leftover from RS and are functionally unused
 MossdeepCity_Gym_EventScript_Switch1::

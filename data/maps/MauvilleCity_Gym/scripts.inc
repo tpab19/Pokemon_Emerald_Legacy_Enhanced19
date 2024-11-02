@@ -133,9 +133,45 @@ MauvilleCity_Gym_EventScript_CompletedNewMauville::
 	end
 
 MauvilleCity_Gym_EventScript_WattsonRematch::
+	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_WattsonRematchContinue
+	setvar 0x8005, TRAINER_WATTSON_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward
+MauvilleCity_Gym_EventScript_WattsonRematchContinue::
 	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
 	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
 	end
+MauvilleCity_Gym_EventScript_GiveRematchReward::
+	msgbox MauvilleCity_Gym_Text_WattsonGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_UP_GRADE, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_Gym_EventScript_NoRoom
+	msgbox MauvilleCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_WATTSON_REMATCH_REWARD
+	end
+MauvilleCity_Gym_EventScript_NoRoom::
+	msgbox MauvilleCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+MauvilleCity_Gym_Text_WattsonGiveRematchReward:
+	.string "Wahahahah!\p"
+	.string "You never fail to spark my excitement,\n"
+	.string "{PLAYER}!\p"
+	.string "As a token of appreciation and to\n"
+	.string "commemorate this electrifying battle,\l"
+	.string "I want you to have something special.$"
+
+MauvilleCity_Gym_Text_NoRoomForReward:
+	.string "Oh-ho! It seems your BAG is full!\n"
+	.string "Make some space, and I'll keep this\l"
+	.string "safe for you until you can claim it.$"
+
+MauvilleCity_Gym_Text_GaveReward:
+	.string "It's a nifty little item that could\n"
+	.string "change the way you train! Wahahah!$"
 
 MauvilleCity_Gym_EventScript_Switch1::
 	lockall
