@@ -10966,7 +10966,7 @@ static const struct TrainerMon sParty_Roxanne3[] = {
     .lvl = 55,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDERBOLT, MOVE_SPARK}
+    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE}
     }
 };
 // Roxanne Rematch 3
@@ -11011,7 +11011,7 @@ static const struct TrainerMon sParty_Roxanne4[] = {
     .lvl = 60,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_MAGNET,
-    .moves = {MOVE_SMELLING_SALT, MOVE_PROTECT, MOVE_THUNDER, MOVE_ICE_PUNCH}
+    .moves = {MOVE_ROCK_SLIDE, MOVE_PROTECT, MOVE_THUNDER, MOVE_ICE_PUNCH}
     }
 };
 // Roxanne Rematch 4
@@ -11041,15 +11041,15 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .iv = 255,
     .lvl = 65,
     .species = SPECIES_CRADILY,
-    .heldItem = ITEM_LEFTOVERS,
+    .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_INGRAIN, MOVE_ANCIENT_POWER, MOVE_GIGA_DRAIN, MOVE_PROTECT}
     },
     {
     .iv = 255,
     .lvl = 65,
     .species = SPECIES_ARMALDO,
-    .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_EXPLOSION, MOVE_CRUNCH, MOVE_EARTHQUAKE}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE, MOVE_TWINNEEDLE, MOVE_ROCK_BLAST}
     },
     {
     .iv = 255,
