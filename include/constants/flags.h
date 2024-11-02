@@ -1230,14 +1230,14 @@
 #define FLAG_SOOTOPOLIS_CITY_RIVAL_PROFESSOR                        0x4A2
 #define FLAG_RIVAL_TRADE_1_COMPLETED                                0x4A3
 #define FLAG_RIVAL_TRADE_2_COMPLETED                                0x4A4
-#define FLAG_UNUSED_0x4A5                                           0x4A5 // Unused Flag
-#define FLAG_UNUSED_0x4A6                                           0x4A6 // Unused Flag
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
+#define FLAG_GOT_ROXANNE_REMATCH_REWARD                             0x4A5
+#define FLAG_GOT_BRAWLY_REMATCH_REWARD                              0x4A6
+#define FLAG_GOT_WATTSON_REMATCH_REWARD                             0x4A7
+#define FLAG_GOT_FLANNERY_REMATCH_REWARD                            0x4A8
+#define FLAG_GOT_NORMAN_REMATCH_REWARD                              0x4A9
+#define FLAG_GOT_WINONA_REMATCH_REWARD                              0x4AA
+#define FLAG_GOT_TATEANDLIZA_REMATCH_REWARD                         0x4AB
+#define FLAG_GOT_JUAN_REMATCH_REWARD                                0x4AC
 #define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag

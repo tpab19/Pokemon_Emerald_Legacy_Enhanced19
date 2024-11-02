@@ -4325,3 +4325,16 @@ void CheckSpecies(void)
         }
     }
 }
+
+void HasRematchBeenFought(void)
+{
+    if (FlagGet(TRAINER_FLAGS_START + gSpecialVar_0x8005))
+    {
+        gSpecialVar_Result = TRUE;
+        return;
+    }
+    else
+    {
+        gSpecialVar_Result = FALSE;
+    }
+}

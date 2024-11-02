@@ -344,9 +344,46 @@ PetalburgCity_Gym_EventScript_GiveFacade2::
 	end
 
 PetalburgCity_Gym_EventScript_NormanRematch::
+	goto_if_set FLAG_GOT_NORMAN_REMATCH_REWARD, PetalburgCity_Gym_EventScript_NormanRematchContinue
+	setvar 0x8005, TRAINER_NORMAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
+PetalburgCity_Gym_EventScript_NormanRematchContinue::
 	trainerbattle_rematch_double TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
 	msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_AUTOCLOSE
 	end
+PetalburgCity_Gym_EventScript_GiveRematchReward::
+	msgbox PetalburgCity_Gym_Text_NormanGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_LUCKY_EGG, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, PetalburgCity_Gym_EventScript_NoRoom
+	msgbox PetalburgCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_NORMAN_REMATCH_REWARD
+	end
+PetalburgCity_Gym_EventScript_NoRoom::
+	msgbox PetalburgCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+PetalburgCity_Gym_Text_NormanGiveRematchReward:
+	.string "I must say, {PLAYER}, you\n"
+	.string "continue to surpass my expectations.\p"
+	.string "As a father and as a GYM LEADER,\n"
+	.string "I'm proud of the trainer you've become.\p"
+	.string "To commemorate this hard-fought battle,\n"
+	.string "I would like you to have this.$"
+
+PetalburgCity_Gym_Text_NoRoomForReward:
+	.string "Hm, it looks like your BAG is full.\n"
+	.string "Make some space, {PLAYER}, and return\l"
+	.string "when you're ready.\p"
+	.string "I'll keep it safe until then.$"
+
+PetalburgCity_Gym_Text_GaveReward:
+	.string "Please take this LUCKY EGG. It should\n"
+	.string "aid you in your future journeys.$"
 
 PetalburgCity_Gym_EventScript_ShouldGiveEnigmaBerry::
 	specialvar VAR_RESULT, IsEnigmaBerryValid

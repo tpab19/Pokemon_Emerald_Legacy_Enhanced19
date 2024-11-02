@@ -151,9 +151,48 @@ SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge::
 	end
 
 SootopolisCity_Gym_1F_EventScript_JuanRematch::
+	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_JuanRematchContinue
+	setvar 0x8005, TRAINER_JUAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
+SootopolisCity_Gym_1F_EventScript_JuanRematchContinue::
 	trainerbattle_rematch_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
 	end
+SootopolisCity_Gym_1F_EventScript_GiveRematchReward::
+	msgbox SootopolisCity_Gym_1F_Text_JuanGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_DRAGON_SCALE, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, SootopolisCity_Gym_1F_EventScript_NoRoom
+	msgbox SootopolisCity_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_JUAN_REMATCH_REWARD
+	end
+SootopolisCity_Gym_1F_EventScript_NoRoom::
+	msgbox SootopolisCity_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+SootopolisCity_Gym_1F_Text_JuanGiveRematchReward:
+	.string "Ah, splendid indeed, {PLAYER}.\n"
+	.string "Your performance was nothing short\n"
+	.string "of mesmerizing.\p"
+	.string "To honor this remarkable battle, I shall\n"
+	.string "bestow upon you a rare item, one that is\l"
+	.string "close to my heart.\p"
+
+SootopolisCity_Gym_1F_Text_NoRoomForReward:
+	.string "Ah, it seems your BAG is filled to\n"
+	.string "the brim.\p"
+	.string "No matter, I shall keep this safe until\n"
+	.string "you make space for it.$"
+
+SootopolisCity_Gym_1F_Text_GaveReward:
+	.string "This DRAGON SCALE embodies the majesty\n"
+	.string "and power of dragons, much like the\n"
+	.string "KKINGDRA that I have trained with care.\p"
+	.string "May it serve you well on your journey.$"
 
 SootopolisCity_Gym_1F_EventScript_GymGuide::
 	lock

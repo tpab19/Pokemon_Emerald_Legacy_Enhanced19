@@ -34,9 +34,45 @@ RustboroCity_Gym_EventScript_GiveRockTomb::
 	end
 
 RustboroCity_Gym_EventScript_RoxanneRematch::
+	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_RoxanneRematchContinue
+	setvar 0x8005, TRAINER_ROXANNE_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward
+RustboroCity_Gym_EventScript_RoxanneRematchContinue::
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
 	end
+RustboroCity_Gym_EventScript_GiveRematchReward::
+	msgbox RustboroCity_Gym_Text_RoxanneGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_OLD_AMBER, 1
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, RustboroCity_Gym_EventScript_NoRoom
+	msgbox RustboroCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_ROXANNE_REMATCH_REWARD
+	end
+RustboroCity_Gym_EventScript_NoRoom::
+	msgbox RustboroCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+RustboroCity_Gym_Text_RoxanneGiveRematchReward:
+	.string "Your skills are truly impressive,\n"
+	.string "{PLAYER}.\p"
+	.string "As a token of my admiration and to\n"
+	.string "commemorate this battle, I would like\l"
+	.string "to give you something rare.$"
+
+RustboroCity_Gym_Text_NoRoomForReward:
+	.string "Oh, it seems your BAG is full.\n"
+	.string "Please make some space, and I will\l"
+	.string "hold onto this for you until then.$"
+
+RustboroCity_Gym_Text_GaveReward:
+	.string "It is a FOSSIL that holds a trace of\n"
+	.string "ancient times. Who knows what secrets\l"
+	.string "it may reveal?$"
 
 RustboroCity_Gym_EventScript_Josh::
 	trainerbattle_single TRAINER_JOSH, RustboroCity_Gym_Text_JoshIntro, RustboroCity_Gym_Text_JoshDefeat

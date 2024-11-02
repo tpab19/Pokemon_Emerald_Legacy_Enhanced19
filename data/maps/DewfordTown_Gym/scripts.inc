@@ -135,8 +135,10 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
+	goto_if_set FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_Gym_EventScript_DoBrawly1
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, DewfordTown_Gym_EventScript_BeatFlannery
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, DewfordTown_Gym_EventScript_BeatWattson
+DewfordTown_Gym_EventScript_DoBrawly1::
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	goto DewfordTown_Gym_EventScript_ContinueBrawly
 DewfordTown_Gym_EventScript_BeatWattson::
@@ -196,9 +198,46 @@ DewfordTown_Gym_EventScript_GiveBulkUp2:
 	end
 
 DewfordTown_Gym_EventScript_BrawlyRematch::
+	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_BrawlyRematchContinue
+	setvar 0x8005, TRAINER_BRAWLY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
+DewfordTown_Gym_EventScript_BrawlyRematchContinue::
 	trainerbattle_rematch_double TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
 	msgbox DewfordTown_Gym_Text_BrawlyPostRematch, MSGBOX_AUTOCLOSE
 	end
+DewfordTown_Gym_EventScript_GiveRematchReward::
+	msgbox DewfordTown_Gym_Text_BrawlyGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	@giveitem ITEM_BRICK_PIECE, 1 @ TODO brick piece
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_Gym_EventScript_NoRoom
+	msgbox DewfordTown_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_BRAWLY_REMATCH_REWARD
+	end
+DewfordTown_Gym_EventScript_NoRoom::
+	msgbox DewfordTown_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+DewfordTown_Gym_Text_BrawlyGiveRematchReward:
+	.string "Whoa, {PLAYER}!\n"
+	.string "That was one intense match!\p"
+	.string "You've got some serious power behind\n"
+	.string "those moves.\p"
+	.string "To honor your strength, I want you to\n"
+	.string "have this BRICK PIECE.\p"
+
+DewfordTown_Gym_Text_NoRoomForReward:
+	.string "Oh, looks like your BAG is too full.\p"
+	.string "Clear some space, and I'll hold onto\n"
+	.string "this for you until you come back.$"
+
+DewfordTown_Gym_Text_GaveReward:
+	.string "It's a fragment of an ancient relic,\n"
+	.string "just like the determination you've\l"
+	.string "shown in our battle!$"
 
 DewfordTown_Gym_EventScript_Takao::
 	trainerbattle_single TRAINER_TAKAO, DewfordTown_Gym_Text_TakaoIntro, DewfordTown_Gym_Text_TakaoDefeat, DewfordTown_Gym_EventScript_TakaoBrightenRoom

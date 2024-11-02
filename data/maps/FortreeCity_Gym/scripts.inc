@@ -64,9 +64,47 @@ FortreeCity_Gym_EventScript_GiveAerialAce::
 	return
 
 FortreeCity_Gym_EventScript_WinonaRematch::
+	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_WinonaRematchContinue
+	setvar 0x8005, TRAINER_WINONA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
+FortreeCity_Gym_EventScript_WinonaRematchContinue::
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
 	end
+FortreeCity_Gym_EventScript_GiveRematchReward::
+	msgbox FortreeCity_Gym_Text_WinonaGiveRematchReward, MSGBOX_DEFAULT
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, FortreeCity_Gym_EventScript_NoRoom
+	playfanfare MUS_OBTAIN_ITEM
+	message LavaridgeTown_Text_ReceivedTheEgg
+	waitfanfare
+	giveegg SPECIES_WYNAUT
+	msgbox FortreeCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_WINONA_REMATCH_REWARD
+	end
+FortreeCity_Gym_EventScript_NoRoom::
+	msgbox FortreeCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+FortreeCity_Gym_Text_WinonaGiveRematchReward:
+	.string "Your performance in battle was truly\n"
+	.string "breathtaking, {PLAYER}.\p"
+	.string "To honor your graceful strength, I wish\n"
+	.string "to present you with a most cherished gift.$"
+
+FortreeCity_Gym_Text_NoRoomForReward:
+	.string "Ah, it seems your party is full.\n"
+	.string "Clear some space, and I shall keep\n"
+	.string "this EGG safe for you until then.$"
+
+FortreeCity_Gym_Text_GaveReward:
+	.string "Please accept this TOGEPI EGG.\p"
+	.string "It embodies the hope and wonder of\n"
+	.string "new beginnings and the sky's limitless\l"
+	.string "potential.$"
 
 FortreeCity_Gym_EventScript_Jared::
 	trainerbattle_single TRAINER_JARED, FortreeCity_Gym_Text_JaredIntro, FortreeCity_Gym_Text_JaredDefeat

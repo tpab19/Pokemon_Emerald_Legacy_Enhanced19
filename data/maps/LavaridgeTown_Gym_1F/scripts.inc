@@ -100,9 +100,43 @@ LavaridgeTown_Gym_1F_EventScript_GiveOverheat::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
+	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue
+	setvar 0x8005, TRAINER_FLANNERY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward
+LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue::
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
 	end
+LavaridgeTown_Gym_1F_EventScript_GiveRematchReward::
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_SACRED_ASH, 5
+	waitfanfare
+	goto_if_eq VAR_RESULT, FALSE, LavaridgeTown_Gym_1F_EventScript_NoRoom
+	msgbox LavaridgeTown_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_FLANNERY_REMATCH_REWARD
+	end
+LavaridgeTown_Gym_1F_EventScript_NoRoom::
+	msgbox LavaridgeTown_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
+	closemessage
+	end
+
+LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward:
+	.string "Your skills truly blaze with intensity,\n"
+	.string "{PLAYER}.\p"
+	.string "To celebrate our fiery battle and to\n"
+	.string "show my respect, I have something\l"
+	.string "special for you.$"
+
+LavaridgeTown_Gym_1F_Text_NoRoomForReward:
+	.string "Oh no, it looks like your BAG is full!\n"
+	.string "Make some space, and I’ll keep these\l"
+	.string "safe for you until then.$"
+
+LavaridgeTown_Gym_1F_Text_GaveReward:
+	.string "They embody the spirit of rejuvenation.$"
 
 LavaridgeTown_Gym_1F_EventScript_Cole::
 	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_COLE, LOCALID_COLE, LavaridgeTown_Gym_1F_Text_ColeIntro, LavaridgeTown_Gym_1F_Text_ColeDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript
