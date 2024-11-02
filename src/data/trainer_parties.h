@@ -10760,7 +10760,7 @@ static const struct TrainerMon sParty_Dayton[] = {
 // Route 119 Parasol Lady
 static const struct TrainerMon sParty_Rachel[] = {
     {
-    .iv = 0,
+    .iv = 150,
     .lvl = 26,
     .species = SPECIES_GOLDEEN,
     }
