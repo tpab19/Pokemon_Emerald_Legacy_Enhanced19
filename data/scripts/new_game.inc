@@ -297,5 +297,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ZAPDOS
 	setflag FLAG_HIDE_MOLTRES
 	setflag FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE
+	setflag FLAG_HIDE_HELIX_FOSSIL
+	setflag FLAG_HIDE_DOME_FOSSIL
 	call EventScript_ResetAllBerries
 	end

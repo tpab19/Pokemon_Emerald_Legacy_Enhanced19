@@ -1,3 +1,5 @@
+.set LOCALID_HELIX_FOSSIL, 13
+
 Route124_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route124_OnTransition
 	.byte 0
@@ -97,6 +99,15 @@ Route124_EventScript_Declan::
 Route124_EventScript_Isabella::
 	trainerbattle_single TRAINER_ISABELLA, Route124_Text_IsabellaIntro, Route124_Text_IsabellaDefeat
 	msgbox Route124_Text_IsabellaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+DesertUnderpass_EventScript_HelixFossil::
+	lock
+	faceplayer
+	giveitem ITEM_HELIX_FOSSIL
+	setflag FLAG_HIDE_HELIX_FOSSIL
+	removeobject LOCALID_HELIX_FOSSIL
+	release
 	end
 
 Route124_Text_HuntersHouse:

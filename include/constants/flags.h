@@ -1238,8 +1238,8 @@
 #define FLAG_GOT_WINONA_REMATCH_REWARD                              0x4AA
 #define FLAG_GOT_TATEANDLIZA_REMATCH_REWARD                         0x4AB
 #define FLAG_GOT_JUAN_REMATCH_REWARD                                0x4AC
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
+#define FLAG_HIDE_HELIX_FOSSIL                                      0x4AD
+#define FLAG_HIDE_DOME_FOSSIL                                       0x4AE
 #define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
 #define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag

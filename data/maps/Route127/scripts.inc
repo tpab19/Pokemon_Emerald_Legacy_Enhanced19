@@ -1,3 +1,5 @@
+.set LOCALID_DOME_FOSSIL, 13
+
 Route127_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route127_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route127_OnLoad
@@ -76,3 +78,11 @@ Route127_EventScript_RematchKoji::
 	msgbox Route127_Text_KojiPostRematch, MSGBOX_AUTOCLOSE
 	end
 
+DesertUnderpass_EventScript_DomeFossil::
+	lock
+	faceplayer
+	giveitem ITEM_DOME_FOSSIL
+	setflag FLAG_HIDE_DOME_FOSSIL
+	removeobject LOCALID_DOME_FOSSIL
+	release
+	end
