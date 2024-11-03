@@ -1240,9 +1240,9 @@
 #define FLAG_GOT_JUAN_REMATCH_REWARD                                0x4AC
 #define FLAG_HIDE_HELIX_FOSSIL                                      0x4AD
 #define FLAG_HIDE_DOME_FOSSIL                                       0x4AE
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
+#define FLAG_GOT_CYNDAQUIL                                          0x4AF
+#define FLAG_GOT_CHIKORITA                                          0x4B0
+#define FLAG_GOT_TOTODILE                                           0x4B1
 #define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
 #define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
 #define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag

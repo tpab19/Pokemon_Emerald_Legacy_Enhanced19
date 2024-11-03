@@ -40,6 +40,7 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	settrainerflag TRAINER_JUAN_2
 	setflag FLAG_REMATCH_READY_JUAN
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
+	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, EverGrandeCity_HallOfFame_EventScript_ResetJohtoStarter
 	return
 
 EverGrandeCity_HallOfFame_EventScript_ResetDefeatedEventLegendaries::
@@ -73,4 +74,13 @@ EverGrandeCity_HallOfFame_EventScript_ReadyReceiveSSTicketEvent::
 
 EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent::
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1
+	return
+
+EverGrandeCity_HallOfFame_EventScript_ResetJohtoStarter::
+	goto_if_unset FLAG_GOT_TOTODILE, EverGrandeCity_HallOfFame_EventScript_UpdateJohtoStarterVar
+	goto_if_unset FLAG_GOT_CHIKORITA, EverGrandeCity_HallOfFame_EventScript_UpdateJohtoStarterVar
+	goto_if_unset FLAG_GOT_CYNDAQUIL, EverGrandeCity_HallOfFame_EventScript_UpdateJohtoStarterVar
+	return
+EverGrandeCity_HallOfFame_EventScript_UpdateJohtoStarterVar::
+	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
 	return

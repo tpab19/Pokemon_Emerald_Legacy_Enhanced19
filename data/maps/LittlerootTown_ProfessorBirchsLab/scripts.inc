@@ -86,9 +86,15 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
+	goto_if_set FLAG_GOT_CYNDAQUIL, LittlerootTown_ProfessorBirchsLab_EventScript_SkipCyndaquil
 	addobject LOCALID_BALL_CYNDAQUIL
+LittlerootTown_ProfessorBirchsLab_EventScript_SkipCyndaquil::
+	goto_if_set FLAG_GOT_TOTODILE, LittlerootTown_ProfessorBirchsLab_EventScript_SkipTotodile
 	addobject LOCALID_BALL_TOTODILE
+LittlerootTown_ProfessorBirchsLab_EventScript_SkipTotodile::
+	goto_if_set FLAG_GOT_CHIKORITA, LittlerootTown_ProfessorBirchsLab_EventScript_SkipChikorita
 	addobject LOCALID_BALL_CHIKORITA
+LittlerootTown_ProfessorBirchsLab_EventScript_SkipChikorita::
 	addobject LOCALID_RIVAL
 	turnobject LOCALID_BALL_CYNDAQUIL, DIR_SOUTH
 	setobjectxy LOCALID_BALL_CYNDAQUIL, 8, 4
@@ -394,6 +400,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_CyndaquilTransferredToPC::
 LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCyndaquil::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting, MSGBOX_DEFAULT
+	setflag FLAG_GOT_CYNDAQUIL
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	releaseall
 	end
@@ -435,6 +442,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TotodileTransferredToPC::
 LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedTotodile::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting, MSGBOX_DEFAULT
+	setflag FLAG_GOT_TOTODILE
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	releaseall
 	end
@@ -476,6 +484,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ChikoritaTransferredToPC::
 LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedChikorita::
 	hidemonpic
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting, MSGBOX_DEFAULT
+	setflag FLAG_GOT_CHIKORITA
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6
 	releaseall
 	end
