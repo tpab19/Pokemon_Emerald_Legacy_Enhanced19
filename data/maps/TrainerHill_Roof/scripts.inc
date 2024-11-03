@@ -64,6 +64,8 @@ TrainerHill_Roof_EventScript_AlreadyReceivedPrize::
 	end
 
 TrainerHill_Roof_EventScript_GiveSnorlax::
+	msgbox TrainerHill_Roof_Text_SnorlaxReward, MSGBOX_DEFAULT
+	waitmessage
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNORLAX
 	givemon SPECIES_SNORLAX, 25
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, TrainerHill_Roof_EventScript_ReceiveSnorlaxParty
