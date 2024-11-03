@@ -8,6 +8,7 @@ MauvilleCity_GameCorner_MapScripts::
 	.set TM_THUNDERBOLT_COINS, 4000
 	.set TM_ICE_BEAM_COINS, 4000
 	.set DOLL_COINS, 1000
+	.set PORYGON_COINS, 9999
 
 	.set COINS_PRICE_50,  1000
 	.set COINS_PRICE_500, 10000
@@ -211,6 +212,78 @@ MauvilleCity_GameCorner_EventScript_CancelDollSelect::
 	hidecoinsbox 0, 0
 	release
 	end
+
+MauvilleCity_GameCorner_EventScript_PrizeCornerPorygon::
+	lock
+	faceplayer
+	goto_if_set FLAG_GAME_CORNER_PRIZE_PORYGON, MauvilleCity_GameCorner_EventScript_GotPorygonPrize
+	msgbox MauvilleCity_GameCorner_Text_ExchangeCoinsForPrizes, MSGBOX_DEFAULT
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_GameCorner_EventScript_ChoosePokemonPrizeMessage
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_ChoosePokemonPrizeMessage::
+	msgbox MauvilleCity_GameCorner_Text_SecretPrize, MSGBOX_DEFAULT
+	waitmessage
+	checkcoins VAR_TEMP_2
+	goto_if_lt VAR_TEMP_2, PORYGON_COINS, MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPorygon
+	msgbox MauvilleCity_GameCorner_Text_GotEnoughCoins, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CancelPokemonSelect
+	call MauvilleCity_GameCorner_EventScript_GivePorygon
+	setflag FLAG_GAME_CORNER_PRIZE_PORYGON
+	removecoins PORYGON_COINS
+MauvilleCity_GameCorner_EventScript_GotPorygonPrize::
+	msgbox MauvilleCity_GameCorner_Text_ClaimedPorygon, MSGBOX_DEFAULT
+	closemessage
+	end
+
+MauvilleCity_GameCorner_EventScript_CancelPokemonSelect::
+	msgbox MauvilleCity_GameCorner_Text_OhIsThatSo, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_NotEnoughCoinsForPorygon::
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_GivePorygon::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PORYGON
+	givemon SPECIES_PORYGON, 25
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, MauvilleCity_GameCorner_EventScript_ReceivePorygonParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, MauvilleCity_GameCorner_EventScript_ReceivePorygonPC
+	setvar VAR_TRICK_HOUSE_PRIZE_PICKUP, 1
+	goto Common_EventScript_NoMoreRoomForPokemon
+MauvilleCity_GameCorner_EventScript_ReceivePorygonParty::
+	call MauvilleCity_GameCorner_EventScript_ReceivedPorygonFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_Return
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto MauvilleCity_GameCorner_EventScript_Return
+	end
+MauvilleCity_GameCorner_EventScript_ReceivePorygonPC::
+	call MauvilleCity_GameCorner_EventScript_ReceivedPorygonFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_SendPorygonToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto MauvilleCity_GameCorner_EventScript_SendPorygonToPC
+	end
+MauvilleCity_GameCorner_EventScript_SendPorygonToPC::
+	call Common_EventScript_TransferredToPC
+	goto MauvilleCity_GameCorner_EventScript_Return
+	end
+MauvilleCity_GameCorner_EventScript_ReceivedPorygonFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message MauvilleCity_GameCorner_Text_PlayerReceivedPorygon
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_PORYGON
+	return
+MauvilleCity_GameCorner_EventScript_Return::
+	setflag FLAG_GAME_CORNER_PRIZE_PORYGON
+	return
 
 MauvilleCity_GameCorner_EventScript_PrizeCornerTMs::
 	lock
@@ -776,3 +849,21 @@ MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
 
+MauvilleCity_GameCorner_Text_SecretPrize:
+	.string "I've got a special prize imported\n"
+	.string "from a far-off region, just waiting\l"
+	.string "for the first to reach 9999 COINS.\p"
+	.string "Are you up for the challenge?$"
+
+MauvilleCity_GameCorner_Text_GotEnoughCoins:
+	.string "Wait... You've actually gathered\n"
+	.string "9999 COINS?\p"
+	.string "Incredible! Would you like to claim\n"
+	.string "this rare and unique PORYGON?$"
+
+MauvilleCity_GameCorner_Text_ClaimedPorygon:
+	.string "Congratulations!\p"
+	.string "PORYGON is now yours!$"
+
+MauvilleCity_GameCorner_Text_PlayerReceivedPorygon:
+	.string "{PLAYER} received PORYGON!$"

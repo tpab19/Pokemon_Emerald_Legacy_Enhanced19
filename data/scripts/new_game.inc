@@ -296,5 +296,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ARTICUNO
 	setflag FLAG_HIDE_ZAPDOS
 	setflag FLAG_HIDE_MOLTRES
+	setflag FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE
 	call EventScript_ResetAllBerries
 	end
