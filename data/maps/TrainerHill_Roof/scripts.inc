@@ -15,6 +15,9 @@ TrainerHill_Roof_EventScript_Owner::
 TrainerHill_Roof_EventScript_Arrived::
 	msgbox TrainerHill_Roof_Text_YouFinallyCameBravo, MSGBOX_DEFAULT
 TrainerHill_Roof_EventScript_GivePrize::
+	goto_if_set FLAG_GOT_TRAINER_HILL_SNORLAX, TrainerHill_Roof_EventScript_DoneSnorlax
+	call_if_set FLAG_TRAINER_HILL_SNORLAX_READY, TrainerHill_Roof_EventScript_GiveSnorlax
+TrainerHill_Roof_EventScript_DoneSnorlax::
 	trainerhill_giveprize
 	switch VAR_RESULT
 	case 0, TrainerHill_Roof_EventScript_ReceivePrize
@@ -60,3 +63,44 @@ TrainerHill_Roof_EventScript_AlreadyReceivedPrize::
 	release
 	end
 
+TrainerHill_Roof_EventScript_GiveSnorlax::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SNORLAX
+	givemon SPECIES_SNORLAX, 25
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, TrainerHill_Roof_EventScript_ReceiveSnorlaxParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, TrainerHill_Roof_EventScript_ReceiveSnorlaxPC
+	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
+	return
+
+TrainerHill_Roof_EventScript_ReceiveSnorlaxParty::
+	call TrainerHill_Roof_EventScript_ReceivedSnorlaxFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, TrainerHill_Roof_EventScript_Return
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto TrainerHill_Roof_EventScript_Return
+	end
+
+TrainerHill_Roof_EventScript_ReceiveSnorlaxPC::
+	call TrainerHill_Roof_EventScript_ReceivedSnorlaxFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, TrainerHill_Roof_EventScript_SendSnorlaxToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto TrainerHill_Roof_EventScript_SendSnorlaxToPC
+	end
+
+TrainerHill_Roof_EventScript_SendSnorlaxToPC::
+	call Common_EventScript_TransferredToPC
+	goto TrainerHill_Roof_EventScript_Return
+	end
+
+TrainerHill_Roof_EventScript_ReceivedSnorlaxFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message TrainerHill_Roof_Text_PlayerReceivedSnorlax
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_SNORLAX
+	return
+
+TrainerHill_Roof_EventScript_Return::
+	setflag FLAG_GOT_TRAINER_HILL_SNORLAX
+	return

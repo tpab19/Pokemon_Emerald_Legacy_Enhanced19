@@ -455,3 +455,6 @@ TrainerHill_Entrance_Text_DoYouKnowWhenTheyOpen:
 TrainerHill_Elevator_Text_ReturnToReception:
 	.string "Would you like to return to\n"
 	.string "the reception counter?$"
+
+TrainerHill_Roof_Text_PlayerReceivedSnorlax:
+	.string "{PLAYER} received SNORLAX!$"
