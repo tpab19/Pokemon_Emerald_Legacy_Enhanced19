@@ -12350,10 +12350,10 @@ static const struct TrainerMon sParty_Steven1[] = {
 static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
-    .lvl = 77,
-    .species = SPECIES_AERODACTYL,
-    .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SKY_ATTACK, MOVE_DOUBLE_EDGE}
+    .lvl = 76,
+    .species = SPECIES_ARMALDO,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_SANDSTORM, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
@@ -12361,6 +12361,13 @@ static const struct TrainerMon sParty_Steven2[] = {
     .species = SPECIES_TYRANITAR,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_CRUNCH, MOVE_THUNDERBOLT}
+    },
+    {
+    .iv = 255,
+    .lvl = 77,
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SKY_ATTACK, MOVE_DOUBLE_EDGE}
     },
     {
     .iv = 255,
@@ -12372,16 +12379,9 @@ static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
     .lvl = 76,
-    .species = SPECIES_ARMALDO,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_SANDSTORM, MOVE_EARTHQUAKE}
-    },
-    {
-    .iv = 255,
-    .lvl = 76,
     .species = SPECIES_STEELIX,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SANDSTORM, MOVE_CRUNCH}
+    .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_EXPLOSION, MOVE_CRUNCH}
     },
     {
     .iv = 255,
