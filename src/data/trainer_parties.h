@@ -12353,7 +12353,7 @@ static const struct TrainerMon sParty_Steven2[] = {
     .lvl = 76,
     .species = SPECIES_ARMALDO,
     .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_SANDSTORM, MOVE_EARTHQUAKE}
+    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_FACADE, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
