@@ -303,7 +303,7 @@ MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "WATTSON is very mindful of\n"
 	.string "this weakness.\p"
 	.string "It's rumored that he even bred a\n"
-	.string "POKéMON to learn magical GRASS-move.\p"
+	.string "POKéMON to learn a magic GRASS-move.\p"
 	.string "Come to think of it, GRASS-type might be\n"
 	.string "really useful for this fight!\p"
 	.string "Listen! You can do this!$"
