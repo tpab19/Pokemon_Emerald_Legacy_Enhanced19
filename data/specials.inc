@@ -539,3 +539,6 @@ gSpecials::
 	def_special HasAllMons
 	def_special CheckSpecies
 	def_special HasRematchBeenFought
+	def_special CheckFoundAllHeartScales
+	def_special CheckFoundAllKecleon
+	def_special CheckGotAllKantoStarters
