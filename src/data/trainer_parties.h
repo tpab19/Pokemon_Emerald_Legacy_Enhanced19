@@ -12139,128 +12139,136 @@ static const struct TrainerMon sParty_Juan2[] = {
 static const struct TrainerMon sParty_Juan3[] = {
     {
     .iv = 255,
-    .lvl = 50,
-    .species = SPECIES_POLIWHIRL,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYPNOSIS, MOVE_RAIN_DANCE, MOVE_PROTECT, MOVE_HYDRO_PUMP}
+    .lvl = 55,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_CRUNCH, MOVE_CURSE, MOVE_BATON_PASS, MOVE_HYDRO_PUMP}
     },
     {
     .iv = 255,
-    .lvl = 51,
-    .species = SPECIES_WHISCASH,
+    .lvl = 55,
+    .species = SPECIES_GOREBYSS,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_FISSURE}
+    .moves = {MOVE_SURF, MOVE_RAIN_DANCE, MOVE_ICE_BEAM, MOVE_SHADOW_BALL}
     },
     {
     .iv = 255,
-    .lvl = 53,
+    .lvl = 55,
+    .species = SPECIES_QUAGSIRE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_RAIN_DANCE, MOVE_MUDDY_WATER, MOVE_YAWN, MOVE_EARTHQUAKE}
+    },
+    
+    {
+    .iv = 255,
+    .lvl = 55,
     .species = SPECIES_WALREIN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_EARTHQUAKE, MOVE_ENCORE}
+    },
+    {
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_RELICANTH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT, MOVE_ICE_BEAM}
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_DOUBLE_EDGE, MOVE_RAIN_DANCE}
     },
     {
     .iv = 255,
-    .lvl = 53,
-    .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_REST, MOVE_GUILLOTINE, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 56,
+    .lvl = 55,
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
+    .moves = {MOVE_SURF, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
     }
 };
 // Juan Rematch 2
 static const struct TrainerMon sParty_Juan4[] = {
     {
     .iv = 255,
-    .lvl = 56,
-    .species = SPECIES_LAPRAS,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYDRO_PUMP, MOVE_PERISH_SONG, MOVE_ICE_BEAM, MOVE_CONFUSE_RAY}
+    .lvl = 60,
+    .species = SPECIES_MANTINE,
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_RAIN_DANCE, MOVE_SURF, MOVE_CONFUSE_RAY, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
-    .lvl = 58,
+    .lvl = 60,
     .species = SPECIES_WHISCASH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_FISSURE}
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_SURF, MOVE_YAWN, MOVE_ICY_WIND, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
-    .lvl = 56,
-    .species = SPECIES_POLIWHIRL,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYPNOSIS, MOVE_RAIN_DANCE, MOVE_PROTECT, MOVE_HYDRO_PUMP}
-    },
-    {
-    .iv = 255,
-    .lvl = 58,
-    .species = SPECIES_WALREIN,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT, MOVE_ICE_BEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 58,
+    .lvl = 60,
     .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_REST, MOVE_GUILLOTINE, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
+    .heldItem = ITEM_CHOICE_BERRY,
+    .moves = {MOVE_CRABHAMMER, MOVE_SLUDGE_BOMB, MOVE_BLIZZARD, MOVE_CRUNCH}
     },
     {
     .iv = 255,
-    .lvl = 61,
+    .lvl = 60,
+    .species = SPECIES_AZUMARILL,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_SUPERPOWER, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_HYDRO_PUMP}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
+    .species = SPECIES_LANTURN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_RAIN_DANCE, MOVE_HYDRO_PUMP, MOVE_THUNDER, MOVE_THUNDER_WAVE}
+    },
+    {
+    .iv = 255,
+    .lvl = 60,
     .species = SPECIES_KINGDRA,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_RAIN_DANCE, MOVE_BLIZZARD, MOVE_FLAIL}
     }
 };
-// Juan Rematch 3
+// Juan Rematch 3 (FINAL)
 static const struct TrainerMon sParty_Juan5[] = {
     {
     .iv = 255,
-    .lvl = 61,
-    .species = SPECIES_LAPRAS,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYDRO_PUMP, MOVE_PERISH_SONG, MOVE_ICE_BEAM, MOVE_CONFUSE_RAY}
-    },
-    {
-    .iv = 255,
-    .lvl = 63,
-    .species = SPECIES_WHISCASH,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_RAIN_DANCE, MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_FISSURE}
-    },
-    {
-    .iv = 255,
-    .lvl = 61,
+    .lvl = 65,
     .species = SPECIES_POLITOED,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_HYPNOSIS, MOVE_RAIN_DANCE, MOVE_HYDRO_PUMP, MOVE_PERISH_SONG}
+    .heldItem = ITEM_WIKI_BERRY,
+    .moves = {MOVE_WHIRLPOOL, MOVE_PERISH_SONG, MOVE_HYPNOSIS, MOVE_PROTECT}
     },
     {
     .iv = 255,
-    .lvl = 63,
+    .lvl = 65,
+    .species = SPECIES_CASTFORM,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_RAIN_DANCE, MOVE_WEATHER_BALL, MOVE_THUNDER, MOVE_HYDRO_PUMP}
+    },
+    {
+    .iv = 255,
+    .lvl = 65,
     .species = SPECIES_WALREIN,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT, MOVE_SHEER_COLD}
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_YAWN, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
-    .lvl = 63,
+    .lvl = 65,
     .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_REST, MOVE_GUILLOTINE, MOVE_TAUNT, MOVE_DOUBLE_TEAM}
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_CRABHAMMER, MOVE_RAIN_DANCE, MOVE_ANCIENTPOWER, MOVE_CRUNCH}
     },
     {
     .iv = 255,
-    .lvl = 66,
+    .lvl = 65,
+    .species = SPECIES_BLASTOISE,
+    .heldItem = ITEM_MYSTIC_WATER,
+    .moves = {MOVE_RAIN_DANCE, MOVE_YAWN, MOVE_HYDRO_CANNON, MOVE_EARTHQUAKE}
+    },
+    {
+    .iv = 255,
+    .lvl = 65,
     .species = SPECIES_KINGDRA,
     .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_WATER_PULSE, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM, MOVE_REST}
+    .moves = {MOVE_OCTAZOOKA, MOVE_REST, MOVE_DOUBLE_TEAM, MOVE_ICE_BEAM}
     }
 };
 // Mauville Gym Bug Maniac
