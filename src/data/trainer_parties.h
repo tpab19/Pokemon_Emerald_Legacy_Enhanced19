@@ -4581,7 +4581,7 @@ static const struct TrainerMon sParty_Timmy[] = {
     }
 };
 
-// Wallace gym leader
+// Gym Leader
 static const struct TrainerMon sParty_Wallace1[] = {
     {
     .iv = 255,
@@ -4620,7 +4620,7 @@ static const struct TrainerMon sParty_Wallace1[] = {
     }
 };
 
-// Wallace champion
+// Champion
 static const struct TrainerMon sParty_Wallace2[] = {
     {
     .iv = 255,
@@ -12346,14 +12346,14 @@ static const struct TrainerMon sParty_Steven1[] = {
     .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_AGILITY}
     }
 }; 
-// Post Game
+// Post Game Boss
 static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
     .lvl = 77,
     .species = SPECIES_AERODACTYL,
     .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SKY_ATTACK MOVE_DOUBLE_EDGE}
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SKY_ATTACK, MOVE_DOUBLE_EDGE}
     },
     {
     .iv = 255,
