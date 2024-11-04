@@ -336,7 +336,8 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_KingsRock
 	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_FocusBand
 	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens
-	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_MetalCoat
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -409,6 +410,14 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 64
 	setvar VAR_0x8009, ITEM_SCOPE_LENS
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
+BattleFrontier_ExchangeServiceCorner_EventScript_MetalCoat::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmMetalCoat, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
+	setvar VAR_0x8008, 64
+	setvar VAR_0x8009, ITEM_METAL_COAT
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
@@ -678,6 +687,10 @@ BattleFrontier_ExchangeServiceCorner_Text_ConfirmScopeLens:
 	.string "You've chosen the SCOPE LENS.\n"
 	.string "Is that correct?$"
 
+BattleFrontier_ExchangeServiceCorner_Text_ConfirmMetalCoat:
+	.string "You've chosen the METAL COAT.\n"
+	.string "Is that correct?$"
+
 BattleFrontier_ExchangeServiceCorner_Text_ConfirmLeftovers:
 	.string "You've chosen the LEFTOVERS.\n"
 	.string "Is that correct?$"
@@ -885,6 +898,10 @@ BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc::
 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc::
 	.string "A hold item that raises the\n"
 	.string "critical-hit rate.$"
+
+BattleFrontier_ExchangeServiceCorner_Text_MetalCoatDesc::
+	.string "A hold item that raises the\n"
+	.string "power of STEEL-type moves.$"
 
 BattleFrontier_ExchangeServiceCorner_Text_LiechiDesc::
     .string "A hold item that boosts Attack\n"

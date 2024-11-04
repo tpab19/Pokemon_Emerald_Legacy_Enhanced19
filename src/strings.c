@@ -1172,6 +1172,7 @@ const u8 gText_ChoiceBand64BP[] = _("CHOICE BAND{CLEAR_TO 0x5E}64BP");
 const u8 gText_KingsRock64BP[] = _("KING'S ROCK{CLEAR_TO 0x5E}64BP");
 const u8 gText_FocusBand64BP[] = _("FOCUS BAND{CLEAR_TO 0x5E}64BP");
 const u8 gText_ScopeLens64BP[] = _("SCOPE LENS{CLEAR_TO 0x5E}64BP");
+const u8 gText_MetalCoat64BP[] = _("METAL COAT{CLEAR_TO 0x5E}64BP");
 const u8 gText_Liechi48BP[] = _("LIECHI BERRY{CLEAR_TO 0x5E}48BP");
 const u8 gText_Ganlon48BP[] = _("GANLON BERRY{CLEAR_TO 0x5E}48BP");
 const u8 gText_Salac48BP[] = _("SALAC BERRY{CLEAR_TO 0x5E}48BP");
