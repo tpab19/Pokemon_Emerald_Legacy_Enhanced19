@@ -11623,7 +11623,7 @@ static const struct TrainerMon sParty_Norman3[] = {
     .lvl = 55,
     .species = SPECIES_PORYGON2,
     .heldItem = ITEM_SHARP_BEAK,
-    .moves = {MOVE_RECOVER, MOVE_CURSE, MOVE_TRI_ATTACK, MOVE_AERIAL ACE}
+    .moves = {MOVE_RECOVER, MOVE_CURSE, MOVE_TRI_ATTACK, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
@@ -11795,8 +11795,8 @@ static const struct TrainerMon sParty_Winona3[] = {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_MASQUERAIN,
-    .heldItem = ITEM_MIRACLE_WATER,
-    .moves = {MOVE_STUN_SPORE, MOVE_HYDRO_PUPMP, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL}
+    .heldItem = ITEM_MYSTIC_WATER,
+    .moves = {MOVE_STUN_SPORE, MOVE_HYDRO_PUMP, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL}
     },
     {
     .iv = 255,
@@ -11810,7 +11810,7 @@ static const struct TrainerMon sParty_Winona3[] = {
     .lvl = 55,
     .species = SPECIES_PIDGEOT,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SKY_ATTACK, MOVE_EXTREMESPEED, MOVE_PROTECT, MOVE_PURSUIT}
+    .moves = {MOVE_SKY_ATTACK, MOVE_EXTREME_SPEED, MOVE_PROTECT, MOVE_PURSUIT}
     },
     {
     .iv = 255,
@@ -11900,7 +11900,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .lvl = 65,
     .species = SPECIES_SWELLOW,
     .heldItem = ITEM_STARF_BERRY,
-    .moves = {MOVE_SUBSTITUTE, MOVE_ENDEAVOUR, MOVE_QUICK_ATTACK, MOVE_BATON_PASS}
+    .moves = {MOVE_SUBSTITUTE, MOVE_ENDEAVOR, MOVE_QUICK_ATTACK, MOVE_BATON_PASS}
     },
     {
     .iv = 255,
@@ -11968,7 +11968,7 @@ static const struct TrainerMon sParty_TateAndLiza3[] = {
     .iv = 250,
     .lvl = 55,
     .species = SPECIES_MEDICHAM,
-    .heldItem = ITEM_,
+    .heldItem = ITEM_BLACK_BELT,
     .moves = {MOVE_SUNNY_DAY, MOVE_FIRE_PUNCH, MOVE_FAKE_OUT, MOVE_HI_JUMP_KICK}
     },
     {
@@ -12028,7 +12028,7 @@ static const struct TrainerMon sParty_TateAndLiza4[] = {
     .lvl = 60,
     .species = SPECIES_GRUMPIG,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_FIRE_PUNCH, MOVE_FOCUS_PUCNH}
+    .moves = {MOVE_YAWN, MOVE_PSYCHIC, MOVE_FIRE_PUNCH, MOVE_FOCUS_PUNCH}
     },
     {
     .iv = 250,
@@ -12201,7 +12201,7 @@ static const struct TrainerMon sParty_Juan4[] = {
     .iv = 255,
     .lvl = 60,
     .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_CHOICE_BERRY,
+    .heldItem = ITEM_CHOICE_BAND,
     .moves = {MOVE_CRABHAMMER, MOVE_SLUDGE_BOMB, MOVE_BLIZZARD, MOVE_CRUNCH}
     },
     {
@@ -12254,7 +12254,7 @@ static const struct TrainerMon sParty_Juan5[] = {
     .lvl = 65,
     .species = SPECIES_CRAWDAUNT,
     .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_CRABHAMMER, MOVE_RAIN_DANCE, MOVE_ANCIENTPOWER, MOVE_CRUNCH}
+    .moves = {MOVE_CRABHAMMER, MOVE_RAIN_DANCE, MOVE_ANCIENT_POWER, MOVE_CRUNCH}
     },
     {
     .iv = 255,
