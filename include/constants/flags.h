@@ -1245,10 +1245,10 @@
 #define FLAG_GOT_TOTODILE                                           0x4B1
 #define FLAG_TRAINER_HILL_SNORLAX_READY                             0x4B2
 #define FLAG_GOT_TRAINER_HILL_SNORLAX                               0x4B3
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
+#define FLAG_RIVAL_GOT_ALL_KANTO_MONS                               0x4B4
+#define FLAG_RIVAL_GOT_BULBASAUR                                    0x4B5
+#define FLAG_RIVAL_GOT_CHARMANDER                                   0x4B6
+#define FLAG_RIVAL_GOT_SQUIRTLE                                     0x4B7
 #define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
 #define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
 #define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag

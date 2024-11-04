@@ -383,7 +383,7 @@ MeteorFalls_1F_1R_EventScript_ItemTMIronTail::
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemFullHeal::
-	finditem ITEM_FULL_HEAL
+	finditem ITEM_SUN_STONE
 	end
 
 MeteorFalls_1F_1R_EventScript_ItemMoonStone::
