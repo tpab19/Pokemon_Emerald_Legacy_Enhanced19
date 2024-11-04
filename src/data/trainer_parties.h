@@ -11907,7 +11907,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .lvl = 65,
     .species = SPECIES_TROPIUS,
     .heldItem = ITEM_SOFT_SAND,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_GIGA_DAIN, MOVE_SYNTHESIS}
+    .moves = {MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_GIGA_DRAIN, MOVE_SYNTHESIS}
     },
     {
     .iv = 255,
