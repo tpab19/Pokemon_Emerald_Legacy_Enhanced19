@@ -659,25 +659,25 @@ MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	end
 
 Route108_EventScript_ItemBlueShard::
-	finditem BLUE_SHARD
+	finditem ITEM_BLUE_SHARD
 	end
 
 Route134_EventScript_ItemRedShard::
-	finditem RED_SHARD
+	finditem ITEM_RED_SHARD
 	end
 
 Route132_EventScript_ItemGreenShard::
-	finditem GREEN_SHARD
+	finditem ITEM_GREEN_SHARD
 	end
 
 Route128_EventScript_ItemYellowShard::
-	finditem YELLOW_SHARD
+	finditem ITEM_YELLOW_SHARD
 	end
 
 Route125_EventScript_ItemYellowShard::
-	finditem YELLOW_SHARD
+	finditem ITEM_YELLOW_SHARD
 	end
 
 Route134_EventScript_ItemBlueShard::
-	finditem BLUE_SHARD
+	finditem ITEM_BLUE_SHARD
 	end

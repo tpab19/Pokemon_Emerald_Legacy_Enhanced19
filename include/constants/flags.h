@@ -670,9 +670,9 @@
 #define FLAG_TRICK_HOUSE_PRIZE_TENT     0x277
 #define FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE  0x278
 #define FLAG_GAME_CORNER_PRIZE_PORYGON  0x279
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
+#define FLAG_GOT_DEEP_SEA_TOOTH         0x27A
+#define FLAG_GOT_DEEP_SEA_SCALE         0x27B
+#define FLAG_GOT_2ND_DEEP_SEA_ITEM      0x27C
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
