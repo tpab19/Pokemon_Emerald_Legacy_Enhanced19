@@ -768,6 +768,18 @@ extern const u8 gText_KingsRock64BP[];
 extern const u8 gText_FocusBand64BP[];
 extern const u8 gText_ScopeLens64BP[];
 
+extern const u8 gText_Liechi48BP[];
+extern const u8 gText_Ganlon48BP[];
+extern const u8 gText_Salac48BP[];
+extern const u8 gText_Petaya48BP[];
+extern const u8 gText_Apicot48BP[];
+extern const u8 gText_Pomeg3BP[];
+extern const u8 gText_Kelpsy3BP[];
+extern const u8 gText_Qualot3BP[];
+extern const u8 gText_Hondew3BP[];
+extern const u8 gText_Grepa3BP[];
+extern const u8 gText_Tamato3BP[];
+
 extern const u8 gText_EnergyPowder50[];
 extern const u8 gText_EnergyRoot80[];
 extern const u8 gText_HealPowder50[];
@@ -933,6 +945,17 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LiechiDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GanlonDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SalacDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PetayaDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ApicotDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PomegDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KelpsyDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_QualotDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HondewDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GrepaDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TamatoDesc[];
 
 // Battle Frontier Move Tutors
 extern const u8 BattleFrontier_Lounge7_Text_SoftboiledDesc[];

@@ -29,7 +29,36 @@ Route123_BerryMastersHouse_EventScript_BerryMaster::
 	end
 
 Route123_BerryMastersHouse_EventScript_ReceivedBerryToday::
+	goto_if_set FLAG_IS_CHAMPION, Route123_BerryMastersHouse_EventScript_BerryShop
 	msgbox Route123_BerryMastersHouse_Text_DoneForToday, MSGBOX_DEFAULT
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryShop::
+	message gText_PlayerWhatCanIDoForYou
+	waitmessage
+	pokemart Route123_BerryMastersHouse_Pokemart_BerryShop
+	msgbox Route123_BerryMastersHouse_Text_ComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Route123_BerryMastersHouse_Pokemart_BerryShop:
+	.2byte ITEM_FIGY_BERRY
+	.2byte ITEM_WIKI_BERRY
+	.2byte ITEM_MAGO_BERRY
+	.2byte ITEM_AGUAV_BERRY
+	.2byte ITEM_IAPAPA_BERRY
+	.2byte ITEM_RAZZ_BERRY
+	.2byte ITEM_BLUK_BERRY
+	.2byte ITEM_NANAB_BERRY
+	.2byte ITEM_WEPEAR_BERRY
+	.2byte ITEM_PINAP_BERRY
+	.2byte ITEM_CORNN_BERRY
+	.2byte ITEM_MAGOST_BERRY
+	.2byte ITEM_RABUTA_BERRY
+	.2byte ITEM_NOMEL_BERRY
+	.2byte ITEM_NONE
 	release
 	end
 

@@ -48,6 +48,22 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     ITEM_LIST_END
 };
 
+static const u16 sFrontierExchangeCorner_Berries[] =
+{
+    ITEM_LIECHI_BERRY,
+    ITEM_GANLON_BERRY,
+    ITEM_SALAC_BERRY,
+    ITEM_PETAYA_BERRY,
+    ITEM_APICOT_BERRY,
+    ITEM_POMEG_BERRY,
+    ITEM_KELPSY_BERRY,
+    ITEM_QUALOT_BERRY,
+    ITEM_HONDEW_BERRY,
+    ITEM_GREPA_BERRY,
+    ITEM_TAMATO_BERRY,
+    ITEM_LIST_END
+};
+
 static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 {
     BattleFrontier_ExchangeServiceCorner_Text_KissPosterDesc,
@@ -95,5 +111,21 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    gText_Exit
+};
+
+static const u8 *const sFrontierExchangeCorner_BerryDescriptions[] =
+{
+    BattleFrontier_ExchangeServiceCorner_Text_LiechiDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_GanlonDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_SalacDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_PetayaDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_ApicotDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_PomegDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_KelpsyDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_QualotDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_HondewDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_GrepaDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_TamatoDesc,
     gText_Exit
 };
