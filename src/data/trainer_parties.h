@@ -12351,44 +12351,44 @@ static const struct TrainerMon sParty_Steven2[] = {
     {
     .iv = 255,
     .lvl = 77,
-    .species = SPECIES_SKARMORY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_TOXIC, MOVE_AERIAL_ACE, MOVE_SPIKES, MOVE_STEEL_WING}
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SKY_ATTACK MOVE_DOUBLE_EDGE}
     },
     {
     .iv = 255,
     .lvl = 75,
-    .species = SPECIES_CLAYDOL,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_REFLECT, MOVE_LIGHT_SCREEN, MOVE_ANCIENT_POWER, MOVE_EARTHQUAKE}
-    },
-    {
-    .iv = 255,
-    .lvl = 76,
-    .species = SPECIES_AGGRON,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_THUNDER, MOVE_EARTHQUAKE, MOVE_SOLAR_BEAM, MOVE_DRAGON_CLAW}
+    .species = SPECIES_TYRANITAR,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_CRUNCH, MOVE_THUNDERBOLT}
     },
     {
     .iv = 255,
     .lvl = 76,
     .species = SPECIES_CRADILY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_ANCIENT_POWER, MOVE_INGRAIN, MOVE_CONFUSE_RAY}
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_REST, MOVE_CURSE, MOVE_SLEEP_TALK, MOVE_ANCIENT_POWER}
     },
     {
     .iv = 255,
     .lvl = 76,
     .species = SPECIES_ARMALDO,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_ANCIENT_POWER, MOVE_AERIAL_ACE, MOVE_SLASH}
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_SANDSTORM, MOVE_EARTHQUAKE}
+    },
+    {
+    .iv = 255,
+    .lvl = 76,
+    .species = SPECIES_STEELIX,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SANDSTORM, MOVE_CRUNCH}
     },
     {
     .iv = 255,
     .lvl = 78,
     .species = SPECIES_METAGROSS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_SHADOW_BALL}
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_PSYCHIC, MOVE_METEOR_MASH, MOVE_FIRE_PUNCH}
     }
 };
 
