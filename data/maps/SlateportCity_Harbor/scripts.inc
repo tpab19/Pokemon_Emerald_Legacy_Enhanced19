@@ -328,9 +328,32 @@ SlateportCity_Harbor_EventScript_CaptSternFerryOrScannerComment::
 	end
 
 SlateportCity_Harbor_EventScript_FerryFinished::
+	call_if_set FLAG_EXCHANGED_SCANNER, SlateportCity_Harbor_EventScript_Offer2ndDeepSeaItem
 	msgbox SlateportCity_Harbor_Text_FinishedMakingFerry, MSGBOX_DEFAULT
 	release
 	end
+
+SlateportCity_Harbor_EventScript_Offer2ndDeepSeaItem::
+	goto_if_set FLAG_GOT_2ND_DEEP_SEA_ITEM, SlateportCity_Harbor_EventScript_Return
+	msgbox SlateportCity_Harbor_Text_SternOffersOtherItem, MSGBOX_DEFAULT
+	goto_if_set FLAG_GOT_DEEP_SEA_TOOTH, SlateportCity_Harbor_EventScript_GiveDeepSeaScale
+	goto_if_set FLAG_GOT_DEEP_SEA_SCALE, SlateportCity_Harbor_EventScript_GiveDeepSeaTooth
+	return
+SlateportCity_Harbor_EventScript_GiveDeepSeaScale::
+	giveitem ITEM_DEEP_SEA_SCALE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	goto SlateportCity_Harbor_EventScript_Got2ndDeepSeaItem
+SlateportCity_Harbor_EventScript_GiveDeepSeaTooth::
+	giveitem ITEM_DEEP_SEA_TOOTH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	goto SlateportCity_Harbor_EventScript_Got2ndDeepSeaItem
+SlateportCity_Harbor_EventScript_Got2ndDeepSeaItem::
+	msgbox SlateportCity_Harbor_Text_PlayerReceivesOtherItem, MSGBOX_DEFAULT
+	setflag FLAG_GOT_2ND_DEEP_SEA_ITEM
+	release
+	end
+SlateportCity_Harbor_EventScript_Return::
+	return
 
 SlateportCity_Harbor_EventScript_AskToTradeScanner::
 	message SlateportCity_Harbor_Text_WouldYouTradeScanner
@@ -355,6 +378,7 @@ SlateportCity_Harbor_EventScript_DeepSeaTooth::
 	removeitem ITEM_SCANNER
 	msgbox SlateportCity_Harbor_Text_HandedScannerToStern, MSGBOX_DEFAULT
 	setflag FLAG_EXCHANGED_SCANNER
+	setflag FLAG_GOT_DEEP_SEA_TOOTH
 	goto SlateportCity_Harbor_EventScript_TradedScanner
 	end
 
@@ -366,6 +390,7 @@ SlateportCity_Harbor_EventScript_DeepSeaScale::
 	removeitem ITEM_SCANNER
 	msgbox SlateportCity_Harbor_Text_HandedScannerToStern, MSGBOX_DEFAULT
 	setflag FLAG_EXCHANGED_SCANNER
+	setflag FLAG_GOT_DEEP_SEA_SCALE
 	goto SlateportCity_Harbor_EventScript_TradedScanner
 	end
 
@@ -544,3 +569,24 @@ SlateportCity_Harbor_Text_HandedScannerToStern:
 SlateportCity_Harbor_Text_ThisWillHelpResearch:
 	.string "CAPT. STERN: Thanks, {PLAYER}{KUN}!\n"
 	.string "This will help our research a lot!$"
+
+SlateportCity_Harbor_Text_SternOffersOtherItem:
+	.string "CAPT. STERN: Oh, {PLAYER}{KUN}!\n"
+	.string "I see you've come back.\p"
+	.string "You know, during our expeditions,\n"
+	.string "we've gathered more than enough\l"
+	.string "samples of DEEPSEATOOTHs and\l"
+	.string "DEEPSEASCALEs.\p"
+	.string "I noticed you only took one the\n"
+	.string "last time we traded.\p"
+	.string "It would be a shame if you couldn't\n"
+	.string "make the most of your discoveries.\p"
+	.string "Here, please take this.\n"
+	.string "It's the item you didn't choose.\p"
+	.string "Consider it a token of thanks for\n"
+	.string "all you've done.$"
+
+SlateportCity_Harbor_Text_PlayerReceivesOtherItem:
+	.string "CAPT. STERN: This should help you and\n"
+	.string "your POKéMON in ways you didn't expect.\p"
+	.string "Best of luck, {PLAYER}{KUN}!$"

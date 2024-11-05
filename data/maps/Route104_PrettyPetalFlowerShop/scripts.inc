@@ -63,6 +63,51 @@ Route104_PrettyPetalFlowerShop_Pokemart_Plants:
 	release
 	end
 
+Route104_PrettyPetalFlowerShop_EventScript_SellBerries::
+	message gText_PlayerWhatCanIDoForYou
+	waitmessage
+	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Route104_PrettyPetalFlowerShop_EventScript_SellBerriesPostNorman
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Berries1
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_SellBerriesPostNorman::
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Berries2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Route104_PrettyPetalFlowerShop_Pokemart_Berries1:
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_NONE
+	release
+	end
+
+	.align 2
+Route104_PrettyPetalFlowerShop_Pokemart_Berries2:
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_NONE
+	release
+	end
+
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
 	lock
 	faceplayer

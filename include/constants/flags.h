@@ -670,9 +670,9 @@
 #define FLAG_TRICK_HOUSE_PRIZE_TENT     0x277
 #define FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE  0x278
 #define FLAG_GAME_CORNER_PRIZE_PORYGON  0x279
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
+#define FLAG_GOT_DEEP_SEA_TOOTH         0x27A
+#define FLAG_GOT_DEEP_SEA_SCALE         0x27B
+#define FLAG_GOT_2ND_DEEP_SEA_ITEM      0x27C
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag
 #define FLAG_UNUSED_0x27F  0x27F // Unused Flag
@@ -1073,7 +1073,7 @@
 #define FLAG_ITEM_ROUTE_120_NUGGET                                  0x406
 #define FLAG_ITEM_ROUTE_120_FULL_HEAL                               0x407
 #define FLAG_ITEM_ROUTE_123_CALCIUM                                 0x408
-#define FLAG_ITEM_ROUTE_123_RARE_CANDY                              0x409 // Unused Flag, leftover from R/S. In Emerald this is a hidden item and uses a different flag
+#define FLAG_ITEM_ROUTE_134_BLUE_SHARD                              0x409
 #define FLAG_ITEM_ROUTE_127_ZINC                                    0x40A
 #define FLAG_ITEM_ROUTE_127_CARBOS                                  0x40B
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
@@ -1168,24 +1168,24 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_ITEM_ROUTE_108_BLUE_SHARD                              0x468
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET                           0x46C
-#define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
+#define FLAG_ITEM_ROUTE_125_YELLOW_SHARD                            0x46D
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_ITEM_ROUTE_134_RED_SHARD                               0x470
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_ITEM_ROUTE_132_GREEN_SHARD                             0x472
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_UNUSED_0x479                                           0x479 // Unused Flag
+#define FLAG_ITEM_ROUTE_128_YELLOW_SHARD                            0x479
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C

@@ -109,6 +109,10 @@ Route123_BerryMastersHouse_Text_DoneForToday:
 	.string "Come again another day.\p"
 	.string "Let flowers fill the world!$"
 
+Route123_BerryMastersHouse_Text_ComeAgain:
+	.string "Come again.\p"
+	.string "Let flowers fill the world!$"
+
 Route123_BerryMastersHouse_Text_HeardAGoodSayingLately:
 	.string "The way my husband grows BERRIES,\n"
 	.string "oh, he's the best in the world.\p"

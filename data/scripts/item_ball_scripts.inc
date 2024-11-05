@@ -657,3 +657,27 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE
 	end
+
+Route108_EventScript_ItemBlueShard::
+	finditem ITEM_BLUE_SHARD
+	end
+
+Route134_EventScript_ItemRedShard::
+	finditem ITEM_RED_SHARD
+	end
+
+Route132_EventScript_ItemGreenShard::
+	finditem ITEM_GREEN_SHARD
+	end
+
+Route128_EventScript_ItemYellowShard::
+	finditem ITEM_YELLOW_SHARD
+	end
+
+Route125_EventScript_ItemYellowShard::
+	finditem ITEM_YELLOW_SHARD
+	end
+
+Route134_EventScript_ItemBlueShard::
+	finditem ITEM_BLUE_SHARD
+	end
