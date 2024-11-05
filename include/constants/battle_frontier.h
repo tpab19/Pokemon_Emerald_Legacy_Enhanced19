@@ -117,7 +117,6 @@
 #define EXCHANGE_CORNER_VITAMIN_CLERK    2
 #define EXCHANGE_CORNER_HOLD_ITEM_CLERK  3
 #define EXCHANGE_CORNER_BERRY_CLERK      4
-
 #define F_EV_SPREAD_HP         (1 << 0)
 #define F_EV_SPREAD_ATTACK     (1 << 1)
 #define F_EV_SPREAD_DEFENSE    (1 << 2)
