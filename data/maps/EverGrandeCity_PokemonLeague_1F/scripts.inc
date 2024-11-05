@@ -45,6 +45,14 @@ EverGrandeCity_PokemonLeague_1F_Pokemart:
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_TM_IRON_TAIL
+	.2byte ITEM_TM_SLUDGE_BOMB
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_SUNNY_DAY
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_FRUSTRATION
+	.2byte ITEM_TM_RETURN
 	.2byte ITEM_NONE
 	release
 	end
