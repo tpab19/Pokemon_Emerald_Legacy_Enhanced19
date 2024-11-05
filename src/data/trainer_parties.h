@@ -6633,12 +6633,17 @@ static const struct TrainerMon sParty_Ernest1[] = {
     {
     .iv = 0,
     .lvl = 37,
-    .species = SPECIES_HARIYAMA,
+    .species = SPECIES_PILOSWINE,
+    },
+    {
+    .iv = 0,
+    .lvl = 35,
+    .species = SPECIES_SNORUNT,
     },
     {
     .iv = 0,
     .lvl = 37,
-    .species = SPECIES_MACHOKE,
+    .species = SPECIES_HARIYAMA,
     }
 };
 // Route 109 Seashore House Sailor
@@ -6836,7 +6841,7 @@ static const struct TrainerMon sParty_Auron[] = {
     {
     .iv = 0,
     .lvl = 38,
-    .species = SPECIES_MACHAMP,
+    .species = SPECIES_GLALIE,
     },
     {
     .iv = 0,
@@ -9695,7 +9700,7 @@ static const struct TrainerMon sParty_ToriAndTia[] = {
     {
     .iv = 0,
     .lvl = 24,
-    .species = SPECIES_SPINDA,
+    .species = SPECIES_SNORUNT,
     }
 };
 // Route 125 Sr and Jr
