@@ -42,18 +42,18 @@ These videos also provide an overview of the hack and the ideology behind it:
 ## Credits For Emerald Legacy:
 
 ### Creators:
-- TheSmithPlays - Developer
-- cRz Shadows - Devoloper
+- TheSmithPlays - Project Manager and Developer
+- cRz Shadows - Lead Devoloper
 - Weebra - Video Editor
+- Aerogod - Developer
+- Disq - Developer
+- Isona - Developer
+- ZuperZACH - Developer
+- Karlos - Developer
+- Regi -  Developer
 
 
 ### Playtesters:
-- Aerogod
-- Disq
-- Karlos
-- ZuperZACH
-- Regi
-- Isona
 - Obelisk
 - JanitorOPplznerf
 - Sable
@@ -64,6 +64,17 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Tiberius
 - SoulXCross
 - Mogul
+
+
+### Blind Testers
+- Kewaun
+- SilfertheCanadian
+- Awqweird
+- Mungi
+- Shaun Duz Stuffs
+- Flint'sInfernape
+- Dabrikishaw8008
+- RevRush
 
 
 ### Sprite Artists:
