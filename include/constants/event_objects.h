@@ -249,6 +249,10 @@
 #define OBJ_EVENT_GFX_ARTICUNO                   245
 #define OBJ_EVENT_GFX_ZAPDOS                     246
 #define OBJ_EVENT_GFX_MOLTRES                    247
+#define OBJ_EVENT_GFX_COURTNEY                   248
+#define OBJ_EVENT_GFX_TABITHA                    249
+#define OBJ_EVENT_GFX_SHELLY                     250
+#define OBJ_EVENT_GFX_MATT                       251
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
