@@ -156,12 +156,12 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "of ROCK-type POKéMON.\p"
 	.string "The ROCK type can't stand WATER-type,\n"
 	.string "FIGHTING-type and GRASS-type moves.\p"
-	.string "ROXANNE uses a combination of\n"
-	.string "dual-type POKéMON that resist these types.\p"
-	.string "You'll need multiple types if you want to\n"
-	.string "take advantage of her weaknesses!\p"
-	.string "Defensively, you just need to\p"
-	.string "watch out for her ROCK TOMB!\n"
+	.string "ROXANNE uses a combo of dual-type\n"
+	.string "POKéMON that resist these types.\p"
+	.string "You'll need multiple types if you want\n"
+	.string "to take advantage of her weaknesses!\p"
+	.string "Defensively, you just need to\n"
+	.string "watch out for her ROCK TOMB!\p"
 	.string "Let's do it!$"
 
 RustboroCity_Gym_Text_GymGuidePostVictory:

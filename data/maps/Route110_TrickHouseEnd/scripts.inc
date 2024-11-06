@@ -361,7 +361,7 @@ Route110_TrickHouseEnd_Text_DefeatedMeEeveeReward:
 	.string "between you, the driven, and the genius\l"
 	.string "that is myself,\p"
 	.string "I demand that you take this rare and\n"
-	.string "cherished Pokémon.\p"
+	.string "cherished POKéMON.\p"
 	.string "Take good care of it!$"
 
 Route110_TrickHouseEnd_Text_DefeatedMePreferWhichTent:

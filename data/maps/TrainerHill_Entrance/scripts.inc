@@ -465,5 +465,5 @@ TrainerHill_Roof_Text_SnorlaxReward:
 	.string "You've proven yourself to be a true\n"
 	.string "master of puzzles.\p"
 	.string "As a reward, please accept this rare\n"
-	.string "Pokémon!\p"
+	.string "POKéMON!\p"
 	.string "Treat it well on your journey!$"

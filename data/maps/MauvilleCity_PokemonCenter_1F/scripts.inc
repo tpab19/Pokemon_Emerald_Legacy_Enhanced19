@@ -93,7 +93,7 @@ MauvilleCity_PokemonCenter_1F_Text_YouWillTradeWontYou:
 	.string "Oh! You have a {STR_VAR_2}, don't you?\p"
 	.string "They're so lively! Would you be willing\n"
 	.string "to trade it for my {STR_VAR_1}?\p"
-	.string "It's quite the unique Pokémon!$"
+	.string "It's quite the unique POKéMON!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
 	.string "Take good care of NIPPY, okay?\p"
