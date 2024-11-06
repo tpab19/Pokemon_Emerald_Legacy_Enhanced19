@@ -253,6 +253,8 @@
 #define OBJ_EVENT_GFX_TABITHA                    249
 #define OBJ_EVENT_GFX_SHELLY                     250
 #define OBJ_EVENT_GFX_MATT                       251
+#define OBJ_EVENT_GFX_ZINNIA                     252
+#define OBJ_EVENT_GFX_WHISMUR                    253
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //

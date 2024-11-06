@@ -1,4 +1,5 @@
 .set LOCALID_RAYQUAZA_SLEEPING, 1
+.set LOCALID_ZINNIA, 3
 
 SkyPillar_Top_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SkyPillar_Top_OnResume
@@ -17,6 +18,8 @@ SkyPillar_Top_EventScript_TryRemoveRayquaza::
 	return
 
 SkyPillar_Top_OnTransition:
+	setflag FLAG_HIDE_ZINNIA
+	setvar VAR_DO_ZINNIA_FIGHT, 0
 	call_if_lt VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_SetCleanLayout
 	call_if_ge VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_TryShowRayquaza
 	end
@@ -28,10 +31,20 @@ SkyPillar_Top_EventScript_SetCleanLayout::
 
 SkyPillar_Top_EventScript_TryShowRayquaza::
 	call_if_unset FLAG_DEFEATED_RAYQUAZA, SkyPillar_Top_EventScript_ShowRayquaza
+	@ call_if_set FLAG_IS_CHAMPION, SkyPillar_Top_EventScript_TryShowZinnia
 	return
 
 SkyPillar_Top_EventScript_ShowRayquaza::
 	clearflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
+	return
+
+SkyPillar_Top_EventScript_TryShowZinnia::
+	goto_if_set FLAG_DEFEATED_ZINNIA, SkyPillar_Top_EventScript_TryShowZinniaReturn
+	clearflag FLAG_HIDE_ZINNIA
+	goto_if_set FLAG_DEFEATED_RAYQUAZA, SkyPillar_Top_EventScript_TryShowZinniaReturn
+	setflag FLAG_HIDE_ZINNIA
+	setvar VAR_DO_ZINNIA_FIGHT, 1
+SkyPillar_Top_EventScript_TryShowZinniaReturn::
 	return
 
 SkyPillar_Top_OnWarp:
@@ -130,6 +143,21 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	setvar VAR_SKY_PILLAR_STATE, 1
 	setvar VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE, 1
 	releaseall
+	end
+
+SkyPillar_Outside_EventScript_ZinniaAppears::
+	fadescreen FADE_TO_BLACK
+	setobjectxyperm LOCALID_ZINNIA, 13, 11
+	addobject LOCALID_ZINNIA
+	delay 20
+	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
+	waitmovement 0
+	special Script_FadeOutMapMusic
+	fadescreen FADE_FROM_BLACK
+	@ fallthrough
+SkyPillar_Outside_EventScript_Zinnia::
+	setflag FLAG_DEFEATED_ZINNIA
+	return
 	end
 
 @ Rayquaza has unusual movement frames

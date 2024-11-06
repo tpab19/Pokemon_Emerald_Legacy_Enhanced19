@@ -13494,3 +13494,49 @@ static const struct TrainerMon sParty_MaxieTerraCave[] = {
     .moves = {MOVE_ERUPTION, MOVE_EARTHQUAKE, MOVE_HEAT_WAVE, MOVE_ROCK_SLIDE}
     }
 };
+
+// Zinnia (Post Game)
+static const struct TrainerMon sParty_Zinnia[] = {
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_SUNNY_DAY, MOVE_FIRE_BLAST, MOVE_BODY_SLAM, MOVE_REST}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_LEAF_BLADE, MOVE_EXPLOSION, MOVE_FAINT_ATTACK, MOVE_EXTRASENSORY}
+    },
+    {
+    .iv = 150,
+    .lvl = 66,
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_SOLAR_BEAM, MOVE_OVERHEAT, MOVE_SUNNY_DAY, MOVE_CRUNCH}
+    },
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_WEEZING,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_EXPLOSION, MOVE_SUNNY_DAY, MOVE_SHADOW_BALL, MOVE_FIRE_BLAST}
+    },
+    {
+    .iv = 150,
+    .lvl = 65,
+    .species = SPECIES_STEELIX,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_SUNNY_DAY, MOVE_EXPLOSION, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
+    },
+    {
+    .iv = 220,
+    .lvl = 67,
+    .species = SPECIES_CAMERUPT,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_ERUPTION, MOVE_EARTHQUAKE, MOVE_HEAT_WAVE, MOVE_ROCK_SLIDE}
+    }
+};

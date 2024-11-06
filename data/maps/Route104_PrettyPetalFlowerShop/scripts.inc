@@ -63,8 +63,36 @@ Route104_PrettyPetalFlowerShop_Pokemart_Plants:
 	release
 	end
 
-Route104_PrettyPetalFlowerShop_EventScript_SellBerries::
-	message gText_PlayerWhatCanIDoForYou
+Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
+	lock
+	faceplayer
+	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
+	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
+	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
+	giveitem ITEM_WAILMER_PAIL
+	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_WAILMER_PAIL
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
+	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
+	random 8
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
+	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
+
+Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
+	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	waitmessage
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Route104_PrettyPetalFlowerShop_EventScript_SellBerriesPostNorman
 	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Berries1
@@ -105,41 +133,5 @@ Route104_PrettyPetalFlowerShop_Pokemart_Berries2:
 	.2byte ITEM_SITRUS_BERRY
 	.2byte ITEM_LUM_BERRY
 	.2byte ITEM_NONE
-	release
-	end
-
-Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
-	lock
-	faceplayer
-	goto_if_unset FLAG_RECEIVED_WAILMER_PAIL, Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
-	msgbox Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis, MSGBOX_DEFAULT
-	giveitem ITEM_WAILMER_PAIL
-	msgbox Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_WAILMER_PAIL
-	release
-	end
-
-Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
-	lock
-	faceplayer
-	dotimebasedevents
-	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
-	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
-	random 8
-	addvar VAR_RESULT, FIRST_BERRY_INDEX
-	giveitem VAR_RESULT
-	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
-	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
-	release
-	end
-
-Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
 	release
 	end
