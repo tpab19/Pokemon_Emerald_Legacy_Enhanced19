@@ -331,7 +331,7 @@ static const struct TrainerMon sParty_Fredrick[] = {
     .species = SPECIES_MACHOKE,
     }
 };
-// Aqua Hideout Aqua Admin Matt
+// Aqua Hideout Aqua Admin 
 static const struct TrainerMon sParty_Matt[] = {
     {
     .iv = 150,
@@ -13361,7 +13361,7 @@ static const struct TrainerMon sParty_ArchieMtPyre[] = {
     .lvl = 38,
     .species = SPECIES_WAILORD,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_ICE_BEAM}
+    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_WHIRLPOOL}
     },
     {
     .iv = 150,
