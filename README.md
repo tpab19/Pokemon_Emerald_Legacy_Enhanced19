@@ -66,7 +66,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Mogul
 
 
-### Blind Testers
+### Blind Testers:
 - Kewaun
 - SilfertheCanadian
 - Awqweird
@@ -79,6 +79,10 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ### Sprite Artists:
 - ZuperZACH
+
+
+### Music Credits:
+"Vs Zinnia" - GBA MIDI by LibertyTwins, Original Composition by Shota Kageyama
 
 
 ### Where you can find all Pret Tutorials:
@@ -123,6 +127,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Ellabrella - [Increase Text Speed Beyond Fast](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-15#post-10400198)
 - Robinlukke - [Feed any number of pokéblocks](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-14#post-10364627)
 - AmbientDinosaur - [Changing encounter groups with map scripts](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-12#post-10315616)
+- WiserVisor - [How To Add, Edit, And Understand Music in Pokeemerald](https://www.pokecommunity.com/threads/how-to-add-edit-and-understand-music-in-pokeemerald.444317/)
 
 
 ### Other Credits:
