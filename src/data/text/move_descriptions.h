@@ -42,8 +42,8 @@ static const u8 sScratchDescription[] = _(
     "sharp claws.");
 
 static const u8 sViceGripDescription[] = _(
-    "Grips the foe with large and\n"
-    "powerful pincers.");
+    "Grips the foe with powerful\n"
+    "pincers. May lower ATTACK.");
 
 static const u8 sGuillotineDescription[] = _(
     "A powerful pincer attack\n"
@@ -518,7 +518,7 @@ static const u8 sSwiftDescription[] = _(
     "that never miss.");
 
 static const u8 sSkullBashDescription[] = _(
-    "Tucks in the head, then\n"
+    "Tucks head to raise DEFENSE,\n"
     "attacks on the next turn.");
 
 static const u8 sSpikeCannonDescription[] = _(
@@ -967,7 +967,7 @@ static const u8 sSunnyDayDescription[] = _(
 
 static const u8 sCrunchDescription[] = _(
     "Crunches with sharp fangs.\n"
-    "May lower DEF.");
+    "May lower DEFENSE.");
 
 static const u8 sMirrorCoatDescription[] = _(
     "Counters the foe's special\n"
@@ -1194,8 +1194,8 @@ static const u8 sTeeterDanceDescription[] = _(
     "the scene.");
 
 static const u8 sBlazeKickDescription[] = _(
-    "A kick with a high critical-\n"
-    "hit ratio. May cause a burn.");
+    "A fiery kick that can cause\n"
+    "both flinching and burn.");
 
 static const u8 sMudSportDescription[] = _(
     "Covers the user in mud to\n"
@@ -1207,7 +1207,7 @@ static const u8 sIceBallDescription[] = _(
 
 static const u8 sNeedleArmDescription[] = _(
     "Attacks with thorny arms.\n"
-    "May cause flinching.");
+    "May lower SP. DEF.");
 
 static const u8 sSlackOffDescription[] = _(
     "Slacks off and restores\n"
@@ -1319,7 +1319,7 @@ static const u8 sSheerColdDescription[] = _(
 
 static const u8 sMuddyWaterDescription[] = _(
     "Attacks with muddy water.\n"
-    "May lower accuracy.");
+    "May lower speed.");
 
 static const u8 sBulletSeedDescription[] = _(
     "Shoots 2 to 5 seeds in a row\n"
@@ -1390,8 +1390,8 @@ static const u8 sCalmMindDescription[] = _(
     "by focusing the mind.");
 
 static const u8 sLeafBladeDescription[] = _(
-    "Slashes with a sharp leaf.\n"
-    "High critical-hit ratio.");
+    "Sharp leaf slash with high\n"
+    "crit. May raise crit-ratio.");
 
 static const u8 sDragonDanceDescription[] = _(
     "A mystical dance that ups\n"
