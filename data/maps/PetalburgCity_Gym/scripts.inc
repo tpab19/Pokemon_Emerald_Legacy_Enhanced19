@@ -1379,10 +1379,10 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough:
 PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "Well {PLAYER}, it must be\n"
 	.string "surreal to have made it here.\p"
-	.string "As you know, your dad uses\n"
+	.string "As you know, your DAD uses\n"
 	.string "NORMAL-type POKéMON!\p"
 	.string "They may not have super effective\n"
-	.string "match ups, but they're still super!\p"
+	.string "match-ups, but they're still super!\p"
 	.string "His LINOONE always threatens a sweep\n"
 	.string "while that psychic POKéMON seems to\l"
 	.string "cover his FIGHTING-type weakness.\p"
@@ -1392,7 +1392,7 @@ PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "beat the awaiting TRAINERS.\p"
 	.string "Whoops! The doors in this room are\n"
 	.string "already open, so don't attack me!\p"
-	.string "Once you make it to Norman...\n"
+	.string "Once you make it to NORMAN...\n"
 	.string "Well, watch out for his ace!$"
 
 PetalburgCity_Gym_Text_GymGuidePostVictory:

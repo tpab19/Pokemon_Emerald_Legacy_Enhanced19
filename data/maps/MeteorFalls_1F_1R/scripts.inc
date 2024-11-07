@@ -370,7 +370,7 @@ MeteorFalls_1F_1R_Text_ProfCozmoDontWalkToFallarbor:
 
 MeteorFalls_1F_1R_Text_WhatsTeamMagmaDoingAtMtChimney:
 	.string "PROF. COZMO: But that TEAM MAGMA…\p"
-	.string "What are they going to do with that\l"
+	.string "What are they going to do with that\n"
 	.string "METEORITE at MT. CHIMNEY?\p"
 	.string "I don't know what to do…\n"
 	.string "Could you walk me back to my lab\l"

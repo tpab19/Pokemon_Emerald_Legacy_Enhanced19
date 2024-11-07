@@ -636,6 +636,9 @@ $(MID_SUBDIR)/mus_encounter_hiker.s: %.s: %.mid
 $(MID_SUBDIR)/mus_zinnia.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -v100 -P5
 
+$(MID_SUBDIR)/mus_wally.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -v100 -P5
+
 $(MID_SUBDIR)/ph_choice_blend.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
 

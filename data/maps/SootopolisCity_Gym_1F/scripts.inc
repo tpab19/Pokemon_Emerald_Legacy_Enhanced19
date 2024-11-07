@@ -284,7 +284,7 @@ SootopolisCity_Gym_1F_Text_WallaceIntro:
 	.string "A difference in your demeanor.\p"
 	.string "I think I sense that in you.\p"
 	.string "What happened on top of the SKY\n"
-	.string "PILLER, and what you did, I will likely\l"
+	.string "PILLAR, and what you did, I will likely\l"
 	.string "learn through our upcoming battle.\p"
 	.string "Now, show me. Show me the power you\n"
 	.string "wield with your POKéMON.\p"

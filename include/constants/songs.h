@@ -489,6 +489,7 @@
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
 #define MUS_ZINNIA                  559 // MUS_ZINNIA
+#define MUS_WALLY                   560 // MUS_WALLY
 
 #define PH_TRAP_BLEND               559
 #define PH_TRAP_HELD                560
