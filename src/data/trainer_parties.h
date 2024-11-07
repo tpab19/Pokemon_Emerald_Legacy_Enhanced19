@@ -1569,14 +1569,14 @@ static const struct TrainerMon sParty_Daphne[] = {
     .lvl = 50,
     .species = SPECIES_LUVDISC,
     .heldItem = ITEM_BRIGHT_POWDER,
-    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_RAIN_DANCE, MOVE_SURF}
+    .moves = {MOVE_ATTRACT, MOVE_LOVELY_KISS, MOVE_RAIN_DANCE, MOVE_WATER_PULSE}
     },
     {
     .iv = 255,
     .lvl = 50,
     .species = SPECIES_LUVDISC,
     .heldItem = ITEM_BRIGHT_POWDER,
-    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_RAIN_DANCE, MOVE_SURF}
+    .moves = {MOVE_ATTRACT, MOVE_LOVELY_KISS, MOVE_RAIN_DANCE, MOVE_WATER_PULSE}
     }
 };
 // Space Center
