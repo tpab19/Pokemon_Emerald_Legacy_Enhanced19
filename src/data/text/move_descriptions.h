@@ -1214,8 +1214,8 @@ static const u8 sSlackOffDescription[] = _(
     "half the maximum HP.");
 
 static const u8 sHyperVoiceDescription[] = _(
-    "A loud attack that uses\n"
-    "sound waves to injure.");
+    "Uses sound waves to injure.\n"
+    "May confuse the foe.");
 
 static const u8 sPoisonFangDescription[] = _(
     "A sharp-fanged attack.\n"

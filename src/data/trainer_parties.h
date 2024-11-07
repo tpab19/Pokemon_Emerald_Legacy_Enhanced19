@@ -1565,18 +1565,18 @@ static const struct TrainerMon sParty_Cindy1[] = {
 //Sootopolis Gym Lady 1 (Middle Level - Double Battle w Annika)
 static const struct TrainerMon sParty_Daphne[] = {
     {
-    .iv = 100,
-    .lvl = 45,
+    .iv = 255,
+    .lvl = 50,
     .species = SPECIES_LUVDISC,
-    .heldItem = ITEM_NUGGET,
-    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_FLAIL, MOVE_WATER_PULSE}
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_RAIN_DANCE, MOVE_SURF}
     },
     {
-    .iv = 100,
-    .lvl = 45,
+    .iv = 255,
+    .lvl = 50,
     .species = SPECIES_LUVDISC,
-    .heldItem = ITEM_NUGGET,
-    .moves = {MOVE_ATTRACT, MOVE_SAFEGUARD, MOVE_TAKE_DOWN, MOVE_WATER_PULSE}
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .moves = {MOVE_ATTRACT, MOVE_SWEET_KISS, MOVE_RAIN_DANCE, MOVE_SURF}
     }
 };
 // Space Center
@@ -6791,18 +6791,18 @@ static const struct TrainerMon sParty_Eli[] = {
 //Sootopolis Gym Pokefan 1 (Middle Level - Double Battle w Daphne)
 static const struct TrainerMon sParty_Annika[] = {
     {
-    .iv = 100,
+    .iv = 255,
     .lvl = 50,
     .species = SPECIES_FEEBAS,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_FLAIL, MOVE_WATER_PULSE, MOVE_RETURN, MOVE_ATTRACT}
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_RAIN_DANCE, MOVE_ATTRACT}
     },
     {
-    .iv = 100,
+    .iv = 255,
     .lvl = 50,
     .species = SPECIES_FEEBAS,
-    .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_FLAIL, MOVE_WATER_PULSE, MOVE_RETURN, MOVE_ATTRACT}
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_RAIN_DANCE, MOVE_ATTRACT}
     }
 };
 // Route 123 (via 118 from mauville) CooltrainerF
