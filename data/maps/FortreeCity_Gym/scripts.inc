@@ -79,7 +79,7 @@ FortreeCity_Gym_EventScript_GiveRematchReward::
 	playfanfare MUS_OBTAIN_ITEM
 	message LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
-	giveegg SPECIES_WYNAUT
+	giveegg SPECIES_TOGEPI
 	msgbox FortreeCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_WINONA_REMATCH_REWARD
@@ -93,7 +93,8 @@ FortreeCity_Gym_Text_WinonaGiveRematchReward:
 	.string "Your performance in battle was truly\n"
 	.string "breathtaking, {PLAYER}.\p"
 	.string "To honor your graceful strength, I wish\n"
-	.string "to present you with a most cherished gift.$"
+	.string "to present you with a most cherished\l"
+	.string "gift.$"
 
 FortreeCity_Gym_Text_NoRoomForReward:
 	.string "Ah, it seems your party is full.\n"

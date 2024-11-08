@@ -209,7 +209,7 @@ DewfordTown_Gym_EventScript_BrawlyRematchContinue::
 DewfordTown_Gym_EventScript_GiveRematchReward::
 	msgbox DewfordTown_Gym_Text_BrawlyGiveRematchReward, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	@giveitem ITEM_BRICK_PIECE, 1 @ TODO brick piece
+	giveitem ITEM_BRICK_PIECE, 1
 	waitfanfare
 	goto_if_eq VAR_RESULT, FALSE, DewfordTown_Gym_EventScript_NoRoom
 	msgbox DewfordTown_Gym_Text_GaveReward, MSGBOX_DEFAULT
@@ -227,7 +227,7 @@ DewfordTown_Gym_Text_BrawlyGiveRematchReward:
 	.string "You've got some serious power behind\n"
 	.string "those moves.\p"
 	.string "To honor your strength, I want you to\n"
-	.string "have this BRICK PIECE.\p"
+	.string "have this BRICK PIECE.$"
 
 DewfordTown_Gym_Text_NoRoomForReward:
 	.string "Oh, looks like your BAG is too full.\p"

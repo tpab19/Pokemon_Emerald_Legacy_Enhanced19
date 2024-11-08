@@ -402,6 +402,10 @@ const u8 gItemEffect_UpGrade[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
+const u8 gItemEffect_BrickPiece[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
 const u8 *const gItemEffectTable[] =
 {
     [ITEM_POTION - ITEM_POTION]        = gItemEffect_Potion,
@@ -462,6 +466,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_DEEP_SEA_SCALE - ITEM_POTION]= gItemEffect_DeepSeaScale,
     [ITEM_METAL_COAT - ITEM_POTION]    = gItemEffect_MetalCoat,
     [ITEM_UP_GRADE - ITEM_POTION]      = gItemEffect_UpGrade,
+    [ITEM_BRICK_PIECE - ITEM_POTION]   = gItemEffect_BrickPiece,
     [ITEM_CHERI_BERRY - ITEM_POTION]   = gItemEffect_CheriBerry,
     [ITEM_CHESTO_BERRY - ITEM_POTION]  = gItemEffect_ChestoBerry,
     [ITEM_PECHA_BERRY - ITEM_POTION]   = gItemEffect_PechaBerry,
