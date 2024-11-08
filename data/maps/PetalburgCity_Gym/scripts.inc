@@ -1186,6 +1186,8 @@ PetalburgCity_Gym_EventScript_NormanRematchCall::
 	waitmessage
 	closemessage
 	clearflag FLAG_ENABLE_NORMAN_REMATCH_CALL
+	setflag FLAG_REMATCH_READY_NORMAN
+	special UpdateGymLeaderRematch
 	releaseall
 	end
 
