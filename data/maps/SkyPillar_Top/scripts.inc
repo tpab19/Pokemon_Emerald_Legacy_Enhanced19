@@ -237,11 +237,11 @@ SkyPillar_Top_Text_ZinniaDefeat:
 	.string "…I guess… It falls to you now…$"
 
 SkyPillar_Top_Text_ZinniaPostBattle1:
-	.string "{player}, You and RAYQUAZA…\n"
+	.string "{PLAYER}, You and RAYQUAZA…\n"
 	.string "together.\p"
 	.string "I am leaving this task to you, our\n"
 	.string "new Successor.\p"
-	.string "Successor {player}.\p"
+	.string "Successor {PLAYER}.\p"
 	.string "You and RAYQUAZA must protect nature…\n"
 	.string "POKéMON… the people…$"
 
