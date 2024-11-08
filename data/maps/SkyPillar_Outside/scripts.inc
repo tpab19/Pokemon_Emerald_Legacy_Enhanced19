@@ -151,7 +151,7 @@ SkyPillar_Outside_Text_OpenedDoorToSkyPillar:
 	.string "legend and grace.\p"
 	.string "The DRAGON LORD awaits us at its\n"
 	.string "summit, I'm sure of it.\p"
-	.string "Shall we ascend... together?$"
+	.string "Shall we ascend… together?$"
 
 SkyPillar_Outside_Text_EarthquakeNotMomentToWaste:
 	.string "WALLACE: Oh dear, an earthquake!\p"
@@ -159,16 +159,16 @@ SkyPillar_Outside_Text_EarthquakeNotMomentToWaste:
 	.string "We have no time to waste!$"
 
 SkyPillar_Outside_Text_SituationGettingWorse:
-	.string "WALLACE: This is troubling...\n"
+	.string "WALLACE: This is troubling…\n"
 	.string "The skies grow darker by the minute.$"
 
 SkyPillar_Outside_Text_GotToGoBackForSootopolis:
 	.string "WALLACE: This isn't good…\n"
-	.string "The chaos is spreading even here...\p"
+	.string "The chaos is spreading even here…\p"
 	.string "{PLAYER}{KUN}.\p"
 	.string "I believe the DRAGON LORD lies at the\n"
 	.string "summit.\p"
-	.string "I must return to SOOTOPOLIS...\n"
+	.string "I must return to SOOTOPOLIS…\n"
 	.string "My city needs its guardian.\p"
 	.string "I entrust this monumental task to you.\n"
 	.string "Please, do not let us down!$"

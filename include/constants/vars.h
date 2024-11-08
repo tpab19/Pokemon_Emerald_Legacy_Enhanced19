@@ -274,7 +274,7 @@
 #define VAR_ROUTE114_WILD_SET                            0x40FE
 #define VAR_ROUTE116_WILD_SET                            0x40FF
 #define VAR_NORMAN_REMATCH_CALL_STEP_COUNTER             0x4100
-#define VAR_DO_ZINNIA_FIGHT                              0x4101
+#define VAR_SHOW_ZINNIA                                  0x4101
 
 #define VARS_END                                         0x4100
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

@@ -230,7 +230,7 @@ LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "is her ability to set the sun. \p"
 	.string "If her fox sets up sunlight, even\n"
 	.string "WATER-types will burn to a crisp.\p"
-	.string "Speaking of which, that slug...\p"
+	.string "Speaking of which, that slug…\p"
 	.string "It burns so hot, water doesn't\n"
 	.string "seem to even bother it!\p"
 	.string "But hey, you're showing promise!\n"

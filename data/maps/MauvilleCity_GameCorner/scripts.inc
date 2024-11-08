@@ -856,7 +856,7 @@ MauvilleCity_GameCorner_Text_SecretPrize:
 	.string "Are you up for the challenge?$"
 
 MauvilleCity_GameCorner_Text_GotEnoughCoins:
-	.string "Wait... You've actually gathered\n"
+	.string "Wait… You've actually gathered\n"
 	.string "9999 COINS?\p"
 	.string "Incredible! Would you like to claim\n"
 	.string "this rare and unique PORYGON?$"

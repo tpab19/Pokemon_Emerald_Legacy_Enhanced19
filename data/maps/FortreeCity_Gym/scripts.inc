@@ -183,7 +183,7 @@ FortreeCity_Gym_Text_GymGuideAdvice:
 	.string "than you might expect.\p"
 	.string "Watch out for her ace too.\p"
 	.string "It might look cute, but when\n"
-	.string "that thing set ups...\p"
+	.string "that thing set ups…\p"
 	.string "Ah who am I kidding? You got this!$"
 
 FortreeCity_Gym_Text_GymGuidePostVictory:

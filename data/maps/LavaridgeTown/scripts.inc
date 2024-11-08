@@ -363,7 +363,7 @@ LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad:
 
 LavaridgeTown_Text_RivalTravelToPetalburg:
 	.string "I'm headed to PETALBURG'S GYM next\n"
-	.string "myself...\p"
+	.string "myself…\p"
 	.string "Do you want to go back together?\n"
 	.string "Back to PETALBURG?$"
 

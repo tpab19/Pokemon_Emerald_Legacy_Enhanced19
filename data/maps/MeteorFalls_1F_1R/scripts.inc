@@ -309,7 +309,7 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
 	.string "of TEAM MAGMA's goons.\p"
 	.string "Humph…\n"
 	.string "You're one odd kid.\p"
-	.string "TEAM MAGMA... they're misguided, \n"
+	.string "TEAM MAGMA… they're misguided, \n"
 	.string "believing they can free the ancient\l"
 	.string "force that once saved us, convinced it\l"
 	.string "will bring good again.\p"

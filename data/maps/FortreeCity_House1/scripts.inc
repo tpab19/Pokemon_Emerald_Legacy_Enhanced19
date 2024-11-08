@@ -82,7 +82,7 @@ FortreeCity_House1_Text_ThisIsntAMon:
 	.string "I need a real {STR_VAR_2}.$"
 
 FortreeCity_House1_Text_YouWontTradeMe:
-	.string "Oh, I see... Not interested in trading,\n"
+	.string "Oh, I see… Not interested in trading,\n"
 	.string "huh? That’s okay, maybe another time!$"
 
 FortreeCity_House1_Text_GoingToMakeVolbeatStrong:

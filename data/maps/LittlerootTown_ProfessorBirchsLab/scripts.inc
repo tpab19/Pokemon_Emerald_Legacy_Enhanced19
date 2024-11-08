@@ -1206,7 +1206,7 @@ LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2:
 	.string "that's waiting for you!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_StrangeRockInMossdeep:
-	.string "PROF. BIRCH: Oh, before I forget...\n"
+	.string "PROF. BIRCH: Oh, before I forget…\n"
 	.string "I've been researching something\n"
 	.string "quite curious in MOSSDEEP CITY.\p"
 	.string "There's a strange rock there that\n"
@@ -1353,7 +1353,7 @@ LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant:
 	.string "Oh, {PLAYER}{KUN}! Great timing!\p"
 	.string "My DAD tasked me with finding more\n"
 	.string "starter POKéMON for new trainers, but\l"
-	.string "I'm running short on {STR_VAR_1}...\p"
+	.string "I'm running short on {STR_VAR_1}…\p"
 	.string "Could I ask a huge favor?\p"
 	.string "If you bring me a {STR_VAR_1},\n"
 	.string "I'd be happy to trade you a {STR_VAR_2}\l"
@@ -1365,7 +1365,7 @@ LittlerootTown_ProfessorBirchsLab_Text_IllTradeIfYouWant2:
 	.string "That {STR_VAR_1} found an amazing new\l"
 	.string "trainer!\p"
 	.string "But my DAD needs more help, and I'm still\n"
-	.string "short on {STR_VAR_1}...\p"
+	.string "short on {STR_VAR_1}…\p"
 	.string "Would you be up for trading me another?\n"
 	.string "I'll give you a {STR_VAR_2} this time!$"
 
@@ -1464,7 +1464,7 @@ LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuest:
 	.string "I think it has something to do with\n"
 	.string "HEART SCALES, which seem to unlock\l"
 	.string "hidden potential in them.\p"
-	.string "But here's the catch... I need HEART\n"
+	.string "But here's the catch… I need HEART\n"
 	.string "SCALES that you find out in the wild.\l"
 	.string "Could you help me out by collecting\n"
 	.string "some HEART SCALES?\p"

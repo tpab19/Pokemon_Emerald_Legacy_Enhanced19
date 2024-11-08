@@ -775,7 +775,7 @@ MossdeepCity_Text_SpecialSpaceCenterRockAfterEvent:
 	.string "The people at the SPACE CENTER always\n"
 	.string "believed this rock held a special\l"
 	.string "meaning, and now I know why.\p"
-	.string "It means our rockets are going to fly...\n"
+	.string "It means our rockets are going to fly…\n"
 	.string "We'll really reach the stars!$"
 
 MossdeepCity_Text_ItsAWhiteRock:
@@ -827,29 +827,29 @@ MossdeepCity_Text_Jirachi:
 	.string "JIRACHI!$"
 
 MossdeepCity_Text_BirchSeesJirachi:
-	.string "PROF. BIRCH: Incredible... Could it be...?\n"
-	.string "JIRACHI... did you really hear our\l"
+	.string "PROF. BIRCH: Incredible… Could it be…?\n"
+	.string "JIRACHI… did you really hear our\l"
 	.string " wishes?$"
 
 MossdeepCity_Text_BirchWhatChanges:
 	.string "This must be the POKéMON connected to\n"
-	.string "the rock's legends. But more than that...\l"
+	.string "the rock's legends. But more than that…\l"
 	.string "I sense something different in the air.$"
 
 MossdeepCity_Text_BirchTouchedTheRegion:
-	.string "Could it be... your wish has touched the\n"
+	.string "Could it be… your wish has touched the\n"
 	.string "entire region? I wonder what changes\l"
-	.string "might be happening now...$"
+	.string "might be happening now…$"
 
 MossdeepCity_Text_GirlSeesJirachi:
-	.string "GIRL: Does this mean... we really will fly\n"
+	.string "GIRL: Does this mean… we really will fly\n"
 	.string "through the stars?\p"
 	.string "To think our dreams could actually\n"
-	.string "come true...$"
+	.string "come true…$"
 
 MossdeepCity_Text_BirchNewDiscoveries:
 	.string "PROF. BIRCH: Your wish to befriend all\n"
-	.string "kinds of POKéMON... It feels like JIRACHI\l"
+	.string "kinds of POKéMON… It feels like JIRACHI\l"
 	.string "has made that possible, {PLAYER}{KUN}.\p"
 	.string "Who knows what new discoveries await\n"
 	.string "you now?$"
@@ -863,7 +863,7 @@ MossdeepCity_Text_BirchAreYouReady:
 	.string "chance!$"
 
 MossdeepCity_Text_BirchJirachiFled:
-	.string "PROF. BIRCH: Oh... It seems JIRACHI has\n"
+	.string "PROF. BIRCH: Oh… It seems JIRACHI has\n"
 	.string "disappeared.\p"
 	.string "But don't be disheartened, {PLAYER}{KUN}.\n"
 	.string "Even witnessing such a rare POKéMON is\l"
@@ -873,8 +873,8 @@ MossdeepCity_Text_BirchLeaves:
 	.string "PROF. BIRCH: What an extraordinary\n"
 	.string "event, {PLAYER}{KUN}.\p"
 	.string "To think we’ve just witnessed the\n"
-	.string "legendary JIRACHI...\p"
-	.string "The legends, the wishes... They all feel\n"
+	.string "legendary JIRACHI…\p"
+	.string "The legends, the wishes… They all feel\n"
 	.string "more real now, don’t they?\p"
 	.string "More than anything, it feels like a\n"
 	.string "reminder of how vast and mysterious\l"

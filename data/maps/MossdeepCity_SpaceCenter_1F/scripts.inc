@@ -394,7 +394,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle:
 	.string "we'll come unannounced.$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro:
-	.string "The SPACE CENTER's satellites...\n"
+	.string "The SPACE CENTER's satellites…\n"
 	.string "that's what we're after.\p"
 	.string "We'll use them, no matter what!$"
 

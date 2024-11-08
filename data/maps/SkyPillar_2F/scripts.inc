@@ -1,3 +1,5 @@
+.set LOCALID_ZINNIA, 1
+
 SkyPillar_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveHole_CheckFallDownHole
 	map_script MAP_SCRIPT_ON_TRANSITION, SkyPillar_2F_OnTransition
@@ -18,3 +20,39 @@ SkyPillar_2F_SetHoleWarp:
 	setholewarp MAP_SKY_PILLAR_1F
 	end
 
+SkyPillar_2F_EventScript_Zinnia::
+	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SkyPillar_2F_Text_Zinnia, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ZINNIA, Common_Movement_FaceUp
+	waitmovement 0
+	fadescreen FADE_TO_BLACK
+	special Script_FadeOutMapMusic
+	removeobject LOCALID_ZINNIA
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_SPOKE_TO_ZINNIA_2F
+	setflag FLAG_HIDE_ZINNIA_2F
+	clearflag FLAG_HIDE_ZINNIA_3F
+	release
+	end
+
+SkyPillar_2F_Text_Zinnia::
+	.string "Let me tell you a story.\p"
+	.string "A thousand years ago, a fierce eruption\n"
+	.string "rose up from the sea.\p"
+	.string "That's what gave us SOOTOPOLIS, but it\n"
+	.string "also stirred up GROUDON and KYOGRE.\p"
+	.string "At first, they seemed calm… until they\n"
+	.string "met each other.\l"
+	.string "Then, chaos!\p"
+	.string "My ancestor back then was the\n"
+	.string "LOREKEEPER, and she prayed with\l"
+	.string "everything she had for RAYQUAZA\l"
+	.string "to return.\p"
+	.string "And when RAYQUAZA did, it calmed the\n"
+	.string "storm, putting those two back to sleep.\p"
+	.string "Since then, we've carried on this role,\n"
+	.string "passing down our knowledge…\p"
+	.string "ready to call RAYQUAZA again if it's\n"
+	.string "ever needed.$"

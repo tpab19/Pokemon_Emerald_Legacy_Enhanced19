@@ -242,22 +242,22 @@ FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
 
 FallarborTown_CozmosHouse_Text_GotRayquaza:
 	.string "PROF. COZMO: Oh my…\n"
-	.string "Is that... RAYQUAZA?!\p"
+	.string "Is that… RAYQUAZA?!\p"
 	.string "You're truly full of surprises,\n"
 	.string "{PLAYER}{KUN}.\p"
 	.string "Wait, what's this?\n"
-	.string "The METEORITE... it's reacting...\l"
+	.string "The METEORITE… it's reacting…\l"
 	.string "It’s shaking! But why?\p"
-	.string "This has never happened before...\p"
+	.string "This has never happened before…\p"
 	.string "Could it be that the presence of\n"
 	.string "RAYQUAZA is triggering something?\p"
-	.string "Hold on...$"
+	.string "Hold on…$"
 
 FallarborTown_CozmosHouse_Text_GotRayquaza2:
 	.string "My equipment is picking up seismic\n"
 	.string "activity coming from an area called\l"
 	.string "BIRTH ISLAND.\p"
-	.string "The timing can't be a coincidence...\n"
+	.string "The timing can't be a coincidence…\n"
 	.string "RAYQUAZA’s presence must be connected.\p"
 	.string "Here, take this.$"
 

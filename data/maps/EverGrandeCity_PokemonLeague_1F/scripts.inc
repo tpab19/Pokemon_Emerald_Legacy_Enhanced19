@@ -70,6 +70,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	waitmessage
 	delay 120
 	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
+	goto_if_set FLAG_HARD, EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza
 	closemessage
 	applymovement LOCALID_GUARD_1, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_GUARD_2, EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay
@@ -99,6 +100,17 @@ EverGrandeCity_PokemonLeague_1F_EventScript_PlayerMoveToFrontFromLeft::
 EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges::
 	playse SE_FAILURE
 	msgbox EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza::
+	setvar 0x8005, SPECIES_RAYQUAZA
+	special CheckSpecies
+	goto_if_eq VAR_RESULT, TRUE, EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza
+	return
+EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza::
+	playse SE_FAILURE
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_CantBringLegendaries, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -146,7 +158,12 @@ EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:
 	.string "If you're bound for the POKéMON\n"
 	.string "LEAGUE, you must return with them.$"
 
+EverGrandeCity_PokemonLeague_1F_Text_CantBringLegendaries:
+	.string "Only POKéMON of extraordinary spirit\n"
+	.string "may enter the LEAGUE's ranks.\p"
+	.string "LEGENDARY POKéMON are not allowed.\n"
+	.string "Please return with a different team.$"
+
 EverGrandeCity_PokemonLeague_1F_Text_GoForth:
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
-

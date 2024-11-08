@@ -4921,7 +4921,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whismur = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_WHISMUR,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ZINNIA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,

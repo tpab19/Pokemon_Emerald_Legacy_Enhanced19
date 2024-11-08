@@ -1,5 +1,6 @@
 .set LOCALID_RAYQUAZA_SLEEPING, 1
-.set LOCALID_ZINNIA, 3
+.set LOCALID_ASTER, 3
+.set LOCALID_ZINNIA, 4
 
 SkyPillar_Top_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, SkyPillar_Top_OnResume
@@ -18,8 +19,6 @@ SkyPillar_Top_EventScript_TryRemoveRayquaza::
 	return
 
 SkyPillar_Top_OnTransition:
-	setflag FLAG_HIDE_ZINNIA
-	setvar VAR_DO_ZINNIA_FIGHT, 0
 	call_if_lt VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_SetCleanLayout
 	call_if_ge VAR_SKY_PILLAR_STATE, 2, SkyPillar_Top_EventScript_TryShowRayquaza
 	end
@@ -31,20 +30,10 @@ SkyPillar_Top_EventScript_SetCleanLayout::
 
 SkyPillar_Top_EventScript_TryShowRayquaza::
 	call_if_unset FLAG_DEFEATED_RAYQUAZA, SkyPillar_Top_EventScript_ShowRayquaza
-	@ call_if_set FLAG_IS_CHAMPION, SkyPillar_Top_EventScript_TryShowZinnia
 	return
 
 SkyPillar_Top_EventScript_ShowRayquaza::
 	clearflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
-	return
-
-SkyPillar_Top_EventScript_TryShowZinnia::
-	goto_if_set FLAG_DEFEATED_ZINNIA, SkyPillar_Top_EventScript_TryShowZinniaReturn
-	clearflag FLAG_HIDE_ZINNIA
-	goto_if_set FLAG_DEFEATED_RAYQUAZA, SkyPillar_Top_EventScript_TryShowZinniaReturn
-	setflag FLAG_HIDE_ZINNIA
-	setvar VAR_DO_ZINNIA_FIGHT, 1
-SkyPillar_Top_EventScript_TryShowZinniaReturn::
 	return
 
 SkyPillar_Top_OnWarp:
@@ -145,19 +134,36 @@ SkyPillar_Top_EventScript_AwakenRayquaza::
 	releaseall
 	end
 
-SkyPillar_Outside_EventScript_ZinniaAppears::
-	fadescreen FADE_TO_BLACK
-	setobjectxyperm LOCALID_ZINNIA, 13, 11
-	addobject LOCALID_ZINNIA
-	delay 20
+SkyPillar_Top_EventScript_Zinnia::
 	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
 	waitmovement 0
+	applymovement LOCALID_ASTER, Common_Movement_FaceLeft
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_ASTER, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox SkyPillar_Top_Text_Zinnia, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ZINNIA, SkyPillar_Top_Text_ZinniaDefeat
+	msgbox SkyPillar_Top_Text_ZinniaPostBattle1, MSGBOX_DEFAULT
+	applymovement LOCALID_ZINNIA, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox SkyPillar_Top_Text_ZinniaPostBattle2, MSGBOX_DEFAULT
+	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SkyPillar_Top_Text_ZinniaPostBattle3, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
 	special Script_FadeOutMapMusic
+	removeobject LOCALID_ZINNIA
+	removeobject LOCALID_ASTER
 	fadescreen FADE_FROM_BLACK
-	@ fallthrough
-SkyPillar_Outside_EventScript_Zinnia::
 	setflag FLAG_DEFEATED_ZINNIA
-	return
+	release
+	end
+
+SkyPillar_Top_EventScript_Aster::
+	msgbox SkyPillar_Top_Text_Whismur, MSGBOX_NPC
 	end
 
 @ Rayquaza has unusual movement frames
@@ -211,3 +217,48 @@ SkyPillar_Top_Movement_CameraPanDown:
 SkyPillar_Top_Text_RayquazaFlewOff:
 	.string "The awakened RAYQUAZA flew off…$"
 
+SkyPillar_Top_Text_Zinnia:
+	.string "RAYQUAZA's purpose is more than just\n"
+	.string "keeping GROUDON and KYOGRE in check…\p"
+	.string "It's to preserve the balance when no\n"
+	.string "one else can.\p"
+	.string "And we believe… one day, something even\n"
+	.string "greater could threaten that balance,\p"
+	.string "something we might not be able to face\n"
+	.string "alone.\p"
+	.string "That's why I'm here… to see if you can\n"
+	.string "stand beside RAYQUAZA, to make sure\l"
+	.string "you're the real deal.\p"
+	.string "So, whaddaya say? Ready to show me\n"
+	.string "what you've got?$"
+
+SkyPillar_Top_Text_ZinniaDefeat:
+	.string "…\n"
+	.string "…I guess… It falls to you now…$"
+
+SkyPillar_Top_Text_ZinniaPostBattle1:
+	.string "{player}, You and RAYQUAZA…\n"
+	.string "together.\p"
+	.string "I am leaving this task to you, our\n"
+	.string "new Successor.\p"
+	.string "Successor {player}.\p"
+	.string "You and RAYQUAZA must protect nature…\n"
+	.string "POKéMON… the people…$"
+
+SkyPillar_Top_Text_ZinniaPostBattle2:
+	.string "Ever since I was a little girl, I have\n"
+	.string "always turned my eyes up to the sky.\p"
+	.string "When I was so full of uncertainty\n"
+	.string "that I felt my heart might be crushed\l"
+	.string "by it…$"
+
+SkyPillar_Top_Text_ZinniaPostBattle3:
+	.string "…I used to look up to the sky like this\n"
+	.string "all the time… Together with ASTER.\p"
+	.string "I think I'll spend some time now trying\n"
+	.string "to find out if it's possible to forge a\l"
+	.string "new beginning for something once lost.\p"
+	.string "Until we meet again…$"
+
+SkyPillar_Top_Text_Whismur:
+	.string "Mur, Mur!$"

@@ -1701,22 +1701,22 @@ SootopolisCity_Text_GroudonPleaseStop:
 	.string "I know the extent of your power now!\p"
 	.string "If you continue, all of HOENN, not just\n"
 	.string "SOOTOPOLIS, will be consumed by ruin!\p"
-	.string "This wasn't what I sought... not like\n"
+	.string "This wasn't what I sought… not like\n"
 	.string "this.$"
 
 SootopolisCity_Text_AfterAllOurScheming:
 	.string "MAXIE: So, it wasn't only GROUDON and\n"
-	.string "KYOGRE...\p"
+	.string "KYOGRE…\p"
 	.string "After all our efforts,\n"
-	.string "all our grand designs...\p"
+	.string "all our grand designs…\p"
 	.string "A single action from one POKéMON \n"
-	.string "restores everything...\p"
-	.string "As if none of it had ever mattered...\p"
+	.string "restores everything…\p"
+	.string "As if none of it had ever mattered…\p"
 	.string "Fu…\n"
 	.string "Fuhahaha…\p"
 	.string "Perhaps we were never meant to control\n"
 	.string "such forces.\p"
-	.string "Perhaps... balance was always the key.$"
+	.string "Perhaps… balance was always the key.$"
 
 SootopolisCity_Text_KyogreCalmDown:
 	.string "ARCHIE: KYOGRE! What's wrong?!\n"
@@ -1725,12 +1725,12 @@ SootopolisCity_Text_KyogreCalmDown:
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "It's no good!\n"
-	.string "It doesn't respond...\p"
+	.string "It doesn't respond…\p"
 	.string "Have I truly lost control?$"
 
 SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "ARCHIE: KYOGRE and GROUDON have\n"
-	.string "disappeared...\p"
+	.string "disappeared…\p"
 	.string "And the weather in HOENN has returned\n"
 	.string "to normal.\p"
 	.string "Haha…\n"
@@ -1740,13 +1740,13 @@ SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "small, something meaningless in the\l"
 	.string "grand scheme.\p"
 	.string "Nature doesn't bend to our will.\n"
-	.string "Perhaps... it thrives in balance.$"
+	.string "Perhaps… it thrives in balance.$"
 
 SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
 	.string "STEVEN: Those POKéMON fighting…\n"
 	.string "GROUDON… And KYOGRE…\p"
 	.string "The two super-ancient titans,\n"
-	.string "awoken from their long slumber...\p"
+	.string "awoken from their long slumber…\p"
 	.string "Now their power rages out of control,\n"
 	.string "threatening to tear the land and sea\l"
 	.string "apart.\p"
@@ -1757,7 +1757,7 @@ SootopolisCity_Text_InvolvedWithCrisisComeWithMe:
 	.string "Come with me, please.$"
 
 SootopolisCity_Text_DoesThisMakeYourFearPokemon:
-	.string "STEVEN: {PLAYER}{KUN}, tell me...\p"
+	.string "STEVEN: {PLAYER}{KUN}, tell me…\p"
 	.string "Seeing GROUDON and KYOGRE like this,\n"
 	.string "does it make you fear POKéMON?\p"
 	.string "You know better, don't you?\n"
@@ -1780,8 +1780,8 @@ SootopolisCity_Text_KnowWhatsNeededToHelpHim:
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
 	.string "STEVEN: So, WALLACE believes the\n"
-	.string "DRAGON LORD can help us...\p"
-	.string "The SKY PILLAR...\n"
+	.string "DRAGON LORD can help us…\p"
+	.string "The SKY PILLAR…\n"
 	.string "I've heard of it, though I've\l"
 	.string "never ventured there myself.\p"
 	.string "I must stay here in SOOTOPOLIS\n"
@@ -1833,7 +1833,7 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "And where does one get the RAIN BADGE?\n"
 	.string "You know, don't you?\p"
 	.string "That's right! You have to beat\n"
-	.string "the SOOTOPOLIS GYM LEADER...\l"
+	.string "the SOOTOPOLIS GYM LEADER…\l"
 	.string "Me!\p"
 	.string "When you're ready, please come\n"
 	.string "to the GYM.\p"
@@ -1851,7 +1851,7 @@ SootopolisCity_Text_MayBecomingProfessor:
 	.string "There you are!\p"
 	.string "I heard about what happened with\n"
 	.string "GROUDON and KYOGRE! I was so worried!\p"
-	.string "But... you look totally fine!\n"
+	.string "But… you look totally fine!\n"
 	.string "Actually, you look even stronger!\p"
 	.string "Wait, is that the RAIN BADGE?\n"
 	.string "You already defeated WALLACE?!\p"
@@ -1863,7 +1863,7 @@ SootopolisCity_Text_BrendanBecomingProfessor:
 	.string "There you are!\p"
 	.string "I heard about what happened with\n"
 	.string "GROUDON and KYOGRE! I was so worried!\p"
-	.string "But... you look totally fine!\n"
+	.string "But… you look totally fine!\n"
 	.string "Actually, you look even stronger!\p"
 	.string "Wait, is that the RAIN BADGE?\n"
 	.string "You already defeated WALLACE?!\p"
@@ -1872,7 +1872,7 @@ SootopolisCity_Text_BrendanBecomingProfessor:
 
 SootopolisCity_Text_RivalBecomingProfessor2:
 	.string "You know, seeing you grow so much\n"
-	.string "as a TRAINER made me think...\p"
+	.string "as a TRAINER made me think…\p"
 	.string "I don't have the same talent and drive\n"
 	.string "for battling that you do.\p"
 	.string "And that's okay!\n"
@@ -1884,7 +1884,7 @@ SootopolisCity_Text_RivalBecomingProfessor3:
 	.string "I want to become friends with POKéMON\n"
 	.string "all over the world, just like I said\l"
 	.string "when we first met.\p"
-	.string "So I've decided... I'm going to become\n"
+	.string "So I've decided… I'm going to become\n"
 	.string "a POKéMON PROFESSOR.\l"
 	.string "Like my DAD!$"
 

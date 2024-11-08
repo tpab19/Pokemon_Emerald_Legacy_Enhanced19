@@ -298,14 +298,14 @@ LilycoveCity_LilycoveMuseum_2F_Text_TokenOfGratitude:
 	.string "This is merely a token of my gratitude.$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_SpecialTicket::
-	.string "But...\p"
+	.string "But…\p"
 	.string "Your accomplishments in mastering\n"
 	.string "every category of the CONTESTS are so\l"
 	.string "remarkable, they demand something even\l"
 	.string "more extraordinary.\p"
 	.string "In recognition of your skill and\n"
 	.string "dedication, please accept this special\l"
-	.string "ticket...$"
+	.string "ticket…$"
 
 LilycoveCity_LilycoveMuseum_2F_Text_WitnessTrueLegends::
 	.string "With it, you can journey to NAVEL ROCK,\n"

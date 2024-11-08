@@ -195,7 +195,7 @@ PetalburgCity_Text_RivalWeMadeIt:
 	.string "Well, we made it!\n"
 	.string "The PETALBURG CITY GYM!\p"
 	.string "It feels like just yesterday we started\n"
-	.string "our journey...\p"
+	.string "our journey…\p"
 	.string "But look how far we've come,\n"
 	.string "{PLAYER}{KUN}!\p"
 	.string "I think you're ready for this challenge.\n"
@@ -206,7 +206,7 @@ PetalburgCity_Text_RivalWeMadeIt:
 	.string "Let's both give it our all!$"
 
 PetalburgCity_Text_WallyWantsToBattle:
-	.string "I didn't expect to see you here...\p"
+	.string "I didn't expect to see you here…\p"
 	.string "I was on my way back to MAUVILLE,\n"
 	.string "but I realized I left my medicine at\l"
 	.string "home.\p"
@@ -228,7 +228,7 @@ PetalburgCity_Text_WallyWaitInHouse:
 	.string "I know you can do it!$"
 
 PetalburgCity_Text_WallyDefeat:
-    .string "I’ve still got a lot to learn...$"
+    .string "I’ve still got a lot to learn…$"
 
 PetalburgCity_Text_WallyPostBattle:
     .string "You’re still amazing, {PLAYER}{KUN}!\n"

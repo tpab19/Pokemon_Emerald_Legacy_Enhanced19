@@ -431,7 +431,7 @@ Route119_WeatherInstitute_2F_Text_BattleFrontier:
 
 Route119_WeatherInstitute_2F_Text_Route119:
 	.string "You're back already?\n"
-	.string "Thanks, but just as before...\p"
+	.string "Thanks, but just as before…\p"
 	.string "The lightning at the BATTLE FRONTIER\n"
 	.string "disappeared shortly after you arrived.\p"
 	.string "Now, we're seeing reports near ROUTE\n"
@@ -443,7 +443,7 @@ Route119_WeatherInstitute_2F_Text_FoundRaikou:
 	.string "What!? You saw a RAIKOU!?\p"
 	.string "That explains the strange thunder and\n"
 	.string "why it kept moving around!\p"
-	.string "Amazing... You’ve been tracking a\n"
+	.string "Amazing… You’ve been tracking a\n"
 	.string "LEGENDARY POKéMON this whole time!$"
 
 Route119_WeatherInstitute_2F_Text_SeismicActivity:
@@ -463,7 +463,7 @@ Route119_WeatherInstitute_2F_Text_MtChimney:
 	.string "report back as soon as possible.$"
 
 Route119_WeatherInstitute_2F_Text_Route113:
-	.string "You're back! So, no major tremors...\n"
+	.string "You're back! So, no major tremors…\n"
 	.string "That's a relief, but I'd like to be sure.\p"
 	.string "Could you collect an ash sample from\n"
 	.string "Route 113 for us?\p"
@@ -482,7 +482,7 @@ Route119_WeatherInstitute_2F_Text_ScorchedSlab:
 Route119_WeatherInstitute_2F_Text_FoundEntei:
 	.string "Wait, what!? You found an ENTEI?\p"
 	.string "I can’t believe a LEGENDARY POKéMON\n"
-	.string "was behind this...\p"
+	.string "was behind this…\p"
 	.string "ENTEI'S roar is said to cause eruptions.\n"
 	.string "That explains the seismic readings!\p"
 	.string "Fortunately, there’s no parasitic cone\n"

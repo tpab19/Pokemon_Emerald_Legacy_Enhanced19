@@ -42,7 +42,7 @@ PetalburgCity_Gym_EventScript_UnlockAllDoors::
 PetalburgCity_Gym_OnTransition:
 	call_if_eq VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_MoveWallyToEntrance
 	call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MoveNormanToEntrance
-	call_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_CheckNormanForRematch
+	call_if_set FLAG_REMATCH_READY_NORMAN, PetalburgCity_Gym_EventScript_CheckNormanForRematch
 	end
 
 PetalburgCity_Gym_EventScript_MoveWallyToEntrance::
@@ -1392,7 +1392,7 @@ PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "beat the awaiting TRAINERS.\p"
 	.string "Whoops! The doors in this room are\n"
 	.string "already open, so don't attack me!\p"
-	.string "Once you make it to NORMAN...\n"
+	.string "Once you make it to NORMAN…\n"
 	.string "Well, watch out for his ace!$"
 
 PetalburgCity_Gym_Text_GymGuidePostVictory:

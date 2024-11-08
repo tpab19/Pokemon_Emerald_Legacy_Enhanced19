@@ -590,7 +590,7 @@ MtPyre_Summit_Text_Grunt1Defeat:
 	.string "TEAM AQUA goon…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
-	.string "Yeah, you’re tough...\n"
+	.string "Yeah, you’re tough…\n"
 	.string "But TEAM MAGMA won’t give up!$"
 
 MtPyre_Summit_Text_Grunt2Intro:
@@ -687,7 +687,7 @@ MtPyre_Summit_Text_MaxieLeaves:
 	.string "MAXIE: I've indulged your ignorance\n"
 	.string "long enough. There's no reasoning with\l"
 	.string "someone so deluded.\p"
-	.string "I have work to do... real work.\n"
+	.string "I have work to do… real work.\n"
 	.string "Farewell, ARCHIE.$"
 
 MtPyre_Summit_Text_ArchieKyogreWillAwaken:
@@ -695,7 +695,7 @@ MtPyre_Summit_Text_ArchieKyogreWillAwaken:
 	.string "He refuses to see reason.\p"
 	.string "No matter. With the BLUE ORB, KYOGRE\n"
 	.string "will awaken, and I'll prove him wrong!\p"
-	.string "Time is of the essence... I must act\n"
+	.string "Time is of the essence… I must act\n"
 	.string "quickly.$"
 
 MtPyre_Summit_Text_ArchieBumpsIntoPlayer:

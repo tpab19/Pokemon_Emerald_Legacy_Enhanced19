@@ -234,9 +234,9 @@ SeafloorCavern_Room9_Text_ArchieSoItWasYou:
 
 SeafloorCavern_Room9_Text_ArchieBeholdKyogre:
 	.string "ARCHIE: Behold! KYOGRE! So peaceful, so\n"
-	.string "powerful... the ancient POKéMON that\l"
+	.string "powerful… the ancient POKéMON that\l"
 	.string "will save us all.\p"
-	.string "I've waited so long for this moment...\p"
+	.string "I've waited so long for this moment…\p"
 	.string "KYOGRE will bring balance to our world,\n"
 	.string "just like the oceans once did before\l"
 	.string "they were driven back by reckless\l"
@@ -261,12 +261,12 @@ SeafloorCavern_Room9_Text_ArchieDefeat:
 	.string "I lost to a mere child like you?!$"
 
 SeafloorCavern_Room9_Text_ArchieWithThisRedOrb:
-	.string "ARCHIE: You... why can't you see it?!\p"
-	.string "KYOGRE... It's not a threat, it's a\n"
+	.string "ARCHIE: You… why can't you see it?!\p"
+	.string "KYOGRE… It's not a threat, it's a\n"
 	.string "savior!\p"
 	.string "It will end the droughts returning\n"
 	.string "life where there's only suffering!\p"
-	.string "The oceans won't destroy the world...\p"
+	.string "The oceans won't destroy the world…\p"
 	.string "They'll save it!\p"
 	.string "Water will nurture the land and bring\n"
 	.string "balance once more!\p"
@@ -302,9 +302,9 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 	.string "the situation!$"
 
 SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
-	.string "ARCHIE: No... This isn't right!\n"
+	.string "ARCHIE: No… This isn't right!\n"
 	.string "KYOGRE's gone? But where?\p"
-	.string "Wait... GROUDON?\n"
+	.string "Wait… GROUDON?\n"
 	.string "GROUDON is already out there?\p"
 	.string "They're going to clash, aren't they?\n"
 	.string "This wasn't supposed to happen!$"

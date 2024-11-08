@@ -96,13 +96,13 @@ LavaridgeTown_PokemonCenter_1F_Text_TrainersShouldRestToo:
 
 LavaridgeTown_PokemonCenter_1F_Text_MayTravelToPetalburg:
 	.string "MAY: I'm headed to PETALBURG'S GYM\n"
-	.string "next...\p"
+	.string "next…\p"
 	.string "Do you want to go back together?\n"
 	.string "Back to PETALBURG?$"
 
 LavaridgeTown_PokemonCenter_1F_Text_BrendanTravelToPetalburg:
 	.string "BRENDAN: I'm headed to PETALBURG'S GYM\n"
-	.string "next...\p"
+	.string "next…\p"
 	.string "Do you want to go back together?\n"
 	.string "Back to PETALBURG?$"
 

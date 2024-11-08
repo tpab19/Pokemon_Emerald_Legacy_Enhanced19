@@ -179,7 +179,7 @@ Route119_WeatherInstitute_1F_Text_Route128:
 
 Route119_WeatherInstitute_1F_Text_Route134:
 	.string "Ah, you're back!\p"
-	.string "Interesting... ROUTE 128's water is only\n"
+	.string "Interesting… ROUTE 128's water is only\n"
 	.string "slightly purer than usual.\p"
 	.string "But the readings are incomplete. I'd\n"
 	.string "like you to dive in ROUTE 134 next.\p"
@@ -200,7 +200,7 @@ Route119_WeatherInstitute_1F_Text_FoundSuicune:
 	.string "What!? A SUICUNE!?\p"
 	.string "I never imagined a LEGENDARY POKéMON\n"
 	.string "was behind this!\l"
-	.string "That explains everything...\p"
+	.string "That explains everything…\p"
 	.string "SUICUNE must be purifying the waters\n"
 	.string "across the region.$"
 

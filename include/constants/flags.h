@@ -673,18 +673,18 @@
 #define FLAG_GOT_DEEP_SEA_TOOTH         0x27A
 #define FLAG_GOT_DEEP_SEA_SCALE         0x27B
 #define FLAG_GOT_2ND_DEEP_SEA_ITEM      0x27C
-#define FLAG_HIDE_ZINNIA                0x27D
-#define FLAG_DEFEATED_ZINNIA            0x27E
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
+#define FLAG_HIDE_ZINNIA_1F             0x27D
+#define FLAG_SPOKE_TO_ZINNIA_1F         0x27E
+#define FLAG_HIDE_ZINNIA_2F             0x27F
+#define FLAG_SPOKE_TO_ZINNIA_2F         0x280
+#define FLAG_HIDE_ZINNIA_3F             0x281
+#define FLAG_SPOKE_TO_ZINNIA_3F         0x282
+#define FLAG_HIDE_ZINNIA_4F             0x283
+#define FLAG_SPOKE_TO_ZINNIA_4F         0x284
+#define FLAG_HIDE_ZINNIA_5F             0x285
+#define FLAG_SPOKE_TO_ZINNIA_5F         0x286
+#define FLAG_HIDE_ZINNIA_TOP            0x287
+#define FLAG_DEFEATED_ZINNIA            0x288
 #define FLAG_UNUSED_0x289  0x289 // Unused Flag
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag

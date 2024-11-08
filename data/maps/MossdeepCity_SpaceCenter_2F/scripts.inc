@@ -479,14 +479,14 @@ MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel:
 	.string "What are you doing here?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano:
-	.string "MAXIE: Hmph... You're persistent, but\n"
+	.string "MAXIE: Hmph… You're persistent, but\n"
 	.string "you cannot comprehend the scale of our\l"
 	.string "mission.\p"
 	.string "I don't have time to explain myself to\n"
 	.string "you. You're meddling in something far\l"
 	.string "beyond your understanding.\p"
 	.string "We are on the verge of something\n"
-	.string "critical...\p"
+	.string "critical…\p"
 	.string "and you won't stand in our way.$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle:
@@ -508,11 +508,11 @@ MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "MAXIE: You fools!\n"
-	.string "Precious time... wasted!\p"
+	.string "Precious time… wasted!\p"
 	.string "We were going to use this facility to\n"
 	.string "track down ARCHIE.\p"
 	.string "He is on the verge of awakening\n"
-	.string "KYOGRE...  If it clashes with GROUDON...\p"
+	.string "KYOGRE…  If it clashes with GROUDON…\p"
 	.string "The world will be torn apart by\n"
 	.string "unrelenting chaos!\p"
 	.string "I sought to stop him… but now…\n"

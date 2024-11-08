@@ -101,7 +101,7 @@ MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
 	.string "quickly!$"
 
 MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon:
-	.string "Hm? Wait a moment... That’s not the\n"
+	.string "Hm? Wait a moment… That’s not the\n"
 	.string "{STR_VAR_2} I was hoping for!\p"
 	.string "Are you teasing me?$"
 

@@ -314,7 +314,7 @@ EverGrandeCity_ChampionsRoom_Text_StevenIntroSpeech:
 	.string "STEVEN: Welcome, {PLAYER}{KUN}.\p"
 	.string "I was looking forward to seeing you\n"
 	.string "here one day.\p"
-	.string "You... What did you see on your\n"
+	.string "You… What did you see on your\n"
 	.string "journey with POKéMON?\p"
 	.string "What did you feel, meeting so many\n"
 	.string "other TRAINERS like you?\p"
@@ -332,7 +332,7 @@ EverGrandeCity_ChampionsRoom_Text_Defeat:
 	.string "TRAINER!$"
 
 EverGrandeCity_ChampionsRoom_Text_StevenDefeat:
-	.string "I, the CHAMPION, fall in defeat...\p"
+	.string "I, the CHAMPION, fall in defeat…\p"
 	.string "Kudos to you, {PLAYER}{KUN}!\p"
 	.string "You are a truly noble POKéMON\n"
 	.string "TRAINER!$"
@@ -355,15 +355,15 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 EverGrandeCity_ChampionsRoom_Text_StevenPostBattleSpeech:
 	.string "STEVEN: Congratulations!\p"
 	.string "The feelings you have for your\n"
-	.string "POKéMON...\p"
+	.string "POKéMON…\p"
 	.string "And the POKéMON that responded to\n"
-	.string "those feelings with all their might...\p"
+	.string "those feelings with all their might…\p"
 	.string "They came together as one, and created\n"
 	.string "an even greater power.\p"
 	.string "And thus, you were able to grasp\n"
 	.string "victory today!\p"
 	.string "You are rightfully the HOENN region's\n"
-	.string "new...$"
+	.string "new…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: {PLAYER}{KUN}!\p"
@@ -415,7 +415,7 @@ EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
 	.string "Come with me.$"
 
 EverGrandeCity_ChampionsRoom_Text_StevenComeWithMe:
-	.string "STEVEN: {PLAYER}{KUN}...\p"
+	.string "STEVEN: {PLAYER}{KUN}…\p"
 	.string "No, the new CHAMPION!\p"
 	.string "Come with me.$"
 
@@ -427,7 +427,7 @@ EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
 	.string "PROF. BIRCH.$"
 
 EverGrandeCity_ChampionsRoom_Text_StevenWaitOutside:
-	.string "STEVEN: I'm sorry, but...\p"
+	.string "STEVEN: I'm sorry, but…\p"
 	.string "From here on, only those TRAINERS who\n"
 	.string "have become CHAMPIONS may enter.\p"
 	.string "You'll have to wait outside with the\n"

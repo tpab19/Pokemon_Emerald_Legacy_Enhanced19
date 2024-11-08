@@ -130,7 +130,7 @@ EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "the partners who battled with you.$"
 
 EverGrandeCity_HallOfFame_Text_StevenHereWeHonorLeagueChampions:
-	.string "STEVEN: This room...\p"
+	.string "STEVEN: This room…\p"
 	.string "This is where we keep records of\n"
 	.string "POKéMON that prevailed through\l"
 	.string "harsh battles.\p"

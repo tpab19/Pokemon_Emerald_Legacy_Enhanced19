@@ -65,7 +65,7 @@ MagmaHideout_1F_Text_CourtneyIntro:
 
 MagmaHideout_1F_Text_CourtneyDefeat:
 	.string "Ahahahaha!\n"
-	.string "You’re stronger than I expected...\p"
+	.string "You’re stronger than I expected…\p"
 	.string "But TEAM MAGMA will not be so easily\n"
 	.string "stopped!$"
 

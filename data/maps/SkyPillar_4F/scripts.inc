@@ -18,3 +18,34 @@ SkyPillar_4F_SetHoleWarp:
 	setholewarp MAP_SKY_PILLAR_3F
 	end
 
+SkyPillar_4F_EventScript_Zinnia::
+	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SkyPillar_4F_Text_Zinnia, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ZINNIA, Common_Movement_FaceUp
+	waitmovement 0
+	fadescreen FADE_TO_BLACK
+	special Script_FadeOutMapMusic
+	removeobject LOCALID_ZINNIA
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_SPOKE_TO_ZINNIA_4F
+	setflag FLAG_HIDE_ZINNIA_4F
+	clearflag FLAG_HIDE_ZINNIA_5F
+	release
+	end
+
+SkyPillar_4F_Text_Zinnia::
+	.string "From that eruption, the CAVE OF ORIGIN\n"
+	.string "was born…\p"
+	.string "A place holding secrets that go back to\n"
+	.string "the very roots of SOOTOPOLIS itself.\p"
+	.string "Only a handful, like WALLACE, can really\n"
+	.string "understand it.\p"
+	.string "The CAVE and the SKY PILLAR?\p"
+	.string "They're two halves of the same mystery,\n"
+	.string "each part of life's balance.\p"
+	.string "WALLACE could guide you there because\n"
+	.string "of his ancient SOOTOPOLIAN blood,\l"
+	.string "just like mine to the DRACONIDS.\p"
+	.string "See? We're bound together that way.$"

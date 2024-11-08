@@ -299,6 +299,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE
 	setflag FLAG_HIDE_HELIX_FOSSIL
 	setflag FLAG_HIDE_DOME_FOSSIL
-	setflag FLAG_HIDE_ZINNIA
+	setflag FLAG_HIDE_ZINNIA_1F
+	setflag FLAG_HIDE_ZINNIA_2F
+	setflag FLAG_HIDE_ZINNIA_3F
+	setflag FLAG_HIDE_ZINNIA_4F
+	setflag FLAG_HIDE_ZINNIA_5F
+	setflag FLAG_HIDE_ZINNIA_TOP
 	call EventScript_ResetAllBerries
 	end

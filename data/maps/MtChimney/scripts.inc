@@ -570,7 +570,7 @@ MtChimney_Text_MaxieIntro:
 	.string "upon which life could flourish.\p"
 	.string "It is our duty to free it, to let it bring\n"
 	.string "balance once more to those suffering.\p"
-	.string "But that fool ARCHIE... he wants to\n"
+	.string "But that fool ARCHIE… he wants to\n"
 	.string "unleash a power that will drown\l"
 	.string "everything..\p"
 	.string "He's blind to the chaos that will follow.\p"

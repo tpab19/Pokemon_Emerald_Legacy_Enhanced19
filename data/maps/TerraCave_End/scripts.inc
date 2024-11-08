@@ -148,23 +148,23 @@ TerraCave_End_Text_MaxieIntro:
 	.string "This is MY responsibility, not yours!\p"
 	.string "I was the one who unleashed its power,\n"
 	.string "and only I can stop it.\p"
-	.string "If you believe otherwise...\n"
+	.string "If you believe otherwise…\n"
 	.string "then show me your strength!$"
 
 TerraCave_End_Text_MaxieDefeat:
-	.string "MAXIE: I don't believe it...\n"
+	.string "MAXIE: I don't believe it…\n"
 
 TerraCave_End_Text_MaxiePostBattle:
-	.string "MAXIE: GROUDON in your hands...\n"
+	.string "MAXIE: GROUDON in your hands…\n"
 	.string "I never thought I'd see this day.\p"
-	.string "It's my duty to control its power, but...\n"
+	.string "It's my duty to control its power, but…\n"
 	.string "If you think you can handle it, then so\l"
 	.string "be it."
 	.string "I'll be here. Watching.$"
 
 TerraCave_End_Text_MaxieCaughtGroudon:
 	.string "MAXIE: How could this happen?\n"
-	.string "Even after everything...\p"
+	.string "Even after everything…\p"
 	.string "All this time, I believed expanding the\n"
 	.string "land would heal the world, feed the\l"
 	.string "hungry, and create new opportunities.\p"
@@ -173,7 +173,7 @@ TerraCave_End_Text_MaxieCaughtGroudon:
 	.string "designs to notice the subtle truths.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "It's ironic...\p"
+	.string "It's ironic…\p"
 	.string "ARCHIE'S ideals aren't so different from\n"
 	.string "mine after all.\p"
 	.string "We both sought a better world, yet in my\n"
@@ -185,9 +185,9 @@ TerraCave_End_Text_MaxieCaughtGroudon:
 	.string "Even the smallest seeds can grow into\n"
 	.string "mighty forests if tended properly.\p"
 	.string "Perhaps small, considerate actions\n"
-	.string "will lead to the change we seek...\p"
+	.string "will lead to the change we seek…\p"
 	.string "I won't abandon my vision, but maybe\n"
-	.string "there's a better path...\p"
+	.string "there's a better path…\p"
 	.string "One that avoids catastrophe.$"
 
 TerraCave_End_Text_MaxieRanFromGroudon:
