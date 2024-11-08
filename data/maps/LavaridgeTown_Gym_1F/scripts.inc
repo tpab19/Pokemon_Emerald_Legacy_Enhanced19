@@ -221,13 +221,13 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	end
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
-	.string "Good to see you again, CHAMPION-\n"
+	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "LAVARIDGE's GYM LEADER FLANNERY\n"
 	.string "uses FIRE-type POKéMON.\p"
 	.string "Weak to rocks, water and ground,\n"
 	.string "the real threat of this fight\l"
-	.string "is her ability to set the sun. \p"
+	.string "is her ability to utilize the sun.\p"
 	.string "If her fox sets up sunlight, even\n"
 	.string "WATER-types will burn to a crisp.\p"
 	.string "Speaking of which, that slug…\p"
