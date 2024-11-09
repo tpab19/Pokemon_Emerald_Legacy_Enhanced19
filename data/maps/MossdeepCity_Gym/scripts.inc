@@ -418,7 +418,7 @@ MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "these two are the real deal.\p"
 	.string "They'll come at you with an\n"
 	.string "outstanding combination of attacks.\p"
-	.string "To win, you'll need to creat a\n"
+	.string "To win, you'll need to create a\n"
 	.string "strategy different from the singles\l"
 	.string "format you're used to battling in.\p"
 	.string "Go for it!$"

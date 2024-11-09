@@ -95,12 +95,10 @@ MtPyre_Summit_EventScript_TeamAquaExits::
 	closemessage
 	applymovement LOCALID_MATT, MtPyre_Summit_Movement_MattWalksToPlayer
 	waitmovement 0
-	special SavePlayerParty
 	setvar VAR_0x8004, SPECIAL_BATTLE_ARCHIE_AND_MATT
 	setvar VAR_0x8005, 0
 	special DoSpecialTrainerBattle
 	waitstate
-	special LoadPlayerParty
 	switch VAR_RESULT
 	case 1, MtPyre_Summit_EventScript_TeamAquaExits2
 	fadescreen FADE_TO_BLACK

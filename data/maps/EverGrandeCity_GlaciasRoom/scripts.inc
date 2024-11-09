@@ -37,6 +37,7 @@ EverGrandeCity_GlaciasRoom_EventScript_CloseDoor::
 	return
 
 EverGrandeCity_GlaciasRoom_EventScript_Glacia::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_GlaciasRoom_EventScript_GlaciaRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
@@ -55,6 +56,28 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_GLACIA
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_GlaciaRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_GlaciasRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_GLACIA_2, EverGrandeCity_GlaciasRoom_Text_RematchDefeat
+	goto EverGrandeCity_GlaciasRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_GlaciasRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_GlaciasRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_GLACIA
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_GlaciasRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -81,3 +104,19 @@ EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
 	.string "And there, confirm the truly fearsome\n"
 	.string "side of the POKéMON LEAGUE.$"
 
+EverGrandeCity_GlaciasRoom_Text_RematchIntroSpeech:
+	.string "GLACIA: Welcome back, CHAMPION.\p"
+	.string "I've honed my ICE-type skills further,\n"
+	.string "seeking a real challenge.\p"
+	.string "Will you bring the heat again? Let us\n"
+	.string "see if you can melt my resolve!$"
+
+EverGrandeCity_GlaciasRoom_Text_RematchDefeat:
+	.string "That fire in you burns even hotter now.\n"
+	.string "My ice simply couldn't hold out.$"
+
+EverGrandeCity_GlaciasRoom_Text_RematchPostBattleSpeech:
+	.string "You've proven your strength once more.\n"
+	.string "Advance with pride, CHAMPION.\p"
+	.string "You'll need every ounce of strength for\n"
+	.string "WALLACE's challenge.$"

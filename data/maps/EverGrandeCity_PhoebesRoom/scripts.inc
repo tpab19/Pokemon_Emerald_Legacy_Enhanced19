@@ -37,6 +37,7 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor::
 	return
 
 EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
@@ -55,6 +56,28 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_PhoebeRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_PHOEBE_2, EverGrandeCity_PhoebesRoom_Text_RematchDefeat
+	goto EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -82,3 +105,21 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
 	.string "will carry you.\p"
 	.string "Go ahead, move on to the next room.$"
 
+EverGrandeCity_PhoebesRoom_Text_RematchIntroSpeech:
+	.string "PHOEBE: Ahahaha! You're back!\n"
+	.string "Guess I couldn't keep you away!\p"
+	.string "My bond with GHOST-type POKéMON has\n"
+	.string "only deepened.\p"
+	.string "I'm excited to see how far your bond\n"
+	.string "has grown, too.\p"
+	.string "Let's dance with the spirits!$"
+
+EverGrandeCity_PhoebesRoom_Text_RematchDefeat:
+	.string "Ooooh… Lost again, huh?\n"
+	.string "You've really grown, haven't you?$"
+
+EverGrandeCity_PhoebesRoom_Text_RematchPostBattleSpeech:
+	.string "Your connection with your POKéMON…\n"
+	.string "It's as strong as ever.\p"
+	.string "I'm glad we battled again. Go on and\n"
+	.string "show them what you've got!$"

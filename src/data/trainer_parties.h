@@ -13540,3 +13540,156 @@ static const struct TrainerMon sParty_Zinnia[] = {
     .moves = {MOVE_WISH, MOVE_TOXIC, MOVE_DRAGON_CLAW, MOVE_FIRE_BLAST}
     }
 };
+
+// Elite Four Sidney Rematch
+static const struct TrainerMon sParty_Sidney2[] = {
+    {
+    .iv = 250,
+    .lvl = 51,
+    .species = SPECIES_MIGHTYENA,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_CRUNCH, MOVE_SUPER_FANG, MOVE_YAWN, MOVE_COUNTER}
+    },
+    {
+    .iv = 250,
+    .lvl = 51,
+    .species = SPECIES_MURKROW,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_DRILL_PECK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_FEATHER_DANCE}
+    },
+    {
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_AERIAL_ACE, MOVE_EXTRASENSORY}
+    },
+    {
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_CRAWDAUNT,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_CRABHAMMER, MOVE_SWORDS_DANCE, MOVE_CRUNCH, MOVE_SLUDGE_BOMB}
+    },
+    {
+    .iv = 255,
+    .lvl = 53,
+    .species = SPECIES_ABSOL,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE}
+    }
+};
+//Elite Four Phoebe Rematch
+static const struct TrainerMon sParty_Phoebe2[] = {
+    {
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_SABLEYE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WILL_O_WISP, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
+    },
+    {
+    .iv = 250,
+    .lvl = 53,
+    .species = SPECIES_BANETTE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_REVENGE, MOVE_DESTINY_BOND}
+    },
+    {
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_NINETALES,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY}
+    },
+    {
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_MEDICHAM,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_HI_JUMP_KICK, MOVE_ENDURE, MOVE_REVERSAL}
+    },
+    {
+    .iv = 255,
+    .lvl = 54,
+    .species = SPECIES_DUSCLOPS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
+    }
+};
+// Elite Four Glacia Rematch
+static const struct TrainerMon sParty_Glacia2[] = {
+    {
+    .iv = 250,
+    .lvl = 54,
+    .species = SPECIES_GLALIE,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_HAIL}
+    },
+    {
+    .iv = 250,
+    .lvl = 53,
+    .species = SPECIES_SNEASEL,
+    .heldItem = ITEM_SCOPE_LENS,
+    .moves = {MOVE_FAINT_ATTACK, MOVE_BLIZZARD, MOVE_SWORDS_DANCE, MOVE_SLASH}
+    },
+    {
+    .iv = 250,
+    .lvl = 53,
+    .species = SPECIES_CASTFORM,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_WEATHER_BALL, MOVE_HYDRO_PUMP, MOVE_HAIL, MOVE_THUNDERBOLT}
+    },
+    {
+    .iv = 250,
+    .lvl = 54,
+    .species = SPECIES_PILOSWINE,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_EARTHQUAKE, MOVE_BLIZZARD, MOVE_ROCK_SLIDE, MOVE_REST}
+    },
+    {
+    .iv = 255,
+    .lvl = 55,
+    .species = SPECIES_WALREIN,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_HAIL, MOVE_SHEER_COLD}
+    }
+};
+// Elite Four Drake Rematch
+static const struct TrainerMon sParty_Drake2[] = {
+    {
+    .iv = 250,
+    .lvl = 54,
+    .species = SPECIES_FLYGON,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_SIGNAL_BEAM, MOVE_CRUNCH}
+    },
+    {
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_ALTARIA,
+    .heldItem = ITEM_SHARP_BEAK,
+    .moves = {MOVE_SKY_ATTACK, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE, MOVE_DOUBLE_EDGE}
+    },
+    {
+    .iv = 250,
+    .lvl = 53,
+    .species = SPECIES_HUNTAIL,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_CRUNCH, MOVE_HYDRO_PUMP, MOVE_CONFUSE_RAY}
+    },
+    {
+    .iv = 250,
+    .lvl = 55,
+    .species = SPECIES_KINGDRA,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_DRAGON_BREATH}
+    },
+    {
+    .iv = 255,
+    .lvl = 56,
+    .species = SPECIES_SALAMENCE,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
+    }
+};

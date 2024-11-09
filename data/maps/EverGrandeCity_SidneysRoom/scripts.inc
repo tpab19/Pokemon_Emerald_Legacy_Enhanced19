@@ -43,6 +43,7 @@ EverGrandeCity_SidneysRoom_EventScript_WalkInCloseDoor::
 	end
 
 EverGrandeCity_SidneysRoom_EventScript_Sidney::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_SidneysRoom_EventScript_SidneyRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
@@ -61,6 +62,28 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_SidneyRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SIDNEY_2, EverGrandeCity_SidneysRoom_Text_RematchDefeat
+	goto EverGrandeCity_SidneysRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_SidneysRoom_EventScript_RematchDefeated::
+	setflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -85,3 +108,21 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!$"
 
+EverGrandeCity_SidneysRoom_Text_RematchIntroSpeech:
+	.string "SIDNEY: Hey, CHAMPION! Back for more?\n"
+	.string "I knew you had a fiery spirit!\p"
+	.string "Well, this time, WALLACE wants a shot\n"
+	.string "at your title.\l"
+	.string "Think of us as your warm-up!\p"
+	.string "Show me that same fire from before!\n"
+	.string "Let's make it a battle to remember!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchDefeat:
+	.string "You really are somethin'…\n"
+	.string "Looks like you're warmed up already!$"
+
+EverGrandeCity_SidneysRoom_Text_RematchPostBattleSpeech:
+	.string "You're as tough as ever!\n"
+	.string "Think you'll hold onto that title?\p"
+	.string "Go on, the next room's waiting!\n"
+	.string "Keep up the heat!$"

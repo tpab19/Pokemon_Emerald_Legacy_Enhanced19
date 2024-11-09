@@ -872,6 +872,10 @@
 #define TRAINER_MAXIE_TERRA_CAVE            868
 #define TRAINER_MATT_MT_PYRE                869
 #define TRAINER_ZINNIA                      870
+#define TRAINER_SIDNEY_2                    871
+#define TRAINER_PHOEBE_2                    872
+#define TRAINER_GLACIA_2                    873
+#define TRAINER_DRAKE_2                     874
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

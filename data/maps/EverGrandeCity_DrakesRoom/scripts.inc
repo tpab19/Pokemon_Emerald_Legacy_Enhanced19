@@ -38,6 +38,7 @@ EverGrandeCity_DrakesRoom_EventScript_CloseDoor::
 	return
 
 EverGrandeCity_DrakesRoom_EventScript_Drake::
+	goto_if_set FLAG_IS_CHAMPION, EverGrandeCity_DrakesRoom_EventScript_DrakeRematch
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
@@ -58,6 +59,30 @@ EverGrandeCity_DrakesRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_DRAKE
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_DrakesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_DrakeRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_RematchPostBattleSpeech
+	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchIntroSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_DRAKE_2, EverGrandeCity_DrakesRoom_Text_RematchDefeat
+	goto EverGrandeCity_DrakesRoom_EventScript_RematchDefeated
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_RematchPostBattleSpeech::
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_DrakesRoom_EventScript_RematchDefeated::
+	setvar VAR_0x8004, FANCOUNTER_DEFEATED_DRAKE
+	special Script_TryGainNewFanFromCounter
+	setflag FLAG_DEFEATED_ELITE_4_DRAKE
+	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	msgbox EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
 
@@ -90,3 +115,20 @@ EverGrandeCity_DrakesRoom_Text_PostBattleSpeech:
 	.string "Go! Go onwards!\n"
 	.string "The CHAMPION is waiting!$"
 
+EverGrandeCity_DrakesRoom_Text_RematchIntroSpeech:
+	.string "DRAKE: Once more you stand before me…\n"
+	.string "the last of the ELITE FOUR.\p"
+	.string "WALLACE awaits, seeking the title, but\n"
+	.string "first you must conquer me.\p"
+	.string "So, tell me… What is strength to you?\n"
+	.string "Only with true resolve can you prevail!$"
+
+EverGrandeCity_DrakesRoom_Text_RematchDefeat:
+	.string "A powerful display…\n"
+	.string "You have my respect, CHAMPION.$"
+
+EverGrandeCity_DrakesRoom_Text_RematchPostBattleSpeech:
+	.string "You've grown indeed… but know this. A\n"
+	.string "true CHAMPION must face every test.\p"
+	.string "Go now! WALLACE awaits you. Only one\n"
+	.string "can hold the title.$"

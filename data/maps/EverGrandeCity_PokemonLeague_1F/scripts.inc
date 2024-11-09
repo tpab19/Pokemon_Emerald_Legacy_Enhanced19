@@ -104,6 +104,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges::
 	end
 
 EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza::
+	goto_if_set FLAG_IS_CHAMPION, Common_EventScript_NopReturn
 	setvar 0x8005, SPECIES_RAYQUAZA
 	special CheckSpecies
 	goto_if_eq VAR_RESULT, TRUE, EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza
