@@ -174,29 +174,10 @@ SootopolisCity_Gym_1F_EventScript_NoRoom::
 	closemessage
 	end
 
-SootopolisCity_Gym_1F_Text_JuanGiveRematchReward:
-	.string "Ah, splendid indeed, {PLAYER}.\n"
-	.string "Your performance was nothing short\l"
-	.string "of mesmerizing.\p"
-	.string "To honor this remarkable battle, I shall\n"
-	.string "bestow upon you a rare item, one that is\l"
-	.string "close to my heart.$"
-
-SootopolisCity_Gym_1F_Text_NoRoomForReward:
-	.string "Ah, it seems your BAG is filled to\n"
-	.string "the brim.\p"
-	.string "No matter, I shall keep this safe until\n"
-	.string "you make space for it.$"
-
-SootopolisCity_Gym_1F_Text_GaveReward:
-	.string "This DRAGON SCALE embodies the majesty\n"
-	.string "and power of dragons, much like the\l"
-	.string "KKINGDRA that I have trained with care.\p"
-	.string "May it serve you well on your journey.$"
-
 SootopolisCity_Gym_1F_EventScript_GymGuide::
 	lock
 	faceplayer
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_1F_EventScript_GymGuidePostGame
 	goto_if_set FLAG_DEFEATED_SOOTOPOLIS_GYM, SootopolisCity_Gym_1F_EventScript_GymGuidePostVictory
 	msgbox SootopolisCity_Gym_1F_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
@@ -204,6 +185,11 @@ SootopolisCity_Gym_1F_EventScript_GymGuide::
 
 SootopolisCity_Gym_1F_EventScript_GymGuidePostVictory::
 	msgbox SootopolisCity_Gym_1F_Text_GymGuidePostVictory, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_Gym_1F_EventScript_GymGuidePostGame::
+	msgbox SootopolisCity_Gym_1F_Text_GymGuidePostGame, MSGBOX_DEFAULT
 	release
 	end
 
@@ -260,6 +246,14 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "POKéMON LEAGUE challenge!\p"
 	.string "I can't come with you, but just\n"
 	.string "know I'll be rooting for you!$"
+
+SootopolisCity_Gym_1F_Text_GymGuidePostGame:
+	.string "Yow! You've come so far,\n"
+	.string "{PLAYER}!\p"
+	.string "As the CHAMPION of HOENN, you’ve\n"
+	.string "already reached the peak!\p"
+	.string "Facing JUAN, the new leader here,\n"
+	.string "is a true test of skill!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
 	.string "Let me ask you.\n"
@@ -423,3 +417,22 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
 
+SootopolisCity_Gym_1F_Text_JuanGiveRematchReward:
+	.string "Ah, splendid indeed, {PLAYER}.\n"
+	.string "Your performance was nothing short\l"
+	.string "of mesmerizing.\p"
+	.string "To honor this remarkable battle, I shall\n"
+	.string "bestow upon you a rare item, one that is\l"
+	.string "close to my heart.$"
+
+SootopolisCity_Gym_1F_Text_NoRoomForReward:
+	.string "Ah, it seems your BAG is filled to\n"
+	.string "the brim.\p"
+	.string "No matter, I shall keep this safe until\n"
+	.string "you make space for it.$"
+
+SootopolisCity_Gym_1F_Text_GaveReward:
+	.string "This DRAGON SCALE embodies the majesty\n"
+	.string "and power of dragons, much like the\l"
+	.string "KKINGDRA that I have trained with care.\p"
+	.string "May it serve you well on your journey.$"
