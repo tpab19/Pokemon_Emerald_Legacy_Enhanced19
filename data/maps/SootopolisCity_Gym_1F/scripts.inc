@@ -176,11 +176,11 @@ SootopolisCity_Gym_1F_EventScript_NoRoom::
 
 SootopolisCity_Gym_1F_Text_JuanGiveRematchReward:
 	.string "Ah, splendid indeed, {PLAYER}.\n"
-	.string "Your performance was nothing short\n"
+	.string "Your performance was nothing short\l"
 	.string "of mesmerizing.\p"
 	.string "To honor this remarkable battle, I shall\n"
 	.string "bestow upon you a rare item, one that is\l"
-	.string "close to my heart.\p"
+	.string "close to my heart.$"
 
 SootopolisCity_Gym_1F_Text_NoRoomForReward:
 	.string "Ah, it seems your BAG is filled to\n"
@@ -190,7 +190,7 @@ SootopolisCity_Gym_1F_Text_NoRoomForReward:
 
 SootopolisCity_Gym_1F_Text_GaveReward:
 	.string "This DRAGON SCALE embodies the majesty\n"
-	.string "and power of dragons, much like the\n"
+	.string "and power of dragons, much like the\l"
 	.string "KKINGDRA that I have trained with care.\p"
 	.string "May it serve you well on your journey.$"
 
@@ -220,7 +220,12 @@ SootopolisCity_Gym_1F_EventScript_RightGymStatue::
 	end
 
 SootopolisCity_Gym_1F_EventScript_GymStatueCertified::
-	msgbox SootopolisCity_Gym_1F_Text_GymStatueCertified, MSGBOX_DEFAULT
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_1F_EventScript_GymStatueJuanCertified
+	msgbox SootopolisCity_Gym_1F_Text_GymStatueWallaceCertified, MSGBOX_DEFAULT
+	releaseall
+	end
+SootopolisCity_Gym_1F_EventScript_GymStatueJuanCertified::
+	msgbox SootopolisCity_Gym_1F_Text_GymStatueJuanCertified, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -236,7 +241,7 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "SOOTOPOLIS's GYM LEADER WALLACE is\n"
 	.string "a master of WATER-type POKéMON\l"
 	.string "and all things beautiful.\p"
-	.string "You've battled WATER-types before\n"
+	.string "You've battled WATER-types before,\n"
 	.string "but WALLACE is on another level.\p"
 	.string "Watching WALLACE fight, there's a grace\n"
 	.string "that few other trainers possess.\p"
@@ -373,7 +378,12 @@ SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 SootopolisCity_Gym_1F_Text_GymStatue:
 	.string "SOOTOPOLIS CITY POKéMON GYM$"
 
-SootopolisCity_Gym_1F_Text_GymStatueCertified:
+SootopolisCity_Gym_1F_Text_GymStatueWallaceCertified:
+	.string "SOOTOPOLIS CITY POKéMON GYM\p"
+	.string "WALLACE'S CERTIFIED TRAINERS:\n"
+	.string "{PLAYER}$"
+
+SootopolisCity_Gym_1F_Text_GymStatueJuanCertified:
 	.string "SOOTOPOLIS CITY POKéMON GYM\p"
 	.string "JUAN'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"

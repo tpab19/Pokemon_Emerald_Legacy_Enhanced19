@@ -98,7 +98,7 @@ FortreeCity_Gym_Text_WinonaGiveRematchReward:
 
 FortreeCity_Gym_Text_NoRoomForReward:
 	.string "Ah, it seems your party is full.\n"
-	.string "Clear some space, and I shall keep\n"
+	.string "Clear some space, and I shall keep\l"
 	.string "this EGG safe for you until then.$"
 
 FortreeCity_Gym_Text_GaveReward:
