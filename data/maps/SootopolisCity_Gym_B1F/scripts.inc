@@ -8,17 +8,29 @@ SootopolisCity_Gym_B1F_EventScript_Andrea::
 
 SootopolisCity_Gym_B1F_EventScript_Crissy::
 	trainerbattle_single TRAINER_CRISSY, SootopolisCity_Gym_B1F_Text_CrissyIntro, SootopolisCity_Gym_B1F_Text_CrissyDefeat
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_B1F_EventScript_CrissyPostGame
 	msgbox SootopolisCity_Gym_B1F_Text_CrissyPostBattle, MSGBOX_AUTOCLOSE
+	end
+SootopolisCity_Gym_B1F_EventScript_CrissyPostGame::
+	msgbox SootopolisCity_Gym_B1F_Text_CrissyPostBattle2, MSGBOX_AUTOCLOSE
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Brianna::
 	trainerbattle_single TRAINER_BRIANNA, SootopolisCity_Gym_B1F_Text_BriannaIntro, SootopolisCity_Gym_B1F_Text_BriannaDefeat
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_B1F_EventScript_BriannaPostGame
 	msgbox SootopolisCity_Gym_B1F_Text_BriannaPostBattle, MSGBOX_AUTOCLOSE
+	end
+SootopolisCity_Gym_B1F_EventScript_BriannaPostGame::
+	msgbox SootopolisCity_Gym_B1F_Text_BriannaPostBattle2, MSGBOX_AUTOCLOSE
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Connie::
 	trainerbattle_single TRAINER_CONNIE, SootopolisCity_Gym_B1F_Text_ConnieIntro, SootopolisCity_Gym_B1F_Text_ConnieDefeat
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_B1F_EventScript_ConniePostGame
 	msgbox SootopolisCity_Gym_B1F_Text_ConniePostBattle, MSGBOX_AUTOCLOSE
+	end
+SootopolisCity_Gym_B1F_EventScript_ConniePostGame::
+	msgbox SootopolisCity_Gym_B1F_Text_ConniePostBattle2, MSGBOX_AUTOCLOSE
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Bridget::
@@ -43,7 +55,11 @@ SootopolisCity_Gym_B1F_EventScript_Bethany::
 
 SootopolisCity_Gym_B1F_EventScript_Annika::
 	trainerbattle_single TRAINER_ANNIKA, SootopolisCity_Gym_B1F_Text_AnnikaIntro, SootopolisCity_Gym_B1F_Text_AnnikaDefeat
+	goto_if_set FLAG_IS_CHAMPION, SootopolisCity_Gym_B1F_EventScript_AnnikaPostGame
 	msgbox SootopolisCity_Gym_B1F_Text_AnnikaPostBattle, MSGBOX_AUTOCLOSE
+	end
+SootopolisCity_Gym_B1F_EventScript_AnnikaPostGame::
+	msgbox SootopolisCity_Gym_B1F_Text_AnnikaPostBattle2, MSGBOX_AUTOCLOSE
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Daphne::
@@ -75,6 +91,10 @@ SootopolisCity_Gym_B1F_Text_CrissyPostBattle:
 	.string "You might be good enough to avoid\n"
 	.string "being swept by WALLACE.$"
 
+SootopolisCity_Gym_B1F_Text_CrissyPostBattle2:
+	.string "You might be good enough to avoid\n"
+	.string "being swept by JUAN.$"
+
 SootopolisCity_Gym_B1F_Text_DaphneIntro:
 	.string "The sight of WALLACE conducting\n"
 	.string "a battle…\p"
@@ -102,6 +122,11 @@ SootopolisCity_Gym_B1F_Text_ConnieDefeat:
 SootopolisCity_Gym_B1F_Text_ConniePostBattle:
 	.string "I'll tell you something good.\p"
 	.string "If you want to reach WALALCE, you\n"
+	.string "need to walk on each floor tile once.$"
+
+SootopolisCity_Gym_B1F_Text_ConniePostBattle2:
+	.string "I'll tell you something good.\p"
+	.string "If you want to reach JUAN, you\n"
 	.string "need to walk on each floor tile once.$"
 
 SootopolisCity_Gym_B1F_Text_BridgetIntro:
@@ -168,6 +193,10 @@ SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
 	.string "praised me for my darling POKéMON.\l"
 	.string "Now, I train under WALLACE!$"
 
+SootopolisCity_Gym_B1F_Text_AnnikaPostBattle2:
+	.string "I came to this GYM because JUAN\n"
+	.string "praised me for my darling POKéMON.$"
+
 SootopolisCity_Gym_B1F_Text_BriannaIntro:
 	.string "Giggle…\n"
 	.string "Your grim look is so charming.$"
@@ -180,3 +209,6 @@ SootopolisCity_Gym_B1F_Text_BriannaPostBattle:
 	.string "You couldn't lay a finger on\n"
 	.string "WALLACE, I'm sure. Giggle…$"
 
+SootopolisCity_Gym_B1F_Text_BriannaPostBattle2:
+	.string "You couldn't lay a finger on\n"
+	.string "JUAN, I'm sure. Giggle…$"
