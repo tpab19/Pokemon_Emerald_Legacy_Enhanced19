@@ -26,7 +26,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_Nurse::
 MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
 	lock
 	faceplayer
-	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted
+	goto_if_set FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted
 	setvar VAR_0x8008, INGAME_TRADE_SNORUNT
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
@@ -48,7 +48,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
 	waitstate
 	bufferspeciesname STR_VAR_1, VAR_0x8009
 	msgbox MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare, MSGBOX_DEFAULT
-	setflag FLAG_FORTREE_NPC_TRADE_COMPLETED
+	setflag FLAG_MAUVILLE_NPC_TRADE_COMPLETED
 	release
 	end
 
