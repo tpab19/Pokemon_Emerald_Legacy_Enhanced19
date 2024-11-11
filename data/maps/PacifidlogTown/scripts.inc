@@ -23,10 +23,6 @@ PacifidlogTown_EventScript_Fisherman::
 	msgbox PacifidlogTown_Text_SkyPillarTooScary, MSGBOX_NPC
 	end
 
-PacifidlogTown_EventScript_OldMan::
-	msgbox PacifidlogTown_Text_OldMan, MSGBOX_NPC
-	end
-
 PacifidlogTown_EventScript_TownSign::
 	msgbox PacifidlogTown_Text_TownSign, MSGBOX_SIGN
 	end
@@ -50,16 +46,6 @@ PacifidlogTown_Text_SkyPillarTooScary:
 	.string "It's too scary to get up that high.\p"
 	.string "Life at sea level in PACIFIDLOG,\n"
 	.string "that suits me fine.$"
-
-PacifidlogTown_Text_OldMan:
-	.string "The waves are quietest before sunrise…\n"
-	.string "calm at the turn of day… and still again\l"
-	.string "before night falls.\p"
-	.string "It all feels like a peaceful dance,\n"
-	.string "doesn’t it?\p"
-	.string "I've always thought MIRAGE ISLAND\n"
-	.string "appears when the day feels at\l"
-	.string "peace.$"
 
 PacifidlogTown_Text_TownSign:
 	.string "PACIFIDLOG TOWN\p"

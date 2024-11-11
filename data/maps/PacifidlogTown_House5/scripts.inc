@@ -20,8 +20,12 @@ PacifidlogTown_House5_EventScript_Gentleman::
 	msgbox PacifidlogTown_House5_Text_MirageIslandAppearDependingOnWeather, MSGBOX_NPC
 	end
 
-PacifidlogTown_EventScript_OldWoman::
+PacifidlogTown_House5_EventScript_OldWoman::
 	msgbox PacifidlogTown_House5_Text_OldWoman, MSGBOX_NPC
+	end
+
+PacifidlogTown_House5_EventScript_OldMan::
+	msgbox PacifidlogTown_House5_Text_OldMan, MSGBOX_NPC
 	end
 
 PacifidlogTown_House5_Text_CantSeeMirageIslandToday:
@@ -45,3 +49,13 @@ PacifidlogTown_House5_Text_OldWoman:
 	.string "They say clocks can do funny things. I\n"
 	.string "tried staring at my clock once, but\l"
 	.string "nothing happened.$"
+
+PacifidlogTown_House5_Text_OldMan:
+	.string "The waves are quietest before sunrise…\n"
+	.string "calm at the turn of day… and still again\l"
+	.string "before night falls.\p"
+	.string "It all feels like a peaceful dance,\n"
+	.string "doesn’t it?\p"
+	.string "I've always thought MIRAGE ISLAND\n"
+	.string "appears when the day feels at\l"
+	.string "peace.$"

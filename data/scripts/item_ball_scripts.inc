@@ -662,7 +662,7 @@ Route108_EventScript_ItemBlueShard::
 	finditem ITEM_BLUE_SHARD
 	end
 
-Route134_EventScript_ItemRedShard::
+Route124_EventScript_ItemRedShard2::
 	finditem ITEM_RED_SHARD
 	end
 
