@@ -1,7 +1,22 @@
 FortreeCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, FortreeCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, FortreeCity_Gym_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, FortreeCity_Gym_OnFrame
 	.byte 0
+
+FortreeCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, FortreeCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+FortreeCity_Gym_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_WINONA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
+	FortreeCity_Gym_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 FortreeCity_Gym_OnTransition:
 	special RotatingGate_InitPuzzle
@@ -69,6 +84,7 @@ FortreeCity_Gym_EventScript_WinonaRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward
 FortreeCity_Gym_EventScript_WinonaRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
 	end

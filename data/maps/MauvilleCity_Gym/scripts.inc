@@ -1,6 +1,21 @@
 MauvilleCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_Gym_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MauvilleCity_Gym_OnFrame
 	.byte 0
+
+MauvilleCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, MauvilleCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+MauvilleCity_Gym_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_WATTSON_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward
+	MauvilleCity_Gym_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 MauvilleCity_Gym_OnLoad:
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
@@ -138,6 +153,7 @@ MauvilleCity_Gym_EventScript_WattsonRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward
 MauvilleCity_Gym_EventScript_WattsonRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
 	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
 	end

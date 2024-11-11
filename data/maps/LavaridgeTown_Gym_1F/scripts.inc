@@ -5,7 +5,22 @@
 
 LavaridgeTown_Gym_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_Gym_1F_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavaridgeTown_Gym_1F_OnFrame
 	.byte 0
+
+LavaridgeTown_Gym_1F_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, LavaridgeTown_Gym_1F_EventScript_TryRematchReward
+	.2byte 0
+
+LavaridgeTown_Gym_1F_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_FLANNERY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward
+	LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 LavaridgeTown_Gym_1F_OnTransition:
 	call LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars
@@ -105,6 +120,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward
 LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
 	end

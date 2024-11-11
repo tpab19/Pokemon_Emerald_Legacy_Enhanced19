@@ -1,5 +1,20 @@
 RustboroCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, RustboroCity_Gym_OnFrame
 	.byte 0
+
+RustboroCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, RustboroCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+RustboroCity_Gym_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_ROXANNE_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward
+RustboroCity_Gym_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 RustboroCity_Gym_EventScript_Roxanne::
 	trainerbattle_single TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxanneIntro, RustboroCity_Gym_Text_RoxanneDefeat, RustboroCity_Gym_EventScript_RoxanneDefeated, NO_MUSIC
@@ -39,6 +54,7 @@ RustboroCity_Gym_EventScript_RoxanneRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward
 RustboroCity_Gym_EventScript_RoxanneRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
 	end

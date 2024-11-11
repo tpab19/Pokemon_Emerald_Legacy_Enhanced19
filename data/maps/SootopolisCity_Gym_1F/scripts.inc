@@ -38,7 +38,18 @@ SootopolisCity_Gym_1F_OnFrame:
 	map_script_2 VAR_ICE_STEP_COUNT, 28, SootopolisCity_Gym_1F_EventScript_UnlockSecondStairs
 	map_script_2 VAR_ICE_STEP_COUNT, 67, SootopolisCity_Gym_1F_EventScript_UnlockThirdStairs
 	map_script_2 VAR_ICE_STEP_COUNT, 0, SootopolisCity_Gym_1F_EventScript_FallThroughIce
+	map_script_2 VAR_TEMP_1, 1, SootopolisCity_Gym_1F_EventScript_TryRematchReward
 	.2byte 0
+
+SootopolisCity_Gym_1F_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_JUAN_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
+	SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 SootopolisCity_Gym_1F_EventScript_UnlockFirstStairs::
 	addvar VAR_ICE_STEP_COUNT, 1
@@ -156,6 +167,7 @@ SootopolisCity_Gym_1F_EventScript_JuanRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
 SootopolisCity_Gym_1F_EventScript_JuanRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
 	end

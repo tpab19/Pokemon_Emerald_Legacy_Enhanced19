@@ -1,6 +1,21 @@
 MossdeepCity_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, MossdeepCity_Gym_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, MossdeepCity_Gym_OnFrame
 	.byte 0
+
+MossdeepCity_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, MossdeepCity_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+MossdeepCity_Gym_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
+	MossdeepCity_Gym_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 @ NOTE: Mossdeep Gym was redesigned between R/S and E. Leftover (and now functionally unused) scripts are commented below
 
@@ -110,6 +125,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward
 MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
 	end

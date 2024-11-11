@@ -1,6 +1,21 @@
 DewfordTown_Gym_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_Gym_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, DewfordTown_Gym_OnFrame
 	.byte 0
+
+DewfordTown_Gym_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, DewfordTown_Gym_EventScript_TryRematchReward
+	.2byte 0
+
+DewfordTown_Gym_EventScript_TryRematchReward::
+	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_TryRematchRewardEnd
+	setvar VAR_TEMP_1, 0
+	setvar 0x8005, TRAINER_BRAWLY_3
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
+	DewfordTown_Gym_EventScript_TryRematchRewardEnd::
+	releaseall
+	end
 
 DewfordTown_Gym_OnTransition:
 	call DewfordTown_Gym_EventScript_SetFlashLevel
@@ -203,6 +218,7 @@ DewfordTown_Gym_EventScript_BrawlyRematch::
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward
 DewfordTown_Gym_EventScript_BrawlyRematchContinue::
+	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
 	msgbox DewfordTown_Gym_Text_BrawlyPostRematch, MSGBOX_AUTOCLOSE
 	end
