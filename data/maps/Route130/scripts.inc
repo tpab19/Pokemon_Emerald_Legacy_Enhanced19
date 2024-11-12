@@ -142,6 +142,7 @@ Route130_EventScript_EndCelebiEventMaysHouse::
 	end
 
 Route130_OnTransition:
+	setflag FLAG_HIDE_CELEBI
 	call_if_ge VAR_SOOTOPOLIS_CITY_STATE, 4, Route130_EventScript_CheckSetAbnormalWeather
 	specialvar VAR_RESULT, IsMirageIslandPresent
 	goto_if_eq VAR_RESULT, TRUE, Route130_EventScript_SetMirageIslandLayout
