@@ -1465,7 +1465,7 @@ LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuest:
 	.string "HEART SCALES, which seem to unlock\l"
 	.string "hidden potential in them.\p"
 	.string "But here's the catch… I need HEART\n"
-	.string "SCALES that you find out in the wild.\l"
+	.string "SCALES that you find hidden in the wild.\p"
 	.string "Could you help me out by collecting\n"
 	.string "some HEART SCALES?\p"
 	.string "I'd like to study their properties and\n"

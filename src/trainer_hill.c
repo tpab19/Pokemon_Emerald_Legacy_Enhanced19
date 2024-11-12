@@ -1054,7 +1054,10 @@ static u16 GetPrizeItemId(void)
 
     // 1 is added to Expert mode's prize list selection because otherwise it has the same prizes as Variety
     if (gSaveBlock1Ptr->trainerHill.mode == HILL_MODE_EXPERT)
+    {
         i = (i + 1) % NUM_TRAINER_HILL_PRIZE_LISTS;
+        FlagSet(FLAG_TRAINER_HILL_SNORLAX_READY);
+    }
 
     // After the above (non-random) calculations, the following are the possible prize list selections:
     // sPrizeListSets[0][8] (Normal)
@@ -1062,13 +1065,6 @@ static u16 GetPrizeItemId(void)
     // sPrizeListSets[1][8] (Unique)
     // sPrizeListSets[1][5] (Expert)
     prizeList = sPrizeListSets[prizeListSetId][i];
-    if (i == 5)
-    {
-        if (!FlagGet(FLAG_GOT_TRAINER_HILL_SNORLAX))
-        {
-            FlagSet(FLAG_TRAINER_HILL_SNORLAX_READY);
-        }
-    }
 
     // Which prize is given from the list depends on the time scored.
     // The prize for any time after 12 minutes is the same in every list.
