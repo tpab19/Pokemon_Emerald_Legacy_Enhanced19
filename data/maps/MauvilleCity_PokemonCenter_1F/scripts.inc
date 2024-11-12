@@ -90,9 +90,9 @@ MauvilleCity_PokemonCenter_1F_Text_RecordCornerSoundsFun:
 	.string "sounds fun. I'll go check it out!$"
 
 MauvilleCity_PokemonCenter_1F_Text_YouWillTradeWontYou:
-	.string "Oh! You have a {STR_VAR_2}, don't you?\p"
+	.string "Oh! You have a {STR_VAR_1}, don't you?\p"
 	.string "They're so lively! Would you be willing\n"
-	.string "to trade it for my {STR_VAR_1}?\p"
+	.string "to trade it for my {STR_VAR_2}?\p"
 	.string "It's quite the unique POKéMON!$"
 
 MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
@@ -102,14 +102,14 @@ MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
 
 MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon:
 	.string "Hm? Wait a moment… That’s not the\n"
-	.string "{STR_VAR_2} I was hoping for!\p"
+	.string "{STR_VAR_1} I was hoping for!\p"
 	.string "Are you teasing me?$"
 
 MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe:
 	.string "Oh, you don’t want to trade?\p"
 	.string "That’s alright, but if you change your\n"
 	.string "mind, I’d love to find a good partner for\l"
-	.string "my {STR_VAR_1}!$"
+	.string "my {STR_VAR_2}!$"
 
 MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces:
 	.string "I know NIPPY will be thrilled to\n"

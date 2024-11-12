@@ -7,11 +7,12 @@ MarineCave_End_MapScripts::
 	.byte 0
 
 MarineCave_End_OnResume:
+	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, MarineCave_End_EventScript_TryRemoveKyogre
-	clearflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	end
 
 MarineCave_End_EventScript_TryRemoveKyogre::
+	clearflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_KYOGRE

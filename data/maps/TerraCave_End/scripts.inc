@@ -7,11 +7,12 @@ TerraCave_End_MapScripts::
 	.byte 0
 
 TerraCave_End_OnResume:
+	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, TerraCave_End_EventScript_TryRemoveGroudon
-	clearflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	end
 
 TerraCave_End_EventScript_TryRemoveGroudon::
+	clearflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject LOCALID_GROUDON

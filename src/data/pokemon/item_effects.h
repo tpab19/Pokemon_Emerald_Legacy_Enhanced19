@@ -394,6 +394,10 @@ const u8 gItemEffect_DeepSeaScale[6] = {
     [4] = ITEM4_EVO_STONE,
 };
 
+const u8 gItemEffect_DeepSeaTooth[6] = {
+    [4] = ITEM4_EVO_STONE,
+};
+
 const u8 gItemEffect_MetalCoat[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -464,6 +468,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_DRAGON_SCALE - ITEM_POTION]  = gItemEffect_DragonScale,
     [ITEM_KINGS_ROCK - ITEM_POTION]    = gItemEffect_KingsRock,
     [ITEM_DEEP_SEA_SCALE - ITEM_POTION]= gItemEffect_DeepSeaScale,
+    [ITEM_DEEP_SEA_TOOTH - ITEM_POTION]= gItemEffect_DeepSeaTooth,
     [ITEM_METAL_COAT - ITEM_POTION]    = gItemEffect_MetalCoat,
     [ITEM_UP_GRADE - ITEM_POTION]      = gItemEffect_UpGrade,
     [ITEM_BRICK_PIECE - ITEM_POTION]   = gItemEffect_BrickPiece,

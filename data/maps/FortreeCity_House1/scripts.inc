@@ -62,24 +62,24 @@ FortreeCity_House1_EventScript_Zigzagoon::
 
 FortreeCity_House1_Text_YouWillTradeWontYou:
 	.string "Hey, listen up! I've been searching\n"
-	.string "for a {STR_VAR_2} forever!\l"
+	.string "for a {STR_VAR_1} forever!\l"
 	.string "I can’t rest until I have one!\p"
 	.string "…Did you catch that?\n"
 	.string "That’s the sound of pure determination!\p"
 	.string "Now that you know, you'll trade\n"
-	.string "your {STR_VAR_2} for my {STR_VAR_1},\l"
+	.string "your {STR_VAR_1} for my {STR_VAR_2},\l"
 	.string "right?$"
 
 FortreeCity_House1_Text_MonYouTakeCare:
 	.string "Wow! You really want to trade! I’ll make\n"
-	.string "sure to keep this {STR_VAR_2} in top\l"
+	.string "sure to keep this {STR_VAR_1} in top\l"
 	.string "shape.\p"
-	.string "You take good care of my {STR_VAR_1},\n"
+	.string "You take good care of my {STR_VAR_2},\n"
 	.string "okay?$"
 
 FortreeCity_House1_Text_ThisIsntAMon:
 	.string "Hmm, no, that’s not it.\n"
-	.string "I need a real {STR_VAR_2}.$"
+	.string "I need a real {STR_VAR_1}.$"
 
 FortreeCity_House1_Text_YouWontTradeMe:
 	.string "Oh, I see… Not interested in trading,\n"
