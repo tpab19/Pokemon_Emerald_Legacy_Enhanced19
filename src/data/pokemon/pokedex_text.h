@@ -2317,5 +2317,5 @@ const u8 gJirachiPokedexText[] = _(
 const u8 gDeoxysPokedexText[] = _(
     "A POKéMON that mutated from an\n"
     "extraterrestrial virus exposed to a laser\n"
-    "beam. Its body is configured for superior\n"
-    "agility and speed.");
+    "beam. The crystalline organ on its chest\n"
+    "appears to be its brain.");
