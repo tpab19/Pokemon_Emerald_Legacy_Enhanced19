@@ -3350,7 +3350,7 @@ static const struct TrainerMon sParty_Walter5[] = {
     .moves = {MOVE_QUICK_ATTACK, MOVE_SPARK, MOVE_ODOR_SLEUTH, MOVE_ROAR}
     }
 };
-// Elite Four Sidney Sydney
+// Elite Four Sydney
 static const struct TrainerMon sParty_Sidney[] = {
     {
     .iv = 250,
@@ -4620,7 +4620,7 @@ static const struct TrainerMon sParty_Wallace1[] = {
     }
 };
 
-// Champion
+// Champion (Rematch)
 static const struct TrainerMon sParty_Wallace2[] = {
     {
     .iv = 255,
@@ -13521,9 +13521,9 @@ static const struct TrainerMon sParty_Zinnia[] = {
     {
     .iv = 150,
     .lvl = 70,
-    .species = SPECIES_DRAGONITE,
-    .heldItem = ITEM_AGUAV_BERRY,
-    .moves = {MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_OUTRAGE, MOVE_HEAL_BELL}
+    .species = SPECIES_FLYGON,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_SIGNAL_BEAM, MOVE_CRUNCH}
     },
     {
     .iv = 150,
@@ -13541,155 +13541,183 @@ static const struct TrainerMon sParty_Zinnia[] = {
     }
 };
 
-// Elite Four Sidney Rematch
+// Elite Four Sydney Rematch
 static const struct TrainerMon sParty_Sidney2[] = {
     {
-    .iv = 250,
-    .lvl = 51,
-    .species = SPECIES_MIGHTYENA,
-    .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_CRUNCH, MOVE_SUPER_FANG, MOVE_YAWN, MOVE_COUNTER}
-    },
-    {
-    .iv = 250,
-    .lvl = 51,
-    .species = SPECIES_MURKROW,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_DRILL_PECK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_FEATHER_DANCE}
-    },
-    {
-    .iv = 250,
-    .lvl = 52,
-    .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_AERIAL_ACE, MOVE_EXTRASENSORY}
-    },
-    {
-    .iv = 250,
-    .lvl = 52,
-    .species = SPECIES_CRAWDAUNT,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_CRABHAMMER, MOVE_SWORDS_DANCE, MOVE_CRUNCH, MOVE_SLUDGE_BOMB}
+    .iv = 255,
+    .lvl = 67,
+    .species = SPECIES_NINJASK,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_PROTECT, MOVE_SUBSTITUTE, MOVE_BATON_PASS, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
-    .lvl = 53,
+    .lvl = 68,
+    .species = SPECIES_SHIFTRY,
+    .heldItem = ITEM_LIECHI_BERRY,
+    .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_AERIAL_ACE, MOVE_EXTRASENSORY}
+    },
+    {
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_HOUNDOOM,
+    .heldItem = ITEM_CHARCOAL,
+    .moves = {MOVE_CRUNCH, MOVE_FIRE_BLAST, MOVE_REST, MOVE_REVERSAL}
+    },
+    {
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_SHARPEDO,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_WATERFALL, MOVE_ICE_BEAM, MOVE_CRUNCH, MOVE_DOUBLE_EDGE}
+    },
+    {
+    .iv = 255,
+    .lvl = 67,
+    .species = SPECIES_ZANGOOSE,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_ENDURE, MOVE_PURSUIT, MOVE_FLAIL, MOVE_AERIAL_ACE}
+    },
+    {
+    .iv = 255,
+    .lvl = 69,
     .species = SPECIES_ABSOL,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE}
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_CRUNCH, MOVE_FACADE, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE}
     }
 };
 //Elite Four Phoebe Rematch
 static const struct TrainerMon sParty_Phoebe2[] = {
     {
-    .iv = 250,
-    .lvl = 52,
-    .species = SPECIES_SABLEYE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WILL_O_WISP, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_MISDREAVUS,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_PERISH_SONG, MOVE_PROTECT, MOVE_PAIN_SPLIT, MOVE_DESTINY_BOND}
     },
     {
-    .iv = 250,
-    .lvl = 53,
-    .species = SPECIES_BANETTE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_REVENGE, MOVE_DESTINY_BOND}
+    .iv = 255,
+    .lvl = 68,
+    .species = SPECIES_WOBBUFET,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_COUNTER, MOVE_ENCORE, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND}
     },
     {
-    .iv = 250,
-    .lvl = 52,
+    .iv = 255,
+    .lvl = 69,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_WHITE_HERB,
     .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY}
     },
     {
-    .iv = 250,
-    .lvl = 52,
+    .iv = 255,
+    .lvl = 69,
     .species = SPECIES_MEDICHAM,
-    .heldItem = ITEM_SALAC_BERRY,
-    .moves = {MOVE_PSYCHIC, MOVE_HI_JUMP_KICK, MOVE_ENDURE, MOVE_REVERSAL}
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_HI_JUMP_KICK, MOVE_MEGA_KICK, MOVE_REVERSAL, MOVE_ROCK_SLIDE}
     },
     {
     .iv = 255,
-    .lvl = 54,
+    .lvl = 70,
+    .species = SPECIES_GENGAR,
+    .heldItem = ITEM_SPELL_TAG,
+    .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_EXPLOSION, MOVE_FIRE_PUNCH}
+    },
+    {
+    .iv = 255,
+    .lvl = 70,
     .species = SPECIES_DUSCLOPS,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_CALM_MIND, MOVE_PAIN_SPLIT}
     }
 };
 // Elite Four Glacia Rematch
 static const struct TrainerMon sParty_Glacia2[] = {
     {
-    .iv = 250,
-    .lvl = 54,
-    .species = SPECIES_GLALIE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_HAIL}
-    },
-    {
-    .iv = 250,
-    .lvl = 53,
-    .species = SPECIES_SNEASEL,
-    .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_FAINT_ATTACK, MOVE_BLIZZARD, MOVE_SWORDS_DANCE, MOVE_SLASH}
-    },
-    {
-    .iv = 250,
-    .lvl = 53,
-    .species = SPECIES_CASTFORM,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WEATHER_BALL, MOVE_HYDRO_PUMP, MOVE_HAIL, MOVE_THUNDERBOLT}
-    },
-    {
-    .iv = 250,
-    .lvl = 54,
-    .species = SPECIES_PILOSWINE,
-    .heldItem = ITEM_CHESTO_BERRY,
-    .moves = {MOVE_EARTHQUAKE, MOVE_BLIZZARD, MOVE_ROCK_SLIDE, MOVE_REST}
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_LAPRAS,
+    .heldItem = ITEM_LEFTOVERS
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_THUNDERBOLT, MOVE_HAIL}
     },
     {
     .iv = 255,
-    .lvl = 55,
+    .lvl = 72,
+    .species = SPECIES_PILOSWINE,
+    .heldItem = ITEM_QUICK_CLAW,
+    .moves = {MOVE_EARTHQUAKE, MOVE_BLIZZARD, MOVE_ROCK_SLIDE, MOVE_HAIL}
+    },
+    {
+    .iv = 255,
+    .lvl = 71,
+    .species = SPECIES_GLALIE,
+    .heldItem = ITEM_NEVER_MELT_ICE,
+    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_SHADOW_BALL, MOVE_EXPLOSION}
+    },
+    {
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_JYNX,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_BLIZZARD, MOVE_LOVELY_KISS, MOVE_CALM_MIND}
+    },
+    {
+    .iv = 255,
+    .lvl = 71,
+    .species = SPECIES_CASTFORM,
+    .heldItem = ITEM_MYSTIC_WATER,
+    .moves = {MOVE_BLIZZARD, MOVE_WATER_PULSE, MOVE_HAIL, MOVE_THUNDERBOLT}
+    },
+    {
+    .iv = 255,
+    .lvl = 72,
     .species = SPECIES_WALREIN,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_HAIL, MOVE_SHEER_COLD}
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_REST, MOVE_BLIZZARD, MOVE_SLEEP_TALK, MOVE_SHEER_COLD}
     }
 };
 // Elite Four Drake Rematch
 static const struct TrainerMon sParty_Drake2[] = {
     {
-    .iv = 250,
-    .lvl = 54,
-    .species = SPECIES_FLYGON,
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_FERALIGTR,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_SIGNAL_BEAM, MOVE_CRUNCH}
-    },
-    {
-    .iv = 250,
-    .lvl = 55,
-    .species = SPECIES_ALTARIA,
-    .heldItem = ITEM_SHARP_BEAK,
-    .moves = {MOVE_SKY_ATTACK, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE, MOVE_DOUBLE_EDGE}
-    },
-    {
-    .iv = 250,
-    .lvl = 53,
-    .species = SPECIES_HUNTAIL,
-    .heldItem = ITEM_PETAYA_BERRY,
-    .moves = {MOVE_BODY_SLAM, MOVE_CRUNCH, MOVE_HYDRO_PUMP, MOVE_CONFUSE_RAY}
-    },
-    {
-    .iv = 250,
-    .lvl = 55,
-    .species = SPECIES_KINGDRA,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_REST, MOVE_SLEEP_TALK, MOVE_SURF, MOVE_DRAGON_BREATH}
+    .moves = {MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
     },
     {
     .iv = 255,
-    .lvl = 56,
+    .lvl = 73,
+    .species = SPECIES_DRAGONITE,
+    .heldItem = ITEM_BLACK_BELT,
+    .moves = {MOVE_THUNDERBOLT, MOVE_DYNAMIC_PUNCH, MOVE_FLAMETHROWER, MOVE_EARTHQUAKE}
+    },
+    {
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_CHARIZARD,
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_FIRE_BLAST, MOVE_BELLY_DRUM, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE}
+    },
+    {
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_SCEPTILE,
+    .heldItem = ITEM_PETAYA_BERRY,
+    .moves = {MOVE_LEAF_BLADE, MOVE_DRAGON_CLAW, MOVE_THUNDER_PUNCH, MOVE_ENDURE}
+    },
+    {
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_KINGDRA,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_OCTAZOOKA, MOVE_REST, MOVE_DRAGON_DANCE, MOVE_DOUBLE_EDGE}
+    },
+    {
+    .iv = 255,
+    .lvl = 75,
     .species = SPECIES_SALAMENCE,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_FLAMETHROWER, MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_IRON_TAIL, MOVE_DRAGON_DANCE, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
     }
 };
