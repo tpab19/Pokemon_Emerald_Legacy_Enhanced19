@@ -13847,7 +13847,7 @@ static const struct TrainerMon sParty_Weebra[] = {
     .species = SPECIES_JIRACHI,
     .heldItem = ITEM_LUM_BERRY,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_WATER_PULSE, MOVE_SECRET_POWER}
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_SECRET_POWER, MOVE_ICE_PUNCH}
     },
     {
     .nickname = _("LUDICOLO"),
@@ -13865,7 +13865,7 @@ static const struct TrainerMon sParty_Weebra[] = {
     .species = SPECIES_GENGAR,
     .heldItem = ITEM_BRIGHT_POWDER,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_ICE_PUNCH, MOVE_WILL_O_WISP}
+    .moves = {MOVE_THUNDER, MOVE_SHADOW_BALL, MOVE_ICE_PUNCH, MOVE_MEAN_LOOK}
     },
     {
     .nickname = _("METAGROSS"),
@@ -13874,16 +13874,16 @@ static const struct TrainerMon sParty_Weebra[] = {
     .species = SPECIES_METAGROSS,
     .heldItem = ITEM_SCOPE_LENS,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_EXPLOSION, MOVE_CUT, MOVE_METEOR_MASH, MOVE_EARTHQUAKE}
+    .moves = {MOVE_EXPLOSION, MOVE_BRICK_BREAK, MOVE_METEOR_MASH, MOVE_EARTHQUAKE}
     },
     {
-    .nickname = _("GLALIE"),
+    .nickname = _("LATIOS"),
     .ivs = BEST_IV_SPREAD,
     .lvl = 70,
-    .species = SPECIES_GLALIE,
-    .heldItem = ITEM_QUICK_CLAW,
-    .ability = ABILITY_SLOT_2,
-    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_ICY_WIND, MOVE_WATER_PULSE}
+    .species = SPECIES_LATIOS,
+    .heldItem = ITEM_SOUL_DEW,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDER, MOVE_REFLECT, MOVE_DRAGON_CLAW}
     },
     {
     .nickname = _("CINDERELLA"),

@@ -138,13 +138,16 @@ CaveOfOrigin_B1F_Text_CraigPostBattle:
 	.string "A little something from… places unseen.$"
 
 CaveOfOrigin_B1F_Text_WeebraIntro:
-	.string "Temp$"
+	.string "Intruders! Sound the alarm! That's the\n"
+	.string "line, right?$"
 
 CaveOfOrigin_B1F_Text_WeebraDefeated:
-	.string "Temp$"
+	.string "Guess someone finally busted outta\n"
+	.string "their cage…$"
 
 CaveOfOrigin_B1F_Text_WeebraPostBattle:
-	.string "Temp$"
+	.string "Anyway - a cool cat like you is gonna\n"
+	.string "need something fitting…$"
 
 CaveOfOrigin_B1F_Text_NoRoomForDeco:
 	.string "Looks like you don't have space for any\n"
