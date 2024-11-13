@@ -13727,50 +13727,50 @@ static const struct TrainerMon sParty_Smith[] = {
     {
     .ivs = BEST_IV_SPREAD,
     .lvl = 70,
-    .species = SPECIES_MEGANIUM,
-    .heldItem = ITEM_AGUAV_BERRY,
-    .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_GRASS_WHISTLE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_REFLECT}
-    },
-    {
-    .ivs = BEST_IV_SPREAD,
-    .lvl = 70,
-    .species = SPECIES_AERODACTYL,
-    .heldItem = ITEM_CHOICE_BAND,
-    .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE}
-    },
-    {
-    .ivs = BEST_IV_SPREAD,
-    .lvl = 70,
-    .species = SPECIES_MILOTIC,
+    .species = SPECIES_KYOGRE,
     .heldItem = ITEM_LEFTOVERS,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RECOVER, MOVE_HYPNOSIS}
+    .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_EARTHQUAKE, MOVE_CALM_MIND}
     },
     {
     .ivs = BEST_IV_SPREAD,
     .lvl = 70,
-    .species = SPECIES_RAYQUAZA,
-    .heldItem = ITEM_LUM_BERRY,
+    .species = SPECIES_ZAPDOS,
+    .heldItem = ITEM_MAGNET,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_CRUNCH, MOVE_DRAGON_CLAW, MOVE_THUNDERBOLT, MOVE_BRICK_BREAK}
+    .moves = {MOVE_THUNDER, MOVE_SKY_ATTACK, MOVE_THUNDER_WAVE, MOVE_PROTECT}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_STARMIE,
+    .heldItem = ITEM_SALAC_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_THUNDER, MOVE_RECOVER}
     },
     {
     .ivs = BEST_IV_SPREAD_HIDDEN_POWER_ICE,
     .lvl = 70,
-    .species = SPECIES_JOLTEON,
+    .species = SPECIES_RAIKOU,
     .heldItem = ITEM_MAGNET,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_THUNDERBOLT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_HIDDEN_POWER}
+    .moves = {MOVE_THUNDER, MOVE_RAIN_DANCE, MOVE_CALM_MIND, MOVE_SUBSTITUTE}
     },
     {
     .ivs = BEST_IV_SPREAD,
     .lvl = 70,
-    .species = SPECIES_ARCANINE,
-    .heldItem = ITEM_WHITE_HERB,
+    .species = SPECIES_SUICUNE,
+    .heldItem = ITEM_CHESTO_BERRY,
     .ability = ABILITY_SLOT_1,
-    .moves = {MOVE_OVERHEAT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_PROTECT}
+    .moves = {MOVE_SURF, MOVE_CALM_MIND, MOVE_REST, MOVE_ICE_BEAM}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_GENGAR,
+    .heldItem = ITEM_SPELL_TAG,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_SHADOW_BALL, MOVE_ICE_PUNCH, MOVE_THUNDER, MOVE_GIGA_DRAIN}
     }
 };
 
