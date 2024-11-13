@@ -573,7 +573,7 @@
 #define TRAINER_GRUNT_MT_PYRE_4             569
 #define TRAINER_GRUNT_JAGGED_PASS           570
 #define TRAINER_MARC                        571
-#define TRAINER_BRENDEN                     572
+#define TRAINER_BRENDAN                     572
 #define TRAINER_LILITH                      573
 #define TRAINER_CRISTIAN                    574
 #define TRAINER_SYLVIA                      575

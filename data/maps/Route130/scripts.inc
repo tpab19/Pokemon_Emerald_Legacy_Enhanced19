@@ -128,9 +128,9 @@ Route130_EventScript_EndCelebiEvent::
 	ClearFlag FLAG_SHOW_MIRAGE_ISLAND
 	setvar VAR_ROUTE130_STATE, 0
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, Route130_EventScript_EndCelebiEventBrendensHouse
+	goto_if_eq VAR_RESULT, MALE, Route130_EventScript_EndCelebiEventBrendansHouse
 	goto_if_eq VAR_RESULT, FEMALE, Route130_EventScript_EndCelebiEventMaysHouse
-Route130_EventScript_EndCelebiEventBrendensHouse::
+Route130_EventScript_EndCelebiEventBrendansHouse::
 	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 5, 3
 	waitstate
 	releaseall
