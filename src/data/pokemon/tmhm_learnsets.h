@@ -7758,6 +7758,7 @@ const union {
         .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
+        .SOLAR_BEAM = TRUE,
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
