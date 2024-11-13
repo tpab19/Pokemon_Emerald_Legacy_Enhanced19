@@ -13749,7 +13749,7 @@ static const struct TrainerMon sParty_Smith[] = {
     .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_THUNDER, MOVE_RECOVER}
     },
     {
-    .ivs = BEST_IV_SPREAD_HIDDEN_POWER_ICE,
+    .ivs = BEST_IV_SPREAD,
     .lvl = 70,
     .species = SPECIES_RAIKOU,
     .heldItem = ITEM_MAGNET,
