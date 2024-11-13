@@ -264,7 +264,8 @@ RustboroCity_PokemonSchool_Text_TradingRightNow:
 	.string "right now.$"
 
 RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot:
-	.string "I always wanted a SEEDOT, and\n"
+	.string "I always wanted SEEDOT, but I\n"
+	.string "can't go to ROUTE 103 alone\l"
 	.string "I'm finally getting one!$"
 
 RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems:
@@ -289,17 +290,20 @@ RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry:
 	.string "down…$"
 
 RustboroCity_PokemonSchool_Text_StudentsNotes:
-	.string "It's this student's notebook…\p"
-	.string "POKéMON are to be caught using\n"
-	.string "POKé BALLS.\p"
-	.string "Up to six POKéMON can accompany\n"
-	.string "a TRAINER.\p"
-	.string "A TRAINER is someone who catches\n"
-	.string "POKéMON, raises them, and battles\l"
-	.string "with them.\p"
-	.string "A TRAINER's mission is to defeat\n"
-	.string "the strong TRAINERS who await\l"
-	.string "challengers in POKéMON GYMS.$"
+	.string "It's this student's notebook…\n"
+	.string "NORMAL, BUG, FLYING, GROUND\n"
+	.string "ROCK, FIGHTING, POISON,\l"
+	.string "STEEL are PHYSICAL.\p"
+	.string "DARK-type uses PHYSICAL\n"
+	.string "ATTACK too.\p"
+	.string "FIRE, WATER, GRASS, ICE,\n"
+	.string "ELECTRIC, PSYCHIC, DRAGON,\l"
+	.string "are SPECIAL.\p"
+	.string "GHOST-type moves are also\n"
+	.string "used with SPECIAL ATTACK!\p"
+	.string "Why do I always get that\n"
+	.string "backwards!?\l"
+	.string "It's so simple!$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Hello? Didn't we meet before?\n"
