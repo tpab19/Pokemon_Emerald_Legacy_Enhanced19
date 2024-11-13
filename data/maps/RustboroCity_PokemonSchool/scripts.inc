@@ -291,7 +291,7 @@ RustboroCity_PokemonSchool_Text_PokemonHealItselfWithBerry:
 
 RustboroCity_PokemonSchool_Text_StudentsNotes:
 	.string "It's this student's notebook…\n"
-	.string "NORMAL, BUG, FLYING, GROUND\n"
+	.string "NORMAL, BUG, FLYING, GROUND\l"
 	.string "ROCK, FIGHTING, POISON,\l"
 	.string "STEEL are PHYSICAL.\p"
 	.string "DARK-type uses PHYSICAL\n"
@@ -302,7 +302,7 @@ RustboroCity_PokemonSchool_Text_StudentsNotes:
 	.string "GHOST-type moves are also\n"
 	.string "used with SPECIAL ATTACK!\p"
 	.string "Why do I always get that\n"
-	.string "backwards!?\l"
+	.string "backwards!?\p"
 	.string "It's so simple!$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
