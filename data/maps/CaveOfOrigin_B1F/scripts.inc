@@ -22,6 +22,7 @@ CaveOfOrigin_B1F_EventScript_SmithPostBattle::
 	goto_if_set FLAG_RECEIVED_REGIROCK_DOLL CaveOfOrigin_B1F_EventScript_End
 	givedecoration DECOR_REGIROCK_DOLL
 	goto_if_eq VAR_RESULT, FALSE, CaveOfOrigin_B1F_EventScript_NoRoomForDeco
+	msgbox CaveOfOrigin_B1F_Text_SmithPostBattle2, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_REGIROCK_DOLL
 	fadescreen FADE_TO_BLACK
 	special Script_FadeOutMapMusic
@@ -102,13 +103,21 @@ CaveOfOrigin_B1F_EventScript_End::
 	end
 
 CaveOfOrigin_B1F_Text_SmithIntro:
-	.string "Temp$"
+	.string "Hey! What's up?\n"
+	.string "Let me see how much zest you've got!$"
 
 CaveOfOrigin_B1F_Text_SmithDefeated:
-	.string "Temp$"
+	.string "You're a zest god!$"
 
 CaveOfOrigin_B1F_Text_SmithPostBattle:
-	.string "Temp$"
+	.string "I'm impressed! You beat me with all my\n"
+	.string "favorites!\p"
+	.string "As a token of respect, I want you to\n"
+	.string "have this. It doesn't do anything, but\l"
+	.string "it looks cool!$"
+
+CaveOfOrigin_B1F_Text_SmithPostBattle2:
+	.string "Peace out, nerd!$"
 
 CaveOfOrigin_B1F_Text_CraigIntro:
 	.string "They say only a few can enter here, yet\n"
