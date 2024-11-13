@@ -135,10 +135,10 @@ DewfordTown_Gym_EventScript_CheckJocelyn::
 	goto_if_not_defeated TRAINER_JOCELYN, DewfordTown_Gym_EventScript_CheckLaura
 	addvar VAR_0x8000, 1
 DewfordTown_Gym_EventScript_CheckLaura::
-	goto_if_not_defeated TRAINER_LAURA, DewfordTown_Gym_EventScript_CheckBrenden
+	goto_if_not_defeated TRAINER_LAURA, DewfordTown_Gym_EventScript_CheckBrendan
 	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckBrenden::
-	goto_if_not_defeated TRAINER_BRENDEN, DewfordTown_Gym_EventScript_CheckCristian
+DewfordTown_Gym_EventScript_CheckBrendan::
+	goto_if_not_defeated TRAINER_BRENDAN, DewfordTown_Gym_EventScript_CheckCristian
 	addvar VAR_0x8000, 1
 DewfordTown_Gym_EventScript_CheckCristian::
 	goto_if_not_defeated TRAINER_CRISTIAN, DewfordTown_Gym_EventScript_CheckLilith
@@ -285,12 +285,12 @@ DewfordTown_Gym_EventScript_LauraBrightenRoom::
 	release
 	end
 
-DewfordTown_Gym_EventScript_Brenden::
-	trainerbattle_single TRAINER_BRENDEN, DewfordTown_Gym_Text_BrendenIntro, DewfordTown_Gym_Text_BrendenDefeat, DewfordTown_Gym_EventScript_BrendenBrightenRoom
-	msgbox DewfordTown_Gym_Text_BrendenPostBattle, MSGBOX_AUTOCLOSE
+DewfordTown_Gym_EventScript_Brendan::
+	trainerbattle_single TRAINER_BRENDAN, DewfordTown_Gym_Text_BrendanIntro, DewfordTown_Gym_Text_BrendanDefeat, DewfordTown_Gym_EventScript_BrendanBrightenRoom
+	msgbox DewfordTown_Gym_Text_BrendanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DewfordTown_Gym_EventScript_BrendenBrightenRoom::
+DewfordTown_Gym_EventScript_BrendanBrightenRoom::
 	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
@@ -429,15 +429,15 @@ DewfordTown_Gym_Text_LilithPostBattle:
 	.string "You deserve to stay lost and end up\n"
 	.string "back at the entrance again!$"
 
-DewfordTown_Gym_Text_BrendenIntro:
+DewfordTown_Gym_Text_BrendanIntro:
 	.string "I'll show you the gumption of\n"
 	.string "a sailing man!$"
 
-DewfordTown_Gym_Text_BrendenDefeat:
+DewfordTown_Gym_Text_BrendanDefeat:
 	.string "How'd this happen?\n"
 	.string "It's not like me to lose this way!$"
 
-DewfordTown_Gym_Text_BrendenPostBattle:
+DewfordTown_Gym_Text_BrendanPostBattle:
 	.string "Oh, aye! You're worthy of seeing\n"
 	.string "our GYM LEADER.$"
 

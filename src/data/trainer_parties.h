@@ -8010,7 +8010,7 @@ static const struct TrainerMon sParty_Marc[] = {
     }
 };
 // Dewford Gym Sailor 1 (Double Battle w Lilith)
-static const struct TrainerMon sParty_Brenden[] = {
+static const struct TrainerMon sParty_Brendan[] = {
     {
     .iv = 100,
     .lvl = 13,
@@ -8026,7 +8026,7 @@ static const struct TrainerMon sParty_Brenden[] = {
     .moves = {MOVE_ROCK_SMASH, MOVE_BUBBLE, MOVE_HARDEN, MOVE_VICE_GRIP}
     }
 };
-// Dewford Gym Battle Girl 2 (Double Battle w Brenden)
+// Dewford Gym Battle Girl 2 (Double Battle w Brendan)
 static const struct TrainerMon sParty_Lilith[] = {
     {
     .iv = 150,

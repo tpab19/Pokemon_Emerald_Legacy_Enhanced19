@@ -6865,16 +6865,16 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_MON(sParty_Marc),
     },
 
-    [TRAINER_BRENDEN] =
+    [TRAINER_BRENDAN] =
     {
         .trainerClass = TRAINER_CLASS_SAILOR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_SAILOR,
-        .trainerName = _("BRENDEN"),
+        .trainerName = _("BRENDAN"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = TRAINER_MON(sParty_Brenden),
+        .party = TRAINER_MON(sParty_Brendan),
     },
 
     [TRAINER_LILITH] =
