@@ -305,5 +305,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ZINNIA_4F
 	setflag FLAG_HIDE_ZINNIA_5F
 	setflag FLAG_HIDE_ZINNIA_TOP
+	setflag FLAG_HIDE_SMITH
+	setflag FLAG_HIDE_CRAIG
+	setflag FLAG_HIDE_WEEBRA
 	call EventScript_ResetAllBerries
 	end

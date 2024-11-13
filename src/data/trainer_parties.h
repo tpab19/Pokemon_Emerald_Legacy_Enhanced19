@@ -13598,7 +13598,7 @@ static const struct TrainerMon sParty_Phoebe2[] = {
     {
     .iv = 255,
     .lvl = 68,
-    .species = SPECIES_WOBBUFET,
+    .species = SPECIES_WOBBUFFET,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_COUNTER, MOVE_ENCORE, MOVE_MIRROR_COAT, MOVE_DESTINY_BOND}
     },
@@ -13637,7 +13637,7 @@ static const struct TrainerMon sParty_Glacia2[] = {
     .iv = 255,
     .lvl = 72,
     .species = SPECIES_LAPRAS,
-    .heldItem = ITEM_LEFTOVERS
+    .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SURF, MOVE_BLIZZARD, MOVE_THUNDERBOLT, MOVE_HAIL}
     },
     {
@@ -13681,7 +13681,7 @@ static const struct TrainerMon sParty_Drake2[] = {
     {
     .iv = 255,
     .lvl = 72,
-    .species = SPECIES_FERALIGTR,
+    .species = SPECIES_FERALIGATR,
     .heldItem = ITEM_QUICK_CLAW,
     .moves = {MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE, MOVE_CRUNCH}
     },
@@ -13719,5 +13719,179 @@ static const struct TrainerMon sParty_Drake2[] = {
     .species = SPECIES_SALAMENCE,
     .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_IRON_TAIL, MOVE_DRAGON_DANCE, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
+    }
+};
+
+// Smith
+static const struct TrainerMon sParty_Smith[] = {
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_MEGANIUM,
+    .heldItem = ITEM_AGUAV_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_GRASS_WHISTLE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_REFLECT}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_CHOICE_BAND,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_LEFTOVERS,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RECOVER, MOVE_HYPNOSIS}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_RAYQUAZA,
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_CRUNCH, MOVE_DRAGON_CLAW, MOVE_THUNDERBOLT, MOVE_BRICK_BREAK}
+    },
+    {
+    .ivs = BEST_IV_SPREAD_HIDDEN_POWER_ICE,
+    .lvl = 70,
+    .species = SPECIES_JOLTEON,
+    .heldItem = ITEM_MAGNET,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_THUNDERBOLT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_HIDDEN_POWER}
+    },
+    {
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_WHITE_HERB,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_OVERHEAT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_PROTECT}
+    }
+};
+
+// Craig / cRz Shadows
+static const struct TrainerMon sParty_Craig[] = {
+    {
+    .nickname = _("MEGANIUM"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_MEGANIUM,
+    .heldItem = ITEM_AGUAV_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .evs = {252, 0, 132, 0, 72, 52},
+    .moves = {MOVE_GRASS_WHISTLE, MOVE_GIGA_DRAIN, MOVE_LEECH_SEED, MOVE_REFLECT}
+    },
+    {
+    .nickname = _("AERODACTYL"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_AERODACTYL,
+    .heldItem = ITEM_CHOICE_BAND,
+    .ability = ABILITY_SLOT_1,
+    .evs = {76, 252, 0, 180, 0, 0},
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE}
+    },
+    {
+    .nickname = _("MILOTIC"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_MILOTIC,
+    .heldItem = ITEM_LEFTOVERS,
+    .ability = ABILITY_SLOT_1,
+    .evs = {252, 0, 252, 0, 4, 0},
+    .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_RECOVER, MOVE_HYPNOSIS}
+    },
+    {
+    .nickname = _("RAYQUAZA"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_RAYQUAZA,
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .evs = {40, 0, 0, 216, 252, 0},
+    .moves = {MOVE_CRUNCH, MOVE_DRAGON_CLAW, MOVE_THUNDERBOLT, MOVE_BRICK_BREAK}
+    },
+    {
+    .nickname = _("JOLTEON"),
+    .ivs = BEST_IV_SPREAD_HIDDEN_POWER_ICE,
+    .lvl = 70,
+    .species = SPECIES_JOLTEON,
+    .heldItem = ITEM_MAGNET,
+    .ability = ABILITY_SLOT_1,
+    .evs = {76, 0, 0, 252, 180, 0},
+    .moves = {MOVE_THUNDERBOLT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_HIDDEN_POWER}
+    },
+    {
+    .nickname = _("FURBALL"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_ARCANINE,
+    .heldItem = ITEM_WHITE_HERB,
+    .ability = ABILITY_SLOT_1,
+    .evs = {252, 0, 12, 152, 32, 60},
+    .moves = {MOVE_OVERHEAT, MOVE_HELPING_HAND, MOVE_EXTREME_SPEED, MOVE_PROTECT}
+    }
+};
+
+// Weebra
+static const struct TrainerMon sParty_Weebra[] = {
+    {
+    .nickname = _("JIRACHI"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_JIRACHI,
+    .heldItem = ITEM_LUM_BERRY,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_RAIN_DANCE, MOVE_THUNDER, MOVE_WATER_PULSE, MOVE_SECRET_POWER}
+    },
+    {
+    .nickname = _("LUDICOLO"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_LUDICOLO,
+    .heldItem = ITEM_LEFTOVERS,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_FAKE_OUT, MOVE_TEETER_DANCE, MOVE_SURF, MOVE_GIGA_DRAIN}
+    },
+    {
+    .nickname = _("GENGAR"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_GENGAR,
+    .heldItem = ITEM_BRIGHT_POWDER,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_ICE_PUNCH, MOVE_WILL_O_WISP}
+    },
+    {
+    .nickname = _("METAGROSS"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_METAGROSS,
+    .heldItem = ITEM_SCOPE_LENS,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_EXPLOSION, MOVE_CUT, MOVE_METEOR_MASH, MOVE_EARTHQUAKE}
+    },
+    {
+    .nickname = _("GLALIE"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_GLALIE,
+    .heldItem = ITEM_QUICK_CLAW,
+    .ability = ABILITY_SLOT_2,
+    .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_ICY_WIND, MOVE_WATER_PULSE}
+    },
+    {
+    .nickname = _("CINDERELLA"),
+    .ivs = BEST_IV_SPREAD,
+    .lvl = 70,
+    .species = SPECIES_HITMONTOP,
+    .heldItem = ITEM_KINGS_ROCK,
+    .ability = ABILITY_SLOT_1,
+    .moves = {MOVE_FAKE_OUT, MOVE_TRIPLE_KICK, MOVE_BULK_UP, MOVE_ROCK_SLIDE}
     }
 };

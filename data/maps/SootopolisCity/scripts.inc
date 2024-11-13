@@ -71,6 +71,7 @@ SootopolisCity_OnTransition:
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 6, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_SetExpertBlockCaveEntrance
 	call_if_eq VAR_SOOTOPOLIS_CITY_STATE, 7, SootopolisCity_EventScript_ShowRival
+	call_if_set FLAG_OPEN_CAVE_OF_ORIGIN, SootopolisCity_EventScript_OpenCaveOfOrigin
 	end
 
 SootopolisCity_EventScript_ShowRival::
@@ -139,6 +140,11 @@ SootopolisCity_EventScript_CheckSetEnterCaveOfOriginObjPos::
 SootopolisCity_EventScript_SetEnterCaveOfOriginObjPos::
 	setobjectxyperm LOCALID_EXPERT, 30, 18
 	setobjectxyperm LOCALID_STEVEN, 32, 18
+	return
+
+SootopolisCity_EventScript_OpenCaveOfOrigin::
+	setflag FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE
+	setobjectxyperm LOCALID_EXPERT, 30, 18
 	return
 
 SootopolisCity_EventScript_SetExitCaveOfOriginObjPos::

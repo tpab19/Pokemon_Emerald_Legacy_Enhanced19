@@ -1,7 +1,147 @@
 .set LOCALID_WALLACE, 1
+.set LOCALID_CRAIG, 2
+.set LOCALID_SMITH, 3
+.set LOCALID_WEEBRA, 4
 
 CaveOfOrigin_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, CaveOfOrigin_B1F_OnFrame
 	.byte 0
+
+CaveOfOrigin_B1F_OnFrame:
+	map_script_2 VAR_TEMP_1, 1, CaveOfOrigin_B1F_EventScript_CheckBeatSmith
+	map_script_2 VAR_TEMP_1, 2, CaveOfOrigin_B1F_EventScript_CheckBeatCraig
+	map_script_2 VAR_TEMP_1, 3, CaveOfOrigin_B1F_EventScript_CheckBeatWeebra
+	.2byte 0
+
+CaveOfOrigin_B1F_EventScript_Smith::
+	setvar VAR_TEMP_1, 1
+	trainerbattle_single TRAINER_SMITH, CaveOfOrigin_B1F_Text_SmithIntro, CaveOfOrigin_B1F_Text_SmithDefeated
+CaveOfOrigin_B1F_EventScript_SmithPostBattle::
+	msgbox CaveOfOrigin_B1F_Text_SmithPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_SMITH
+	goto_if_set FLAG_RECEIVED_REGIROCK_DOLL CaveOfOrigin_B1F_EventScript_End
+	givedecoration DECOR_REGIROCK_DOLL
+	goto_if_eq VAR_RESULT, FALSE, CaveOfOrigin_B1F_EventScript_NoRoomForDeco
+	setflag FLAG_RECEIVED_REGIROCK_DOLL
+	fadescreen FADE_TO_BLACK
+	special Script_FadeOutMapMusic
+	removeobject LOCALID_SMITH
+	setflag FLAG_HIDE_SMITH
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+CaveOfOrigin_B1F_EventScript_CheckBeatSmith::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_DEFEATED_SMITH, CaveOfOrigin_B1F_EventScript_End
+	setvar 0x8005, TRAINER_SMITH
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, CaveOfOrigin_B1F_EventScript_SmithPostBattle
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_Craig::
+	setvar VAR_TEMP_1, 2
+	trainerbattle_single TRAINER_CRAIG, CaveOfOrigin_B1F_Text_CraigIntro, CaveOfOrigin_B1F_Text_CraigDefeated
+CaveOfOrigin_B1F_EventScript_CraigPostBattle::
+	msgbox CaveOfOrigin_B1F_Text_CraigPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_CRAIG
+	goto_if_set FLAG_RECEIVED_REGISTEEL_DOLL CaveOfOrigin_B1F_EventScript_End
+	givedecoration DECOR_REGISTEEL_DOLL
+	goto_if_eq VAR_RESULT, FALSE, CaveOfOrigin_B1F_EventScript_NoRoomForDeco
+	setflag FLAG_RECEIVED_REGISTEEL_DOLL
+	fadescreen FADE_TO_BLACK
+	special Script_FadeOutMapMusic
+	removeobject LOCALID_CRAIG
+	setflag FLAG_HIDE_CRAIG
+	addobject LOCALID_WEEBRA
+	clearflag FLAG_HIDE_WEEBRA
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+CaveOfOrigin_B1F_EventScript_CheckBeatCraig::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_DEFEATED_CRAIG, CaveOfOrigin_B1F_EventScript_End
+	setvar 0x8005, TRAINER_CRAIG
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, CaveOfOrigin_B1F_EventScript_CraigPostBattle
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_Weebra::
+	setvar VAR_TEMP_1, 3
+	trainerbattle_single TRAINER_WEEBRA, CaveOfOrigin_B1F_Text_WeebraIntro, CaveOfOrigin_B1F_Text_WeebraDefeated
+CaveOfOrigin_B1F_EventScript_WeebraPostBattle::
+	msgbox CaveOfOrigin_B1F_Text_WeebraPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_WEEBRA
+	goto_if_set FLAG_RECEIVED_REGICE_DOLL CaveOfOrigin_B1F_EventScript_End
+	givedecoration DECOR_REGICE_DOLL
+	goto_if_eq VAR_RESULT, FALSE, CaveOfOrigin_B1F_EventScript_NoRoomForDeco
+	setflag FLAG_RECEIVED_REGICE_DOLL
+	fadescreen FADE_TO_BLACK
+	special Script_FadeOutMapMusic
+	removeobject LOCALID_WEEBRA
+	setflag FLAG_HIDE_WEEBRA
+	addobject LOCALID_SMITH
+	clearflag FLAG_HIDE_SMITH
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+CaveOfOrigin_B1F_EventScript_CheckBeatWeebra::
+	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_DEFEATED_WEEBRA, CaveOfOrigin_B1F_EventScript_End
+	setvar 0x8005, TRAINER_WEEBRA
+	special HasRematchBeenFought
+	goto_if_eq VAR_RESULT, TRUE, CaveOfOrigin_B1F_EventScript_WeebraPostBattle
+	release
+	end
+
+CaveOfOrigin_B1F_EventScript_NoRoomForDeco::
+	msgbox CaveOfOrigin_B1F_Text_NoRoomForDeco, MSGBOX_DEFAULT
+CaveOfOrigin_B1F_EventScript_End::
+	release
+	end
+
+CaveOfOrigin_B1F_Text_SmithIntro:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_SmithDefeated:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_SmithPostBattle:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_CraigIntro:
+	.string "They say only a few can enter here, yet\n"
+	.string "somehow… I was permitted.\p"
+	.string "Why, you ask?\n"
+	.string "Well, that's a secret.\p"
+	.string "Instead, let's battle. I think I can\n"
+	.string "gather some interesting data from you.$"
+
+CaveOfOrigin_B1F_Text_CraigDefeated:
+	.string "This is good data!\n"
+	.string "I can use this.$"
+
+CaveOfOrigin_B1F_Text_CraigPostBattle:
+	.string "You know, most people wouldn't believe\n"
+	.string "I was allowed in here.\p"
+	.string "Here, take this as a token of our match.\n"
+	.string "A little something from… places unseen.$"
+
+CaveOfOrigin_B1F_Text_WeebraIntro:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_WeebraDefeated:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_WeebraPostBattle:
+	.string "Temp$"
+
+CaveOfOrigin_B1F_Text_NoRoomForDeco:
+	.string "Looks like you don't have space for any\n"
+	.string "more decorations right now.\p"
+	.string "Better make some room and come back\n"
+	.string "later!$"
 
 CaveOfOrigin_B1F_EventScript_Wallace::
 	lock

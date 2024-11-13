@@ -1057,6 +1057,8 @@ static u16 GetPrizeItemId(void)
     {
         i = (i + 1) % NUM_TRAINER_HILL_PRIZE_LISTS;
         FlagSet(FLAG_TRAINER_HILL_SNORLAX_READY);
+        FlagClear(FLAG_HIDE_CRAIG);
+        FlagSet(FLAG_OPEN_CAVE_OF_ORIGIN);
     }
 
     // After the above (non-random) calculations, the following are the possible prize list selections:

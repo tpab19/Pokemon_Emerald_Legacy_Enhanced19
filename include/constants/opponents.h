@@ -876,12 +876,15 @@
 #define TRAINER_PHOEBE_2                    872
 #define TRAINER_GLACIA_2                    873
 #define TRAINER_DRAKE_2                     874
+#define TRAINER_SMITH                       875
+#define TRAINER_CRAIG                       876
+#define TRAINER_WEEBRA                      877
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT                      871
+#define TRAINERS_COUNT                      878
 #define MAX_TRAINERS_COUNT                  960
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

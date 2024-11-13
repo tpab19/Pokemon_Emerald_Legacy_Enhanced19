@@ -8557,7 +8557,7 @@ const union {
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
-        .SOLARBEAM = TRUE,
+        .SOLAR_BEAM = TRUE,
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .PSYCHIC = TRUE,

@@ -1249,16 +1249,16 @@
 #define FLAG_RIVAL_GOT_BULBASAUR                                    0x4B5
 #define FLAG_RIVAL_GOT_CHARMANDER                                   0x4B6
 #define FLAG_RIVAL_GOT_SQUIRTLE                                     0x4B7
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
+#define FLAG_HIDE_SMITH                                             0x4B8
+#define FLAG_RECEIVED_REGICE_DOLL                                   0x4B9
+#define FLAG_RECEIVED_REGISTEEL_DOLL                                0x4BA
+#define FLAG_RECEIVED_REGIROCK_DOLL                                 0x4BB
+#define FLAG_DEFEATED_SMITH                                         0x4BC
+#define FLAG_DEFEATED_CRAIG                                         0x4BD
+#define FLAG_DEFEATED_WEEBRA                                        0x4BE
+#define FLAG_HIDE_WEEBRA                                            0x4BF
+#define FLAG_HIDE_CRAIG                                             0x4C0
+#define FLAG_OPEN_CAVE_OF_ORIGIN                                    0x4C1
 #define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
 #define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
 #define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
