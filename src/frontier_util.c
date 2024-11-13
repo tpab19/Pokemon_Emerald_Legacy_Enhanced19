@@ -109,12 +109,12 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .moves = {MOVE_THUNDER_PUNCH, MOVE_FIRE_PUNCH, MOVE_ICE_PUNCH, MOVE_PSYCHIC},
             },
             {
-                .species = SPECIES_ARTICUNO,
-                .heldItem = ITEM_CHESTO_BERRY,
+                .species = SPECIES_CELEBI,
+                .heldItem = ITEM_LUM_BERRY,
                 .fixedIV = 24,
                 .nature = NATURE_MODEST,
                 .evs = {252, 0, 6, 0, 252, 0},
-                .moves = {MOVE_ICE_BEAM, MOVE_REST, MOVE_EXTRASENSORY, MOVE_SLEEP_TALK},
+                .moves = {MOVE_CALM_MIND, MOVE_GIGA_DRAIN, MOVE_PSYCHIC, MOVE_RECOVER},
             },
             {
                 .species = SPECIES_SNORLAX,
@@ -678,9 +678,9 @@ static const u8 sFrontierBrainObjEventGfx[NUM_FRONTIER_FACILITIES][2] =
 
 const u16 gFrontierBannedSpecies[] =
 {
-    SPECIES_MEW, SPECIES_MEWTWO, SPECIES_HO_OH, SPECIES_LUGIA, SPECIES_CELEBI,
-    SPECIES_KYOGRE, SPECIES_GROUDON, SPECIES_RAYQUAZA, SPECIES_JIRACHI, SPECIES_DEOXYS,
-    SPECIES_DEOXYS_SPEED, SPECIES_DEOXYS_ATTACK, SPECIES_DEOXYS_DEFENSE, 0xFFFF
+    SPECIES_MEWTWO, SPECIES_HO_OH, SPECIES_LUGIA,
+    SPECIES_KYOGRE, SPECIES_GROUDON, SPECIES_RAYQUAZA, SPECIES_DEOXYS,
+    SPECIES_DEOXYS_ATTACK, 0xFFFF
 };
 
 static const u8 *const sRecordsWindowChallengeTexts[][2] =

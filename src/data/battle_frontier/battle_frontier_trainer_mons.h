@@ -3924,7 +3924,7 @@
     FRONTIER_MON_REGISTEEL_4,   \
     FRONTIER_MON_##lati##_4,    \
     FRONTIER_MON_##lati##_5,    \
-        FRONTIER_MON_METAGROSS_5,   \
+    FRONTIER_MON_METAGROSS_5,   \
     FRONTIER_MON_METAGROSS_6,   \
     FRONTIER_MON_STARMIE_5,     \
     FRONTIER_MON_ALAKAZAM_5,    \
@@ -4229,6 +4229,18 @@
     FRONTIER_MON_##legend2##_4, \
     FRONTIER_MON_##legend3##_4, \
     FRONTIER_MON_##lati##_4,    \
+    FRONTIER_MON_MEW_1,         \
+    FRONTIER_MON_MEW_2,         \
+    FRONTIER_MON_MEW_3,         \
+    FRONTIER_MON_MEW_4,         \
+    FRONTIER_MON_CELEBI_1,      \
+    FRONTIER_MON_CELEBI_2,      \
+    FRONTIER_MON_CELEBI_3,      \
+    FRONTIER_MON_CELEBI_4,      \
+    FRONTIER_MON_JIRACHI_1,     \
+    FRONTIER_MON_JIRACHI_2,     \
+    FRONTIER_MON_JIRACHI_3,     \
+    FRONTIER_MON_JIRACHI_4,     \
 
 #define FRONTIER_MONS_PSYCHIC_2A(lati) \
     FRONTIER_MONS_PSYCHIC_2(lati, ARTICUNO, ZAPDOS, MOLTRES) \
@@ -4669,6 +4681,18 @@
     FRONTIER_MON_DRAGONITE_6,   \
     FRONTIER_MON_SALAMENCE_5,   \
     FRONTIER_MON_METAGROSS_6,   \
+    FRONTIER_MON_MEW_1,         \
+    FRONTIER_MON_MEW_2,         \
+    FRONTIER_MON_MEW_3,         \
+    FRONTIER_MON_MEW_4,         \
+    FRONTIER_MON_CELEBI_1,      \
+    FRONTIER_MON_CELEBI_2,      \
+    FRONTIER_MON_CELEBI_3,      \
+    FRONTIER_MON_CELEBI_4,      \
+    FRONTIER_MON_JIRACHI_1,     \
+    FRONTIER_MON_JIRACHI_2,     \
+    FRONTIER_MON_JIRACHI_3,     \
+    FRONTIER_MON_JIRACHI_4,     \
     -1
 
 // Identical to FRONTIER_MONS_COOLTRAINER_2C but with both latias and latios
@@ -5158,6 +5182,18 @@
     FRONTIER_MON_SWAMPERT_5,    \
     FRONTIER_MON_BLAZIKEN_5,    \
     FRONTIER_MON_SMEARGLE_3,    \
+    FRONTIER_MON_MEW_1,         \
+    FRONTIER_MON_MEW_2,         \
+    FRONTIER_MON_MEW_3,         \
+    FRONTIER_MON_MEW_4,         \
+    FRONTIER_MON_CELEBI_1,      \
+    FRONTIER_MON_CELEBI_2,      \
+    FRONTIER_MON_CELEBI_3,      \
+    FRONTIER_MON_CELEBI_4,      \
+    FRONTIER_MON_JIRACHI_1,     \
+    FRONTIER_MON_JIRACHI_2,     \
+    FRONTIER_MON_JIRACHI_3,     \
+    FRONTIER_MON_JIRACHI_4,     \
     -1
 
 #define FRONTIER_MONS_GUITARIST_3A \
@@ -5582,6 +5618,7 @@
     FRONTIER_MON_HOUNDOOM_4,    \
     FRONTIER_MON_VENUSAUR_4,    \
     FRONTIER_MON_FLAREON_4,     \
+    FRONTIER_MON_JIRACHI_4,     \
     -1
 
 // Only used by one Beauty
@@ -5655,6 +5692,18 @@
     FRONTIER_MON_RAIKOU_5,      \
     FRONTIER_MON_ENTEI_5,       \
     FRONTIER_MON_SUICUNE_5,     \
+    FRONTIER_MON_MEW_1,         \
+    FRONTIER_MON_MEW_2,         \
+    FRONTIER_MON_MEW_3,         \
+    FRONTIER_MON_MEW_4,         \
+    FRONTIER_MON_CELEBI_1,      \
+    FRONTIER_MON_CELEBI_2,      \
+    FRONTIER_MON_CELEBI_3,      \
+    FRONTIER_MON_CELEBI_4,      \
+    FRONTIER_MON_JIRACHI_1,     \
+    FRONTIER_MON_JIRACHI_2,     \
+    FRONTIER_MON_JIRACHI_3,     \
+    FRONTIER_MON_JIRACHI_4,     \
     -1
 
 #define FRONTIER_MONS_AROMA_LADY_3  \
@@ -5756,6 +5805,10 @@
     FRONTIER_MON_SUICUNE_3,     \
     FRONTIER_MON_SUICUNE_4,     \
     FRONTIER_MON_SUICUNE_5,     \
+    FRONTIER_MON_CELEBI_1,      \
+    FRONTIER_MON_CELEBI_2,      \
+    FRONTIER_MON_CELEBI_3,      \
+    FRONTIER_MON_CELEBI_4,      \
     -1
 
 const u16 gBattleFrontierTrainerMons_Brady[] =
