@@ -45,6 +45,7 @@ EventScript_LanettesPCBoxFull::
 	return
 
 Common_EventScript_NoMoreRoomForPokemon::
+	clearflag FLAG_SHINY_CREATION
 	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
 	release
 	end
