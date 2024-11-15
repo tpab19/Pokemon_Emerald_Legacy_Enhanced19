@@ -851,6 +851,7 @@ RustboroCity_EventScript_MayEncounter::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+	setflag FLAG_REGISTER_RIVAL_POKENAV
 	setvar VAR_RUSTBORO_CITY_STATE, 8
 	setvar VAR_0x8008, 0
 	msgbox RustboroCity_Text_MayPassedBrineyWantToBattle, MSGBOX_YESNO

@@ -1856,7 +1856,7 @@ u16 CountBattledRematchTeams(u16 trainerId)
     return i;
 }
 
-static u8 getLevelCap(void){
+u8 getLevelCap(void){
     u8 levelCap = 0;
     u16 nextLeader, i;
     const struct TrainerMon *partyData;
