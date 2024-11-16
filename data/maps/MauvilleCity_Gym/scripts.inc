@@ -156,6 +156,7 @@ MauvilleCity_Gym_EventScript_WattsonRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
 	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 MauvilleCity_Gym_EventScript_GiveRematchReward::
 	msgbox MauvilleCity_Gym_Text_WattsonGiveRematchReward, MSGBOX_DEFAULT
@@ -166,10 +167,12 @@ MauvilleCity_Gym_EventScript_GiveRematchReward::
 	msgbox MauvilleCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_WATTSON_REMATCH_REWARD
+	release
 	end
 MauvilleCity_Gym_EventScript_NoRoom::
 	msgbox MauvilleCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 MauvilleCity_Gym_Text_WattsonGiveRematchReward:

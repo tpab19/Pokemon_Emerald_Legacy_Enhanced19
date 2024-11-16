@@ -87,6 +87,7 @@ FortreeCity_Gym_EventScript_WinonaRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreRematch, FortreeCity_Gym_Text_WinonaRematchDefeat, FortreeCity_Gym_Text_WinonaRematchNeedTwoMons
 	msgbox FortreeCity_Gym_Text_WinonaPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 FortreeCity_Gym_EventScript_GiveRematchReward::
 	msgbox FortreeCity_Gym_Text_WinonaGiveRematchReward, MSGBOX_DEFAULT
@@ -99,10 +100,12 @@ FortreeCity_Gym_EventScript_GiveRematchReward::
 	msgbox FortreeCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_WINONA_REMATCH_REWARD
+	release
 	end
 FortreeCity_Gym_EventScript_NoRoom::
 	msgbox FortreeCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 FortreeCity_Gym_Text_WinonaGiveRematchReward:
