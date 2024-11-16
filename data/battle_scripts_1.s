@@ -908,7 +908,6 @@ BattleScript_BladeHitFromAccCheck::
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 BattleScript_BladeHitFromAtkString::
 	attackstring
-	ppreduce
 BattleScript_BladeHitFromCritCalc::
 	critcalc
 	damagecalc
@@ -938,6 +937,7 @@ BattleScript_EffectGettingPumped::
 BattleScript_EffectLeafBlade2::
 	attackcanceler
 	attackstring
+	ppreduce
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRecoil::
