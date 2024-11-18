@@ -1675,6 +1675,14 @@ static void Cmd_adjustnormaldamage(void)
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
     }
 
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_STURDY && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP)
+    {
+        gLastUsedAbility = ABILITY_STURDY;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY);
+        gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
+        gProtectStructs[gBattlerTarget].endured = 1;
+    }
+
     gPotentialItemEffectBattler = gBattlerTarget;
 
     if (holdEffect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < param)
@@ -1716,6 +1724,14 @@ static void Cmd_adjustnormaldamage2(void)
     {
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+    }
+
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_STURDY && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP)
+    {
+        gLastUsedAbility = ABILITY_STURDY;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY);
+        gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
+        gProtectStructs[gBattlerTarget].endured = 1;
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
@@ -5831,6 +5847,14 @@ static void Cmd_adjustsetdamage(void)
     {
         holdEffect = ItemId_GetHoldEffect(gBattleMons[gBattlerTarget].item);
         param = ItemId_GetHoldEffectParam(gBattleMons[gBattlerTarget].item);
+    }
+
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_STURDY && gBattleMons[gBattlerTarget].hp == gBattleMons[gBattlerTarget].maxHP)
+    {
+        gLastUsedAbility = ABILITY_STURDY;
+        RecordAbilityBattle(gBattlerTarget, ABILITY_STURDY);
+        gMoveResultFlags |= MOVE_RESULT_FOE_ENDURED;
+        gProtectStructs[gBattlerTarget].endured = 1;
     }
 
     gPotentialItemEffectBattler = gBattlerTarget;
