@@ -1090,6 +1090,7 @@ const u16 gEggMoves[] = {
 
     egg_moves(ELECTRIKE,
               MOVE_CRUNCH,
+              MOVE_OVERHEAT,
               MOVE_HEADBUTT,
               MOVE_UPROAR,
               MOVE_CURSE,

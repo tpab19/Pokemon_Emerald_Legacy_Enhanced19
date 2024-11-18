@@ -5665,6 +5665,13 @@ static const struct TrainerMon sParty_Dianne[] = {
     .species = SPECIES_LANTURN,
     .heldItem = ITEM_NONE,
     .moves = {MOVE_THUNDERBOLT, MOVE_ICE_BEAM, MOVE_SURF, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 48,
+    .species = SPECIES_MASQUERAIN,
+    .heldItem = ITEM_NONE,
+    .moves = {MOVE_SIGNAL_BEAM, MOVE_ICE_BEAM, MOVE_HYDRO_PUMP, MOVE_NONE}
     }
 };
 // Abandoned Ship
