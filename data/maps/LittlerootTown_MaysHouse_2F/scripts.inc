@@ -330,8 +330,9 @@ RivalsHouse_2F_Text_MayWhoAreYou:
 	.string "I… I've just met you, {PLAYER}{KUN}.\p"
 	.string "Eheheh…\p"
 	.string "Oh, no! I forgot!\p"
-	.string "I was supposed to go help Dad catch\n"
-	.string "some wild POKéMON!\p"
+	.string "I'm supposed to be getting my stuff\n"
+	.string "ready so I can help my Dad catch\l"
+	.string "some wild POKéMON later.\p"
 	.string "{PLAYER}{KUN}, I'll catch you later!$"
 
 RivalsHouse_2F_Text_MayGettingReady:
@@ -354,8 +355,9 @@ RivalsHouse_2F_Text_BrendanWhoAreYou:
 	.string "a POKéMON?\p"
 	.string "Do you want me to go catch you one?\p"
 	.string "Aw, darn, I forgot…\p"
-	.string "I'm supposed to go help my dad catch\n"
-	.string "some wild POKéMON.\p"
+	.string "I'm supposed to be getting my stuff\n"
+	.string "ready so I can help my Dad catch\l"
+	.string "some wild POKéMON later.\p"
 	.string "Some other time, okay?$"
 
 RivalsHouse_2F_Text_BrendanGettingReady:

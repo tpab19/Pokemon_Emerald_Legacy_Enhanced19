@@ -1191,7 +1191,9 @@ RustboroCity_Text_MayMrBrineyHint:
 	.string "I just passed…\p"
 	.string "{PLAYER}{KUN}, you just moved here so you\n"
 	.string "might not know this, but MR. BRINEY\l"
-	.string "was once a revered seafarer.$"
+	.string "was once a revered seafarer.\p"
+	.string "I'm going to stick around RUSTBORO\n"
+    .string "for a while and look for more POKéMON.$"
 
 RustboroCity_Text_BrendanHiLetsRegister:
 	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
@@ -1237,7 +1239,9 @@ RustboroCity_Text_BrendanMrBrineyHint:
 	.string "MR. BRINEY? The guy I just passed?\p"
 	.string "I bet you didn't know this, since you\n"
 	.string "just moved here, {PLAYER}, but\l"
-	.string "MR. BRINEY was once a great sailor.$"
+	.string "MR. BRINEY was once a great sailor.\p"
+	.string "I'm going to stick around RUSTBORO\n"
+    .string "for a while and look for more POKéMON.$"
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

@@ -417,11 +417,11 @@ LilycoveCity_Text_MayShoppingLetsBattle:
 	.string "{PLAYER}{KUN}, are you shopping, too?\p"
 	.string "I bought a whole bunch of DOLLS and\n"
 	.string "POSTERS.\p"
-	.string "Of course, I've also caught a lot of\n"
-	.string "POKéMON, and I'm raising them\l"
-	.string "properly, too.\p"
-	.string "Actually, I'm more worried if you're\n"
-	.string "raising POKéMON properly, {PLAYER}{KUN}.\p"
+	.string "Honestly, I've been spending more\n"
+	.string "time exploring and observing POKéMON.\p"
+	.string "It's fascinating to see how they behave\n"
+	.string "in different environments.\p"
+	.string "But that's enough about me.\n"
 	.string "I'll battle with you, so you can show\n"
 	.string "me your POKéMON, {PLAYER}{KUN}.$"
 
@@ -449,9 +449,11 @@ LilycoveCity_Text_MayDefeat:
 LilycoveCity_Text_MayGoingBackToLittleroot:
 	.string "MAY: I'm thinking of going back to\n"
 	.string "LITTLEROOT soon.\p"
-	.string "I've caught a decent group of POKéMON,\n"
-	.string "and my POKéDEX is coming along, so\l"
-	.string "I'm going home to show my dad.$"
+	.string "I've learned a lot about POKéMON during\n"
+	.string "my journey, and I want to share it\l"
+	.string "with my Dad.\p"
+	.string "It's exciting to think about all the\n"
+	.string "possibilities POKéMON hold.$"
 
 LilycoveCity_Text_MayYouGoingToCollectBadges:
 	.string "{PLAYER}{KUN}, what are you going to do?\p"
@@ -486,9 +488,11 @@ LilycoveCity_Text_BrendanShoppingLetsBattle:
 	.string "BRENDAN: Oh, hey, it's {PLAYER}.\p"
 	.string "I'm running an errand for my dad.\n"
 	.string "No, I'm not buying any DOLLS.\p"
-	.string "Anyways, it's been a while.\p"
-	.string "Want to have a battle to see who's been\n"
-	.string "raising POKéMON better?$"
+	.string "Honestly, I've been spending more\n"
+	.string "time exploring and observing POKéMON.\p"
+	.string "It's fascinating to see how they behave\n"
+	.string "in different environments.\p"
+	.string "But that's enough about me.\n"
 
 LilycoveCity_Text_BrendanNoConfidence:
 	.string "BRENDAN: Oh, what's the matter?\n"
@@ -511,9 +515,11 @@ LilycoveCity_Text_BrendanDefeat:
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
 	.string "BRENDAN: I…\n"
 	.string "I plan on going home to LITTLEROOT.\p"
-	.string "You know I'm helping out my dad on his\n"
-	.string "POKéDEX. It's coming together pretty\l"
-	.string "decently, so I should go show him.$"
+	.string "I've learned a lot about POKéMON during\n"
+	.string "my journey, and I want to share it\l"
+	.string "with my Dad.\p"
+	.string "It's exciting to think about all the\n"
+	.string "possibilities POKéMON hold.$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
 	.string "{PLAYER}, what are you going to do?\p"

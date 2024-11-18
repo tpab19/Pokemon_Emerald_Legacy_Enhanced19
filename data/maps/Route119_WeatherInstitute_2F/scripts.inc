@@ -443,7 +443,7 @@ Route119_WeatherInstitute_2F_Text_FoundRaikou:
 	.string "What!? You saw a RAIKOU!?\p"
 	.string "That explains the strange thunder and\n"
 	.string "why it kept moving around!\p"
-	.string "Amazing… You’ve been tracking a\n"
+	.string "Amazing… You've been tracking a\n"
 	.string "LEGENDARY POKéMON this whole time!$"
 
 Route119_WeatherInstitute_2F_Text_SeismicActivity:
@@ -459,8 +459,9 @@ Route119_WeatherInstitute_2F_Text_SeismicActivity:
 	.string "check for signs of seismic activity?$"
 
 Route119_WeatherInstitute_2F_Text_MtChimney:
-	.string "If you notice anything unusual, please\n"
-	.string "report back as soon as possible.$"
+	.string "If you notice anything unusual at MT\n"
+	.string "CHIMNEY, please report back as soon as\l"
+	.string "possible.$"
 
 Route119_WeatherInstitute_2F_Text_Route113:
 	.string "You're back! So, no major tremors…\n"
@@ -472,7 +473,7 @@ Route119_WeatherInstitute_2F_Text_Route113:
 
 Route119_WeatherInstitute_2F_Text_ScorchedSlab:
 	.string "Ah, welcome back!\p"
-	.string "That ash sample is normal, but we’ve\n"
+	.string "That ash sample is normal, but we've\n"
 	.string "just had reports of seismic activity\l"
 	.string "near the SCORCHED SLAB.\p"
 	.string "It could be the early formation of a\n"
@@ -481,11 +482,11 @@ Route119_WeatherInstitute_2F_Text_ScorchedSlab:
 
 Route119_WeatherInstitute_2F_Text_FoundEntei:
 	.string "Wait, what!? You found an ENTEI?\p"
-	.string "I can’t believe a LEGENDARY POKéMON\n"
+	.string "I can't believe a LEGENDARY POKéMON\n"
 	.string "was behind this…\p"
 	.string "ENTEI'S roar is said to cause eruptions.\n"
 	.string "That explains the seismic readings!\p"
-	.string "Fortunately, there’s no parasitic cone\n"
+	.string "Fortunately, there's no parasitic cone\n"
 	.string "forming.\p"
 	.string "ENTEI must have been drawn here by the\n"
 	.string "recent activity.\p"
