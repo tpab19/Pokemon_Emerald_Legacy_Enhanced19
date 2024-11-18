@@ -1858,10 +1858,6 @@ static void Task_HandleOpponent1(u8 taskId)
                     else
                         gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
 
-                    // BUG: Overrwrote above assignment. Opponent 1 can't get Best at low speed
-                    #ifndef BUGFIX
-                    gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
-                    #endif
                 }
                 else if (sBerryBlender->speed < 1500)
                 {

@@ -170,6 +170,7 @@ SootopolisCity_Gym_1F_EventScript_JuanRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreRematch, SootopolisCity_Gym_1F_Text_JuanRematchDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 SootopolisCity_Gym_1F_EventScript_GiveRematchReward::
 	msgbox SootopolisCity_Gym_1F_Text_JuanGiveRematchReward, MSGBOX_DEFAULT
@@ -180,10 +181,12 @@ SootopolisCity_Gym_1F_EventScript_GiveRematchReward::
 	msgbox SootopolisCity_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_JUAN_REMATCH_REWARD
+	release
 	end
 SootopolisCity_Gym_1F_EventScript_NoRoom::
 	msgbox SootopolisCity_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 SootopolisCity_Gym_1F_EventScript_GymGuide::
@@ -397,15 +400,15 @@ SootopolisCity_Gym_1F_Text_GymStatueJuanCertified:
 SootopolisCity_Gym_1F_Text_JuanPreRematch:
 	.string "JUAN: Ah, this GYM had returned to its\n"
 	.string "usual state of serenity…\p"
-	.string "But our young typhoon has returned\n"
-	.string "to put us to the test again!\p"
+	.string "Yet here comes our young typhoon,\n"
+	.string "ready to stir its waters anew!\p"
 	.string "Well, my friend, most certainly!\p"
 	.string "I shall be delighted to dance with you\n"
 	.string "as often as you wish!$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchDefeat:
 	.string "Ahahaha, you are the winner!\n"
-	.string "You have defeated me again!$"
+	.string "You have defeated me!$"
 
 SootopolisCity_Gym_1F_Text_JuanPostRematch:
 	.string "JUAN: If I told you to become my\n"
@@ -420,8 +423,8 @@ SootopolisCity_Gym_1F_Text_JuanPostRematch:
 SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "JUAN: Ah, this GYM had returned to its\n"
 	.string "usual state of serenity…\p"
-	.string "But our young typhoon has returned\n"
-	.string "to put us to the test again!\p"
+	.string "Yet here comes our young typhoon,\n"
+	.string "ready to stir its waters anew!\p"
 	.string "Well, my friend, most certainly!\n"
 	.string "I shall be delighted to dance with you…\p"
 	.string "Ah, no, no, no.\n"
@@ -446,5 +449,5 @@ SootopolisCity_Gym_1F_Text_NoRoomForReward:
 SootopolisCity_Gym_1F_Text_GaveReward:
 	.string "This DRAGON SCALE embodies the majesty\n"
 	.string "and power of dragons, much like the\l"
-	.string "KKINGDRA that I have trained with care.\p"
+	.string "KINGDRA that I have trained with care.\p"
 	.string "May it serve you well on your journey.$"

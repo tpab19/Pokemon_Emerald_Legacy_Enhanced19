@@ -123,6 +123,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 LavaridgeTown_Gym_1F_EventScript_GiveRematchReward::
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward, MSGBOX_DEFAULT
@@ -133,10 +134,12 @@ LavaridgeTown_Gym_1F_EventScript_GiveRematchReward::
 	msgbox LavaridgeTown_Gym_1F_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_FLANNERY_REMATCH_REWARD
+	release
 	end
 LavaridgeTown_Gym_1F_EventScript_NoRoom::
 	msgbox LavaridgeTown_Gym_1F_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 LavaridgeTown_Gym_1F_Text_FlanneryGiveRematchReward:

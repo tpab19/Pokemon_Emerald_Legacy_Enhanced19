@@ -535,10 +535,25 @@ void BattleSetup_StartLegendaryBattle(void)
         break;
     case SPECIES_LUGIA:
     case SPECIES_HO_OH:
+    case SPECIES_ENTEI:
+    case SPECIES_RAIKOU:
+    case SPECIES_SUICUNE:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
+        break;
+    case SPECIES_MEWTWO:
+    case SPECIES_ZAPDOS:
+    case SPECIES_MOLTRES:
+    case SPECIES_ARTICUNO:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_MEW);
         break;
     case SPECIES_MEW:
         CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
+        break;
+    case SPECIES_CELEBI:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_RG_VS_LEGEND);
+        break;
+    case SPECIES_JIRACHI:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_RG_VS_DEOXYS);
         break;
     }
 
@@ -1856,7 +1871,7 @@ u16 CountBattledRematchTeams(u16 trainerId)
     return i;
 }
 
-static u8 getLevelCap(void){
+u8 getLevelCap(void){
     u8 levelCap = 0;
     u16 nextLeader, i;
     const struct TrainerMon *partyData;

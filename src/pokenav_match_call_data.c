@@ -190,7 +190,7 @@ static const match_call_text_data_t sNormanTextScripts[] = {
     { MatchCall_Text_Norman3, FLAG_DEFEATED_LAVARIDGE_GYM,   0xFFFF },
     { MatchCall_Text_Norman4, FLAG_DEFEATED_PETALBURG_GYM,   0xFFFF },
     { MatchCall_Text_Norman5, FLAG_RECEIVED_RED_OR_BLUE_ORB, 0xFFFF },
-    { MatchCall_Text_Norman6, 0xFFFE,                        0xFFFF },
+    { MatchCall_Text_Norman6, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
     { MatchCall_Text_Norman7, FLAG_SYS_GAME_CLEAR,           0xFFFF },
     { MatchCall_Text_Norman8, FLAG_SYS_GAME_CLEAR,           0xFFFF },
     { MatchCall_Text_Norman9, FLAG_SYS_GAME_CLEAR,           0xFFFF },

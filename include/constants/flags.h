@@ -685,7 +685,7 @@
 #define FLAG_SPOKE_TO_ZINNIA_5F         0x286
 #define FLAG_HIDE_ZINNIA_TOP            0x287
 #define FLAG_DEFEATED_ZINNIA            0x288
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
+#define FLAG_ENCOUNTERED_ROAMING_LATI   0x289
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
@@ -1259,15 +1259,15 @@
 #define FLAG_HIDE_WEEBRA                                            0x4BF
 #define FLAG_HIDE_CRAIG                                             0x4C0
 #define FLAG_OPEN_CAVE_OF_ORIGIN                                    0x4C1
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
+#define FLAG_SHINY_CREATION                                         0x4C2
+#define FLAG_GOT_STARF_BERRY                                        0x4C3
+#define FLAG_SCOTT_RECIEVED_LANSAT_BERRY                            0x4C4
+#define FLAG_SCOTT_RECIEVED_HP_UP                                   0x4C5
+#define FLAG_SCOTT_RECIEVED_PROTEIN                                 0x4C6
+#define FLAG_SCOTT_RECIEVED_IRON                                    0x4C7
+#define FLAG_SCOTT_RECIEVED_CALCIUM                                 0x4C8
+#define FLAG_SCOTT_RECIEVED_ZINC                                    0x4C9
+#define FLAG_SCOTT_RECIEVED_CARBOS                                  0x4CA
 #define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
 #define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag

@@ -57,6 +57,7 @@ RustboroCity_Gym_EventScript_RoxanneRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_ROXANNE_1, RustboroCity_Gym_Text_RoxannePreRematch, RustboroCity_Gym_Text_RoxanneRematchDefeat, RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons
 	msgbox RustboroCity_Gym_Text_RoxannePostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 RustboroCity_Gym_EventScript_GiveRematchReward::
 	msgbox RustboroCity_Gym_Text_RoxanneGiveRematchReward, MSGBOX_DEFAULT
@@ -67,10 +68,12 @@ RustboroCity_Gym_EventScript_GiveRematchReward::
 	msgbox RustboroCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_ROXANNE_REMATCH_REWARD
+	release
 	end
 RustboroCity_Gym_EventScript_NoRoom::
 	msgbox RustboroCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 RustboroCity_Gym_Text_RoxanneGiveRematchReward:

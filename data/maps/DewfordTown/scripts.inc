@@ -40,6 +40,7 @@ DewfordTown_EventScript_ChoosePetalburg::
 	end
 
 DewfordTown_EventScript_ChooseSlateport::
+	setflag FLAG_ENABLE_ROXANNE_FIRST_CALL
 	msgbox DewfordTown_Text_SlateportWereSettingSail, MSGBOX_DEFAULT
 	closemessage
 	goto DewfordTown_EventScript_SailToSlateport

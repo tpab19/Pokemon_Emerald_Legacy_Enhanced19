@@ -245,6 +245,8 @@ static u16 TakeSelectedPokemonFromDaycare(struct DaycareMon *daycareMon)
 {
     u16 species;
     u32 experience;
+    u32 experienceDiff;
+    u8 levelCap;
     struct Pokemon pokemon;
 
     GetBoxMonNickname(&daycareMon->mon, gStringVar1);
@@ -255,8 +257,19 @@ static u16 TakeSelectedPokemonFromDaycare(struct DaycareMon *daycareMon)
     && !levelCappedNuzlocke(GetMonData(&pokemon, MON_DATA_LEVEL)))
     {
         experience = GetMonData(&pokemon, MON_DATA_EXP) + daycareMon->steps;
-        SetMonData(&pokemon, MON_DATA_EXP, &experience);
-        ApplyDaycareExperience(&pokemon);
+        levelCap = getLevelCap();
+        if (experience <= gExperienceTables[gSpeciesInfo[species].growthRate][levelCap])
+        {
+            SetMonData(&pokemon, MON_DATA_EXP, &experience);
+            ApplyDaycareExperience(&pokemon);
+        }
+        else
+        {
+            experienceDiff = experience - gExperienceTables[gSpeciesInfo[species].growthRate][levelCap];
+            experience -= experienceDiff;
+            SetMonData(&pokemon, MON_DATA_EXP, &experience);
+            ApplyDaycareExperience(&pokemon);
+        }
     }
 
     gPlayerParty[PARTY_SIZE - 1] = pokemon;
@@ -288,9 +301,20 @@ u16 TakePokemonFromDaycare(void)
 static u8 GetLevelAfterDaycareSteps(struct BoxPokemon *mon, u32 steps)
 {
     struct BoxPokemon tempMon = *mon;
-
-    u32 experience = GetBoxMonData(mon, MON_DATA_EXP) + steps;
-    SetBoxMonData(&tempMon, MON_DATA_EXP,  &experience);
+    u8 levelCap = getLevelCap();
+    u16 species = GetBoxMonData(&tempMon, MON_DATA_SPECIES);
+    u32 experienceDiff;
+    u32 experience = GetBoxMonData(&tempMon, MON_DATA_EXP) + steps;
+    if (experience <= gExperienceTables[gSpeciesInfo[species].growthRate][levelCap])
+    {
+        SetBoxMonData(&tempMon, MON_DATA_EXP,  &experience);
+    }
+    else
+    {
+        experienceDiff = experience - gExperienceTables[gSpeciesInfo[species].growthRate][levelCap];
+        experience -= experienceDiff;
+        SetBoxMonData(&tempMon, MON_DATA_EXP,  &experience);
+    }
     return GetLevelFromBoxMonExp(&tempMon);
 }
 
@@ -544,19 +568,9 @@ static void InheritIVs(struct Pokemon *egg, struct DayCare *daycare)
     for (i = 0; i < INHERITED_IV_COUNT; i++)
     {
         // Randomly pick an IV from the available list and stop from being chosen again.
-        // BUG: Instead of removing the IV that was just picked, this
-        // removes position 0 (HP) then position 1 (DEF), then position 2. This is why HP and DEF
-        // have a lower chance to be inherited in Emerald and why the IV picked for inheritance can
-        // be repeated. Amusingly, FRLG and RS also got this wrong. They remove selectedIvs[i], which
-        // is not an index! This means that it can sometimes remove the wrong stat.
-        #ifndef BUGFIX
-        selectedIvs[i] = availableIVs[Random() % (NUM_STATS - i)];
-        RemoveIVIndexFromList(availableIVs, i);
-        #else
         u8 index = Random() % (NUM_STATS - i);
         selectedIvs[i] = availableIVs[index];
         RemoveIVIndexFromList(availableIVs, index);
-        #endif
     }
 
     // Determine which parent each of the selected IVs should inherit from.

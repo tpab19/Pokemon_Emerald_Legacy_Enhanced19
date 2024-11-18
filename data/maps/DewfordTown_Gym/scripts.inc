@@ -221,6 +221,7 @@ DewfordTown_Gym_EventScript_BrawlyRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyPreRematch, DewfordTown_Gym_Text_BrawlyRematchDefeat, DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons
 	msgbox DewfordTown_Gym_Text_BrawlyPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 DewfordTown_Gym_EventScript_GiveRematchReward::
 	msgbox DewfordTown_Gym_Text_BrawlyGiveRematchReward, MSGBOX_DEFAULT
@@ -231,10 +232,12 @@ DewfordTown_Gym_EventScript_GiveRematchReward::
 	msgbox DewfordTown_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_BRAWLY_REMATCH_REWARD
+	release
 	end
 DewfordTown_Gym_EventScript_NoRoom::
 	msgbox DewfordTown_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 DewfordTown_Gym_Text_BrawlyGiveRematchReward:
@@ -364,7 +367,7 @@ DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "POKéMON is asking for trouble.\p"
 	.string "FLYING-type and PSYCHIC-type will do\n"
 	.string "well, but they should still watch out!\p"
-	.string "His lead loves to go for the feint!\p"
+	.string "His lead loves to go for the faint!\p"
 	.string "And while his ace might have short arms,\n"
 	.string "that doesn't mean it's weak!\p"
 	.string "It's got to be one of the hardest\n"

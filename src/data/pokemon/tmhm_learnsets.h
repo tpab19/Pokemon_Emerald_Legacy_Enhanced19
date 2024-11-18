@@ -938,6 +938,7 @@ const union {
         .REST = TRUE,
         .ATTRACT = TRUE,
         .OVERHEAT = TRUE,
+        .SHADOW_BALL = TRUE,
         .FLASH = TRUE,
     } },
 

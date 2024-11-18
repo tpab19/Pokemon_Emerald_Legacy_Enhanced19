@@ -128,6 +128,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaPreRematch, MossdeepCity_Gym_Text_TateAndLizaRematchDefeat, MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 MossdeepCity_Gym_EventScript_GiveRematchReward::
 	msgbox MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward, MSGBOX_DEFAULT
@@ -138,10 +139,12 @@ MossdeepCity_Gym_EventScript_GiveRematchReward::
 	msgbox MossdeepCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_TATEANDLIZA_REMATCH_REWARD
+	release
 	end
 MossdeepCity_Gym_EventScript_NoRoom::
 	msgbox MossdeepCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 MossdeepCity_Gym_Text_TateAndLizaGiveRematchReward:

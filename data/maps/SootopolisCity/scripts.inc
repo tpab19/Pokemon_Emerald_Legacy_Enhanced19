@@ -763,9 +763,12 @@ SootopolisCity_EventScript_KiriGiveBerry::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_SOOTOPOLIS_RECEIVED_BERRY
 	msgbox SootopolisCity_Text_GiveYouThisBerryToo, MSGBOX_DEFAULT
-	random 2
+	random 5
 	goto_if_eq VAR_RESULT, 0, SootopolisCity_EventScript_GiveFigyBerry
 	goto_if_eq VAR_RESULT, 1, SootopolisCity_EventScript_GiveIapapaBerry
+	goto_if_eq VAR_RESULT, 2, SootopolisCity_EventScript_GiveWikiBerry
+	goto_if_eq VAR_RESULT, 3, SootopolisCity_EventScript_GiveMagoBerry
+	goto_if_eq VAR_RESULT, 4, SootopolisCity_EventScript_GiveAguavBerry
 	end
 
 SootopolisCity_EventScript_GiveFigyBerry::
@@ -777,6 +780,27 @@ SootopolisCity_EventScript_GiveFigyBerry::
 
 SootopolisCity_EventScript_GiveIapapaBerry::
 	giveitem ITEM_IAPAPA_BERRY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox SootopolisCity_Text_WhatKindOfWishInYourName, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_EventScript_GiveWikiBerry::
+	giveitem ITEM_WIKI_BERRY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox SootopolisCity_Text_WhatKindOfWishInYourName, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_EventScript_GiveMagoBerry::
+	giveitem ITEM_MAGO_BERRY
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox SootopolisCity_Text_WhatKindOfWishInYourName, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_EventScript_GiveAguavBerry::
+	giveitem ITEM_AGUAV_BERRY
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox SootopolisCity_Text_WhatKindOfWishInYourName, MSGBOX_DEFAULT
 	release

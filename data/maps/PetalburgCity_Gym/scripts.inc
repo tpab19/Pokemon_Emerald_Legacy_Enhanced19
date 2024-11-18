@@ -84,7 +84,7 @@ PetalburgCity_Gym_EventScript_TryRematchReward::
 	setvar 0x8005, TRAINER_NORMAN_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveRematchReward
-	PetalburgCity_Gym_EventScript_TryRematchRewardEnd::
+PetalburgCity_Gym_EventScript_TryRematchRewardEnd::
 	releaseall
 	end
 
@@ -363,6 +363,7 @@ PetalburgCity_Gym_EventScript_NormanRematchContinue::
 	setvar VAR_TEMP_1, 1
 	trainerbattle_rematch_double TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanPreRematch, PetalburgCity_Gym_Text_NormanRematchDefeat, PetalburgCity_Gym_Text_NormanRematchNeedTwoMons
 	msgbox PetalburgCity_Gym_Text_NormanPostRematch, MSGBOX_AUTOCLOSE
+	release
 	end
 PetalburgCity_Gym_EventScript_GiveRematchReward::
 	msgbox PetalburgCity_Gym_Text_NormanGiveRematchReward, MSGBOX_DEFAULT
@@ -373,10 +374,12 @@ PetalburgCity_Gym_EventScript_GiveRematchReward::
 	msgbox PetalburgCity_Gym_Text_GaveReward, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_GOT_NORMAN_REMATCH_REWARD
+	release
 	end
 PetalburgCity_Gym_EventScript_NoRoom::
 	msgbox PetalburgCity_Gym_Text_NoRoomForReward, MSGBOX_DEFAULT
 	closemessage
+	release
 	end
 
 PetalburgCity_Gym_Text_NormanGiveRematchReward:
