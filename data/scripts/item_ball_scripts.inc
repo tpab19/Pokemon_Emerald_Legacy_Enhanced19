@@ -631,7 +631,7 @@ ArtisanCave_1F_EventScript_ItemCarbos::
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::
-	finditem ITEM_RARE_CANDY
+	finditem ITEM_TM_FLAMETHROWER
 	end
 
 MagmaHideout_2F_2R_EventScript_ItemMaxElixir::
@@ -643,7 +643,7 @@ MagmaHideout_2F_2R_EventScript_ItemFullRestore::
 	end
 
 MagmaHideout_3F_1R_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_RARE_CANDY
 	end
 
 MagmaHideout_3F_2R_EventScript_ItemPPMax::
