@@ -1832,6 +1832,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
+        .FLASH = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
@@ -1858,6 +1859,7 @@ const union {
         .ATTRACT = TRUE,
         .THIEF = TRUE,
         .CUT = TRUE,
+        .FLASH = TRUE,
         .SURF = TRUE,
         .WATERFALL = TRUE,
         .DIVE = TRUE,
@@ -6975,6 +6977,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .STRENGTH = TRUE,
     } },
 
     [SPECIES_LINOONE] = { .learnset = {
@@ -7006,6 +7009,7 @@ const union {
         .SURF = TRUE,
         .STRENGTH = TRUE,
         .ROCK_SMASH = TRUE,
+        .WATERFALL = TRUE,
     } },
 
     [SPECIES_WURMPLE] = { .learnset = {
