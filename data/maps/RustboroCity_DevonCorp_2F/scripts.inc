@@ -497,8 +497,7 @@ RustboroCity_DevonCorp_2F_EventScript_ChooseOldAmberPostGame::
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_DevonCorp_2F_EventScript_GiveOldAmber
 	goto RustboroCity_DevonCorp_2F_EventScript_DontHaveFossil
 RustboroCity_DevonCorp_2F_EventScript_DontHaveFossil::
-	message RustboroCity_DevonCorp_2F_Text_NoFossil
-	closemessage
+	msgbox RustboroCity_DevonCorp_2F_Text_NoFossil, MSGBOX_DEFAULT
 	release
 	end
 

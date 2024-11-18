@@ -1569,11 +1569,6 @@ static void SetOpponentsBerryData(u16 playerBerryItemId, u8 playersNum, struct B
         {
             opponentSetId %= ARRAY_COUNT(sBerryMasterBerries);
             opponentBerryId = sBerryMasterBerries[opponentSetId];
-
-            // If the player's berry is any of the Berry Master's berries,
-            // then use the next lower set of berries
-            if (berryMasterDiff < ARRAY_COUNT(sBerryMasterBerries))
-                opponentBerryId -= ARRAY_COUNT(sBerryMasterBerries);
         }
         SetPlayerBerryData(i + 1, opponentBerryId + FIRST_BERRY_INDEX);
     }

@@ -337,8 +337,8 @@ LavaridgeTown_Text_MayExplainGoGogglesChallengeDad:
 	.string "Challenging GYMS…\p"
 	.string "You're trying hard because you don't\n"
 	.string "want to lose to me, I bet!\p"
-	.string "{PLAYER}{KUN}, I think I should challenge\n"
-	.string "your dad in PETALBURG GYM.$"
+	.string "{PLAYER}{KUN}, I think you should\n"
+	.string "challenge your Dad in PETALBURG GYM.$"
 
 LavaridgeTown_Text_BrendanNiceBadgesTakeThis:
 	.string "BRENDAN: {PLAYER}, hey, it's been a while.\n"
