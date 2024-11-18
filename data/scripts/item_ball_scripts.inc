@@ -615,7 +615,7 @@ VictoryRoad_B1F_EventScript_ItemTMPsychic::
 	end
 
 VictoryRoad_B1F_EventScript_ItemFullRestore::
-	finditem ITEM_FULL_RESTORE
+	finditem ITEM_RARE_CANDY
 	end
 
 VictoryRoad_B2F_EventScript_ItemFullHeal::

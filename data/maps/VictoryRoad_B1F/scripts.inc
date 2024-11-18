@@ -1,5 +1,10 @@
 VictoryRoad_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_B1F_OnTransition
 	.byte 0
+
+VictoryRoad_B1F_OnTransition::
+	setflashlevel 1
+	end
 
 VictoryRoad_B1F_EventScript_Samuel::
 	trainerbattle_single TRAINER_SAMUEL, VictoryRoad_B1F_Text_SamuelIntro, VictoryRoad_B1F_Text_SamuelDefeat
