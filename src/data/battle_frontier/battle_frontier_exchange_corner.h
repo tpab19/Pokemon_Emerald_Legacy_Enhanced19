@@ -31,6 +31,7 @@ static const u16 sFrontierExchangeCorner_Vitamins[] =
     ITEM_ZINC,
     ITEM_CARBOS,
     ITEM_HP_UP,
+    ITEM_RARE_CANDY,
     ITEM_LIST_END
 };
 
@@ -46,7 +47,6 @@ static const u16 sFrontierExchangeCorner_HoldItems[] =
     ITEM_FOCUS_BAND,
     ITEM_SCOPE_LENS,
     ITEM_METAL_COAT,
-    ITEM_RARE_CANDY,
     ITEM_LIST_END
 };
 
@@ -99,6 +99,7 @@ static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_ZincDesc,
     BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc,
     BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_RareCandyDesc,
     gText_Exit
 };
 
@@ -114,7 +115,6 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
     BattleFrontier_ExchangeServiceCorner_Text_MetalCoatDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_RareCandyDesc,
     gText_Exit
 };
 

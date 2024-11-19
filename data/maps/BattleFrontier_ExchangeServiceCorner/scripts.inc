@@ -260,7 +260,8 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin::
 	case 3, BattleFrontier_ExchangeServiceCorner_EventScript_Zinc
 	case 4, BattleFrontier_ExchangeServiceCorner_EventScript_Carbos
 	case 5, BattleFrontier_ExchangeServiceCorner_EventScript_HPUp
-	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 6, BattleFrontier_ExchangeServiceCorner_EventScript_RareCandy
+	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -312,6 +313,14 @@ BattleFrontier_ExchangeServiceCorner_EventScript_HPUp::
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 
+BattleFrontier_ExchangeServiceCorner_EventScript_RareCandy::
+	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRareCandy, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
+	setvar VAR_0x8008, 25
+	setvar VAR_0x8009, ITEM_RARE_CANDY
+	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
+	end
+
 BattleFrontier_ExchangeServiceCorner_EventScript_HoldItemClerk::
 	lock
 	faceplayer
@@ -337,8 +346,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem::
 	case 7, BattleFrontier_ExchangeServiceCorner_EventScript_FocusBand
 	case 8, BattleFrontier_ExchangeServiceCorner_EventScript_ScopeLens
 	case 9, BattleFrontier_ExchangeServiceCorner_EventScript_MetalCoat
-	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_RareCandy
-	case 11, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
+	case 10, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	case MULTI_B_PRESSED, BattleFrontier_ExchangeServiceCorner_EventScript_ClerkGoodbye
 	end
 
@@ -419,14 +427,6 @@ BattleFrontier_ExchangeServiceCorner_EventScript_MetalCoat::
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
 	setvar VAR_0x8008, 64
 	setvar VAR_0x8009, ITEM_METAL_COAT
-	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
-	end
-
-BattleFrontier_ExchangeServiceCorner_EventScript_RareCandy::
-	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmRareCandy, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseHoldItem
-	setvar VAR_0x8008, 100
-	setvar VAR_0x8009, ITEM_RARE_CANDY
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
 

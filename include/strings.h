@@ -757,6 +757,7 @@ extern const u8 gText_Iron1BP[];
 extern const u8 gText_Zinc1BP[];
 extern const u8 gText_Carbos1BP[];
 extern const u8 gText_HpUp1BP[];
+extern const u8 gText_RareCandy25BP[];
 
 extern const u8 gText_Leftovers48BP[];
 extern const u8 gText_WhiteHerb48BP[];
@@ -768,7 +769,6 @@ extern const u8 gText_KingsRock64BP[];
 extern const u8 gText_FocusBand64BP[];
 extern const u8 gText_ScopeLens64BP[];
 extern const u8 gText_MetalCoat64BP[];
-extern const u8 gText_RareCandy100BP[];
 
 extern const u8 gText_Liechi48BP[];
 extern const u8 gText_Ganlon48BP[];
