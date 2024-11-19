@@ -768,6 +768,7 @@ extern const u8 gText_KingsRock64BP[];
 extern const u8 gText_FocusBand64BP[];
 extern const u8 gText_ScopeLens64BP[];
 extern const u8 gText_MetalCoat64BP[];
+extern const u8 gText_RareCandy100BP[];
 
 extern const u8 gText_Liechi48BP[];
 extern const u8 gText_Ganlon48BP[];
@@ -947,6 +948,7 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MetalCoatDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RareCandyDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LiechiDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_GanlonDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_SalacDesc[];
