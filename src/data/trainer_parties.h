@@ -3357,14 +3357,14 @@ static const struct TrainerMon sParty_Sidney[] = {
     .lvl = 51,
     .species = SPECIES_MIGHTYENA,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_CRUNCH, MOVE_SUPER_FANG, MOVE_YAWN, MOVE_COUNTER}
+    .moves = {MOVE_CRUNCH, MOVE_SUPER_FANG, MOVE_YAWN, MOVE_SCARY_FACE}
     },
     {
     .iv = 250,
     .lvl = 51,
     .species = SPECIES_MURKROW,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_DRILL_PECK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_FEATHER_DANCE}
+    .moves = {MOVE_SKY_ATTACK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_FEATHER_DANCE}
     },
     {
     .iv = 250,
@@ -3384,7 +3384,7 @@ static const struct TrainerMon sParty_Sidney[] = {
     .iv = 255,
     .lvl = 53,
     .species = SPECIES_ABSOL,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_FIGY_BERRY,
     .moves = {MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE}
     }
 };
@@ -3394,8 +3394,8 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .iv = 250,
     .lvl = 52,
     .species = SPECIES_SABLEYE,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WILL_O_WISP, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_PROTECT}
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_MOONLIGHT, MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY}
     },
     {
     .iv = 250,
@@ -3422,7 +3422,7 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .iv = 255,
     .lvl = 54,
     .species = SPECIES_DUSCLOPS,
-    .heldItem = ITEM_SITRUS_BERRY,
+    .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SHADOW_BALL, MOVE_ICE_BEAM, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE}
     }
 };
@@ -12320,7 +12320,7 @@ static const struct TrainerMon sParty_Steven1[] = {
     .lvl = 57,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_LIECHI_BERRY,
-    .moves = {MOVE_TOXIC, MOVE_SKY_ATTACK, MOVE_STEEL_WING, MOVE_PROTECT}
+    .moves = {MOVE_TOXIC, MOVE_SKY_ATTACK, MOVE_STEEL_WING, MOVE_WHIRLWIND}
     },
     {
     .iv = 255,
@@ -12348,7 +12348,7 @@ static const struct TrainerMon sParty_Steven1[] = {
     .lvl = 57,
     .species = SPECIES_ARMALDO,
     .heldItem = ITEM_CHOICE_BAND,
-    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_EARTHQUAKE, MOVE_FACADE}
+    .moves = {MOVE_ROCK_BLAST, MOVE_TWINEEDLE, MOVE_IRON_TAIL, MOVE_FACADE}
     },
     {
     .iv = 255,
