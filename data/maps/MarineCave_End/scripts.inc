@@ -30,7 +30,9 @@ MarineCave_End_EventScript_ShowKyogre::
 
 MarineCave_End_EventScript_Kyogre::
 	lockall
+	goto_if_set FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_BeatArchie
 	call MarineCave_End_EventScript_Archie
+MarineCave_End_EventScript_BeatArchie::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_End_Movement_KyogreApproach
@@ -60,16 +62,17 @@ MarineCave_End_EventScript_Archie::
 	addobject LOCALID_ARCHIE
 	applymovement LOCALID_ARCHIE, MarineCave_End_Movement_ArchieApproach
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
 	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
 	faceplayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
 	msgbox MarineCave_End_Text_ArchieIntro, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
 	trainerbattle_no_intro TRAINER_ARCHIE_MARINE_CAVE, MarineCave_End_Text_ArchieDefeat
 	msgbox MarineCave_End_Text_ArchiePostBattle, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE
 	return
 
 MarineCave_End_EventScript_DefeatedKyogre::
@@ -92,7 +95,7 @@ MarineCave_End_EventScript_RanFromKyogre::
 MarineCave_End_EventScript_ArchieLeaves::
 	msgbox MarineCave_End_Text_ArchieCaughtKyogre, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE
+	setflag FLAG_ARCHIE_LEFT_MARINE_CAVE
 MarineCave_End_EventScript_ArchieLeaves_NoText::
 	setflag FLAG_HIDE_ARCHIE_MARINE_CAVE
 	call MarineCave_End_EventScript_SetMtPyre
@@ -103,8 +106,8 @@ MarineCave_End_EventScript_ArchieLeaves_NoText::
 	end
 
 MarineCave_End_EventScript_SetMtPyre::
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, Common_EventScript_NopReturn
-	goto_if_unset FLAG_BEAT_MAXIE_TERRA_CAVE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_ARCHIE_LEFT_MARINE_CAVE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_MAXIE_LEFT_TERRA_CAVE, Common_EventScript_NopReturn
 	setvar VAR_MT_PYRE_STATE, 2
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE

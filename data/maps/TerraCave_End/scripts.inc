@@ -30,7 +30,9 @@ TerraCave_End_EventScript_ShowGroudon::
 
 TerraCave_End_EventScript_Groudon::
 	lockall
+	goto_if_set FLAG_BEAT_MAXIE_TERRA_CAVE, MarineCave_End_EventScript_BeatMaxie
 	call TerraCave_End_EventScript_Maxie
+MarineCave_End_EventScript_BeatMaxie::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_GROUDON, TerraCave_End_Movement_GroudonApproach
@@ -60,16 +62,17 @@ TerraCave_End_EventScript_Maxie::
 	addobject LOCALID_MAXIE
 	applymovement LOCALID_MAXIE, TerraCave_End_Movement_MaxieApproach
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-	waitmovement 0
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
 	faceplayer
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
 	msgbox TerraCave_End_Text_MaxieIntro, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
 	trainerbattle_no_intro TRAINER_MAXIE_TERRA_CAVE, TerraCave_End_Text_MaxieDefeat
 	msgbox TerraCave_End_Text_MaxiePostBattle, MSGBOX_DEFAULT
 	closemessage
+	setflag FLAG_BEAT_MAXIE_TERRA_CAVE
 	return
 
 TerraCave_End_EventScript_DefeatedGroudon::
@@ -92,7 +95,7 @@ TerraCave_End_EventScript_RanFromGroudon::
 TerraCave_End_EventScript_MaxieLeaves::
 	msgbox TerraCave_End_Text_MaxieCaughtGroudon, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_BEAT_MAXIE_TERRA_CAVE
+	setflag FLAG_MAXIE_LEFT_TERRA_CAVE
 TerraCave_End_EventScript_MaxieLeaves_NoText::
 	setflag FLAG_HIDE_MAXIE_TERRA_CAVE
 	call TerraCave_End_EventScript_SetMtPyre
@@ -103,8 +106,8 @@ TerraCave_End_EventScript_MaxieLeaves_NoText::
 	end
 
 TerraCave_End_EventScript_SetMtPyre::
-	goto_if_unset FLAG_BEAT_ARCHIE_MARINE_CAVE, Common_EventScript_NopReturn
-	goto_if_unset FLAG_BEAT_MAXIE_TERRA_CAVE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_ARCHIE_LEFT_MARINE_CAVE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_MAXIE_LEFT_TERRA_CAVE, Common_EventScript_NopReturn
 	setvar VAR_MT_PYRE_STATE, 2
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
 	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE

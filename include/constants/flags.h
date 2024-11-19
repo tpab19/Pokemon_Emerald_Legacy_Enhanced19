@@ -1221,8 +1221,8 @@
 #define FLAG_HIDE_ROUTE_116_TREE_5                                  0x499
 #define FLAG_HIDE_MT_PYRE_SUMMIT_MATT                               0x49A
 #define FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA                         0x49B
-#define FLAG_BEAT_ARCHIE_MARINE_CAVE                                0x49C
-#define FLAG_BEAT_MAXIE_TERRA_CAVE                                  0x49D
+#define FLAG_ARCHIE_LEFT_MARINE_CAVE                                0x49C
+#define FLAG_MAXIE_LEFT_TERRA_CAVE                                  0x49D
 #define FLAG_HIDE_ARCHIE_MARINE_CAVE                                0x49E
 #define FLAG_HIDE_MAXIE_TERRA_CAVE                                  0x49F
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAY                               0x4A0
@@ -1268,8 +1268,8 @@
 #define FLAG_SCOTT_RECIEVED_CALCIUM                                 0x4C8
 #define FLAG_SCOTT_RECIEVED_ZINC                                    0x4C9
 #define FLAG_SCOTT_RECIEVED_CARBOS                                  0x4CA
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
+#define FLAG_BEAT_ARCHIE_MARINE_CAVE                                0x4CB
+#define FLAG_BEAT_MAXIE_TERRA_CAVE                                  0x4CC
 #define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
