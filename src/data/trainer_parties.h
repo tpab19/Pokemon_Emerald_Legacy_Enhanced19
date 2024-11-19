@@ -12085,7 +12085,7 @@ static const struct TrainerMon sParty_TateAndLiza5[] = {
     .lvl = 65,
     .species = SPECIES_ESPEON,
     .heldItem = ITEM_STARF_BERRY,
-    .moves = {MOVE_THUNDER_WAVE, MOVE_CALM_MIND, MOVE_SURF, MOVE_PSYCHIC}
+    .moves = {MOVE_THUNDER_WAVE, MOVE_CALM_MIND, MOVE_SHADOW_BALL, MOVE_PSYCHIC}
     },
     {
     .iv = 255,
