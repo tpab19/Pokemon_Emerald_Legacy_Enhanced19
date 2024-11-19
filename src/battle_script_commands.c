@@ -1127,7 +1127,7 @@ static void Cmd_accuracycheck(void)
         if (AccuracyCalcHelper(move))
             return;
 
-        if (gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT)
+        if ((gBattleMons[gBattlerTarget].status2 & STATUS2_FORESIGHT) || (gBattleMons[gBattlerAttacker].ability == ABILITY_ILLUMINATE) )
         {
             u8 acc = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
             buff = acc;
@@ -4151,6 +4151,7 @@ static void Cmd_playstatchangeanimation(void)
                         && gBattleMons[gActiveBattler].ability != ABILITY_CLEAR_BODY
                         && gBattleMons[gActiveBattler].ability != ABILITY_WHITE_SMOKE
                         && !(gBattleMons[gActiveBattler].ability == ABILITY_KEEN_EYE && currStat == STAT_ACC)
+                        && !(gBattleMons[gActiveBattler].ability == ABILITY_ILLUMINATE && currStat == STAT_ACC)
                         && !(gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER && currStat == STAT_ATK))
                 {
                     if (gBattleMons[gActiveBattler].statStages[currStat] > MIN_STAT_STAGE)
