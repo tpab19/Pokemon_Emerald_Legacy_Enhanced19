@@ -1,4 +1,4 @@
-.set LOCALID_DOME_FOSSIL, 13
+.set LOCALID_DOME_FOSSIL, 12
 
 Route127_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route127_OnTransition

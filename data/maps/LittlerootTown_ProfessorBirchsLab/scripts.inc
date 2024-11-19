@@ -37,7 +37,7 @@ LittlerootTown_ProfessorBirchsLab_OnTransition:
 LittlerootTown_ProfessorBirchsLab_EventScript_CheckReadyForJohtoStarter::
 	specialvar VAR_RESULT, HasAllHoennMons
 	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_SetReadyForJohtoStarter
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	setobjectxyperm LOCALID_RIVAL, 5, 10
 	end
 
@@ -51,7 +51,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetJohtoStarterLayout::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetAfterJohtoStarterLayout::
 	setmaplayoutindex LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB_WITH_TABLE
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_WANDER_UP_AND_DOWN
+	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	setobjectxyperm LOCALID_RIVAL, 5, 10
 	end
 
@@ -1380,7 +1380,7 @@ LittlerootTown_ProfessorBirchsLab_Text_DoesntLookLikeMonToMe:
 	.string "to me. Could you double-check?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_YouDontWantToThatsOkay:
-	.string "Oh, that’s okay if you’re not up for it.\n"
+	.string "Oh, that's okay if you're not up for it.\n"
 	.string "These POKéMON mean a lot, so I\l"
 	.string "understand.\p"
 	.string "But if you change your mind, let me\n"
@@ -1488,6 +1488,7 @@ LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedSquirtle:
 	.string "{PLAYER} received SQUIRTLE!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GotSquirtle:
-	.string "Take good care of this SQUIRTLE, alright?\n"
-	.string "I have no doubt it’ll be a loyal friend on\l"
-	.string "your journey!$"
+	.string "Take good care of this SQUIRTLE,\n"
+	.string "alright?\p"
+	.string "I have no doubt it’ll be a loyal friend\l"
+	.string "on your journey!$"

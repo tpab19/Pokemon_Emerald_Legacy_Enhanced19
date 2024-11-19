@@ -153,14 +153,14 @@ TerraCave_End_Text_MaxieIntro:
 	.string "then show me your strength!$"
 
 TerraCave_End_Text_MaxieDefeat:
-	.string "MAXIE: I don't believe it…\n"
+	.string "MAXIE: I don't believe it…$"
 
 TerraCave_End_Text_MaxiePostBattle:
 	.string "MAXIE: GROUDON in your hands…\n"
 	.string "I never thought I'd see this day.\p"
 	.string "It's my duty to control its power, but…\n"
 	.string "If you think you can handle it, then so\l"
-	.string "be it."
+	.string "be it.\p"
 	.string "I'll be here. Watching.$"
 
 TerraCave_End_Text_MaxieCaughtGroudon:

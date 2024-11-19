@@ -152,8 +152,8 @@ MarineCave_End_Text_ArchieIntro:
 	.string "Only I can keep it under control.\p"
 	.string "I won't let you stand in my way.\p"
 	.string "But if you think\n"
-	.string "you can handle this….\p"
-	.string "then prove it to me in battle!$"
+	.string "you can handle this…\p"
+	.string "Then prove it to me in battle!$"
 
 MarineCave_End_Text_ArchieDefeat:
 	.string "ARCHIE: I can't believe it…\n"
@@ -166,7 +166,7 @@ MarineCave_End_Text_ArchiePostBattle:
 	.string "but I can't turn back now.\p"
 	.string "KYOGRE's anger is still my\n"
 	.string "responsibility…\p"
-	.string "But if you're going to try\n"
+	.string "But if you're going to try,\n"
 	.string "I won't stop you…\p"
 	.string "Just don't think it'll be easy.$"
 

@@ -432,7 +432,8 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "but this time, I am the challenger.\p"
 	.string "I watched as you brought peace to\n"
 	.string "SOOTOPOLIS CITY… A remarkable feat,\l"
-	.string "achieved with your POKéMON by your side.\p"
+	.string "achieved with your POKéMON by your\l"
+	.string "side."
 	.string "We TRAINERS raise POKéMON by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
@@ -488,7 +489,7 @@ EverGrandeCity_ChampionsRoom_Text_RematchBirchArriveRatePokedex:
 	.string "I knew you had talent, but this…\p"
 	.string "{PLAYER}{KUN}, you've truly made history.\p"
 	.string "Ah, yes! Your POKéDEX…\n"
-	.string "Mind if I take a look at it? I'm eager\n"
+	.string "Mind if I take a look at it? I'm eager\l"
 	.string "to see the progress you've made.$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBirchCongratulations:
@@ -502,7 +503,7 @@ EverGrandeCity_ChampionsRoom_Text_RematchWallaceComeWithMe:
 	.string "you've proven yourself once again.\p"
 	.string "Let's not waste any time.\n"
 	.string "CHAMPION, follow me…\p"
-	.string "It's time we head to the Hall of Fame\n"
+	.string "It's time we head to the HALL OF FAME\n"
 	.string "to record this latest triumph.$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchMayCantGoIn:
@@ -526,4 +527,4 @@ EverGrandeCity_ChampionsRoom_Text_RematchWallaceChampion::
 	.string "But today… today belongs to\n"
 	.string "{PLAYER}{KUN}.\p"
 	.string "Come, CHAMPION. Let us mark this moment\n"
-	.string "in the Hall of Fame!$"
+	.string "in the HALL OF FAME!$"

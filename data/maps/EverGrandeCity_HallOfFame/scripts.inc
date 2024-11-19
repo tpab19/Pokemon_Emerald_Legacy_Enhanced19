@@ -125,10 +125,10 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "WALLACE: Now, let's record your name\n"
-	.string "once more, as the CHAMPION who defended\l"
-	.string "their place with unwavering resolve,\p"
-	.string "and the names of the partners who stood\n"
-	.string "by your side in victory.$"
+	.string "once more, as the CHAMPION who\l"
+	.string "defended their place with unwavering\p"
+	.string "resolve, and the names of the partners\n"
+	.string "who stood by your side in victory.$"
 
 EverGrandeCity_HallOfFame_Text_StevenHereWeHonorLeagueChampions:
 	.string "STEVEN: This room…\p"
