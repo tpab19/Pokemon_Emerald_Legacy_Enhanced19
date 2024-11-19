@@ -28,7 +28,6 @@ SkyPillar_2F_EventScript_Zinnia::
 	applymovement LOCALID_ZINNIA, Common_Movement_FaceUp
 	waitmovement 0
 	fadescreen FADE_TO_BLACK
-	special Script_FadeOutMapMusic
 	removeobject LOCALID_ZINNIA
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_SPOKE_TO_ZINNIA_2F

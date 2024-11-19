@@ -154,7 +154,6 @@ SkyPillar_Top_EventScript_Zinnia::
 	msgbox SkyPillar_Top_Text_ZinniaPostBattle3, MSGBOX_DEFAULT
 	closemessage
 	fadescreen FADE_TO_BLACK
-	special Script_FadeOutMapMusic
 	removeobject LOCALID_ZINNIA
 	removeobject LOCALID_ASTER
 	fadescreen FADE_FROM_BLACK
@@ -240,8 +239,8 @@ SkyPillar_Top_Text_ZinniaPostBattle1:
 	.string "{PLAYER}, You and RAYQUAZA…\n"
 	.string "together.\p"
 	.string "I am leaving this task to you, our\n"
-	.string "new Successor.\p"
-	.string "Successor {PLAYER}.\p"
+	.string "new SUCCESSOR.\p"
+	.string "SUCCESSOR {PLAYER}.\p"
 	.string "You and RAYQUAZA must protect nature…\n"
 	.string "POKéMON… the people…$"
 

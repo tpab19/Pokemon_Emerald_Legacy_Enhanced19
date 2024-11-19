@@ -29,7 +29,6 @@ SkyPillar_1F_EventScript_ZinniaAppears::
 	delay 20
 	applymovement LOCALID_ZINNIA, Common_Movement_FacePlayer
 	waitmovement 0
-	special Script_FadeOutMapMusic
 	fadescreen FADE_FROM_BLACK
 	delay 20
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -40,7 +39,6 @@ SkyPillar_1F_EventScript_Zinnia::
 	applymovement LOCALID_ZINNIA, SkyPillar_1F_Movement_Zinnia
 	waitmovement 0
 	fadescreen FADE_TO_BLACK
-	special Script_FadeOutMapMusic
 	removeobject LOCALID_ZINNIA
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_SPOKE_TO_ZINNIA_1F
@@ -60,7 +58,7 @@ SkyPillar_1F_Text_Zinnia::
 	.string "the heavens and put KYOGRE and\l"
 	.string "GROUDON to rest.\p"
 	.string "My people, the DRACONIDS - we've always\n"
-	.string "looked to RAYQUAZA as our DRAGON LORD,\n"
+	.string "looked to RAYQUAZA as our DRAGON LORD,\l"
 	.string "the great guardian of balance.\p"
 	.string "But, that balance… it's so, so delicate.\p"
 	.string "Like, one little push and… whoosh!\n"
