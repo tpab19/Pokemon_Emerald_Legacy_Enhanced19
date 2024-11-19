@@ -11355,42 +11355,42 @@ static const struct TrainerMon sParty_Wattson4[] = {
 static const struct TrainerMon sParty_Wattson5[] = {
      {
     .iv = 255,
-    .lvl = 60,
+    .lvl = 65,
     .species = SPECIES_RAICHU,
     .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_VOLT_TACKLE, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_WISH}
     },
     {
     .iv = 255,
-    .lvl = 60,
+    .lvl = 65,
     .species = SPECIES_LANTURN,
     .heldItem = ITEM_QUICK_CLAW,
     .moves = {MOVE_THUNDER, MOVE_SURF, MOVE_THUNDER_WAVE, MOVE_RAIN_DANCE}
     },
     {
     .iv = 255,
-    .lvl = 55,
+    .lvl = 65,
     .species = SPECIES_JOLTEON,
     .heldItem = ITEM_SPELL_TAG,
     .moves = {MOVE_AGILITY, MOVE_THUNDER, MOVE_BATON_PASS, MOVE_SHADOW_BALL}
     },
     {
     .iv = 255,
-    .lvl = 60,
+    .lvl = 65,
     .species = SPECIES_PORYGON2,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_THUNDER, MOVE_ICE_BEAM, MOVE_THUNDER_WAVE, MOVE_RECOVER}
     },
     {
     .iv = 255,
-    .lvl = 60,
+    .lvl = 65,
     .species = SPECIES_ELECTABUZZ,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_THUNDER, MOVE_CROSS_CHOP, MOVE_RAIN_DANCE, MOVE_ICE_PUNCH}
     },
     {
     .iv = 255,
-    .lvl = 60,
+    .lvl = 65,
     .species = SPECIES_MANECTRIC,
     .heldItem = ITEM_MAGNET,
     .moves = {MOVE_CRUNCH, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_RAIN_DANCE}
