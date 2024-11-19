@@ -3364,7 +3364,7 @@ static const struct TrainerMon sParty_Sidney[] = {
     .lvl = 51,
     .species = SPECIES_MURKROW,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_SKY_ATTACK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_FEATHER_DANCE}
+    .moves = {MOVE_SKY_ATTACK, MOVE_PURSUIT, MOVE_STEEL_WING, MOVE_HAZE}
     },
     {
     .iv = 250,
