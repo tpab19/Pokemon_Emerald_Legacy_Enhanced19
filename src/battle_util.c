@@ -3249,6 +3249,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
     u8 battlerHoldEffect, atkHoldEffect, UNUSED defHoldEffect;
     u8 battlerHoldEffectParam, atkHoldEffectParam, UNUSED defHoldEffectParam;
     u16 atkItem, defItem;
+    u8 CuredProblem;
 
     // if (GetBattlerSide(battlerId) == B_SIDE_PLAYER && FlagGet(FLAG_HARD))
     //     return ITEM_NO_EFFECT;
@@ -3581,13 +3582,39 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CURE_ATTRACT:
+                CuredProblem = 0;
+                if (gDisableStructs[gBattlerAttacker].tauntTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].tauntTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gDisableStructs[gBattlerAttacker].encoreTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].encoreTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gDisableStructs[gBattlerAttacker].disableTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].disableTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gBattleMons[battlerId].status2 & STATUS2_TORMENT)
+                {
+                    gBattleMons[battlerId].status2 &= ~STATUS2_TORMENT;
+                    CuredProblem = 1;
+                }
                 if (gBattleMons[battlerId].status2 & STATUS2_INFATUATION)
                 {
                     gBattleMons[battlerId].status2 &= ~STATUS2_INFATUATION;
+                    CuredProblem = 1;
+                }
+                if (CuredProblem != 0)
+                {
                     StringCopy(gBattleTextBuff1, gStatusConditionString_LoveJpn);
                     BattleScriptExecute(BattleScript_BerryCureChosenStatusEnd2);
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_PROBLEM;
                     effect = ITEM_EFFECT_OTHER;
+                    CuredProblem = 0;
                 }
                 break;
             }
@@ -3684,14 +3711,40 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CURE_ATTRACT:
+                CuredProblem = 0;
+                if (gDisableStructs[gBattlerAttacker].tauntTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].tauntTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gDisableStructs[gBattlerAttacker].encoreTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].encoreTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gDisableStructs[gBattlerAttacker].disableTimer != 0)
+                {
+                    gDisableStructs[gBattlerAttacker].disableTimer = 0;
+                    CuredProblem = 1;
+                }
+                if (gBattleMons[battlerId].status2 & STATUS2_TORMENT)
+                {
+                    gBattleMons[battlerId].status2 &= ~STATUS2_TORMENT;
+                    CuredProblem = 1;
+                }
                 if (gBattleMons[battlerId].status2 & STATUS2_INFATUATION)
                 {
                     gBattleMons[battlerId].status2 &= ~STATUS2_INFATUATION;
+                    CuredProblem = 1;
+                }
+                if (CuredProblem != 0)
+                {
                     StringCopy(gBattleTextBuff1, gStatusConditionString_LoveJpn);
                     BattleScriptPushCursor();
                     gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_PROBLEM;
                     gBattlescriptCurrInstr = BattleScript_BerryCureChosenStatusRet;
                     effect = ITEM_EFFECT_OTHER;
+                    CuredProblem = 0;
                 }
                 break;
             case HOLD_EFFECT_CURE_STATUS:
