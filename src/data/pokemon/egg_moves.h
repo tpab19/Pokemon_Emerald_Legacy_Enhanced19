@@ -1041,7 +1041,8 @@ const u16 gEggMoves[] = {
     egg_moves(SABLEYE,
               MOVE_PSYCH_UP,
               MOVE_RECOVER,
-              MOVE_MOONLIGHT),
+              MOVE_MOONLIGHT,
+              MOVE_WILL_O_WISP),
 
     egg_moves(BARBOACH,
               MOVE_THRASH,
