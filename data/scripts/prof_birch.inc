@@ -135,5 +135,5 @@ ProfBirch_Text_OldSeaMapBagFull:
 	.string "then come back for this.$"
 
 gBirchDexRatingText_JourneyNotOverYet:
-	.string "Perhaps your journey isn't quite over"
+	.string "Perhaps your journey isn't quite over\n"
 	.string "just yet.$"
