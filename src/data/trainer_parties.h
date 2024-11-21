@@ -7026,7 +7026,7 @@ static const struct TrainerMon sParty_Edwin5[] = {
     .species = SPECIES_SHIFTRY,
     }
 };
-// Victory Road Wally
+// Victory Road Pre Champion
 static const struct TrainerMon sParty_WallyVR1[] = {
     {
     .iv = 150,
@@ -9210,7 +9210,7 @@ static const struct TrainerMon sParty_Ashley[] = {
     .species = SPECIES_DODRIO,
     }
 };
-// Wally Mauville
+// Mauville
 static const struct TrainerMon sParty_WallyMauville[] = {
     {
     .iv = 30,
@@ -9218,7 +9218,7 @@ static const struct TrainerMon sParty_WallyMauville[] = {
     .species = SPECIES_RALTS,
     }
 };
-
+// Rematch 1
 static const struct TrainerMon sParty_WallyVR2[] = {
     {
     .iv = 255,
@@ -9262,7 +9262,7 @@ static const struct TrainerMon sParty_WallyVR2[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH, MOVE_CALM_MIND}
 };
-
+// Rematch 2
 static const struct TrainerMon sParty_WallyVR3[] = {
     {
     .iv = 255,
@@ -9306,71 +9306,96 @@ static const struct TrainerMon sParty_WallyVR3[] = {
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_PROTECT}
 };
-
+// Rematch 3
 static const struct TrainerMon sParty_WallyVR4[] = {
     {
-    .iv = 150,
-    .lvl = 53,
+    .iv = 255,
+    .lvl = 67,
     .species = SPECIES_ALTARIA,
-    .moves = {MOVE_AERIAL_ACE, MOVE_SAFEGUARD, MOVE_DRAGON_BREATH, MOVE_DRAGON_DANCE}
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_SKY_ATTACK, MOVE_EARTHQUAKE, MOVE_REST, MOVE_DRAGON_DANCE}
     },
     {
-    .iv = 150,
-    .lvl = 52,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_MEGANIUM,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_GRASS_WHISTLE, MOVE_LEECH_SEED, MOVE_EARTHQUAKE, MOVE_GIGA_DRAIN}
     },
     {
-    .iv = 150,
-    .lvl = 53,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_RAPIDASH,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_OVERHEAT, MOVE_HI_JUMP_KICK, MOVE_HYPNOSIS, MOVE_DOUBLE_EDGE}
+    },
+    {   
+    .iv = 255,
+    .lvl = 66,
+    .species = SPECIES_GRANBULL,
+    .heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_HEAL_BELL}
     },
     {
-    .iv = 150,
-    .lvl = 50,
-    .species = SPECIES_MAGNETON,
-    .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
+    .iv = 255,
+    .lvl = 67,
+    .species = SPECIES_AZUMARILL,
+    .heldItem = ITEM_BLACK_BELT,
+    .moves = {MOVE_SURF, MOVE_DOUBLE_EDGE, MOVE_SUPERPOWER, MOVE_ICE_BEAM}
     },
     {
-    .iv = 250,
-    .lvl = 54,
+    .iv = 255,
+    .lvl = 67,
     .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
+    .heldItem = ITEM_SALAC_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_ICE_PUNCH}
+};
+// Rematch 4
+static const struct TrainerMon sParty_WallyVR5[] = {
+    {   
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_CLEFABLE,
+    .heldItem = ITEM_WIKI_BERRY,
+    .moves = {MOVE_BODY_SLAM, MOVE_METEOR_MASH, MOVE_FOLLOW_ME, MOVE_TOXIC}
+    },
+    {
+    .iv = 255,
+    .lvl = 72,
+    .species = SPECIES_SWELLOW,
+    .heldItem = ITEM_CHOICE_BAND,
+    .moves = {MOVE_SKY_ATTACK, MOVE_FACADE, MOVE_STEEL_WING, MOVE_NONE}
+    },
+    {
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_AZUMARILL,
+    .heldItem = ITEM_WHITE_HERB,
+    .moves = {MOVE_IRON_TAIL, MOVE_DOUBLE_EDGE, MOVE_SUPERPOWER, MOVE_HYDRO_PUMP}
+    },
+    {
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_ALTARIA,
+    .heldItem = ITEM_CHESTO_BERRY,
+    .moves = {MOVE_SKY_ATTACK, MOVE_HEAL_BELL, MOVE_REST, MOVE_TOXIC}
+    },
+    {
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_GARDEVOIR,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_FIRE_PUNCH}
+    },
+    {
+    .iv = 255,
+    .lvl = 73,
+    .species = SPECIES_MEGANIUM,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_GRASS_WHISTLE, MOVE_SWORDS_DANCE, MOVE_EARTHQUAKE, MOVE_BODY_SLAM}
     }
 };
 
-static const struct TrainerMon sParty_WallyVR5[] = {
-    {
-    .iv = 150,
-    .lvl = 56,
-    .species = SPECIES_ALTARIA,
-    .moves = {MOVE_AERIAL_ACE, MOVE_SAFEGUARD, MOVE_DRAGON_BREATH, MOVE_DRAGON_DANCE}
-    },
-    {
-    .iv = 150,
-    .lvl = 55,
-    .species = SPECIES_DELCATTY,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FAINT_ATTACK}
-    },
-    {
-    .iv = 150,
-    .lvl = 56,
-    .species = SPECIES_ROSELIA,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC}
-    },
-    {
-    .iv = 150,
-    .lvl = 53,
-    .species = SPECIES_MAGNETON,
-    .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH}
-    },
-    {
-    .iv = 250,
-    .lvl = 57,
-    .species = SPECIES_GARDEVOIR,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT}
-    }
 };
 // Lilycove Rival 5
 static const struct TrainerMon sParty_BrendanLilycoveMudkip[] = {
@@ -13293,7 +13318,7 @@ static const struct TrainerMon sParty_Tobin[] = {
     .species = SPECIES_MACHOP,
     }
 };
-// Wally Petalburg (added)
+// Petalburg (added)
 static const struct TrainerMon sParty_WallyPetalburg[] = {
     {
     .iv = 50,
