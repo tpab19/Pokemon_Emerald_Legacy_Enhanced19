@@ -118,11 +118,11 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
             },
             {
                 .species = SPECIES_SNORLAX,
-                .heldItem = ITEM_QUICK_CLAW,
+                .heldItem = ITEM_WIKI_BERRY,
                 .fixedIV = 24,
                 .nature = NATURE_ADAMANT,
                 .evs = {252, 0, 252, 0, 0, 6},
-                .moves = {MOVE_BODY_SLAM, MOVE_BELLY_DRUM, MOVE_YAWN, MOVE_EARTHQUAKE},
+                .moves = {MOVE_BODY_SLAM, MOVE_BELLY_DRUM, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE},
             },
         },
         // Gold Symbol.
@@ -300,11 +300,11 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
         {
             {
                 .species = SPECIES_TAUROS,
-                .heldItem = ITEM_CHESTO_BERRY,
+                .heldItem = ITEM_CHOICE_BAND,
                 .fixedIV = MAX_PER_STAT_IVS,
                 .nature = NATURE_ADAMANT,
                 .evs = {0, 252, 0, 252, 0, 6},
-                .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_REST},
+                .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_FACADE},
             },
             {
                 .species = SPECIES_GENGAR,
@@ -316,11 +316,11 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
             },
             {
                 .species = SPECIES_HERACROSS,
-                .heldItem = ITEM_CHOICE_BAND,
+                .heldItem = ITEM_SALAC_BERRY,
                 .fixedIV = MAX_PER_STAT_IVS,
                 .nature = NATURE_ADAMANT,
                 .evs = {0, 252, 0, 252, 0, 6},
-                .moves = {MOVE_MEGAHORN, MOVE_CROSS_CHOP, MOVE_ROCK_SLIDE, MOVE_RETURN},
+                .moves = {MOVE_MEGAHORN, MOVE_ENDURE, MOVE_REVERSAL, MOVE_EARTHQUAKE},
             },
         },
     },
@@ -394,12 +394,12 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][FRONTIER_PARTY_SIZ
                 .moves = {MOVE_SUPER_FANG, MOVE_CRUNCH, MOVE_POISON_FANG, MOVE_FLAMETHROWER},
             },
             {
-                .species = SPECIES_STEELIX,
-                .heldItem = ITEM_QUICK_CLAW,
+                .species = SPECIES_SHUCKLE,
+                .heldItem = ITEM_CHESTO_BERRY,
                 .fixedIV = 16,
                 .nature = NATURE_SASSY,
                 .evs = {252, 106, 0, 0, 0, 152},
-                .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_EXPLOSION, MOVE_CRUNCH},
+                .moves = {MOVE_REST, MOVE_DOUBLE_TEAM, MOVE_SANDSTORM, MOVE_TOXIC},
             },
             {
                 .species = SPECIES_GYARADOS,
