@@ -1891,7 +1891,8 @@ AI_CV_Curse_End:
 
 AI_CV_Protect:
 	get_protect_count AI_USER
-	if_more_than 1, AI_CV_Protect_ScoreDown2
+	if_more_than 2, AI_CV_Protect_ScoreDown30
+	if_more_than 1, AI_CV_Protect_ScoreDown10
 	if_status AI_USER, STATUS1_TOXIC_POISON, AI_CV_Protect3
 	if_status2 AI_USER, STATUS2_CURSED, AI_CV_Protect3
 	if_status3 AI_USER, STATUS3_PERISH_SONG, AI_CV_Protect3
@@ -1930,6 +1931,12 @@ AI_CV_Protect3:
 	if_not_equal EFFECT_LOCK_ON, AI_CV_Protect_End
 AI_CV_Protect_ScoreDown2:
 	score -2
+	goto AI_CV_Protect_End
+AI_CV_Protect_ScoreDown30:
+	score -30
+	goto AI_CV_Protect_End
+AI_CV_Protect_ScoreDown10:
+	score -10
 AI_CV_Protect_End:
 	end
 

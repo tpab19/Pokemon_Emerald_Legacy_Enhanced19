@@ -268,7 +268,7 @@ LilycoveCity_ContestLobby_EventScript_ReceivePC::
 	call Common_EventScript_NameReceivedBoxMon
 	msgbox LilycoveCity_ContestLobby_Text_RewardEnd, MSGBOX_DEFAULT
 	waitmessage
-	goto Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
+	goto LilycoveCity_ContestLobby_EventScript_EndTakePaintingToMuseum
 	end
 
 LilycoveCity_ContestLobby_EventScript_SendToPC::
