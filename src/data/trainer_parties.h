@@ -9261,6 +9261,7 @@ static const struct TrainerMon sParty_WallyVR2[] = {
     .species = SPECIES_GARDEVOIR,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH, MOVE_CALM_MIND}
+    }
 };
 // Rematch 2
 static const struct TrainerMon sParty_WallyVR3[] = {
@@ -9305,6 +9306,7 @@ static const struct TrainerMon sParty_WallyVR3[] = {
     .species = SPECIES_GARDEVOIR,
     .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_PROTECT}
+    }
 };
 // Rematch 3
 static const struct TrainerMon sParty_WallyVR4[] = {
@@ -9349,6 +9351,7 @@ static const struct TrainerMon sParty_WallyVR4[] = {
     .species = SPECIES_GARDEVOIR,
     .heldItem = ITEM_SALAC_BERRY,
     .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND, MOVE_ICE_PUNCH}
+    }
 };
 // Rematch 4
 static const struct TrainerMon sParty_WallyVR5[] = {
@@ -9396,7 +9399,6 @@ static const struct TrainerMon sParty_WallyVR5[] = {
     }
 };
 
-};
 // Lilycove Rival 5
 static const struct TrainerMon sParty_BrendanLilycoveMudkip[] = {
     {
