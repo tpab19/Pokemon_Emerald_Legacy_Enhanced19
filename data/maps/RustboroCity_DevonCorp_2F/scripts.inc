@@ -455,8 +455,7 @@ RustboroCity_DevonCorp_2F_EventScript_ChooseFossil::
 	end
 
 RustboroCity_DevonCorp_2F_EventScript_ChooseFossilPostGame::
-	message RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne
-	waitmessage
+	msgbox RustboroCity_DevonCorp_2F_Text_PickOne, MSGBOX_DEFAULT
 	multichoice 17, 6, MULTI_FOSSIL_POST_GAME, FALSE
 	switch VAR_RESULT
 	case 0, RustboroCity_DevonCorp_2F_EventScript_ChooseClawFossilPostGame
@@ -587,6 +586,10 @@ RustboroCity_DevonCorp_2F_Text_TwoFossilsPickOne:
 	.string "regenerate one POKéMON at a time.\p"
 	.string "Would you like to pick one of your\n"
 	.string "fossils for regeneration?$"
+
+RustboroCity_DevonCorp_2F_Text_PickOne:
+	.string "Which fossil would you like\n"
+	.string "regenerated?$"
 
 RustboroCity_DevonCorp_2F_Text_HandedFossilToResearcher:
 	.string "Excellent!\n"
