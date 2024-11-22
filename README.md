@@ -32,11 +32,6 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ## Pret Stuff
 - **All Pret Projects:** [pret.github.io](https://pret.github.io/).
-- [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- **Discord:** [pret][discord]
-- **IRC:** [libera#pret][irc]
 
 
 ## Credits For Emerald Legacy:
