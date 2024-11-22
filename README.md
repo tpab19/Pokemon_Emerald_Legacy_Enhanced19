@@ -74,6 +74,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ### Sprite Artists:
 - ZuperZACH
+- Isona
 
 
 ### Music Credits:
