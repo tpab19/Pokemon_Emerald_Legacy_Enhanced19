@@ -1171,7 +1171,7 @@ static void Cmd_accuracycheck(void)
 
         gPotentialItemEffectBattler = gBattlerTarget;
 
-        if (holdEffect == HOLD_EFFECT_EVASION_UP)
+        if (holdEffect == HOLD_EFFECT_EVASION_UP || gBattleMons[gBattlerTarget].ability == ABILITY_STENCH)
             calc = (calc * (100 - param)) / 100;
 
         // final calculation
