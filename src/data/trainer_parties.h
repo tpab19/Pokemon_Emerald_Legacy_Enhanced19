@@ -14047,3 +14047,207 @@ static const struct TrainerMon sParty_Weebra[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_TRIPLE_KICK, MOVE_BULK_UP, MOVE_ROCK_SLIDE}
     }
 };
+
+// Battle Frontier HP EV trainer
+static const struct TrainerMon sParty_Eva[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CLEFAIRY,
+    }
+};
+
+// Battle Frontier Attack EV trainer
+static const struct TrainerMon sParty_Evin[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_NUZLEAF,
+    }
+};
+
+// Battle Frontier Defense EV trainer
+static const struct TrainerMon sParty_Eve[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SILCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CASCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SILCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CASCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_SILCOON,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_CASCOON,
+    }
+};
+
+// Battle Frontier Speed EV trainer
+static const struct TrainerMon sParty_Evangelos[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_PIKACHU,
+    }
+};
+
+// Battle Frontier Sp Attack EV trainer
+static const struct TrainerMon sParty_Evvi[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_FLAAFFY,
+    }
+};
+
+// Battle Frontier Sp Defense EV trainer
+static const struct TrainerMon sParty_Evern[] = {
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    },
+    {
+    .iv = 0,
+    .lvl = 5,
+    .species = SPECIES_TOGETIC,
+    }
+};

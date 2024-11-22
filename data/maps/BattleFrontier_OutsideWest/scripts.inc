@@ -251,7 +251,9 @@ BattleFrontier_OutsideWest_EventScript_UnusedNPC3::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Gentleman::
-	msgbox BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Evern, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVERN, BattleFrontier_OutsideWest_Text_EvernPostBattle
 	end
 
 BattleFrontier_OutsideWest_EventScript_Lass::
@@ -267,7 +269,9 @@ BattleFrontier_OutsideWest_EventScript_Man2::
 	end
 
 BattleFrontier_OutsideWest_EventScript_Woman1::
-	msgbox BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Eve, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVE, BattleFrontier_OutsideWest_Text_EvePostBattle
 	end
 
 BattleFrontier_OutsideWest_EventScript_FatMan1::
@@ -454,13 +458,6 @@ BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol:
 	.string "Today, I'm going to keep battling, no\n"
 	.string "matter what, until I get a Symbol.$"
 
-BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome:
-	.string "Oh? You're off to challenge\n"
-	.string "the BATTLE DOME?\p"
-	.string "I'll wish you the best of luck.\n"
-	.string "Let us both win our way up and meet\l"
-	.string "in challenges.$"
-
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa:
 	.string "Grandpa, over here!\n"
 	.string "The BATTLE DOME is here!\l"
@@ -476,12 +473,6 @@ BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo:
 	.string "that long ago.\p"
 	.string "But, now look at this place! Amazing!\n"
 	.string "I'll bring my mother out to see this.$"
-
-BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier:
-	.string "I've finally arrived at the BATTLE\n"
-	.string "FRONTIER!\p"
-	.string "I'm sure to grab attention with\n"
-	.string "my looks and ability!$"
 
 BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople:
 	.string "Munch, munch…\p"
@@ -546,3 +537,22 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier:
 	.string "Oh, challenges can wait. I feel driven\n"
 	.string "to find the delightful creature!$"
 
+BattleFrontier_OutsideWest_Text_Evern:
+	.string "SPECIAL DEFENSES are my specialty.\n"
+	.string "Want to build some resilience?\p"
+	.string "My Pokémon will teach you to\n"
+	.string "weather any storm!$"
+
+BattleFrontier_OutsideWest_Text_EvernPostBattle:
+	.string "Resilient and steady! Your team\n"
+	.string "is tough as nails!$"
+
+BattleFrontier_OutsideWest_Text_Eve:
+	.string "DEFENSE is the best offense,\n"
+	.string "or so they say!\p"
+	.string "Let's toughen up together,\n"
+	.string "block by block.$"
+
+BattleFrontier_OutsideWest_Text_EvePostBattle:
+	.string "You're as solid as a rock! That\n"
+	.string "was some great training!$"

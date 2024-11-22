@@ -42,7 +42,9 @@ BattleFrontier_OutsideEast_EventScript_BattlePyramidSign::
 	end
 
 BattleFrontier_OutsideEast_EventScript_NinjaBoy::
-	msgbox BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Evangelos, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVANGELOS, BattleFrontier_OutsideWest_Text_EvangelosPostBattle
 	end
 
 BattleFrontier_OutsideEast_EventScript_Man1::
@@ -54,7 +56,9 @@ BattleFrontier_OutsideEast_EventScript_Hiker::
 	end
 
 BattleFrontier_OutsideEast_EventScript_HexManiac::
-	msgbox BattleFrontier_OutsideEast_Text_ThriveInDarkness, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Evvi, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVVI, BattleFrontier_OutsideWest_Text_EvviPostBattle
 	end
 
 BattleFrontier_OutsideEast_EventScript_BlackBelt1::
@@ -165,11 +169,15 @@ BattleFrontier_OutsideEast_Movement_SudowoodoShake:
 	step_end
 
 BattleFrontier_OutsideEast_EventScript_Maniac1::
-	msgbox BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Evin, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVIN, BattleFrontier_OutsideWest_Text_EvinPostBattle
 	end
 
 BattleFrontier_OutsideEast_EventScript_Girl::
-	msgbox BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere, MSGBOX_NPC
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_Eva, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_EVA, BattleFrontier_OutsideWest_Text_EvaPostBattle
 	end
 
 BattleFrontier_OutsideEast_EventScript_PsychicM::
@@ -258,12 +266,6 @@ BattleFrontier_OutsideEast_Text_ExchangeCornerSign:
 	.string "BATTLE POINT EXCHANGE SERVICE CORNER\n"
 	.string "Exchange your Battle Points!$"
 
-BattleFrontier_OutsideEast_Text_BattleTowerFeelsSpecial:
-	.string "Wow!\n"
-	.string "It's huge!\p"
-	.string "The BATTLE TOWER feels special.\n"
-	.string "It's different from the others.$"
-
 BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier:
 	.string "My grand ambition is to conquer both\n"
 	.string "the BATTLE FRONTIER and the POKéMON\l"
@@ -277,13 +279,6 @@ BattleFrontier_OutsideEast_Text_PyramidTooHarsh:
 	.string "I just can't make it to the top!\p"
 	.string "Since I'm out of options, maybe I can\n"
 	.string "climb the outside…$"
-
-BattleFrontier_OutsideEast_Text_ThriveInDarkness:
-	.string "I thrive in darkness…\n"
-	.string "Yes… What is worthy of me?\l"
-	.string "None other than the BATTLE PYRAMID…\p"
-	.string "What say you to wandering in darkness\n"
-	.string "and in utter and total desperation?$"
 
 BattleFrontier_OutsideEast_Text_PutTogetherUltimateTeam:
 	.string "I didn't sleep for a week, but then\n"
@@ -338,21 +333,6 @@ BattleFrontier_OutsideEast_Text_GoRackUpSomeWinsForDaddy:
 	.string "Go rack up some wins for Daddy!\p"
 	.string "You're just like your mother,\n"
 	.string "so you'll be dominating!$"
-
-BattleFrontier_OutsideEast_Text_HeardPrettyGirlAtBattleArena:
-	.string "It wasn't easy getting here,\n"
-	.string "but I'd heard about this knockout\l"
-	.string "pretty girl at the BATTLE ARENA.\p"
-	.string "Instead of her, do you know what\n"
-	.string "I found?\p"
-	.string "A whole teeming mob of sweaty,\n"
-	.string "stinky, and primitive martial artists!$"
-
-BattleFrontier_OutsideEast_Text_SometimesImportantOldManInThere:
-	.string "I sometimes see this really important-\n"
-	.string "looking old man going in there.\p"
-	.string "He has these really awesome POKéMON.\n"
-	.string "He seems really nice, though.$"
 
 BattleFrontier_OutsideEast_Text_LegendOfBattlePyramid:
 	.string "Do you know it?\n"
@@ -437,3 +417,42 @@ BattleFrontier_OutsideEast_Text_StickyMonWithLongTail:
 	.string "with a long tail up ahead!\p"
 	.string "It was hiding under a boulder, and\n"
 	.string "it kept staring at me!$"
+
+BattleFrontier_OutsideWest_Text_Evangelos:
+	.string "SPEED's the name of the game!\n"
+	.string "Can you keep up with my POKéMON?\p"
+	.string "Let's zip through some training.$"
+
+BattleFrontier_OutsideWest_Text_EvangelosPostBattle:
+	.string "Zipping right past me! Your\n"
+	.string "training's really paying off!$"
+
+BattleFrontier_OutsideWest_Text_Evvi:
+	.string "Brains over brawn… that's how\n"
+	.string "I train my POKéMON.\p"
+	.string "Let's see if your POKéMON can\n"
+	.string "match their power!$"
+
+BattleFrontier_OutsideWest_Text_EvviPostBattle:
+	.string "Such a sharp mind! Your POKéMON\n"
+	.string "are getting smarter by the second!$"
+
+BattleFrontier_OutsideWest_Text_Eva:
+	.string "Hey, my POKéMON might not be strong,\n"
+	.string "but they sure can endure anything!\p"
+	.string "Why not train with me to build\n"
+	.string "your POKéMON's endurance?$"
+
+BattleFrontier_OutsideWest_Text_EvaPostBattle:
+	.string "Wow! Your POKéMON sure have\n"
+	.string "a lot of stamina! Great job!$"
+
+BattleFrontier_OutsideWest_Text_Evin:
+	.string "My POKéMON love to strike fast\n"
+	.string "and hit hard! Care to spar?\p"
+	.string "Training with me might boost\n"
+	.string "your POKéMON's power!$"
+
+BattleFrontier_OutsideWest_Text_EvinPostBattle:
+	.string "What power! You're really packing\n"
+	.string "a punch! Keep it up!$"
