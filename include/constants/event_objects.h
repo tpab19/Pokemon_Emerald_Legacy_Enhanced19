@@ -255,6 +255,12 @@
 #define OBJ_EVENT_GFX_MATT                       251
 #define OBJ_EVENT_GFX_ZINNIA                     252
 #define OBJ_EVENT_GFX_WHISMUR                    253
+#define OBJ_EVENT_GFX_EEVEE                      254
+#define OBJ_EVENT_GFX_VAPOREON                   255
+#define OBJ_EVENT_GFX_FLAREON                    256
+#define OBJ_EVENT_GFX_JOLTEON                    257
+#define OBJ_EVENT_GFX_UMBREON                    258
+#define OBJ_EVENT_GFX_ESPEON                     259
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //

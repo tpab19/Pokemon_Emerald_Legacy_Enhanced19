@@ -47,6 +47,10 @@ BattleFrontier_OutsideEast_EventScript_NinjaBoy::
 	trainerbattle_no_intro TRAINER_EVANGELOS, BattleFrontier_OutsideWest_Text_EvangelosPostBattle
 	end
 
+BattleFrontier_OutsideEast_EventScript_Jolteon::
+	msgbox BattleFrontier_OutsideEast_Text_Jolteon, MSGBOX_NPC
+	end
+
 BattleFrontier_OutsideEast_EventScript_Man1::
 	msgbox BattleFrontier_OutsideEast_Text_ConquerLeagueAndFrontier, MSGBOX_NPC
 	end
@@ -59,6 +63,10 @@ BattleFrontier_OutsideEast_EventScript_HexManiac::
 	faceplayer
 	msgbox BattleFrontier_OutsideWest_Text_Evvi, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_EVVI, BattleFrontier_OutsideWest_Text_EvviPostBattle
+	end
+
+BattleFrontier_OutsideEast_EventScript_Espeon::
+	msgbox BattleFrontier_OutsideEast_Text_Espeon, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideEast_EventScript_BlackBelt1::
@@ -174,10 +182,18 @@ BattleFrontier_OutsideEast_EventScript_Maniac1::
 	trainerbattle_no_intro TRAINER_EVIN, BattleFrontier_OutsideWest_Text_EvinPostBattle
 	end
 
+BattleFrontier_OutsideEast_EventScript_Flareon::
+	msgbox BattleFrontier_OutsideEast_Text_Flareon, MSGBOX_NPC
+	end
+
 BattleFrontier_OutsideEast_EventScript_Girl::
 	faceplayer
 	msgbox BattleFrontier_OutsideWest_Text_Eva, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_EVA, BattleFrontier_OutsideWest_Text_EvaPostBattle
+	end
+
+BattleFrontier_OutsideEast_EventScript_Vaporeon::
+	msgbox BattleFrontier_OutsideEast_Text_Vaporeon, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideEast_EventScript_PsychicM::
@@ -456,3 +472,15 @@ BattleFrontier_OutsideWest_Text_Evin:
 BattleFrontier_OutsideWest_Text_EvinPostBattle:
 	.string "What power! You're really packing\n"
 	.string "a punch! Keep it up!$"
+
+BattleFrontier_OutsideEast_Text_Jolteon:
+	.string "JOLTEON!$"
+
+BattleFrontier_OutsideEast_Text_Vaporeon:
+	.string "VAPOREON!$"
+
+BattleFrontier_OutsideEast_Text_Flareon:
+	.string "FLAREON!$"
+
+BattleFrontier_OutsideEast_Text_Espeon:
+	.string "ESPEON!$"

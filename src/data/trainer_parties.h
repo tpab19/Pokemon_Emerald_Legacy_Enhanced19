@@ -14117,7 +14117,7 @@ static const struct TrainerMon sParty_Eva[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_CLEFAIRY,
+    .species = SPECIES_VAPOREON,
     }
 };
 
@@ -14151,7 +14151,7 @@ static const struct TrainerMon sParty_Evin[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_NUZLEAF,
+    .species = SPECIES_FLAREON,
     }
 };
 
@@ -14185,7 +14185,7 @@ static const struct TrainerMon sParty_Eve[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_CASCOON,
+    .species = SPECIES_EEVEE,
     }
 };
 
@@ -14219,7 +14219,7 @@ static const struct TrainerMon sParty_Evangelos[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_PIKACHU,
+    .species = SPECIES_JOLTEON,
     }
 };
 
@@ -14253,7 +14253,7 @@ static const struct TrainerMon sParty_Evvi[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_FLAAFFY,
+    .species = SPECIES_ESPEON,
     }
 };
 
@@ -14287,6 +14287,6 @@ static const struct TrainerMon sParty_Evern[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_TOGETIC,
+    .species = SPECIES_UMBREON,
     }
 };
