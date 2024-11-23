@@ -1010,7 +1010,8 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_TALK,
               MOVE_CURSE,
               MOVE_FISSURE,
-              MOVE_TICKLE),
+              MOVE_TICKLE,
+              MOVE_MIRROR_COAT),
 
     egg_moves(SKITTY,
               MOVE_HELPING_HAND,
@@ -1035,8 +1036,7 @@ const u16 gEggMoves[] = {
     egg_moves(TORKOAL,
               MOVE_ERUPTION,
               MOVE_ENDURE,
-              MOVE_SLEEP_TALK,
-              MOVE_YAWN),
+              MOVE_SLEEP_TALK),
 
     egg_moves(SABLEYE,
               MOVE_PSYCH_UP,
@@ -1222,7 +1222,8 @@ const u16 gEggMoves[] = {
               MOVE_BODY_SLAM,
               MOVE_SUPERSONIC,
               MOVE_BARRIER,
-              MOVE_CONFUSE_RAY),
+              MOVE_CONFUSE_RAY,
+              MOVE_CURSE),
 
     egg_moves(ABSOL,
               MOVE_BATON_PASS,

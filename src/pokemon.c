@@ -3424,7 +3424,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                 defender->statStages[STAT_DEF] *= 1.5;
             }
              // Boost Special Defense for Rock-types in Hail
-            if ((gBattleWeather & B_WEATHER_SANDSTORM) && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK))
+            if ((gBattleWeather & B_WEATHER_SANDSTORM) && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK ||  defender->ability == ABILITY_SAND_VEIL))
             {
                 defender->statStages[STAT_SPDEF] *= 1.5;
             }
