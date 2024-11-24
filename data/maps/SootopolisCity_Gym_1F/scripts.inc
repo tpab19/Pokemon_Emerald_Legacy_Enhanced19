@@ -236,7 +236,7 @@ SootopolisCity_Gym_1F_EventScript_GymStatue::
 	end
 
 SootopolisCity_Gym_1F_Text_GymGuideAdvice:
-	.string "Yo! CHAMP-in making!\n"
+	.string "Yo! CHAMP-in-making!\n"
 	.string "I can't believe how far you've come!\p"
 	.string "Are you ready to finish this out?\p"
 	.string "SOOTOPOLIS's GYM LEADER WALLACE is\n"
