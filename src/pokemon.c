@@ -3253,6 +3253,22 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
         attack *= 2;
 
+    // Are effects of weather negated with cloud nine or air lock
+    if (WEATHER_HAS_EFFECT2)
+    {
+        // Boost Defense for Ice-types in Hail
+        if ((gBattleWeather & B_WEATHER_HAIL) && (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE))
+        {
+            defense = (150 * defense) / 100;
+        }
+
+        // Boost Special Defense for Rock-types in sand
+        if ((gBattleWeather & B_WEATHER_SANDSTORM) && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK ||  defender->ability == ABILITY_SAND_VEIL))
+        {
+            spDefense = (150 * spDefense) / 100;
+        }
+    }
+
     // Apply abilities / field sports
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
         spAttack /= 2;
@@ -3416,17 +3432,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
                     damage /= 2;
                     break;
                 }
-            }
-
-            // Boost Defense for Ice-types in Hail
-            if ((gBattleWeather & B_WEATHER_HAIL) && (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE))
-            {
-                defender->statStages[STAT_DEF] *= 1.5;
-            }
-             // Boost Special Defense for Rock-types in Hail
-            if ((gBattleWeather & B_WEATHER_SANDSTORM) && (defender->type1 == TYPE_ROCK || defender->type2 == TYPE_ROCK ||  defender->ability == ABILITY_SAND_VEIL))
-            {
-                defender->statStages[STAT_SPDEF] *= 1.5;
             }
         }
 
