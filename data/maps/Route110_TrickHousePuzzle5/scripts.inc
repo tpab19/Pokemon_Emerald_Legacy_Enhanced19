@@ -983,8 +983,8 @@ Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz2:
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Quiz3:
 	.string "MECHADOLL 3 QUIZ.\p"
-	.string "Do one REPEL and SODA POP cost\n"
-	.string "more than one SUPER POTION?$"
+	.string "Do one BURN HEAL and SODA POP cost\n"
+	.string "more than one FULL HEAL?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll4Intro:
 	.string "CLICKETY-CLACK…\n"
