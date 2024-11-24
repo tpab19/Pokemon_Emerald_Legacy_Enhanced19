@@ -7045,10 +7045,10 @@ static const struct TrainerMon sParty_Edwin5[] = {
 static const struct TrainerMon sParty_WallyVR1[] = {
     {
     .iv = 150,
-    .lvl = 55,
-    .species = SPECIES_WALREIN,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH, MOVE_SPLASH}
+    .lvl = 49,
+    .species = SPECIES_DELCATTY,
+    .heldItem = ITEM_LEFTOVERS,
+    .moves = {MOVE_SING, MOVE_DOUBLE_EDGE, MOVE_CHARM, MOVE_FAINT_ATTACK}
     },
     {
     .iv = 200,
