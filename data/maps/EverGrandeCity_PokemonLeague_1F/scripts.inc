@@ -70,7 +70,6 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	waitmessage
 	delay 120
 	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
-	call_if_set FLAG_HARD, EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza
 	closemessage
 	applymovement LOCALID_GUARD_1, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_GUARD_2, EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay
@@ -103,15 +102,33 @@ EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges::
 	releaseall
 	end
 
+EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaL::
+	goto_if_unset FLAG_HARD, EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaEnd
+	call EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza
+	applymovement LOCALID_GUARD_1, Common_Movement_FacePlayer
+	waitmovement 0
+	goto EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza
+
+EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaR::
+	goto_if_unset FLAG_HARD, EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaEnd
+	call EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza
+	applymovement LOCALID_GUARD_2, Common_Movement_FacePlayer
+	waitmovement 0
+	goto EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza
+
 EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquaza::
 	goto_if_set FLAG_IS_CHAMPION, Common_EventScript_NopReturn
 	setvar 0x8005, SPECIES_RAYQUAZA
 	special CheckSpecies
-	goto_if_eq VAR_RESULT, TRUE, EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza
+	goto_if_eq VAR_RESULT, FALSE, EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaEnd
 	return
+
 EverGrandeCity_PokemonLeague_1F_EventScript_CantBringRayquaza::
 	playse SE_FAILURE
 	msgbox EverGrandeCity_PokemonLeague_1F_Text_CantBringLegendaries, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_PokemonLeague_1F_Movement_MovePlayerBack
+	waitmovement 0
+EverGrandeCity_PokemonLeague_1F_EventScript_CheckRayquazaEnd::
 	releaseall
 	end
 
@@ -145,6 +162,10 @@ EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay:
 EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay:
 	walk_right
 	walk_in_place_faster_down
+	step_end
+
+EverGrandeCity_PokemonLeague_1F_Movement_MovePlayerBack:
+	walk_down
 	step_end
 
 EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges:
