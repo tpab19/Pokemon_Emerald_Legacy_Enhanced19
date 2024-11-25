@@ -10966,7 +10966,7 @@ static const struct TrainerMon sParty_MayRustboroTorchic[] = {
     .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_MUD_SLAP, MOVE_WATER_GUN}
     }
 };
-// Roxanne Rematch 1 after beating Wattson 
+// Rematch 1 after beating Wattson 
 static const struct TrainerMon sParty_Roxanne2[] = {
     {
     .iv = 150,
@@ -11132,7 +11132,7 @@ static const struct TrainerMon sParty_Roxanne5[] = {
     .moves = {MOVE_ROCK_SLIDE, MOVE_PROTECT, MOVE_THUNDER_WAVE, MOVE_DOUBLE_TEAM}
     }
 };
-// Brawly Rematch 1 & After Beating Flannery (same as 1_2)
+// Rematch 1 & After Beating Flannery (same as 1_2)
 static const struct TrainerMon sParty_Brawly2[] = {
     {
     .iv = 180,
