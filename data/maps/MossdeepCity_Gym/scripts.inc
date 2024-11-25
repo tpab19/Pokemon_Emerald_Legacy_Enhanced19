@@ -8,8 +8,8 @@ MossdeepCity_Gym_OnFrame:
 	.2byte 0
 
 MossdeepCity_Gym_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_TATEANDLIZA_REMATCH_REWARD, MossdeepCity_Gym_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_TATE_AND_LIZA_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_GiveRematchReward

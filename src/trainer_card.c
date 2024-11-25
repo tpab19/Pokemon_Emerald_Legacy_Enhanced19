@@ -167,6 +167,7 @@ static bool8 Task_AnimateCardFlipUp(struct Task *task);
 static bool8 Task_EndCardFlip(struct Task *task);
 static void UpdateCardFlipRegs(u16);
 static void LoadMonIconGfx(void);
+static bool8 CaughtMew(void);
 
 static const u32 sTrainerCardStickers_Gfx[]      = INCBIN_U32("graphics/trainer_card/frlg/stickers.4bpp.lz");
 static const u16 sUnused_Pal[]                   = INCBIN_U16("graphics/trainer_card/unused.gbapal");
@@ -178,6 +179,7 @@ static const u16 sHoennTrainerCardSilver_Pal[]   = INCBIN_U16("graphics/trainer_
 static const u16 sKantoTrainerCardSilver_Pal[]   = INCBIN_U16("graphics/trainer_card/frlg/silver.gbapal");
 static const u16 sHoennTrainerCardGold_Pal[]     = INCBIN_U16("graphics/trainer_card/gold.gbapal");
 static const u16 sKantoTrainerCardGold_Pal[]     = INCBIN_U16("graphics/trainer_card/frlg/gold.gbapal");
+static const u16 sHoennTrainerCardBlack_Pal[]    = INCBIN_U16("graphics/trainer_card/black.gbapal");
 static const u16 sHoennTrainerCardFemaleBg_Pal[] = INCBIN_U16("graphics/trainer_card/female_bg.gbapal");
 static const u16 sKantoTrainerCardFemaleBg_Pal[] = INCBIN_U16("graphics/trainer_card/frlg/female_bg.gbapal");
 static const u16 sHoennTrainerCardBadges_Pal[]   = INCBIN_U16("graphics/trainer_card/badges.gbapal");
@@ -269,6 +271,7 @@ static const u16 *const sHoennTrainerCardPals[] =
     sHoennTrainerCardCopper_Pal, // 2 stars
     sHoennTrainerCardSilver_Pal, // 3 stars
     sHoennTrainerCardGold_Pal,   // 4 stars
+    sHoennTrainerCardBlack_Pal,  // 5 stars
 };
 
 static const u16 *const sKantoTrainerCardPals[] =
@@ -672,8 +675,18 @@ u32 CountPlayerTrainerStars(void)
         stars++;
     if (HasAllFrontierSymbols())
         stars++;
+    if (CaughtMew())
+        stars++;
 
     return stars;
+}
+
+static bool8 CaughtMew(void)
+{
+    if (FlagGet(FLAG_CAUGHT_MEW))
+        return TRUE;
+    else
+        return FALSE;
 }
 
 static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
@@ -687,6 +700,8 @@ static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
     if (trainerCard->battleTowerStraightWins > 49)
         stars++;
     if (trainerCard->hasAllPaintings)
+        stars++;
+    if (CaughtMew())
         stars++;
 
     return stars;

@@ -39,6 +39,7 @@ EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags::
 	settrainerflag TRAINER_TATE_AND_LIZA_2
 	settrainerflag TRAINER_JUAN_2
 	setflag FLAG_REMATCH_READY_JUAN
+	setvar VAR_EVER_GRANDE_CITY_STATE, 1
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 0, EverGrandeCity_HallOfFame_EventScript_ReadyDexUpgradeEvent
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 6, EverGrandeCity_HallOfFame_EventScript_ResetJohtoStarter
 	return

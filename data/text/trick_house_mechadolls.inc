@@ -17,7 +17,7 @@ gTrickHouse_Mechadoll_Wingull::
 	.string "WINGULL$"
 
 gTrickHouse_Mechadoll_Dustox::
-	.string "DUSTOX$"
+	.string "ANORITH$"
 
 gTrickHouse_Mechadoll_Zubat::
 	.string "ZUBAT$"

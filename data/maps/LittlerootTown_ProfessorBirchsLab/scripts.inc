@@ -1207,11 +1207,11 @@ LittlerootTown_ProfessorBirchsLab_Text_GrassyPatchWaiting2:
 
 LittlerootTown_ProfessorBirchsLab_Text_StrangeRockInMossdeep:
 	.string "PROF. BIRCH: Oh, before I forget…\n"
-	.string "I've been researching something\n"
+	.string "I've been researching something\l"
 	.string "quite curious in MOSSDEEP CITY.\p"
 	.string "There's a strange rock there that\n"
 	.string "has puzzled me for some time.\p"
-	.string "It’s unlike anything I’ve seen before,\n"
+	.string "It's unlike anything I've seen before,\n"
 	.string "and I believe it may be connected\l"
 	.string "to a rare phenomenon.\p"
 	.string "Would you mind coming to MOSSDEEP\n"

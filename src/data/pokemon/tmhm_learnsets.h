@@ -8498,6 +8498,7 @@ const union {
         .REST = TRUE,
         .SKILL_SWAP = TRUE,
         .OVERHEAT = TRUE,
+        .BRICK_BREAK = TRUE,
         .STRENGTH = TRUE,
         .FLASH = TRUE,
     } },
@@ -10355,6 +10356,8 @@ const union {
         .ATTRACT = TRUE,
         .SKILL_SWAP = TRUE,
         .SNATCH = TRUE,
+        .ICE_BEAM = TRUE,
+        .THUNDERBOLT = TRUE,
         .FLASH = TRUE,
     } },
 

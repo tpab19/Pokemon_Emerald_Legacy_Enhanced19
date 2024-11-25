@@ -5001,6 +5001,7 @@ extern const u32 gHoennTrainerCardBg_Tilemap[];
 extern const u32 gFrontierPassBg_Gfx[];
 extern const u32 gFrontierPassBg_Tilemap[];
 extern const u16 gFrontierPassBg_Pal[][16];
+extern const u16 gFrontierPassBg_Pal2[][16];
 extern const u32 gFrontierPassMapAndCard_Gfx[];
 extern const u32 gFrontierPassCancelButton_Tilemap[];
 extern const u32 gFrontierPassCancelButtonHighlighted_Tilemap[];

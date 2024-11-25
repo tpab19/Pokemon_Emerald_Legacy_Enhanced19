@@ -1171,7 +1171,7 @@ static void Cmd_accuracycheck(void)
 
         gPotentialItemEffectBattler = gBattlerTarget;
 
-        if (holdEffect == HOLD_EFFECT_EVASION_UP)
+        if (holdEffect == HOLD_EFFECT_EVASION_UP || gBattleMons[gBattlerTarget].ability == ABILITY_STENCH)
             calc = (calc * (100 - param)) / 100;
 
         // final calculation
@@ -6961,7 +6961,8 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
-        else if (gBattleMons[gActiveBattler].ability == ABILITY_KEEN_EYE
+        else if ((gBattleMons[gActiveBattler].ability == ABILITY_KEEN_EYE
+                 || gBattleMons[gActiveBattler].ability == ABILITY_ILLUMINATE)
                  && !certain && statId == STAT_ACC)
         {
             if (flags == STAT_CHANGE_ALLOW_PTR)

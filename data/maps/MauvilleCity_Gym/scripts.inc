@@ -8,8 +8,8 @@ MauvilleCity_Gym_OnFrame:
 	.2byte 0
 
 MauvilleCity_Gym_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_WATTSON_REMATCH_REWARD, MauvilleCity_Gym_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_WATTSON_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_GiveRematchReward

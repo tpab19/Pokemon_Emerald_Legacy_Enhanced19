@@ -7,8 +7,8 @@ RustboroCity_Gym_OnFrame:
 	.2byte 0
 
 RustboroCity_Gym_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_ROXANNE_REMATCH_REWARD, RustboroCity_Gym_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_ROXANNE_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_GiveRematchReward

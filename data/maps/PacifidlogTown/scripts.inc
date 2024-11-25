@@ -21,6 +21,7 @@ PacifidlogTown_EventScript_Girl::
 	end
 
 PacifidlogTown_EventScript_Fisherman::
+	faceplayer
 	call PacifidlogTown_EventScript_FishermanCheckFishingRod
 	call PacifidlogTown_EventScript_FishermanCheckPokeballs
 	msgbox PacifidlogTown_Text_SkyPillarTooScary, MSGBOX_NPC

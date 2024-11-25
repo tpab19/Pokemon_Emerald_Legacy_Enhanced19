@@ -256,6 +256,10 @@ BattleFrontier_OutsideWest_EventScript_Gentleman::
 	trainerbattle_no_intro TRAINER_EVERN, BattleFrontier_OutsideWest_Text_EvernPostBattle
 	end
 
+BattleFrontier_OutsideWest_EventScript_Umbreon::
+	msgbox BattleFrontier_OutsideWest_Text_Umbreon, MSGBOX_NPC
+	end
+
 BattleFrontier_OutsideWest_EventScript_Lass::
 	msgbox BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol, MSGBOX_NPC
 	end
@@ -272,6 +276,10 @@ BattleFrontier_OutsideWest_EventScript_Woman1::
 	faceplayer
 	msgbox BattleFrontier_OutsideWest_Text_Eve, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_EVE, BattleFrontier_OutsideWest_Text_EvePostBattle
+	end
+
+BattleFrontier_OutsideWest_EventScript_Eevee::
+	msgbox BattleFrontier_OutsideWest_Text_Eevee, MSGBOX_NPC
 	end
 
 BattleFrontier_OutsideWest_EventScript_FatMan1::
@@ -556,3 +564,9 @@ BattleFrontier_OutsideWest_Text_Eve:
 BattleFrontier_OutsideWest_Text_EvePostBattle:
 	.string "You're as solid as a rock! That\n"
 	.string "was some great training!$"
+
+BattleFrontier_OutsideWest_Text_Umbreon:
+	.string "UMBREON!$"
+
+BattleFrontier_OutsideWest_Text_Eevee:
+	.string "EEVEE!$"

@@ -13,8 +13,8 @@ LavaridgeTown_Gym_1F_OnFrame:
 	.2byte 0
 
 LavaridgeTown_Gym_1F_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_FLANNERY_REMATCH_REWARD, LavaridgeTown_Gym_1F_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_FLANNERY_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_GiveRematchReward

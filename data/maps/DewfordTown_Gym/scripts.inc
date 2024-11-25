@@ -8,8 +8,8 @@ DewfordTown_Gym_OnFrame:
 	.2byte 0
 
 DewfordTown_Gym_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_BRAWLY_REMATCH_REWARD, DewfordTown_Gym_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_BRAWLY_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_GiveRematchReward

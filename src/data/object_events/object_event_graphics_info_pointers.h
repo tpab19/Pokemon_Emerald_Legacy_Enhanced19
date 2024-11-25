@@ -252,6 +252,12 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tabitha;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Courtney;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zinnia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whismur;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Vaporeon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Flareon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jolteon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Umbreon;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Espeon;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -516,6 +522,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_COURTNEY] =                 &gObjectEventGraphicsInfo_Courtney,
     [OBJ_EVENT_GFX_ZINNIA] =                   &gObjectEventGraphicsInfo_Zinnia,
     [OBJ_EVENT_GFX_WHISMUR] =                  &gObjectEventGraphicsInfo_Whismur,
+    [OBJ_EVENT_GFX_EEVEE] =                    &gObjectEventGraphicsInfo_Eevee,
+    [OBJ_EVENT_GFX_VAPOREON] =                 &gObjectEventGraphicsInfo_Vaporeon,
+    [OBJ_EVENT_GFX_FLAREON] =                  &gObjectEventGraphicsInfo_Flareon,
+    [OBJ_EVENT_GFX_JOLTEON] =                  &gObjectEventGraphicsInfo_Jolteon,
+    [OBJ_EVENT_GFX_UMBREON] =                  &gObjectEventGraphicsInfo_Umbreon,
+    [OBJ_EVENT_GFX_ESPEON] =                   &gObjectEventGraphicsInfo_Espeon,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

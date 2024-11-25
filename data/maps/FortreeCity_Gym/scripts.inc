@@ -9,8 +9,8 @@ FortreeCity_Gym_OnFrame:
 	.2byte 0
 
 FortreeCity_Gym_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_WINONA_REMATCH_REWARD, FortreeCity_Gym_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_WINONA_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_GiveRematchReward

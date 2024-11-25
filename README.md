@@ -13,7 +13,7 @@ Full doc: TODO
 
 These videos also provide an overview of the hack and the ideology behind it:
 - Release 1.0: TODO
-- Prerelease: TODO
+- Prerelease: https://www.youtube.com/playlist?list=PLyv5bsGgaxokt8gJX3WvI28pG3ddrhFLd
 
 
 ## Our Other Projects
@@ -74,6 +74,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ### Sprite Artists:
 - ZuperZACH
+- Isona
 
 
 ### Music Credits:

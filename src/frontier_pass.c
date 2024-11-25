@@ -771,8 +771,16 @@ static bool32 InitFrontierPass(void)
         break;
     case 8:
         LoadPalette(gFrontierPassBg_Pal, 0, NUM_BG_PAL_SLOTS * PLTT_SIZE_4BPP);
-        LoadPalette(gFrontierPassBg_Pal[1 + sPassData->trainerStars], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
-        LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        if (sPassData->trainerStars == 5)
+        {
+            LoadPalette(gFrontierPassBg_Pal2[5], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+            LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        }
+        else
+        {
+            LoadPalette(gFrontierPassBg_Pal[1 + sPassData->trainerStars], BG_PLTT_ID(1), PLTT_SIZE_4BPP);
+            LoadPalette(GetTextWindowPalette(0), BG_PLTT_ID(15), PLTT_SIZE_4BPP);
+        }
         DrawFrontierPassBg();
         UpdateAreaHighlight(sPassData->cursorArea, sPassData->previousCursorArea);
         if (sPassData->areaToShow == CURSOR_AREA_MAP || sPassData->areaToShow == CURSOR_AREA_CARD)

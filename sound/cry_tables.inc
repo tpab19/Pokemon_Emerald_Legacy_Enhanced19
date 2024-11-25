@@ -387,10 +387,10 @@ gCryTable::
 	cry Cry_Latios
 	cry Cry_Jirachi
 	cry Cry_Deoxys
+	cry Cry_Chimecho
 	cry Cry_Deoxys_Speed
 	cry Cry_Deoxys_Attack
 	cry Cry_Deoxys_Defense
-	cry Cry_Chimecho
 
 	.align 2
 gCryTable_Reverse::
@@ -781,7 +781,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Latios
 	cry_reverse Cry_Jirachi
 	cry_reverse Cry_Deoxys
+	cry_reverse Cry_Chimecho
 	cry_reverse Cry_Deoxys_Speed
 	cry_reverse Cry_Deoxys_Attack
 	cry_reverse Cry_Deoxys_Defense
-	cry_reverse Cry_Chimecho

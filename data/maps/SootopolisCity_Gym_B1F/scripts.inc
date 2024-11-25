@@ -146,7 +146,7 @@ SootopolisCity_Gym_B1F_Text_BridgetPostBattle:
 SootopolisCity_Gym_B1F_Text_OliviaIntro:
 	.string "I train my POKéMON together with\n"
 	.string "WALLACE.\p"
-	.string "Do you know him?.$"
+	.string "Do you know him?$"
 
 SootopolisCity_Gym_B1F_Text_OliviaDefeat:
 	.string "I was beaten…$"
