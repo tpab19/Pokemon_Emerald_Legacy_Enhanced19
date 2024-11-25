@@ -42,8 +42,8 @@ SootopolisCity_Gym_1F_OnFrame:
 	.2byte 0
 
 SootopolisCity_Gym_1F_EventScript_TryRematchReward::
-	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_GOT_JUAN_REMATCH_REWARD, SootopolisCity_Gym_1F_EventScript_TryRematchRewardEnd
 	setvar 0x8005, TRAINER_JUAN_3
 	special HasRematchBeenFought
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_GiveRematchReward
