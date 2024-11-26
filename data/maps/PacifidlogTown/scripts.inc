@@ -93,7 +93,7 @@ PacifidlogTown_Text_SkyPillarTooScary:
 
 PacifidlogTown_Text_NoFishingRod:
 	.string "Hold on there, you don't even have a\n"
-	.string "FISHING ROD? How did you even make it\n"
+	.string "FISHING ROD? How did you even make it\l"
 	.string "all the way here?\p"
 	.string "Here, take one of mine.$"
 
