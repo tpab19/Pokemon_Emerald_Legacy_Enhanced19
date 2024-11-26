@@ -128,6 +128,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - WiserVisor - [How To Add, Edit, And Understand Music in Pokeemerald](https://www.pokecommunity.com/threads/how-to-add-edit-and-understand-music-in-pokeemerald.444317/)
 - Goppier - [Add zigzagoon scene back to the cable car](https://www.youtube.com/watch?v=7xdcbbfwEto)
 - takyon - [Always inherit nature when holding an Everstone​](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-4#post-10160374)
+- myxto - Always inherit nature when holding an Everstone alternate implementation​
 
 
 ### Other Credits:
