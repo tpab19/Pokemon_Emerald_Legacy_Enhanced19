@@ -1120,9 +1120,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP        = 45,
         .baseAttack    = 41,
-        .baseDefense   = 40,
+        .baseDefense   = 45,
         .baseSpeed     = 75,
-        .baseSpAttack  = 55,
+        .baseSpAttack  = 60,
         .baseSpDefense = 70,
         .types = { TYPE_FIRE, TYPE_FIRE },
         .catchRate = 190,
@@ -1298,7 +1298,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_ODDISH] =
     {
-        .baseHP        = 45,
+        .baseHP        = 50,
         .baseAttack    = 50,
         .baseDefense   = 55,
         .baseSpeed     = 30,
@@ -1360,7 +1360,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP        = 90,
         .baseAttack    = 80,
-        .baseDefense   = 85,
+        .baseDefense   = 95,
         .baseSpeed     = 50,
         .baseSpAttack  = 100,
         .baseSpDefense = 90,
@@ -2619,7 +2619,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_DEWGONG] =
     {
         .baseHP        = 90,
-        .baseAttack    = 60,
+        .baseAttack    = 70,
         .baseDefense   = 80,
         .baseSpeed     = 70,
         .baseSpAttack  = 80,
@@ -3788,7 +3788,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_MAGMAR] =
     {
-        .baseHP        = 65,
+        .baseHP        = 75,
         .baseAttack    = 95,
         .baseDefense   = 57,
         .baseSpeed     = 93,
@@ -4118,8 +4118,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_PORYGON] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 60,
+        .baseHP        = 75,
+        .baseAttack    = 70,
         .baseDefense   = 70,
         .baseSpeed     = 40,
         .baseSpAttack  = 85,
@@ -6582,7 +6582,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseAttack    = 80,
         .baseDefense   = 130,
         .baseSpeed     = 30,
-        .baseSpAttack  = 80,
+        .baseSpAttack  = 90,
         .baseSpDefense = 90,
         .types = { TYPE_FIRE, TYPE_ROCK },
         .catchRate = 75,
