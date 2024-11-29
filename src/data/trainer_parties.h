@@ -11612,7 +11612,7 @@ static const struct TrainerMon sParty_Flannery4[] = {
     .lvl = 60,
     .species = SPECIES_JUMPLUFF,
     .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SLEEP_POWDER, MOVE_SYNTHESIS, MOVE_LEECH_LIFE, MOVE_PROTECT}
+    .moves = {MOVE_SLEEP_POWDER, MOVE_SYNTHESIS, MOVE_LEECH_SEED, MOVE_PROTECT}
     },
     {
     .iv = 255,
