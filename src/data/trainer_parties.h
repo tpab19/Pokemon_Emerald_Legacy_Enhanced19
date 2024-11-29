@@ -11058,7 +11058,7 @@ static const struct TrainerMon sParty_Roxanne3[] = {
     .lvl = 55,
     .species = SPECIES_RHYDON,
     .heldItem = ITEM_SOFT_SAND,
-    .moves = {MOVE_ROCK_TOMB, MOVE_METAL_CLAW, MOVE_CUT, MOVE_ROCK_SMASH}
+    .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SANDSTORM, MOVE_ROCK_SMASH}
     },
     {
     .iv = 255,
