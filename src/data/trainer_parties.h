@@ -9299,7 +9299,7 @@ static const struct TrainerMon sParty_WallyVR3[] = {
     .lvl = 60,
     .species = SPECIES_MAWILE,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_SWORDS_DANCE, MOVE_BATON_PASS, MOVE_METEOR_MASH, MOVE_BATON_PASS}
+    .moves = {MOVE_SWORDS_DANCE, MOVE_CRUNCH, MOVE_METEOR_MASH, MOVE_BATON_PASS}
     },
     {   
     .iv = 255,
@@ -11991,7 +11991,7 @@ static const struct TrainerMon sParty_Winona4[] = {
     .lvl = 60,
     .species = SPECIES_DRAGONITE,
     .heldItem = ITEM_KINGS_ROCK,
-    .moves = {MOVE_THUNDER_WAVE, MOVE_WATERFALL, MOVE_FOCUS_PUNCH, MOVE_THUNDERBOLT}
+    .moves = {MOVE_THUNDER_WAVE, MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_THUNDERBOLT}
     },
     {
     .iv = 255,
@@ -12016,7 +12016,7 @@ static const struct TrainerMon sParty_Winona5[] = {
     .species = SPECIES_DRAGONITE,
     .heldItem = ITEM_LEFTOVERS,
     .evs = {252, 252, 0, 0, 0, 0},
-    .moves = {MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_FOCUS_PUNCH, MOVE_THUNDERBOLT}
+    .moves = {MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_DYNAMIC_PUNCH, MOVE_THUNDERBOLT}
     },
     {
     .iv = 255,
@@ -12176,7 +12176,7 @@ static const struct TrainerMon sParty_TateAndLiza4[] = {
     .iv = 250,
     .lvl = 60,
     .species = SPECIES_ALAKAZAM,
-    .heldItem = ITEM_TWISTED_SPOON,
+    .heldItem = ITEM_CHOICE_BAND,
     .moves = {MOVE_PSYCHIC, MOVE_TRICK, MOVE_THUNDER_PUNCH, MOVE_THUNDER_WAVE}
     },
     {
@@ -12289,21 +12289,21 @@ static const struct TrainerMon sParty_Juan3[] = {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_HUNTAIL,
-    .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_CRUNCH, MOVE_CURSE, MOVE_BATON_PASS, MOVE_HYDRO_PUMP}
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_CRUNCH, MOVE_DRAGON_DANCE, MOVE_BATON_PASS, MOVE_HYDRO_PUMP}
     },
     {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_GOREBYSS,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_MYSTIC_WATER,
     .moves = {MOVE_SURF, MOVE_RAIN_DANCE, MOVE_ICE_BEAM, MOVE_SHADOW_BALL}
     },
     {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_QUAGSIRE,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_QUICK_CLAW,
     .moves = {MOVE_RAIN_DANCE, MOVE_MUDDY_WATER, MOVE_YAWN, MOVE_EARTHQUAKE}
     },
     
@@ -12318,7 +12318,7 @@ static const struct TrainerMon sParty_Juan3[] = {
     .iv = 255,
     .lvl = 55,
     .species = SPECIES_RELICANTH,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_HARD_STONE,
     .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_DOUBLE_EDGE, MOVE_RAIN_DANCE}
     },
     {
