@@ -685,6 +685,7 @@ AI_CheckViability:
 	if_effect EFFECT_ROAR, AI_CV_Roar
 	if_effect EFFECT_CONVERSION, AI_CV_Conversion
 	if_effect EFFECT_RESTORE_HP, AI_CV_Heal
+	if_effect EFFECT_WISH, AI_CV_Heal
 	if_effect EFFECT_TOXIC, AI_CV_Toxic
 	if_effect EFFECT_LIGHT_SCREEN, AI_CV_LightScreen
 	if_effect EFFECT_REST, AI_CV_Rest
@@ -1326,6 +1327,12 @@ AI_CV_HealWeather:
 	if_equal AI_WEATHER_HAIL, AI_CV_HealWeather_ScoreDown2
 	if_equal AI_WEATHER_RAIN, AI_CV_HealWeather_ScoreDown2
 	if_equal AI_WEATHER_SANDSTORM, AI_CV_HealWeather_ScoreDown2
+	goto AI_CV_Heal
+
+AI_CV_Wish:
+	check_wish
+	if_equal 0, AI_CV_Heal
+	score -8
 	goto AI_CV_Heal
 
 AI_CV_HealWeather_ScoreDown2:
@@ -2949,6 +2956,7 @@ AI_HPAware_DiscouragedEffectsWhenHighHP:
 	.byte EFFECT_EXPLOSION
 	.byte EFFECT_RESTORE_HP
 	.byte EFFECT_REST
+	.byte EFFECT_WISH
 	.byte EFFECT_DESTINY_BOND
 	.byte EFFECT_FLAIL
 	.byte EFFECT_ENDURE

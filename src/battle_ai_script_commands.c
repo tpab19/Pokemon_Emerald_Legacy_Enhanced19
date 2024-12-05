@@ -149,6 +149,7 @@ static void Cmd_is_of_type(void);
 static void Cmd_if_target_is_ally(void);
 static void Cmd_if_flash_fired(void);
 static void Cmd_if_holds_item(void);
+static void Cmd_check_wish(void);
 
 // ewram
 EWRAM_DATA const u8 *gAIScriptPtr = NULL;
@@ -258,6 +259,8 @@ static const BattleAICmdFunc sBattleAICmdTable[] =
     Cmd_check_ability,                              // 0x60
     Cmd_if_flash_fired,                             // 0x61
     Cmd_if_holds_item,                              // 0x62
+    Cmd_check_wish,                                 // 0x63
+    
 };
 
 // For the purposes of determining the most powerful move in a moveset, these
@@ -2232,6 +2235,16 @@ static void Cmd_if_flash_fired(void)
         gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 2);
     else
         gAIScriptPtr += 6;
+}
+
+static void Cmd_check_wish(void)
+{
+    if (gWishFutureKnock.wishCounter[gBattlerAttacker] == 0)
+        AI_THINKING_STRUCT->funcResult = 0;
+    else
+        AI_THINKING_STRUCT->funcResult = 1;
+
+    gAIScriptPtr += 1;
 }
 
 static void AIStackPushVar(const u8 *var)

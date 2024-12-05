@@ -617,3 +617,7 @@
 	.macro if_any_move_encored battler:req, ptr:req
 	if_any_move_disabled_or_encored \battler, 1, \ptr
 	.endm
+
+	.macro check_wish
+	.byte 0x36
+	.endm
