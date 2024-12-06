@@ -7,6 +7,7 @@ Keeping that nostalgic feeling is a key part of the project and thus requires us
 
 ## Download and Play
 
+* To download the patch, see [RELEASES](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/releases) and download the zip file for the latest patch. Unzip the folder, then follow the instructions in one of the readme files in the `Patching Instructions` folder.
 * To set up the repository, see [INSTALL.md](INSTALL.md).
 
 
