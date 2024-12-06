@@ -20,6 +20,7 @@ PetalburgCity_OnTransition:
 	end
 
 PetalburgCity_PreNormanFight::
+	goto_if_set FLAG_BEAT_WALLY_PETALBURG, PetalburgCity_End
 	lockall
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, PetalburgCity_MayAppears
@@ -95,9 +96,11 @@ PetalburgCity_EndWallyScene::
 	applymovement LOCALID_WALLY, PetalburgCity_Movement_WallyLeaves
 	waitmovement 0
 	removeobject LOCALID_WALLY
-	setvar VAR_PETALBURG_CITY_STATE, 3
+	setflag FLAG_BEAT_WALLY_PETALBURG
 	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_BRENDAN
 	setflag FLAG_HIDE_LAVARIDGE_POKEMON_CENTER_MAY
+PetalburgCity_End::
+	setvar VAR_PETALBURG_CITY_STATE, 3
 	releaseall
 	end
 

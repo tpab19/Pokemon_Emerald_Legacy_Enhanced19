@@ -23,7 +23,7 @@ MtPyre_Summit_MapScripts::
 
 MtPyre_Summit_OnTransition:
 	call_if_eq VAR_MT_PYRE_STATE, 2, MtPyre_Summit_EventScript_SetArchieMaxiePositions
-	call_if_unset FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA, MtPyre_Summit_EventScript_UnhideGrunts
+	call_if_unset FLAG_RECEIVED_RED_OR_BLUE_ORB, MtPyre_Summit_EventScript_UnhideGrunts
 	end
 
 MtPyre_Summit_EventScript_SetArchieMaxiePositions::
@@ -35,22 +35,11 @@ MtPyre_Summit_EventScript_SetArchieMaxiePositions::
 	end
 
 MtPyre_Summit_EventScript_UnhideGrunts::
-	addobject LOCALID_MAXIE
-	addobject LOCALID_MAGMA_GRUNT_1
-	addobject LOCALID_MAGMA_GRUNT_2
-	addobject LOCALID_MAGMA_GRUNT_3
-	addobject LOCALID_MAGMA_GRUNT_4
-	addobject LOCALID_POOCHYENA_1
-	addobject LOCALID_POOCHYENA_2
-	addobject LOCALID_POOCHYENA_3
-	addobject LOCALID_POOCHYENA_4
-	addobject LOCALID_POOCHYENA_5
-	addobject LOCALID_POOCHYENA_6
-	addobject LOCALID_ARCHIE
-	addobject LOCALID_AQUA_GRUNT_1
-	addobject LOCALID_AQUA_GRUNT_2
-	addobject LOCALID_AQUA_GRUNT_3
-	addobject LOCALID_MATT
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MAXIE
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_MAGMA
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_ARCHIE
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA
+	clearflag FLAG_HIDE_MT_PYRE_SUMMIT_MATT
 	end
 
 MtPyre_Summit_EventScript_TeamAquaTrigger0::

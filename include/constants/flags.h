@@ -686,7 +686,7 @@
 #define FLAG_HIDE_ZINNIA_TOP            0x287
 #define FLAG_DEFEATED_ZINNIA            0x288
 #define FLAG_ENCOUNTERED_ROAMING_LATI   0x289
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
+#define FLAG_BEAT_WALLY_PETALBURG       0x28A
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag
