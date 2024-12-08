@@ -2229,6 +2229,8 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
+SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+
     // Determine original trainer ID
     switch (otIdType)
     {
