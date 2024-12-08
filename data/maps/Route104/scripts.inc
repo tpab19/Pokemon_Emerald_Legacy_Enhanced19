@@ -95,7 +95,7 @@ Route104_EventScript_RivalEncounter::
 
 Route104_EventScript_MayEncounter::
 	goto_if_set FLAG_DEFEATED_RIVAL_ROUTE_104, Route104_EventScript_MayDefeated
-	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_MayAskToBattle
+	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_MayPokedex
 	setflag FLAG_REGISTER_RIVAL_POKENAV
 	msgbox Route104_Text_MayWeShouldRegister, MSGBOX_DEFAULT
 	closemessage
@@ -106,6 +106,7 @@ Route104_EventScript_MayEncounter::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+Route104_EventScript_MayContinue::
 	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_PlayerFaceRival
 	applymovement LOCALID_RIVAL, Route104_Movement_RivalWalkSlowLeft
 	msgbox Route104_Text_MayHowsYourPokedex, MSGBOX_DEFAULT
@@ -119,6 +120,13 @@ Route104_EventScript_MayEncounter::
 	msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
+	end
+
+Route104_EventScript_MayPokedex::
+	goto_if_unset FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_MayContinue
+	msgbox Route104_Text_MayOhHey, MSGBOX_DEFAULT
+	closemessage
+	goto Route104_EventScript_MayContinue
 	end
 
 Route104_Movement_RivalWalkSlowLeft:
@@ -180,7 +188,7 @@ Route104_EventScript_BattleMayMudkip::
 
 Route104_EventScript_BrendanEncounter::
 	goto_if_set FLAG_DEFEATED_RIVAL_ROUTE_104, Route104_EventScript_BrendanDefeated
-	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_BrendanAskToBattle
+	goto_if_set FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_BrendanPokedex
 	setflag FLAG_REGISTER_RIVAL_POKENAV
 	msgbox Route104_Text_BrendanWeShouldRegister, MSGBOX_DEFAULT
 	closemessage
@@ -191,6 +199,7 @@ Route104_EventScript_BrendanEncounter::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
+Route104_EventScript_BrendanContinue::
 	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_PlayerFaceRival
 	applymovement LOCALID_RIVAL, Route104_Movement_RivalWalkSlowLeft
 	msgbox Route104_Text_BrendanHowsYourPokedex, MSGBOX_DEFAULT
@@ -204,6 +213,13 @@ Route104_EventScript_BrendanEncounter::
 	msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
+	end
+
+Route104_EventScript_BrendanPokedex::
+	goto_if_unset FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_BrendanContinue
+	msgbox Route104_Text_BrendanOhHey, MSGBOX_DEFAULT
+	closemessage
+	goto Route104_EventScript_BrendanContinue
 	end
 
 Route104_EventScript_BrendanAskToBattle::
@@ -1085,6 +1101,9 @@ Route104_Text_MayWeShouldRegister:
 	.string "We should register each other so we\n"
 	.string "can get in contact anytime.$"
 
+Route104_Text_MayOhHey:
+	.string "MAY: Oh, hey, {PLAYER}!$"
+
 Route104_Text_RegisteredMay:
 	.string "{PLAYER} registered MAY\n"
 	.string "in the POKéNAV.$"
@@ -1132,6 +1151,9 @@ Route104_Text_BrendanWeShouldRegister:
 	.string "CALL system on your POKéNAV!\p"
 	.string "Let's register each other in our\n"
 	.string "POKéNAVS so we can keep in touch.$"
+
+Route104_Text_BrendanOhHey:
+	.string "BRENDAN: Oh, hey, {PLAYER}!$"
 
 Route104_Text_RegisteredBrendan:
 	.string "{PLAYER} registered BRENDAN\n"
