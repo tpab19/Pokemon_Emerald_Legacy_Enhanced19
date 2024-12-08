@@ -1452,6 +1452,7 @@ const union {
         .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .FRUSTRATION = TRUE,
+        .REFLECT = TRUE,
         .IRON_TAIL = TRUE,
         .RETURN = TRUE,
         .DIG = TRUE,
