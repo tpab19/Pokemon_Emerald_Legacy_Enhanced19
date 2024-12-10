@@ -64,7 +64,7 @@ TerraCave_End_EventScript_Maxie::
 	waitmovement 0
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
 	faceplayer
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
 	msgbox TerraCave_End_Text_MaxieIntro, MSGBOX_DEFAULT
 	closemessage
