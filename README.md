@@ -67,7 +67,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ### Blind Testers:
 - Kewaun
-- SilfertheCanadian
+- SlifertheCanadian
 - Awqweird
 - Mungi
 - Shaun Duz Stuffs
