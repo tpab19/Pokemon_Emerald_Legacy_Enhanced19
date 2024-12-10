@@ -433,13 +433,13 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "I watched as you brought peace to\n"
 	.string "SOOTOPOLIS CITY… A remarkable feat,\l"
 	.string "achieved with your POKéMON by your\l"
-	.string "side."
+	.string "side.\p"
 	.string "We TRAINERS raise POKéMON by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
 	.string "things from POKéMON.\p"
-	.string "You’ve shown the strength of a true\n"
+	.string "You've shown the strength of a true\n"
 	.string "CHAMPION, {PLAYER}{KUN}.\p"
 	.string "But now, your achievements must be\n"
 	.string "put to the ultimate test.\p"
@@ -471,14 +471,14 @@ EverGrandeCity_ChampionsRoom_Text_RematchMayAdvice:
 	.string "Wow! You did it!\n"
 	.string "No advice this time… just congrats!\p"
 	.string "Taking on WALLACE and winning…\n"
-	.string "That’s amazing!$"
+	.string "That's amazing!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBrendanAdvice:
 	.string "BRENDAN: {PLAYER}{KUN}!\p"
 	.string "Wow! You did it!\n"
 	.string "No advice this time… just congrats!\p"
 	.string "Taking on WALLACE and winning…\n"
-	.string "That’s amazing!$"
+	.string "That's amazing!$"
 
 EverGrandeCity_ChampionsRoom_Text_RematchBirchArriveRatePokedex:
 	.string "PROF. BIRCH: Well, {RIVAL}, looks like\n"
