@@ -74,6 +74,10 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Flint'sInfernape
 - Dabrikishaw8008
 - RevRush
+- Flashbang
+- Sam10q
+- Elitegrove
+- Nootathotep
 
 
 ### Sprite Artists:
