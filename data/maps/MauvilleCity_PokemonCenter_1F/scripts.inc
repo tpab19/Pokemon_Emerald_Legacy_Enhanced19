@@ -101,17 +101,17 @@ MauvilleCity_PokemonCenter_1F_Text_MonYouTakeCare:
 	.string "quickly!$"
 
 MauvilleCity_PokemonCenter_1F_Text_ThisIsntAMon:
-	.string "Hm? Wait a moment… That’s not the\n"
+	.string "Hm? Wait a moment… That's not the\n"
 	.string "{STR_VAR_1} I was hoping for!\p"
 	.string "Are you teasing me?$"
 
 MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe:
-	.string "Oh, you don’t want to trade?\p"
-	.string "That’s alright, but if you change your\n"
-	.string "mind, I’d love to find a good partner for\l"
-	.string "my {STR_VAR_2}!$"
+	.string "Oh, you don't want to trade?\p"
+	.string "That's alright, but if you change your\n"
+	.string "mind, I'd love to find a good partner for\l"
+	.string "my SNORUNT!$"
 
 MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces:
 	.string "I know NIPPY will be thrilled to\n"
 	.string "see new places! With a bit of training, I\l"
-	.string "bet it’ll become a real star!$"
+	.string "bet it'll become a real star!$"

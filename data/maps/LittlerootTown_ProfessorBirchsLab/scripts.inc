@@ -1405,7 +1405,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuestCompleted:
 	.string "What!\p"
 	.string "That's incredible! I can't believe you\n"
 	.string "managed to track them all down!\p"
-	.string "It’s amazing how adaptable they are!\p"
+	.string "It's amazing how adaptable they are!\p"
 	.string "Thanks to your efforts, my research is\n"
 	.string "already taking shape. This data will\l"
 	.string "help me train my own KECLEON to be even\l"
@@ -1423,8 +1423,8 @@ LittlerootTown_ProfessorBirchsLab_Text_GotBulbasaur:
 
 LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuest:
 	.string "Oh, {PLAYER}{KUN}!\n"
-	.string "I was hoping you’d stop by.\p"
-	.string "I’ve been looking into the effects of\n"
+	.string "I was hoping you'd stop by.\p"
+	.string "I've been looking into the effects of\n"
 	.string "different sounds on POKéMON behavior.\p"
 	.string "Particularly how certain flutes seem to\n"
 	.string "influence their moods and focus.\p"
@@ -1433,25 +1433,25 @@ LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuest:
 	.string "Could you track down a RED FLUTE, a\n"
 	.string "BLUE FLUTE, and a YELLOW FLUTE and\l"
 	.string "bring them here?\p"
-	.string "If you do, I’ve got a special reward\n"
+	.string "If you do, I've got a special reward\n"
 	.string "waiting for you!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuestCompleted:
 	.string "Wow!\p"
 	.string "You actually found all three flutes!\n"
 	.string "That's incredible, {PLAYER}{KUN}!\p"
-	.string "I can’t wait to study their effects up\n"
+	.string "I can't wait to study their effects up\n"
 	.string "close and compare how each one\l"
 	.string "interacts with different POKéMON.\p"
-	.string "You’ve done a huge service to my\n"
+	.string "You've done a huge service to my\n"
 	.string "research,\p"
-	.string "As promised, here’s your reward.$"
+	.string "As promised, here's your reward.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedCharmander:
 	.string "{PLAYER} received CHARMANDER!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GotCharmander:
-	.string "I know it’ll be in great hands with you!\p"
+	.string "I know it'll be in great hands with you!\p"
 	.string "Take good care of it, and keep up the\n"
 	.string "amazing work out there!$"
 
@@ -1460,7 +1460,7 @@ LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuest:
 	.string "hoping would drop by!\p"
 	.string "I've been curious about the unique way\n"
 	.string "certain POKéMON can recall moves that\l"
-	.string "others of their species can’t.\p"
+	.string "others of their species can't.\p"
 	.string "I think it has something to do with\n"
 	.string "HEART SCALES, which seem to unlock\l"
 	.string "hidden potential in them.\p"
@@ -1480,9 +1480,9 @@ LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuestCompleted:
 	.string "With this, I can better understand how\n"
 	.string "certain POKéMON tap into their unique\l"
 	.string "move sets during evolution.\p"
-	.string "You’ve really outdone yourself, and\n"
-	.string "your timing couldn’t be better!\p"
-	.string "Now, as promised, here’s your reward!$"
+	.string "You've really outdone yourself, and\n"
+	.string "your timing couldn't be better!\p"
+	.string "Now, as promised, here's your reward!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedSquirtle:
 	.string "{PLAYER} received SQUIRTLE!$"
@@ -1490,5 +1490,5 @@ LittlerootTown_ProfessorBirchsLab_Text_PlayerReceivedSquirtle:
 LittlerootTown_ProfessorBirchsLab_Text_GotSquirtle:
 	.string "Take good care of this SQUIRTLE,\n"
 	.string "alright?\p"
-	.string "I have no doubt it’ll be a loyal friend\l"
+	.string "I have no doubt it'll be a loyal friend\l"
 	.string "on your journey!$"
