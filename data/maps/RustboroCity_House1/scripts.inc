@@ -66,7 +66,7 @@ RustboroCity_House1_Text_DoesntLookLikeMonToMe:
 	.string "{STR_VAR_1} to me…$"
 
 RustboroCity_House1_Text_YouDontWantToThatsOkay:
-	.string "Oh, that’s fine if you don’t want to.\n"
+	.string "Oh, that's fine if you don't want to.\n"
 	.string "NUMEL will always be my little explorer.$"
 
 RustboroCity_House1_Text_AnyPokemonCanBeCute:

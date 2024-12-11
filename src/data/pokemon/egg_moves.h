@@ -1282,7 +1282,8 @@ const u16 gEggMoves[] = {
               MOVE_ENDEAVOR,
               MOVE_BODY_SLAM,
               MOVE_STOMP,
-              MOVE_SMELLING_SALT),
+              MOVE_SMELLING_SALT,
+              MOVE_ANCIENT_POWER),
 
     egg_moves(CASTFORM,
               MOVE_FUTURE_SIGHT,

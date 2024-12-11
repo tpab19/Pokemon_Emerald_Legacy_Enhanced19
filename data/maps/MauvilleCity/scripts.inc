@@ -471,6 +471,9 @@ MauvilleCity_EventScript_CompletedNewMauville::
 	giveitem ITEM_TM_THUNDERBOLT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON
+	clearflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
+	setflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
+	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	msgbox MauvilleCity_Text_WattsonYoungTakeCharge, MSGBOX_DEFAULT
 	release
 	end

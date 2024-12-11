@@ -13,6 +13,7 @@ enum
     PAGE_EL_PLAYTESTERS_3,
     PAGE_EL_BLIND_TESTERS_1,
     PAGE_EL_BLIND_TESTERS_2,
+    PAGE_EL_BLIND_TESTERS_3,
     PAGE_EL_SPRITE_ARTISTS,
     PAGE_EL_OTHER_CREDITS,
     PAGE_EL_PRET_CREDITS,
@@ -124,6 +125,10 @@ static const u8 sCreditsText_ShaunDuzStuffs[]                = _("Shaun Duz Stuf
 static const u8 sCreditsText_FlintsInfernape[]               = _("Flint'sInfernape");
 static const u8 sCreditsText_Dabrikishaw8008[]               = _("Dabrikishaw8008");
 static const u8 sCreditsText_RevRush[]                       = _("RevRush");
+static const u8 sCreditsText_Flashbang[]                     = _("Flashbang");
+static const u8 sCreditsText_Sam10q[]                        = _("Sam10q");
+static const u8 sCreditsText_Elitegrove[]                    = _("Elitegrove");
+static const u8 sCreditsText_Nootathotep[]                   = _("Nootathotep");
 
 static const u8 sCreditsText_SpriteArtists[]                 = _("Sprite Artists");
 
@@ -373,6 +378,10 @@ static const struct CreditsEntry sCreditsEntry_ShaunDuzStuffs                   
 static const struct CreditsEntry sCreditsEntry_FlintsInfernape                  = { 6,  FALSE, sCreditsText_FlintsInfernape};
 static const struct CreditsEntry sCreditsEntry_Dabrikishaw8008                  = { 7,  FALSE, sCreditsText_Dabrikishaw8008};
 static const struct CreditsEntry sCreditsEntry_RevRush                          = {12,  FALSE, sCreditsText_RevRush};
+static const struct CreditsEntry sCreditsEntry_Flashbang                        = {10,  FALSE, sCreditsText_Flashbang};
+static const struct CreditsEntry sCreditsEntry_Sam10q                           = {11,  FALSE, sCreditsText_Sam10q};
+static const struct CreditsEntry sCreditsEntry_Elitegrove                       = { 9,  FALSE, sCreditsText_Elitegrove};
+static const struct CreditsEntry sCreditsEntry_Nootathotep                      = { 7,  FALSE, sCreditsText_Nootathotep};
 static const struct CreditsEntry sCreditsEntry_SpriteArtists                    = { 8,  TRUE, sCreditsText_SpriteArtists};
 static const struct CreditsEntry sCreditsEntry_MusicCredits                     = { 8,  TRUE, sCreditsText_MusicCredits};
 static const struct CreditsEntry sCreditsEntry_VsZinnia1                        = {10,  FALSE, sCreditsText_VsZinnia1};
@@ -671,6 +680,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_FlintsInfernape,
         &sCreditsEntry_Dabrikishaw8008,
         &sCreditsEntry_RevRush,
+    },
+    [PAGE_EL_BLIND_TESTERS_3] = {
+        &sCreditsEntry_BlindTesters,
+        &sCreditsEntry_Flashbang,
+        &sCreditsEntry_Sam10q,
+        &sCreditsEntry_Elitegrove,
+        &sCreditsEntry_Nootathotep,
     },
     [PAGE_EL_OTHER_CREDITS] = {
         &sCreditsEntry_OtherCredits,
