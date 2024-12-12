@@ -779,15 +779,15 @@ struct
         .fixedIV = MAX_PER_STAT_IVS,
         .level = 42,
         .nature = NATURE_ADAMANT,
-        .evs = {0, 252, 0, 0, 252, 6},
-        .moves = {MOVE_ROCK_BLAST, MOVE_IRON_TAIL, MOVE_SOLAR_BEAM, MOVE_THUNDERBOLT}
+        .evs = {0, 0, 0, 0, 0, 0},
+        .moves = {MOVE_PROTECT, MOVE_IRON_TAIL, MOVE_SOLAR_BEAM, MOVE_THUNDERBOLT}
     },
     {
         .species = SPECIES_SKARMORY,
         .fixedIV = MAX_PER_STAT_IVS,
         .level = 42,
         .nature = NATURE_IMPISH,
-        .evs = {252, 0, 0, 0, 6, 252},
+        .evs = {0, 0, 0, 0, 0, 0},
         .moves = {MOVE_MUD_SLAP, MOVE_DRILL_PECK, MOVE_PROTECT, MOVE_STEEL_WING}
     },
     {
@@ -795,7 +795,7 @@ struct
         .fixedIV = MAX_PER_STAT_IVS,
         .level = 45,
         .nature = NATURE_DOCILE,
-        .evs = {100, 100, 100, 0, 100, 100},
+        .evs = {0, 0, 0, 0, 0, 0},
         .moves = {MOVE_REFLECT, MOVE_THUNDER_PUNCH, MOVE_PSYCHIC, MOVE_METAL_CLAW}
     }
 };

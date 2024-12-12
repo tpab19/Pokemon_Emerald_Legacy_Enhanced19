@@ -817,6 +817,7 @@ static const u16 sRarePickupItems[] =
     ITEM_TM_ICE_BEAM,
     ITEM_TM_THUNDERBOLT,
     ITEM_TM_EARTHQUAKE,
+    ITEM_RARE_CANDY,
 };
 
 static const u8 sPickupProbabilities[] =
