@@ -8329,7 +8329,7 @@ static const struct TrainerMon sParty_TabithaMtChimney[] = {
     .iv = 50,
     .lvl = 26,
     .species = SPECIES_ZANGOOSE,
-    .moves = {MOVE_SLASH, MOVE_PURSUIT, MOVE_BULK_UP, MOVE_QUICK_ATTACK}
+    .moves = {MOVE_SLASH, MOVE_PURSUIT, MOVE_METAL_CLAW, MOVE_QUICK_ATTACK}
     }
 };
 // Route 132 CooltrainerM
@@ -10494,7 +10494,7 @@ static const struct TrainerMon sParty_TabithaMagmaHideout[] = {
     .iv = 50,
     .lvl = 37,
     .species = SPECIES_ZANGOOSE,
-    .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_BULK_UP, MOVE_METAL_CLAW}
+    .moves = {MOVE_CRUSH_CLAW, MOVE_FAINT_ATTACK, MOVE_SWORDS_DANCE, MOVE_METAL_CLAW}
     }
 };
 // Route 132 CooltrainerF
