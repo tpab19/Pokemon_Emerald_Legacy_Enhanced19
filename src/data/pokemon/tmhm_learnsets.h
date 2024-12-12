@@ -9332,7 +9332,6 @@ const union {
         .WATER_PULSE = TRUE,
         .ROAR = TRUE,
         .TOXIC = TRUE,
-        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .TAUNT = TRUE,
