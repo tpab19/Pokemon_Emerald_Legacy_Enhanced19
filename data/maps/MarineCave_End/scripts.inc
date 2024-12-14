@@ -30,9 +30,7 @@ MarineCave_End_EventScript_ShowKyogre::
 
 MarineCave_End_EventScript_Kyogre::
 	lockall
-	goto_if_set FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_BeatArchie
 	call MarineCave_End_EventScript_Archie
-MarineCave_End_EventScript_BeatArchie::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	applymovement LOCALID_KYOGRE, MarineCave_End_Movement_KyogreApproach
@@ -66,10 +64,12 @@ MarineCave_End_EventScript_Archie::
 	faceplayer
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 	waitmovement 0
+	goto_if_set FLAG_BEAT_ARCHIE_MARINE_CAVE, MarineCave_End_EventScript_ArchiePostBattle
 	msgbox MarineCave_End_Text_ArchieIntro, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_ARCHIE
 	trainerbattle_no_intro TRAINER_ARCHIE_MARINE_CAVE, MarineCave_End_Text_ArchieDefeat
+MarineCave_End_EventScript_ArchiePostBattle::
 	msgbox MarineCave_End_Text_ArchiePostBattle, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_BEAT_ARCHIE_MARINE_CAVE

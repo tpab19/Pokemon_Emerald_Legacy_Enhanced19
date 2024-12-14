@@ -30,7 +30,6 @@ TerraCave_End_EventScript_ShowGroudon::
 
 TerraCave_End_EventScript_Groudon::
 	lockall
-	goto_if_set FLAG_BEAT_MAXIE_TERRA_CAVE, MarineCave_End_EventScript_BeatMaxie
 	call TerraCave_End_EventScript_Maxie
 MarineCave_End_EventScript_BeatMaxie::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
@@ -66,10 +65,12 @@ TerraCave_End_EventScript_Maxie::
 	faceplayer
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
+	goto_if_set FLAG_BEAT_MAXIE_TERRA_CAVE, MarineCave_End_EventScript_MaxiePostBattle
 	msgbox TerraCave_End_Text_MaxieIntro, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_LAST_TALKED, LOCALID_MAXIE
 	trainerbattle_no_intro TRAINER_MAXIE_TERRA_CAVE, TerraCave_End_Text_MaxieDefeat
+MarineCave_End_EventScript_MaxiePostBattle::
 	msgbox TerraCave_End_Text_MaxiePostBattle, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_BEAT_MAXIE_TERRA_CAVE
