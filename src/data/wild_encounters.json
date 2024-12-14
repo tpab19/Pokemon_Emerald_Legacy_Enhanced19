@@ -1990,13 +1990,13 @@
               },
               {
                 "min_level": 17,
-                "max_level": 17,
-                "species": "SPECIES_NIDORINA"
+                "max_level": 18,
+                "species": "SPECIES_PHANPY"
               },
               {
                 "min_level": 17,
                 "max_level": 17,
-                "species": "SPECIES_NUMEL"
+                "species": "SPECIES_NIDORINA"
               },
               {
                 "min_level": 17,
@@ -2794,7 +2794,7 @@
               {
                 "min_level": 15,
                 "max_level": 16,
-                "species": "SPECIES_PHANPY"
+                "species": "SPECIES_SANDSHREW"
               },
               {
                 "min_level": 16,
