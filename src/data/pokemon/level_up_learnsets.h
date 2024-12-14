@@ -4506,6 +4506,7 @@ static const u16 sShiftryLevelUpLearnset[] = {
     LEVEL_UP_MOVE(40, MOVE_RAZOR_WIND),
     LEVEL_UP_MOVE(46, MOVE_LEAF_BLADE),
     LEVEL_UP_MOVE(49, MOVE_EXTRASENSORY),
+    LEVEL_UP_END
 };
 
 static const u16 sNincadaLevelUpLearnset[] = {
