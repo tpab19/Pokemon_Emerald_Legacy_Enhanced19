@@ -16,7 +16,7 @@ Without any further ado, below are the features added to Base Patch (main branch
 
 ## Base Patch - Enhanced Starters (Haven't yet worked backwards to separate! The Current 1.0.0 Patch is still Enhanced Starters I am currently working on updating so that the Base Patch is much closer to Pokémon Emerald Legacy):
 
-An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn Starters. For the most balanced version, please use the original version! This version is just to feed into the childhood nostalgia feeling of having an overpowered starter throughout the game and to catch all the starters early in the game. A few other quality of life features have been included in this version not directly related to the Starters.
+An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn Starters. For the most balanced version, please use the original version! This version is just to feed into the childhood nostalgia feeling of having an overpowered starter throughout the game and to catch all the starters early in the game.
 
 ### Implemented Changes
 * Added starters to following routes for increased availability:
