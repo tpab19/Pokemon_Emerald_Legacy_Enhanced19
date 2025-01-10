@@ -1364,6 +1364,13 @@ PetalburgCity_Gym_Text_ExplainFacade:
 	.string "It might be able to turn a bad\n"
 	.string "situation into an advantage.$"
 
+PetalburgCity_Gym_Text_ExplainMint:
+	.string "DAD: I thought you might also like this\n"
+	.string "SERIOUS MINT. The Flower Shop north of\l"
+	.string "Petalburg Woods has started selling\l"
+	.string "them and other MINTS, they can be used\l"
+	.string "to balance your POKéMON's stats.$"
+
 PetalburgCity_Gym_Text_DadHappyAndSad:
 	.string "DAD: As the GYM LEADER, I can't\n"
 	.string "express how upset I am…\p"
