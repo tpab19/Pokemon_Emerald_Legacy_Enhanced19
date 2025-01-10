@@ -595,7 +595,7 @@ static const u8 sText_MonLevel[]         = _("Lv.{CLEAR 1}{STR_VAR_1}");
 
 static const u8 sText_MenuLRButtonTextMain[]   = _("Cycle Party");
 static const u8 sText_MenuAButtonTextMain[]    = _("Edit Stats");
-static const u8 sText_MenuBButtonTextMain[]    = _("Back");
+static const u8 sText_MenuBButtonTextMain[]    = _("Save & Back");
 static const u8 sText_MenuDPadButtonTextMain[] = _("Change Stat");
 
 #define BUTTON_Y 4
