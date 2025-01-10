@@ -106,6 +106,9 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
   * **Note:** Save file compatibility with Emerald Legacy will work, however any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats until they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature.
   * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
 
+### WIP Tracker: Changes added to main branch
+* Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
+
 ### Changes being considered (No guarantee of implementation):
 * Allow Signature Moves to substitute as specific Field Moves:
   * Leaf Blade:
