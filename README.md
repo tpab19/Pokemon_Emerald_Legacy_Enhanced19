@@ -142,6 +142,7 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
 * (Very far in future) Adding a user option at start of New Game to enable to enable/disable Treeko line Dragon Typing changes.
 * Implement Expanded Register Item List
   * May impact save compability between Base Emerald Legacy
+* Add Egg Move Tutor to game
 
 # Pokémon Emerald Legacy
 
