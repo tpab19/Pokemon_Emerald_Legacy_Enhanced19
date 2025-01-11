@@ -96,11 +96,6 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
 * Added Select as shortcut to swap Pokemon in Party
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
-* Low Health beep reduced to three beeps and not loop infinitely.
-  * Source [Tweaking the count of health beeps
-](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
-* Added Select as shortcut to swap Pokemon in Party
-  * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
 
 ### Additional Implemented Changes in Optional Patch: Stat Editor and Nature Mints
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
@@ -133,6 +128,8 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
 * Updated Options Menu to add ability to enable or disable Bike and Surf Music.
   * Credits to [TheXaman](https://www.pokecommunity.com/members/thexaman.743189/), [DizzyEgg](https://github.com/DizzyEggg), [Lunos](https://www.pokecommunity.com/members/lunos.114506/), [AsparagusEduardo](https://github.com/AsparagusEduardo), and [ella_trifle/ellabrella](https://www.pokecommunity.com/members/ellabrella.751712/) for [New Options Plus ‐ Multipage Options Menu](https://github.com/pret/pokeemerald/wiki/New-Options-Plus-%E2%80%90-Multipage-Options-Menu-with-Faster-Text,-HP%E2%80%90EXP-Bar-Speeds-and-Metric)
+* Reduced in-battle item use animation
+  * Credit to [KyuZee](https://github.com/kyuzeemctree) for [Speed Up Held Item Animation](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Speed-Up-Held-Item-Animation)
 
 ### Changes being considered (No guarantee of implementation):
 * Allow Signature Moves to substitute as specific Field Moves:
