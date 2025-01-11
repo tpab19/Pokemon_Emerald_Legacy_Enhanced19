@@ -96,6 +96,8 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
+    gSaveBlock2Ptr->optionsBikeMusic = FALSE; // Added flag for Bike Music toggle (defaults to on with FALSE)
+    gSaveBlock2Ptr->optionsSurfMusic = FALSE; // Added flag for Surf Music toggle (defaults to on with FALSE)
 }
 
 static void ClearPokedexFlags(void)
