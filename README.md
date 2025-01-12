@@ -131,7 +131,7 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
 * Reduced in-battle item use animation
   * Credit to [KyuZee](https://github.com/kyuzeemctree) for [Speed Up Held Item Animation](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Speed-Up-Held-Item-Animation)
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
-  * Credit to [Scyrous](https://github.com/Scyrous), Yak Attack, [Kurausukun](https://github.com/Kurausukun), andZatsu for [Make Move Relearner Teach Egg Moves With A Flag](https://github.com/pret/pokeemerald/wiki/Make-Move-Relearner-Teach-Egg-Moves-With-A-Flag)
+  * Credit to [Scyrous](https://github.com/Scyrous), Yak Attack, [Kurausukun](https://github.com/Kurausukun), and Zatsu for [Make Move Relearner Teach Egg Moves With A Flag](https://github.com/pret/pokeemerald/wiki/Make-Move-Relearner-Teach-Egg-Moves-With-A-Flag)
 
 ### Changes being considered (No guarantee of implementation):
 * Allow Signature Moves to substitute as specific Field Moves:
