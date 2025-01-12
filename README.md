@@ -132,6 +132,9 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
   * Credit to [KyuZee](https://github.com/kyuzeemctree) for [Speed Up Held Item Animation](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Speed-Up-Held-Item-Animation)
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
   * Credit to [Scyrous](https://github.com/Scyrous), Yak Attack, [Kurausukun](https://github.com/Kurausukun), and Zatsu for [Make Move Relearner Teach Egg Moves With A Flag](https://github.com/pret/pokeemerald/wiki/Make-Move-Relearner-Teach-Egg-Moves-With-A-Flag)
+* Added Multi item Register Menu. One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
+  * Note: Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
+  * Credits to [TheXaman](https://www.pokecommunity.com/members/thexaman.743189/), [RavePossum](https://github.com/RavePossum), and [iriv24](https://github.com/iriv24) for [Modified "register items in a list menu"](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Feature-Branches/#iriv24tx_registered_items_menu) 
 
 ### Changes being considered (No guarantee of implementation):
 * Allow Signature Moves to substitute as specific Field Moves:
@@ -142,8 +145,6 @@ An expansion on the Pokemon Emerald Legacy Project which further buffs the Hoenn
   * Muddy Water:
     * Able to be used as Surf outside of battle
 * (Very far in future) Adding a user option at start of New Game to enable to enable/disable Treeko line Dragon Typing changes.
-* Implement Expanded Register Item List
-  * May impact save compability between Base Emerald Legacy
 * Add Egg Move Tutor to game
 
 # Pokémon Emerald Legacy
