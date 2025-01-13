@@ -17,7 +17,7 @@ Some simple Quality of Life features are included in the base patch (such as usi
 
 This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version. This isn't at that point yet with all branches currently included "Enhanced Starters" branch at base.
 
-The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creatures as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
+The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creators as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
 
 Without any further ado, below are the features added to Base Patch (main branch):
 
