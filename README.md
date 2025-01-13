@@ -4,18 +4,18 @@ Pokémon Emerald Legacy Enhanced is an fork of Pokémon Emerald Legacy by [TheSm
 
 I have **no official affiliation** with TheSmithPlays or his incredible project team, I'm just a single developer fan who wanted to make my own flavour of Emerald Legacy with the greatest respect for the fantastic version of Emerald the team has already built. I look to regularly pull in any updates or fixes from the base Pokémon Emerald Legacy whenever the project team publishes.
 
-Some simple Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokemon able to learn the move (not taking up a move slot) to use them), whilst some larger additions will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffs signature moves.)
+Some simple Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokemon able to learn the move (not taking up a move slot) to use them), whilst some larger additions will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffed signature moves.)
 
 **Note:** Save files should be compatible from base Pokémon Emerald Legacy, but please do keep a backup prior to moving and if there ar eany bugs or problems feel free to report an [Issue](https://github.com/Exclsior/Pokemon_Emerald_Legacy_Enhanced/issues).
 
-## Download and Play
+### Download and Play
 
 * To download the patch, see [RELEASES](https://github.com/Exclsior/Pokemon_Emerald_Legacy_Enhanced/releases) and download the zip file for the latest patch. Unzip the folder, then follow the instructions in one of the readme files in the `README` file.
 * To set up the repository, see [INSTALL.md](INSTALL.md).
 
 ### For the tech-savvy
 
-This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version. This isn't at that point yet with all branches currently included "Enhanced Starters" branch at base.
+This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version.
 
 The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creators as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
 
