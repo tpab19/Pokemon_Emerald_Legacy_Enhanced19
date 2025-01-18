@@ -44,6 +44,7 @@ enum
     //MENUITEM_CUSTOM_EXP_BAR,
     MENUITEM_CUSTOM_BIKEMUSIC,
     MENUITEM_CUSTOM_SURFMUSIC,
+    MENUITEM_CUSTOM_ITEMANIMATE,
     MENUITEM_CUSTOM_CANCEL,
     MENUITEM_CUSTOM_COUNT,
 };
@@ -164,6 +165,7 @@ static void DrawChoices_ButtonMode(int selection, int y);
 //static void DrawChoices_UnitSystem(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_SurfMusic(int selection, int y);
+static void DrawChoices_ItemAnimate(int selection, int y);
 static void DrawChoices_FrameType(int selection, int y);
 static void DrawBgWindowFrames(void);
 
@@ -215,8 +217,9 @@ struct // MENU_CUSTOM
 {
 //    [MENUITEM_CUSTOM_HP_BAR]       = {DrawChoices_BarSpeed,    ProcessInput_Options_Eleven},
 //    [MENUITEM_CUSTOM_EXP_BAR]      = {DrawChoices_BarSpeed,    ProcessInput_Options_Eleven},
-    [MENUITEM_CUSTOM_BIKEMUSIC]    = {DrawChoices_BikeMusic,   ProcessInput_Options_Two}, 
+    [MENUITEM_CUSTOM_BIKEMUSIC]    = {DrawChoices_BikeMusic,   ProcessInput_Options_Two},
     [MENUITEM_CUSTOM_SURFMUSIC]    = {DrawChoices_SurfMusic,   ProcessInput_Options_Two},
+    [MENUITEM_CUSTOM_ITEMANIMATE]  = {DrawChoices_ItemAnimate,   ProcessInput_Options_Four},
     [MENUITEM_CUSTOM_CANCEL]       = {NULL, NULL},
 };
 
@@ -242,6 +245,7 @@ static const u8 *const sOptionMenuItemsNamesCustom[MENUITEM_CUSTOM_COUNT] =
 //    [MENUITEM_CUSTOM_EXP_BAR]     = sText_ExpBar,
     [MENUITEM_CUSTOM_BIKEMUSIC]   = gText_BikeMusic,
     [MENUITEM_CUSTOM_SURFMUSIC]   = gText_SurfMusic,
+    [MENUITEM_CUSTOM_ITEMANIMATE]   = gText_ItemAnimate,
     [MENUITEM_CUSTOM_CANCEL]      = gText_OptionMenuSave,
 };
 
@@ -279,6 +283,7 @@ static bool8 CheckConditions(int selection)
         //case MENUITEM_CUSTOM_EXP_BAR:         return TRUE;
         case MENUITEM_CUSTOM_BIKEMUSIC:       return TRUE;
         case MENUITEM_CUSTOM_SURFMUSIC:       return TRUE;
+        case MENUITEM_CUSTOM_ITEMANIMATE:     return TRUE;
         case MENUITEM_CUSTOM_CANCEL:          return TRUE;
         case MENUITEM_CUSTOM_COUNT:           return TRUE;
         }
@@ -320,16 +325,21 @@ static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music\nwh
 static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music\nwhen using SURF.");
 static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music\nwhen riding the BIKE.");
 static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music\nwhen riding the BIKE.");
+static const u8 sText_Desc_ItemAnimateNormal[]  = _("Original in-battle item animation.\nNo change from original Emerald.");
+static const u8 sText_Desc_ItemAnimateRed[]     = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
+static const u8 sText_Desc_ItemAnimateMin[]     = _("Minimal in-battle item animation.\nOnly the final ring animation.");
+static const u8 sText_Desc_ItemAnimateNone[]    = _("No in-battle item animation.\nAnimation skipped.");
 //static const u8 sText_Desc_FontType[]           = _("Choose the font design.");
 //static const u8 sText_Desc_OverworldCallsOn[]   = _("TRAINERs will be able to call you,\noffering rematches and info.");
 //static const u8 sText_Desc_OverworldCallsOff[]  = _("You will not receive calls.\nSpecial events will still occur.");
-static const u8 *const sOptionMenuItemDescriptionsCustom[MENUITEM_CUSTOM_COUNT][2] =
+static const u8 *const sOptionMenuItemDescriptionsCustom[MENUITEM_CUSTOM_COUNT][4] =
 {
     //[MENUITEM_CUSTOM_HP_BAR]      = {sText_Desc_BattleHPBar,        sText_Empty},
     //[MENUITEM_CUSTOM_EXP_BAR]     = {sText_Desc_BattleExpBar,       sText_Empty},
-    [MENUITEM_CUSTOM_BIKEMUSIC]   = {sText_Desc_BikeOn,             sText_Desc_BikeOff},
-    [MENUITEM_CUSTOM_SURFMUSIC]   = {sText_Desc_SurfOn,             sText_Desc_SurfOff},
-    [MENUITEM_CUSTOM_CANCEL]      = {sText_Desc_Save,               sText_Empty},
+    [MENUITEM_CUSTOM_BIKEMUSIC]   = {sText_Desc_BikeOn,             sText_Desc_BikeOff,         sText_Empty,                sText_Empty},
+    [MENUITEM_CUSTOM_SURFMUSIC]   = {sText_Desc_SurfOn,             sText_Desc_SurfOff,         sText_Empty,                sText_Empty},
+    [MENUITEM_CUSTOM_ITEMANIMATE] = {sText_Desc_ItemAnimateNormal,  sText_Desc_ItemAnimateRed,  sText_Desc_ItemAnimateMin,  sText_Desc_ItemAnimateNone},
+    [MENUITEM_CUSTOM_CANCEL]      = {sText_Desc_Save,               sText_Empty,                sText_Empty,                sText_Empty},
 };
 
 // Disabled Descriptions
@@ -599,6 +609,7 @@ void CB2_InitOptionPlusMenu(void)
         //sOptions->sel_custom[MENUITEM_CUSTOM_EXP_BAR]     = gSaveBlock2Ptr->optionsExpBarSpeed;
         sOptions->sel_custom[MENUITEM_CUSTOM_BIKEMUSIC]   = gSaveBlock2Ptr->optionsBikeMusic;
         sOptions->sel_custom[MENUITEM_CUSTOM_SURFMUSIC]   = gSaveBlock2Ptr->optionsSurfMusic;
+        sOptions->sel_custom[MENUITEM_CUSTOM_ITEMANIMATE]   = gSaveBlock2Ptr->optionsBattleItemAnimation;
 
         sOptions->submenu = MENU_MAIN;
 
@@ -776,18 +787,19 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 
 static void Task_OptionMenuSave(u8 taskId)
 {
-    gSaveBlock2Ptr->optionsTextSpeed        = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
-    gSaveBlock2Ptr->optionsBattleSceneOff   = sOptions->sel[MENUITEM_MAIN_BATTLESCENE];
-    gSaveBlock2Ptr->optionsBattleStyle      = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE];
-    gSaveBlock2Ptr->optionsSound            = sOptions->sel[MENUITEM_MAIN_SOUND];
-    gSaveBlock2Ptr->optionsButtonMode       = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
+    gSaveBlock2Ptr->optionsTextSpeed            = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
+    gSaveBlock2Ptr->optionsBattleSceneOff       = sOptions->sel[MENUITEM_MAIN_BATTLESCENE];
+    gSaveBlock2Ptr->optionsBattleStyle          = sOptions->sel[MENUITEM_MAIN_BATTLESTYLE];
+    gSaveBlock2Ptr->optionsSound                = sOptions->sel[MENUITEM_MAIN_SOUND];
+    gSaveBlock2Ptr->optionsButtonMode           = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
     //gSaveBlock2Ptr->optionsUnitSystem       = sOptions->sel[MENUITEM_MAIN_UNIT_SYSTEM];
-    gSaveBlock2Ptr->optionsWindowFrameType  = sOptions->sel[MENUITEM_MAIN_FRAMETYPE];
+    gSaveBlock2Ptr->optionsWindowFrameType      = sOptions->sel[MENUITEM_MAIN_FRAMETYPE];
 
     //gSaveBlock2Ptr->optionsHpBarSpeed       = sOptions->sel_custom[MENUITEM_CUSTOM_HP_BAR];
     //gSaveBlock2Ptr->optionsExpBarSpeed      = sOptions->sel_custom[MENUITEM_CUSTOM_EXP_BAR];
-    gSaveBlock2Ptr->optionsBikeMusic        = sOptions->sel_custom[MENUITEM_CUSTOM_BIKEMUSIC];
-    gSaveBlock2Ptr->optionsSurfMusic        = sOptions->sel_custom[MENUITEM_CUSTOM_SURFMUSIC];
+    gSaveBlock2Ptr->optionsBikeMusic            = sOptions->sel_custom[MENUITEM_CUSTOM_BIKEMUSIC];
+    gSaveBlock2Ptr->optionsSurfMusic            = sOptions->sel_custom[MENUITEM_CUSTOM_SURFMUSIC];
+    gSaveBlock2Ptr->optionsBattleItemAnimation  = sOptions->sel_custom[MENUITEM_CUSTOM_ITEMANIMATE];
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -1146,6 +1158,13 @@ static void DrawChoices_SurfMusic(int selection, int y)
 
     DrawOptionMenuChoice(gText_SurfMusicOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_SurfMusicOff, GetStringRightAlignXOffset(1, gText_SurfMusicOff, 198), y, styles[1], active);
+}
+
+static const u8 *const sTextItemAnimateStrings[] = {gText_ItemAnimateNormal, gText_ItemAnimateReduced, gText_ItemAnimateMinimal, gText_ItemAnimateNone};
+static void DrawChoices_ItemAnimate(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_CUSTOM_ITEMANIMATE);
+    DrawChoices_Options_Four(sTextItemAnimateStrings, selection, y, active);
 }
 
 // Background tilemap
