@@ -321,10 +321,10 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 // Custom
 //static const u8 sText_Desc_BattleHPBar[]        = _("Choose how fast the HP BAR will get\ndrained in battles.");
 //static const u8 sText_Desc_BattleExpBar[]       = _("Choose how fast the EXP BAR will get\nfilled in battles.");
-static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music\nwhen using SURF.");
-static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music\nwhen using SURF.");
-static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music\nwhen riding the BIKE.");
-static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music\nwhen riding the BIKE.");
+static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music when you\nstart surfing on a POKéMON.");
+static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music when you\nstart surfing on a POKéMON.");
+static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music when you\nstart riding the BIKE.");
+static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_ItemAnimateNormal[]  = _("Original in-battle item animation.\nNo change from original Emerald.");
 static const u8 sText_Desc_ItemAnimateRed[]     = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
 static const u8 sText_Desc_ItemAnimateMin[]     = _("Minimal in-battle item animation.\nOnly the final ring animation.");
