@@ -36,8 +36,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
 * Low Health beep reduced to three beeps and not loop infinitely.
 * Added Select as shortcut to swap Pokemon in Party
-* Updated Options Menu to add ability to enable or disable Bike and Surf Music.
-* Reduced in-battle item use animation
+* Updated Options Menu with below additional options:
+  * Ability to enable or disable Bike Music.
+  * Ability to enable or disable Surf Music.
+  * Ability to reduce or turn off in-battle item use animation.
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
