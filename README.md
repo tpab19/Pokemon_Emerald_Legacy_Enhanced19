@@ -203,9 +203,11 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Starter ability battle feedback (potentially infeasible)
 * Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
-* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu
+* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
 * Shiny mini sprites for PC and Party Menu (I assume somebody has done this, but haven't yet been able to find it, may be infeasible to implement)
+* Add Deepseascale and Deepseatooth to wild clamperl encounters
+* Add item drop on wild pokemon fainting
 * (Surprise feature - watch this space!)
 
 ## Enhanced Credits List:
