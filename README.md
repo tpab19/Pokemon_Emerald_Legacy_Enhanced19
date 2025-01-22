@@ -185,7 +185,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 ## Potential Features to add (No guarantee, just to log potential features, any could be dropped if too difficult or otherwise infeasible)
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
-* Option to turn on/off reduction to in-game item use animation
 * Starter ability battle feedback (potentially infeasible)
 * Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
