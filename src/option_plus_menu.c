@@ -329,10 +329,6 @@ static bool8 CheckConditions(int selection)
 static const u8 sText_Empty[]                   = _("");
 static const u8 sText_Desc_Save[]               = _("Save your settings.");
 static const u8 sText_Desc_TextSpeed[]          = _("Choose one of the three text-display\nspeeds.");
-static const u8 sText_Desc_BattleScene_On[]     = _("Show the POKéMON battle animations.");
-static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the POKéMON battle animations.");
-static const u8 sText_Desc_BattleStyle_Shift[]  = _("Get the option to switch your\nPOKéMON after the enemy's faints.");
-static const u8 sText_Desc_BattleStyle_Set[]    = _("No free switch after fainting the\nenemy's POKéMON.");
 static const u8 sText_Desc_SoundMono[]          = _("Sound is the same in all speakers.\nRecommended for original hardware.");
 static const u8 sText_Desc_SoundStereo[]        = _("Play the left and right audio channel\nseperately. Great with headphones.");
 static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
@@ -354,10 +350,10 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 // Battle
 //static const u8 sText_Desc_BattleHPBar[]        = _("Choose how fast the HP BAR will get\ndrained in battles.");
 //static const u8 sText_Desc_BattleExpBar[]       = _("Choose how fast the EXP BAR will get\nfilled in battles.");
-static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music when you\nstart surfing on a POKéMON.");
-static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music when you\nstart surfing on a POKéMON.");
-static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music when you\nstart riding the BIKE.");
-static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music when you\nstart riding the BIKE.");
+static const u8 sText_Desc_BattleScene_On[]     = _("Show the POKéMON battle animations.");
+static const u8 sText_Desc_BattleScene_Off[]    = _("Skip the POKéMON battle animations.");
+static const u8 sText_Desc_BattleStyle_Shift[]  = _("Get the option to switch your\nPOKéMON after the enemy's faints.");
+static const u8 sText_Desc_BattleStyle_Set[]    = _("No free switch after fainting the\nenemy's POKéMON.");
 static const u8 sText_Desc_ItemAnimateNormal[]  = _("Original in-battle item animation.\nNo change from original Emerald.");
 static const u8 sText_Desc_ItemAnimateRed[]     = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
 static const u8 sText_Desc_ItemAnimateMin[]     = _("Minimal in-battle item animation.\nOnly the final ring animation.");
@@ -375,6 +371,10 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_BATTLE_CANCEL]      = {sText_Desc_Save,               sText_Empty,                sText_Empty,                sText_Empty},
 };
 
+static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music when you\nstart surfing on a POKéMON.");
+static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music when you\nstart surfing on a POKéMON.");
+static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music when you\nstart riding the BIKE.");
+static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music when you\nstart riding the BIKE.");
 static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][2] =
 {
     //[MENUITEM_CUSTOM_HP_BAR]      = {sText_Desc_BattleHPBar,        sText_Empty},
@@ -477,14 +477,14 @@ static void VBlankCB(void)
 }
 
 static const u8 sText_TopBar_Main[]             = _("GENERAL");
-static const u8 sText_TopBar_Main_Left[]        = _("{L_BUTTON}WORLD");
-static const u8 sText_TopBar_Main_Right[]       = _("{R_BUTTON}BATTLE");
+static const u8 sText_TopBar_Main_Left[]        = _("{L_BUTTON} WORLD");
+static const u8 sText_TopBar_Main_Right[]       = _("BATTLE {R_BUTTON}");
 static const u8 sText_TopBar_Battle[]           = _("BATTLE");
-static const u8 sText_TopBar_Battle_Left[]      = _("{L_BUTTON}GENERAL");
-static const u8 sText_TopBar_Battle_Right[]     = _("{R_BUTTON}WORLD");
+static const u8 sText_TopBar_Battle_Left[]      = _("{L_BUTTON} GENERAL");
+static const u8 sText_TopBar_Battle_Right[]     = _("WORLD {R_BUTTON}");
 static const u8 sText_TopBar_Overworld[]        = _("WORLD");
-static const u8 sText_TopBar_Overworld_Left[]   = _("{L_BUTTON}BATTLE");
-static const u8 sText_TopBar_Overworld_Right[]  = _("{R_BUTTON}GENERAL");
+static const u8 sText_TopBar_Overworld_Left[]   = _("{L_BUTTON} BATTLE");
+static const u8 sText_TopBar_Overworld_Right[]  = _("GENERAL {R_BUTTON}");
 static void DrawTopBarText(void)
 {
     const u8 color[3] = { TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_OPTIONS_GRAY_FG };
@@ -493,19 +493,19 @@ static void DrawTopBarText(void)
     switch (sOptions->submenu)
     {
         case MENU_MAIN:
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 105, 1, color, 0, sText_TopBar_Main);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringCenterAlignXOffset(FONT_SMALL, sText_TopBar_Main, 240), 1, color, 0, sText_TopBar_Main);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 10, 1, color, 0, sText_TopBar_Main_Left);
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 180, 1, color, 0, sText_TopBar_Main_Right);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringRightAlignXOffset(FONT_SMALL, sText_TopBar_Main_Right, 230), 1, color, 0, sText_TopBar_Main_Right);
             break;
         case MENU_BATTLE:
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 105, 1, color, 0, sText_TopBar_Battle);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringCenterAlignXOffset(FONT_SMALL, sText_TopBar_Battle, 240), 1, color, 0, sText_TopBar_Battle);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 10, 1, color, 0, sText_TopBar_Battle_Left);
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 180, 1, color, 0, sText_TopBar_Battle_Right);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringRightAlignXOffset(FONT_SMALL, sText_TopBar_Battle_Right, 230), 1, color, 0, sText_TopBar_Battle_Right);
             break;
         case MENU_WORLD:
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 105, 1, color, 0, sText_TopBar_Overworld);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringCenterAlignXOffset(FONT_SMALL, sText_TopBar_Overworld, 240), 1, color, 0, sText_TopBar_Overworld);
             AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 10, 1, color, 0, sText_TopBar_Overworld_Left);
-            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, 180, 1, color, 0, sText_TopBar_Overworld_Right);
+            AddTextPrinterParameterized3(WIN_TOPBAR, FONT_SMALL, GetStringRightAlignXOffset(FONT_SMALL, sText_TopBar_Overworld_Right, 230), 1, color, 0, sText_TopBar_Overworld_Right);
             break;
     }
     PutWindowTilemap(WIN_TOPBAR);
