@@ -193,6 +193,10 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny mini sprites for PC and Party Menu (I assume somebody has done this, but haven't yet been able to find it, may be infeasible to implement)
 * Add Deepseascale and Deepseatooth to wild clamperl encounters
 * Add item drop on wild pokemon fainting
+* Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
+* Potentially easier method for Heart Scale gathering
+* Update Tyrogue Evolution to Hitmontop to include original method alongside Brick Piece evolution
+* Review Department Store Sale frequency
 * (Surprise feature - watch this space!)
 
 ## Enhanced Credits List:
