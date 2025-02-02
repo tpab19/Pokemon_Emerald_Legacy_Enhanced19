@@ -52,6 +52,7 @@ Simple swap for Dragon type to be considered Physical. This **does not** do any 
 ### Implemented Changes:
 * All changes already present in Base Patch.
 * Dragon type Physical in battle.
+* Updated text in Rustboro School to note change of Dragon typing to Physical.
 
 ## Dragon Grovyle and Sceptile - v1.0.1:
 
@@ -80,6 +81,7 @@ Combination of the two above patches for physical Dragon type and to add Dragon 
 ### Implemented Changes:
 * All changes already present in Base Patch.
 * Dragon type Physical in battle.
+* Updated text in Rustboro School to note change of Dragon typing to Physical.
 * Grovyle and Sceptile with added Dragon type.
 * Starter Level-up moves updated (changes compared to Emerald Legacy only):
   * Grovyle:
@@ -170,6 +172,32 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 65: Blast Burn
   * Feraligatr:
     * Lvl 65: Hydro Cannon
+
+## Enhanced Starters - Dragon Physical - v1.0.1
+
+A combination of Enhanced Starters with Physical Dragon type.
+
+### Implemented Changes
+* All changes already present in Base patch.
+* All changes in optional Enhanced Starters patch.
+* All changes in Physical Dragon Grovyle and Sceptile patch.
+
+## Potential Features to add (No guarantee, just to log potential features, any could be dropped if too difficult or otherwise infeasible)
+* Shiny Charm after completing Hoenn Pokedex
+* Modern Sturdy Ability (maybe toggleable?)
+* Starter ability battle feedback (potentially infeasible)
+* Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
+* Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
+* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
+* Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
+* Shiny mini sprites for PC and Party Menu (I assume somebody has done this, but haven't yet been able to find it, may be infeasible to implement)
+* Add Deepseascale and Deepseatooth to wild clamperl encounters
+* Add item drop on wild pokemon fainting
+* Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
+* Potentially easier method for Heart Scale gathering
+* Update Tyrogue Evolution to Hitmontop to include original method alongside Brick Piece evolution
+* Review Department Store Sale frequency
+* (Surprise feature - watch this space!)
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
