@@ -20,6 +20,7 @@ extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 
 extern void SynchroniseSurfAnim(struct ObjectEvent *playerObj, struct Sprite *sprite);
 extern void SynchroniseSurfPosition(struct ObjectEvent *playerObj, struct Sprite *sprite);
+extern void UpdateBobbingEffect(struct ObjectEvent *playerObj, struct Sprite *playerSprite, struct Sprite *sprite);
 
 static void CreateOverlaySprite(void);
 static void UpdateSurfMonOverlay(struct Sprite *sprite);
@@ -141,13 +142,13 @@ static void UpdateSurfMonOverlay(struct Sprite *sprite)
 
     SynchroniseSurfAnim(playerObj, sprite);
     SynchroniseSurfPosition(playerObj, sprite);
+    UpdateBobbingEffect(playerObj, linkedSprite, sprite);
 
     // Reset the subpriority for the overlay sprite so it shows on top of the player
     // We need this here so the subprio is correct after a screen transition (e.g. after exiting a battle)
     subpriority = gSprites[gPlayerAvatar.spriteId].subpriority - 1;
     sprite->subpriority = subpriority;
 
-if (linkedSprite->animNum < MOVEMENT_ACTION_DELAY_16)
     if (linkedSprite->animNum < MOVEMENT_ACTION_DELAY_16)
     {
         sprite->x = linkedSprite->x;
