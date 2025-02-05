@@ -217,18 +217,6 @@ A combination of Enhanced Starters with Physical Dragon type.
   * **Note:** Save file compatibility with Emerald Legacy will work, however any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats until they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature.
   * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
 
-### Changes being considered (No guarantee of implementation):
-* Allow Signature Moves to substitute as specific Field Moves:
-  * Leaf Blade:
-    * Able to be used as Cut outside of battle
-  * Blaze Kick:
-    * Able to be used as Rock Smash outside of battle
-  * Muddy Water:
-    * Able to be used as Surf outside of battle
-* (Very far in future) Adding a user option at start of New Game to enable to enable/disable Treeko line Dragon Typing changes.
-* Implement Expanded Register Item List
-  * May impact save compability between Base Emerald Legacy
-
 # Pokémon Emerald Legacy
 
 Emerald Legacy is meant to serve as a finale to the trio of planned projects in the Legacy Trilogy led by [TheSmithPlays](https://www.youtube.com/@smithplayspokemon). It is made using the [Pokémon Emerald Disassembly](https://github.com/pret/pokeemerald) made by the [Pret](https://pret.github.io/) team. This game is focused on refining a game that is considered a classic by many people into a nostalgic but improved experience with 20+ years of hindsight. Emerald is a great game with a ton of flaws when you use that experience to really look at it under a lens. Terrible pokemon pool, Weird team building choices, A great story idea executed poorly, baffling rival decisions, and one of the worst E4s. This game with all of these problems manages to shrug them off with memorable dex additions, fantastic gym leader ace choices, abilities, no more stat xp, Battle frontier, original ideas to the series, and overall a solid game. The Legacy Project aims to take what is good in a game and improve it while bringing its flaws up to that same level. 
