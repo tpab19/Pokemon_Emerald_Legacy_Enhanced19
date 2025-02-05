@@ -190,9 +190,8 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
-* Shiny mini sprites for PC and Party Menu (I assume somebody has done this, but haven't yet been able to find it, may be infeasible to implement)
-* Add Deepseascale and Deepseatooth to wild clamperl encounters
-* Add item drop on wild pokemon fainting
+* Make Deepseascale and Deepseatooth infinitely available
+* Potentially add item drop on wild pokemon fainting
 * Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
 * Potentially easier method for Heart Scale gathering
 * Update Tyrogue Evolution to Hitmontop to include original method alongside Brick Piece evolution
