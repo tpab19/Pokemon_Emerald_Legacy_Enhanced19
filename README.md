@@ -190,12 +190,12 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
-* Make Deepseascale and Deepseatooth infinitely available
 * Potentially add item drop on wild pokemon fainting
 * Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
 * Potentially easier method for Heart Scale gathering
-* Update Tyrogue Evolution to Hitmontop to include original method alongside Brick Piece evolution
 * Review Department Store Sale frequency
+* Increase Mirage Island Odds (or an easy way to enable it)
+* Add self-destruct to Wailmer and Wailord Egg Movepool
 * (Surprise feature - watch this space!)
 
 ## Enhanced Credits List:
@@ -207,15 +207,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
 * Added Select as shortcut to swap Pokemon in Party
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
-
-### Additional Implemented Changes in Optional Patch: Stat Editor and Nature Mints
-* Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
-  * Credit to TeamAquasHideout for [EV IV Stat Editor UI](https://github.com/pret/pokeemerald/wiki/Add-a-EV---IV-Stat-Editor-UI)
-* Nature Mints have been added in the game for purchase after beating Petalburg Gym.
-  * One free Serious Mint will be given by Norman after gaining the Facade TM.
-  * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
-  * **Note:** Save file compatibility with Emerald Legacy will work, however any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats until they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature.
-  * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
 
 # Pokémon Emerald Legacy
 
