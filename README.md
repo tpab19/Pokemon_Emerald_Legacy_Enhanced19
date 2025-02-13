@@ -58,6 +58,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
 * Updated Regi overworld encounter sprites to match the Regi PokeDolls instead.
 * Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
+* Added Self-Destruct to Wailmer and Wailord Egg Move Pool
+* Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
+
+**Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
 ## Dragon Type Physical - v1.0.1:
 
@@ -203,14 +207,9 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
-* Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
 * Potentially add item drop on wild pokemon fainting
 * Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
-* Potentially easier method for Heart Scale gathering
-* Review Department Store Sale frequency
 * Increase Mirage Island Odds (or an easy way to enable it)
-* Add self-destruct to Wailmer and Wailord Egg Movepool
-* (Surprise feature - watch this space!)
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
