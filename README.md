@@ -26,6 +26,11 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
   * Secret Power works similarly, requiring TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+* Added unique per-pokemon Surfing Overworld sprites instead of the "Surf blob"
+  * Supports Shiny pokemon.
+  * As noted below, can revert back to Surf Blob if preferred in options.
+  * Does not (yet) support diving.
+  * Known Bug: Unable to "jump" onto pokemon's surfing sprite, instead they load via a slight "sliding" animation, working on fix.
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
@@ -40,6 +45,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * Ability to enable or disable Bike Music.
   * Ability to enable or disable Surf Music.
   * Ability to reduce or turn off in-battle item use animation.
+  * Ability to toggle between unique per-pokemon surfing overworld and original "Surf blob"
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
