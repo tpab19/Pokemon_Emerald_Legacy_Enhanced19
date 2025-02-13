@@ -26,6 +26,11 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
   * Secret Power works similarly, requiring TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+* Added unique per-pokemon Surfing Overworld sprites instead of the "Surf blob"
+  * Supports Shiny pokemon.
+  * As noted below, can revert back to Surf Blob if preferred in options.
+  * Does not (yet) support diving.
+  * Known Bug: Unable to "jump" onto pokemon's surfing sprite, instead they load via a slight "sliding" animation, working on fix.
 * Added sparkle to Feebas spots on Route 119 after recieving the Devon Scope
   * Feebas encounter rate on tiles reduced to 25% to retain a bit of challenge in finding wild Feebas.
   * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
@@ -47,6 +52,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * Ability to enable or disable Bike Music.
   * Ability to enable or disable Surf Music.
   * Ability to reduce or turn off in-battle item use animation.
+  * Ability to toggle between unique per-pokemon surfing overworld and original "Surf blob"
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
@@ -215,6 +221,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
 * Added Select as shortcut to swap Pokemon in Party
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
+* Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
 
 # Pokémon Emerald Legacy
