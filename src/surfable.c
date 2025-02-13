@@ -142,6 +142,8 @@ static void UpdateSurfMonOverlay(struct Sprite *sprite)
 
     SynchroniseSurfAnim(playerObj, sprite);
     SynchroniseSurfPosition(playerObj, sprite);
+    
+    // Fix for Fishing whilst surfing having overlay sprite "bob" up and down appropriately, unfortunately breaks proper "jump" onto Surfing Pokemon - Needs further investigation to fix.
     UpdateBobbingEffect(playerObj, linkedSprite, sprite);
 
     // Reset the subpriority for the overlay sprite so it shows on top of the player
