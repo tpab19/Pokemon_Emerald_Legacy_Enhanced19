@@ -27,6 +27,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
   * Secret Power works similarly, requiring TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
+  * Updated in latest patch to decrease or increase EVs and IVs by 10 using L and R respectively.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
   * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
