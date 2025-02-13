@@ -218,6 +218,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Credit to [ScyrousFX](https://www.pokecommunity.com/member.php?u=980149) for [Use Fly/Flash from party menu if Pokémon is compatible](https://www.pokecommunity.com/showpost.php?p=10420068)
 * Credit to TeamAquasHideout for [EV IV Stat Editor UI](https://github.com/pret/pokeemerald/wiki/Add-a-EV---IV-Stat-Editor-UI)
 * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
+* Credit to [ScyrousFX](https://www.pokecommunity.com/member.php?u=980149), [Yak Attack](https://www.pokecommunity.com/members/yak-attack.891333/), [Kurausukun](https://github.com/Kurausukun), [Zatsu](https://www.pokecommunity.com/members/zatsu.444936/)
 * Source [Tweaking the count of health beeps
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
 * Added Select as shortcut to swap Pokemon in Party
