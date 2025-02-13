@@ -212,6 +212,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add bulk option for coin purchases in Mauville Game Corner
+* Use Legendary Beast's themes for their in-game encounters
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
