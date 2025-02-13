@@ -34,6 +34,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Decoration Improvements:
+  * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
+  * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
+  * Added Lotad and Seedot dolls for purchase from Slateport Doll seller
 * Low Health beep reduced to three beeps and not loop infinitely.
 * Added Select as shortcut to swap Pokemon in Party
 * Updated Options Menu with below additional options:
