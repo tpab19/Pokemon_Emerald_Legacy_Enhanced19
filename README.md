@@ -4,20 +4,13 @@ Pokémon Emerald Legacy Enhanced is an fork of Pokémon Emerald Legacy by [TheSm
 
 I have **no official affiliation** with TheSmithPlays or his incredible project team, I'm just a single developer fan who wanted to make my own flavour of Emerald Legacy with the greatest respect for the fantastic version of Emerald the team has already built. I look to regularly pull in any updates or fixes from the base Pokémon Emerald Legacy whenever the project team publishes.
 
-Some simple Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokemon able to learn the move (not taking up a move slot) to use them), whilst some larger additions will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffed signature moves.)
-
-**Note:** Save files should be compatible from base Pokémon Emerald Legacy, but please do keep a backup prior to moving and if there ar eany bugs or problems feel free to report an [Issue](https://github.com/Exclsior/Pokemon_Emerald_Legacy_Enhanced/issues).
-
-### Download and Play
-
-* To download the patch, see [RELEASES](https://github.com/Exclsior/Pokemon_Emerald_Legacy_Enhanced/releases) and download the zip file for the latest patch. Unzip the folder, then follow the instructions in one of the readme files in the `README` file.
-* To set up the repository, see [INSTALL.md](INSTALL.md).
+Some simple Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokemon able to learn the move (not taking up a move slot) to use them), whilst some larger additions will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffs signature moves.)
 
 ### For the tech-savvy
 
-This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version.
+This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version. This isn't at that point yet with all branches currently included "Enhanced Starters" branch at base.
 
-The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creators as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
+The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creatures as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
 
 Without any further ado, below are the features added to Base Patch (main branch):
 
@@ -43,8 +36,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
 * Low Health beep reduced to three beeps and not loop infinitely.
 * Added Select as shortcut to swap Pokemon in Party
-* Updated Options Menu to add ability to enable or disable Bike and Surf Music.
-* Reduced in-battle item use animation
+* Updated Options Menu with below additional options:
+  * Ability to enable or disable Bike Music.
+  * Ability to enable or disable Surf Music.
+  * Ability to reduce or turn off in-battle item use animation.
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
@@ -58,6 +53,7 @@ Simple swap for Dragon type to be considered Physical. This **does not** do any 
 ### Implemented Changes:
 * All changes already present in Base Patch.
 * Dragon type Physical in battle.
+* Updated text in Rustboro School to note change of Dragon typing to Physical.
 
 ## Dragon Grovyle and Sceptile - v1.0.1:
 
@@ -86,6 +82,7 @@ Combination of the two above patches for physical Dragon type and to add Dragon 
 ### Implemented Changes:
 * All changes already present in Base Patch.
 * Dragon type Physical in battle.
+* Updated text in Rustboro School to note change of Dragon typing to Physical.
 * Grovyle and Sceptile with added Dragon type.
 * Starter Level-up moves updated (changes compared to Emerald Legacy only):
   * Grovyle:
@@ -114,7 +111,6 @@ Combination of the two above patches for physical Dragon type and to add Dragon 
 An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs the Hoenn Starters (and my preferred way to play!). For the most balanced version, please use the original version! This version is just to feed into the childhood nostalgia feeling of having an overpowered starter throughout the game and to catch all the starters early in the game.
 
 ### Implemented Changes
-* All changes already present in Base Patch.
 * Added starters to following routes for increased availability:
   * Treeko:
     * Location: Petalburg Woods
@@ -142,7 +138,7 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Retain Legacy Buffs
     * Battle Power increase to 95
     * Accuracy increase to 100
-* Grovyle and Sceptile with added Dragon type (Feel free to fork and revert files to base if you don't want Dragon Typing!)
+* Grovyle and Sceptile with added Dragon Type (Feel free to fork and revert files to base if you don't want Dragon Typing!)
 * Starter Level-up moves updated (changes compared to Emerald Legacy only):
   * Grovyle:
     * Lvl 16: Twister
@@ -155,21 +151,13 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 16: Twister
     * Lvl 19: Razor Leaf
     * Lvl 34: Dragonbreath
-    * Lvl 60: Outrage
-    * Lvl 65: Frenzy Plant
   * Combusken:
     * Lvl 37: Blaze Kick (in case of evolution cancellation)
     * Lvl 41: Sky Uppercut
     * Lvl 55: Hi Jump Kick
   * Blaziken:
     * Lvl  1: Rock Slide (Torchic Egg Move, for relearning)
-    * Lvl 65: Blast Burn
-  * Mudkip:
-    * Lvl 21: Bubblebeam
-    * Lvl 26: Dig
   * Marshtomp:
-    * Lvl 24: Mud Sport (Was in both Mudkip's and Swampert's Learnsets, not in Marshtomp's)
-    * Lvl 28: Dig
     * Lvl 37: Muddy Water (in case of evolution cancellation)
     * Lvl 40: Protect
     * Lvl 43: Earthquake
@@ -186,6 +174,31 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
   * Feraligatr:
     * Lvl 65: Hydro Cannon
 
+## Enhanced Starters - Dragon Physical - v1.0.1
+
+A combination of Enhanced Starters with Physical Dragon type.
+
+### Implemented Changes
+* All changes already present in Base patch.
+* All changes in optional Enhanced Starters patch.
+* All changes in Physical Dragon Grovyle and Sceptile patch.
+
+## Potential Features to add (No guarantee, just to log potential features, any could be dropped if too difficult or otherwise infeasible)
+* Shiny Charm after completing Hoenn Pokedex
+* Modern Sturdy Ability (maybe toggleable?)
+* Starter ability battle feedback (potentially infeasible)
+* Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
+* Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
+* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
+* Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
+* Potentially add item drop on wild pokemon fainting
+* Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
+* Potentially easier method for Heart Scale gathering
+* Review Department Store Sale frequency
+* Increase Mirage Island Odds (or an easy way to enable it)
+* Add self-destruct to Wailmer and Wailord Egg Movepool
+* (Surprise feature - watch this space!)
+
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
 * Credit to [ScyrousFX](https://www.pokecommunity.com/member.php?u=980149) for [Use Fly/Flash from party menu if Pokémon is compatible](https://www.pokecommunity.com/showpost.php?p=10420068)
@@ -193,11 +206,8 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
 * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
 * Source [Tweaking the count of health beeps
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
-* Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
-* Credits to [TheXaman](https://www.pokecommunity.com/members/thexaman.743189/), [DizzyEgg](https://github.com/DizzyEggg), [Lunos](https://www.pokecommunity.com/members/lunos.114506/), [AsparagusEduardo](https://github.com/AsparagusEduardo), and [ella_trifle/ellabrella](https://www.pokecommunity.com/members/ellabrella.751712/) for [New Options Plus ‐ Multipage Options Menu](https://github.com/pret/pokeemerald/wiki/New-Options-Plus-%E2%80%90-Multipage-Options-Menu-with-Faster-Text,-HP%E2%80%90EXP-Bar-Speeds-and-Metric)
-* Credit to [KyuZee](https://github.com/kyuzeemctree) for [Speed Up Held Item Animation](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Speed-Up-Held-Item-Animation)
-* Credit to [Scyrous](https://github.com/Scyrous), Yak Attack, [Kurausukun](https://github.com/Kurausukun), and Zatsu for [Make Move Relearner Teach Egg Moves With A Flag](https://github.com/pret/pokeemerald/wiki/Make-Move-Relearner-Teach-Egg-Moves-With-A-Flag)
-* Credits to [TheXaman](https://www.pokecommunity.com/members/thexaman.743189/), [RavePossum](https://github.com/RavePossum), and [iriv24](https://github.com/iriv24) for [Modified "register items in a list menu"](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/Feature-Branches/#iriv24tx_registered_items_menu)
+* Added Select as shortcut to swap Pokemon in Party
+  * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
 
 # Pokémon Emerald Legacy
 
@@ -206,10 +216,19 @@ Emerald Legacy is meant to serve as a finale to the trio of planned projects in 
 Keeping that nostalgic feeling is a key part of the project and thus requires us to temper our changes into things that improve the experience but don’t take you out of that original generation 3 mindset. Things like the Physical/Special Split, adding moves, adding new evolutions, or adding the fairy typing are not things you will find in this game. Instead look for improvements to the Rival storyline, Team Magma & Aqua storyline, Tons of pokemon balancing using the tools given to us in this generation, a robust post game, improved boss fights throughout the game, adjusted level curve, and so much more. We are not trying to create a new game, nor are we trying to create a “Kaizo” game that is insanely difficult. We wanted to create a modern but nostalgic version of Pokémon Emerald. So please enjoy Pokémon Emerald Legacy.
 
 
+## Download and Play
+
+* To download the patch, see [RELEASES](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/releases) and download the zip file for the latest patch. Unzip the folder, then follow the instructions in one of the readme files in the `Patching Instructions` folder.
+* To set up the repository, see [INSTALL.md](INSTALL.md).
+
+
 ## A complete list of features can be found here:
-Full Documentation:
-- [Make a Copy (Recommended)](https://docs.google.com/document/d/1rBSuhFmiiehghr3AQ37JwBzbLCD21TXo_SWpUUXsz9k/copy)
-- [Published Page (Use this if you do not have a Google account and/or want to download the page as a PDF)](https://docs.google.com/document/d/e/2PACX-1vSv_enL8baSvetAUgBBrkh-TJka1-IeOxPchf9cuH317VLetLnvqQu7jgRXhj2gnlDqvBaEo2mbddJl/pub)
+- [The Main Doc](https://docs.google.com/document/d/1rBSuhFmiiehghr3AQ37JwBzbLCD21TXo_SWpUUXsz9k/copy) is the primary source of info for Emerald Legacy
+    - [A Website Version](https://mryakobo.github.io/poke-emerald-legacy-docs/) of this doc is now available, thanks to @ MrYakobo! Please use this if you have trouble copying/viewing the Google page.
+- [The ChangeDex](https://docs.google.com/spreadsheets/d/1XyuXmMi0sodXXR8yG7_6RYDwIn4L56QNFGdcFl4PsOI/edit) remains the best source for game data, featuring reference colors for changes since Vanilla as well as some in 1.1.
+    - [Sorted Encounters](https://docs.google.com/spreadsheets/d/1euQCVphGYMXH9cEX2CwEztvbxzvF9Hik6fAoxq0_e7k/edit?gid=1066205367#gid=1066205367) is a more readable version of Changedex, specifically for Pokemon locations.
+- [The Trainer Doc](https://docs.google.com/spreadsheets/d/18XWOpv-q7e-xTfC9YEsDXsL6s3HANrA5T8rcMf41K-o/edit?gid=1969522899#gid=1969522899) is now ready for a full public release! It's still WIP, because there are plans to further sort the trainers by location for easier viewing, but the newest version now separates Rematches to their own tabs - a great resource for viewing all the new Match Call updates.
+- [A PKHeX Fork](https://github.com/cp1835/PKHeX-EmeraldLegacy) for Emerald Legacy is now available! Special thanks to [u/Silent_Pause_2425 on Reddit](https://www.reddit.com/r/PokemonLegacy/comments/1hqlp4p/i_modified_pkhex_for_emerald_legacy/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) for adapting this tool for the game.
 
 These videos also provide an overview of the hack and the ideology behind it:
 - [Release 1.0](https://www.youtube.com/watch?v=jUHGejDvuNM)
@@ -302,6 +321,12 @@ These videos also provide an overview of the hack and the ideology behind it:
     - [Make the Person in the Intro Match the the Save File](https://github.com/pret/pokeemerald/wiki/Make-the-Person-in-the-Intro-Match-the-the-Save-File)
     - [Fix AI's Switch In Battle](https://github.com/pret/pokeemerald/wiki/Fix-AI's-Switch-In-Battle)
     - [Add Move Description Submenu During Battle](https://github.com/pret/pokeemerald/wiki/Add-Description-Submenu)
+- mxeg
+	- [Fixed clock events breaking after changing the clock](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/5)
+    - [Fixed Petaya and Apicot berry are displayed as costing 48BP but actually cost 3BP](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/5)
+    - [Fixed after purchasing any berry, either successfully or unsuccessfully due to insufficient BP, the menu resets to held item shop instead of berry shop](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/5)
+	- [Fix msgbox not disappearing for Sootopolis gentleman](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/7)
+	- [Fix msgbox not disappearing after exiting BF berry shop](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/7)
 - Ghoulslash:
     - [Bag sorting](https://github.com/pret/pokeemerald/compare/master...ghoulslash:pokeemerald:bag_sort)
     - [Repeated Field Medicine/Rare Candy Use](https://github.com/pret/pokeemerald/wiki/Repeated-Field-Medicine-Use)
@@ -318,6 +343,9 @@ These videos also provide an overview of the hack and the ideology behind it:
 - FieryMewtwo
     - [Remove the extra save confirmation](https://github.com/pret/pokeemerald/wiki/Remove-the-extra-save-confirmation)
     - [Fast heal](https://github.com/pret/pokeemerald/wiki/Speedy-Nurse-Joy)
+- Exclsior
+	- [Fixed Tate and Liza getting stuck on 2nd rematch](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/13)
+	- [Maxie grammar fix](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/10)
 - TheXaman - [Pokedex plus upgrade](https://github.com/pret/pokeemerald/commit/abf5d238c2a5fe020123544a72fe432c27191153)
 - CameruptQDX - [Create a new regular trainer battle](https://github.com/pret/pokeemerald/wiki/How-to-create-a-new-regular-trainer-battle)
 - Surskitty - [Improved trainer control system](https://github.com/rh-hideout/pokeemerald-expansion/compare/master...surskitty:pokeemerald:trainer_control)
@@ -337,6 +365,8 @@ These videos also provide an overview of the hack and the ideology behind it:
 - takyon - [Always inherit nature when holding an Everstone​](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-4#post-10160374)
 - myxto - Always inherit nature when holding an Everstone alternate implementation​
 - Jirachii - [Hidden Power type in summary screen](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-11#post-10269132)
+- cromerc - [Fixed unix build issues](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/1)
+- ElusiveEllie - [Fixed INSTALL.md instructions to point to correct project](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/8)
 
 
 ### Other Credits:
