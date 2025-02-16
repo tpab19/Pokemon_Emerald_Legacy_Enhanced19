@@ -1,3 +1,12 @@
+IMPORTANT: Bugs with current 1.1.0 version, theoretically new games should be fine, save transfers buggy, please await upcoming 1.1.1 fix.
+
+Known Bugs:
+* Pokémon in daycare on older save versions turning into Bad Eggs
+* Mauville Pokécenter may not load player graphics palette.
+* Mauville Pokécenter PC causing game crash
+* TV shows locking the player and game (Do not watch TV at this point) 
+* Surf Blob initial "jump" not working
+
 # Pokémon Emerald Legacy Enhanced
 
 Pokémon Emerald Legacy Enhanced is an fork of Pokémon Emerald Legacy by [TheSmithPlays](https://www.youtube.com/@smithplayspokemon) and his incredible project team aiming to add Quality of Life improvements and updates which do not align with the Legacy project vision, but nonetheless are features which I believe enhances the game.
