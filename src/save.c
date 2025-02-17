@@ -479,6 +479,13 @@ static u8 TryLoadSaveSlot(u16 sectorId, struct SaveSectorLocation *locations)
         CopySaveSlotData(FULL_SAVE_SLOT, locations);
     }
 
+    if (status == SAVE_STATUS_OK) {
+        if (gSaveBlock2Ptr->_saveSentinel != 0xFF)
+            status = SAVE_STATUS_OUTDATED;
+        else if (gSaveBlock2Ptr->saveVersion != SAVE_VERSION)
+            status = SAVE_STATUS_OUTDATED;
+    }
+    
     return status;
 }
 
