@@ -276,6 +276,7 @@
 #define VAR_NORMAN_REMATCH_CALL_STEP_COUNTER             0x4100
 #define VAR_SHOW_ZINNIA                                  0x4101
 #define VAR_SURF_MON_SLOT                                0x4102 // Added new VAR for Surf Mon Slot
+#define VAR_FREEZESURFBLOB                               0x4103 // Set on surf init to stop blob overlay being offset incorrectly
 
 #define VARS_END                                         0x4103
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
