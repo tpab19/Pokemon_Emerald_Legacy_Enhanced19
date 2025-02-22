@@ -4,16 +4,16 @@
 
 struct SaveBlock2_v0
 {
-    /*0x00*/ u8 playerName[7 + 1];
-    /*0x08*/ u8 playerGender; // MALE, FEMALE
-    /*0x09*/ u8 specialSaveWarpFlags;
-    /*0x0A*/ u8 playerTrainerId[4];
-    /*0x0E*/ u16 playTimeHours;
-    /*0x10*/ u8 playTimeMinutes;
-    /*0x11*/ u8 playTimeSeconds;
-    /*0x12*/ u8 playTimeVBlanks;
-    /*0x13*/ u8 optionsButtonMode;  // OPTIONS_BUTTON_MODE_[NORMAL/LR/L_EQUALS_A]
-    /*0x14*/ u16 optionsTextSpeed:3; // OPTIONS_TEXT_SPEED_[SLOW/MID/FAST]
+    u8 playerName[7 + 1];
+    u8 playerGender; // MALE, FEMALE
+    u8 specialSaveWarpFlags;
+    u8 playerTrainerId[4];
+    u16 playTimeHours;
+    u8 playTimeMinutes;
+    u8 playTimeSeconds;
+    u8 playTimeVBlanks;
+    u8 optionsButtonMode;  // OPTIONS_BUTTON_MODE_[NORMAL/LR/L_EQUALS_A]
+    u16 optionsTextSpeed:3; // OPTIONS_TEXT_SPEED_[SLOW/MID/FAST]
              u16 optionsWindowFrameType:5; // Specifies one of the 20 decorative borders for text boxes
              u16 optionsSound:1; // OPTIONS_SOUND_[MONO/STEREO]
              u16 optionsBattleStyle:1; // OPTIONS_BATTLE_STYLE_[SHIFT/SET]
@@ -23,22 +23,22 @@ struct SaveBlock2_v0
              u16 optionsSurfMusic:1; // whether the surf music plays when surfing
              u16 optionsSurfOverworld:1; // whether to use the original Surf blob or dynamic blob (False to use dynamic)
              u16 optionsBattleItemAnimation:3; // whether the battle animation is reduced or not
-    /*0x18*/ struct Pokedex pokedex;
-    /*0x90*/ u8 filler_90[0x8];
-    /*0x98*/ struct Time localTimeOffset;
-    /*0xA0*/ struct Time lastBerryTreeUpdate;
-    /*0xA8*/ u32 gcnLinkFlags; // Read by Pokémon Colosseum/XD
-    /*0xAC*/ u32 encryptionKey;
-    /*0xB0*/ struct PlayersApprentice playerApprentice;
-    /*0xDC*/ struct Apprentice apprentices[4];
-    /*0x1EC*/ struct BerryCrush berryCrush;
-    /*0x1FC*/ struct PokemonJumpRecords pokeJump;
-    /*0x20C*/ struct BerryPickingResults berryPick;
-    /*0x21C*/ struct RankingHall1P hallRecords1P[9][2][3]; // From record mixing.
-    /*0x57C*/ struct RankingHall2P hallRecords2P[2][3]; // From record mixing.
-    /*0x624*/ u16 contestLinkResults[5][4];
-    /*0x64C*/ struct BattleFrontier frontier;
-}; // sizeof=0xF2C
+    struct Pokedex pokedex;
+    u8 filler_90[0x8];
+    struct Time localTimeOffset;
+    struct Time lastBerryTreeUpdate;
+    u32 gcnLinkFlags; // Read by Pokémon Colosseum/XD
+    u32 encryptionKey;
+    struct PlayersApprentice playerApprentice;
+    struct Apprentice apprentices[4];
+    struct BerryCrush berryCrush;
+    struct PokemonJumpRecords pokeJump;
+    struct BerryPickingResults berryPick;
+    struct RankingHall1P hallRecords1P[9][2][3]; // From record mixing.
+    struct RankingHall2P hallRecords2P[2][3]; // From record mixing.
+    u16 contestLinkResults[5][4];
+    struct BattleFrontier frontier;
+};
 
 struct SaveBlock1_v0
 {
@@ -137,7 +137,6 @@ struct SaveBlock1_v0
                u8 registeredItemLastSelected:4; //max 16 items
                u8 registeredItemListCount:4;
                struct RegisteredItemSlot registeredItems[10];
-    // sizeof: 0x3D88
 };
 
 bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
@@ -214,15 +213,17 @@ bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
     COPY_FIELD(lastHealLocation);
     COPY_FIELD(escapeWarp);
 
-    /** We don't need to copy things related to the current map, see below. */
-    // COPY_FIELD(weather);
-    // COPY_FIELD(weatherCycleStage);
-    // COPY_FIELD(flashLevel);
-    // COPY_FIELD(savedMusic);
-    // COPY_FIELD(mapLayoutId);
-    // COPY_BLOCK(mapView);
-    // COPY_BLOCK(objectEvents);
-    // COPY_BLOCK(objectEventTemplates);
+    /** Only use this if there are no major map changes to load into original location
+     * If there are any major map changes comment the below section out and use the 
+     * heal warp at the bottom of this function instead. */
+    COPY_FIELD(weather);
+    COPY_FIELD(weatherCycleStage);
+    COPY_FIELD(flashLevel);
+    COPY_FIELD(savedMusic);
+    COPY_FIELD(mapLayoutId);
+    COPY_BLOCK(mapView);
+    COPY_BLOCK(objectEvents);
+    COPY_BLOCK(objectEventTemplates);
     
     /** The pokemon structure hasn't changed at all this version, so
      *  we don't need to do anything special to copy the pokemon over. */
@@ -324,8 +325,8 @@ bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
      * with a newly loaded map and event objects. Here, we're using the last location
      * that the player healed, so the player will appear in the same spot they would
      * as if they blacked out. */
-    SetContinueGameWarpStatus();
-    gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->lastHealLocation;
+    // SetContinueGameWarpStatus();
+    // gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->lastHealLocation;
 
     return TRUE;
 }
