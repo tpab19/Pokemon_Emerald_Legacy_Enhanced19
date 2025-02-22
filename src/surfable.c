@@ -144,7 +144,7 @@ static void UpdateSurfMonOverlay(struct Sprite *sprite)
     SynchroniseSurfPosition(playerObj, sprite);
     
     // Fix for Fishing whilst surfing having overlay sprite "bob" up and down appropriately
-    if (VarGet(VAR_FREEZESURFBLOB) == 0)
+    if (VarGet(VAR_FREEZE_SURF_BLOB) == 0)
 	{
         UpdateBobbingEffect(playerObj, linkedSprite, sprite);
     }
