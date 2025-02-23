@@ -211,7 +211,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Potentially add item drop on wild pokemon fainting
 * Increase Mirage Island Odds (or an easy way to enable it)
-* Add more pokeballs for early game
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
