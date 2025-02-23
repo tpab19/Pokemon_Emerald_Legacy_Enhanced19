@@ -62,6 +62,20 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
 * Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
 * Added Self-Destruct to Wailmer and Wailord Egg Move Pool
 * Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
+* Added all Type Enhancing Held Items to various Town and City Pokemarts at 9800 pokedollars after beating the game.
+  * Oldale Town: Poison Barb
+  * Petalburg City: Silk Scarf
+  * Rustboro City: Hard Stone
+  * Slateport City: Black Belt
+  * Mauville City: Magnet
+  * Verdanturf Town: Miracle Seed
+  * Fallarbor Town: Dragon Fang
+  * Lavaridge Town: Charcoal & Soft Sand
+  * Fortree City: Sharp Beak
+  * Mossdeep City: Twistedspoon & Nevermeltice
+  * Sootopolis City: Mystic Water
+  * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
+  
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
