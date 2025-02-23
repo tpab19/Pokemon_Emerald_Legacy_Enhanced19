@@ -57,6 +57,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
+* Added larger quantity coin purchasing in Mauville Game Corner and improved efficiency to purchase more coins.
 * Updated Regi overworld encounter sprites to match the Regi PokeDolls instead.
 * Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
 * Added Self-Destruct to Wailmer and Wailord Egg Move Pool
@@ -210,7 +211,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Potentially add item drop on wild pokemon fainting
 * Increase Mirage Island Odds (or an easy way to enable it)
-* Add bulk option for coin purchases in Mauville Game Corner
 * Add more pokeballs for early game
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
