@@ -18,7 +18,7 @@ Without any further ado, below are the features added to Base Patch (main branch
 
 The Base Emerald Legacy Enhanced version which primarily focuses on quality of life additions such as HM improvements, Stat Editor for IVs and EVs, Nature Mints and an Egg Move Tutor.
 
-This Base patch includes all updates to Pokemon Emerald Legacy source coade as of 23 Feb 2025.
+This Base patch includes all updates to Pokemon Emerald Legacy source code as of 23 Feb 2025.
 
 ### Implemented Changes:
 * All Base Legacy changes as of v1.1.0
@@ -205,6 +205,8 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 65: Blast Burn
   * Feraligatr:
     * Lvl 65: Hydro Cannon
+  * Brendan/May give 2 Ultra Balls in addition to Poké Balls to help catch the other starters
+  * 2000 extra Pokédollars at start of game to help catch the other starters
 
 ## Enhanced Starters - Dragon Physical - v1.1.1
 
