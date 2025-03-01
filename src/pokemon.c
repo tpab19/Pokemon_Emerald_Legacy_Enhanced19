@@ -6342,6 +6342,38 @@ u32 CanSpeciesLearnTMHM(u16 species, u8 tm)
     }
 }
 
+bool8 CanMonLearnLevelUpMove(struct Pokemon *mon, u8 move)
+{
+    u16 learnedMoves[MAX_MON_MOVES];
+    bool8 canLearn = FALSE;
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, 0);
+    int i, j, k;
+
+    if (species == SPECIES_EGG)
+    {
+        return FALSE;
+    }
+    
+    for (i = 0; i < MAX_LEVEL_UP_MOVES; i++)
+    {
+        u16 moveLevel;
+
+        if (gLevelUpLearnsets[species][i] == LEVEL_UP_END)
+            break;
+
+        moveLevel = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV;
+
+        if (moveLevel <= (level << 9))
+        {
+            if (move == (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID))
+                canLearn = TRUE;
+        }
+    }
+
+    return canLearn;
+}
+
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 {
     u16 learnedMoves[MAX_MON_MOVES];
