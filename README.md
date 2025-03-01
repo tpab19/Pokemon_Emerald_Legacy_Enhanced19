@@ -238,6 +238,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Investigate flying directly to Secret Base
 * Update Rare Candy access method (Maybe 1BP cost at Frontier)
 * Look into Ability Capsule/Patches
+* Look into earlier availability for Clamperl Evolutions
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
