@@ -82,6 +82,11 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Mossdeep City: Twistedspoon & Nevermeltice
   * Sootopolis City: Mystic Water
   * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
+* Battle Frontier Exchange Corner Item Costs reduced:
+  * Changed Rare Candy Cost to 1 BP each
+  * Decorations cost halved (e.g. 16 BP to 8 BP)
+  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
+  * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
@@ -238,10 +243,8 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
 * Add ability to change a Pokemon's pokeball
-* Add Luxury Ball purchase to Verdanturf Town
 * Add Amulet Coin effect if any Pokemon in party is holding
 * Investigate flying directly to Secret Base
-* Update Rare Candy access method (Maybe 1BP cost at Frontier)
 * Look into Ability Capsule/Patches
 * Look into earlier availability for Clamperl Evolutions
 
