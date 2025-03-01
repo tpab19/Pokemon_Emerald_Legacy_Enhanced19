@@ -64,7 +64,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
 * Added all Type Enhancing Held Items to various Town and City Pokemarts at 9800 pokedollars after beating the game.
   * Oldale Town: Poison Barb
-  * Petalburg City: Silk Scarf
+  * Petalburg City: Silk Scarf & Silver Powder
   * Rustboro City: Hard Stone
   * Slateport City: Black Belt
   * Mauville City: Magnet
@@ -224,14 +224,20 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
 * Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
-* Potentially add item drop on wild pokemon fainting
+* Potentially add item drop on wild pokemon fainting (and rebalance drop items)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Add a method to infinitely acquire Type Enhancing Items and Smoke Ball
-* Rebalance Battle Frontier Move Tutor
+* Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
+* Add ability to change a Pokemon's pokeball
+* Add Luxury Ball purchase to Verdanturf Town
+* Add Amulet Coin effect if any Pokemon in party is holding
+* Investigate flying directly to Secret Base
+* Update Rare Candy access method (Maybe 1BP cost at Frontier)
+* Look into Ability Capsule/Patches
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
