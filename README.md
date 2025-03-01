@@ -22,11 +22,18 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 
 ### Implemented Changes:
 * All Base Legacy changes as of v1.1.0
-* Removed requirement for a HM move to have to be learned by a pokemon in order to be used outside of battle.
-  * Relevant Gym Badge, HM in bag, and at least one pokemon capable of learning the move required to use the HM.
+* Removed requirement for all field moves (including HMs) to have to be learned by a pokemon in order to be used outside of battle.
+  * Relevant Gym Badge, HM in bag, and at least one pokemon capable of learning the move required to use a HM.
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
-  * Secret Power works similarly, requiring TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+  * Secret Power requires TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+  * Dig requires TM28 in Bag and a pokemon able to use the move
+  * The following field moves require the pokemon to be able to learn it by level up equal or prior to their current level:
+    * Teleport
+    * Milk Drink
+    * Softboiled
+    * Sweet Scent
+  * A maximum of four field moves will be added to the Party Menu list with priority given to moves already learned, followed by Fly and Flash HMs before any non-HM moves.
 * Added unique per-pokemon Surfing Overworld sprites instead of the "Surf blob"
   * Supports Shiny pokemon.
   * As noted below, can revert back to Surf Blob if preferred in options.
@@ -221,8 +228,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
 * Starter ability battle feedback (potentially infeasible)
-* Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
-* Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
 * Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Potentially add item drop on wild pokemon fainting (and rebalance drop items)
 * Increase Mirage Island Odds (or an easy way to enable it)
