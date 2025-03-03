@@ -50,6 +50,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Added ability to fly to your Secret Base
 * Decoration Improvements:
   * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
   * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
@@ -233,7 +234,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
 * Starter ability battle feedback (potentially infeasible)
-* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
 * Potentially add item drop on wild pokemon fainting (and rebalance drop items)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
@@ -247,6 +247,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Investigate flying directly to Secret Base
 * Look into Ability Capsule/Patches
 * Look into earlier availability for Clamperl Evolutions
+* Update Secret Base visual indicator on Fly Map
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
