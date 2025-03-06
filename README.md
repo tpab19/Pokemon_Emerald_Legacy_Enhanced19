@@ -88,6 +88,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Decorations cost halved (e.g. 16 BP to 8 BP)
   * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
   * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
+* Amulet Coin now doubles prize money if any pokemon in party is holding the item.
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
@@ -243,7 +244,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
 * Add ability to change a Pokemon's pokeball
-* Add Amulet Coin effect if any Pokemon in party is holding
 * Investigate flying directly to Secret Base
 * Look into Ability Capsule/Patches
 * Look into earlier availability for Clamperl Evolutions
@@ -261,6 +261,8 @@ A combination of Enhanced Starters with Physical Dragon type.
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
 * Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
+* Credit to voloved for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
+
 
 # Pokémon Emerald Legacy
 
