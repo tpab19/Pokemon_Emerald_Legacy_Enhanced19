@@ -72,7 +72,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
 * Added all Type Enhancing Held Items to various Town and City Pokemarts at 9800 pokedollars after beating the game.
   * Oldale Town: Poison Barb
-  * Petalburg City: Silk Scarf & Silver Powder
+  * Petalburg City: Silk Scarf & Silverpowder
   * Rustboro City: Hard Stone
   * Slateport City: Black Belt
   * Mauville City: Magnet
@@ -197,12 +197,14 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 16: Twister
     * Lvl 19: Razor Leaf
     * Lvl 34: Dragonbreath
+    * Lvl 65: Frenzy Plant
   * Combusken:
     * Lvl 37: Blaze Kick (in case of evolution cancellation)
     * Lvl 41: Sky Uppercut
     * Lvl 55: Hi Jump Kick
   * Blaziken:
     * Lvl  1: Rock Slide (Torchic Egg Move, for relearning)
+    * Lvl 65: Blast Burn
   * Marshtomp:
     * Lvl 37: Muddy Water (in case of evolution cancellation)
     * Lvl 40: Protect
@@ -240,11 +242,10 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
-* Add a method to infinitely acquire Type Enhancing Items and Smoke Ball
+* Add a method to infinitely acquire Smoke Ball
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
 * Add ability to change a Pokemon's pokeball
-* Investigate flying directly to Secret Base
 * Look into Ability Capsule/Patches
 * Look into earlier availability for Clamperl Evolutions
 * Update Secret Base visual indicator on Fly Map
@@ -261,7 +262,8 @@ A combination of Enhanced Starters with Physical Dragon type.
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
 * Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
-* Credit to voloved for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
+* Credit to [Hiroshi Sotomura](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [Add routes as Fly destinations](https://www.pokecommunity.com/threads/add-routes-as-fly-destinations.440310/) as basis for flying to Secret Base.
+* Credit to [voloved](https://github.com/voloved) for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
 
 
 # Pokémon Emerald Legacy
