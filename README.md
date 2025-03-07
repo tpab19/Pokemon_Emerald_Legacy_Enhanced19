@@ -242,11 +242,10 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
-* Add a method to infinitely acquire Type Enhancing Items and Smoke Ball
+* Add a method to infinitely acquire Smoke Ball
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
 * Add ability to change a Pokemon's pokeball
-* Investigate flying directly to Secret Base
 * Look into Ability Capsule/Patches
 * Look into earlier availability for Clamperl Evolutions
 * Update Secret Base visual indicator on Fly Map
