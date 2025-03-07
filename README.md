@@ -72,7 +72,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
 * Added all Type Enhancing Held Items to various Town and City Pokemarts at 9800 pokedollars after beating the game.
   * Oldale Town: Poison Barb
-  * Petalburg City: Silk Scarf & Silver Powder
+  * Petalburg City: Silk Scarf & Silverpowder
   * Rustboro City: Hard Stone
   * Slateport City: Black Belt
   * Mauville City: Magnet
@@ -197,12 +197,14 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 16: Twister
     * Lvl 19: Razor Leaf
     * Lvl 34: Dragonbreath
+    * Lvl 65: Frenzy Plant
   * Combusken:
     * Lvl 37: Blaze Kick (in case of evolution cancellation)
     * Lvl 41: Sky Uppercut
     * Lvl 55: Hi Jump Kick
   * Blaziken:
     * Lvl  1: Rock Slide (Torchic Egg Move, for relearning)
+    * Lvl 65: Blast Burn
   * Marshtomp:
     * Lvl 37: Muddy Water (in case of evolution cancellation)
     * Lvl 40: Protect
