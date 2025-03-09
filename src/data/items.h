@@ -4783,4 +4783,17 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_Mints,
         .secondaryId = NATURE_TIMID,
     },
+
+    // Ability Capsule
+
+    [ITEM_ABILITY_CAPSULE] =
+    {
+        .name = _("ABILITY CAPSULE"),
+        .itemId = ITEM_ABILITY_CAPSULE,
+        .price = 20000,
+        .description = sAbilityCapsuleDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_AbilityCapsule,
+    },
 };
