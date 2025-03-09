@@ -14,21 +14,21 @@ The Pret Pokeemerald disassembly upon which the project is ultimately based has 
 
 Without any further ado, below are the features added to Base Patch (main branch):
 
-## Base Patch - v1.1.1:
+## Base Patch - v1.1.x: (See release notes for latest version, notes below are for WIP code updates since last release)
 
 The Base Emerald Legacy Enhanced version which primarily focuses on quality of life additions such as HM improvements, Stat Editor for IVs and EVs, Nature Mints and an Egg Move Tutor.
 
-This Base patch includes all updates to Pokemon Emerald Legacy source code as of 23 Feb 2025.
+This Base patch includes all updates to Pokemon Emerald Legacy source code as of 27 Feb 2025.
 
 ### Implemented Changes:
-* All Base Legacy changes as of v1.1.0
+* All Base Legacy changes as of v1.1.4
 * Removed requirement for all field moves (including HMs) to have to be learned by a pokemon in order to be used outside of battle.
   * Relevant Gym Badge, HM in bag, and at least one pokemon capable of learning the move required to use a HM.
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
   * Secret Power requires TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
-  * Dig requires TM28 in Bag and a pokemon able to use the move
-  * The following field moves require the pokemon to be able to learn it by level up equal or prior to their current level:
+  * Dig requires TM28 in Bag and a pokemon able to use the move from the party menu.
+  * The following field moves require the pokemon to be able to learn it by level up equal or prior to their current level to be added to the party menu:
     * Teleport
     * Milk Drink
     * Softboiled
@@ -50,7 +50,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
-* Added ability to fly to your Secret Base
+* Added ability to fly to your Secret Base after creating one.
+  * Represented by Red Square like Battle Frontier on route where base is made.
 * Decoration Improvements:
   * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
   * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
@@ -88,7 +89,18 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Decorations cost halved (e.g. 16 BP to 8 BP)
   * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
   * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
-* Amulet Coin now doubles prize money if any pokemon in party is holding the item.
+* Amulet Coin doubles prize money if any pokemon in party is holding the item.
+* Pokeballs (except Master Ball) can be used from bag to change a pokemon's current ball.
+* Luxury ball added to Verdanturf Town Mart after clearing Rusturf Tunnel.
+* Added ability for Level capped and level 100 able to gain EVs.
+* Wild pokemon held item chances slightly buffed for Compoundeys Ability users:
+  * Chance of "common" item buffed from 60% to 70%
+  * Chance of "rare" item buffed from 20% to 25%
+* Clamperl wild held item changed:
+  * Blue Shard removed as held item
+  * 5% chance to hold Deepseascale or Deepseatooth (10% overall)
+  * With compoundeyes pokemon 10% chance to hold Deepseascale or Deepseatooth (20% overall)
+* Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
@@ -237,7 +249,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
 * Starter ability battle feedback (potentially infeasible)
-* Potentially add item drop on wild pokemon fainting (and rebalance drop items)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
@@ -245,9 +256,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a method to infinitely acquire Smoke Ball
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
-* Add ability to change a Pokemon's pokeball
-* Look into Ability Capsule/Patches
-* Look into earlier availability for Clamperl Evolutions
+* Look into Ability Capsule
 * Update Secret Base visual indicator on Fly Map
 
 ## Enhanced Credits List:
