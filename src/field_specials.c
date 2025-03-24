@@ -2352,7 +2352,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 8;
+        task->tNumItems = 9;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2362,7 +2362,7 @@ void ShowScrollableMultichoice(void)
         break;
     case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11;
+        task->tNumItems = 19;
         task->tLeft = 14;
         task->tTop = 1;
         task->tWidth = 15;
@@ -2504,6 +2504,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_CarbosCost,
         gText_HpUpCost,
         gText_RareCandyCost,
+        gText_AbilityCapsuleCost,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
@@ -2518,6 +2519,14 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_FocusBandCost,
         gText_ScopeLensCost,
         gText_MetalCoatCost,
+        gText_AmuletCoinCost,
+        gText_ExpShareCost,
+        gText_LuckyEggCost,
+        gText_MachoBraceCost,
+        gText_CleanseTagCost,
+        gText_SmokeBallCost,
+        gText_SootheBellCost,
+        gText_EverstoneCost,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_BERRY_VENDOR] =
