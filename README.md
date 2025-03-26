@@ -51,6 +51,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
 * Ability Capsules added into the game to swap between pokemon's abilities (if a species has more than one ability available)
   * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
+  * Available from Battle Frontier from vitamin seller for 4BP
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
 * Added ability to fly to your Secret Base after creating one.
   * Represented by Red Square like Battle Frontier on route where base is made.
@@ -86,11 +87,15 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Mossdeep City: Twistedspoon & Nevermeltice
   * Sootopolis City: Mystic Water
   * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
-* Battle Frontier Exchange Corner Item Costs reduced:
+* Battle Frontier Exchange Corner Items Updated:
   * Changed Rare Candy Cost to 1 BP each
   * Decorations cost halved (e.g. 16 BP to 8 BP)
-  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
   * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
+  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
+    * Added more Held Items: Amulet Coin, Exp. Share, Lucky Egg, Macho Brace, Cleanse Tag, SmokeBall, Soothe Bell, & Everstone
+* Battle Frontier Move Tutor costs reduced:
+  * All costs reduced to a quarter (e.g. 48 BP to 12 BP)
+  * After gaining Silver Symbols Move Tutors teach moves for Free
 * Amulet Coin doubles prize money if any pokemon in party is holding the item.
 * Pokeballs (except Master Ball) can be used from bag to change a pokemon's current ball.
 * Luxury ball added to Verdanturf Town Mart after clearing Rusturf Tunnel.
@@ -255,8 +260,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a way to see Secret ID in-game
 * Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
-* Add a method to infinitely acquire Smoke Ball
-* Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
 * Update Secret Base visual indicator on Fly Map
 
