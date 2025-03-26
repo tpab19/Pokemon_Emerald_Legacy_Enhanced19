@@ -49,6 +49,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * **Note:**:
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
+* Ability Capsules added into the game to swap between pokemon's abilities (if a species has more than one ability available)
+  * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
 * Added ability to fly to your Secret Base after creating one.
   * Represented by Red Square like Battle Frontier on route where base is made.
@@ -256,7 +258,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a method to infinitely acquire Smoke Ball
 * Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
-* Look into Ability Capsule
 * Update Secret Base visual indicator on Fly Map
 
 ## Enhanced Credits List:
