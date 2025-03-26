@@ -1214,7 +1214,7 @@ static void HallOfFame_PrintPlayerInfo(u8 unused1, u8 unused2)
     }
     else
     {
-        AddTextPrinterParameterized3(1, FONT_NORMAL, 15, 1, sPlayerInfoTextColors, TEXT_SKIP_DRAW, gText_EmeraldLegacy);
+        AddTextPrinterParameterized3(1, FONT_NORMAL, 15, 1, sPlayerInfoTextColors, TEXT_SKIP_DRAW, gText_EmeraldLegacyEnhanced);
     }
     
     AddTextPrinterParameterized3(1, FONT_NORMAL, 0, 0x11, sPlayerInfoTextColors, TEXT_SKIP_DRAW, gText_Name);
