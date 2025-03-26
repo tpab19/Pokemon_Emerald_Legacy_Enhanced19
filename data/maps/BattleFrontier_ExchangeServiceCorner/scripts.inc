@@ -327,7 +327,7 @@ BattleFrontier_ExchangeServiceCorner_EventScript_RareCandy::
 BattleFrontier_ExchangeServiceCorner_EventScript_AbilityCapsule::
 	msgbox BattleFrontier_ExchangeServiceCorner_Text_ConfirmAbilityCapsule, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_ExchangeServiceCorner_EventScript_ChooseVitamin
-	setvar VAR_0x8008, 16
+	setvar VAR_0x8008, 4
 	setvar VAR_0x8009, ITEM_ABILITY_CAPSULE
 	goto BattleFrontier_ExchangeServiceCorner_EventScript_TryPurchasePrize
 	end
