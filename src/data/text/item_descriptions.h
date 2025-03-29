@@ -764,9 +764,9 @@ static const u8 sSilverPowderDesc[] = _(
     "BUG-type moves.");
 
 static const u8 sAmuletCoinDesc[] = _(
-    "Doubles money in\n"
-    "battle if the\n"
-    "holder takes part.");
+    "A hold item that\n"
+    "doubles prize money\n"
+    "if holder in party.");
 
 static const u8 sCleanseTagDesc[] = _(
     "A hold item that\n"
@@ -1660,3 +1660,8 @@ static const u8 sTimidMintDesc[] = _(
     "Changes the nature\n"
     "of a Pokémon to\n"
     "Timid");
+
+static const u8 sAbilityCapsuleDesc[] = _(
+    "Changes the ability\n"
+    "of a Pokémon.");
+    
