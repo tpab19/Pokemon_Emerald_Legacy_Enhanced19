@@ -428,5 +428,8 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // Ability Capsule
     [ITEM_ABILITY_CAPSULE] = {gItemIcon_AbilityCapsule, gItemIconPalette_AbilityCapsule},
 
+    // EXP. ALL Key Item
+    [ITEM_EXP_ALL] = {gItemIcon_ExpShare, gItemIconPalette_ExpShare},
+
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
