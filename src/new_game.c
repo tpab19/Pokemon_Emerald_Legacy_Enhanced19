@@ -46,6 +46,7 @@
 #include "union_room_chat.h"
 #include "constants/items.h"
 #include "tx_registered_items_menu.h"
+#include "wild_encounter.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -158,6 +159,8 @@ void NewGameInitData(void)
         RtcReset();
 
     gDifferentSaveFile = TRUE;
+    gSaveBlock2Ptr->_saveSentinel = 0xFF;
+    gSaveBlock2Ptr->saveVersion = SAVE_VERSION;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
     ZeroEnemyPartyMons();
@@ -197,6 +200,7 @@ void NewGameInitData(void)
     InitEasyChatPhrases();
     SetMauvilleOldMan();
     InitDewfordTrend();
+    GetFeebasTiles();
     ResetFanClub();
     ResetLotteryCorner();
     WarpToTruck();

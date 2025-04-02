@@ -1078,7 +1078,8 @@ const u16 gEggMoves[] = {
               MOVE_CURSE,
               MOVE_FISSURE,
               MOVE_TICKLE,
-              MOVE_MIRROR_COAT),
+              MOVE_MIRROR_COAT,
+              MOVE_SELF_DESTRUCT),
 
     egg_moves(SKITTY,
               MOVE_HELPING_HAND,

@@ -14,18 +14,34 @@ The Pret Pokeemerald disassembly upon which the project is ultimately based has 
 
 Without any further ado, below are the features added to Base Patch (main branch):
 
-## Base Patch - v1.0.1:
+## Base Patch - v1.1.x: (See release notes for latest version, notes below are for WIP code updates since last release)
 
 The Base Emerald Legacy Enhanced version which primarily focuses on quality of life additions such as HM improvements, Stat Editor for IVs and EVs, Nature Mints and an Egg Move Tutor.
 
-This Base patch includes all updates to Pokemon Emerald Legacy source coade as of 12 Jan 2025.
+This Base patch includes all updates to Pokemon Emerald Legacy source code as of 27 Feb 2025.
 
 ### Implemented Changes:
-* Removed requirement for a HM move to have to be learned by a pokemon in order to be used outside of battle.
-  * Relevant Gym Badge, HM in bag, and at least one pokemon capable of learning the move required to use the HM.
+* All Base Legacy changes as of v1.1.4
+* Removed requirement for all field moves (including HMs) to have to be learned by a pokemon in order to be used outside of battle.
+  * Relevant Gym Badge, HM in bag, and at least one pokemon capable of learning the move required to use a HM.
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
-  * Secret Power works similarly, requiring TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+  * Secret Power requires TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
+  * Dig requires TM28 in Bag and a pokemon able to use the move from the party menu.
+  * The following field moves require the pokemon to be able to learn it by level up equal or prior to their current level to be added to the party menu:
+    * Teleport
+    * Milk Drink
+    * Softboiled
+    * Sweet Scent
+  * A maximum of four field moves will be added to the Party Menu list with priority given to moves already learned, followed by Fly and Flash HMs before any non-HM moves.
+* Added unique per-pokemon Surfing Overworld sprites instead of the "Surf blob"
+  * Supports Shiny pokemon.
+  * As noted below, can revert back to Surf Blob if preferred in options.
+  * Does not (yet) support diving.
+  * Known Bug: Unable to "jump" onto pokemon's surfing sprite, instead they load via a slight "sliding" animation, working on fix.
+* Added sparkle to Feebas spots on Route 119 after recieving the Devon Scope
+  * Feebas encounter rate on tiles reduced to 25% to retain a bit of challenge in finding wild Feebas.
+  * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
   * Updated in latest patch to decrease or increase EVs and IVs by 10 using L and R respectively.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
@@ -34,19 +50,69 @@ This Base patch includes all updates to Pokemon Emerald Legacy source coade as o
   * **Note:**:
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
+* Ability Capsules added into the game to swap between pokemon's abilities (if a species has more than one ability available)
+  * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
+  * Available from Battle Frontier from vitamin seller for 4BP
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Added ability to fly to your Secret Base after creating one.
+  * Represented by Red Square like Battle Frontier on route where base is made.
+* Decoration Improvements:
+  * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
+  * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
+  * Added Lotad and Seedot dolls for purchase from Slateport Doll seller
 * Low Health beep reduced to three beeps and not loop infinitely.
 * Added Select as shortcut to swap Pokemon in Party
 * Updated Options Menu with below additional options:
   * Ability to enable or disable Bike Music.
   * Ability to enable or disable Surf Music.
   * Ability to reduce or turn off in-battle item use animation.
+  * Ability to toggle between unique per-pokemon surfing overworld and original "Surf blob"
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
+* Added larger quantity coin purchasing in Mauville Game Corner and improved efficiency to purchase more coins.
+* Updated Regi overworld encounter sprites to match the Regi PokeDolls instead.
 * Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
+* Added Self-Destruct to Wailmer and Wailord Egg Move Pool
+* Added Heart Scales to Sootopolis Mart at 1000 pokedollars after beating the the game.
+* Added all Type Enhancing Held Items to various Town and City Pokemarts at 9800 pokedollars after beating the game.
+  * Oldale Town: Poison Barb
+  * Petalburg City: Silk Scarf & Silverpowder
+  * Rustboro City: Hard Stone
+  * Slateport City: Black Belt
+  * Mauville City: Magnet
+  * Verdanturf Town: Miracle Seed
+  * Fallarbor Town: Dragon Fang
+  * Lavaridge Town: Charcoal & Soft Sand
+  * Fortree City: Sharp Beak
+  * Mossdeep City: Twistedspoon & Nevermeltice
+  * Sootopolis City: Mystic Water
+  * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
+* Battle Frontier Exchange Corner Items Updated:
+  * Changed Rare Candy Cost to 1 BP each
+  * Decorations cost halved (e.g. 16 BP to 8 BP)
+  * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
+  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
+    * Added more Held Items: Amulet Coin, Exp. Share, Lucky Egg, Macho Brace, Cleanse Tag, SmokeBall, Soothe Bell, & Everstone
+* Battle Frontier Move Tutor costs reduced:
+  * All costs reduced to a quarter (e.g. 48 BP to 12 BP)
+  * After gaining Silver Symbols Move Tutors teach moves for Free
+* Amulet Coin doubles prize money if any pokemon in party is holding the item.
+* Pokeballs (except Master Ball) can be used from bag to change a pokemon's current ball.
+* Luxury ball added to Verdanturf Town Mart after clearing Rusturf Tunnel.
+* Added ability for Level capped and level 100 able to gain EVs.
+* Wild pokemon held item chances slightly buffed for Compoundeys Ability users:
+  * Chance of "common" item buffed from 60% to 70%
+  * Chance of "rare" item buffed from 20% to 25%
+* Clamperl wild held item changed:
+  * Blue Shard removed as held item
+  * 5% chance to hold Deepseascale or Deepseatooth (10% overall)
+  * With compoundeyes pokemon 10% chance to hold Deepseascale or Deepseatooth (20% overall)
+* Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
 
-## Dragon Type Physical - v1.0.1:
+**Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
+
+## Dragon Type Physical - v1.1.1:
 
 Simple swap for Dragon type to be considered Physical. This **does not** do any stat rebalancing of any pokemon, just swaps the typing. (e.g. Salamence will benefit significantly, Latios will lose out).
 
@@ -55,7 +121,7 @@ Simple swap for Dragon type to be considered Physical. This **does not** do any 
 * Dragon type Physical in battle.
 * Updated text in Rustboro School to note change of Dragon typing to Physical.
 
-## Dragon Grovyle and Sceptile - v1.0.1:
+## Dragon Grovyle and Sceptile - v1.1.1:
 
 A common request throughout the Legacy project to make the Treecko Dragon type.
 
@@ -75,7 +141,7 @@ A common request throughout the Legacy project to make the Treecko Dragon type.
     * Lvl 34: Dragonbreath
     * Lvl 60: Outrage
 
-## Physical Dragon Grovyle and Sceptile - v1.0.1:
+## Physical Dragon Grovyle and Sceptile - v1.1.1:
 
 Combination of the two above patches for physical Dragon type and to add Dragon typing to the Treecko line. Only Grovyle and Sceptile stats rebalanced, as above no other pokemon rebalanced (e.g. Salamence will benefit significantly, Latios will lose out).
 
@@ -106,7 +172,7 @@ Combination of the two above patches for physical Dragon type and to add Dragon 
     * Base Special Defence Decreased by 5
   * **Note:** If you are bringing a save file from Emerald Legacy and have Grovyle or Sceptile in your party, please deposit and withdraw from a PC to get their base stat calculations to be reset.
 
-## Enhanced Starters - v1.0.1
+## Enhanced Starters - v1.1.1
 
 An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs the Hoenn Starters (and my preferred way to play!). For the most balanced version, please use the original version! This version is just to feed into the childhood nostalgia feeling of having an overpowered starter throughout the game and to catch all the starters early in the game.
 
@@ -151,12 +217,14 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 16: Twister
     * Lvl 19: Razor Leaf
     * Lvl 34: Dragonbreath
+    * Lvl 65: Frenzy Plant
   * Combusken:
     * Lvl 37: Blaze Kick (in case of evolution cancellation)
     * Lvl 41: Sky Uppercut
     * Lvl 55: Hi Jump Kick
   * Blaziken:
     * Lvl  1: Rock Slide (Torchic Egg Move, for relearning)
+    * Lvl 65: Blast Burn
   * Marshtomp:
     * Lvl 37: Muddy Water (in case of evolution cancellation)
     * Lvl 40: Protect
@@ -173,8 +241,10 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
     * Lvl 65: Blast Burn
   * Feraligatr:
     * Lvl 65: Hydro Cannon
+  * Brendan/May give 2 Ultra Balls in addition to Poké Balls to help catch the other starters
+  * 2000 extra Pokédollars at start of game to help catch the other starters
 
-## Enhanced Starters - Dragon Physical - v1.0.1
+## Enhanced Starters - Dragon Physical - v1.1.1
 
 A combination of Enhanced Starters with Physical Dragon type.
 
@@ -187,27 +257,31 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
 * Starter ability battle feedback (potentially infeasible)
-* Add Dig to field move usage without move learned but TM in bag (potentially as option to reduce too many options in Party Menu)
-* Add Teleport to field move usage without move learned (potentially as option to reduce too many options in Party Menu after Tate and Liza)
-* Option to toggle "Edit Stats" in the Options Menu to declutter Party Menu options
-* Middle-ground method to outline Feebas tiles without making Feebas too easily accessible (have a number of potentially infeasible ideas)
-* Potentially add item drop on wild pokemon fainting
-* Remove Battle Mode Option in Hard mode (if it doesn't break the options menu)
-* Potentially easier method for Heart Scale gathering
-* Review Department Store Sale frequency
 * Increase Mirage Island Odds (or an easy way to enable it)
-* Add self-destruct to Wailmer and Wailord Egg Movepool
-* (Surprise feature - watch this space!)
+* Add a way to see Secret ID in-game
+* Look into Gen 6 Exp. Share/Exp. All implementation
+* Adding some Shiny Pokemon battles as a nod to the anime
+* Use Legendary Beast's themes for their in-game encounters
+* Update Secret Base visual indicator on Fly Map
+* Add pokemon-specific held items for purchase in-game
+* Update end-game screen to include "Enhanced"
+* Update title screen to include "Enhanced"
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
 * Credit to [ScyrousFX](https://www.pokecommunity.com/member.php?u=980149) for [Use Fly/Flash from party menu if Pokémon is compatible](https://www.pokecommunity.com/showpost.php?p=10420068)
 * Credit to TeamAquasHideout for [EV IV Stat Editor UI](https://github.com/pret/pokeemerald/wiki/Add-a-EV---IV-Stat-Editor-UI)
 * Credit to [ghoulslash](https://www.pokecommunity.com/members/ghoulslash.581824/) for [Nature Mints](https://www.pokecommunity.com/showpost.php?p=10245635&postcount=191)
+* Credit to [ScyrousFX](https://www.pokecommunity.com/member.php?u=980149), [Yak Attack](https://www.pokecommunity.com/members/yak-attack.891333/), [Kurausukun](https://github.com/Kurausukun), [Zatsu](https://www.pokecommunity.com/members/zatsu.444936/)
 * Source [Tweaking the count of health beeps
 ](https://github.com/pret/pokeemerald/wiki/Tweaking-the-count-of-health-beeps)
 * Added Select as shortcut to swap Pokemon in Party
   * Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [Swap party screen slots using Select](https://www.pokecommunity.com/showpost.php?p=10420662)
+* Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
+* Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
+* Credit to [Hiroshi Sotomura](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [Add routes as Fly destinations](https://www.pokecommunity.com/threads/add-routes-as-fly-destinations.440310/) as basis for flying to Secret Base.
+* Credit to [voloved](https://github.com/voloved) for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
+
 
 # Pokémon Emerald Legacy
 
@@ -304,7 +378,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 
 ### Music Credits:
 - "Vs Zinnia" - GBA MIDI by LibertyTwins, Original Composition by Shota Kageyama
-- "Battle! Rival Wally! (Pokemon Omega Ruby/Alpha Sapphire)" - Based on [a Score written by BreadMaster](https://musescore.com/user/13873941/scores/6601098), Original Composition by Minako Adachi
+- "Battle! Rival Wally! (Pokemon Omega Ruby/Alpha Sapphire)" - [Arrangement written by BreadMaster](https://musescore.com/user/13873941/scores/23255677/s/0sBU8r), Original Composition by Minako Adachi
 
 
 ### Where you can find all Pret Tutorials:
@@ -367,6 +441,7 @@ These videos also provide an overview of the hack and the ideology behind it:
 - Jirachii - [Hidden Power type in summary screen](https://www.pokecommunity.com/threads/simple-modifications-directory.416647/page-11#post-10269132)
 - cromerc - [Fixed unix build issues](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/1)
 - ElusiveEllie - [Fixed INSTALL.md instructions to point to correct project](https://github.com/cRz-Shadows/Pokemon_Emerald_Legacy/pull/8)
+- Scyrous - [Make Move Relearner Teach Egg Moves With A Flag](https://github.com/pret/pokeemerald/wiki/Make-Move-Relearner-Teach-Egg-Moves-With-A-Flag)
 
 
 ### Other Credits:
