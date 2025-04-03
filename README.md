@@ -288,7 +288,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
 * Credit to [Hiroshi Sotomura](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [Add routes as Fly destinations](https://www.pokecommunity.com/threads/add-routes-as-fly-destinations.440310/) as basis for flying to Secret Base.
 * Credit to [voloved](https://github.com/voloved) for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
-
+* Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [*Make Poké Balls usable outside of battles](https://github.com/pret/pokeemerald/compare/master...LOuroboros:oobBalls)
 
 # Pokémon Emerald Legacy
 
