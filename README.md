@@ -265,7 +265,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
 * Update title screen to include "Enhanced"
-* Add move effectiveness identifiers in-battle
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
@@ -281,7 +280,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
 * Credit to [Hiroshi Sotomura](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [Add routes as Fly destinations](https://www.pokecommunity.com/threads/add-routes-as-fly-destinations.440310/) as basis for flying to Secret Base.
 * Credit to [voloved](https://github.com/voloved) for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
-
+* Credit to [voloved](https://github.com/voloved) for [*Show Type Effectiveness In Battle Using Pre Existing Function and Disable in Option Menu](https://github.com/pret/pokeemerald/wiki/Show-Type-Effectiveness-In-Battle-Using-Pre-Existing--Function-and-Disable-in-Option-Menu)
 
 # Pokémon Emerald Legacy
 
