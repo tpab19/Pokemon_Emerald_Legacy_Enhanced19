@@ -733,6 +733,11 @@ static const u8 sExpShareDesc[] = _(
     "gets EXP. points\n"
     "from battles.");
 
+static const u8 sExpAllDesc[] = _(
+    "Turning this on\n"
+    "gives all in party\n"
+    "EXP. points.");
+
 static const u8 sQuickClawDesc[] = _(
     "A hold item that\n"
     "occasionally allows\n"

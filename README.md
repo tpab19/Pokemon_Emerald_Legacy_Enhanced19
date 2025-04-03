@@ -54,6 +54,14 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
   * Available from Battle Frontier from vitamin seller for 4BP
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Added EXP. All as reward from Mr. Stone for delivering Steven's Letter.
+  * **Note:**
+    * This is in addition to traditional Gen 3 EXP. Share held item remaining unchanged.
+    * This is **not** not Gen 6 EXP. Share.
+    * EXP splits half the battle exp evenly between all eligible pokemon in the party.
+    * EXP would be the same as if all pokemon in the party are each holding an EXP. Share.
+    * EXP. All and EXP. Share do not work together, if EXP. All is on, held item EXP. Share does not do anything.
+* Lucky Egg increases all battle exp gained if any pokemon in party is holding the item.
 * Added ability to fly to your Secret Base after creating one.
   * Represented by Red Square like Battle Frontier on route where base is made.
 * Decoration Improvements:
@@ -259,13 +267,11 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Starter ability battle feedback (potentially infeasible)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
-* Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
 * Update Secret Base visual indicator on Fly Map
 * Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
-* Update title screen to include "Enhanced"
 * Add move effectiveness identifiers in-battle
 
 ## Enhanced Credits List:
