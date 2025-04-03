@@ -43,6 +43,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Feebas encounter rate on tiles reduced to 25% to retain a bit of challenge in finding wild Feebas.
   * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
+  * Updated in latest patch to decrease or increase EVs and IVs by 10 using L and R respectively.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
   * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
