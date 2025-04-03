@@ -37,6 +37,7 @@
 #include "constants/rgb.h"
 #include "menu.h"
 #include "pokemon_summary_screen.h"
+#include "event_data.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -1572,7 +1573,13 @@ u8 TypeEffectiveness(u8 targetId)
 {
     u8 moveFlags;
     u16 move;
-    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+    struct ChooseMoveStruct *moveInfo;
+    
+    if (FlagGet(FLAG_SHOW_TYPE_EFFECT_BATTLE)){
+        return 10;
+    }
+
+    moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
     move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
     move = gBattleMons[gActiveBattler].moves[gMoveSelectionCursor[gActiveBattler]];
     moveFlags = AI_TypeCalc(move, gBattleMons[targetId].species, gBattleMons[targetId].ability);
