@@ -75,6 +75,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Ability to enable or disable Surf Music.
   * Ability to reduce or turn off in-battle item use animation.
   * Ability to toggle between unique per-pokemon surfing overworld and original "Surf blob"
+  * Ability to toggle Type Effectiveness colour coding within battle (Off by default)
+    * Green: Super effective, Red: Not very effective, Grey: No effect
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
