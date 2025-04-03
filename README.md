@@ -43,6 +43,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Feebas encounter rate on tiles reduced to 25% to retain a bit of challenge in finding wild Feebas.
   * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
+  * Updated in latest patch to decrease or increase EVs and IVs by 10 using L and R respectively.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
   * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
@@ -53,6 +54,14 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
   * Available from Battle Frontier from vitamin seller for 4BP
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Added EXP. All as reward from Mr. Stone for delivering Steven's Letter.
+  * **Note:**
+    * This is in addition to traditional Gen 3 EXP. Share held item remaining unchanged.
+    * This is **not** not Gen 6 EXP. Share.
+    * EXP splits half the battle exp evenly between all eligible pokemon in the party.
+    * EXP would be the same as if all pokemon in the party are each holding an EXP. Share.
+    * EXP. All and EXP. Share do not work together, if EXP. All is on, held item EXP. Share does not do anything.
+* Lucky Egg increases all battle exp gained if any pokemon in party is holding the item.
 * Added ability to fly to your Secret Base after creating one.
   * Represented by Red Square like Battle Frontier on route where base is made.
 * Decoration Improvements:
@@ -258,13 +267,11 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Starter ability battle feedback (potentially infeasible)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
-* Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
 * Update Secret Base visual indicator on Fly Map
 * Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
-* Update title screen to include "Enhanced"
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
@@ -280,7 +287,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
 * Credit to [Hiroshi Sotomura](https://www.pokecommunity.com/members/hiroshi-sotomura.5/) for [Add routes as Fly destinations](https://www.pokecommunity.com/threads/add-routes-as-fly-destinations.440310/) as basis for flying to Secret Base.
 * Credit to [voloved](https://github.com/voloved) for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
-* Credit to [voloved](https://github.com/voloved) for [*Show Type Effectiveness In Battle Using Pre Existing Function and Disable in Option Menu](https://github.com/pret/pokeemerald/wiki/Show-Type-Effectiveness-In-Battle-Using-Pre-Existing--Function-and-Disable-in-Option-Menu)
+
 
 # Pokémon Emerald Legacy
 
