@@ -239,7 +239,7 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
   * Typhlosion:
     * Lvl 65: Blast Burn
   * Feraligatr:
-    * Lvl 65: Hydro Cannon
+    * Lvl 65: Hydro Cannons
   * Brendan/May give 2 Ultra Balls in addition to Poké Balls to help catch the other starters
   * 2000 extra Pokédollars at start of game to help catch the other starters
 
@@ -265,6 +265,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
 * Update title screen to include "Enhanced"
+* Add move effectiveness identifiers in-battle
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
