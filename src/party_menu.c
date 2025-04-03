@@ -344,6 +344,7 @@ static void Task_HandleSelectionMenuInput(u8);
 static void CB2_ShowPokemonSummaryScreen(void);
 static void UpdatePartyToBattleOrder(void);
 static void CB2_ReturnToPartyMenuFromSummaryScreen(void);
+static void CB2_ReturnToPartyMenuFromStatEdit(void);
 static void SlidePartyMenuBoxOneStep(u8);
 static void Task_SlideSelectedSlotsOffscreen(u8);
 static void SwitchPartyMon(void);
@@ -2866,6 +2867,13 @@ static void CB2_ReturnToPartyMenuFromSummaryScreen(void)
     InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_DO_WHAT_WITH_MON, Task_TryCreateSelectionWindow, gPartyMenu.exitCallback);
 }
 
+static void CB2_ReturnToPartyMenuFromStatEdit(void)
+{
+    gPaletteFade.bufferTransferDisabled = TRUE;
+    gPartyMenu.slotId = gSpecialVar_0x8004;
+    InitPartyMenu(gPartyMenu.menuType, KEEP_PARTY_LAYOUT, gPartyMenu.action, TRUE, PARTY_MSG_DO_WHAT_WITH_MON, Task_TryCreateSelectionWindow, gPartyMenu.exitCallback);
+}
+
 static void CursorCb_Switch(u8 taskId)
 {
     PlaySE(SE_SELECT);
@@ -4311,7 +4319,7 @@ static void UpdatePartyMonAilmentGfx(u8 status, struct PartyMenuBox *menuBox)
 
 static void ChangePokemonStatsPartyScreen_CB(void)
 {
-    CB2_ReturnToPartyMenuFromSummaryScreen();
+    CB2_ReturnToPartyMenuFromStatEdit();
 }
 
 static void ChangePokemonStatsPartyScreen(void)
