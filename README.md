@@ -263,7 +263,7 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Credit to [slawter666](https://www.pokecommunity.com/members/slawter666.109486/) and [wally-217](https://www.pokecommunity.com/members/wally-217.356904/) for [Unique surfing overworlds](https://www.pokecommunity.com/threads/unique-surfing-overworlds.415063/)
 * Credit to [Kurausukun](https://github.com/Kurausukun) for [Feebas Encounter Tile Highlight](https://github.com/DizzyEggg/pokeemerald/commit/f40f1107105244850d26ab57bad928c09300b69b)
 * Credit to voloved for [*Amulet Coin Effects If Anyone In Party is Holding It](https://github.com/pret/pokeemerald/wiki/Amulet-Coin-Effects-If-Anyone-In-Party-is-Holding-It)
-
+* Credit to [Lunos](https://www.pokecommunity.com/members/lunos.114506/) for [*Make Poké Balls usable outside of battles](https://github.com/pret/pokeemerald/compare/master...LOuroboros:oobBalls)
 
 # Pokémon Emerald Legacy
 
