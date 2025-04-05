@@ -41,6 +41,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
+#include "debug.h"
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -941,7 +942,15 @@ void ItemUseOutOfBattle_EvolutionStone(u8 taskId)
 }
 
 void ItemUseInBattle_PokeBall(u8 taskId)
-{
+{    
+#if TX_DEBUG_SYSTEM_ENABLE == TRUE
+    if (FlagGet(FLAG_SYS_NO_CATCHING)){
+        static const u8 sText_BallsCannotBeUsed[] = _("Poké Balls cannot be used\nright now!\p");
+        DisplayItemMessage(taskId, 1, sText_BallsCannotBeUsed, CloseItemMessage);
+        return;
+    }
+#endif
+
     if (IsPlayerPartyAndPokemonStorageFull() == FALSE) // have room for mon?
     {
         RemoveBagItem(gSpecialVar_ItemId, 1);

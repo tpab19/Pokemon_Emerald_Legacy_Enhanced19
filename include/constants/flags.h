@@ -729,13 +729,13 @@
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
 #define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_SYS_NO_COLLISION           0x2B5 // Unused Flag // Debug
+#define FLAG_SYS_NO_ENCOUNTER           0x2B6 // Unused Flag // Debug
+#define FLAG_SYS_NO_TRAINER_SEE         0x2B7 // Unused Flag // Debug
+#define FLAG_SYS_NO_BAG_USE             0x2B8 // Unused Flag // Debug
+#define FLAG_SYS_NO_CATCHING            0x2B9 // Unused Flag // Debug
+#define FLAG_SYS_PC_FROM_DEBUG_MENU     0x2BA // Unused Flag // Debug
+#define FLAG_SYS_NO_BATTLE_DMG          0x2BB // Unused Flag // Debug
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
