@@ -43,13 +43,25 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Feebas encounter rate on tiles reduced to 25% to retain a bit of challenge in finding wild Feebas.
   * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
 * Stat Editor to edit IVs and EVs added to Party Menu after National Dex is unlocked.
+  * Updated in latest patch to decrease or increase EVs and IVs by 10 using L and R respectively.
 * Nature Mints have been added in the game for purchase after beating Petalburg Gym.
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
   * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
   * **Note:**:
     * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
+* Ability Capsules added into the game to swap between pokemon's abilities (if a species has more than one ability available)
+  * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
+  * Available from Battle Frontier from vitamin seller for 4BP
 * Added Egg Move Tutor to Fallarbor Town Move Tutor's House after beating the game.
+* Added EXP. All as reward from Mr. Stone for delivering Steven's Letter.
+  * **Note:**
+    * This is in addition to traditional Gen 3 EXP. Share held item remaining unchanged.
+    * This is **not** not Gen 6 EXP. Share.
+    * EXP splits half the battle exp evenly between all eligible pokemon in the party.
+    * EXP would be the same as if all pokemon in the party are each holding an EXP. Share.
+    * EXP. All and EXP. Share do not work together, if EXP. All is on, held item EXP. Share does not do anything.
+* Lucky Egg increases all battle exp gained if any pokemon in party is holding the item.
 * Added ability to fly to your Secret Base after creating one.
   * Represented by Red Square like Battle Frontier on route where base is made.
 * Decoration Improvements:
@@ -63,6 +75,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Ability to enable or disable Surf Music.
   * Ability to reduce or turn off in-battle item use animation.
   * Ability to toggle between unique per-pokemon surfing overworld and original "Surf blob"
+  * Ability to toggle Type Effectiveness colour coding within battle (Off by default)
+    * Green: Super effective, Red: Not very effective, Grey: No effect
 * Added Multi item Register Menu.
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
@@ -84,11 +98,15 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Mossdeep City: Twistedspoon & Nevermeltice
   * Sootopolis City: Mystic Water
   * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
-* Battle Frontier Exchange Corner Item Costs reduced:
+* Battle Frontier Exchange Corner Items Updated:
   * Changed Rare Candy Cost to 1 BP each
   * Decorations cost halved (e.g. 16 BP to 8 BP)
-  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
   * Reduced rare berry costs to a quarter (e.g. 48 BP to 12 BP)
+  * Battle Held Item costs reduced to a quarter (e.g. 48 BP to 12 BP)
+    * Added more Held Items: Amulet Coin, Exp. Share, Lucky Egg, Macho Brace, Cleanse Tag, SmokeBall, Soothe Bell, & Everstone
+* Battle Frontier Move Tutor costs reduced:
+  * All costs reduced to a quarter (e.g. 48 BP to 12 BP)
+  * After gaining Silver Symbols Move Tutors teach moves for Free
 * Amulet Coin doubles prize money if any pokemon in party is holding the item.
 * Pokeballs (except Master Ball) can be used from bag to change a pokemon's current ball.
 * Luxury ball added to Verdanturf Town Mart after clearing Rusturf Tunnel.
@@ -232,7 +250,7 @@ An expansion on the Pokemon Emerald Legacy Enhanced Project which further buffs 
   * Typhlosion:
     * Lvl 65: Blast Burn
   * Feraligatr:
-    * Lvl 65: Hydro Cannon
+    * Lvl 65: Hydro Cannons
   * Brendan/May give 2 Ultra Balls in addition to Poké Balls to help catch the other starters
   * 2000 extra Pokédollars at start of game to help catch the other starters
 
@@ -251,16 +269,11 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Starter ability battle feedback (potentially infeasible)
 * Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
-* Look into Gen 6 Exp. Share/Exp. All implementation
 * Adding some Shiny Pokemon battles as a nod to the anime
-* Add a method to infinitely acquire Smoke Ball
-* Rebalance Battle Frontier Move Tutor (Pricing etc)
 * Use Legendary Beast's themes for their in-game encounters
-* Look into Ability Capsule
 * Update Secret Base visual indicator on Fly Map
 * Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
-* Update title screen to include "Enhanced"
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
