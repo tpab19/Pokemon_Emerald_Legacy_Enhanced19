@@ -98,6 +98,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Mossdeep City: Twistedspoon & Nevermeltice
   * Sootopolis City: Mystic Water
   * Ever Grande City (Pokémon League): Blackglasses & Spell Tag
+* Added a seller of pokemon-specific held items to the Safari Zone Entrance.
+  * Before beating the game Light Ball available for 9800 pokedollars.
+  * After beating the game Stick, Lucky Punch, Metal Powder, and Thick Club added for 9800 pokedollars.
+  * After beating the game and having Latias or Latios in party, Soul Dew added for 50,000 pokedollars.
 * Battle Frontier Exchange Corner Items Updated:
   * Changed Rare Candy Cost to 1 BP each
   * Decorations cost halved (e.g. 16 BP to 8 BP)
@@ -272,7 +276,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
 * Update Secret Base visual indicator on Fly Map
-* Add pokemon-specific held items for purchase in-game
 * Update end-game screen to include "Enhanced"
 
 ## Enhanced Credits List:
