@@ -119,6 +119,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * 5% chance to hold Deepseascale or Deepseatooth (10% overall)
   * With compoundeyes pokemon 10% chance to hold Deepseascale or Deepseatooth (20% overall)
 * Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
+* Wallace's Gym Leader sprite ported from Ruby/Sapphire
+  * Wallace's Emerald Champion Sprite remains for the E4
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
