@@ -119,7 +119,9 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * 5% chance to hold Deepseascale or Deepseatooth (10% overall)
   * With compoundeyes pokemon 10% chance to hold Deepseascale or Deepseatooth (20% overall)
 * Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
-* Mirage Island now appears if Mew, Celebi, or Jirachi are in party as a nod to mythical pokemon originally being referred to as "mirage" pokemon
+* Mirage Island changes:
+  * Appears if Wynaut in party.
+  * After post-game now appears if Mew, Celebi, or Jirachi are in party as a nod to mythical pokemon originally being referred to as "mirage" pokemon.
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
@@ -268,7 +270,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Shiny Charm after completing Hoenn Pokedex
 * Modern Sturdy Ability (maybe toggleable?)
 * Starter ability battle feedback (potentially infeasible)
-* Increase Mirage Island Odds (or an easy way to enable it)
 * Add a way to see Secret ID in-game
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
