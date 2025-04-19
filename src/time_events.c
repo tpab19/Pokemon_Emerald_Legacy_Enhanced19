@@ -52,6 +52,11 @@ bool8 IsMirageIslandPresent(void)
             return TRUE;
         
         if (species
+            && species == SPECIES_WYNAUT
+            )
+            return TRUE;
+        
+        if (species
             && FLAG_SYS_GAME_CLEAR
             && (
                 species == SPECIES_MEW
