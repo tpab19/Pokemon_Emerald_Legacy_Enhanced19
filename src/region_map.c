@@ -1170,7 +1170,10 @@ static void RegionMap_InitializeStateBasedOnSSTidalLocation(void)
 
 static u8 GetMapsecType(u16 mapSecId)
 {
-    if (CheckPlayerCurrentlyHasSecretBase() && mapSecId == VarGet(VAR_SECRET_BASE_MAP))
+    if (CheckPlayerCurrentlyHasSecretBase()
+                    && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+                    && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE
+                    )
         mapSecId = MAPSEC_SECRET_BASE;
 
     switch (mapSecId)
@@ -1492,7 +1495,9 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
         sRegionMap->playerIconSprite->callback = SpriteCB_PlayerIconMapZoomed;
     }
 
-    // if (CheckPlayerCurrentlyHasSecretBase())
+    // if (CheckPlayerCurrentlyHasSecretBase()
+    //                && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+    //                && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE)
     // {
     //     mapSecId = VarGet(VAR_SECRET_BASE_MAP);  
     //     GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
@@ -1801,7 +1806,10 @@ static void DrawFlyDestTextWindow(void)
             }
         }
 
-        if (CheckPlayerCurrentlyHasSecretBase() && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP))
+        if (CheckPlayerCurrentlyHasSecretBase()
+                    && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+                    && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE
+                    )
         {
             StringLength(gText_SecretBase);
             namePrinted = TRUE;
@@ -1907,7 +1915,10 @@ static void CreateFlyDestIcons(void)
     }
 
     // Alternate Method to highlight Secret Base - Use Town/City icon
-    // if (CheckPlayerCurrentlyHasSecretBase())
+    // if (CheckPlayerCurrentlyHasSecretBase()
+    //                && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+    //                && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE
+    //                )
     // {
     //     mapSecId = VarGet(VAR_SECRET_BASE_MAP);        
     //     canFlyFlag = FLAG_RECEIVED_SECRET_POWER;
@@ -1951,7 +1962,10 @@ static void TryCreateRedOutlineFlyDestIcons(void)
     u8 spriteId;
 
     // Alternate Method to highlight Secret Base - Use Battle Frontier Red Outline
-    if (CheckPlayerCurrentlyHasSecretBase())
+    if (CheckPlayerCurrentlyHasSecretBase()
+                    && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+                    && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE
+                    )
     {
         mapSecId = VarGet(VAR_SECRET_BASE_MAP);
         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
@@ -2070,7 +2084,10 @@ static void CB_ExitFlyMap(void)
             if (sFlyMap->choseFlyLocation)
             {
                 
-                if (CheckPlayerCurrentlyHasSecretBase() && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP))
+                if (CheckPlayerCurrentlyHasSecretBase()
+                    && sFlyMap->regionMap.mapSecId == VarGet(VAR_SECRET_BASE_MAP)
+                    && gSaveBlock1Ptr->secretBaseWarp.warpId != WARP_ID_NONE
+                    )
                     sFlyMap->regionMap.mapSecId = MAPSEC_SECRET_BASE;
 
                 switch (sFlyMap->regionMap.mapSecId)

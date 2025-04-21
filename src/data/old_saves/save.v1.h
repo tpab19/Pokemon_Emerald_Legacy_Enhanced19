@@ -156,6 +156,9 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     /** We need to fill in any data that's new in this version. */
     gSaveBlock2Ptr->saveVersion = 2;
 
+    // Set Secret Base Entrance Warp to -1 until Secret Base entered.
+    SetPlayerSecretBaseCoords(-1, -1, WARP_ID_NONE, -1, -1);
+
     COPY_ARRAY(playerName);
     COPY_FIELD(playerGender);
     COPY_FIELD(specialSaveWarpFlags);
