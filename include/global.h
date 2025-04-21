@@ -990,6 +990,7 @@ struct SaveBlock1
     struct WarpData dynamicWarp;
     struct WarpData lastHealLocation; // used by white-out and teleport
     struct WarpData escapeWarp; // used by Dig and Escape Rope
+    struct WarpData secretBaseWarp; // used to fly to Secret Base
     u16 savedMusic;
     u8 weather;
     u8 weatherCycleStage;

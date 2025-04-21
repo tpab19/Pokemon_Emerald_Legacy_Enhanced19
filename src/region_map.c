@@ -2088,7 +2088,8 @@ static void CB_ExitFlyMap(void)
                     SetWarpDestinationToHealLocation(FlagGet(FLAG_LANDMARK_POKEMON_LEAGUE) && sFlyMap->regionMap.posWithinMapSec == 0 ? HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE : HEAL_LOCATION_EVER_GRANDE_CITY);
                     break;
                 case MAPSEC_SECRET_BASE:
-                    SetWarpDestinationToDynamicWarp(WARP_ID_SECRET_BASE);
+                    SetWarpDestinationToPlayerSecretBase();
+                    //SetWarpDestinationToDynamicWarp(WARP_ID_SECRET_BASE);
                     break;
                 default:
                     if (sMapHealLocations[sFlyMap->regionMap.mapSecId][2] != HEAL_LOCATION_NONE)
