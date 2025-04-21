@@ -1063,6 +1063,7 @@ void Task_LinkFullSave(u8 taskId)
 }
 
 #include "data/old_saves/save.v0.h"
+#include "data/old_saves/save.v1.h"
 
 u16 DetermineSaveVersion()
 {
