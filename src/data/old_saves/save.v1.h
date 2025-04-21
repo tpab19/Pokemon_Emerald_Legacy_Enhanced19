@@ -44,101 +44,101 @@ struct SaveBlock2_v1
 
 struct SaveBlock1_v1
 {
-    /*0x00*/ struct Coords16 pos;
-    /*0x04*/ struct WarpData location;
-    /*0x0C*/ struct WarpData continueGameWarp;
-    /*0x14*/ struct WarpData dynamicWarp;
-    /*0x1C*/ struct WarpData lastHealLocation; // used by white-out and teleport
-    /*0x24*/ struct WarpData escapeWarp; // used by Dig and Escape Rope
-    /*0x2C*/ u16 savedMusic;
-    /*0x2E*/ u8 weather;
-    /*0x2F*/ u8 weatherCycleStage;
-    /*0x30*/ u8 flashLevel;
-    /*0x31*/ //u8 padding1;
-    /*0x32*/ u16 mapLayoutId;
-    /*0x34*/ u16 mapView[0x100];
-    /*0x234*/ u8 playerPartyCount;
-    /*0x235*/ //u8 padding2[3];
-    /*0x238*/ struct Pokemon playerParty[6];
-    /*0x490*/ u32 money;
-    /*0x494*/ u16 coins;
-    /*0x496*/ u16 registeredItemSelect; // registered for use with SELECT button
-    /*0x498*/ struct ItemSlot pcItems[50];
-    /*0x560*/ struct ItemSlot bagPocket_Items[120];
-    /*0x5D8*/ struct ItemSlot bagPocket_KeyItems[30];
-    /*0x650*/ struct ItemSlot bagPocket_PokeBalls[16];
-    /*0x690*/ struct ItemSlot bagPocket_TMHM[64];
-    /*0x790*/ struct ItemSlot bagPocket_Berries[46];
-    /*0x848*/ struct Pokeblock pokeblocks[40];
-    /*0x988*/ u8 seen1[NUM_DEX_FLAG_BYTES];
-    /*0x9BC*/ u16 berryBlenderRecords[3];
-    /*0x9C2*/ u8 unused_9C2[6];
-    /*0x9C8*/ u16 trainerRematchStepCounter;
-    /*0x9CA*/ u8 trainerRematches[100];
-    /*0xA2E*/ //u8 padding3[2];
-    /*0xA30*/ struct ObjectEvent objectEvents[16];
-    /*0xC70*/ struct ObjectEventTemplate objectEventTemplates[64];
-    /*0x1270*/ u8 flags[NUM_FLAG_BYTES];
-    /*0x139C*/ u16 vars[VARS_COUNT];
-    /*0x159C*/ u32 gameStats[64];
-    /*0x169C*/ struct BerryTree berryTrees[128];
-    /*0x1A9C*/ struct SecretBase secretBases[20];
-    /*0x271C*/ u8 playerRoomDecorations[12];
-    /*0x2728*/ u8 playerRoomDecorationPositions[12];
-    /*0x2734*/ u8 decorationDesks[10];
-    /*0x273E*/ u8 decorationChairs[10];
-    /*0x2748*/ u8 decorationPlants[10];
-    /*0x2752*/ u8 decorationOrnaments[30];
-    /*0x2770*/ u8 decorationMats[30];
-    /*0x278E*/ u8 decorationPosters[10];
-    /*0x2798*/ u8 decorationDolls[40];
-    /*0x27C0*/ u8 decorationCushions[10];
-    /*0x27CA*/ //u8 padding4[2];
-    /*0x27CC*/ TVShow tvShows[5 + 20];
-    /*0x2B50*/ PokeNews pokeNews[16];
-    /*0x2B90*/ u16 outbreakPokemonSpecies;
-    /*0x2B92*/ u8 outbreakLocationMapNum;
-    /*0x2B93*/ u8 outbreakLocationMapGroup;
-    /*0x2B94*/ u8 outbreakPokemonLevel;
-    /*0x2B95*/ u8 outbreakUnused1;
-    /*0x2B96*/ u16 outbreakUnused2;
-    /*0x2B98*/ u16 outbreakPokemonMoves[4];
-    /*0x2BA0*/ u8 outbreakUnused3;
-    /*0x2BA1*/ u8 outbreakPokemonProbability;
-    /*0x2BA2*/ u16 outbreakDaysLeft;
-    /*0x2BA4*/ struct GabbyAndTyData gabbyAndTyData;
-    /*0x2BB0*/ u16 easyChatProfile[6];
-    /*0x2BBC*/ u16 easyChatBattleStart[6];
-    /*0x2BC8*/ u16 easyChatBattleWon[6];
-    /*0x2BD4*/ u16 easyChatBattleLost[6];
-    /*0x2BE0*/ struct Mail mail[10 + 6];
-    /*0x2E20*/ u8 unlockedTrendySayings[NUM_TRENDY_SAYING_BYTES]; // Bitfield for unlockable Easy Chat words in EC_GROUP_TRENDY_SAYING
-    /*0x2E25*/ //u8 padding5[3];
-    /*0x2E28*/ OldMan oldMan;
-    /*0x2e64*/ struct DewfordTrend dewfordTrends[5];
-    /*0x2e90*/ struct ContestWinner contestWinners[13]; // see CONTEST_WINNER_*
-    /*0x3030*/ struct DayCare daycare;
-    /*0x3150*/ struct LinkBattleRecords linkBattleRecords;
-    /*0x31A8*/ u8 giftRibbons[11];
-    /*0x31B3*/ struct ExternalEventData externalEventData;
-    /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
-    /*0x31DC*/ struct Roamer roamer;
-    /*0x31F8*/ struct EnigmaBerry enigmaBerry;
-    /*0x322C*/ struct MysteryGiftSave mysteryGift;
-    /*0x3598*/ u8 unused_3598[0x18];
-    /*0x3718*/ u32 trainerHillTimes[4];
-    /*0x3728*/ struct RamScript ramScript;
-    /*0x3B14*/ struct RecordMixingGift recordMixingGift;
-    /*0x3B24*/ u8 seen2[NUM_DEX_FLAG_BYTES];
-    /*0x3B58*/ LilycoveLady lilycoveLady;
-    /*0x3B98*/ struct TrainerNameRecord trainerNameRecords[20];
-    /*0x3C88*/ u8 registeredTexts[10][21];
-    /*0x3D5A*/ u8 unused_3D5A[10];
-    /*0x3D64*/ struct TrainerHillSave trainerHill;
-    /*0x3D70*/ struct WaldaPhrase waldaPhrase;
+    struct Coords16 pos;
+    struct WarpData location;
+    struct WarpData continueGameWarp;
+    struct WarpData dynamicWarp;
+    struct WarpData lastHealLocation; // used by white-out and teleport
+    struct WarpData escapeWarp; // used by Dig and Escape Rope
+    u16 savedMusic;
+    u8 weather;
+    u8 weatherCycleStage;
+    u8 flashLevel;
+    //u8 padding1;
+    u16 mapLayoutId;
+    u16 mapView[0x100];
+    u8 playerPartyCount;
+    //u8 padding2[3];
+    struct Pokemon playerParty[6];
+    u32 money;
+    u16 coins;
+    u16 registeredItemSelect; // registered for use with SELECT button
+    struct ItemSlot pcItems[50];
+    struct ItemSlot bagPocket_Items[120];
+    struct ItemSlot bagPocket_KeyItems[30];
+    struct ItemSlot bagPocket_PokeBalls[16];
+    struct ItemSlot bagPocket_TMHM[64];
+    struct ItemSlot bagPocket_Berries[46];
+    struct Pokeblock pokeblocks[40];
+    u8 seen1[NUM_DEX_FLAG_BYTES];
+    u16 berryBlenderRecords[3];
+    //u8 unused_9C2[6];
+    u16 trainerRematchStepCounter;
+    u8 trainerRematches[100];
+    //u8 padding3[2];
+    struct ObjectEvent objectEvents[16];
+    struct ObjectEventTemplate objectEventTemplates[64];
+    u8 flags[NUM_FLAG_BYTES];
+    u16 vars[VARS_COUNT];
+    u32 gameStats[64];
+    struct BerryTree berryTrees[128];
+    struct SecretBase secretBases[20];
+    u8 playerRoomDecorations[12];
+    u8 playerRoomDecorationPositions[12];
+    u8 decorationDesks[10];
+    u8 decorationChairs[10];
+    u8 decorationPlants[10];
+    u8 decorationOrnaments[30];
+    u8 decorationMats[30];
+    u8 decorationPosters[10];
+    u8 decorationDolls[40];
+    u8 decorationCushions[10];
+    //u8 padding4[2];
+    TVShow tvShows[5 + 20];
+    PokeNews pokeNews[16];
+    u16 outbreakPokemonSpecies;
+    u8 outbreakLocationMapNum;
+    u8 outbreakLocationMapGroup;
+    u8 outbreakPokemonLevel;
+    u8 outbreakUnused1;
+    u16 outbreakUnused2;
+    u16 outbreakPokemonMoves[4];
+    u8 outbreakUnused3;
+    u8 outbreakPokemonProbability;
+    u16 outbreakDaysLeft;
+    struct GabbyAndTyData gabbyAndTyData;
+    u16 easyChatProfile[6];
+    u16 easyChatBattleStart[6];
+    u16 easyChatBattleWon[6];
+    u16 easyChatBattleLost[6];
+    struct Mail mail[10 + 6];
+    u8 unlockedTrendySayings[NUM_TRENDY_SAYING_BYTES]; // Bitfield for unlockable Easy Chat words in EC_GROUP_TRENDY_SAYING
+    //u8 padding5[3];
+    OldMan oldMan;
+    struct DewfordTrend dewfordTrends[5];
+    struct ContestWinner contestWinners[13]; // see CONTEST_WINNER_*
+    struct DayCare daycare;
+    struct LinkBattleRecords linkBattleRecords;
+    u8 giftRibbons[11];
+    struct ExternalEventData externalEventData;
+    struct ExternalEventFlags externalEventFlags;
+    struct Roamer roamer;
+    struct EnigmaBerry enigmaBerry;
+    struct MysteryGiftSave mysteryGift;
+    u8 unused_3598[0x18];
+    u32 trainerHillTimes[4];
+    struct RamScript ramScript;
+    struct RecordMixingGift recordMixingGift;
+    u8 seen2[NUM_DEX_FLAG_BYTES];
+    LilycoveLady lilycoveLady;
+    struct TrainerNameRecord trainerNameRecords[20];
+    u8 registeredTexts[10][21];
+    u8 unused_3D5A[10];
+    struct TrainerHillSave trainerHill;
+    struct WaldaPhrase waldaPhrase;
                u8 registeredItemLastSelected:4; //max 16 items
                u8 registeredItemListCount:4;
-               struct RegisteredItemSlot registeredItems[10];
+               struct RegisteredItemSlot registeredItems[10];               
 };
 
 bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
@@ -154,7 +154,15 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     #define COPY_ARRAY(field) for(i = 0; i < min(ARRAY_COUNT(gSaveBlock2Ptr->field), ARRAY_COUNT(sOldSaveBlock2Ptr->field)); i++) gSaveBlock2Ptr->field[i] = sOldSaveBlock2Ptr->field[i];
 
     /** We need to fill in any data that's new in this version. */
+    gSaveBlock2Ptr->_saveSentinel = 0xFF;
     gSaveBlock2Ptr->saveVersion = 2;
+
+    // Copy V1 items - SaveBlock2
+
+    COPY_FIELD(optionsBikeMusic);
+    COPY_FIELD(optionsSurfMusic);
+    COPY_FIELD(optionsSurfOverworld);
+    COPY_FIELD(optionsBattleItemAnimation);
 
     COPY_ARRAY(playerName);
     COPY_FIELD(playerGender);
@@ -194,7 +202,13 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     #define COPY_FIELD(field) gSaveBlock1Ptr->field = sOldSaveBlock1Ptr->field
     #define COPY_BLOCK(field) CpuCopy16(&sOldSaveBlock1Ptr->field, &gSaveBlock1Ptr->field, sizeof(gSaveBlock1Ptr->field))
     #define COPY_ARRAY(field) for(i = 0; i < min(ARRAY_COUNT(gSaveBlock1Ptr->field), ARRAY_COUNT(sOldSaveBlock1Ptr->field)); i++) gSaveBlock1Ptr->field[i] = sOldSaveBlock1Ptr->field[i];
-    
+
+    // Copy V1 items - SaveBlock1
+    COPY_FIELD(registeredItemSelect);
+    COPY_FIELD(registeredItemLastSelected);
+    COPY_FIELD(registeredItemListCount);
+    COPY_ARRAY(registeredItems);
+
     COPY_FIELD(pos);
     COPY_FIELD(location);
     COPY_FIELD(continueGameWarp);
@@ -205,6 +219,7 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     /** Only use this if there are no major map changes to load into original location
      * If there are any major map changes comment the below section out and use the 
      * heal warp at the bottom of this function instead. */
+    /*
     COPY_FIELD(weather);
     COPY_FIELD(weatherCycleStage);
     COPY_FIELD(flashLevel);
@@ -213,7 +228,7 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     COPY_BLOCK(mapView);
     COPY_BLOCK(objectEvents);
     COPY_BLOCK(objectEventTemplates);
-    
+    */
     /** The pokemon structure hasn't changed at all this version, so
      *  we don't need to do anything special to copy the pokemon over. */
     COPY_FIELD(playerPartyCount);
@@ -314,8 +329,8 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
      * with a newly loaded map and event objects. Here, we're using the last location
      * that the player healed, so the player will appear in the same spot they would
      * as if they blacked out. */
-    // SetContinueGameWarpStatus();
-    // gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->lastHealLocation;
+    SetContinueGameWarpStatus();
+    gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->lastHealLocation;
 
     return TRUE;
 }
