@@ -1115,8 +1115,7 @@ u8 UpdateSaveFile(void)
     // Attempt to update the save
     switch (version) {
         case 0: // Upgrading from vanilla to version 2
-            result = UpdateSave_v0_v1(gRamSaveSectorLocations);
-            result = UpdateSave_v1_v2(gRamSaveSectorLocations);
+            result = UpdateSave_v0_v2(gRamSaveSectorLocations);
             break;
         case 1: //Upgrading from version 1 to version 2
             result = UpdateSave_v1_v2(gRamSaveSectorLocations);
