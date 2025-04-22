@@ -157,6 +157,9 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     gSaveBlock2Ptr->_saveSentinel = 0xFF;
     gSaveBlock2Ptr->saveVersion = 2;
 
+    // Set Secret Base Entrance Warp to -1 until Secret Base entered.
+    SetPlayerSecretBaseCoords(-1, -1, WARP_ID_NONE, -1, -1);
+
     // Copy V1 items - SaveBlock2
 
     COPY_FIELD(optionsBikeMusic);
