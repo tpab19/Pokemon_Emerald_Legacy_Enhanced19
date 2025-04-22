@@ -2240,6 +2240,7 @@ extern const u8 gText_LeagueChamp[];
 extern const u8 gText_EmeraldLegacy[];
 extern const u8 gText_LegacyHard[];
 extern const u8 gText_LegacyHardcore[];
+extern const u8 gText_Enhanced[];
 extern const u8 gText_HOFNumber[];
 extern const u8 gText_PickNextCancel[];
 extern const u8 gText_PickCancel[];

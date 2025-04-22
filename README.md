@@ -280,8 +280,6 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
 * Update Secret Base visual indicator on Fly Map
-* Update end-game screen to include "Enhanced"
-* Update Lati movesets and buff Luster Purge and Mist Ball
 * Review Frontier Streak and Level 50 requirements
 
 ## Enhanced Credits List:

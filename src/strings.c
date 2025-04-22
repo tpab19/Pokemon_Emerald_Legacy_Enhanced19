@@ -174,6 +174,7 @@ const u8 gText_LeagueChamp[] = _("LEAGUE CHAMPION!\nCONGRATULATIONS!");
 const u8 gText_EmeraldLegacy[] = _("EMERALD LEGACY");
 const u8 gText_LegacyHard[] = _("LEGACY HARD");
 const u8 gText_LegacyHardcore[] = _("LEGACY HARDCORE");
+const u8 gText_Enhanced[] = _("ENHANCED");
 const u8 gText_Number[] = _("No. ");
 const u8 gText_Level[] = _("Lv. ");
 const u8 gText_IdNumberSlash[] = _("IDNo. /"); // Unused
