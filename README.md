@@ -121,6 +121,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
 * Steven's Champion Room and Battle Background ported from Ruby/Sapphire (Purple themed instead of Wallace's Blue theme)
   * Reverts to Wallace's Blue theme post-game
+* Wallace's Gym Leader sprite ported from Ruby/Sapphire
+  * Wallace's Emerald Champion Sprite remains for the E4
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
