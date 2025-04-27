@@ -48,7 +48,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * One free Serious Mint will be given by Norman after gaining the Facade TM.
   * Pretty Petal Flower Shop North of Petalburg Woods will sell all mints at 20,000 pokedollars each.
   * **Note:**:
-    * Save file compatibility with Emerald Legacy will work, however if you return to base Emerald Legacy, any Pokemon which has had it's nature altered from orginal via mint will retain its altered new nature stats with their original nature name and potentially incorrect highlighting of boosted and lowered stats.
+    * Save file compatibility with Emerald Legacy is one-way from Emerald Legacy to Enhanced.
     * Stats can be fixed for any Pokemon if they are deposited or withdrawn from a PC where their stats will be recalculated using their original nature and Base Stats.
 * Ability Capsules added into the game to swap between pokemon's abilities (if a species has more than one ability available)
   * Available from Slateport Mart Energy Guru for 20,000 pokedollars if your lead pokemon has an Effort Ribbon
@@ -61,9 +61,10 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
     * EXP splits half the battle exp evenly between all eligible pokemon in the party.
     * EXP would be the same as if all pokemon in the party are each holding an EXP. Share.
     * EXP. All and EXP. Share do not work together, if EXP. All is on, held item EXP. Share does not do anything.
+    * If you migrate your save file and have already collected your EXP. Share, visit Mr. Stone again to recieve the EXP. All.
 * Lucky Egg increases all battle exp gained if any pokemon in party is holding the item.
 * Added ability to fly to your Secret Base after creating one.
-  * Represented by Red Square like Battle Frontier on route where base is made.
+  * Represented by grayscale player icon on route where base is made.
 * Decoration Improvements:
   * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
   * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
@@ -114,8 +115,8 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Amulet Coin doubles prize money if any pokemon in party is holding the item.
 * Pokeballs (except Master Ball) can be used from bag to change a pokemon's current ball.
 * Luxury ball added to Verdanturf Town Mart after clearing Rusturf Tunnel.
-* Added ability for Level capped and level 100 able to gain EVs.
-* Wild pokemon held item chances slightly buffed for Compoundeys Ability users:
+* Added ability for level capped and level 100 pokemon to gain EVs.
+* Wild pokemon held item chances slightly buffed for Compoundeyes Ability users:
   * Chance of "common" item buffed from 60% to 70%
   * Chance of "rare" item buffed from 20% to 25%
 * Clamperl wild held item changed:
@@ -295,8 +296,10 @@ A combination of Enhanced Starters with Physical Dragon type.
 * Add a way to see Secret ID in-game
 * Adding some Shiny Pokemon battles as a nod to the anime
 * Use Legendary Beast's themes for their in-game encounters
-* Update Secret Base visual indicator on Fly Map
 * Review Frontier Streak and Level 50 requirements
+* Update Pokedex to include Evolution information (if possible)
+* Add overworld followers
+* Potentialy add all Starters as option in Enhanced Starters
 
 ## Enhanced Credits List:
 * Credit to devolov (Discord: devolov#4853) for [Only Pokemon that can Learn HM can Use Field Move so Long as HM is in Bag](https://github.com/pret/pokeemerald/wiki/Use-HMs-Without-Any-Pokemon-in-your-Party-Knowing-Them#only-pokemon-that-can-learn-hm-can-use-field-move-so-long-as-hm-is-in-bag)
