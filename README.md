@@ -119,6 +119,20 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * 5% chance to hold Deepseascale or Deepseatooth (10% overall)
   * With compoundeyes pokemon 10% chance to hold Deepseascale or Deepseatooth (20% overall)
 * Blue Shard added as rare held item for Feebas (to replace Clamperl losing the held item)
+* Lati Moveset Improvements:
+  * Luster Purge and Mist Ball buffed to 90BP (already 15 PP on Base Legacy)
+  * Latias:
+    * Water Sport moved to Lvl 1
+    * Psybeam added at Lvl 25
+    * Psychic moved to Lvl 35
+    * Mist Ball moved to Lvl 40
+    * Dragon Claw added to Level 55
+  * Latios:
+    * Protect moved to Lvl 1
+    * Psybeam added at Lvl 25
+    * Psychic moved to Lvl 35
+    * Luster Purge moved to Lvl 40
+    * Dragon Claw added to Level 55
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
