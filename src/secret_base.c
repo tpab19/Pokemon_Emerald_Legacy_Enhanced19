@@ -827,6 +827,8 @@ void ClearAndLeaveSecretBase(void)
 {
     u16 temp = gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived;
     ClearSecretBase(&gSaveBlock1Ptr->secretBases[0]);
+    // Remove Secret Base Warp Information
+    SetPlayerSecretBaseCoords(-1, -1, WARP_ID_NONE, -1, -1);
     gSaveBlock1Ptr->secretBases[0].numSecretBasesReceived = temp;
     WarpOutOfSecretBase();
 }
