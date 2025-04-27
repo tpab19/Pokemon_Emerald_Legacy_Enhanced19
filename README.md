@@ -27,8 +27,9 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * Dialogue for people providing HMs updated to note that a pokemon only needs to be able to learn the move.
     * e.g. "Cutter" in Rustboro's dialogue updated to note a pokemon able to learn cut can chop down thin trees.
   * Secret Power requires TM43 in Bag and a pokemon able to use the move (which is almost all pokemon)
-  * Dig requires TM28 in Bag and a pokemon able to use the move from the party menu.
+  * Dig requires TM28 in Bag and a pokemon able to use the move from the party menu or level up as noted below.
   * The following field moves require the pokemon to be able to learn it by level up equal or prior to their current level to be added to the party menu:
+    * Dig
     * Teleport
     * Milk Drink
     * Softboiled
