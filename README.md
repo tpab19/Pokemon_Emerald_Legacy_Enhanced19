@@ -130,6 +130,20 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
 * Mirage Island changes:
   * Appears if Wynaut in party.
   * After post-game now appears if Mew, Celebi, or Jirachi are in party as a nod to mythical pokemon originally being referred to as "mirage" pokemon.
+* Lati Moveset Improvements:
+  * Luster Purge and Mist Ball buffed to 90BP (already 15 PP on Base Legacy)
+  * Latias:
+    * Water Sport moved to Lvl 1
+    * Psybeam added at Lvl 25
+    * Psychic moved to Lvl 35
+    * Mist Ball moved to Lvl 40
+    * Dragon Claw added to Level 55
+  * Latios:
+    * Protect moved to Lvl 1
+    * Psybeam added at Lvl 25
+    * Psychic moved to Lvl 35
+    * Luster Purge moved to Lvl 40
+    * Dragon Claw added to Level 55
 
 **Note:** Saves files are compatible from Emerald Legacy, however I cannot guarantee reverse compatibility after saving on Emerald Legacy Enhanced and moving back to Emerald Legacy, please backup original saves before moving to Enhanced.
 
