@@ -83,6 +83,7 @@ This Base patch includes all updates to Pokemon Emerald Legacy source code as of
   * One registered item works same as vanilla Emerald, multiple registered items will show on-field menu to select item.
   * **Note:** Emerald Legacy Saves brought over will lose the originally selected item, re-registering Key Item will fix issue.
 * Added larger quantity coin purchasing in Mauville Game Corner and improved efficiency to purchase more coins.
+* Soot Sack use in bag now shows amount of ash in bag and registerable to view in overworld.
 * Updated Regi overworld encounter sprites to match the Regi PokeDolls instead.
 * Beldum, Metang and Metagross Catch Rates increased to 45 to match other psuedo-legendaries.
 * Added Self-Destruct to Wailmer and Wailord Egg Move Pool
