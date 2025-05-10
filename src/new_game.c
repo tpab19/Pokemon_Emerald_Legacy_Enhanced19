@@ -217,6 +217,8 @@ void NewGameInitData(void)
     ResetContestLinkResults();
     nuzlockePrev ? FlagSet(FLAG_NUZLOCKE) : FlagClear(FLAG_NUZLOCKE);
     hardPrev ? FlagSet(FLAG_HARD) : FlagClear(FLAG_HARD);
+    
+    FlagSet(FLAG_HIDE_TYPE_EFFECT_BATTLE); // Set to not show Type Effectiveness by default
 }
 
 static void ResetMiniGamesRecords(void)
