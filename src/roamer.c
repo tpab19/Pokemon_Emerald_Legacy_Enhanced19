@@ -131,7 +131,16 @@ void RoamerMoveToOtherLocationSet(void)
     u8 mapNum = 0;
 
     if (!ROAMER->active)
+    {
         return;
+    }
+    else
+    {
+        // Attempts to mark Roamer as Seen, if already seen does nothing.
+        // For users who have moved save file from older version of game, already set the roamer and not yet seen them in the wild.
+        HandleSetPokedexFlag(SpeciesToNationalPokedexNum(ROAMER->species), FLAG_SET_SEEN, ROAMER->personality);
+    }
+        
 
     sRoamerLocation[MAP_GRP] = ROAMER_MAP_GROUP;
 
