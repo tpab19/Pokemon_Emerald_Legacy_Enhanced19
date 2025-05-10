@@ -1276,8 +1276,8 @@
 #define FLAG_SHOW_HIDDEN_POWER                                      0x4D0
 #define FLAG_HIDE_EGG_MOVE_TUTOR                                    0x4D1 // Flag to Show/Hide Egg Move until National Dex
 #define FLAG_EXP_ALL                                                0x4D2 // Flag for Enabling and Disabling EXP. All
-#define FLAG_SHOW_TYPE_EFFECT_BATTLE                                0x4D3 // Flag to Option to enable and disable type effectiveness in battle
-#define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
+#define FLAG_SHOW_TYPE_EFFECT_BATTLE                                0x4D3 // Flag for Option to enable and disable type effectiveness in battle
+#define FLAG_HIDE_FOLLOWER                                          0x4D4 // Flag for Option to enable and disable Pokemon follower
 #define FLAG_UNUSED_0x4D5                                           0x4D5 // Unused Flag
 #define FLAG_UNUSED_0x4D6                                           0x4D6 // Unused Flag
 #define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
