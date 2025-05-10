@@ -2240,6 +2240,7 @@ extern const u8 gText_LeagueChamp[];
 extern const u8 gText_EmeraldLegacy[];
 extern const u8 gText_LegacyHard[];
 extern const u8 gText_LegacyHardcore[];
+extern const u8 gText_Enhanced[];
 extern const u8 gText_HOFNumber[];
 extern const u8 gText_PickNextCancel[];
 extern const u8 gText_PickCancel[];
@@ -2303,6 +2304,7 @@ extern const u8 gText_Able2[];
 extern const u8 gText_NotAble[];
 extern const u8 gText_Able3[];
 extern const u8 gText_NotAble2[];
+extern const u8 gText_ItemDeny[];
 extern const u8 gText_Learned[];
 extern const u8 gText_Have[];
 extern const u8 gText_DontHave[];
@@ -2918,6 +2920,9 @@ extern const u8 gJPText_WriteErrorUnableToSaveData[];
 
 // Berry Powder Menu
 extern const u8 gText_Powder[];
+
+// Soot Sack Menu
+extern const u8 gText_AshQty[];
 
 // Union Room Chat
 extern const u8 gText_F700JoinedChat[];

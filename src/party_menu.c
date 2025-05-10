@@ -915,6 +915,14 @@ static void DisplayPartyPokemonDataForChooseHalf(u8 slot)
 
     if (!GetBattleEntryEligibility(mon))
     {
+
+        // Changed Message for not allowing Soul Dew holding pokemon into Battle Frontier due to Soul Dew not having an effect
+        if (GetMonData(mon, MON_DATA_HELD_ITEM) == ITEM_SOUL_DEW)
+        {
+            DisplayPartyPokemonDescriptionData(slot, PARTYBOX_DESC_ITEM_DENY);
+            return;
+        }
+
         DisplayPartyPokemonDescriptionData(slot, PARTYBOX_DESC_NOT_ABLE);
         return;
     }
@@ -2677,23 +2685,23 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     if (sPartyMenuInternal->numActions < 6 && CanMonLearnTMHM(&mons[slotId], ITEM_HM05 - ITEM_TM01) && CheckBagHasItem(ITEM_HM05, 1) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLASH + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLASH + MENU_FIELD_MOVES);
 
-    // If Mon can learn TM28, have TM28 in bag and action list consists of < 4 field moves, add DIG to action list
-    if (sPartyMenuInternal->numActions < 6 && CanMonLearnTMHM(&mons[slotId], ITEM_TM28 - ITEM_TM01) && CheckBagHasItem(ITEM_TM28, 1) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_DIG + MENU_FIELD_MOVES)) 
+    // If ((Mon can learn TM28, have TM28 in bag) or (mon can learn Dig by level-up)) and action list consists of < 4 field moves, add DIG to action list
+    if (sPartyMenuInternal->numActions < 6 && ((CanMonLearnTMHM(&mons[slotId], ITEM_TM28 - ITEM_TM01) && CheckBagHasItem(ITEM_TM28, 1)) || CanMonLearnLevelUpMove(&mons[slotId], MOVE_DIG)) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_DIG + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_DIG + MENU_FIELD_MOVES);
 
-    // If Mon can learn Teleport, and action list consists of < 4 field moves, add Teleport to action list
+    // If Mon can learn Teleport by level-up, and action list consists of < 4 field moves, add Teleport to action list
     if (sPartyMenuInternal->numActions < 6 && CanMonLearnLevelUpMove(&mons[slotId], MOVE_TELEPORT) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_TELEPORT + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_TELEPORT + MENU_FIELD_MOVES);
 
-    // If Mon can learn Milk Drink, and action list consists of < 4 field moves, add Milk Drink to action list
+    // If Mon can learn Milk Drink by level-up, and action list consists of < 4 field moves, add Milk Drink to action list
     if (sPartyMenuInternal->numActions < 6 && CanMonLearnLevelUpMove(&mons[slotId], MOVE_MILK_DRINK) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_MILK_DRINK + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_MILK_DRINK + MENU_FIELD_MOVES);
 
-    // If Mon can learn Softboiled, and action list consists of < 4 field moves, add Softboiled to action list
+    // If Mon can learn Softboiled by level-up, and action list consists of < 4 field moves, add Softboiled to action list
     if (sPartyMenuInternal->numActions < 6 && CanMonLearnLevelUpMove(&mons[slotId], MOVE_SOFT_BOILED) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_SOFT_BOILED + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_SOFT_BOILED + MENU_FIELD_MOVES);
 
-    // If Mon can learn Sweet Scent, and action list consists of < 4 field moves, add Sweet Scent to action list
+    // If Mon can learn Sweet Scent by level-up, and action list consists of < 4 field moves, add Sweet Scent to action list
     if (sPartyMenuInternal->numActions < 6 && CanMonLearnLevelUpMove(&mons[slotId], MOVE_SWEET_SCENT) && !CheckInList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_SWEET_SCENT + MENU_FIELD_MOVES)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_SWEET_SCENT + MENU_FIELD_MOVES);
 
@@ -5809,6 +5817,13 @@ static bool8 GetBattleEntryEligibility(struct Pokemon *mon)
             if (gFrontierBannedSpecies[i] == species)
                 return FALSE;
         }
+        
+        // Added to not allow Soul Dew holding pokemon into Battle Frontier due to Soul Dew not having an effect
+        if (GetMonData(mon, MON_DATA_HELD_ITEM) == ITEM_SOUL_DEW)
+        {
+            return FALSE;
+        }
+
         return TRUE;
     }
 }
