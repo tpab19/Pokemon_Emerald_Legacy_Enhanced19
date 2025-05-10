@@ -472,6 +472,7 @@ const u8 gText_Able2[] = _("ABLE");
 const u8 gText_NotAble[] = _("NOT ABLE");
 const u8 gText_Able3[] = _("ABLE!");
 const u8 gText_NotAble2[] = _("NOT ABLE!");
+const u8 gText_ItemDeny[] = _("ITEM BLOCK");
 const u8 gText_Learned[] = _("LEARNED");
 const u8 gText_Have[] = _("HAVE");
 const u8 gText_DontHave[] = _("DON'T HAVE");
