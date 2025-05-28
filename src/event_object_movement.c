@@ -622,9 +622,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_CastformSunny,         OBJ_EVENT_PAL_TAG_CASTFORM_SUNNY},
     {gObjectEventPal_CastformRainy,         OBJ_EVENT_PAL_TAG_CASTFORM_RAINY},
     {gObjectEventPal_CastformSnowy,         OBJ_EVENT_PAL_TAG_CASTFORM_SNOWY},
-    {gObjectEventPal_DeoxysAttack,          OBJ_EVENT_PAL_TAG_DEOXYS_ATTACK},
-    {gObjectEventPal_DeoxysDefense,         OBJ_EVENT_PAL_TAG_DEOXYS_DEFENSE},
-    {gObjectEventPal_DeoxysSpeed,           OBJ_EVENT_PAL_TAG_DEOXYS_SPEED},
     #if OW_MON_POKEBALLS
     // Vanilla
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
@@ -1831,7 +1828,7 @@ static void MakeSpriteTemplateFromObjectEventTemplate(const struct ObjectEventTe
 static u8 LoadDynamicFollowerPaletteFromGraphicsId(u16 graphicsId, bool8 shiny, struct SpriteTemplate *template) {
     u16 species = ((graphicsId & OBJ_EVENT_GFX_SPECIES_MASK) - OBJ_EVENT_GFX_MON_BASE);
     u8 form = (graphicsId >> OBJ_EVENT_GFX_SPECIES_BITS);
-    const struct CompressedSpritePalette *spritePalette = &(shiny ? gMonShinyPaletteTable : gMonPaletteTable)[species];
+    const struct CompressedSpritePalette *spritePalette = &(shiny ? gMonOverworldShinyPaletteTable : gMonOverworldPaletteTable)[species];
     u8 paletteNum = LoadDynamicFollowerPalette(species, form, shiny);
     if (template)
         template->paletteTag = spritePalette->tag;
@@ -1990,8 +1987,9 @@ static u8 LoadDynamicFollowerPalette(u16 species, u8 form, bool32 shiny) {
     if ((paletteNum = IndexOfSpritePaletteTag(spritePalette.tag)) < 16)
         return paletteNum;
 
-    // Use matching front sprite's normal/shiny palettes
-    spritePalette.data = (u16*)((shiny ? gMonShinyPaletteTable : gMonPaletteTable)[species].data);
+    // Use specific overworld normal or shiny palettes
+    spritePalette.data = (u16*)((shiny ? gMonOverworldShinyPaletteTable : gMonOverworldPaletteTable)[species].data);
+    
     // Use standalone palette, unless entry is OOB or NULL (fallback to front-sprite-based)
     if (species < ARRAY_COUNT(gFollowerPalettes) && gFollowerPalettes[species][shiny & 1])
         spritePalette.data = gFollowerPalettes[species][shiny & 1];

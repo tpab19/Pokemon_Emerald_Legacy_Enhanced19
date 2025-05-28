@@ -5465,12 +5465,12 @@ static const struct SpriteFrameImage sPicTable_Groudon[] = {
     overworld_frame(gObjectEventPic_Groudon, 4, 4, 5),
 };
 static const struct SpriteFrameImage sPicTable_Rayquaza[] = {
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 0),
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 1),
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 2),
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 3),
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 4),
-    overworld_frame(gObjectEventPic_Rayquaza, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 0),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 1),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 2),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 3),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 4),
+    overworld_frame(gObjectEventPic_Rayquaza, 8, 8, 5),
 };
 static const struct SpriteFrameImage sPicTable_Jirachi[] = {
     overworld_frame(gObjectEventPic_Jirachi, 4, 4, 0),
