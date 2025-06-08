@@ -1,6 +1,6 @@
 const struct CompressedSpritePalette gMonOverworldPaletteTable[] =
 {
-    SPECIES_OVERWORLD_PAL(NONE, gMonShinyPalette_CircledQuestionMark),
+    SPECIES_OVERWORLD_PAL(NONE, gMonPalette_CircledQuestionMark),
     SPECIES_OVERWORLD_PAL(BULBASAUR, gMonOverworldPalette_Bulbasaur),
     SPECIES_OVERWORLD_PAL(IVYSAUR, gMonOverworldPalette_Ivysaur),
     SPECIES_OVERWORLD_PAL(VENUSAUR, gMonOverworldPalette_Venusaur),

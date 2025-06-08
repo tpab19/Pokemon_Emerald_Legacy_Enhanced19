@@ -554,7 +554,7 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #define OBJ_EVENT_PAL_TAG_EMOTES                  0x8002
 // Not a real OW palette tag; used for the white flash applied to followers
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
-#define OBJ_EVENT_PAL_TAG_NONE 0x11FF
+#define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 #if OW_GFX_COMPRESS
 // This + localId is used as the tileTag
@@ -1677,10 +1677,10 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     spriteTemplate->tileTag = LoadSheetGraphicsInfo(graphicsInfo, objectEvent->graphicsId, NULL);
     #endif
 
-    if (objectEvent->graphicsId >= OBJ_EVENT_GFX_MON_BASE + SPECIES_SHINY_TAG)
+    if (objectEvent->graphicsId >= OBJ_EVENT_GFX_MON_BASE + SPECIES_OVERWORLD_SHINY_TAG)
     {
         objectEvent->shiny = TRUE;
-        objectEvent->graphicsId -= SPECIES_SHINY_TAG;
+        objectEvent->graphicsId -= SPECIES_OVERWORLD_SHINY_TAG;
     }
 
     spriteId = CreateSprite(spriteTemplate, 0, 0, 0);
@@ -1980,9 +1980,9 @@ static const struct ObjectEventGraphicsInfo *SpeciesToGraphicsInfo(u16 species, 
 // Find, or load, the palette for the specified pokemon info
 static u8 LoadDynamicFollowerPalette(u16 species, u8 form, bool32 shiny) {
     u32 paletteNum;
-    // Note that the shiny palette tag is `species + SPECIES_SHINY_TAG`, which must be increased with more pokemon
+    // Note that the shiny palette tag is `species + SPECIES_OVERWORLD_SHINY_TAG`, which must be increased with more pokemon
     // so that palette tags do not overlap
-    struct SpritePalette spritePalette = {.tag = shiny ? (species + SPECIES_SHINY_TAG) : species};
+    struct SpritePalette spritePalette = {.tag = shiny ? (species + SPECIES_OVERWORLD_SHINY_TAG) : (species + SPECIES_OVERWORLD_TAG)};
     // palette already loaded
     if ((paletteNum = IndexOfSpritePaletteTag(spritePalette.tag)) < 16)
         return paletteNum;
@@ -2774,8 +2774,8 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
         form = graphicsId >> OBJ_EVENT_GFX_SPECIES_BITS;
         graphicsId = graphicsId & OBJ_EVENT_GFX_SPECIES_MASK;
     }
-    if (graphicsId >= OBJ_EVENT_GFX_MON_BASE + SPECIES_SHINY_TAG)
-        graphicsId -= SPECIES_SHINY_TAG;
+    if (graphicsId >= OBJ_EVENT_GFX_MON_BASE + SPECIES_OVERWORLD_SHINY_TAG)
+        graphicsId -= SPECIES_OVERWORLD_SHINY_TAG;
 
     if (graphicsId == OBJ_EVENT_GFX_BARD) {
         return gMauvilleOldManGraphicsInfoPointers[GetCurrentMauvilleOldMan()];
