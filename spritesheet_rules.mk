@@ -2200,13 +2200,13 @@ $(POKEMONGFXDIR)/milotic/overworld.4bpp: %.4bpp: %.png
 $(POKEMONGFXDIR)/castform/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)castform/sunny/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/castform/sunny/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)castform/rainy/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/castform/rainy/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)castform/snowy/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/castform/snowy/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(POKEMONGFXDIR)/kecleon/overworld.4bpp: %.4bpp: %.png
