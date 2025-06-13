@@ -1666,88 +1666,88 @@ $(POKEMONGFXDIR)/slowking/overworld.4bpp: %.4bpp: %.png
 $(POKEMONGFXDIR)/misdreavus/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/a/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/a/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/b/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/b/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/c/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/c/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/d/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/d/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/e/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/e/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/f/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/f/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/g/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/g/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/h/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/h/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/i/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/i/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/j/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/j/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/k/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/k/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/l/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/l/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/m/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/m/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/n/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/n/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/o/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/o/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/p/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/p/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/q/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/q/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/r/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/r/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/s/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/s/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/t/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/t/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/u/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/u/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/v/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/v/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/w/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/w/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/x/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/x/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/y/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/y/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/z/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/z/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/exclamation_mark/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/exclamation_mark/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
-$(POKEMONGFXDIR)unown/question_mark/overworld.4bpp: %.4bpp: %.png
+$(POKEMONGFXDIR)/unown/question_mark/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 $(POKEMONGFXDIR)/wobbuffet/overworld.4bpp: %.4bpp: %.png
