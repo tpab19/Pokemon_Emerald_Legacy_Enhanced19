@@ -2043,5 +2043,5 @@ const u8 gText_FORMS_Buttons_Decapped_PE[]          = _("{START_BUTTON}Evos");
 const u8 gText_FORMS_Buttons_Submenu_PE[]           = _("{DPAD_NONE}FORMs {A_BUTTON}CHECK {START_BUTTON}EVOs");
 const u8 gText_FORMS_Buttons_Submenu_Decapped_PE[]  = _("{START_BUTTON}Evos");
 const u8 gText_FORMS_NONE[]                         = _("{STR_VAR_1} has no alternate forms.");
-const u8 gText_SaveFileOldUpdated[] = _("Your save data will be updated for\nPokémon Emerald Legacy Enhanced.\pIf you wish to keep your original save\nplease back up the file prior to saving.\pYou will be also be teleported to your\nroom in Littleroot Town.");
+const u8 gText_SaveFileOldUpdated[] = _("Your save data will be updated for\nPokémon Emerald Legacy Enhanced.\pIf you wish to keep your original save\nplease backup the file before saving.\pYou will be also be teleported to your\nroom in Littleroot Town.");
 const u8 gText_SaveFileOldErrored[] = _("Your save data could not be updated\nfor Pokémon Emerald Legacy Enhanced.\pIf your save file was from Pokémon\nEmerald Legacy or a prior version of\pPokémon Emerald Legacy Enhanced,\nplease report this to Exclsior.");
