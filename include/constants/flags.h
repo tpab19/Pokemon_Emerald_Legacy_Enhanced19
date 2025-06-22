@@ -1280,9 +1280,9 @@
 #define FLAG_ENABLE_STAT_EDITOR                                     0x4D4 // Flag for enabling the IV/EV Editor function
 #define FLAG_SHOW_STAT_EDITOR                                       0x4D5 // Flag for showing the IV/EV Editor in the party menu
 #define FLAG_HIDE_FOLLOWER                                          0x4D6 // Flag for Option to enable and disable Pokemon follower
-#define FLAG_UNUSED_0x4D7                                           0x4D7 // Unused Flag
-#define FLAG_UNUSED_0x4D8                                           0x4D8 // Unused Flag
-#define FLAG_UNUSED_0x4D9                                           0x4D9 // Unused Flag
+#define FLAG_ENABLE_AUTORUN                                         0x4D7 // Flag for enabling Autorun
+#define FLAG_ENABLE_FASTSURF                                        0x4D8 // Flag for enabling Fast Surf
+#define FLAG_ENABLE_FASTDIVE                                        0x4D9 // Flag for enabling Fast Dive
 #define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag

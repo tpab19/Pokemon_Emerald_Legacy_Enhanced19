@@ -630,14 +630,26 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
         // same speed as running
-        if (heldKeys & B_BUTTON)
+        if ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_FASTSURF))
             PlayerWalkFaster(direction);
         else
             PlayerWalkFast(direction);
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+    {
+        // Faster underwater speed
+        if (FlagGet(FLAG_ENABLE_FASTSURF) && FlagGet(FLAG_ENABLE_FASTDIVE))
+            PlayerWalkFaster(direction);
+        else if (FlagGet(FLAG_ENABLE_FASTDIVE))
+            PlayerWalkFast(direction);
+        else
+            PlayerWalkNormal(direction);
+        return;
+    }
+
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_AUTORUN)) && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);
