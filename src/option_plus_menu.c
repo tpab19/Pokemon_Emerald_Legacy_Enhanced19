@@ -32,8 +32,8 @@ enum
     MENUITEM_MAIN_TEXTSPEED,
     MENUITEM_MAIN_SOUND,
     MENUITEM_MAIN_BUTTONMODE,
-    //MENUITEM_MAIN_UNIT_SYSTEM,
     MENUITEM_MAIN_FRAMETYPE,
+    MENUITEM_MAIN_STAT_EDITOR,
     MENUITEM_MAIN_CANCEL,
     MENUITEM_MAIN_COUNT,
 };
@@ -177,7 +177,7 @@ static void DrawChoices_BattleStyle(int selection, int y);
 static void DrawChoices_Sound(int selection, int y);
 static void DrawChoices_ButtonMode(int selection, int y);
 //static void DrawChoices_BarSpeed(int selection, int y); //HP and EXP
-//static void DrawChoices_UnitSystem(int selection, int y);
+static void DrawChoices_StatEditor(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_SurfMusic(int selection, int y);
 static void DrawChoices_MonOverworld(int selection, int y);
@@ -220,8 +220,8 @@ struct // MENU_MAIN - General
     [MENUITEM_MAIN_TEXTSPEED]    = {DrawChoices_TextSpeed,   ProcessInput_Options_Three},
     [MENUITEM_MAIN_SOUND]        = {DrawChoices_Sound,       ProcessInput_Options_Two},
     [MENUITEM_MAIN_BUTTONMODE]   = {DrawChoices_ButtonMode,  ProcessInput_Options_Three},
-//    [MENUITEM_MAIN_UNIT_SYSTEM]  = {DrawChoices_UnitSystem,  ProcessInput_Options_Two},
     [MENUITEM_MAIN_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
+    [MENUITEM_MAIN_STAT_EDITOR]  = {DrawChoices_StatEditor,  ProcessInput_Options_Two},
     [MENUITEM_MAIN_CANCEL]       = {NULL, NULL},
 };
 
@@ -257,14 +257,14 @@ struct // MENU_WORLD
 // Menu left side option names text
 //static const u8 sText_HpBar[]       = _("HP BAR");
 //static const u8 sText_ExpBar[]      = _("EXP BAR");
-//static const u8 sText_UnitSystem[]  = _("UNIT SYSTEM");
+static const u8 sText_StatEditor[]  = _("STAT EDITOR");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = gText_TextSpeed,
     [MENUITEM_MAIN_SOUND]       = gText_Sound,
     [MENUITEM_MAIN_BUTTONMODE]  = gText_ButtonMode,
-//    [MENUITEM_MAIN_UNIT_SYSTEM] = sText_UnitSystem,
     [MENUITEM_MAIN_FRAMETYPE]   = gText_Frame,
+    [MENUITEM_MAIN_STAT_EDITOR] = sText_StatEditor,
     [MENUITEM_MAIN_CANCEL]      = gText_OptionMenuSave,
 };
 
@@ -311,8 +311,19 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_MAIN_TEXTSPEED:       return TRUE;
         case MENUITEM_MAIN_SOUND:           return TRUE;
         case MENUITEM_MAIN_BUTTONMODE:      return TRUE;
-        //case MENUITEM_MAIN_UNIT_SYSTEM:     return TRUE;
         case MENUITEM_MAIN_FRAMETYPE:       return TRUE;
+        case MENUITEM_MAIN_STAT_EDITOR:
+        {
+            if (!FlagGet(FLAG_ENABLE_STAT_EDITOR))
+            {
+                return FALSE;
+            }
+            else
+            {
+                return TRUE;
+            }
+
+        }
         case MENUITEM_MAIN_CANCEL:          return TRUE;
         case MENUITEM_MAIN_COUNT:           return TRUE;
         }
@@ -361,16 +372,16 @@ static const u8 sText_Desc_SoundStereo[]        = _("Play the left and right aud
 static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
 static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R buttons\nact as left and right.");
 static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
-//static const u8 sText_Desc_UnitSystemImperial[] = _("Display BERRY and POKéMON weight\nand size in pounds and inches.");
-//static const u8 sText_Desc_UnitSystemMetric[]   = _("Display BERRY and POKéMON weight\nand size in kilograms and meters.");
+static const u8 sText_Desc_StatEditor_Hide[]    = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
+static const u8 sText_Desc_StatEditor_Show[]    = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
 static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows.");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                sText_Empty},
     [MENUITEM_MAIN_SOUND]       = {sText_Desc_SoundMono,            sText_Desc_SoundStereo,     sText_Empty},
     [MENUITEM_MAIN_BUTTONMODE]  = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,   sText_Desc_ButtonMode_LA},
-    //[MENUITEM_MAIN_UNIT_SYSTEM] = {sText_Desc_UnitSystemImperial,   sText_Desc_UnitSystemMetric,sText_Empty},
     [MENUITEM_MAIN_FRAMETYPE]   = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
+    [MENUITEM_MAIN_STAT_EDITOR] = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show, sText_Empty},
     [MENUITEM_MAIN_CANCEL]      = {sText_Desc_Save,                 sText_Empty,                sText_Empty},
 };
 
@@ -422,13 +433,14 @@ static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][2]
 
 // Disabled Descriptions
 static const u8 sText_Desc_Disabled_Textspeed[]     = _("Only active if xyz.");
+static const u8 sText_Desc_Disabled_StatEditor[]   = _("STAT EDITOR locked. Beat the game\nand speak to Prof. Birch to unlock.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COUNT] =
 {
-    [MENUITEM_MAIN_TEXTSPEED]   = sText_Desc_Disabled_Textspeed,
+    [MENUITEM_MAIN_TEXTSPEED]   = sText_Empty,
     [MENUITEM_MAIN_SOUND]       = sText_Empty,
     [MENUITEM_MAIN_BUTTONMODE]  = sText_Empty,
-    //[MENUITEM_MAIN_UNIT_SYSTEM] = sText_Empty,
     [MENUITEM_MAIN_FRAMETYPE]   = sText_Empty,
+    [MENUITEM_MAIN_STAT_EDITOR] = sText_Desc_Disabled_StatEditor,
     [MENUITEM_MAIN_CANCEL]      = sText_Empty,
 };
 
@@ -704,8 +716,8 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel[MENUITEM_MAIN_TEXTSPEED]   = gSaveBlock2Ptr->optionsTextSpeed;
         sOptions->sel[MENUITEM_MAIN_SOUND]       = gSaveBlock2Ptr->optionsSound;
         sOptions->sel[MENUITEM_MAIN_BUTTONMODE]  = gSaveBlock2Ptr->optionsButtonMode;
-        //sOptions->sel[MENUITEM_MAIN_UNIT_SYSTEM] = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_MAIN_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowFrameType;
+        sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] = FlagGet(FLAG_SHOW_STAT_EDITOR);
         
         //sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR]      = gSaveBlock2Ptr->optionsHpBarSpeed;
         //sOptions->sel_battle[MENUITEM_CUSTOM_EXP_BAR]     = gSaveBlock2Ptr->optionsExpBarSpeed;
@@ -749,9 +761,9 @@ void CB2_InitOptionPlusMenu(void)
         break;
     case 10:
         taskId = CreateTask(Task_OptionMenuFadeIn, 0);
-        
-        //sOptions->arrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 240 / 2, 20, 110, MENUITEM_MAIN_COUNT - 1, 110, 110, 0);
-        sOptions->arrowTaskId = TASK_NONE;
+
+        sOptions->arrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 240 / 2, 20, 110, MENUITEM_MAIN_COUNT - 1, 110, 110, 0);
+        //sOptions->arrowTaskId = TASK_NONE;
 
         for (i = 0; i < min(OPTIONS_ON_SCREEN, MenuItemCount()); i++)
             DrawChoices(i, i * Y_DIFF);
@@ -954,8 +966,8 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsTextSpeed            = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
     gSaveBlock2Ptr->optionsSound                = sOptions->sel[MENUITEM_MAIN_SOUND];
     gSaveBlock2Ptr->optionsButtonMode           = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
-    //gSaveBlock2Ptr->optionsUnitSystem       = sOptions->sel[MENUITEM_MAIN_UNIT_SYSTEM];
     gSaveBlock2Ptr->optionsWindowFrameType      = sOptions->sel[MENUITEM_MAIN_FRAMETYPE];
+    sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] == 0 ? FlagClear(FLAG_SHOW_STAT_EDITOR) : FlagSet(FLAG_SHOW_STAT_EDITOR);
 
     //gSaveBlock2Ptr->optionsHpBarSpeed       = sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR];
     //gSaveBlock2Ptr->optionsExpBarSpeed      = sOptions->sel_battle[MENUITEM_CUSTOM_EXP_BAR];
@@ -1317,6 +1329,18 @@ static void DrawChoices_FrameType(int selection, int y)
 
     DrawOptionMenuChoice(gText_FrameType, 104, y, 0, active);
     DrawOptionMenuChoice(text, 128, y, 1, active);
+}
+
+static const u8 sText_StatEditorHide[]   = _("HIDE");
+static const u8 sText_StatEditorShow[]   = _("SHOW");
+static void DrawChoices_StatEditor(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_STAT_EDITOR);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_StatEditorHide, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_StatEditorShow, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), y, styles[1], active);
 }
 
 static void DrawChoices_BikeMusic(int selection, int y)

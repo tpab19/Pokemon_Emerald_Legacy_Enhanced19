@@ -509,13 +509,17 @@ bool8 UpdateSave_v0_v2(const struct SaveSectorLocation *locations)
     AddPCItem(ITEM_SHINY_CHARM, 1); // One base Shiny Charm for the game
 
     // Add Shiny Charms based on in-game progression
-    FlagGet(FLAG_SYS_GAME_CLEAR)                ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Beat the game
-    FlagGet(FLAG_RECEIVED_GLASS_ORNAMENT)       ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Complete Master Rank Contests
-    FlagGet(FLAG_DEFEATED_METEOR_FALLS_STEVEN)  ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Defeat Steven in Meteor Falls
-    FlagGet(FLAG_HOENN_DEX_COMPLETE)            ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Complete the Hoenn Dex (not including Jirachi or Deoxys)
-    FlagGet(FLAG_NATIONAL_DEX_COMPLETE)         ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Complete the National Dex (not including Mew, Celebi, Jirachi or Deoxys)
-    FlagGet(FLAG_COLLECTED_ALL_SILVER_SYMBOLS)  ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Silver Symbols
-    FlagGet(FLAG_COLLECTED_ALL_GOLD_SYMBOLS)    ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Gold Symbols
+    FlagGet(FLAG_SYS_GAME_CLEAR)                ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Beat the game
+    FlagGet(FLAG_RECEIVED_GLASS_ORNAMENT)       ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Complete Master Rank Contests
+    FlagGet(FLAG_DEFEATED_METEOR_FALLS_STEVEN)  ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Defeat Steven in Meteor Falls
+    FlagGet(FLAG_HOENN_DEX_COMPLETE)            ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Complete the Hoenn Dex (not including Jirachi or Deoxys)
+    FlagGet(FLAG_NATIONAL_DEX_COMPLETE)         ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Complete the National Dex (not including Mew, Celebi, Jirachi or Deoxys)
+    FlagGet(FLAG_COLLECTED_ALL_SILVER_SYMBOLS)  ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Get all Silver Symbols
+    FlagGet(FLAG_COLLECTED_ALL_GOLD_SYMBOLS)    ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Get all Gold Symbols
+
+    // Check for Game Cleared to unlocked for Stat Editor unlock due to change in flag configuration (Could use National Dex, but due to National Dex flag being used in more areas prefer to use game clear flag)
+    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_ENABLE_STAT_EDITOR)  : FlagClear(FLAG_ENABLE_STAT_EDITOR);
+    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_SHOW_STAT_EDITOR)    : FlagClear(FLAG_SHOW_STAT_EDITOR);
 
     /**
      * The pokemon structure hasn't changed at all this version, so

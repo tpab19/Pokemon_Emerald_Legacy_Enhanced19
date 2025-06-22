@@ -330,6 +330,10 @@ bool8 UpdateSave_v1_v2(const struct SaveSectorLocation *locations)
     FlagGet(FLAG_COLLECTED_ALL_SILVER_SYMBOLS)  ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Silver Symbols
     FlagGet(FLAG_COLLECTED_ALL_GOLD_SYMBOLS)    ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Gold Symbols
 
+    // Check for Game Cleared to unlocked for Stat Editor unlock due to change in flag configuration (Could use National Dex, but due to National Dex flag being used in more areas prefer to use game clear flag)
+    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_ENABLE_STAT_EDITOR)  : FlagClear(FLAG_ENABLE_STAT_EDITOR);
+    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_SHOW_STAT_EDITOR)    : FlagClear(FLAG_SHOW_STAT_EDITOR);
+
     /**
      * The pokemon structure hasn't changed at all this version, so
      * we can just assign across the old box storage to the new.  */
