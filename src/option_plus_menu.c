@@ -47,6 +47,7 @@ enum
     MENUITEM_MAIN_BATTLESTYLE,
     MENUITEM_BATTLE_ITEMANIMATE,
     MENUITEM_BATTLE_TYPEEFFECT,
+    MENUITEM_BATTLE_HARDMODE,
     MENUITEM_BATTLE_CANCEL,
     MENUITEM_BATTLE_COUNT,
 };
@@ -190,6 +191,7 @@ static void DrawChoices_MonOverworld(int selection, int y);
 static void DrawChoices_SurfOverworld(int selection, int y);
 static void DrawChoices_ItemAnimate(int selection, int y);
 static void DrawChoices_TypeEffect(int selection, int y);
+static void DrawChoices_HardMode(int selection, int y);
 static void DrawChoices_FrameType(int selection, int y);
 static void DrawBgWindowFrames(void);
 
@@ -243,6 +245,7 @@ struct // MENU_BATTLE
     [MENUITEM_MAIN_BATTLESTYLE]  = {DrawChoices_BattleStyle, ProcessInput_Options_Two},
     [MENUITEM_BATTLE_ITEMANIMATE]  = {DrawChoices_ItemAnimate,   ProcessInput_Options_Four},
     [MENUITEM_BATTLE_TYPEEFFECT]  = {DrawChoices_TypeEffect, ProcessInput_Options_Two},
+    [MENUITEM_BATTLE_HARDMODE]  = {DrawChoices_HardMode, ProcessInput_Options_Three},
     [MENUITEM_BATTLE_CANCEL]       = {NULL, NULL},
 };
 
@@ -276,6 +279,7 @@ static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
     [MENUITEM_MAIN_CANCEL]      = gText_OptionMenuSave,
 };
 
+static const u8 sText_HardMode[]      = _("HARD MODE");
 static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
 {
 //    [MENUITEM_CUSTOM_HP_BAR]      = sText_HpBar,
@@ -284,6 +288,7 @@ static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_MAIN_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_BATTLE_ITEMANIMATE]   = gText_ItemAnimate,
     [MENUITEM_BATTLE_TYPEEFFECT]   = gText_TypeEffect,
+    [MENUITEM_BATTLE_HARDMODE]   = sText_HardMode,
     [MENUITEM_BATTLE_CANCEL]      = gText_OptionMenuSave,
 };
 
@@ -359,6 +364,18 @@ static bool8 CheckConditions(int selection)
         }
         case MENUITEM_BATTLE_ITEMANIMATE:     return TRUE;
         case MENUITEM_BATTLE_TYPEEFFECT:      return TRUE;
+        case MENUITEM_BATTLE_HARDMODE:
+        {
+            if (!FlagGet(FLAG_DEFEATED_METEOR_FALLS_STEVEN))
+            {
+                return FALSE;
+            }
+            else
+            {
+                return TRUE;
+            }
+
+        }
         case MENUITEM_BATTLE_CANCEL:          return TRUE;
         case MENUITEM_BATTLE_COUNT:           return TRUE;
         }
@@ -413,6 +430,9 @@ static const u8 sText_Desc_ItemAnimateMin[]     = _("Minimal in-battle item anim
 static const u8 sText_Desc_ItemAnimateNone[]    = _("No in-battle item animation.\nAnimation skipped.");
 static const u8 sText_Desc_TypeEffect_On[]      = _("Show move type effect in battle.\nGreen: Super, Red: Not very, Grey: None");
 static const u8 sText_Desc_TypeEffect_Off[]     = _("Original experience, does not show\nmove type effectiveness in battle.");
+static const u8 sText_Desc_HardMode_Off[]       = _("Original experience.\nNo extra restrictions in battle.");
+static const u8 sText_Desc_HardMode_Hard[]      = _("SET mode, no items in battle,\nGYM level caps.");
+static const u8 sText_Desc_HardMode_Hardcore[]  = _("Hard mode, but POKéMON can't\nbe revived.");
 //static const u8 sText_Desc_FontType[]           = _("Choose the font design.");
 //static const u8 sText_Desc_OverworldCallsOn[]   = _("TRAINERs will be able to call you,\noffering rematches and info.");
 //static const u8 sText_Desc_OverworldCallsOff[]  = _("You will not receive calls.\nSpecial events will still occur.");
@@ -424,6 +444,7 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_MAIN_BATTLESTYLE] = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set, sText_Empty},
     [MENUITEM_BATTLE_ITEMANIMATE] = {sText_Desc_ItemAnimateNormal,  sText_Desc_ItemAnimateRed,  sText_Desc_ItemAnimateMin,  sText_Desc_ItemAnimateNone},
     [MENUITEM_BATTLE_TYPEEFFECT] = {sText_Desc_TypeEffect_On,    sText_Desc_TypeEffect_Off, sText_Empty},
+    [MENUITEM_BATTLE_HARDMODE] = {sText_Desc_HardMode_Off,    sText_Desc_HardMode_Hard, sText_Desc_HardMode_Hardcore},
     [MENUITEM_BATTLE_CANCEL]      = {sText_Desc_Save,               sText_Empty,                sText_Empty,                sText_Empty},
 };
 
@@ -468,15 +489,15 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
 };
 
 // Disabled Battle
-static const u8 sText_Desc_Disabled_BattleStyle[]   = _("BATTLE STYLE cannot be changed if\nHARD or HARDCORE difficulty chosen.");
+static const u8 sText_Desc_Disabled_BattleStyle[]   = _("BATTLE STYLE cannot be changed if\nHARD or HARDCORE difficulty active.");
+static const u8 sText_Desc_Disabled_Hardmode[]   = _("HARD MODE setting locked.\nBeat the game to unlock.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledBattle[MENUITEM_BATTLE_COUNT] =
 {
     //[MENUITEM_CUSTOM_HP_BAR]      = sText_Desc_Disabled_BattleHPBar,
     //[MENUITEM_CUSTOM_EXP_BAR]     = sText_Empty,
-    //[MENUITEM_CUSTOM_FONT]        = sText_Empty,
-    //[MENUITEM_CUSTOM_MATCHCALL]   = sText_Empty,
     [MENUITEM_MAIN_BATTLESCENE] = sText_Empty,
     [MENUITEM_MAIN_BATTLESTYLE] = sText_Desc_Disabled_BattleStyle,
+    [MENUITEM_BATTLE_HARDMODE] = sText_Desc_Disabled_Hardmode,
     [MENUITEM_BATTLE_CANCEL]      = sText_Empty,
     
 };
@@ -758,6 +779,13 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel_battle[MENUITEM_BATTLE_ITEMANIMATE]   = gSaveBlock2Ptr->optionsBattleItemAnimation;
         sOptions->sel_battle[MENUITEM_BATTLE_TYPEEFFECT]    = FlagGet(FLAG_HIDE_TYPE_EFFECT_BATTLE);
 
+        if (FlagGet(FLAG_NUZLOCKE))
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 2;
+        else if(FlagGet(FLAG_HARD))
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 1;
+        else
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 0;
+
         sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     = !FlagGet(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    = !FlagGet(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    = !FlagGet(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other options in the World options menu
@@ -1002,6 +1030,23 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsBattleItemAnimation  = sOptions->sel_battle[MENUITEM_BATTLE_ITEMANIMATE];
     sOptions->sel_battle[MENUITEM_BATTLE_TYPEEFFECT] == 0 ? FlagClear(FLAG_HIDE_TYPE_EFFECT_BATTLE) : FlagSet(FLAG_HIDE_TYPE_EFFECT_BATTLE);
     
+    switch (sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE])
+    {
+        case 2:
+            FlagSet(FLAG_HARD);
+            FlagSet(FLAG_NUZLOCKE);
+            break;
+        case 1:
+            FlagSet(FLAG_HARD);
+            FlagClear(FLAG_NUZLOCKE);
+            break;
+        case 0:
+        default:
+            FlagClear(FLAG_NUZLOCKE);
+            FlagClear(FLAG_HARD);
+            break;        
+    }
+
     sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)     : FlagClear(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)    : FlagClear(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    == 0 ? FlagSet(FLAG_ENABLE_FASTDIVE)    : FlagClear(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other similar options.
@@ -1275,6 +1320,21 @@ static void DrawChoices_TypeEffect(int selection, int y)
 
     DrawOptionMenuChoice(gText_TypeEffectOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_TypeEffectOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_TypeEffectOff, 198), y, styles[1], active);
+}
+
+static const u8 sText_HardMode_Off[] = _("OFF");
+static const u8 sText_HardMode_Hard[] = _("HARD");
+static const u8 sText_HardMode_Hardcore[] = _("HARDCORE");
+static void DrawChoices_HardMode(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_BATTLE_HARDMODE);
+    u8 styles[3] = {0};
+    int xMid = GetMiddleX(sText_HardMode_Off, sText_HardMode_Hard, sText_HardMode_Hardcore);
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_HardMode_Off, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_HardMode_Hard, xMid, y, styles[1], active);
+    DrawOptionMenuChoice(sText_HardMode_Hardcore, GetStringRightAlignXOffset(1, sText_HardMode_Hardcore, 198), y, styles[2], active);
 }
 
 static void DrawChoices_Sound(int selection, int y)
