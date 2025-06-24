@@ -142,6 +142,7 @@ struct SaveBlock1_v0
                struct RegisteredItemSlot registeredItems[10];
 };
 
+// Archived - Superseded
 bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
 {
     const struct SaveBlock2_v0* sOldSaveBlock2Ptr = (struct SaveBlock2_v0*)(locations[SECTOR_ID_SAVEBLOCK2].data);
@@ -157,9 +158,9 @@ bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
     /** We need to fill in any data that's new in this version. */
     gSaveBlock2Ptr->_saveSentinel = 0xFF;
     gSaveBlock2Ptr->saveVersion = 1;
-    gSaveBlock2Ptr->optionsBikeMusic = 0;
-    gSaveBlock2Ptr->optionsSurfMusic = 0;
-    gSaveBlock2Ptr->optionsSurfOverworld = 0;
+    //gSaveBlock2Ptr->optionsBikeMusic = 0;
+    //gSaveBlock2Ptr->optionsSurfMusic = 0;
+    //gSaveBlock2Ptr->optionsSurfOverworld = 0;
     gSaveBlock2Ptr->optionsBattleItemAnimation = 0;
     gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
     gSaveBlock1Ptr->registeredItemLastSelected = 0;
@@ -334,7 +335,7 @@ bool8 UpdateSave_v0_v1(const struct SaveSectorLocation *locations)
     return TRUE;
 }
 
-bool8 UpdateSave_v0_v2(const struct SaveSectorLocation *locations)
+bool8 UpdateSave_v0_v3(const struct SaveSectorLocation *locations)
 {
     const struct SaveBlock2_v0* sOldSaveBlock2Ptr = (struct SaveBlock2_v0*)(locations[SECTOR_ID_SAVEBLOCK2].data);
     const struct SaveBlock1_v0* sOldSaveBlock1Ptr = (struct SaveBlock1_v0*)(locations[SECTOR_ID_SAVEBLOCK1_START].data);
@@ -348,10 +349,11 @@ bool8 UpdateSave_v0_v2(const struct SaveSectorLocation *locations)
 
     /** We need to fill in any data that's new in this version. */
     gSaveBlock2Ptr->_saveSentinel = 0xFF;
-    gSaveBlock2Ptr->saveVersion = 2;
-    gSaveBlock2Ptr->optionsBikeMusic = 0;
-    gSaveBlock2Ptr->optionsSurfMusic = 0;
-    gSaveBlock2Ptr->optionsSurfOverworld = 0;
+    gSaveBlock2Ptr->saveVersion = 3;
+    
+    // Set Secret Base Entrance Warp to -1 until Secret Base entered.
+    SetPlayerSecretBaseCoords(-1, -1, WARP_ID_NONE, -1, -1);
+
     gSaveBlock2Ptr->optionsBattleItemAnimation = 0;
     gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
     gSaveBlock1Ptr->registeredItemLastSelected = 0;
@@ -504,6 +506,18 @@ bool8 UpdateSave_v0_v2(const struct SaveSectorLocation *locations)
     #undef COPY_FIELD
     #undef COPY_BLOCK
     #undef COPY_ARRAY
+
+    /**
+     * The pokemon structure hasn't changed at all this version, so
+     * we can just assign across the old box storage to the new.  */ 
+    *gPokemonStoragePtr = *sOldPokemonStoragePtr;
+
+    // Set Option Flag Defaults
+    FlagSet(FLAG_ENABLE_SURFOVERWORLD); // Turns Surfing Overworlds On
+
+    // Check for Game Cleared to unlocked for Stat Editor unlock due to change in flag configuration (Could use National Dex, but due to National Dex flag being used in more areas prefer to use game clear flag)
+    FlagGet(FLAG_SYS_GAME_CLEAR)    ? FlagSet(FLAG_ENABLE_STAT_EDITOR)      : FlagClear(FLAG_ENABLE_STAT_EDITOR);
+    FlagGet(FLAG_SYS_GAME_CLEAR)    ? FlagSet(FLAG_SHOW_STAT_EDITOR)        : FlagClear(FLAG_SHOW_STAT_EDITOR);
     
     // Add Shiny Charm to Save Upgrades
     AddPCItem(ITEM_SHINY_CHARM, 1); // One base Shiny Charm for the game
@@ -516,15 +530,6 @@ bool8 UpdateSave_v0_v2(const struct SaveSectorLocation *locations)
     FlagGet(FLAG_NATIONAL_DEX_COMPLETE)         ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Complete the National Dex (not including Mew, Celebi, Jirachi or Deoxys)
     FlagGet(FLAG_COLLECTED_ALL_SILVER_SYMBOLS)  ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Get all Silver Symbols
     FlagGet(FLAG_COLLECTED_ALL_GOLD_SYMBOLS)    ? AddPCItem(ITEM_SHINY_CHARM, 1)    : 0; // Get all Gold Symbols
-
-    // Check for Game Cleared to unlocked for Stat Editor unlock due to change in flag configuration (Could use National Dex, but due to National Dex flag being used in more areas prefer to use game clear flag)
-    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_ENABLE_STAT_EDITOR)  : FlagClear(FLAG_ENABLE_STAT_EDITOR);
-    FlagGet(FLAG_SYS_GAME_CLEAR)                ? FlagSet(FLAG_SHOW_STAT_EDITOR)    : FlagClear(FLAG_SHOW_STAT_EDITOR);
-
-    /**
-     * The pokemon structure hasn't changed at all this version, so
-     * we can just assign across the old box storage to the new.  */ 
-    *gPokemonStoragePtr = *sOldPokemonStoragePtr;
     
     /**
      * The most common kind of change that might happen between major versions are 

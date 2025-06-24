@@ -1284,9 +1284,9 @@
 #define FLAG_ENABLE_FASTSURF                                        0x4D8 // Flag for enabling Fast Surf
 #define FLAG_ENABLE_FASTDIVE                                        0x4D9 // Flag for enabling Fast Dive
 #define FLAG_ENABLE_FISHALWAYSBITE                                  0x4DA // Flag for enabling fish always biting
-#define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
-#define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
-#define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
+#define FLAG_ENABLE_SURFOVERWORLD                                   0x4DB // Flag for enabling Surfing Overworld or use original Surf Blob
+#define FLAG_DISABLE_SURFMUSIC                                      0x4DC // Flag for disabling Surf music when surfing
+#define FLAG_DISABLE_BIKEMUSIC                                      0x4DD // Flag for disabling Bike music when biking
 #define FLAG_UNUSED_0x4DE                                           0x4DE // Unused Flag
 #define FLAG_UNUSED_0x4DF                                           0x4DF // Unused Flag
 #define FLAG_UNUSED_0x4E0                                           0x4E0 // Unused Flag

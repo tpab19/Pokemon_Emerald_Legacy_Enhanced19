@@ -795,14 +795,14 @@ void CB2_InitOptionPlusMenu(void)
         else
             sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 0;
 
-        sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     = !FlagGet(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other options in the World options menu
-        sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    = !FlagGet(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other options in the World options menu
-        sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    = !FlagGet(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other options in the World options menu
-        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    = !FlagGet(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other options in the World options menu
-        sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]   = gSaveBlock2Ptr->optionsBikeMusic;
-        sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC]   = gSaveBlock2Ptr->optionsSurfMusic;
-        sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]   = FlagGet(FLAG_HIDE_FOLLOWER);
-        sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD]   = gSaveBlock2Ptr->optionsSurfOverworld;
+        sOptions->sel_world[MENUITEM_WORLD_AUTORUN]             = !FlagGet(FLAG_ENABLE_AUTORUN);            // Used the inverse to align with ON/OFF Buttons
+        sOptions->sel_world[MENUITEM_WORLD_FASTSURF]            = !FlagGet(FLAG_ENABLE_FASTSURF);           // Used the inverse to align with ON/OFF Buttons
+        sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]            = !FlagGet(FLAG_ENABLE_FASTDIVE);           // Used the inverse to align with ON/OFF Buttons
+        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     = !FlagGet(FLAG_ENABLE_FISHALWAYSBITE);     // Used the inverse to align with ON/OFF Buttons
+        sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           = FlagGet(FLAG_DISABLE_BIKEMUSIC);
+        sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC]           = FlagGet(FLAG_DISABLE_SURFMUSIC);
+        sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        = FlagGet(FLAG_HIDE_FOLLOWER);
+        sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD]       = !FlagGet(FLAG_ENABLE_SURFOVERWORLD);      // Used the inverse to align with ON/OFF Buttons
 
         sOptions->submenu = MENU_MAIN;
 
@@ -1057,14 +1057,14 @@ static void Task_OptionMenuSave(u8 taskId)
             break;        
     }
 
-    sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)     : FlagClear(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other similar options.
-    sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)    : FlagClear(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other similar options.
-    sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    == 0 ? FlagSet(FLAG_ENABLE_FASTDIVE)    : FlagClear(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other similar options.
-    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    == 0 ? FlagSet(FLAG_ENABLE_FISHALWAYSBITE)    : FlagClear(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other similar options.
-    gSaveBlock2Ptr->optionsBikeMusic            = sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC];
-    gSaveBlock2Ptr->optionsSurfMusic            = sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC];
-    sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD] == 0 ? FlagClear(FLAG_HIDE_FOLLOWER) : FlagSet(FLAG_HIDE_FOLLOWER);
-    gSaveBlock2Ptr->optionsSurfOverworld        = sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD];
+    sOptions->sel_world[MENUITEM_WORLD_AUTORUN]             == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)     : FlagClear(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_FASTSURF]            == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)    : FlagClear(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]            == 0 ? FlagSet(FLAG_ENABLE_FASTDIVE)    : FlagClear(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     == 0 ? FlagSet(FLAG_ENABLE_FISHALWAYSBITE)    : FlagClear(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           == 0 ? FlagClear(FLAG_DISABLE_BIKEMUSIC) : FlagSet(FLAG_DISABLE_BIKEMUSIC);
+    sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC]           == 0 ? FlagClear(FLAG_DISABLE_SURFMUSIC) : FlagSet(FLAG_DISABLE_SURFMUSIC);
+    sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        == 0 ? FlagClear(FLAG_HIDE_FOLLOWER) : FlagSet(FLAG_HIDE_FOLLOWER);
+    sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD]       == 0 ? FlagSet(FLAG_ENABLE_SURFOVERWORLD)    : FlagClear(FLAG_ENABLE_SURFOVERWORLD);   // Used the inverse to align with other similar options.
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;

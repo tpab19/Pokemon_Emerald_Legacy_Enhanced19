@@ -99,9 +99,9 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
-    gSaveBlock2Ptr->optionsBikeMusic = FALSE; // Added flag for Bike Music toggle (defaults to on with FALSE)
-    gSaveBlock2Ptr->optionsSurfMusic = FALSE; // Added flag for Surf Music toggle (defaults to on with FALSE)
-    gSaveBlock2Ptr->optionsBattleItemAnimation = OPTIONS_ITEM_ANIMATION_NORMAL; // Added flag for Surf Music toggle (defaults to on with FALSE)
+    gSaveBlock2Ptr->optionsBattleItemAnimation = OPTIONS_ITEM_ANIMATION_NORMAL; // Added option to change Item Use Battle animation
+    FlagClear(FLAG_DISABLE_BIKEMUSIC); // Added flag for Bike Music toggle (defaults to on with cleared flag)
+    FlagClear(FLAG_DISABLE_SURFMUSIC); // Added flag for Surf Music toggle (defaults to on with cleared flag)
 }
 
 static void ClearPokedexFlags(void)
