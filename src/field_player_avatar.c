@@ -630,14 +630,26 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
         // same speed as running
-        if (heldKeys & B_BUTTON)
+        if ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_FASTSURF))
             PlayerWalkFaster(direction);
         else
             PlayerWalkFast(direction);
         return;
     }
 
-    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER)
+    {
+        // Faster underwater speed
+        if (FlagGet(FLAG_ENABLE_FASTSURF) && FlagGet(FLAG_ENABLE_FASTDIVE))
+            PlayerWalkFaster(direction);
+        else if (FlagGet(FLAG_ENABLE_FASTDIVE))
+            PlayerWalkFast(direction);
+        else
+            PlayerWalkNormal(direction);
+        return;
+    }
+
+    if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_AUTORUN)) && FlagGet(FLAG_SYS_B_DASH)
      && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
     {
         PlayerRun(direction);
@@ -1240,25 +1252,7 @@ u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
 }
 
-u8 unref_GetRivalAvatarGenderByGraphicsId(u16 gfxId)
-{
-    switch (gfxId)
-    {
-    case OBJ_EVENT_GFX_RIVAL_MAY_NORMAL:
-    case OBJ_EVENT_GFX_RIVAL_MAY_MACH_BIKE:
-    case OBJ_EVENT_GFX_RIVAL_MAY_ACRO_BIKE:
-    case OBJ_EVENT_GFX_RIVAL_MAY_SURFING:
-    case OBJ_EVENT_GFX_RIVAL_MAY_FIELD_MOVE:
-    case OBJ_EVENT_GFX_MAY_UNDERWATER:
-    case OBJ_EVENT_GFX_MAY_FISHING:
-    case OBJ_EVENT_GFX_MAY_WATERING:
-        return FEMALE;
-    default:
-        return MALE;
-    }
-}
-
-u8 GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
+u16 GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
@@ -1845,7 +1839,8 @@ static bool8 Fishing_CheckForBite(struct Task *task)
 
         if (!bite)
         {
-            if (Random() & 1)
+            // If Option setting enabled, fish will bite a fill will always eventually bite
+            if ((Random() & 1) && !FlagGet(FLAG_ENABLE_FISHALWAYSBITE))
                 task->tStep = FISHING_NO_BITE;
             else
                 bite = TRUE;
@@ -1877,7 +1872,9 @@ static bool8 Fishing_WaitForA(struct Task *task)
 
     AlignFishingAnimationFrames();
     task->tFrameCounter++;
-    if (task->tFrameCounter >= reelTimeouts[task->tFishingRod])
+
+    // If Option setting enabled, fish can't get away, wait until player presses A to start encounter
+    if ((task->tFrameCounter >= reelTimeouts[task->tFishingRod]) && !FlagGet(FLAG_ENABLE_FISHALWAYSBITE))
         task->tStep = FISHING_GOT_AWAY;
     else if (JOY_NEW(A_BUTTON))
         task->tStep++;

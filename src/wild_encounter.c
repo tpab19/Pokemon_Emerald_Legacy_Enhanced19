@@ -527,6 +527,41 @@ static u16 GetCurrentMapWildMonHeaderId(void)
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET);
             }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_1F_2R) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_1F_2R))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_B1F_1R) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_B1F_1R))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_B1F_2R) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_B1F_2R))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_STEVENS_CAVE) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_STEVENS_CAVE))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_1F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_1F))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_3F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_3F))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_5F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_5F))
+            {
+                i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
+            }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SLATEPORT_CITY) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(SLATEPORT_CITY))
             {
@@ -579,7 +614,7 @@ static u16 GetCurrentMapWildMonHeaderId(void)
     return HEADER_NONE;
 }
 
-static u8 PickWildMonNature(void)
+u8 PickWildMonNature(void)
 {
     u8 i;
     u8 j;
@@ -1199,4 +1234,13 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
     if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
         *encRate = *encRate * 2 / 3;
+}
+
+bool8 StandardWildEncounter_Debug(void)
+{
+    u16 headerId = GetCurrentMapWildMonHeaderId();
+    if (TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, 0) != TRUE)
+        return FALSE;
+
+    DoStandardWildBattle_Debug();
 }

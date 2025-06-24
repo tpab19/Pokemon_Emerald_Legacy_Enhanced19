@@ -32,8 +32,8 @@ enum
     MENUITEM_MAIN_TEXTSPEED,
     MENUITEM_MAIN_SOUND,
     MENUITEM_MAIN_BUTTONMODE,
-    //MENUITEM_MAIN_UNIT_SYSTEM,
     MENUITEM_MAIN_FRAMETYPE,
+    MENUITEM_MAIN_STAT_EDITOR,
     MENUITEM_MAIN_CANCEL,
     MENUITEM_MAIN_COUNT,
 };
@@ -46,6 +46,8 @@ enum
     MENUITEM_MAIN_BATTLESCENE,
     MENUITEM_MAIN_BATTLESTYLE,
     MENUITEM_BATTLE_ITEMANIMATE,
+    MENUITEM_BATTLE_TYPEEFFECT,
+    MENUITEM_BATTLE_HARDMODE,
     MENUITEM_BATTLE_CANCEL,
     MENUITEM_BATTLE_COUNT,
 };
@@ -53,9 +55,14 @@ enum
 // World Menu Items
 enum
 {
+    MENUITEM_WORLD_AUTORUN,
+    MENUITEM_WORLD_FASTSURF,
+    MENUITEM_WORLD_FASTDIVE,
+    MENUITEM_WORLD_IMPROVEDFISHING,
+    MENUITEM_WORLD_MONOVERWORLD,
+    MENUITEM_WORLD_SURFOVERWORLD,
     MENUITEM_WORLD_BIKEMUSIC,
     MENUITEM_WORLD_SURFMUSIC,
-    MENUITEM_WORLD_SURFOVERWORLD,
     MENUITEM_WORLD_CANCEL,
     MENUITEM_WORLD_COUNT,
 };
@@ -175,11 +182,18 @@ static void DrawChoices_BattleStyle(int selection, int y);
 static void DrawChoices_Sound(int selection, int y);
 static void DrawChoices_ButtonMode(int selection, int y);
 //static void DrawChoices_BarSpeed(int selection, int y); //HP and EXP
-//static void DrawChoices_UnitSystem(int selection, int y);
+static void DrawChoices_StatEditor(int selection, int y);
+static void DrawChoices_AutoRun(int selection, int y);
+static void DrawChoices_FastSurf(int selection, int y);
+static void DrawChoices_FastDive(int selection, int y);
+static void DrawChoices_ImprovedFishing(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_SurfMusic(int selection, int y);
+static void DrawChoices_MonOverworld(int selection, int y);
 static void DrawChoices_SurfOverworld(int selection, int y);
 static void DrawChoices_ItemAnimate(int selection, int y);
+static void DrawChoices_TypeEffect(int selection, int y);
+static void DrawChoices_HardMode(int selection, int y);
 static void DrawChoices_FrameType(int selection, int y);
 static void DrawBgWindowFrames(void);
 
@@ -216,8 +230,8 @@ struct // MENU_MAIN - General
     [MENUITEM_MAIN_TEXTSPEED]    = {DrawChoices_TextSpeed,   ProcessInput_Options_Three},
     [MENUITEM_MAIN_SOUND]        = {DrawChoices_Sound,       ProcessInput_Options_Two},
     [MENUITEM_MAIN_BUTTONMODE]   = {DrawChoices_ButtonMode,  ProcessInput_Options_Three},
-//    [MENUITEM_MAIN_UNIT_SYSTEM]  = {DrawChoices_UnitSystem,  ProcessInput_Options_Two},
     [MENUITEM_MAIN_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
+    [MENUITEM_MAIN_STAT_EDITOR]  = {DrawChoices_StatEditor,  ProcessInput_Options_Two},
     [MENUITEM_MAIN_CANCEL]       = {NULL, NULL},
 };
 
@@ -232,6 +246,8 @@ struct // MENU_BATTLE
     [MENUITEM_MAIN_BATTLESCENE]  = {DrawChoices_BattleScene, ProcessInput_Options_Two},
     [MENUITEM_MAIN_BATTLESTYLE]  = {DrawChoices_BattleStyle, ProcessInput_Options_Two},
     [MENUITEM_BATTLE_ITEMANIMATE]  = {DrawChoices_ItemAnimate,   ProcessInput_Options_Four},
+    [MENUITEM_BATTLE_TYPEEFFECT]  = {DrawChoices_TypeEffect, ProcessInput_Options_Two},
+    [MENUITEM_BATTLE_HARDMODE]  = {DrawChoices_HardMode, ProcessInput_Options_Three},
     [MENUITEM_BATTLE_CANCEL]       = {NULL, NULL},
 };
 
@@ -242,26 +258,31 @@ struct // MENU_WORLD
 } static const sItemFunctionsWorld[MENUITEM_WORLD_COUNT] =
 {
 //    [MENUITEM_CUSTOM_HP_BAR]       = {DrawChoices_BarSpeed,    ProcessInput_Options_Eleven},
-//    [MENUITEM_CUSTOM_EXP_BAR]      = {DrawChoices_BarSpeed,    ProcessInput_Options_Eleven},
+    [MENUITEM_WORLD_AUTORUN]      = {DrawChoices_AutoRun,    ProcessInput_Options_Two},
+    [MENUITEM_WORLD_FASTSURF]      = {DrawChoices_FastSurf,    ProcessInput_Options_Two},
+    [MENUITEM_WORLD_FASTDIVE]      = {DrawChoices_FastDive,    ProcessInput_Options_Two},
+    [MENUITEM_WORLD_IMPROVEDFISHING]      = {DrawChoices_ImprovedFishing,    ProcessInput_Options_Two},
     [MENUITEM_WORLD_BIKEMUSIC]    = {DrawChoices_BikeMusic,   ProcessInput_Options_Two},
     [MENUITEM_WORLD_SURFMUSIC]    = {DrawChoices_SurfMusic,   ProcessInput_Options_Two},
+    [MENUITEM_WORLD_MONOVERWORLD]    = {DrawChoices_MonOverworld,   ProcessInput_Options_Two},
     [MENUITEM_WORLD_SURFOVERWORLD]    = {DrawChoices_SurfOverworld,   ProcessInput_Options_Two},
     [MENUITEM_WORLD_CANCEL]       = {NULL, NULL},
 };
 // Menu left side option names text
 //static const u8 sText_HpBar[]       = _("HP BAR");
 //static const u8 sText_ExpBar[]      = _("EXP BAR");
-//static const u8 sText_UnitSystem[]  = _("UNIT SYSTEM");
+static const u8 sText_StatEditor[]  = _("STAT EDITOR");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = gText_TextSpeed,
     [MENUITEM_MAIN_SOUND]       = gText_Sound,
     [MENUITEM_MAIN_BUTTONMODE]  = gText_ButtonMode,
-//    [MENUITEM_MAIN_UNIT_SYSTEM] = sText_UnitSystem,
     [MENUITEM_MAIN_FRAMETYPE]   = gText_Frame,
+    [MENUITEM_MAIN_STAT_EDITOR] = sText_StatEditor,
     [MENUITEM_MAIN_CANCEL]      = gText_OptionMenuSave,
 };
 
+static const u8 sText_HardMode[]      = _("HARD MODE");
 static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
 {
 //    [MENUITEM_CUSTOM_HP_BAR]      = sText_HpBar,
@@ -269,15 +290,24 @@ static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
     [MENUITEM_MAIN_BATTLESCENE] = gText_BattleScene,
     [MENUITEM_MAIN_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_BATTLE_ITEMANIMATE]   = gText_ItemAnimate,
+    [MENUITEM_BATTLE_TYPEEFFECT]   = gText_TypeEffect,
+    [MENUITEM_BATTLE_HARDMODE]   = sText_HardMode,
     [MENUITEM_BATTLE_CANCEL]      = gText_OptionMenuSave,
 };
 
+static const u8 sText_AutoRun[]      = _("AUTO RUN");
+static const u8 sText_FastSurf[]      = _("FAST SURF");
+static const u8 sText_FastDive[]      = _("FAST DIVE");
+static const u8 sText_ImprovedFishing[]      = _("IMPROVED FISHING");
 static const u8 *const sOptionMenuItemsNamesWorld[MENUITEM_WORLD_COUNT] =
 {
-//    [MENUITEM_CUSTOM_HP_BAR]      = sText_HpBar,
-//    [MENUITEM_CUSTOM_EXP_BAR]     = sText_ExpBar,
+    [MENUITEM_WORLD_AUTORUN]     = sText_AutoRun,
+    [MENUITEM_WORLD_FASTSURF]     = sText_FastSurf,
+    [MENUITEM_WORLD_FASTDIVE]     = sText_FastDive,
+    [MENUITEM_WORLD_IMPROVEDFISHING]     = sText_ImprovedFishing,
     [MENUITEM_WORLD_BIKEMUSIC]   = gText_BikeMusic,
     [MENUITEM_WORLD_SURFMUSIC]   = gText_SurfMusic,
+    [MENUITEM_WORLD_MONOVERWORLD]   = gText_MonOverworld,
     [MENUITEM_WORLD_SURFOVERWORLD]   = gText_SurfOverworld,
     [MENUITEM_WORLD_CANCEL]      = gText_OptionMenuSave,
 };
@@ -303,8 +333,19 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_MAIN_TEXTSPEED:       return TRUE;
         case MENUITEM_MAIN_SOUND:           return TRUE;
         case MENUITEM_MAIN_BUTTONMODE:      return TRUE;
-        //case MENUITEM_MAIN_UNIT_SYSTEM:     return TRUE;
         case MENUITEM_MAIN_FRAMETYPE:       return TRUE;
+        case MENUITEM_MAIN_STAT_EDITOR:
+        {
+            if (!FlagGet(FLAG_ENABLE_STAT_EDITOR))
+            {
+                return FALSE;
+            }
+            else
+            {
+                return TRUE;
+            }
+
+        }
         case MENUITEM_MAIN_CANCEL:          return TRUE;
         case MENUITEM_MAIN_COUNT:           return TRUE;
         }
@@ -327,14 +368,32 @@ static bool8 CheckConditions(int selection)
 
         }
         case MENUITEM_BATTLE_ITEMANIMATE:     return TRUE;
+        case MENUITEM_BATTLE_TYPEEFFECT:      return TRUE;
+        case MENUITEM_BATTLE_HARDMODE:
+        {
+            if (!FlagGet(FLAG_DEFEATED_METEOR_FALLS_STEVEN))
+            {
+                return FALSE;
+            }
+            else
+            {
+                return TRUE;
+            }
+
+        }
         case MENUITEM_BATTLE_CANCEL:          return TRUE;
         case MENUITEM_BATTLE_COUNT:           return TRUE;
         }
     case MENU_WORLD:
         switch(selection)
         {
+        case MENUITEM_WORLD_AUTORUN:         return TRUE;
+        case MENUITEM_WORLD_FASTSURF:        return TRUE;
+        case MENUITEM_WORLD_FASTDIVE:        return TRUE;
+        case MENUITEM_WORLD_IMPROVEDFISHING: return TRUE;
         case MENUITEM_WORLD_BIKEMUSIC:       return TRUE;
         case MENUITEM_WORLD_SURFMUSIC:       return TRUE;
+        case MENUITEM_WORLD_MONOVERWORLD:    return TRUE;
         case MENUITEM_WORLD_SURFOVERWORLD:   return TRUE;
         case MENUITEM_WORLD_CANCEL:          return TRUE;
         case MENUITEM_WORLD_COUNT:           return TRUE;
@@ -351,16 +410,16 @@ static const u8 sText_Desc_SoundStereo[]        = _("Play the left and right aud
 static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
 static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R buttons\nact as left and right.");
 static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
-//static const u8 sText_Desc_UnitSystemImperial[] = _("Display BERRY and POKéMON weight\nand size in pounds and inches.");
-//static const u8 sText_Desc_UnitSystemMetric[]   = _("Display BERRY and POKéMON weight\nand size in kilograms and meters.");
+static const u8 sText_Desc_StatEditor_Hide[]    = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
+static const u8 sText_Desc_StatEditor_Show[]    = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
 static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows.");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = {sText_Desc_TextSpeed,            sText_Empty,                sText_Empty},
     [MENUITEM_MAIN_SOUND]       = {sText_Desc_SoundMono,            sText_Desc_SoundStereo,     sText_Empty},
     [MENUITEM_MAIN_BUTTONMODE]  = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,   sText_Desc_ButtonMode_LA},
-    //[MENUITEM_MAIN_UNIT_SYSTEM] = {sText_Desc_UnitSystemImperial,   sText_Desc_UnitSystemMetric,sText_Empty},
     [MENUITEM_MAIN_FRAMETYPE]   = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
+    [MENUITEM_MAIN_STAT_EDITOR] = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show, sText_Empty},
     [MENUITEM_MAIN_CANCEL]      = {sText_Desc_Save,                 sText_Empty,                sText_Empty},
 };
 
@@ -375,6 +434,11 @@ static const u8 sText_Desc_ItemAnimateNormal[]  = _("Original in-battle item ani
 static const u8 sText_Desc_ItemAnimateRed[]     = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
 static const u8 sText_Desc_ItemAnimateMin[]     = _("Minimal in-battle item animation.\nOnly the final ring animation.");
 static const u8 sText_Desc_ItemAnimateNone[]    = _("No in-battle item animation.\nAnimation skipped.");
+static const u8 sText_Desc_TypeEffect_On[]      = _("Show move type effect in battle.\nGreen: Super, Red: Not very, Grey: None");
+static const u8 sText_Desc_TypeEffect_Off[]     = _("Original experience, does not show\nmove type effectiveness in battle.");
+static const u8 sText_Desc_HardMode_Off[]       = _("Original experience.\nNo extra restrictions in battle.");
+static const u8 sText_Desc_HardMode_Hard[]      = _("SET mode, no items in battle,\nGYM level caps.");
+static const u8 sText_Desc_HardMode_Hardcore[]  = _("Hard mode, but POKéMON can't\nbe revived.");
 //static const u8 sText_Desc_FontType[]           = _("Choose the font design.");
 //static const u8 sText_Desc_OverworldCallsOn[]   = _("TRAINERs will be able to call you,\noffering rematches and info.");
 //static const u8 sText_Desc_OverworldCallsOff[]  = _("You will not receive calls.\nSpecial events will still occur.");
@@ -385,47 +449,64 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_MAIN_BATTLESCENE] = {sText_Desc_BattleScene_On,       sText_Desc_BattleScene_Off, sText_Empty},
     [MENUITEM_MAIN_BATTLESTYLE] = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set, sText_Empty},
     [MENUITEM_BATTLE_ITEMANIMATE] = {sText_Desc_ItemAnimateNormal,  sText_Desc_ItemAnimateRed,  sText_Desc_ItemAnimateMin,  sText_Desc_ItemAnimateNone},
+    [MENUITEM_BATTLE_TYPEEFFECT] = {sText_Desc_TypeEffect_On,    sText_Desc_TypeEffect_Off, sText_Empty},
+    [MENUITEM_BATTLE_HARDMODE] = {sText_Desc_HardMode_Off,    sText_Desc_HardMode_Hard, sText_Desc_HardMode_Hardcore},
     [MENUITEM_BATTLE_CANCEL]      = {sText_Desc_Save,               sText_Empty,                sText_Empty,                sText_Empty},
 };
 
+static const u8 sText_Desc_AutoRun_On[]         = _("Use your RUNNING SHOES anywhere\nallowed without pressing the B Button.");
+static const u8 sText_Desc_AutoRun_Off[]        = _("Use your RUNNING SHOES as normal.\nHold the B Button to run.");
+static const u8 sText_Desc_FastSurf_On[]         = _("SURF faster than normal.\nWithout pressing the B Button.");
+static const u8 sText_Desc_FastSurf_Off[]        = _("SURF at normal speed.\nHold the B Button to SURF faster.");
+static const u8 sText_Desc_FastDive_On[]         = _("Travel underwater faster than normal.\nIf FAST SURF is ON, speed is fastest.");
+static const u8 sText_Desc_FastDive_Off[]        = _("Original experience, underwater speed\nis unchanged from original game.");
+static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing. Fish always bite,\nand are not able to get away.");
+static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
 static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music when you\nstart surfing on a POKéMON.");
 static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music when you\nstart surfing on a POKéMON.");
 static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_BikeOn[]             = _("Enables the BIKE music when you\nstart riding the BIKE.");
+static const u8 sText_Desc_MonOverworldOff[]            = _("Disables following for the first\nPOKéMON in your party.");
+static const u8 sText_Desc_MonOverworldOn[]             = _("Enables following for the first\nPOKéMON in your party.");
 static const u8 sText_Desc_SurfOverworldDynamic[]       = _("Use the relevant POKéMON's sprite\nwhen surfing.");
 static const u8 sText_Desc_SurfOverworldOriginal[]      = _("Use the original generic sprite when\nsurfing.");
 static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][2] =
 {
     //[MENUITEM_CUSTOM_HP_BAR]      = {sText_Desc_BattleHPBar,        sText_Empty},
-    //[MENUITEM_CUSTOM_EXP_BAR]     = {sText_Desc_BattleExpBar,       sText_Empty},
+    [MENUITEM_WORLD_AUTORUN]     = {sText_Desc_AutoRun_On,       sText_Desc_AutoRun_Off},
+    [MENUITEM_WORLD_FASTSURF]     = {sText_Desc_FastSurf_On,       sText_Desc_FastSurf_Off},
+    [MENUITEM_WORLD_FASTDIVE]     = {sText_Desc_FastDive_On,       sText_Desc_FastDive_Off},
+    [MENUITEM_WORLD_IMPROVEDFISHING]     = {sText_Desc_ImprovedFishing_On,       sText_Desc_ImprovedFishing_Off},
     [MENUITEM_WORLD_BIKEMUSIC]   = {sText_Desc_BikeOn,             sText_Desc_BikeOff},
     [MENUITEM_WORLD_SURFMUSIC]   = {sText_Desc_SurfOn,             sText_Desc_SurfOff},
+    [MENUITEM_WORLD_MONOVERWORLD]   = {sText_Desc_MonOverworldOn,             sText_Desc_MonOverworldOff},
     [MENUITEM_WORLD_SURFOVERWORLD]   = {sText_Desc_SurfOverworldDynamic,             sText_Desc_SurfOverworldOriginal},
     [MENUITEM_WORLD_CANCEL]      = {sText_Desc_Save,              sText_Empty},
 };
 
 // Disabled Descriptions
 static const u8 sText_Desc_Disabled_Textspeed[]     = _("Only active if xyz.");
+static const u8 sText_Desc_Disabled_StatEditor[]   = _("STAT EDITOR locked. Beat the game\nand speak to Prof. Birch to unlock.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COUNT] =
 {
-    [MENUITEM_MAIN_TEXTSPEED]   = sText_Desc_Disabled_Textspeed,
+    [MENUITEM_MAIN_TEXTSPEED]   = sText_Empty,
     [MENUITEM_MAIN_SOUND]       = sText_Empty,
     [MENUITEM_MAIN_BUTTONMODE]  = sText_Empty,
-    //[MENUITEM_MAIN_UNIT_SYSTEM] = sText_Empty,
     [MENUITEM_MAIN_FRAMETYPE]   = sText_Empty,
+    [MENUITEM_MAIN_STAT_EDITOR] = sText_Desc_Disabled_StatEditor,
     [MENUITEM_MAIN_CANCEL]      = sText_Empty,
 };
 
 // Disabled Battle
-static const u8 sText_Desc_Disabled_BattleStyle[]   = _("BATTLE STYLE cannot be changed if\nHARD or HARDCORE difficulty chosen.");
+static const u8 sText_Desc_Disabled_BattleStyle[]   = _("BATTLE STYLE cannot be changed if\nHARD or HARDCORE difficulty active.");
+static const u8 sText_Desc_Disabled_Hardmode[]   = _("HARD MODE setting locked.\nBeat the game to unlock.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledBattle[MENUITEM_BATTLE_COUNT] =
 {
     //[MENUITEM_CUSTOM_HP_BAR]      = sText_Desc_Disabled_BattleHPBar,
     //[MENUITEM_CUSTOM_EXP_BAR]     = sText_Empty,
-    //[MENUITEM_CUSTOM_FONT]        = sText_Empty,
-    //[MENUITEM_CUSTOM_MATCHCALL]   = sText_Empty,
     [MENUITEM_MAIN_BATTLESCENE] = sText_Empty,
     [MENUITEM_MAIN_BATTLESTYLE] = sText_Desc_Disabled_BattleStyle,
+    [MENUITEM_BATTLE_HARDMODE] = sText_Desc_Disabled_Hardmode,
     [MENUITEM_BATTLE_CANCEL]      = sText_Empty,
     
 };
@@ -688,8 +769,8 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel[MENUITEM_MAIN_TEXTSPEED]   = gSaveBlock2Ptr->optionsTextSpeed;
         sOptions->sel[MENUITEM_MAIN_SOUND]       = gSaveBlock2Ptr->optionsSound;
         sOptions->sel[MENUITEM_MAIN_BUTTONMODE]  = gSaveBlock2Ptr->optionsButtonMode;
-        //sOptions->sel[MENUITEM_MAIN_UNIT_SYSTEM] = gSaveBlock2Ptr->optionsUnitSystem;
         sOptions->sel[MENUITEM_MAIN_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowFrameType;
+        sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] = FlagGet(FLAG_SHOW_STAT_EDITOR);
         
         //sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR]      = gSaveBlock2Ptr->optionsHpBarSpeed;
         //sOptions->sel_battle[MENUITEM_CUSTOM_EXP_BAR]     = gSaveBlock2Ptr->optionsExpBarSpeed;
@@ -705,9 +786,22 @@ void CB2_InitOptionPlusMenu(void)
         }
 
         sOptions->sel_battle[MENUITEM_BATTLE_ITEMANIMATE]   = gSaveBlock2Ptr->optionsBattleItemAnimation;
+        sOptions->sel_battle[MENUITEM_BATTLE_TYPEEFFECT]    = FlagGet(FLAG_HIDE_TYPE_EFFECT_BATTLE);
 
+        if (FlagGet(FLAG_NUZLOCKE))
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 2;
+        else if(FlagGet(FLAG_HARD))
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 1;
+        else
+            sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE]    = 0;
+
+        sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     = !FlagGet(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other options in the World options menu
+        sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    = !FlagGet(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other options in the World options menu
+        sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    = !FlagGet(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other options in the World options menu
+        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    = !FlagGet(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]   = gSaveBlock2Ptr->optionsBikeMusic;
         sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC]   = gSaveBlock2Ptr->optionsSurfMusic;
+        sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]   = FlagGet(FLAG_HIDE_FOLLOWER);
         sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD]   = gSaveBlock2Ptr->optionsSurfOverworld;
 
         sOptions->submenu = MENU_MAIN;
@@ -731,9 +825,9 @@ void CB2_InitOptionPlusMenu(void)
         break;
     case 10:
         taskId = CreateTask(Task_OptionMenuFadeIn, 0);
-        
-        //sOptions->arrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 240 / 2, 20, 110, MENUITEM_MAIN_COUNT - 1, 110, 110, 0);
-        sOptions->arrowTaskId = TASK_NONE;
+
+        sOptions->arrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 240 / 2, 20, 110, MENUITEM_MAIN_COUNT - 1, 110, 110, 0);
+        //sOptions->arrowTaskId = TASK_NONE;
 
         for (i = 0; i < min(OPTIONS_ON_SCREEN, MenuItemCount()); i++)
             DrawChoices(i, i * Y_DIFF);
@@ -936,17 +1030,40 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsTextSpeed            = sOptions->sel[MENUITEM_MAIN_TEXTSPEED];
     gSaveBlock2Ptr->optionsSound                = sOptions->sel[MENUITEM_MAIN_SOUND];
     gSaveBlock2Ptr->optionsButtonMode           = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
-    //gSaveBlock2Ptr->optionsUnitSystem       = sOptions->sel[MENUITEM_MAIN_UNIT_SYSTEM];
     gSaveBlock2Ptr->optionsWindowFrameType      = sOptions->sel[MENUITEM_MAIN_FRAMETYPE];
+    sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] == 0 ? FlagClear(FLAG_SHOW_STAT_EDITOR) : FlagSet(FLAG_SHOW_STAT_EDITOR);
 
     //gSaveBlock2Ptr->optionsHpBarSpeed       = sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR];
     //gSaveBlock2Ptr->optionsExpBarSpeed      = sOptions->sel_battle[MENUITEM_CUSTOM_EXP_BAR];
     gSaveBlock2Ptr->optionsBattleSceneOff       = sOptions->sel_battle[MENUITEM_MAIN_BATTLESCENE];
     gSaveBlock2Ptr->optionsBattleStyle          = sOptions->sel_battle[MENUITEM_MAIN_BATTLESTYLE];
     gSaveBlock2Ptr->optionsBattleItemAnimation  = sOptions->sel_battle[MENUITEM_BATTLE_ITEMANIMATE];
+    sOptions->sel_battle[MENUITEM_BATTLE_TYPEEFFECT] == 0 ? FlagClear(FLAG_HIDE_TYPE_EFFECT_BATTLE) : FlagSet(FLAG_HIDE_TYPE_EFFECT_BATTLE);
     
+    switch (sOptions->sel_battle[MENUITEM_BATTLE_HARDMODE])
+    {
+        case 2:
+            FlagSet(FLAG_HARD);
+            FlagSet(FLAG_NUZLOCKE);
+            break;
+        case 1:
+            FlagSet(FLAG_HARD);
+            FlagClear(FLAG_NUZLOCKE);
+            break;
+        case 0:
+        default:
+            FlagClear(FLAG_NUZLOCKE);
+            FlagClear(FLAG_HARD);
+            break;        
+    }
+
+    sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)     : FlagClear(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)    : FlagClear(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    == 0 ? FlagSet(FLAG_ENABLE_FASTDIVE)    : FlagClear(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    == 0 ? FlagSet(FLAG_ENABLE_FISHALWAYSBITE)    : FlagClear(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other similar options.
     gSaveBlock2Ptr->optionsBikeMusic            = sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC];
     gSaveBlock2Ptr->optionsSurfMusic            = sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC];
+    sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD] == 0 ? FlagClear(FLAG_HIDE_FOLLOWER) : FlagSet(FLAG_HIDE_FOLLOWER);
     gSaveBlock2Ptr->optionsSurfOverworld        = sOptions->sel_world[MENUITEM_WORLD_SURFOVERWORLD];
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
@@ -1206,6 +1323,31 @@ static void DrawChoices_BattleStyle(int selection, int y)
     DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), y, styles[1], active);
 }
 
+static void DrawChoices_TypeEffect(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_BATTLE_TYPEEFFECT);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_TypeEffectOn, 104, y, styles[0], active);
+    DrawOptionMenuChoice(gText_TypeEffectOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_TypeEffectOff, 198), y, styles[1], active);
+}
+
+static const u8 sText_HardMode_Off[] = _("OFF");
+static const u8 sText_HardMode_Hard[] = _("HARD");
+static const u8 sText_HardMode_Hardcore[] = _("HARDCORE");
+static void DrawChoices_HardMode(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_BATTLE_HARDMODE);
+    u8 styles[3] = {0};
+    int xMid = GetMiddleX(sText_HardMode_Off, sText_HardMode_Hard, sText_HardMode_Hardcore);
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_HardMode_Off, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_HardMode_Hard, xMid, y, styles[1], active);
+    DrawOptionMenuChoice(sText_HardMode_Hardcore, GetStringRightAlignXOffset(1, sText_HardMode_Hardcore, 198), y, styles[2], active);
+}
+
 static void DrawChoices_Sound(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_SOUND);
@@ -1289,6 +1431,66 @@ static void DrawChoices_FrameType(int selection, int y)
     DrawOptionMenuChoice(text, 128, y, 1, active);
 }
 
+static const u8 sText_StatEditorHide[]   = _("HIDE");
+static const u8 sText_StatEditorShow[]   = _("SHOW");
+static void DrawChoices_StatEditor(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_STAT_EDITOR);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_StatEditorHide, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_StatEditorShow, GetStringRightAlignXOffset(FONT_NORMAL, sText_StatEditorShow, 198), y, styles[1], active);
+}
+
+static const u8 sText_AutoRun_On[]   = _("ON");
+static const u8 sText_AutoRun_Off[]   = _("OFF");
+static void DrawChoices_AutoRun(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_AUTORUN);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_AutoRun_On, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_AutoRun_Off, GetStringRightAlignXOffset(1, sText_AutoRun_Off, 198), y, styles[1], active);
+}
+
+static const u8 sText_FastSurf_On[]   = _("ON");
+static const u8 sText_FastSurf_Off[]   = _("OFF");
+static void DrawChoices_FastSurf(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_FASTSURF);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_FastSurf_On, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_FastSurf_Off, GetStringRightAlignXOffset(1, sText_FastSurf_Off, 198), y, styles[1], active);
+}
+
+static const u8 sText_FastDive_On[]   = _("ON");
+static const u8 sText_FastDive_Off[]   = _("OFF");
+static void DrawChoices_FastDive(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_FASTDIVE);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_FastDive_On, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_FastDive_Off, GetStringRightAlignXOffset(1, sText_FastDive_Off, 198), y, styles[1], active);
+}
+
+static const u8 sText_ImprovedFishing_On[]   = _("ON");
+static const u8 sText_ImprovedFishing_Off[]   = _("OFF");
+static void DrawChoices_ImprovedFishing(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_IMPROVEDFISHING);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_ImprovedFishing_On, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_ImprovedFishing_Off, GetStringRightAlignXOffset(1, sText_ImprovedFishing_Off, 198), y, styles[1], active);
+}
+
 static void DrawChoices_BikeMusic(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_WORLD_BIKEMUSIC);
@@ -1307,6 +1509,16 @@ static void DrawChoices_SurfMusic(int selection, int y)
 
     DrawOptionMenuChoice(gText_SurfMusicOn, 104, y, styles[0], active);
     DrawOptionMenuChoice(gText_SurfMusicOff, GetStringRightAlignXOffset(1, gText_SurfMusicOff, 198), y, styles[1], active);
+}
+
+static void DrawChoices_MonOverworld(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_MONOVERWORLD);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_MonOverworldOn, 104, y, styles[0], active);
+    DrawOptionMenuChoice(gText_MonOverworldOff, GetStringRightAlignXOffset(1, gText_MonOverworldOff, 198), y, styles[1], active);
 }
 
 static void DrawChoices_SurfOverworld(int selection, int y)
