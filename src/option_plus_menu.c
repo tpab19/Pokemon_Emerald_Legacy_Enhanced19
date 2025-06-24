@@ -58,6 +58,7 @@ enum
     MENUITEM_WORLD_AUTORUN,
     MENUITEM_WORLD_FASTSURF,
     MENUITEM_WORLD_FASTDIVE,
+    MENUITEM_WORLD_IMPROVEDFISHING,
     MENUITEM_WORLD_MONOVERWORLD,
     MENUITEM_WORLD_SURFOVERWORLD,
     MENUITEM_WORLD_BIKEMUSIC,
@@ -185,6 +186,7 @@ static void DrawChoices_StatEditor(int selection, int y);
 static void DrawChoices_AutoRun(int selection, int y);
 static void DrawChoices_FastSurf(int selection, int y);
 static void DrawChoices_FastDive(int selection, int y);
+static void DrawChoices_ImprovedFishing(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_SurfMusic(int selection, int y);
 static void DrawChoices_MonOverworld(int selection, int y);
@@ -259,6 +261,7 @@ struct // MENU_WORLD
     [MENUITEM_WORLD_AUTORUN]      = {DrawChoices_AutoRun,    ProcessInput_Options_Two},
     [MENUITEM_WORLD_FASTSURF]      = {DrawChoices_FastSurf,    ProcessInput_Options_Two},
     [MENUITEM_WORLD_FASTDIVE]      = {DrawChoices_FastDive,    ProcessInput_Options_Two},
+    [MENUITEM_WORLD_IMPROVEDFISHING]      = {DrawChoices_ImprovedFishing,    ProcessInput_Options_Two},
     [MENUITEM_WORLD_BIKEMUSIC]    = {DrawChoices_BikeMusic,   ProcessInput_Options_Two},
     [MENUITEM_WORLD_SURFMUSIC]    = {DrawChoices_SurfMusic,   ProcessInput_Options_Two},
     [MENUITEM_WORLD_MONOVERWORLD]    = {DrawChoices_MonOverworld,   ProcessInput_Options_Two},
@@ -295,11 +298,13 @@ static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
 static const u8 sText_AutoRun[]      = _("AUTO RUN");
 static const u8 sText_FastSurf[]      = _("FAST SURF");
 static const u8 sText_FastDive[]      = _("FAST DIVE");
+static const u8 sText_ImprovedFishing[]      = _("IMPROVED FISHING");
 static const u8 *const sOptionMenuItemsNamesWorld[MENUITEM_WORLD_COUNT] =
 {
     [MENUITEM_WORLD_AUTORUN]     = sText_AutoRun,
     [MENUITEM_WORLD_FASTSURF]     = sText_FastSurf,
     [MENUITEM_WORLD_FASTDIVE]     = sText_FastDive,
+    [MENUITEM_WORLD_IMPROVEDFISHING]     = sText_ImprovedFishing,
     [MENUITEM_WORLD_BIKEMUSIC]   = gText_BikeMusic,
     [MENUITEM_WORLD_SURFMUSIC]   = gText_SurfMusic,
     [MENUITEM_WORLD_MONOVERWORLD]   = gText_MonOverworld,
@@ -385,6 +390,7 @@ static bool8 CheckConditions(int selection)
         case MENUITEM_WORLD_AUTORUN:         return TRUE;
         case MENUITEM_WORLD_FASTSURF:        return TRUE;
         case MENUITEM_WORLD_FASTDIVE:        return TRUE;
+        case MENUITEM_WORLD_IMPROVEDFISHING: return TRUE;
         case MENUITEM_WORLD_BIKEMUSIC:       return TRUE;
         case MENUITEM_WORLD_SURFMUSIC:       return TRUE;
         case MENUITEM_WORLD_MONOVERWORLD:    return TRUE;
@@ -454,6 +460,8 @@ static const u8 sText_Desc_FastSurf_On[]         = _("SURF faster than normal.\n
 static const u8 sText_Desc_FastSurf_Off[]        = _("SURF at normal speed.\nHold the B Button to SURF faster.");
 static const u8 sText_Desc_FastDive_On[]         = _("Travel underwater faster than normal.\nIf FAST SURF is ON, speed is fastest.");
 static const u8 sText_Desc_FastDive_Off[]        = _("Original experience, underwater speed\nis unchanged from original game.");
+static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing. Fish always bite,\nand are not able to get away.");
+static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
 static const u8 sText_Desc_SurfOff[]            = _("Disables the SURF music when you\nstart surfing on a POKéMON.");
 static const u8 sText_Desc_SurfOn[]             = _("Enables the SURF music when you\nstart surfing on a POKéMON.");
 static const u8 sText_Desc_BikeOff[]            = _("Disables the BIKE music when you\nstart riding the BIKE.");
@@ -468,6 +476,7 @@ static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][2]
     [MENUITEM_WORLD_AUTORUN]     = {sText_Desc_AutoRun_On,       sText_Desc_AutoRun_Off},
     [MENUITEM_WORLD_FASTSURF]     = {sText_Desc_FastSurf_On,       sText_Desc_FastSurf_Off},
     [MENUITEM_WORLD_FASTDIVE]     = {sText_Desc_FastDive_On,       sText_Desc_FastDive_Off},
+    [MENUITEM_WORLD_IMPROVEDFISHING]     = {sText_Desc_ImprovedFishing_On,       sText_Desc_ImprovedFishing_Off},
     [MENUITEM_WORLD_BIKEMUSIC]   = {sText_Desc_BikeOn,             sText_Desc_BikeOff},
     [MENUITEM_WORLD_SURFMUSIC]   = {sText_Desc_SurfOn,             sText_Desc_SurfOff},
     [MENUITEM_WORLD_MONOVERWORLD]   = {sText_Desc_MonOverworldOn,             sText_Desc_MonOverworldOff},
@@ -789,6 +798,7 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     = !FlagGet(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    = !FlagGet(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    = !FlagGet(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other options in the World options menu
+        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    = !FlagGet(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other options in the World options menu
         sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]   = gSaveBlock2Ptr->optionsBikeMusic;
         sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC]   = gSaveBlock2Ptr->optionsSurfMusic;
         sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]   = FlagGet(FLAG_HIDE_FOLLOWER);
@@ -1050,6 +1060,7 @@ static void Task_OptionMenuSave(u8 taskId)
     sOptions->sel_world[MENUITEM_WORLD_AUTORUN]     == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)     : FlagClear(FLAG_ENABLE_AUTORUN);    // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_FASTSURF]    == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)    : FlagClear(FLAG_ENABLE_FASTSURF);   // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_FASTDIVE]    == 0 ? FlagSet(FLAG_ENABLE_FASTDIVE)    : FlagClear(FLAG_ENABLE_FASTDIVE);   // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]    == 0 ? FlagSet(FLAG_ENABLE_FISHALWAYSBITE)    : FlagClear(FLAG_ENABLE_FISHALWAYSBITE);   // Used the inverse to align with other similar options.
     gSaveBlock2Ptr->optionsBikeMusic            = sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC];
     gSaveBlock2Ptr->optionsSurfMusic            = sOptions->sel_world[MENUITEM_WORLD_SURFMUSIC];
     sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD] == 0 ? FlagClear(FLAG_HIDE_FOLLOWER) : FlagSet(FLAG_HIDE_FOLLOWER);
@@ -1466,6 +1477,18 @@ static void DrawChoices_FastDive(int selection, int y)
 
     DrawOptionMenuChoice(sText_FastDive_On, 104, y, styles[0], active);
     DrawOptionMenuChoice(sText_FastDive_Off, GetStringRightAlignXOffset(1, sText_FastDive_Off, 198), y, styles[1], active);
+}
+
+static const u8 sText_ImprovedFishing_On[]   = _("ON");
+static const u8 sText_ImprovedFishing_Off[]   = _("OFF");
+static void DrawChoices_ImprovedFishing(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_WORLD_IMPROVEDFISHING);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_ImprovedFishing_On, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_ImprovedFishing_Off, GetStringRightAlignXOffset(1, sText_ImprovedFishing_Off, 198), y, styles[1], active);
 }
 
 static void DrawChoices_BikeMusic(int selection, int y)

@@ -1283,7 +1283,7 @@
 #define FLAG_ENABLE_AUTORUN                                         0x4D7 // Flag for enabling Autorun
 #define FLAG_ENABLE_FASTSURF                                        0x4D8 // Flag for enabling Fast Surf
 #define FLAG_ENABLE_FASTDIVE                                        0x4D9 // Flag for enabling Fast Dive
-#define FLAG_UNUSED_0x4DA                                           0x4DA // Unused Flag
+#define FLAG_ENABLE_FISHALWAYSBITE                                  0x4DA // Flag for enabling fish always biting
 #define FLAG_UNUSED_0x4DB                                           0x4DB // Unused Flag
 #define FLAG_UNUSED_0x4DC                                           0x4DC // Unused Flag
 #define FLAG_UNUSED_0x4DD                                           0x4DD // Unused Flag
