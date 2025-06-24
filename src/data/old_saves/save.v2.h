@@ -163,6 +163,7 @@ bool8 UpdateSave_v2_v3(const struct SaveSectorLocation *locations)
     /** We need to fill in any data that's new in this version. */
     gSaveBlock2Ptr->_saveSentinel = 0xFF;
     gSaveBlock2Ptr->saveVersion = 3;
+    gSaveBlock2Ptr->optionsDiveSpeed = 0;
 
     // Copy V1 items - SaveBlock2
 
@@ -328,7 +329,7 @@ bool8 UpdateSave_v2_v3(const struct SaveSectorLocation *locations)
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
     
     // Update Flags moved from Saveblock
-    tempOptionSurfOverworld == 0    ? FlagClear(FLAG_ENABLE_SURFOVERWORLD)  : FlagSet(FLAG_ENABLE_SURFOVERWORLD);
+    tempOptionSurfOverworld == 0    ? FlagSet(FLAG_ENABLE_SURFOVERWORLD)    : FlagClear(FLAG_ENABLE_SURFOVERWORLD); // Inverse Flag setting due to 0 defaulting to on in saveblock configuration
     tempOptionSurfMusic == 0        ? FlagClear(FLAG_DISABLE_SURFMUSIC)     : FlagSet(FLAG_DISABLE_SURFMUSIC);
     tempOptionBikeMusic == 0        ? FlagClear(FLAG_DISABLE_BIKEMUSIC)     : FlagSet(FLAG_DISABLE_BIKEMUSIC);
 

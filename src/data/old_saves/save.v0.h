@@ -355,6 +355,7 @@ bool8 UpdateSave_v0_v3(const struct SaveSectorLocation *locations)
     SetPlayerSecretBaseCoords(-1, -1, WARP_ID_NONE, -1, -1);
 
     gSaveBlock2Ptr->optionsBattleItemAnimation = 0;
+    gSaveBlock2Ptr->optionsDiveSpeed = 0;
     gSaveBlock1Ptr->registeredItemSelect = ITEM_NONE;
     gSaveBlock1Ptr->registeredItemLastSelected = 0;
     gSaveBlock1Ptr->registeredItemListCount = 0;

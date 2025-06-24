@@ -520,6 +520,7 @@ struct SaveBlock2
             u16 optionsBattleSceneOff:1; // whether battle animations are disabled
             u16 regionMapZoom:1; // whether the map is zoomed in
             u16 optionsBattleItemAnimation:3; // whether the battle animation is reduced or not
+            u16 optionsDiveSpeed:3; // Option to change Diving speed
     struct Pokedex pokedex;
     u8 filler_90[0x8];
     struct Time localTimeOffset;
