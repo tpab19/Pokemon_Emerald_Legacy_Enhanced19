@@ -329,6 +329,7 @@ bool8 UpdateSave_v2_v3(const struct SaveSectorLocation *locations)
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
     
     // Update Flags moved from Saveblock
+    !FlagGet(FLAG_ENABLE_FOLLOWER)  ? FlagSet(FLAG_ENABLE_FOLLOWER)         : FlagClear(FLAG_ENABLE_FOLLOWER); // For consistency with other similar flags the flag name has been changed and use has been inverted throughout the code between V2 and V3 (same Flag dataslot hence not needing to change the name)
     tempOptionSurfOverworld == 0    ? FlagSet(FLAG_ENABLE_SURFOVERWORLD)    : FlagClear(FLAG_ENABLE_SURFOVERWORLD); // Inverse Flag setting due to 0 defaulting to on in saveblock configuration
     tempOptionSurfMusic == 0        ? FlagClear(FLAG_DISABLE_SURFMUSIC)     : FlagSet(FLAG_DISABLE_SURFMUSIC);
     tempOptionBikeMusic == 0        ? FlagClear(FLAG_DISABLE_BIKEMUSIC)     : FlagSet(FLAG_DISABLE_BIKEMUSIC);

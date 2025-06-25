@@ -327,6 +327,9 @@ bool8 UpdateSave_v1_v3(const struct SaveSectorLocation *locations)
      * we can just assign across the old box storage to the new.  */
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
     
+    // Set Option Flag Defaults
+    FlagSet(FLAG_ENABLE_FOLLOWER); // Turns Pokemon following On
+    
     // Update Flags moved from Saveblock
     tempOptionSurfOverworld == 0    ? FlagSet(FLAG_ENABLE_SURFOVERWORLD)    : FlagClear(FLAG_ENABLE_SURFOVERWORLD); // Inverse Flag setting due to 0 defaulting to on in saveblock configuration
     tempOptionSurfMusic == 0        ? FlagClear(FLAG_DISABLE_SURFMUSIC)     : FlagSet(FLAG_DISABLE_SURFMUSIC);

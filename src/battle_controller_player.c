@@ -2334,7 +2334,7 @@ static void PlayerHandleSwitchInAnim(void)
 // have it slide in instead of being thrown
 static bool8 ShouldDoSlideInAnim(void) {
     struct ObjectEvent *followerObj = GetFollowerObject();
-    if (!followerObj || followerObj->invisible || FlagGet(FLAG_HIDE_FOLLOWER))
+    if (!followerObj || followerObj->invisible || !FlagGet(FLAG_ENABLE_FOLLOWER))
         return FALSE;
 
     if (gBattleTypeFlags & (

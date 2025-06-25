@@ -1279,10 +1279,10 @@
 #define FLAG_HIDE_TYPE_EFFECT_BATTLE                                0x4D3 // Flag to Option to enable and disable type effectiveness in battle
 #define FLAG_ENABLE_STAT_EDITOR                                     0x4D4 // Flag for enabling the IV/EV Editor function
 #define FLAG_SHOW_STAT_EDITOR                                       0x4D5 // Flag for showing the IV/EV Editor in the party menu
-#define FLAG_HIDE_FOLLOWER                                          0x4D6 // Flag for Option to enable and disable Pokemon follower
+#define FLAG_ENABLE_FOLLOWER                                        0x4D6 // Flag for Option to enable and disable Pokemon follower
 #define FLAG_ENABLE_AUTORUN                                         0x4D7 // Flag for enabling Autorun
 #define FLAG_ENABLE_FASTSURF                                        0x4D8 // Flag for enabling Fast Surf
-#define FLAG_ENABLE_FASTDIVE                                        0x4D9 // Flag for enabling Fast Dive
+#define FLAG_SWAP_FONT                                              0x4D9 // Flag for swapping between Emerald or FireRed fonts, 0/FALSE for Emerald, 1/TRUE for FireRed
 #define FLAG_ENABLE_FISHALWAYSBITE                                  0x4DA // Flag for enabling fish always biting
 #define FLAG_ENABLE_SURFOVERWORLD                                   0x4DB // Flag for enabling Surfing Overworld or use original Surf Blob
 #define FLAG_DISABLE_SURFMUSIC                                      0x4DC // Flag for disabling Surf music when surfing

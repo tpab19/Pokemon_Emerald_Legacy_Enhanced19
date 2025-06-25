@@ -514,6 +514,7 @@ bool8 UpdateSave_v0_v3(const struct SaveSectorLocation *locations)
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
 
     // Set Option Flag Defaults
+    FlagSet(FLAG_ENABLE_FOLLOWER); // Turns Pokemon following On
     FlagSet(FLAG_ENABLE_SURFOVERWORLD); // Turns Surfing Overworlds On
 
     // Check for Game Cleared to unlocked for Stat Editor unlock due to change in flag configuration (Could use National Dex, but due to National Dex flag being used in more areas prefer to use game clear flag)
