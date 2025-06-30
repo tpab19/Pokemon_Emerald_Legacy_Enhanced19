@@ -2508,6 +2508,7 @@ static void PartyMenuRemoveWindow(u8 *ptr)
 void DisplayPartyMenuStdMessage(u32 stringId)
 {
     u8 *windowPtr = &sPartyMenuInternal->windowId[1];
+    u8 x;
 
     if (*windowPtr != WINDOW_NONE)
         PartyMenuRemoveWindow(windowPtr);
@@ -2547,6 +2548,16 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         DrawStdFrameWithCustomTileAndPalette(*windowPtr, FALSE, 0x4F, 13);
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
         AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, 0, 1, 0, 0);
+        if (stringId == PARTY_MSG_CHOOSE_MON_SEL_MOVE)
+        {
+            x = GetStringRightAlignXOffset(FONT_SMALL, gText_ConfirmMove, 165);
+            AddTextPrinterParameterized(*windowPtr, FONT_SMALL, gText_SelectToMove, x, 1, 0, 0);
+        }
+        else if (stringId == PARTY_MSG_MOVE_TO_WHERE)
+        {
+            x = GetStringRightAlignXOffset(FONT_SMALL, gText_ConfirmMove, 165);
+            AddTextPrinterParameterized(*windowPtr, FONT_SMALL, gText_ConfirmMove, x, 1, 0, 0);
+        }
         ScheduleBgCopyTilemapToVram(2);
     }
 }

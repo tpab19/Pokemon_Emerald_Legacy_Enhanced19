@@ -98,7 +98,7 @@ MauvilleCity_GameCorner_EventScript_Buy50Coins::
 	updatecoinsbox 1, 6
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
-	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault50
 	end
 
@@ -113,7 +113,7 @@ MauvilleCity_GameCorner_EventScript_Buy500Coins::
 	updatecoinsbox 1, 6
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
-	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault500
 	end
 
@@ -128,7 +128,7 @@ MauvilleCity_GameCorner_EventScript_Buy1000Coins::
 	updatecoinsbox 1, 6
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
-	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault1000
 	end
 
@@ -143,7 +143,7 @@ MauvilleCity_GameCorner_EventScript_Buy2500Coins::
 	updatecoinsbox 1, 6
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
-	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault2500
 	end
 
@@ -158,7 +158,7 @@ MauvilleCity_GameCorner_EventScript_Buy5000Coins::
 	updatecoinsbox 1, 6
 	playse SE_SHOP
 	msgbox MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins, MSGBOX_DEFAULT
-	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault5000
 	end
 
@@ -169,7 +169,7 @@ MauvilleCity_GameCorner_EventScript_NeedCoinCase::
 
 MauvilleCity_GameCorner_EventScript_NotEnoughMoneyFor50::
 	msgbox MauvilleCity_GameCorner_Text_DontHaveEnoughMoneyFor50, MSGBOX_DEFAULT
-	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
 	hidemoneybox
 	hidecoinsbox 0, 5
 	release
@@ -183,9 +183,9 @@ MauvilleCity_GameCorner_EventScript_NotEnoughMoney::
 	end
 
 MauvilleCity_GameCorner_EventScript_CancelBuyCoins::
-	goto_if_set FLAG_TEMP_1, MauvilleCity_GameCorner_EventScript_ThanksBuyCoins
+	goto_if_set FLAG_TEMP_2, MauvilleCity_GameCorner_EventScript_ThanksBuyCoins
 	msgbox MauvilleCity_GameCorner_Text_DontNeedCoinsThen, MSGBOX_DEFAULT
-	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
 	hidemoneybox
 	hidecoinsbox 0, 5
 	release
@@ -193,7 +193,7 @@ MauvilleCity_GameCorner_EventScript_CancelBuyCoins::
 
 MauvilleCity_GameCorner_EventScript_ThanksBuyCoins::
 	msgbox MauvilleCity_GameCorner_Text_ThanksBuyCoins, MSGBOX_DEFAULT
-	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
 	hidemoneybox
 	hidecoinsbox 0, 5
 	release
@@ -201,7 +201,7 @@ MauvilleCity_GameCorner_EventScript_ThanksBuyCoins::
 
 MauvilleCity_GameCorner_EventScript_NoRoomFor50Coins::
 	msgbox MauvilleCity_GameCorner_Text_NoRoomFor50Coins, MSGBOX_DEFAULT
-	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
 	hidemoneybox
 	hidecoinsbox 0, 5
 	release
