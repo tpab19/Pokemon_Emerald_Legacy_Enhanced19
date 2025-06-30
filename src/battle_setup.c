@@ -964,23 +964,45 @@ void StartFirstBattle_NationalDexMode(void)
     // Switch to set starter as original Hoenn starter of same type for all starter decisions in game
     switch(starterMon)
     {
-        case SPECIES_BULBASAUR:
-        case SPECIES_CHIKORITA:
         case SPECIES_TREECKO:
             *GetVarPointer(VAR_STARTER_MON) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 0;
             break;
-        case SPECIES_CHARMANDER:
-        case SPECIES_CYNDAQUIL:
         case SPECIES_TORCHIC:
             *GetVarPointer(VAR_STARTER_MON) = 1;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 1;
             break;
-        case SPECIES_SQUIRTLE:
-        case SPECIES_TOTODILE:
         case SPECIES_MUDKIP:
             *GetVarPointer(VAR_STARTER_MON) = 2;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 2;
+            break;
+        case SPECIES_BULBASAUR:
+            *GetVarPointer(VAR_STARTER_MON) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 3;
+            break;
+        case SPECIES_CHARMANDER:
+            *GetVarPointer(VAR_STARTER_MON) = 1;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 4;
+            break;
+        case SPECIES_SQUIRTLE:
+            *GetVarPointer(VAR_STARTER_MON) = 2;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 5;
+            break;
+        case SPECIES_CHIKORITA:
+            *GetVarPointer(VAR_STARTER_MON) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 6;
+            break;
+        case SPECIES_CYNDAQUIL:
+            *GetVarPointer(VAR_STARTER_MON) = 1;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 7;
+            break;
+        case SPECIES_TOTODILE:
+            *GetVarPointer(VAR_STARTER_MON) = 2;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 8;
             break;
         default:
             *GetVarPointer(VAR_STARTER_MON) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 0;
             break;
     }
 
