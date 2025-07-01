@@ -422,6 +422,11 @@ static u16 GetCurrentMapWildMonHeaderId(void)
             {
                 i += VarGet(VAR_GRANITE_CAVE_B1F_WILD_SET);
             }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(GRANITE_CAVE_B2F) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(GRANITE_CAVE_B2F))
+            {
+                i += VarGet(VAR_GRANITE_CAVE_B1F_WILD_SET); // Re-using Granite Cave Variable to prevent new variable on save file migration from older versions.
+            }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VICTORY_ROAD_1F) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_1F))
             {
@@ -502,6 +507,11 @@ static u16 GetCurrentMapWildMonHeaderId(void)
             {
                 i += VarGet(VAR_MT_PYRE_EXTERIOR_WILD_SET);
             }
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MT_PYRE_SUMMIT) &&
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(MT_PYRE_SUMMIT))
+            {
+                i += VarGet(VAR_MT_PYRE_EXTERIOR_WILD_SET); // Re-using Mt. Pyre Variable to prevent new variable on save file migration from older versions.
+            }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE131) &&
                 gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE131))
             {
@@ -518,7 +528,8 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += VarGet(VAR_VICTORY_ROAD_B1F_WILD_SET);
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(VICTORY_ROAD_B2F) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_B2F))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(VICTORY_ROAD_B2F) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Pupitar
             {
                 i += VarGet(VAR_VICTORY_ROAD_B2F_WILD_SET);
             }
@@ -538,7 +549,8 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_B1F_2R) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_B1F_2R))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_B1F_2R) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Dratini and Dragonair
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
@@ -548,17 +560,20 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_1F) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_1F))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_1F) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Shelgon and Higher Level Encounters
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_3F) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_3F))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_3F) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Higher Level Encounters
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(SKY_PILLAR_5F) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_5F))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(SKY_PILLAR_5F) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Higher Level Encounters
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
