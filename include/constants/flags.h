@@ -691,9 +691,9 @@
 #define FLAG_FRONTIER_PLUSLE_NPC_TRADE_COMPLETED    0x28C
 #define FLAG_RECEIVED_SHINY_BELDUM      0x28D
 #define FLAG_RECEIVED_EXP_ALL  0x28E // Used to record if EXP. ALL has been received by player
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
+#define FLAG_DEFEATED_EXCLSIOR                  0x28F // Flag for Exclsior Dev Battle
+#define FLAG_DEFEATED_SHINY_LATIAS_OR_LATIOS    0x290 // Flag for Shiny Lati Defeated
+#define FLAG_CAUGHT_SHINY_LATIAS_OR_LATIOS      0x291 // Flag for Shiny Lati Caught
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
 #define FLAG_UNUSED_0x293  0x293 // Unused Flag
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag

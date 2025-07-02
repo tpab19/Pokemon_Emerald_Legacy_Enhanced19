@@ -535,6 +535,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_LOREKEEPER, 25},
     {TRAINER_CLASS_WALLY, 15},
     {TRAINER_CLASS_PKMN_TRAINER_1, 50},
+    {TRAINER_CLASS_PKMN_TRAINER_2, 100},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 
@@ -5073,6 +5074,7 @@ static void HandleEndTurn_BattleWon(void)
 
         switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
         {
+        case TRAINER_CLASS_PKMN_TRAINER_2:
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_CHAMPION:
         case TRAINER_CLASS_CHAMPION_STEVEN:

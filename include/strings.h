@@ -1493,6 +1493,7 @@ extern const u8 gText_PokemonOrder[];
 extern const u8 gText_GoOn[];
 extern const u8 gText_Red[];
 extern const u8 gText_Blue[];
+extern const u8 gText_Teal[];
 extern const u8 gText_IllBattleNow[];
 extern const u8 gText_IWon[];
 extern const u8 gText_ILost[];
