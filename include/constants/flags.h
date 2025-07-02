@@ -1283,7 +1283,7 @@
 #define FLAG_ENABLE_AUTORUN                                         0x4D7 // Flag for enabling Autorun
 #define FLAG_ENABLE_FASTSURF                                        0x4D8 // Flag for enabling Fast Surf
 #define FLAG_SWAP_FONT                                              0x4D9 // Flag for swapping between Emerald or FireRed fonts, 0/FALSE for Emerald, 1/TRUE for FireRed
-#define FLAG_ENABLE_FISHALWAYSBITE                                  0x4DA // Flag for enabling fish always biting
+#define FLAG_ENABLE_FISHCANTESCAPE                                  0x4DA // Flag for enabling fish always biting
 #define FLAG_ENABLE_SURFOVERWORLD                                   0x4DB // Flag for enabling Surfing Overworld or use original Surf Blob
 #define FLAG_DISABLE_SURFMUSIC                                      0x4DC // Flag for disabling Surf music when surfing
 #define FLAG_DISABLE_BIKEMUSIC                                      0x4DD // Flag for disabling Bike music when biking

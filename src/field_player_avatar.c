@@ -1844,8 +1844,7 @@ static bool8 Fishing_CheckForBite(struct Task *task)
 
         if (!bite)
         {
-            // If Option setting enabled, fish will bite a fill will always eventually bite
-            if ((Random() & 1) && !FlagGet(FLAG_ENABLE_FISHALWAYSBITE))
+            if ((Random() & 1))
                 task->tStep = FISHING_NO_BITE;
             else
                 bite = TRUE;
@@ -1879,7 +1878,7 @@ static bool8 Fishing_WaitForA(struct Task *task)
     task->tFrameCounter++;
 
     // If Option setting enabled, fish can't get away, wait until player presses A to start encounter
-    if ((task->tFrameCounter >= reelTimeouts[task->tFishingRod]) && !FlagGet(FLAG_ENABLE_FISHALWAYSBITE))
+    if ((task->tFrameCounter >= reelTimeouts[task->tFishingRod]) && !FlagGet(FLAG_ENABLE_FISHCANTESCAPE))
         task->tStep = FISHING_GOT_AWAY;
     else if (JOY_NEW(A_BUTTON))
         task->tStep++;

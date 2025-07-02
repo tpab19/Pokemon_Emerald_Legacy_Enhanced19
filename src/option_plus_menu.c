@@ -859,7 +859,7 @@ void CB2_InitOptionPlusMenu(void)
 
         //World
         sOptions->sel_world[MENUITEM_WORLD_AUTORUN]             = !FlagGet(FLAG_ENABLE_AUTORUN);            // Used the inverse to align with ON/OFF Buttons
-        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     = !FlagGet(FLAG_ENABLE_FISHALWAYSBITE);     // Used the inverse to align with ON/OFF Buttons
+        sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     = !FlagGet(FLAG_ENABLE_FISHCANTESCAPE);     // Used the inverse to align with ON/OFF Buttons
         sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           = FlagGet(FLAG_DISABLE_BIKEMUSIC);
         sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        = !FlagGet(FLAG_ENABLE_FOLLOWER);
 
@@ -1147,7 +1147,7 @@ static void Task_OptionMenuSave(u8 taskId)
     }
     //World
     sOptions->sel_world[MENUITEM_WORLD_AUTORUN]             == 0 ? FlagSet(FLAG_ENABLE_AUTORUN)         : FlagClear(FLAG_ENABLE_AUTORUN);           // Used the inverse to align with other similar options.
-    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     == 0 ? FlagSet(FLAG_ENABLE_FISHALWAYSBITE)  : FlagClear(FLAG_ENABLE_FISHALWAYSBITE);    // Used the inverse to align with other similar options.
+    sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     == 0 ? FlagSet(FLAG_ENABLE_FISHCANTESCAPE)  : FlagClear(FLAG_ENABLE_FISHCANTESCAPE);    // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           == 0 ? FlagClear(FLAG_DISABLE_BIKEMUSIC)    : FlagSet(FLAG_DISABLE_BIKEMUSIC);
     sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        == 0 ? FlagSet(FLAG_ENABLE_FOLLOWER)        : FlagClear(FLAG_ENABLE_FOLLOWER);          // Used the inverse to align with other similar options.
 
