@@ -1558,6 +1558,9 @@ static void DeterminePokemonToShow(void)
     u16 dexNum;
     u16 j;
 
+    if (FlagGet(FLAG_NATIONAL_DEX_MODE))
+        starter = SpeciesToNationalPokedexNum(GetStarterPokemon_NatDex(VarGet(VAR_STARTER_MON_NATDEX)));
+
     // Go through the Pokédex, and anything that has gotten caught we put into our massive array.
     // This basically packs all of the caught Pokémon into the front of the array
     for (dexNum = 1, j = 0; dexNum < NATIONAL_DEX_COUNT; dexNum++)
