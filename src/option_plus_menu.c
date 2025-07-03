@@ -455,15 +455,15 @@ static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as anothe
 static const u8 sText_Desc_StatEditor_Hide[]    = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
 static const u8 sText_Desc_StatEditor_Show[]    = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
 static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows.");
-static const u8 sText_Desc_FontType_Emerald[]   = _("Original Experience.\nStandard POKéMON EMERALD Font.");
-static const u8 sText_Desc_FontType_FireRed[]   = _("POKéMON FIRERED Font.\nMay not show correctly for all text.");
+static const u8 sText_Desc_FontType_Hoenn[]     = _("Original Experience.\nStandard POKéMON EMERALD Font.");
+static const u8 sText_Desc_FontType_Kanto[]     = _("POKéMON FIRERED/LEAFGREEN Font.\nMay not show correctly for all text.");
 static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
 {
     [MENUITEM_MAIN_TEXTSPEED]       = {sText_Desc_TextSpeed,            sText_Empty,                sText_Empty},
     [MENUITEM_MAIN_SOUND]           = {sText_Desc_SoundMono,            sText_Desc_SoundStereo,     sText_Empty},
     [MENUITEM_MAIN_BUTTONMODE]      = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,   sText_Desc_ButtonMode_LA},
     [MENUITEM_MAIN_FRAMETYPE]       = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
-    [MENUITEM_CUSTOM_FONT]          = {sText_Desc_FontType_Emerald,     sText_Desc_FontType_FireRed,        sText_Empty},
+    [MENUITEM_CUSTOM_FONT]          = {sText_Desc_FontType_Hoenn,       sText_Desc_FontType_Kanto,  sText_Empty},
     [MENUITEM_MAIN_STAT_EDITOR]     = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show, sText_Empty},
     [MENUITEM_MAIN_CANCEL]          = {sText_Desc_Save,                 sText_Empty,                sText_Empty},
 };
@@ -476,8 +476,8 @@ static const u8 sText_Desc_BattleScene_Off[]        = _("Skip the POKéMON battl
 static const u8 sText_Desc_BattleStyle_Shift[]      = _("Get the option to switch your\nPOKéMON after the enemy's faints.");
 static const u8 sText_Desc_BattleStyle_Set[]        = _("No free switch after fainting the\nenemy's POKéMON.");
 static const u8 sText_Desc_ItemAnimateNormal[]      = _("Original in-battle item animation.\nNo change from original Emerald.");
-static const u8 sText_Desc_ItemAnimateRed[]         = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
-static const u8 sText_Desc_ItemAnimateMin[]         = _("Minimal in-battle item animation.\nOnly the final ring animation.");
+static const u8 sText_Desc_ItemAnimateReduced[]     = _("Reduced in-battle item animation.\nRemoved the shaking animation.");
+static const u8 sText_Desc_ItemAnimateMinimal[]     = _("Minimal in-battle item animation.\nOnly the final ring animation.");
 static const u8 sText_Desc_ItemAnimateNone[]        = _("No in-battle item animation.\nAnimation skipped.");
 static const u8 sText_Desc_TypeEffect_On[]          = _("Show move type effect in battle.\nGreen: Super, Red: Not very, Grey: No");
 static const u8 sText_Desc_TypeEffect_Off[]         = _("Original experience, does not show\nmove type effectiveness in battle.");
@@ -490,7 +490,7 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_CUSTOM_EXP_BAR]           = {sText_Desc_BattleExpBar},
     [MENUITEM_MAIN_BATTLESCENE]         = {sText_Desc_BattleScene_On,       sText_Desc_BattleScene_Off},
     [MENUITEM_MAIN_BATTLESTYLE]         = {sText_Desc_BattleStyle_Shift,    sText_Desc_BattleStyle_Set,     sText_Empty},
-    [MENUITEM_BATTLE_ITEMANIMATE]       = {sText_Desc_ItemAnimateNormal,    sText_Desc_ItemAnimateRed,      sText_Desc_ItemAnimateMin,      sText_Desc_ItemAnimateNone},
+    [MENUITEM_BATTLE_ITEMANIMATE]       = {sText_Desc_ItemAnimateNormal,    sText_Desc_ItemAnimateReduced,  sText_Desc_ItemAnimateMinimal,  sText_Desc_ItemAnimateNone},
     [MENUITEM_BATTLE_TYPEEFFECT]        = {sText_Desc_TypeEffect_On,        sText_Desc_TypeEffect_Off,      sText_Empty},
     [MENUITEM_BATTLE_HARDMODE]          = {sText_Desc_HardMode_Off,         sText_Desc_HardMode_Hard,       sText_Desc_HardMode_Hardcore},
     [MENUITEM_BATTLE_CANCEL]            = {sText_Desc_Save,                 sText_Empty,                    sText_Empty,                    sText_Empty},
@@ -1442,9 +1442,9 @@ static void DrawChoices_HardMode(int selection, int y)
     DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
 }
 
-static const u8 sText_ItemAnimate_Normal[]   = _("NORM");
-static const u8 sText_ItemAnimate_Reduced[]  = _("LESS");
-static const u8 sText_ItemAnimate_Minimal[]  = _("MIN");
+static const u8 sText_ItemAnimate_Normal[]   = _("NORMAL");
+static const u8 sText_ItemAnimate_Reduced[]  = _("REDUCED");
+static const u8 sText_ItemAnimate_Minimal[]  = _("MINIMAL");
 static const u8 sText_ItemAnimate_None[]     = _("NONE");
 static const u8 *const sTextItemAnimateStrings[] = {sText_ItemAnimate_Normal, sText_ItemAnimate_Reduced, sText_ItemAnimate_Minimal, sText_ItemAnimate_None};
 static void DrawChoices_ItemAnimate(int selection, int y)
@@ -1553,16 +1553,16 @@ static void DrawChoices_FrameType(int selection, int y)
     DrawOptionMenuChoice(text, 128, y, 1, active);
 }
 
-static const u8 sText_OptionFont_Emerald[]   = _("EMERALD");
-static const u8 sText_OptionFont_FireRed[]   = _("FIRERED");
+static const u8 sText_OptionFont_Hoenn[]    = _("HOENN");
+static const u8 sText_OptionFont_Kanto[]    = _("KANTO");
 static void DrawChoices_Font(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_CUSTOM_FONT);
     u8 styles[2] = {0};
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(sText_OptionFont_Emerald, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_OptionFont_FireRed, GetStringRightAlignXOffset(1, sText_OptionFont_FireRed, 198), y, styles[1], active);
+    DrawOptionMenuChoice(sText_OptionFont_Hoenn, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_OptionFont_Kanto, GetStringRightAlignXOffset(1, sText_OptionFont_Kanto, 198), y, styles[1], active);
 }
 
 static const u8 sText_StatEditorHide[]   = _("HIDE");
