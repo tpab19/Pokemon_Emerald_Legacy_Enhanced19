@@ -135,15 +135,17 @@ static bool8 CheckFeebas(void)
 {
     u8 i;
     s16 x, y;
+    u16 random;
 
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE119) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE119))
     {
         GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
 
+        random = Random() % 100;
         // Updated 50% chance of encountering Feebas to 10% (assuming this is a Feebas spot) due to Feebas tiles visible after Devon Scope recieved
-        if (Random() % 100 > 49 && !FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // Normal 50% before Devon Scope to stay as Vanilla
+        if (random > 49 && !FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // Normal 50% before Devon Scope to stay as Vanilla
             return FALSE;
-        else if (Random() % 100 > 9 && FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // 10% after Devon Scope
+        else if (random > 9 && FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // 10% after Devon Scope
             return FALSE;
 
         for (i = 0; i < NUM_FEEBAS_SPOTS; i++)
