@@ -496,8 +496,8 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_BATTLE_CANCEL]            = {sText_Desc_Save,                 sText_Empty,                    sText_Empty,                    sText_Empty},
 };
 
-static const u8 sText_Desc_AutoRun_On[]                 = _("Use your RUNNING SHOES anywhere\nallowed without pressing the B Button.");
-static const u8 sText_Desc_AutoRun_Off[]                = _("Use your RUNNING SHOES as normal.\nHold the B Button to run.");
+static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold the B Button to walk.");
+static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold the B Button to run.");
 static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing. Fish always bite,\nand are not able to get away.");
 static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
 static const u8 sText_Desc_BikeOff[]                    = _("Disables the BIKE music when you\nstart riding the BIKE.");
@@ -546,7 +546,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
 
 // Disabled Battle
 static const u8 sText_Desc_Disabled_BattleStyle[]   = _("BATTLE STYLE cannot be changed if\nHARD or HARDCORE difficulty active.");
-static const u8 sText_Desc_Disabled_Hardmode[]      = _("BATTLE MODE setting locked.\nBeat the game to unlock.");
+static const u8 sText_Desc_Disabled_Hardmode[]      = _("BATTLE MODE setting locked. Defeat \nSTEVEN in METEOR FALLS to unlock.");
 static const u8 *const sOptionMenuItemDescriptionsDisabledBattle[MENUITEM_BATTLE_COUNT] =
 {
     [MENUITEM_CUSTOM_HP_BAR]      = sText_Empty,

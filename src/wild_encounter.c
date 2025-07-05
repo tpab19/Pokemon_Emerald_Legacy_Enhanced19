@@ -135,13 +135,17 @@ static bool8 CheckFeebas(void)
 {
     u8 i;
     s16 x, y;
+    u16 random;
 
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE119) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE119))
     {
         GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
 
-        // Updated 50% chance of encountering Feebas to 25% (assuming this is a Feebas spot) due to Feebas tiles visible after Devon Scope recieved (Random() % 100 > 49
-        if (Random() % 100 > 74)
+        random = Random() % 100;
+        // Updated 50% chance of encountering Feebas to 10% (assuming this is a Feebas spot) due to Feebas tiles visible after Devon Scope recieved
+        if (random > 49 && !FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // Normal 50% before Devon Scope to stay as Vanilla
+            return FALSE;
+        else if (random > 9 && FlagGet(FLAG_RECEIVED_DEVON_SCOPE)) // 10% after Devon Scope
             return FALSE;
 
         for (i = 0; i < NUM_FEEBAS_SPOTS; i++)
@@ -555,7 +559,8 @@ static u16 GetCurrentMapWildMonHeaderId(void)
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
             if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(METEOR_FALLS_STEVENS_CAVE) &&
-                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_STEVENS_CAVE))
+                gSaveBlock1Ptr->location.mapNum == MAP_NUM(METEOR_FALLS_STEVENS_CAVE) &&
+                FlagGet(FLAG_BATTLED_JIRACHI)) // Locked after Jirachi Event for National Dex Mode - Metang
             {
                 i += VarGet(VAR_METEOR_FALLS_1F_1R_WILD_SET); // Re-using Meteor Falls Variable to prevent new variable on save file migration from older versions.
             }
