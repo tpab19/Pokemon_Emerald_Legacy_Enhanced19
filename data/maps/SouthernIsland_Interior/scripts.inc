@@ -152,7 +152,7 @@ SouthernIsland_Interior_EventScript_Exclsior::
 	msgbox SouthernIsland_Interior_Text_Exclsior_ImCurious, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq SouthernIsland_Interior_EventScript_Exclsior_NoBattle
-	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC, TRAINER_EXCLSIOR, 0, SouthernIsland_Interior_Text_ExclsiorIntro, SouthernIsland_Interior_Text_ExclsiorDefeated, SouthernIsland_Interior_Text_Exclsior_NotEnoughMons, SouthernIsland_Interior_EventScript_ExclsiorPostBattle
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC, TRAINER_EXCLSIOR, 0, SouthernIsland_Interior_Text_ExclsiorIntro, SouthernIsland_Interior_Text_ExclsiorDefeated, SouthernIsland_Interior_EventScript_ExclsiorPostBattle
 	end
 
 SouthernIsland_Interior_EventScript_Exclsior_NoBattle::
@@ -260,15 +260,12 @@ SouthernIsland_Interior_Text_ExclsiorDefeated:
 SouthernIsland_Interior_Text_Exclsior_MaybeAnotherTime::
 	.string "Maybe another time then.$"
 
-SouthernIsland_Interior_Text_Exclsior_NotEnoughMons::
-	.string "I'm sorry, you need at least\n"
-	.string "two POKéMON for us to battle.$"
-
 SouthernIsland_Interior_Text_ExclsiorPostBattle:
 	.string "Thank you for the battle.\p"
 	.string "...\p"
 	.string "You may want to have a closer look at\n"
-	.string "this stone... Goodbye.$"
+	.string "this stone...\p"
+	.string "Goodbye.$"
 
 SouthernIsland_Interior_Text_Typhlosion:
 	.string "TYPHLOSION!$"

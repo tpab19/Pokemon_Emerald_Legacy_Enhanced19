@@ -10652,8 +10652,8 @@ const struct Trainer gTrainers[] = {
         .trainerPic = TRAINER_PIC_RED,
         .trainerName = _("EXCLSIOR"),
         .items = {ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_NONE},
-        .doubleBattle = TRUE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_HP_AWARE | AI_SCRIPT_PREFER_POWER_EXTREMES | AI_SCRIPT_RISKY | AI_SCRIPT_DOUBLE_BATTLE,
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_HP_AWARE | AI_SCRIPT_RISKY | AI_SCRIPT_DOUBLE_BATTLE,
         .party = TRAINER_MON(sParty_Exclsior),
     },
 };
