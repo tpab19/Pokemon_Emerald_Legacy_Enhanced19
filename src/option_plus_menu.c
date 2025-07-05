@@ -498,7 +498,7 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
 
 static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold the B Button to walk.");
 static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold the B Button to run.");
-static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing. Fish always bite,\nand are not able to get away.");
+static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing.\nFish are not able to get away.");
 static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
 static const u8 sText_Desc_BikeOff[]                    = _("Disables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_BikeOn[]                     = _("Enables the BIKE music when you\nstart riding the BIKE.");
