@@ -1,4 +1,5 @@
 MauvilleCity_GameCorner_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, MauvilleCity_GameCorner_OnLoad
 	.byte 0
 
     @ Game Corner prices
@@ -15,6 +16,14 @@ MauvilleCity_GameCorner_MapScripts::
 	.set COINS_PRICE_1000, 20000
 	.set COINS_PRICE_2500, 50000
 	.set COINS_PRICE_5000, 100000
+
+MauvilleCity_GameCorner_OnLoad:
+	call_if_set FLAG_NATIONAL_DEX_MODE, MauvilleCity_GameCorner_EventScript_EnablePorygonPrize
+	return
+
+MauvilleCity_GameCorner_EventScript_EnablePorygonPrize::
+	clearflag FLAG_HIDE_GAME_CORNER_PORYGON_PRIZE
+	return
 
 MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	lock
