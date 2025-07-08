@@ -1287,7 +1287,8 @@ void Task_HandleChooseMonInput(u8 taskId)
             HandleChooseMonCancel(taskId, slotPtr);
             break;
         case SELECT_BUTTON: // Quick Swap
-            DestroyTask(taskId);
+            if (!InBattlePike())
+                DestroyTask(taskId);
             break;
         case START_BUTTON:
             if (sPartyMenuInternal->chooseHalf)
@@ -1526,6 +1527,8 @@ static u16 PartyMenuButtonHandler(s8 *slotPtr)
         if (gPartyMenu.menuType != PARTY_MENU_TYPE_FIELD)
             return 0;
         if (*slotPtr == PARTY_SIZE + 1)
+            return 0;
+        if (InBattlePike())
             return 0;
         if (gPartyMenu.action != PARTY_ACTION_SWITCH)
         {
@@ -2548,7 +2551,7 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         DrawStdFrameWithCustomTileAndPalette(*windowPtr, FALSE, 0x4F, 13);
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
         AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, 0, 1, 0, 0);
-        if (stringId == PARTY_MSG_CHOOSE_MON_SEL_MOVE)
+        if (stringId == PARTY_MSG_CHOOSE_MON_SEL_MOVE && !InBattlePike())
         {
             x = GetStringRightAlignXOffset(FONT_SMALL, gText_ConfirmMove, 165);
             AddTextPrinterParameterized(*windowPtr, FONT_SMALL, gText_SelectToMove, x, 1, 0, 0);
@@ -3185,7 +3188,7 @@ static void CursorCb_Cancel1(u8 taskId)
     PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
     if (gPartyMenu.menuType == PARTY_MENU_TYPE_DAYCARE)
         DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
-    else if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD) // Return to Select Move text if field type of Menu
+    else if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD  && !InBattlePike()) // Return to Select Move text if field type of Menu
         DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON_SEL_MOVE);
     else
         DisplayPartyMenuStdMessage(PARTY_MSG_CHOOSE_MON);
