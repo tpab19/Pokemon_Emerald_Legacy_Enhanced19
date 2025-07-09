@@ -36,6 +36,7 @@ enum
     MENUITEM_MAIN_FRAMETYPE,
     MENUITEM_CUSTOM_FONT,
     MENUITEM_MAIN_STAT_EDITOR,
+    MENUITEM_MAIN_NICKNAME,
     MENUITEM_MAIN_CANCEL,
     MENUITEM_MAIN_COUNT,
 };
@@ -192,6 +193,7 @@ static void DrawChoices_Sound(int selection, int y);
 static void DrawChoices_ButtonMode(int selection, int y);
 static void DrawChoices_BarSpeed(int selection, int y); //HP and EXP
 static void DrawChoices_StatEditor(int selection, int y);
+static void DrawChoices_Nickname(int selection, int y);
 static void DrawChoices_AutoRun(int selection, int y);
 static void DrawChoices_FastSurf(int selection, int y);
 static void DrawChoices_DiveSpeed(int selection, int y);
@@ -243,6 +245,7 @@ struct // MENU_MAIN - General
     [MENUITEM_MAIN_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
     [MENUITEM_CUSTOM_FONT]       = {DrawChoices_Font,        ProcessInput_Options_Two}, 
     [MENUITEM_MAIN_STAT_EDITOR]  = {DrawChoices_StatEditor,  ProcessInput_Options_Two},
+    [MENUITEM_MAIN_NICKNAME]     = {DrawChoices_Nickname,    ProcessInput_Options_Two},
     [MENUITEM_MAIN_CANCEL]       = {NULL, NULL},
 };
 
@@ -290,7 +293,8 @@ struct // MENU_SURF
 
 // Menu left side option names text
 static const u8 sText_StatEditor[]  = _("STAT EDITOR");
-static const u8 sText_Font[]  = _("FONT");
+static const u8 sText_Nickname[]    = _("NICKNAME IN MENU");
+static const u8 sText_Font[]        = _("FONT");
 static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
 {
     [MENUITEM_MAIN_TEXTSPEED]   = gText_TextSpeed,
@@ -299,6 +303,7 @@ static const u8 *const sOptionMenuItemsNamesMain[MENUITEM_MAIN_COUNT] =
     [MENUITEM_MAIN_FRAMETYPE]   = gText_Frame,
     [MENUITEM_CUSTOM_FONT]      = sText_Font,
     [MENUITEM_MAIN_STAT_EDITOR] = sText_StatEditor,
+    [MENUITEM_MAIN_NICKNAME]    = sText_Nickname,
     [MENUITEM_MAIN_CANCEL]      = gText_OptionMenuSave,
 };
 
@@ -382,6 +387,7 @@ static bool8 CheckConditions(int selection)
             }
 
         }
+        case MENUITEM_MAIN_NICKNAME:        return TRUE;
         case MENUITEM_MAIN_CANCEL:          return TRUE;
         case MENUITEM_MAIN_COUNT:           return TRUE;
         }
@@ -454,6 +460,8 @@ static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R
 static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
 static const u8 sText_Desc_StatEditor_Hide[]    = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
 static const u8 sText_Desc_StatEditor_Show[]    = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
+static const u8 sText_Desc_Nickname_Hide[]      = _("Original Experience. Don't allow\nchanging Nickname in the Party Menu.");
+static const u8 sText_Desc_Nickname_Show[]      = _("Change Nickname in the Party Menu.\nTraded Pokemon require Name Rater.");
 static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows.");
 static const u8 sText_Desc_FontType_Hoenn[]     = _("Original Experience.\nStandard POKéMON EMERALD Font.");
 static const u8 sText_Desc_FontType_Kanto[]     = _("POKéMON FIRERED/LEAFGREEN Font.\nMay not show correctly for all text.");
@@ -465,6 +473,7 @@ static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
     [MENUITEM_MAIN_FRAMETYPE]       = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
     [MENUITEM_CUSTOM_FONT]          = {sText_Desc_FontType_Hoenn,       sText_Desc_FontType_Kanto,  sText_Empty},
     [MENUITEM_MAIN_STAT_EDITOR]     = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show, sText_Empty},
+    [MENUITEM_MAIN_NICKNAME]        = {sText_Desc_Nickname_Hide,        sText_Desc_Nickname_Show,   sText_Empty},
     [MENUITEM_MAIN_CANCEL]          = {sText_Desc_Save,                 sText_Empty,                sText_Empty},
 };
 
@@ -541,6 +550,7 @@ static const u8 *const sOptionMenuItemDescriptionsDisabledMain[MENUITEM_MAIN_COU
     [MENUITEM_MAIN_FRAMETYPE]   = sText_Empty,
     [MENUITEM_CUSTOM_FONT]        = sText_Empty,
     [MENUITEM_MAIN_STAT_EDITOR] = sText_Desc_Disabled_StatEditor,
+    [MENUITEM_MAIN_NICKNAME] = sText_Empty,
     [MENUITEM_MAIN_CANCEL]      = sText_Empty,
 };
 
@@ -834,6 +844,7 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel[MENUITEM_MAIN_FRAMETYPE]   = gSaveBlock2Ptr->optionsWindowFrameType;
         sOptions->sel[MENUITEM_CUSTOM_FONT]      = FlagGet(FLAG_SWAP_FONT);
         sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] = FlagGet(FLAG_SHOW_STAT_EDITOR);
+        sOptions->sel[MENUITEM_MAIN_NICKNAME]    = FlagGet(FLAG_ENABLE_NICKNAME);
         
         //Battle
         sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR]    = gSaveBlock2Ptr->optionsHpBarSpeed;
@@ -1118,8 +1129,9 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsSound                            = sOptions->sel[MENUITEM_MAIN_SOUND];
     gSaveBlock2Ptr->optionsButtonMode                       = sOptions->sel[MENUITEM_MAIN_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType                  = sOptions->sel[MENUITEM_MAIN_FRAMETYPE];
-    sOptions->sel[MENUITEM_CUSTOM_FONT] == 0                ? FlagClear(FLAG_SWAP_FONT)                 : FlagSet(FLAG_SWAP_FONT);
-    sOptions->sel[MENUITEM_MAIN_STAT_EDITOR] == 0           ? FlagClear(FLAG_SHOW_STAT_EDITOR)          : FlagSet(FLAG_SHOW_STAT_EDITOR);
+    sOptions->sel[MENUITEM_CUSTOM_FONT]         == 0        ? FlagClear(FLAG_SWAP_FONT)                 : FlagSet(FLAG_SWAP_FONT);
+    sOptions->sel[MENUITEM_MAIN_STAT_EDITOR]    == 0        ? FlagClear(FLAG_SHOW_STAT_EDITOR)          : FlagSet(FLAG_SHOW_STAT_EDITOR);
+    sOptions->sel[MENUITEM_MAIN_NICKNAME]       == 0        ? FlagClear(FLAG_ENABLE_NICKNAME)           : FlagSet(FLAG_ENABLE_NICKNAME);
 
     //Battle
     gSaveBlock2Ptr->optionsHpBarSpeed                       = sOptions->sel_battle[MENUITEM_CUSTOM_HP_BAR];
@@ -1575,6 +1587,18 @@ static void DrawChoices_StatEditor(int selection, int y)
 
     DrawOptionMenuChoice(sText_StatEditorHide, 104, y, styles[0], active);
     DrawOptionMenuChoice(sText_StatEditorShow, GetStringRightAlignXOffset(FONT_NORMAL, sText_StatEditorShow, 198), y, styles[1], active);
+}
+
+static const u8 sText_NicknameHide[]   = _("HIDE");
+static const u8 sText_NicknameShow[]   = _("SHOW");
+static void DrawChoices_Nickname(int selection, int y)
+{
+    bool8 active = CheckConditions(MENUITEM_MAIN_NICKNAME);
+    u8 styles[2] = {0};
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(sText_NicknameHide, 104, y, styles[0], active);
+    DrawOptionMenuChoice(sText_NicknameShow, GetStringRightAlignXOffset(FONT_NORMAL, sText_NicknameShow, 198), y, styles[1], active);
 }
 
 static const u8 sText_AutoRun_On[]   = _("ON");
