@@ -823,6 +823,8 @@ extern const u8 gText_IronCost[];
 extern const u8 gText_ZincCost[];
 extern const u8 gText_CarbosCost[];
 extern const u8 gText_HpUpCost[];
+extern const u8 gText_PpUpCost[];
+extern const u8 gText_PpMaxCost[];
 extern const u8 gText_RareCandyCost[];
 extern const u8 gText_AbilityCapsuleCost[];
 
@@ -1035,6 +1037,8 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_IronDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ZincDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PPUpDesc[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_PPMaxDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_RareCandyDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_AbilityCapsuleDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc[];
