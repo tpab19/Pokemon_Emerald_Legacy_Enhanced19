@@ -692,8 +692,8 @@
 #define FLAG_RECEIVED_SHINY_BELDUM                                 0x28D
 #define FLAG_RECEIVED_EXP_ALL                                      0x28E // Used to record if EXP. ALL has been received by player
 #define FLAG_LANETTE_RECEIVED_GIFT_EEVEE                           0x28F // Flag for Lanette Gift Eevee in NatDex Mode or after beating the game
-#define FLAG_UNUSED_0x290                                          0x290 // Unused Flag
-#define FLAG_UNUSED_0x291                                          0x291 // Unused Flag
+#define FLAG_CAUGHT_OVERWORLD_SNORLAX                              0x290 // Flag for catching overworld Snorlax
+#define FLAG_DEFEATED_OVERWORLD_SNORLAX                            0x291 // Flag for if overworld Snorlax was defeated
 #define FLAG_UNUSED_0x292                                          0x292 // Unused Flag
 #define FLAG_UNUSED_0x293                                          0x293 // Unused Flag
 #define FLAG_UNUSED_0x294                                          0x294 // Unused Flag
