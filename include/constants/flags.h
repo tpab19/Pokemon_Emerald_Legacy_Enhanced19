@@ -691,7 +691,7 @@
 #define FLAG_FRONTIER_PLUSLE_NPC_TRADE_COMPLETED    0x28C
 #define FLAG_RECEIVED_SHINY_BELDUM      0x28D
 #define FLAG_RECEIVED_EXP_ALL  0x28E // Used to record if EXP. ALL has been received by player
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
+#define FLAG_LANETTE_RECEIVED_GIFT_EEVEE  0x28F // Flag for Lanette Gift Eevee in NatDex Mode or after beating the game
 #define FLAG_UNUSED_0x290  0x290 // Unused Flag
 #define FLAG_UNUSED_0x291  0x291 // Unused Flag
 #define FLAG_UNUSED_0x292  0x292 // Unused Flag
