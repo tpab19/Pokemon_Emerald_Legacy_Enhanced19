@@ -966,43 +966,43 @@ void StartFirstBattle_NationalDexMode(void)
     {
         case SPECIES_TREECKO:
             *GetVarPointer(VAR_STARTER_MON) = 0;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 0;
             break;
         case SPECIES_TORCHIC:
             *GetVarPointer(VAR_STARTER_MON) = 1;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 1;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 1;
             break;
         case SPECIES_MUDKIP:
             *GetVarPointer(VAR_STARTER_MON) = 2;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 2;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 2;
             break;
         case SPECIES_BULBASAUR:
             *GetVarPointer(VAR_STARTER_MON) = 0;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 3;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 3;
             break;
         case SPECIES_CHARMANDER:
             *GetVarPointer(VAR_STARTER_MON) = 1;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 4;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 4;
             break;
         case SPECIES_SQUIRTLE:
             *GetVarPointer(VAR_STARTER_MON) = 2;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 5;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 5;
             break;
         case SPECIES_CHIKORITA:
             *GetVarPointer(VAR_STARTER_MON) = 0;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 6;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 6;
             break;
         case SPECIES_CYNDAQUIL:
             *GetVarPointer(VAR_STARTER_MON) = 1;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 7;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 7;
             break;
         case SPECIES_TOTODILE:
             *GetVarPointer(VAR_STARTER_MON) = 2;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 8;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 8;
             break;
         default:
             *GetVarPointer(VAR_STARTER_MON) = 0;
-            *GetVarPointer(VAR_STARTER_MON_NATDEX) = 0;
+            *GetVarPointer(VAR_STARTER_MON_NAT_DEX) = 0;
             break;
     }
 

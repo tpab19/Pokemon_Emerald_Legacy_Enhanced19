@@ -431,7 +431,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_TakeYourTime::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveCyndaquil::
 	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CYNDAQUIL
-	call_if_eq VAR_STARTER_MON_NATDEX, 7, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 7, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_CYNDAQUIL, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendCyndaquilToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendCyndaquilToPC
@@ -474,7 +474,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedCyndaquil::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveTotodile::
 	bufferspeciesname STR_VAR_1, SPECIES_TOTODILE
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TOTODILE
-	call_if_eq VAR_STARTER_MON_NATDEX, 8, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 8, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_TOTODILE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendTotodileToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendTotodileToPC
@@ -517,7 +517,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedTotodile::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveChikorita::
 	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHIKORITA
-	call_if_eq VAR_STARTER_MON_NATDEX, 6, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 6, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_CHIKORITA, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_SendChikoritaToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_SendChikoritaToPC
@@ -726,7 +726,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter1::
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip1
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter1_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko1
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic1
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip1
@@ -744,7 +744,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter1::
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip1
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter1_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko1
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic1
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip1
@@ -914,7 +914,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter2::
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip2
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter2_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTreecko2
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTorchic2
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterMudkip2
@@ -1001,7 +1001,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter2::
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip2
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter2_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTreecko2
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterTorchic2
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarterMudkip2
@@ -1097,7 +1097,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RivalTrade3_NatDexMode::
 	goto_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter3_NatDexMode
 
 LittlerootTown_ProfessorBirchsLab_EventScript_MayStarter3_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTreecko3
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTorchic3
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterMudkip3
@@ -1157,7 +1157,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_MayStarterTotodile3::
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_ChoseTradeMon3
 
 LittlerootTown_ProfessorBirchsLab_EventScript_BrendanStarter3_NatDexMode::
-	switch VAR_STARTER_MON_NATDEX
+	switch VAR_STARTER_MON_NAT_DEX
 	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTreecko3
 	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTorchic3
 	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterMudkip3
@@ -1226,7 +1226,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTreecko3::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SpecialGiftForYou, MSGBOX_DEFAULT
 	setflag FLAG_SHINY_CREATION	
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TREECKO
-	givemon SPECIES_TREECKO, 5
+	givemon SPECIES_TREECKO, 5, ITEM_NONE, MOVE_CRUNCH
 	bufferspeciesname STR_VAR_2, SPECIES_TREECKO
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiftMon3
 
@@ -1235,7 +1235,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterTorchic3::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SpecialGiftForYou, MSGBOX_DEFAULT
 	setflag FLAG_SHINY_CREATION	
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TORCHIC
-	givemon SPECIES_TORCHIC, 5 
+	givemon SPECIES_TORCHIC, 5, ITEM_NONE, MOVE_ROCK_SLIDE 
 	bufferspeciesname STR_VAR_2, SPECIES_TORCHIC
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiftMon3
 
@@ -1244,7 +1244,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RivalStarterMudkip3::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SpecialGiftForYou, MSGBOX_DEFAULT
 	setflag FLAG_SHINY_CREATION	
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_MUDKIP
-	givemon SPECIES_MUDKIP, 5
+	givemon SPECIES_MUDKIP, 5, ITEM_NONE, MOVE_ICE_BALL
 	bufferspeciesname STR_VAR_2, SPECIES_MUDKIP
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_GiftMon3
 
@@ -1350,7 +1350,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GotSquirtle::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveBulbasaur::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BulbasaurQuestCompleted, MSGBOX_DEFAULT
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_BULBASAUR
-	call_if_eq VAR_STARTER_MON_NATDEX, 3, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 3, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_BULBASAUR, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveBulbasaurPC
@@ -1395,7 +1395,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BulbasaurReturn::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveCharmander::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CharmanderQuestCompleted, MSGBOX_DEFAULT
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHARMANDER
-	call_if_eq VAR_STARTER_MON_NATDEX, 4, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 4, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_CHARMANDER, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveCharmanderPC
@@ -1440,7 +1440,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_CharmanderReturn::
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveSquirtle::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_SquirtleQuestCompleted, MSGBOX_DEFAULT
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_SQUIRTLE
-	call_if_eq VAR_STARTER_MON_NATDEX, 5, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
+	call_if_eq VAR_STARTER_MON_NAT_DEX, 5, LittlerootTown_ProfessorBirchsLab_EventScript_EnableShiny
 	givemon SPECIES_SQUIRTLE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtleParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, LittlerootTown_ProfessorBirchsLab_EventScript_ReceiveSquirtlePC
