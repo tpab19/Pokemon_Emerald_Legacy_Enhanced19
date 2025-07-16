@@ -350,6 +350,12 @@ bool8 UpdateSave_v1_v3(const struct SaveSectorLocation *locations)
     FlagGet(FLAG_NATIONAL_DEX_COMPLETE)         ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Complete the National Dex (not including Mew, Celebi, Jirachi or Deoxys)
     FlagGet(FLAG_COLLECTED_ALL_SILVER_SYMBOLS)  ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Silver Symbols
     FlagGet(FLAG_COLLECTED_ALL_GOLD_SYMBOLS)    ? AddPCItem(ITEM_SHINY_CHARM, 1) : 0; // Get all Gold Symbols
+    
+    if (FlagGet(FLAG_TRICK_HOUSE_PRIZE_EEVEE))
+    {
+        FlagClear(FLAG_TRICK_HOUSE_PRIZE_EEVEE);
+        *GetVarPointer(VAR_TRICK_HOUSE_PRIZE_PICKUP) = 1;
+    }
 
     /**
      * The most common kind of change that might happen between major versions are 
