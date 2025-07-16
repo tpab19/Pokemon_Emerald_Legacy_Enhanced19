@@ -144,7 +144,7 @@ Route114_LanettesHouse_EventScript_WouldYouLikeEevee::
 Route114_LanettesHouse_EventScript_GiveEevee::
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
-	givemon SPECIES_EEVEE, 25, ITEM_PERSIM_BERRY
+	givemon SPECIES_EEVEE, 25, ITEM_PERSIM_BERRY, MOVE_CHARM
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route114_LanettesHouse_EventScript_SendEeveeToParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route114_LanettesHouse_EventScript_SendEeveeToPC
 	goto Common_EventScript_NoMoreRoomForPokemon
