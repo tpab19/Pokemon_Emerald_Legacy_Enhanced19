@@ -131,10 +131,6 @@ Route114_LanettesHouse_EventScript_EeveeGift::
 	end
 
 Route114_LanettesHouse_EventScript_WouldYouLikeEevee::
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_LANETTE, Common_Movement_ExclamationMark
-	waitmovement 0
 	msgbox Route114_LanettesHouse_Text_WouldYouTakeCareofEevee, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route114_LanettesHouse_EventScript_Nevermind
 	goto Route114_LanettesHouse_EventScript_GiveEevee
@@ -226,7 +222,7 @@ Route114_LanettesHouse_Text_ISeeYouFoundEevee:
 	.string "that they barely get time outside…$"
 
 Route114_LanettesHouse_Text_WouldYouTakeCareofEevee:
-	.string "LANETTE: Oh!\p"
+	.string "LANETTE: Hm...\p"
 	.string "EEVEE seems very fond of you already.\l"
 	.string "Would you like to take EEVEE with you?$"
 
