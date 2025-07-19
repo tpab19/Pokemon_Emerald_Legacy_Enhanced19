@@ -356,6 +356,8 @@ bool8 UpdateSave_v1_v3(const struct SaveSectorLocation *locations)
         FlagClear(FLAG_TRICK_HOUSE_PRIZE_EEVEE);
         *GetVarPointer(VAR_TRICK_HOUSE_PRIZE_PICKUP) = 1;
     }
+    
+    FlagClear(FLAG_GOT_TRAINER_HILL_SNORLAX);
 
     /**
      * The most common kind of change that might happen between major versions are 
