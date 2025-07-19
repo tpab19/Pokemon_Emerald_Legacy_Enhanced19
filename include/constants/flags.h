@@ -694,7 +694,7 @@
 #define FLAG_LANETTE_RECEIVED_GIFT_EEVEE                           0x28F // Flag for Lanette Gift Eevee in NatDex Mode or after beating the game
 #define FLAG_CAUGHT_OVERWORLD_SNORLAX                              0x290 // Flag for catching overworld Snorlax
 #define FLAG_DEFEATED_OVERWORLD_SNORLAX                            0x291 // Flag for if overworld Snorlax was defeated
-#define FLAG_UNUSED_0x292                                          0x292 // Unused Flag
+#define FLAG_CAUGHT_SUDOWOODO                                      0x292 // Flag for whether overworld Sudowoodo was caught to allow it to be caught again
 #define FLAG_UNUSED_0x293                                          0x293 // Unused Flag
 #define FLAG_UNUSED_0x294                                          0x294 // Unused Flag
 #define FLAG_UNUSED_0x295                                          0x295 // Unused Flag

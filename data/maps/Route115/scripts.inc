@@ -187,9 +187,6 @@ Route115_EventScript_WokeSnorlax::
 	release
 	end
 
-Route115_EventScript_HowToWakeSnorlax:
-	msgbox Route115_Text_SnorlaxAwoke, MSGBOX_DEFAULT
-
 Route115_EventScript_DefeatedSnorlax::
 	setflag FLAG_DEFEATED_OVERWORLD_SNORLAX
 	setvar VAR_0x8004, SPECIES_SNORLAX
