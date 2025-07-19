@@ -268,7 +268,7 @@ SouthernIsland_Interior_Text_ExclsiorPostBattle:
 	.string "Goodbye.$"
 
 SouthernIsland_Interior_Text_Typhlosion:
-	.string "TYPHLOSION!$"
+	.string "TYPHLOSION: Grooar!$"
 
 SouthernIsland_Interior_Text_CloserLookAtStone:
 	.string "You look closer at the strange stone.\p"
