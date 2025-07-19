@@ -17,6 +17,7 @@
 #include "gba/m4a_internal.h"
 #include "constants/rgb.h"
 #include "event_data.h"
+#include "overworld.h"
 
 enum
 {
@@ -61,6 +62,7 @@ enum
     MENUITEM_WORLD_MONOVERWORLD,
     MENUITEM_WORLD_BIKEMUSIC,
     MENUITEM_WORLD_AUTORUN,
+    MENUITEM_WORLD_OVERWORLDSPEED,
     MENUITEM_WORLD_IMPROVEDFISHING,
     MENUITEM_WORLD_CANCEL,
     MENUITEM_WORLD_COUNT,
@@ -197,6 +199,7 @@ static void DrawChoices_Nickname(int selection, int y);
 static void DrawChoices_AutoRun(int selection, int y);
 static void DrawChoices_FastSurf(int selection, int y);
 static void DrawChoices_DiveSpeed(int selection, int y);
+static void DrawChoices_OverworldSpeed(int selection, int y);
 static void DrawChoices_ImprovedFishing(int selection, int y);
 static void DrawChoices_BikeMusic(int selection, int y);
 static void DrawChoices_SurfMusic(int selection, int y);
@@ -272,6 +275,7 @@ struct // MENU_WORLD
 } static const sItemFunctionsWorld[MENUITEM_WORLD_COUNT] =
 {
     [MENUITEM_WORLD_AUTORUN]            = {DrawChoices_AutoRun,         ProcessInput_Options_Two},
+    [MENUITEM_WORLD_OVERWORLDSPEED]     = {DrawChoices_OverworldSpeed,  ProcessInput_Options_Four},
     [MENUITEM_WORLD_IMPROVEDFISHING]    = {DrawChoices_ImprovedFishing, ProcessInput_Options_Two},
     [MENUITEM_WORLD_BIKEMUSIC]          = {DrawChoices_BikeMusic,       ProcessInput_Options_Two},
     [MENUITEM_WORLD_MONOVERWORLD]       = {DrawChoices_MonOverworld,    ProcessInput_Options_Two},
@@ -327,12 +331,14 @@ static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
 static const u8 sText_MonOverworld[]        = _("POKéMON FOLLOWER");
 static const u8 sText_BikeMusic[]           = _("BIKE MUSIC");
 static const u8 sText_AutoRun[]             = _("AUTO RUN");
+static const u8 sText_OverworldSpeed[]      = _("PLAYER SPEED");
 static const u8 sText_ImprovedFishing[]     = _("IMPROVED FISHING");
 static const u8 *const sOptionMenuItemsNamesWorld[MENUITEM_WORLD_COUNT] =
 {
     [MENUITEM_WORLD_MONOVERWORLD]       = sText_MonOverworld,
     [MENUITEM_WORLD_BIKEMUSIC]          = sText_BikeMusic,
     [MENUITEM_WORLD_AUTORUN]            = sText_AutoRun,
+    [MENUITEM_WORLD_OVERWORLDSPEED]     = sText_OverworldSpeed,
     [MENUITEM_WORLD_IMPROVEDFISHING]    = sText_ImprovedFishing,
     [MENUITEM_WORLD_CANCEL]             = gText_OptionMenuSave,
 };
@@ -430,6 +436,7 @@ static bool8 CheckConditions(int selection)
         switch(selection)
         {
         case MENUITEM_WORLD_AUTORUN:         return TRUE;
+        case MENUITEM_WORLD_OVERWORLDSPEED:  return TRUE;
         case MENUITEM_WORLD_IMPROVEDFISHING: return TRUE;
         case MENUITEM_WORLD_BIKEMUSIC:       return TRUE;
         case MENUITEM_WORLD_MONOVERWORLD:    return TRUE;
@@ -505,17 +512,22 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_BATTLE_CANCEL]            = {sText_Desc_Save,                 sText_Empty,                    sText_Empty,                    sText_Empty},
 };
 
-static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold the B Button to walk.");
-static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold the B Button to run.");
+static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold {B_BUTTON} to walk.");
+static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold {B_BUTTON} to run.");
+static const u8 sText_Desc_OverworldSpeed_1x[]          = _("Original standard player speed.\nNo change from original Emerald.");
+static const u8 sText_Desc_OverworldSpeed_2x[]          = _("2x standard player speed.\nHold {R_BUTTON} for standard player speed.");
+static const u8 sText_Desc_OverworldSpeed_4x[]          = _("4x standard player speed.\nHold {R_BUTTON} for standard player speed.");
+static const u8 sText_Desc_OverworldSpeed_8x[]          = _("8x standard player speed.\nHold {R_BUTTON} for standard player speed.");
 static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing.\nFish are not able to get away.");
 static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
 static const u8 sText_Desc_BikeOff[]                    = _("Disables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_BikeOn[]                     = _("Enables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_MonOverworldOff[]            = _("Disables following for the first\nPOKéMON in your party.");
 static const u8 sText_Desc_MonOverworldOn[]             = _("Enables following for the first\nPOKéMON in your party.");
-static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][2] =
+static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][4] =
 {
     [MENUITEM_WORLD_AUTORUN]            = {sText_Desc_AutoRun_On,           sText_Desc_AutoRun_Off},
+    [MENUITEM_WORLD_OVERWORLDSPEED]     = {sText_Desc_OverworldSpeed_1x,    sText_Desc_OverworldSpeed_2x,   sText_Desc_OverworldSpeed_4x,   sText_Desc_OverworldSpeed_8x},
     [MENUITEM_WORLD_IMPROVEDFISHING]    = {sText_Desc_ImprovedFishing_On,   sText_Desc_ImprovedFishing_Off},
     [MENUITEM_WORLD_BIKEMUSIC]          = {sText_Desc_BikeOn,               sText_Desc_BikeOff},
     [MENUITEM_WORLD_MONOVERWORLD]       = {sText_Desc_MonOverworldOn,       sText_Desc_MonOverworldOff},
@@ -873,6 +885,7 @@ void CB2_InitOptionPlusMenu(void)
         sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     = !FlagGet(FLAG_ENABLE_FISHCANTESCAPE);     // Used the inverse to align with ON/OFF Buttons
         sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           = FlagGet(FLAG_DISABLE_BIKEMUSIC);
         sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        = !FlagGet(FLAG_ENABLE_FOLLOWER);
+        sOptions->sel_world[MENUITEM_WORLD_OVERWORLDSPEED]      = VarGet(VAR_OVERWORLD_SPEEDUP);
 
         //Surf
         sOptions->sel_surf[MENUITEM_SURF_FASTSURF]            = !FlagGet(FLAG_ENABLE_FASTSURF);           // Used the inverse to align with ON/OFF Buttons
@@ -1162,6 +1175,7 @@ static void Task_OptionMenuSave(u8 taskId)
     sOptions->sel_world[MENUITEM_WORLD_IMPROVEDFISHING]     == 0 ? FlagSet(FLAG_ENABLE_FISHCANTESCAPE)  : FlagClear(FLAG_ENABLE_FISHCANTESCAPE);    // Used the inverse to align with other similar options.
     sOptions->sel_world[MENUITEM_WORLD_BIKEMUSIC]           == 0 ? FlagClear(FLAG_DISABLE_BIKEMUSIC)    : FlagSet(FLAG_DISABLE_BIKEMUSIC);
     sOptions->sel_world[MENUITEM_WORLD_MONOVERWORLD]        == 0 ? FlagSet(FLAG_ENABLE_FOLLOWER)        : FlagClear(FLAG_ENABLE_FOLLOWER);          // Used the inverse to align with other similar options.
+    *GetVarPointer(VAR_OVERWORLD_SPEEDUP)                   = sOptions->sel_world[MENUITEM_WORLD_OVERWORLDSPEED];
 
     //Surf
     sOptions->sel_surf[MENUITEM_SURF_FASTSURF]              == 0 ? FlagSet(FLAG_ENABLE_FASTSURF)        : FlagClear(FLAG_ENABLE_FASTSURF);          // Used the inverse to align with other similar options.
@@ -1611,6 +1625,22 @@ static void DrawChoices_AutoRun(int selection, int y)
 
     DrawOptionMenuChoice(sText_AutoRun_On, 104, y, styles[0], active);
     DrawOptionMenuChoice(sText_AutoRun_Off, GetStringRightAlignXOffset(1, sText_AutoRun_Off, 198), y, styles[1], active);
+}
+
+static const u8 sText_OverworldSpeedUp_Original[]   = _("ORIGINAL");
+static const u8 sText_OverworldSpeedUp_Fast[]       = _("FAST");
+static const u8 sText_OverworldSpeedUp_Faster[]     = _("FASTER");
+static const u8 sText_OverworldSpeedUp_Fastest[]    = _("FASTEST");
+static const u8 *const sTextItemOverworldSpeedupStrings[] = {sText_OverworldSpeedUp_Original, sText_OverworldSpeedUp_Fast, sText_OverworldSpeedUp_Faster, sText_OverworldSpeedUp_Fastest};
+static void DrawChoices_OverworldSpeed(int selection, int y)
+{
+    bool8 active = CheckConditions(VAR_OVERWORLD_SPEEDUP);
+    int xMid = GetMiddleX(sText_Less, sTextItemOverworldSpeedupStrings[selection], sText_More);
+
+    // Draw left/right arrows for less and more indicators
+    DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
+    DrawOptionMenuChoice(sTextItemOverworldSpeedupStrings[selection], xMid, y, 1, active);
+    DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
 }
 
 static const u8 sText_ImprovedFishing_On[]   = _("ON");
