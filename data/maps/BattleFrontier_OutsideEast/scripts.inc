@@ -498,13 +498,13 @@ BattleFrontier_OutsideWest_Text_EvinPostBattle:
 	.string "a punch! Keep it up!$"
 
 BattleFrontier_OutsideEast_Text_Jolteon:
-	.string "JOLTEON!$"
+	.string "JOLTEON: Jo jo jol te on!$"
 
 BattleFrontier_OutsideEast_Text_Vaporeon:
-	.string "VAPOREON!$"
+	.string "VAPOREON: Va va po re on!$"
 
 BattleFrontier_OutsideEast_Text_Flareon:
-	.string "FLAREON!$"
+	.string "FLAREON: Fla reon!$"
 
 BattleFrontier_OutsideEast_Text_Espeon:
-	.string "ESPEON!$"
+	.string "ESPEON: Ee ee es peon$"
