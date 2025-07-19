@@ -1515,6 +1515,7 @@ const u8 gJPText_PleaseWaitAMoment[] = _("しばらく　おまちください")
 const u8 gJPText_WriteErrorUnableToSaveData[] = _("かきこみ　エラー　です\nデータが　ほぞん　できませんでした");
 const u8 gText_Red[] = _("RED");
 const u8 gText_Blue[] = _("BLUE");
+const u8 gText_Teal[] = _("TEAL");
 const u8 gText_3Dashes[] = _("---"); // Unused
 const u8 gText_SingleBattleRoomResults[] = _("{PLAYER}'s Single Battle Room Results");
 const u8 gText_DoubleBattleRoomResults[] = _("{PLAYER}'s Double Battle Room Results");

@@ -695,9 +695,9 @@
 #define FLAG_CAUGHT_OVERWORLD_SNORLAX                              0x290 // Flag for catching overworld Snorlax
 #define FLAG_DEFEATED_OVERWORLD_SNORLAX                            0x291 // Flag for if overworld Snorlax was defeated
 #define FLAG_CAUGHT_SUDOWOODO                                      0x292 // Flag for whether overworld Sudowoodo was caught to allow it to be caught again
-#define FLAG_UNUSED_0x293                                          0x293 // Unused Flag
-#define FLAG_UNUSED_0x294                                          0x294 // Unused Flag
-#define FLAG_UNUSED_0x295                                          0x295 // Unused Flag
+#define FLAG_DEFEATED_EXCLSIOR                                     0x28F // Flag for Exclsior Dev Battle
+#define FLAG_DEFEATED_SHINY_LATIAS_OR_LATIOS                       0x290 // Flag for Shiny Lati Defeated
+#define FLAG_CAUGHT_SHINY_LATIAS_OR_LATIOS                         0x291 // Flag for Shiny Lati Caught
 #define FLAG_UNUSED_0x296                                          0x296 // Unused Flag
 #define FLAG_UNUSED_0x297                                          0x297 // Unused Flag
 #define FLAG_UNUSED_0x298                                          0x298 // Unused Flag
