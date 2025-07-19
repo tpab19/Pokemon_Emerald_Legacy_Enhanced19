@@ -117,7 +117,7 @@ BattleFrontier_PokemonCenter_1F_EventScript_Seedot::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_RALTS, CRY_MODE_NORMAL
+	playmoncry SPECIES_SEEDOT, CRY_MODE_NORMAL
 	msgbox BattleFrontier_PokemonCenter_1F_Text_Seedot, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -163,7 +163,7 @@ BattleFrontier_PokemonCenter_1F_Text_Skitty:
 	.string "SKITTY: Mya myaaah!$"
 
 BattleFrontier_PokemonCenter_1F_Text_Ralts:
-	.string "RALTS!$"
+	.string "RALTS: Ra ru!$"
 
 BattleFrontier_PokemonCenter_1F_Text_Seedot:
-	.string "SEEDOT!$"
+	.string "DOTS: Sesesese!$"

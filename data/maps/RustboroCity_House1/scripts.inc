@@ -92,7 +92,7 @@ RustboroCity_House1_EventScript_Numel::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SHROOMISH, CRY_MODE_NORMAL
+	playmoncry SPECIES_NUMEL, CRY_MODE_NORMAL
 	msgbox RustboroCity_House1_Text_Numel, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -129,7 +129,7 @@ RustboroCity_House1_Text_AllSortsOfPlaces:
 	.string "sorts of places.$"
 
 RustboroCity_House1_Text_Shroomish:
-	.string "SHROOMISH!$"
+	.string "SHROOMISH: Shroooooo.$"
 
 RustboroCity_House1_Text_Numel:
-	.string "MEL!$"
+	.string "MEL: Nu mu nu!$"

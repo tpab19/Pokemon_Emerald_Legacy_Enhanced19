@@ -96,7 +96,7 @@ BattleFrontier_Lounge8_EventScript_Plusle::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_VOLBEAT, CRY_MODE_NORMAL
+	playmoncry SPECIES_PLUSLE, CRY_MODE_NORMAL
 	msgbox BattleFrontier_Lounge8_Text_Plusle, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -155,7 +155,7 @@ BattleFrontier_Lounge8_Text_KnowAboutFrontierBrains:
 	.string "facilities in the BATTLE FRONTIER.$"
 
 BattleFrontier_Lounge8_Text_Volbeat:
-	.string "VOLBEAT!$"
+	.string "VOLBEAT: Vovo vol!$"
 
 BattleFrontier_Lounge8_Text_Plusle:
-	.string "PLUSLE!$"
+	.string "PLUSES: Plu lulu!$"

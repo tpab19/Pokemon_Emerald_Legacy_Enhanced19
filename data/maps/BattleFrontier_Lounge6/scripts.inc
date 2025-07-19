@@ -88,7 +88,7 @@ BattleFrontier_Lounge6_EventScript_Meowth::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
+	playmoncry SPECIES_MEOWTH, CRY_MODE_NORMAL
 	msgbox BattleFrontier_Lounge6_Text_Meowth, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -126,7 +126,7 @@ BattleFrontier_Lounge6_Text_SkittySoMuchCuterThanImagined:
 	.string "imagined. I'm delighted!$"
 
 BattleFrontier_Lounge6_Text_Skitty:
-	.string "SKITTY!$"
+	.string "SKITTY: Skii!$"
 
 BattleFrontier_Lounge6_Text_Meowth:
-	.string "MEOWTH!$"
+	.string "MEOWOW: Meow!$"

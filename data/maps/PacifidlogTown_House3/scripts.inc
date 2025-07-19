@@ -93,7 +93,7 @@ PacifidlogTown_House3_EventScript_Bagon::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_RELICANTH, CRY_MODE_NORMAL
+	playmoncry SPECIES_BAGON, CRY_MODE_NORMAL
 	msgbox PacifidlogTown_House3_Text_Bagon, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -137,7 +137,7 @@ PacifidlogTown_House3_Text_IsThatAPokedex:
 	.string "I wish I was like you.$"
 
 PacifidlogTown_House3_Text_Relicanth:
-	.string "RELICANTH!$"
+	.string "RELICANTH: Re li rel!$"
 
 PacifidlogTown_House3_Text_Bagon:
-	.string "BAGON!$"
+	.string "SEASOR: Ba-go!$"

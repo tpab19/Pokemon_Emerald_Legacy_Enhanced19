@@ -114,7 +114,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_Snorunt::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WHISMUR, CRY_MODE_NORMAL
+	playmoncry SPECIES_SNORUNT, CRY_MODE_NORMAL
 	msgbox MauvilleCity_PokemonCenter_1F_Text_Snorunt, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -161,7 +161,7 @@ MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces:
 	.string "bet it'll become a real star!$"
 
 MauvilleCity_PokemonCenter_1F_Text_Whismur:
-	.string "WHISMUR!$"
+	.string "WHISMUR: Whi wi wis...$"
 
 MauvilleCity_PokemonCenter_1F_Text_Snorunt:
-	.string "SNORUNT!$"
+	.string "NIPPY: Rororororo!$"

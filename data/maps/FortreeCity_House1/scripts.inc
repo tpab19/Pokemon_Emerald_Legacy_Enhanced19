@@ -103,7 +103,7 @@ FortreeCity_House1_EventScript_Loudred::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_KECLEON, CRY_MODE_NORMAL
+	playmoncry SPECIES_LOUDRED, CRY_MODE_NORMAL
 	msgbox FortreeCity_House1_Text_Loudred, MSGBOX_DEFAULT
 	waitmoncry
 	release
@@ -148,7 +148,7 @@ FortreeCity_House1_Text_Zigzagoon:
 	.string "ZIGZAGOON: Gumomoh?$"
 
 FortreeCity_House1_Text_Kecleon:
-	.string "KECLEON!$"
+	.string "KECLEON: Puu puhyaah.$"
 
 FortreeCity_House1_Text_Loudred:
-	.string "LOUDRED!$"
+	.string "ECHO: Lo lo LO!!$"
