@@ -630,8 +630,13 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
     {
         // same speed as running
-        if ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_FASTSURF))
+        if (
+            ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_FASTSURF))
+            && !((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_FASTSURF)) // Invert B Button to surf slower if Fast Surf setting On
+            )
             PlayerWalkFaster(direction);
+        else if(((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_FASTSURF))) // Invert B Button to surf slower if Fast Surf setting On
+            PlayerWalkFast(direction);
         else
             PlayerWalkFast(direction);
         return;
@@ -659,14 +664,14 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         && FlagGet(FLAG_SYS_B_DASH)
         && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0
         && ((heldKeys & B_BUTTON) || FlagGet(FLAG_ENABLE_AUTORUN)) // If AutoRun setting On, run as default without holding B
-        && !((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_AUTORUN)) // Invert B Button to walk if AutRun setting On
+        && !((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_AUTORUN)) // Invert B Button to walk if Auto Run setting On
         )
     {
         PlayerRun(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         return;
     }
-    else if(((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_AUTORUN))) // Invert B Button to walk if AutRun setting On
+    else if(((heldKeys & B_BUTTON) && FlagGet(FLAG_ENABLE_AUTORUN))) // Invert B Button to walk if Auto Run setting On
     {
         PlayerWalkNormal(direction);
     }

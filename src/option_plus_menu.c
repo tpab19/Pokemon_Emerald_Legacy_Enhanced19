@@ -62,8 +62,8 @@ enum
     MENUITEM_WORLD_MONOVERWORLD,
     MENUITEM_WORLD_BIKEMUSIC,
     MENUITEM_WORLD_AUTORUN,
-    MENUITEM_WORLD_OVERWORLDSPEED,
     MENUITEM_WORLD_IMPROVEDFISHING,
+    MENUITEM_WORLD_OVERWORLDSPEED,
     MENUITEM_WORLD_CANCEL,
     MENUITEM_WORLD_COUNT,
 };
@@ -331,7 +331,7 @@ static const u8 *const sOptionMenuItemsNamesBattle[MENUITEM_BATTLE_COUNT] =
 static const u8 sText_MonOverworld[]        = _("POKéMON FOLLOWER");
 static const u8 sText_BikeMusic[]           = _("BIKE MUSIC");
 static const u8 sText_AutoRun[]             = _("AUTO RUN");
-static const u8 sText_OverworldSpeed[]      = _("PLAYER SPEED");
+static const u8 sText_OverworldSpeed[]      = _("WORLD SPEED");
 static const u8 sText_ImprovedFishing[]     = _("IMPROVED FISHING");
 static const u8 *const sOptionMenuItemsNamesWorld[MENUITEM_WORLD_COUNT] =
 {
@@ -514,12 +514,12 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
 
 static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold {B_BUTTON} to walk.");
 static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold {B_BUTTON} to run.");
-static const u8 sText_Desc_OverworldSpeed_1x[]          = _("Original standard player speed.\nNo change from original Emerald.");
-static const u8 sText_Desc_OverworldSpeed_2x[]          = _("2x standard player speed.\nHold {R_BUTTON} for standard player speed.");
-static const u8 sText_Desc_OverworldSpeed_4x[]          = _("4x standard player speed.\nHold {R_BUTTON} for standard player speed.");
-static const u8 sText_Desc_OverworldSpeed_8x[]          = _("8x standard player speed.\nHold {R_BUTTON} for standard player speed.");
-static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing.\nFish are not able to get away.");
-static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual. Fish may not bite,\nand may run away if not reeled in.");
+static const u8 sText_Desc_OverworldSpeed_1x[]          = _("Standard player and NPC speed.\nNo change from original Emerald.");
+static const u8 sText_Desc_OverworldSpeed_2x[]          = _("2x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
+static const u8 sText_Desc_OverworldSpeed_4x[]          = _("4x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
+static const u8 sText_Desc_OverworldSpeed_8x[]          = _("8x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
+static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing.\nFish are not able to escape.");
+static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual.\nFish may escape if not reeled in.");
 static const u8 sText_Desc_BikeOff[]                    = _("Disables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_BikeOn[]                     = _("Enables the BIKE music when you\nstart riding the BIKE.");
 static const u8 sText_Desc_MonOverworldOff[]            = _("Disables following for the first\nPOKéMON in your party.");
@@ -534,8 +534,8 @@ static const u8 *const sOptionMenuItemDescriptionsWorld[MENUITEM_WORLD_COUNT][4]
     [MENUITEM_WORLD_CANCEL]             = {sText_Desc_Save,                 sText_Empty},
 };
 
-static const u8 sText_Desc_FastSurf_On[]                = _("SURF faster than normal.\nWithout pressing the B Button.");
-static const u8 sText_Desc_FastSurf_Off[]               = _("SURF at normal speed.\nHold the B Button to SURF faster.");
+static const u8 sText_Desc_FastSurf_On[]                = _("SURF faster than normal.\nHold {B_BUTTON} to SURF at normal speed.");
+static const u8 sText_Desc_FastSurf_Off[]               = _("SURF at normal speed.\nHold {B_BUTTON} to SURF faster.");
 static const u8 sText_Desc_DiveSpeed_Slow[]             = _("Original experience, underwater speed\nis unchanged from original game.");
 static const u8 sText_Desc_DiveSpeed_Med[]              = _("Travel underwater faster.\nSame speed as SURF.");
 static const u8 sText_Desc_DiveSpeed_Fast[]             = _("Travel underwater much faster.\nSame speed as FAST SURF.");

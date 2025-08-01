@@ -1484,7 +1484,7 @@ u8 OverworldSpeedup_AdditionalIterations(u16 speed, bool32 overworld)
 {
     if (overworld
         && VAR_OVERWORLD_SPEEDUP != 0
-        && (JOY_HELD(R_BUTTON))
+        && (JOY_HELD(L_BUTTON))
         )
     {
         return OPTIONS_OVERWORLD_SPEED_1X_EXTRA_ITERATIONS;
