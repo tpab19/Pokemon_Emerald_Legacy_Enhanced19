@@ -4,13 +4,11 @@ Pokémon Emerald Legacy Enhanced is an fork of Pokémon Emerald Legacy by [TheSm
 
 I have **no official affiliation** with TheSmithPlays or his incredible project team, I'm just a single developer fan who wanted to make my own flavour of Emerald Legacy with the greatest respect for the fantastic version of Emerald the team has already built. I look to regularly pull in any updates or fixes from the base Pokémon Emerald Legacy whenever the project team publishes.
 
-Some simple Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokémon able to learn the move (not taking up a move slot) to use them), whilst some larger additions will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffs signature moves.)
+Quality of Life features are included in the base patch (such as using select in the party menu to switch Pokémon posititions and HMs only requiring Badge, HM in bag and a Pokémon able to learn the move (not taking up a move slot) to use them), whilst some larger deviations from the legacy vision will be separated as their own patches (such as Enhanced Starters which adds the starters for early route availability and buffs signature moves.)
 
 ### For the tech-savvy
 
-This repository initially started as "Pokémon Emerald Legacy - Starters Enhanced" which I've now moved into a feature branch instead, so I am slowly working through cleaning out branches and features to be mutually exclusive to allow anybody to pick and choose which branches they would like and compile their own custom version. This isn't at that point yet with all branches currently included "Enhanced Starters" branch at base.
-
-The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creatures as I've done below, and happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
+The Pret Pokeemerald disassembly upon which the project is ultimately based has allowed many developers to build a myriad of amazing features, this fork primarily looks to incorporate already built and tested features. I'm happy for anybody to fork from this repository and use any feature branches, just please do credit the original feature creatures as I've done below, and I'm happy to entertain pull requests if there's a feature which you've added which doesn't conflict with any other features in the game.
 
 Without any further ado, below are the features added to Base Patch (main branch):
 
@@ -20,7 +18,7 @@ The Base Emerald Legacy Enhanced version which primarily focuses on quality of l
 
 This Base patch includes all updates to Pokémon Emerald Legacy source code as of 27 Feb 2025.
 
-**Note:**: Save file compatibility with Emerald Legacy is one-way from Emerald Legacy to Enhanced and from older versions of Enhanced. Please backup original saves before moving to Enhanced.
+**Note:**: Save file compatibility with Emerald Legacy available, but is one-way from Emerald Legacy to Enhanced and from older versions of Enhanced. Please backup original saves before moving to Enhanced.
 
 ### Implemented Changes:
 * All Base Legacy changes as of v1.1.4.
@@ -40,12 +38,14 @@ This Base patch includes all updates to Pokémon Emerald Legacy source code as o
 * Added Pokémon follower as first Pokémon in your party
   * Supports Shiny followers
   * As noted below, can be disabled in options menu.
-  * If first Pokémon fainted,
+  * If first Pokémon fainted, second Pokémon in party will be follower and so on.
+  * Some areas such as Fortree and Mossdeep Gyms will have followers hidden to not interfere with the puzzles.
+  * Very large followers (Steelix, Lugia, Ho-oh, Kyogre, Groudon and Rayquaza) will not appear indoors.
+  * As noted below, can be disabled if preferred in options.
 * Added unique per-Pokémon Surfing Overworld sprites instead of the "Surf blob"
   * Supports Shiny Pokémon.
   * As noted below, can revert back to Surf Blob if preferred in options.
-  * Does not support diving.
-* After beating Steven's post-game battle in Meteor Falls, ability to change game mode between Normal, Hard and Hardcore (Nuzlocke) in options menu.
+  * Diving uses generic diving sprite.
 * Added gold sparkle to Feebas spots on Route 119 after recieving the Devon Scope.
   * Feebas encounter rate on tiles reduced to 10% to retain a bit of challenge in finding wild Feebas (Normal 50% on Feebas tiles before getting the Devon Scope).
   * Steven's dialogue updated when providing Devon Scope to hint towards revisiting Route 119.
@@ -75,16 +75,16 @@ This Base patch includes all updates to Pokémon Emerald Legacy source code as o
   * **Note**: If migrating a save file, you will have to manually enter your Secret Base at least once to activate the ability to fly to the base.
 * Decoration Improvements:
   * Updated Lilycove Department Store Clearance Sale to appear permanently after beating the game.
-  * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House
-  * Added Lotad and Seedot dolls for purchase from Slateport Doll seller
+  * Added both Red and Blue Tents to Slateport Decor seller after completing Trick House.
+  * Added Lotad and Seedot dolls for purchase from Slateport Doll seller.
 * Low Health beep reduced to three beeps and not loop infinitely.
-* Added Select as shortcut to swap Pokémon in Party
+* Added Select as shortcut to swap Pokémon in Party.
 * Updated Options Menu with below additional options:
   * Ability to enable to disable Pokémon followers.
   * Ability to toggle between unique per-Pokémon surfing overworld and original "Surf blob"
   * Ability to increase player and Non-player character movement speed in the world.
   * Ability to enable or disable Auto Run.
-    * Run without holding the B Button
+    * Run without holding the B Button.
     * Hold B to walk.
   * Ability to enable to disable Fast Surf.
     * Fast Surfing without holding the B button.
@@ -98,16 +98,17 @@ This Base patch includes all updates to Pokémon Emerald Legacy source code as o
   * Ability to change speed of EXP Bar filling in battle.
   * Ability to reduce or turn off in-battle item use animation.
   * Ability to toggle Type Effectiveness colour coding within battle (Off by default).
-    * Green: Super effective, Red: Not very effective, Grey: No effect
+    * Green: Super effective, Red: Not very effective, Grey: No effect.
   * Ability to change in-game font from Hoenn (original Emerald font) to Kanto (FireRed/LeafGreen font).
   * Ability to hide post-game Stat Editor from Party Menu.
   * Ability to hide Nickname option from Party Menu.
   * Ability to change Battle Mode (Normal/Hard Mode/Hardcore(Nuzlocke)) after beating Steven in Meteor Falls.
   * Ability to increase player and NPC in-game speed (World Speed) by 2x, 4x, or 8x (Music speed stays the same.)
     * Holding "R" button will slow back to standard 1x speed.
+      * May conflict with changing Bike type. Recommend to use Button Mode: "L = Settings" to move Bike swap.
     * **Note:** 8x Speed may have some minor visual bugs. This is due to the emulators skipping some frames at that speed.
   * Added extra "Button Modes" for the "L" button as a shortcut in the overworld when pressing the "L" button:
-    * L = Settings: Will chance the relevant contextual setting based on what the player is doing:
+    * L = Settings: Will change the relevant contextual setting based on what the player is doing:
       * If walking or running, toggle Auto Run.
       * If surfing, toggle Fast Surf.
       * If diving, will step through the different diving speeds on each press.
