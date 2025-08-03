@@ -60,9 +60,10 @@ enum {
 #define tTaskId_UpdatePage data[15]
 
 // Increased Number of Mon Slides to handle extra credits.
-// Was 71, set 386 as an arbitrary large number unlikely to be hit
-// May need further increasing if more credits added
-#define NUM_MON_SLIDES 386 
+// Each ShowMons slideshow maxes at 27 Pokémon with the final Pokémon on the right.
+// To ensure the last shown Pokémon is the starter and is shown in the center
+// multiply the number of slideshows shown in the credits by 27, and subtract by 1
+#define NUM_MON_SLIDES 107 
 
 struct CreditsData
 {
