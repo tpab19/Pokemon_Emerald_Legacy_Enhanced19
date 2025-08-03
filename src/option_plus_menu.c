@@ -948,7 +948,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
 {
     int i = 0;
     u8 optionsToDraw = min(OPTIONS_ON_SCREEN , MenuItemCount());
-    if (JOY_NEW(A_BUTTON))
+    if (JOY_NEW(A_BUTTON) && !(gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A && JOY_NEW(L_BUTTON)))
     {
         if (sOptions->menuCursor[sOptions->submenu] == MenuItemCancel())
             gTasks[taskId].func = Task_OptionMenuSave;
