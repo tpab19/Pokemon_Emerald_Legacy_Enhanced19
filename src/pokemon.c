@@ -2285,7 +2285,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
                 {
                     maxShinyRolls += I_SHINY_CHARM_ADDITIONAL_ROLLS;
                     itemCount++;
-                } while (CheckBagHasItem(ITEM_SHINY_CHARM, itemCount) && itemCount < I_SHINY_CHARM_MAX_EFFECTIVE);
+                } while (CheckBagHasItem(ITEM_SHINY_CHARM, itemCount));
 
                 do
                 {
