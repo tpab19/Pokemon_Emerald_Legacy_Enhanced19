@@ -513,6 +513,12 @@ bool8 UpdateSave_v0_v3(const struct SaveSectorLocation *locations)
      * we can just assign across the old box storage to the new.  */ 
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
 
+    // Swap L=A and LR Options from older save if set due to definition swap in v3
+    if (gSaveBlock2Ptr->optionsButtonMode == 1)
+        gSaveBlock2Ptr->optionsButtonMode = 2;
+    else if (gSaveBlock2Ptr->optionsButtonMode == 2)         
+        gSaveBlock2Ptr->optionsButtonMode = 1;
+
     // Set Option Flag Defaults
     FlagSet(FLAG_ENABLE_FOLLOWER); // Turns Pokemon following On
     FlagSet(FLAG_ENABLE_SURFOVERWORLD); // Turns Surfing Overworlds On

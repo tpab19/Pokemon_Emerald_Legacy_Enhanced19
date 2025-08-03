@@ -162,7 +162,7 @@ static void MainCB2(void);
 static void VBlankCB(void);
 static void DrawTopBarText(void); //top Option text
 static void DrawLeftSideOptionText(int selection, int y);
-static void DrawRightSideChoiceText(const u8 *str, int x, int y, bool8 choosen, bool8 active);
+static void DrawRightSideChoiceText(const u8 *str, int x, int y, bool8 chosen, bool8 active);
 static void DrawOptionMenuTexts(void); //left side text;
 static void DrawChoices(u32 id, int y); //right side draw function
 static void HighlightOptionMenuItem(void);
@@ -177,6 +177,7 @@ static int XOptions_ProcessInput(int x, int selection);
 static int ProcessInput_Options_Two(int selection);
 static int ProcessInput_Options_Three(int selection);
 static int ProcessInput_Options_Four(int selection);
+static int ProcessInput_Options_Ten(int selection);
 static int ProcessInput_Options_Eleven(int selection);
 static int ProcessInput_Sound(int selection);
 static int ProcessInput_FrameType(int selection);
@@ -186,6 +187,7 @@ static u8 MenuItemCount(void);
 static u8 MenuItemCancel(void);
 static void DrawDescriptionText(void);
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style, bool8 active);
+static void DrawOptionMenuChoiceStrings(int selection, int y, bool8 active, const u8 *const choiceStrings[], int maxChoices);
 static void DrawChoices_Options_Four(const u8 *const *const strings, int selection, int y, bool8 active);
 static void ReDrawAll(void);
 static void DrawChoices_TextSpeed(int selection, int y);
@@ -244,7 +246,7 @@ struct // MENU_MAIN - General
 {
     [MENUITEM_MAIN_TEXTSPEED]    = {DrawChoices_TextSpeed,   ProcessInput_Options_Three},
     [MENUITEM_MAIN_SOUND]        = {DrawChoices_Sound,       ProcessInput_Options_Two},
-    [MENUITEM_MAIN_BUTTONMODE]   = {DrawChoices_ButtonMode,  ProcessInput_Options_Three},
+    [MENUITEM_MAIN_BUTTONMODE]   = {DrawChoices_ButtonMode,  ProcessInput_Options_Ten},
     [MENUITEM_MAIN_FRAMETYPE]    = {DrawChoices_FrameType,   ProcessInput_FrameType},
     [MENUITEM_CUSTOM_FONT]       = {DrawChoices_Font,        ProcessInput_Options_Two}, 
     [MENUITEM_MAIN_STAT_EDITOR]  = {DrawChoices_StatEditor,  ProcessInput_Options_Two},
@@ -457,31 +459,41 @@ static bool8 CheckConditions(int selection)
 }
 
 // Descriptions
-static const u8 sText_Empty[]                   = _("");
-static const u8 sText_Desc_Save[]               = _("Save your settings.");
-static const u8 sText_Desc_TextSpeed[]          = _("Choose one of the three text-display\nspeeds.");
-static const u8 sText_Desc_SoundMono[]          = _("Sound is the same in all speakers.\nRecommended for original hardware.");
-static const u8 sText_Desc_SoundStereo[]        = _("Play the left and right audio channel\nseperately. Great with headphones.");
-static const u8 sText_Desc_ButtonMode[]         = _("All buttons work as normal.");
-static const u8 sText_Desc_ButtonMode_LR[]      = _("On some screens the L and R buttons\nact as left and right.");
-static const u8 sText_Desc_ButtonMode_LA[]      = _("The L button acts as another A\nbutton for one-handed play.");
-static const u8 sText_Desc_StatEditor_Hide[]    = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
-static const u8 sText_Desc_StatEditor_Show[]    = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
-static const u8 sText_Desc_Nickname_Hide[]      = _("Original Experience. Don't allow\nchanging Nickname in the Party Menu.");
-static const u8 sText_Desc_Nickname_Show[]      = _("Change Nickname in the Party Menu.\nTraded Pokemon require Name Rater.");
-static const u8 sText_Desc_FrameType[]          = _("Choose the frame surrounding the\nwindows.");
-static const u8 sText_Desc_FontType_Hoenn[]     = _("Original Experience.\nStandard POKéMON EMERALD Font.");
-static const u8 sText_Desc_FontType_Kanto[]     = _("POKéMON FIRERED/LEAFGREEN Font.\nMay not show correctly for all text.");
-static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][3] =
+static const u8 sText_Empty[]                       = _("");
+static const u8 sText_Desc_Save[]                   = _("Save your settings.");
+static const u8 sText_Desc_TextSpeed[]              = _("Choose one of the three text-display\nspeeds.");
+static const u8 sText_Desc_SoundMono[]              = _("Sound is the same in all speakers.\nRecommended for original hardware.");
+static const u8 sText_Desc_SoundStereo[]            = _("Play the left and right audio channel\nseperately. Great with headphones.");
+static const u8 sText_Desc_StatEditor_Hide[]        = _("Hide IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
+static const u8 sText_Desc_StatEditor_Show[]        = _("Show IV/EV Editor in the Party Menu.\nAny stat changes made will remain.");
+static const u8 sText_Desc_Nickname_Hide[]          = _("Original Experience. Don't allow\nchanging Nickname in the Party Menu.");
+static const u8 sText_Desc_Nickname_Show[]          = _("Change Nickname in the Party Menu.\nTraded Pokemon require Name Rater.");
+static const u8 sText_Desc_FrameType[]              = _("Choose the frame surrounding the\nwindows.");
+static const u8 sText_Desc_FontType_Hoenn[]         = _("Original Experience.\nStandard POKéMON EMERALD Font.");
+static const u8 sText_Desc_FontType_Kanto[]         = _("POKéMON FIRERED/LEAFGREEN Font.\nMay not show correctly for all text.");
+static const u8 sText_Desc_ButtonMode[]             = _("All buttons work as normal.\nLR Mode inactive.");
+static const u8 sText_Desc_ButtonMode_LA[]          = _("The {L_BUTTON} button acts as another\n{A_BUTTON} button for one-handed play.");
+static const u8 sText_Desc_ButtonMode_LR[]          = _("{L_BUTTON} and {R_BUTTON} mainly act as left and right.\nActive on all Button Modes except L=A.");
+static const u8 sText_Desc_ButtonMode_Context[]     = _("The {L_BUTTON} button contextually changes\nRUN, BIKE, SURF, or DIVE settings.");
+static const u8 sText_Desc_ButtonMode_World[]       = _("The {L_BUTTON} button steps through each\nWORLD SPEED option.");
+static const u8 sText_Desc_ButtonMode_World2x[]     = _("The {L_BUTTON} button toggles\nWORLD SPEED at 2x on and off.");
+static const u8 sText_Desc_ButtonMode_World4x[]     = _("The {L_BUTTON} button toggles\nWORLD SPEED at 4x on and off.");
+static const u8 sText_Desc_ButtonMode_World8x[]     = _("The {L_BUTTON} button toggles\nWORLD SPEED at 8x on and off.");
+static const u8 sText_Desc_ButtonMode_FastMode[]    = _("The {L_BUTTON} button toggles WORLD SPEED,\nRUN, SURF, and DIVE to max or off.");
+static const u8 sText_Desc_ButtonMode_Follower[]    = _("The {L_BUTTON} button toggles\nPOKéMON FOLLOWERS on and off.");
+static const u8 *const sOptionMenuItemDescriptionsMain[MENUITEM_MAIN_COUNT][10] =
 {
-    [MENUITEM_MAIN_TEXTSPEED]       = {sText_Desc_TextSpeed,            sText_Empty,                sText_Empty},
-    [MENUITEM_MAIN_SOUND]           = {sText_Desc_SoundMono,            sText_Desc_SoundStereo,     sText_Empty},
-    [MENUITEM_MAIN_BUTTONMODE]      = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LR,   sText_Desc_ButtonMode_LA},
-    [MENUITEM_MAIN_FRAMETYPE]       = {sText_Desc_FrameType,            sText_Empty,                sText_Empty},
-    [MENUITEM_CUSTOM_FONT]          = {sText_Desc_FontType_Hoenn,       sText_Desc_FontType_Kanto,  sText_Empty},
-    [MENUITEM_MAIN_STAT_EDITOR]     = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show, sText_Empty},
-    [MENUITEM_MAIN_NICKNAME]        = {sText_Desc_Nickname_Hide,        sText_Desc_Nickname_Show,   sText_Empty},
-    [MENUITEM_MAIN_CANCEL]          = {sText_Desc_Save,                 sText_Empty,                sText_Empty},
+    [MENUITEM_MAIN_TEXTSPEED]       = {sText_Desc_TextSpeed,            sText_Empty,                    sText_Empty},
+    [MENUITEM_MAIN_SOUND]           = {sText_Desc_SoundMono,            sText_Desc_SoundStereo,         sText_Empty},
+    [MENUITEM_MAIN_FRAMETYPE]       = {sText_Desc_FrameType,            sText_Empty,                    sText_Empty},
+    [MENUITEM_CUSTOM_FONT]          = {sText_Desc_FontType_Hoenn,       sText_Desc_FontType_Kanto,      sText_Empty},
+    [MENUITEM_MAIN_STAT_EDITOR]     = {sText_Desc_StatEditor_Hide,      sText_Desc_StatEditor_Show,     sText_Empty},
+    [MENUITEM_MAIN_NICKNAME]        = {sText_Desc_Nickname_Hide,        sText_Desc_Nickname_Show,       sText_Empty},
+    [MENUITEM_MAIN_CANCEL]          = {sText_Desc_Save,                 sText_Empty,                    sText_Empty},
+    [MENUITEM_MAIN_BUTTONMODE]      = {sText_Desc_ButtonMode,           sText_Desc_ButtonMode_LA,       sText_Desc_ButtonMode_LR,
+                                       sText_Desc_ButtonMode_Context,   sText_Desc_ButtonMode_World,    sText_Desc_ButtonMode_World2x,
+                                       sText_Desc_ButtonMode_World4x,   sText_Desc_ButtonMode_World8x,  sText_Desc_ButtonMode_FastMode,
+                                       sText_Desc_ButtonMode_Follower},
 };
 
 // Battle
@@ -512,12 +524,12 @@ static const u8 *const sOptionMenuItemDescriptionsBattle[MENUITEM_BATTLE_COUNT][
     [MENUITEM_BATTLE_CANCEL]            = {sText_Desc_Save,                 sText_Empty,                    sText_Empty,                    sText_Empty},
 };
 
-static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold {B_BUTTON} to walk.");
-static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold {B_BUTTON} to run.");
+static const u8 sText_Desc_AutoRun_On[]                 = _("Use RUNNING SHOES automatically.\nHold {B_BUTTON} button to walk.");
+static const u8 sText_Desc_AutoRun_Off[]                = _("Use RUNNING SHOES as normal.\nHold {B_BUTTON} button to run.");
 static const u8 sText_Desc_OverworldSpeed_1x[]          = _("Standard player and NPC speed.\nNo change from original Emerald.");
-static const u8 sText_Desc_OverworldSpeed_2x[]          = _("2x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
-static const u8 sText_Desc_OverworldSpeed_4x[]          = _("4x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
-static const u8 sText_Desc_OverworldSpeed_8x[]          = _("8x standard player and NPC speed.\nHold {L_BUTTON} for standard speed.");
+static const u8 sText_Desc_OverworldSpeed_2x[]          = _("2x standard player and NPC speed.\nHold {R_BUTTON} button for standard speed.");
+static const u8 sText_Desc_OverworldSpeed_4x[]          = _("4x standard player and NPC speed.\nHold {R_BUTTON} button for standard speed.");
+static const u8 sText_Desc_OverworldSpeed_8x[]          = _("8x standard player and NPC speed.\nHold {R_BUTTON} button for standard speed.");
 static const u8 sText_Desc_ImprovedFishing_On[]         = _("Improved Fishing.\nFish are not able to escape.");
 static const u8 sText_Desc_ImprovedFishing_Off[]        = _("Fish as usual.\nFish may escape if not reeled in.");
 static const u8 sText_Desc_BikeOff[]                    = _("Disables the BIKE music when you\nstart riding the BIKE.");
@@ -732,7 +744,7 @@ static void DrawLeftSideOptionText(int selection, int y)
         AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, 8, y, 0, 0, color_gray, TEXT_SKIP_DRAW, OptionTextRight(selection));
 }
 
-static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 choosen, bool8 active)
+static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 chosen, bool8 active)
 {
     u8 color_red[3];
     u8 color_gray[3];
@@ -757,7 +769,7 @@ static void DrawRightSideChoiceText(const u8 *text, int x, int y, bool8 choosen,
     }
 
 
-    if (choosen)
+    if (chosen)
         AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color_red, TEXT_SKIP_DRAW, text);
     else
         AddTextPrinterParameterized4(WIN_OPTIONS, FONT_NORMAL, x, y, 0, 0, color_gray, TEXT_SKIP_DRAW, text);
@@ -1302,6 +1314,11 @@ static int ProcessInput_Options_Four(int selection)
     return XOptions_ProcessInput(4, selection);
 }
 
+static int ProcessInput_Options_Ten(int selection)
+{
+    return XOptions_ProcessInput(10, selection);
+}
+
 static int ProcessInput_Options_Eleven(int selection)
 {
     return XOptions_ProcessInput(11, selection);
@@ -1347,12 +1364,34 @@ static int ProcessInput_FrameType(int selection)
 // Draw Choices functions ****GENERIC****
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style, bool8 active)
 {
-    bool8 choosen = FALSE;
+    bool8 chosen = FALSE;
     if (style != 0)
-        choosen = TRUE;
+        chosen = TRUE;
 
-    DrawRightSideChoiceText(text, x, y+1, choosen, active);
+    DrawRightSideChoiceText(text, x, y+1, chosen, active);
 }
+
+static const u8 sText_Less[] = _("{LEFT_ARROW}");
+static const u8 sText_More[] = _("{RIGHT_ARROW}");
+// Draw Choices Strings functions ****GENERIC****
+static void DrawOptionMenuChoiceStrings(int selection, int y, bool8 active, const u8 *const choiceStrings[], int maxChoices)
+{
+    int xMid = GetMiddleX(sText_Less, choiceStrings[selection], sText_More);
+
+    // Draw left/right arrows for less and more indicators
+    if (selection != 0)
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
+
+    DrawOptionMenuChoice(choiceStrings[selection], xMid, y, 0, active);
+
+    if (selection != (maxChoices - 1))
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 0);
+}
+
 
 static void DrawChoices_Options_Four(const u8 *const *const strings, int selection, int y, bool8 active)
 {
@@ -1406,121 +1445,113 @@ static void ReDrawAll(void)
 }
 
 // Process Input functions ****SPECIFIC****
-//static const u8 *const sTextSpeedStrings[] = {gText_TextSpeedSlow, gText_TextSpeedMid, gText_TextSpeedFast};
+static const u8 *const sTextSpeedStrings[] = {gText_TextSpeedSlow, gText_TextSpeedMid, gText_TextSpeedFast};
 static void DrawChoices_TextSpeed(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_TEXTSPEED);
-    u8 styles[3] = {0};
-    int xMid = GetMiddleX(gText_TextSpeedSlow, gText_TextSpeedMid, gText_TextSpeedFast);
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_TextSpeedSlow, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_TextSpeedMid, xMid, y, styles[1], active);
-    DrawOptionMenuChoice(gText_TextSpeedFast, GetStringRightAlignXOffset(1, gText_TextSpeedFast, 198), y, styles[2], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sTextSpeedStrings, 3);
 }
 
+static const u8 *const sBattleSceneStrings[] = {gText_BattleSceneOn, gText_BattleSceneOff};
 static void DrawChoices_BattleScene(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_BATTLESCENE);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_BattleSceneOn, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOff, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sBattleSceneStrings, 2);
 }
 
+static const u8 *const sBattleStyleStrings[] = {gText_BattleStyleShift, gText_BattleStyleSet};
 static void DrawChoices_BattleStyle(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_BATTLESTYLE);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_BattleStyleShift, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sBattleStyleStrings, 2);
 }
 
 static const u8 sText_TypeEffect_On[]   = _("ON");
 static const u8 sText_TypeEffect_Off[]  = _("OFF");
+static const u8 *const sTypeEffectStrings[] = {sText_TypeEffect_On, sText_TypeEffect_Off};
 static void DrawChoices_TypeEffect(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_BATTLE_TYPEEFFECT);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_TypeEffect_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_TypeEffect_Off, GetStringRightAlignXOffset(FONT_NORMAL, sText_TypeEffect_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sTypeEffectStrings, 2);
 }
 
-static const u8 sText_Less[] = _("{LEFT_ARROW}");
-static const u8 sText_More[] = _("{RIGHT_ARROW}");
 static const u8 sText_HardMode_Off[]        = _("NORMAL");
 static const u8 sText_HardMode_Hard[]       = _("HARD");
 static const u8 sText_HardMode_Hardcore[]   = _("HARDCORE");
-static const u8 *const sTextHardModeStrings[] = {sText_HardMode_Off, sText_HardMode_Hard, sText_HardMode_Hardcore};
+static const u8 *const sHardModeStrings[] = {sText_HardMode_Off, sText_HardMode_Hard, sText_HardMode_Hardcore};
 static void DrawChoices_HardMode(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_BATTLE_HARDMODE);
-    int xMid = GetMiddleX(sText_Less, sTextHardModeStrings[selection], sText_More);
-
-    // Draw left/right arrows for less and more indicators
-    DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
-    DrawOptionMenuChoice(sTextHardModeStrings[selection], xMid, y, 1, active);
-    DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
+    DrawOptionMenuChoiceStrings(selection, y, active, sHardModeStrings, 3);
 }
 
 static const u8 sText_ItemAnimate_Normal[]   = _("NORMAL");
 static const u8 sText_ItemAnimate_Reduced[]  = _("REDUCED");
 static const u8 sText_ItemAnimate_Minimal[]  = _("MINIMAL");
 static const u8 sText_ItemAnimate_None[]     = _("NONE");
-static const u8 *const sTextItemAnimateStrings[] = {sText_ItemAnimate_Normal, sText_ItemAnimate_Reduced, sText_ItemAnimate_Minimal, sText_ItemAnimate_None};
+static const u8 *const sItemAnimateStrings[] = {sText_ItemAnimate_Normal, sText_ItemAnimate_Reduced, sText_ItemAnimate_Minimal, sText_ItemAnimate_None};
 static void DrawChoices_ItemAnimate(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_BATTLE_ITEMANIMATE);
-    int xMid = GetMiddleX(sText_Less, sTextItemAnimateStrings[selection], sText_More);
-
-    // Draw left/right arrows for less and more indicators
-    DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
-    DrawOptionMenuChoice(sTextItemAnimateStrings[selection], xMid, y, 1, active);
-    DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
+    DrawOptionMenuChoiceStrings(selection, y, active, sItemAnimateStrings, 4);
 }
 
+static const u8 *const sSoundStrings[] = {gText_SoundMono, gText_SoundStereo};
 static void DrawChoices_Sound(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_SOUND);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_SoundMono, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sSoundStrings, 2);
 }
 
+static const u8 sText_ButtonType_Settings[]         = _("L=SETTINGS");
+static const u8 sText_ButtonType_OverworldSpeed[]   = _("L=SPEED");
+static const u8 sText_ButtonType_OverworldSpeed2x[] = _("L=SPEED 2x");
+static const u8 sText_ButtonType_OverworldSpeed4x[] = _("L=SPEED 4x");
+static const u8 sText_ButtonType_OverworldSpeed8x[] = _("L=SPEED 8x");
+static const u8 sText_ButtonType_FastMode[]         = _("L=FAST MODE");
+static const u8 sText_ButtonType_Follower[]         = _("L=FOLLOWER");
+static const u8 *const sButtonModeStrings[] =
+    {
+    gText_ButtonTypeNormal,
+    gText_ButtonTypeLEqualsA,
+    gText_ButtonTypeLR,
+    sText_ButtonType_Settings,
+    sText_ButtonType_OverworldSpeed,
+    sText_ButtonType_OverworldSpeed2x,
+    sText_ButtonType_OverworldSpeed4x,
+    sText_ButtonType_OverworldSpeed8x,
+    sText_ButtonType_FastMode,
+    sText_ButtonType_Follower
+    };
 static void DrawChoices_ButtonMode(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_BUTTONMODE);
-    u8 styles[3] = {0};
-    int xMid = GetMiddleX(gText_ButtonTypeNormal, gText_ButtonTypeLR, gText_ButtonTypeLEqualsA);
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_ButtonTypeNormal, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_ButtonTypeLR, xMid, y, styles[1], active);
-    DrawOptionMenuChoice(gText_ButtonTypeLEqualsA, GetStringRightAlignXOffset(1, gText_ButtonTypeLEqualsA, 198), y, styles[2], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sButtonModeStrings, 10);
 }
 
-static const u8 sText_Normal[] = _("NORMAL");
+static const u8 sText_Normal[]  = _("NORMAL");
 static const u8 sText_Instant[] = _("INSTANT");
-static const u8 sText_Dummy[] = _("+1"); // Used to center the numeric identifier
+static const u8 sText_Dummy[]   = _("+1"); // Used to center the numeric identifier
 static void DrawChoices_BarSpeed(int selection, int y) //HP and EXP
 {
     bool8 active = CheckConditions(MENUITEM_CUSTOM_EXP_BAR);
     int xMid;
 
     // Draw left/right arrows for less and more indicators
-    DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
-    DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
+    if (selection != 0)
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
+
+    if (selection != 10)
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 0);
+    
     if (selection == 0)
     {
         xMid = GetMiddleX(sText_Less, sText_Normal, sText_More);
-        DrawOptionMenuChoice(sText_Normal, xMid, y, 1, active);
+        DrawOptionMenuChoice(sText_Normal, xMid, y, 0, active);
     }
     else if (selection < 10)
     {
@@ -1528,24 +1559,14 @@ static void DrawChoices_BarSpeed(int selection, int y) //HP and EXP
         textPlus[1] = CHAR_0 + selection;
         
         xMid = GetMiddleX(sText_Less, sText_Dummy, sText_More);
-        DrawOptionMenuChoice(textPlus, xMid, y, 1, active);
+        DrawOptionMenuChoice(textPlus, xMid, y, 0, active);
     }
     else
     {
         xMid = GetMiddleX(sText_Less, sText_Instant, sText_More);
-        DrawOptionMenuChoice(sText_Instant, xMid, y, 1, active);
+        DrawOptionMenuChoice(sText_Instant, xMid, y, 0, active);
     }
 }
-/*
-static void DrawChoices_UnitSystem(int selection, int y)
-{
-    bool8 active = CheckConditions(MENUITEM_MAIN_UNIT_SYSTEM);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(gText_UnitSystemImperial, 104, y, styles[0], active);
-    DrawOptionMenuChoice(gText_UnitSystemMetric, GetStringRightAlignXOffset(1, gText_UnitSystemMetric, 198), y, styles[1], active);
-}*/
 
 static void DrawChoices_FrameType(int selection, int y)
 {
@@ -1553,6 +1574,7 @@ static void DrawChoices_FrameType(int selection, int y)
     u8 text[16];
     u8 n = selection + 1;
     u16 i;
+    int xMid;
 
     for (i = 0; gText_FrameTypeNumber[i] != EOS && i <= 5; i++)
         text[i] = gText_FrameTypeNumber[i];
@@ -1569,165 +1591,134 @@ static void DrawChoices_FrameType(int selection, int y)
     {
         text[i] = n % 10 + CHAR_0;
         i++;
-        text[i] = 0x77;
-        i++;
     }
-
     text[i] = EOS;
 
-    DrawOptionMenuChoice(gText_FrameType, 104, y, 0, active);
-    DrawOptionMenuChoice(text, 128, y, 1, active);
+    xMid = GetMiddleX(sText_Less, text, sText_More);
+
+    // Draw left/right arrows for less and more indicators
+    if (selection != 0)
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
+
+    DrawOptionMenuChoice(text, xMid, y, 0, active);
+    if (selection != 19)
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 1);
+    else
+        DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 200), y, 0, 0);
 }
 
 static const u8 sText_OptionFont_Hoenn[]    = _("HOENN");
 static const u8 sText_OptionFont_Kanto[]    = _("KANTO");
+static const u8 *const sFontStrings[] = {sText_OptionFont_Hoenn, sText_OptionFont_Kanto};
+
 static void DrawChoices_Font(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_CUSTOM_FONT);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_OptionFont_Hoenn, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_OptionFont_Kanto, GetStringRightAlignXOffset(1, sText_OptionFont_Kanto, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sFontStrings, 2);
 }
 
 static const u8 sText_StatEditorHide[]   = _("HIDE");
 static const u8 sText_StatEditorShow[]   = _("SHOW");
+static const u8 *const sStatEditorStrings[] = {sText_StatEditorHide, sText_StatEditorShow};
 static void DrawChoices_StatEditor(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_STAT_EDITOR);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_StatEditorHide, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_StatEditorShow, GetStringRightAlignXOffset(FONT_NORMAL, sText_StatEditorShow, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sStatEditorStrings, 2);
 }
 
 static const u8 sText_NicknameHide[]   = _("HIDE");
 static const u8 sText_NicknameShow[]   = _("SHOW");
+static const u8 *const sNicknamStrings[] = {sText_NicknameHide, sText_NicknameShow};
 static void DrawChoices_Nickname(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_MAIN_NICKNAME);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_NicknameHide, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_NicknameShow, GetStringRightAlignXOffset(FONT_NORMAL, sText_NicknameShow, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sNicknamStrings, 2);
 }
 
 static const u8 sText_AutoRun_On[]   = _("ON");
 static const u8 sText_AutoRun_Off[]   = _("OFF");
+static const u8 *const sAutoRunStrings[] = {sText_AutoRun_On, sText_AutoRun_Off};
 static void DrawChoices_AutoRun(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_WORLD_AUTORUN);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_AutoRun_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_AutoRun_Off, GetStringRightAlignXOffset(1, sText_AutoRun_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sAutoRunStrings, 2);
 }
 
 static const u8 sText_OverworldSpeedUp_Original[]   = _("ORIGINAL");
-static const u8 sText_OverworldSpeedUp_Fast[]       = _("FAST");
-static const u8 sText_OverworldSpeedUp_Faster[]     = _("FASTER");
-static const u8 sText_OverworldSpeedUp_Fastest[]    = _("FASTEST");
-static const u8 *const sTextItemOverworldSpeedupStrings[] = {sText_OverworldSpeedUp_Original, sText_OverworldSpeedUp_Fast, sText_OverworldSpeedUp_Faster, sText_OverworldSpeedUp_Fastest};
+static const u8 sText_OverworldSpeedUp_Fast[]       = _("2x");
+static const u8 sText_OverworldSpeedUp_Faster[]     = _("4x");
+static const u8 sText_OverworldSpeedUp_Fastest[]    = _("8x");
+static const u8 *const sOverworldSpeedupStrings[] = {sText_OverworldSpeedUp_Original, sText_OverworldSpeedUp_Fast, sText_OverworldSpeedUp_Faster, sText_OverworldSpeedUp_Fastest};
 static void DrawChoices_OverworldSpeed(int selection, int y)
 {
-    bool8 active = CheckConditions(VAR_OVERWORLD_SPEEDUP);
-    int xMid = GetMiddleX(sText_Less, sTextItemOverworldSpeedupStrings[selection], sText_More);
-
-    // Draw left/right arrows for less and more indicators
-    DrawOptionMenuChoice(sText_Less, 104, y, 0, 0);
-    DrawOptionMenuChoice(sTextItemOverworldSpeedupStrings[selection], xMid, y, 1, active);
-    DrawOptionMenuChoice(sText_More, GetStringRightAlignXOffset(1, sText_More, 198), y, 0, 0);
+    bool8 active = CheckConditions(MENUITEM_WORLD_OVERWORLDSPEED);
+    DrawOptionMenuChoiceStrings(selection, y, active, sOverworldSpeedupStrings, 4);
 }
 
 static const u8 sText_ImprovedFishing_On[]   = _("ON");
 static const u8 sText_ImprovedFishing_Off[]   = _("OFF");
+static const u8 *const sImprovedFishingStrings[] = {sText_ImprovedFishing_On, sText_ImprovedFishing_Off};
 static void DrawChoices_ImprovedFishing(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_WORLD_IMPROVEDFISHING);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_ImprovedFishing_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_ImprovedFishing_Off, GetStringRightAlignXOffset(1, sText_ImprovedFishing_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sImprovedFishingStrings, 2);
 }
 
 static const u8 sText_BikeMusic_On[]   = _("ON");
 static const u8 sText_BikeMusic_Off[]   = _("OFF");
+static const u8 *const sBikeMusicStrings[] = {sText_BikeMusic_On, sText_BikeMusic_Off};
 static void DrawChoices_BikeMusic(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_WORLD_BIKEMUSIC);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_BikeMusic_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_BikeMusic_Off, GetStringRightAlignXOffset(1, sText_BikeMusic_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sBikeMusicStrings, 2);
 }
 
 static const u8 sText_MonOverworld_On[] = _("ON");
 static const u8 sText_MonOverworld_Off[] = _("OFF");
+static const u8 *const sMonOverworldStrings[] = {sText_MonOverworld_On, sText_MonOverworld_Off};
 static void DrawChoices_MonOverworld(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_WORLD_MONOVERWORLD);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_MonOverworld_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_MonOverworld_Off, GetStringRightAlignXOffset(1, sText_MonOverworld_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sMonOverworldStrings, 2);
 }
 
 static const u8 sText_FastSurf_On[]   = _("ON");
 static const u8 sText_FastSurf_Off[]   = _("OFF");
+static const u8 *const sFastSurfStrings[] = {sText_FastSurf_On, sText_FastSurf_Off};
 static void DrawChoices_FastSurf(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SURF_FASTSURF);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_FastSurf_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_FastSurf_Off, GetStringRightAlignXOffset(1, sText_FastSurf_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sFastSurfStrings, 2);
 }
 
 static const u8 sText_DiveSpeed_Slow[] = _("SLOW");
-static const u8 sText_DiveSpeed_Med[] = _("MED");
+static const u8 sText_DiveSpeed_Med[] = _("MEDIUM");
 static const u8 sText_DiveSpeed_Fast[] = _("FAST");
+static const u8 *const sDiveSpeedStrings[] = {sText_DiveSpeed_Slow, sText_DiveSpeed_Med, sText_DiveSpeed_Fast};
 static void DrawChoices_DiveSpeed(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SURF_DIVESPEED);
-    u8 styles[3] = {0};
-    int xMid = GetMiddleX(sText_DiveSpeed_Slow, sText_DiveSpeed_Med, sText_DiveSpeed_Fast);
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_DiveSpeed_Slow, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_DiveSpeed_Med, xMid, y, styles[1], active);
-    DrawOptionMenuChoice(sText_DiveSpeed_Fast, GetStringRightAlignXOffset(1, sText_DiveSpeed_Fast, 198), y, styles[2], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sDiveSpeedStrings, 3);
 }
 
 static const u8 sText_SurfMusic_On[]   = _("ON");
 static const u8 sText_SurfMusic_Off[]   = _("OFF");
+static const u8 *const sSurfMusicStrings[] = {sText_SurfMusic_On, sText_SurfMusic_Off};
 static void DrawChoices_SurfMusic(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SURF_SURFMUSIC);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_SurfMusic_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_SurfMusic_Off, GetStringRightAlignXOffset(1, sText_SurfMusic_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sSurfMusicStrings, 2);
 }
 
 static const u8 sText_SurfOverworld_On[]    = _("ON");
 static const u8 sText_SurfOverworld_Off[]   = _("OFF");
+static const u8 *const sSurfOverworldStrings[] = {sText_SurfOverworld_On, sText_SurfOverworld_Off};
 static void DrawChoices_SurfOverworld(int selection, int y)
 {
     bool8 active = CheckConditions(MENUITEM_SURF_SURFOVERWORLD);
-    u8 styles[2] = {0};
-    styles[selection] = 1;
-
-    DrawOptionMenuChoice(sText_SurfOverworld_On, 104, y, styles[0], active);
-    DrawOptionMenuChoice(sText_SurfOverworld_Off, GetStringRightAlignXOffset(1, sText_SurfOverworld_Off, 198), y, styles[1], active);
+    DrawOptionMenuChoiceStrings(selection, y, active, sSurfOverworldStrings, 2);
 }
 
 // Background tilemap

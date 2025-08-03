@@ -327,6 +327,12 @@ bool8 UpdateSave_v2_v3(const struct SaveSectorLocation *locations)
      * The pokemon structure hasn't changed at all this version, so
      * we can just assign across the old box storage to the new.  */
     *gPokemonStoragePtr = *sOldPokemonStoragePtr;
+
+    // Swap L=A and LR Options from older save if set due to definition swap in v3
+    if (gSaveBlock2Ptr->optionsButtonMode == 1)
+        gSaveBlock2Ptr->optionsButtonMode = 2;
+    else if (gSaveBlock2Ptr->optionsButtonMode == 2)         
+        gSaveBlock2Ptr->optionsButtonMode = 1;
     
     // Update Flags moved from Saveblock
     !FlagGet(FLAG_ENABLE_FOLLOWER)  ? FlagSet(FLAG_ENABLE_FOLLOWER)         : FlagClear(FLAG_ENABLE_FOLLOWER); // For consistency with other similar flags the flag name has been changed and use has been inverted throughout the code between V2 and V3 (same Flag dataslot hence not needing to change the name)
