@@ -1416,6 +1416,18 @@ static const u8 sDoomDesireDescription[] = _(
 static const u8 sPsychoBoostDescription[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
+	
+static const u8 sHurricaneDescription[] = _(
+    "A wind attack that may\n"
+    "cause paralysis.");
+	
+static const u8 sLeafStormDescription[] = _(
+    "Allows a full-power attack,\n"
+    "but sharply lowers SP. ATK.");
+
+static const u8 sBoomburstDescription[] = _(
+    "Uses sound waves to injure.\n"
+    "May confuse the foe.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
@@ -1774,4 +1786,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
+	[MOVE_HURRICANE - 1] = sHurricaneDescription,
+    [MOVE_LEAF_STORM - 1] = sLeafStormDescription,
+    [MOVE_BOOMBURST - 1] = sBoomburstDescription,
 };

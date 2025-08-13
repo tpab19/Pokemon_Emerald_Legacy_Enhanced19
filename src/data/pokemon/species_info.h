@@ -8704,7 +8704,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 70,
         .baseSpDefense = 50,
-        .types = { TYPE_WATER, TYPE_WATER },
+        .types = { TYPE_WATER, TYPE_NORMAL },
         .catchRate = 125,
         .expYield = 137,
         .evYield_HP        = 1,
@@ -8734,7 +8734,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 60,
         .baseSpAttack  = 100,
         .baseSpDefense = 60,
-        .types = { TYPE_WATER, TYPE_WATER },
+        .types = { TYPE_WATER, TYPE_NORMAL },
         .catchRate = 60,
         .expYield = 206,
         .evYield_HP        = 2,
@@ -9628,7 +9628,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
 
     [SPECIES_CACNEA] =
     {
-        .baseHP        = 60,
+        .baseHP        = 70,
         .baseAttack    = 85,
         .baseDefense   = 80,
         .baseSpeed     = 25,
