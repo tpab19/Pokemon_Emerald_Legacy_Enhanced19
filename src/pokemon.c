@@ -6095,6 +6095,52 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
     }
 }
 
+void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
+{
+    u8 evs[NUM_STATS];
+    u16 evIncrease = 0;
+    u16 totalEVs = 0;
+    u16 heldItem;
+    u8 holdEffect;
+    int i, multiplier;
+
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        evs[i] = GetMonData(mon, MON_DATA_HP_EV + i, 0);
+        totalEVs += evs[i];
+    }
+
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        if (totalEVs >= MAX_TOTAL_EVS)
+            break;
+
+        if (CheckPartyHasHadPokerus(mon, 0))
+            multiplier = 2;
+        else
+            multiplier = 1;
+
+        switch (i)
+        {
+        case STAT_HP:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_HP * multiplier;
+            break;
+        case STAT_ATK:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Attack * multiplier;
+            break;
+        case STAT_DEF:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Defense * multiplier;
+            break;
+        case STAT_SPEED:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_Speed * multiplier;
+            break;
+        case STAT_SPATK:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_SpAttack * multiplier;
+            break;
+        case STAT_SPDEF:
+            evIncrease = gSpeciesInfo[defeatedSpecies].evYield_SpDefense * multiplier;
+            break;
+        }
 
         heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
         if (heldItem == ITEM_ENIGMA_BERRY)
