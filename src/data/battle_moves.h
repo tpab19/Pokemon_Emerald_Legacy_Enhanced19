@@ -4228,7 +4228,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SHADOW_PUNCH] =
     {
         .effect = EFFECT_ALWAYS_HIT,
-        .power = 80,
+        .power = 100,
         .type = TYPE_GHOST,
         .accuracy = 0,
         .pp = 20,
