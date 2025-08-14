@@ -3687,14 +3687,14 @@ static const struct TrainerMon sParty_Sidney[] = {
     .iv = 250,
     .lvl = 51,
     .species = SPECIES_MURKROW,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_SKY_ATTACK, MOVE_PURSUIT, MOVE_SWAGGER, MOVE_HAZE}
     },
     {
     .iv = 250,
     .lvl = 52,
     .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_LUM_BERRY,
     .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_AIR_CUTTER, MOVE_GRASS_WHISTLE}
     },
     {
@@ -3732,7 +3732,7 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .iv = 250,
     .lvl = 53,
     .species = SPECIES_BANETTE,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_SPELL_TAG,
     .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_REVENGE, MOVE_DESTINY_BOND}
     },
     {
@@ -3742,12 +3742,19 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .heldItem = ITEM_WHITE_HERB,
     .moves = {MOVE_OVERHEAT, MOVE_WILL_O_WISP, MOVE_SHADOW_BALL, MOVE_CONFUSE_RAY}
     },
+	{
+    .iv = 250,
+    .lvl = 52,
+    .species = SPECIES_BELLOSSOM,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL, MOVE_CHARM}
+    },
     {
     .iv = 250,
     .lvl = 52,
-    .species = SPECIES_MEDICHAM,
-    .heldItem = ITEM_SALAC_BERRY,
-    .moves = {MOVE_PSYCHIC, MOVE_HI_JUMP_KICK, MOVE_ENDURE, MOVE_REVERSAL}
+    .species = SPECIES_KECLEON,
+    .heldItem = ITEM_FOCUS_BAND,
+    .moves = {MOVE_SHADOW_BALL, MOVE_FIRE_BLAST, MOVE_GLARE, MOVE_PSYCHIC}
     },
     {
     .iv = 255,
@@ -3791,7 +3798,7 @@ static const struct TrainerMon sParty_Glacia[] = {
     .iv = 250,
     .lvl = 54,
     .species = SPECIES_GLALIE,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_BLIZZARD, MOVE_EXPLOSION, MOVE_SWAGGER, MOVE_WATER_PULSE}
     },
     {
@@ -3835,9 +3842,9 @@ static const struct TrainerMon sParty_Drake[] = {
 	{
     .iv = 250,
     .lvl = 54,
-    .species = SPECIES_KECLEON,
+    .species = SPECIES_AERODACTYL,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_BLIZZARD, MOVE_FIRE_BLAST, MOVE_THUNDER, MOVE_GLARE}
+    .moves = {MOVE_ROCK_SLIDE, MOVE_FIRE_BLAST, MOVE_SKY_ATTACK, MOVE_IRON_TAIL}
     },
     {
     .iv = 255,
@@ -3854,7 +3861,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .lvl = 13,
     .species = SPECIES_ANORITH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FURY_SWIPES, MOVE_FURY_CUTTER, MOVE_, MOVE_NONE}
+    .moves = {MOVE_FURY_SWIPES, MOVE_FURY_CUTTER, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 100,
@@ -3868,7 +3875,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .lvl = 15,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_ORAN_BERRY,
-    .moves = {MOVE_ROCK_THROW, MOVE_HEADBUTT, MOVE_ROCK_TOMB}
+    .moves = {MOVE_ROCK_THROW, MOVE_HEADBUTT, MOVE_ROCK_TOMB, MOVE_NONE}
     }
 };
 // Dewford Gym Leader
@@ -3946,7 +3953,7 @@ static const struct TrainerMon sParty_Flannery1[] = {
     .iv = 250,
     .lvl = 30,
     .species = SPECIES_CAMERUPT,
-    .heldItem = ITEM_NONE,
+    .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_OVERHEAT, MOVE_MAGNITUDE, MOVE_SUNNY_DAY, MOVE_ATTRACT}
     },
     {
@@ -4009,21 +4016,21 @@ static const struct TrainerMon sParty_Winona1[] = {
     .lvl = 37,
     .species = SPECIES_SWELLOW,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_TAKE_DOWN, MOVE_WHIRLWIND}
+    .moves = {MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_HYPER_VOICE, MOVE_QUICK_ATTACK}
     },
     {
     .iv = 200,
     .lvl = 36,
     .species = SPECIES_PELIPPER,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_WATER_PULSE, MOVE_SHOCK_WAVE, MOVE_ICE_BEAM, MOVE_AERIAL_ACE}
+    .moves = {MOVE_WATER_PULSE, MOVE_SHOCK_WAVE, MOVE_ICE_BEAM, MOVE_AIR_CUTTER}
     },
     {
     .iv = 235,
     .lvl = 37,
     .species = SPECIES_SKARMORY,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_WHIRLWIND, MOVE_MUD_SLAP, MOVE_STEEL_WING, MOVE_AERIAL_ACE}
+    .moves = {MOVE_WHIRLWIND, MOVE_MUD_SLAP, MOVE_STEEL_WING, MOVE_AIR_CUTTER}
     },
     {
     .iv = 255,
