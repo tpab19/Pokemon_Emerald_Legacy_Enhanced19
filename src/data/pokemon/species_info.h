@@ -8669,10 +8669,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_MASQUERAIN] =
     {
         .baseHP        = 70,
-        .baseAttack    = 60,
+        .baseAttack    = 85,
         .baseDefense   = 62,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 100,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 95,
         .baseSpDefense = 82,
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 75,
