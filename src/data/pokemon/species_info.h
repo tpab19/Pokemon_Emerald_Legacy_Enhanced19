@@ -9630,9 +9630,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP        = 70,
         .baseAttack    = 85,
-        .baseDefense   = 80,
+        .baseDefense   = 75,
         .baseSpeed     = 25,
-        .baseSpAttack  = 85,
+        .baseSpAttack  = 75,
         .baseSpDefense = 40,
         .types = { TYPE_GRASS, TYPE_GRASS },
         .catchRate = 190,

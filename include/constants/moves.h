@@ -359,9 +359,9 @@
 #define MOVE_HURRICANE 355
 #define MOVE_LEAF_STORM 356
 #define MOVE_BOOMBURST 357
+#define MOVE_SUCKER_PUNCH 358
 
-
-#define MOVES_COUNT 358
+#define MOVES_COUNT 359
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
