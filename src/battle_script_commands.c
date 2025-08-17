@@ -9136,7 +9136,6 @@ static void Cmd_sethail(void)
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STARTED_HAIL;
         gWishFutureKnock.weatherDuration = 5;
     }
-
     gBattlescriptCurrInstr++;
 }
 

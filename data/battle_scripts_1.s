@@ -4671,9 +4671,9 @@ BattleScript_HeldItemAnimationMinimal_Attacker::
 	return
 	
 BattleScript_SnowWarningActivates::
-	pause 0x20
+	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNSXWHIPPEDUPHAILSTORM
 	waitstate
-	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES, NULL
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
 	call BattleScript_WeatherFormChanges
 	end3
