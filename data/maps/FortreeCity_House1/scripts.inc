@@ -6,22 +6,22 @@ FortreeCity_House1_MapScripts::
 
 FortreeCity_House1_OnResume:
 	call_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_SetUpKecleon
-	call_if_unset FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_SetUpLoudred
+	call_if_unset FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_SetUpSnorunt
 	return
 
 FortreeCity_House1_EventScript_SetUpKecleon::
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_KECLEON
 	return
 
-FortreeCity_House1_EventScript_SetUpLoudred::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_LOUDRED
+FortreeCity_House1_EventScript_SetUpSnorunt::
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT
 	return
 
 FortreeCity_House1_EventScript_Trader::
 	lock
 	faceplayer
 	goto_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_LOUDRED
+	setvar VAR_0x8008, INGAME_TRADE_SNORUNT
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -86,7 +86,7 @@ FortreeCity_House1_EventScript_Zigzagoon::
 
 FortreeCity_House1_EventScript_Mon::
 	call_if_set FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_Kecleon
-	call_if_unset FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_Loudred
+	call_if_unset FLAG_FORTREE_NPC_TRADE_COMPLETED, FortreeCity_House1_EventScript_Snorunt
 	end
 
 FortreeCity_House1_EventScript_Kecleon::
@@ -99,12 +99,12 @@ FortreeCity_House1_EventScript_Kecleon::
 	release
 	end
 
-FortreeCity_House1_EventScript_Loudred::
+FortreeCity_House1_EventScript_Snorunt::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_LOUDRED, CRY_MODE_NORMAL
-	msgbox FortreeCity_House1_Text_Loudred, MSGBOX_DEFAULT
+	playmoncry SPECIES_SNORUNT, CRY_MODE_NORMAL
+	msgbox FortreeCity_House1_Text_Snorunt, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -136,7 +136,7 @@ FortreeCity_House1_Text_YouWontTradeMe:
 
 FortreeCity_House1_Text_GoingToMakeVolbeatStrong:
 	.string "My KECLEON is gonna be the strongest\n"
-	.string "one around! I hope LOUDRED fits\l"
+	.string "one around! I hope SNORUNT fits\l"
 	.string "right into your team!$"
 
 FortreeCity_House1_Text_TradingMemoriesWithOthers:
@@ -150,5 +150,5 @@ FortreeCity_House1_Text_Zigzagoon:
 FortreeCity_House1_Text_Kecleon:
 	.string "KECLEON: Puu puhyaah.$"
 
-FortreeCity_House1_Text_Loudred:
-	.string "ECHO: Lo lo LO!!$"
+FortreeCity_House1_Text_Snorunt:
+	.string "SNUGGLES:ck ck ckh!!$"

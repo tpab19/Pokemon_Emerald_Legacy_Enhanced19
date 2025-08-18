@@ -10,7 +10,7 @@ MauvilleCity_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_MAUVILLE_CITY
 	call Common_EventScript_UpdateBrineyLocation
 	call_if_set FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_SetUpWhismur
-	call_if_unset FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_SetUpSnorunt
+	call_if_unset FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_SetUpCacnea
 	goto MauvilleCity_PokemonCenter_1F_EventScript_SetMauvilleOldManGfx
 	end
 
@@ -22,8 +22,8 @@ MauvilleCity_PokemonCenter_1F_EventScript_SetUpWhismur::
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_WHISMUR
 	return
 
-MauvilleCity_PokemonCenter_1F_EventScript_SetUpSnorunt::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_SNORUNT
+MauvilleCity_PokemonCenter_1F_EventScript_SetUpCacnea::
+	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MON_BASE+SPECIES_CACNEA
 	return
 
 MauvilleCity_PokemonCenter_1F_EventScript_Nurse::
@@ -38,7 +38,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_Woman1::
 	lock
 	faceplayer
 	goto_if_set FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_TradeCompleted
-	setvar VAR_0x8008, INGAME_TRADE_SNORUNT
+	setvar VAR_0x8008, INGAME_TRADE_CACNEA
 	copyvar VAR_0x8004, VAR_0x8008
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
 	copyvar VAR_0x8009, VAR_RESULT
@@ -97,7 +97,7 @@ MauvilleCity_PokemonCenter_1F_EventScript_Youngster::
 
 MauvilleCity_PokemonCenter_1F_EventScript_Mon::
 	call_if_set FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_Whismur
-	call_if_unset FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_Snorunt
+	call_if_unset FLAG_MAUVILLE_NPC_TRADE_COMPLETED, MauvilleCity_PokemonCenter_1F_EventScript_Cacnea
 	end
 
 MauvilleCity_PokemonCenter_1F_EventScript_Whismur::
@@ -110,12 +110,12 @@ MauvilleCity_PokemonCenter_1F_EventScript_Whismur::
 	release
 	end
 
-MauvilleCity_PokemonCenter_1F_EventScript_Snorunt::
+MauvilleCity_PokemonCenter_1F_EventScript_Cacnea::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_SNORUNT, CRY_MODE_NORMAL
-	msgbox MauvilleCity_PokemonCenter_1F_Text_Snorunt, MSGBOX_DEFAULT
+	playmoncry SPECIES_CACNEA, CRY_MODE_NORMAL
+	msgbox MauvilleCity_PokemonCenter_1F_Text_Cacnea, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -153,15 +153,15 @@ MauvilleCity_PokemonCenter_1F_Text_YouWontTradeMe:
 	.string "Oh, you don't want to trade?\p"
 	.string "That's alright, but if you change your\n"
 	.string "mind, I'd love to find a good partner for\l"
-	.string "my SNORUNT!$"
+	.string "my CACNEA!$"
 
 MauvilleCity_PokemonCenter_1F_Text_ThrilledToSeeNewPlaces:
-	.string "I know NIPPY will be thrilled to\n"
+	.string "I know PRICKLY will be thrilled to\n"
 	.string "see new places! With a bit of training, I\l"
 	.string "bet it'll become a real star!$"
 
 MauvilleCity_PokemonCenter_1F_Text_Whismur:
 	.string "WHISMUR: Whi wi wis...$"
 
-MauvilleCity_PokemonCenter_1F_Text_Snorunt:
-	.string "NIPPY: Rororororo!$"
+MauvilleCity_PokemonCenter_1F_Text_Cacnea:
+	.string "PRICKLY: CAC!$"
