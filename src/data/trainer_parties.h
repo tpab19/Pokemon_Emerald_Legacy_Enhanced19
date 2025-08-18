@@ -3709,14 +3709,14 @@ static const struct TrainerMon sParty_Sidney[] = {
     .lvl = 52,
     .species = SPECIES_CRAWDAUNT,
     .heldItem = ITEM_SCOPE_LENS,
-    .moves = {MOVE_CRABHAMMER, MOVE_SWORDS_DANCE, MOVE_CRUNCH, MOVE_SLUDGE_BOMB}
+    .moves = {MOVE_CRABHAMMER, MOVE_SWORDS_DANCE, MOVE_SUCKER_PUNCH, MOVE_SLUDGE_BOMB}
     },
     {
     .iv = 255,
     .lvl = 53,
     .species = SPECIES_ABSOL,
     .heldItem = ITEM_FIGY_BERRY,
-    .moves = {MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_AERIAL_ACE}
+    .moves = {MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_AIR_CUTTER}
     }
 };
 //Elite Four Phoebe
@@ -7782,8 +7782,8 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .iv = 150,
     .lvl = 49,
     .species = SPECIES_DELCATTY,
-    .heldItem = ITEM_LEFTOVERS,
-    .moves = {MOVE_SING, MOVE_DOUBLE_EDGE, MOVE_CHARM, MOVE_FAINT_ATTACK}
+    .heldItem = ITEM_SILK_SCARF,
+    .moves = {MOVE_SING, MOVE_FAKE_OUT, MOVE_CHARM, MOVE_HEADBUTT}
     },
     {
     .iv = 200,
@@ -7797,7 +7797,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .lvl = 49,
     .species = SPECIES_ALTARIA,
     .heldItem = ITEM_SHARP_BEAK,
-    .moves = {MOVE_AERIAL_ACE, MOVE_EARTHQUAKE, MOVE_FIRE_BLAST, MOVE_DRAGON_DANCE}
+    .moves = {MOVE_AIR_CUTTER, MOVE_EARTHQUAKE, MOVE_FIRE_BLAST, MOVE_DRAGON_DANCE}
     },
     {
     .iv = 150,

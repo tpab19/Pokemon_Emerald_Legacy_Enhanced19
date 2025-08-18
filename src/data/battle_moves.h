@@ -991,7 +991,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SOLAR_BEAM] =
     {
         .effect = EFFECT_SOLAR_BEAM,
-        .power = 120,
+        .power = 170,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 10,
@@ -3201,7 +3201,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_ANCIENT_POWER] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_ROCK,
         .accuracy = 100,
         .pp = 10,
@@ -4137,12 +4137,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_SILVER_WIND] =
     {
         .effect = EFFECT_ALL_STATS_UP_HIT,
-        .power = 60,
+        .power = 70,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 10,
-        .target = MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_BOTH,
         .priority = 0,
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
     },
