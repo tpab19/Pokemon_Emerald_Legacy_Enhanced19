@@ -1256,11 +1256,11 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_SHROOMISH
     },
-    [INGAME_TRADE_SNORUNT] =
+    [INGAME_TRADE_CACNEA] =
     {
-        .nickname = _("NIPPY"),
-        .species = SPECIES_SNORUNT,
-        .ivs = {14, 14, 14, 15, 15, 14},
+        .nickname = _("PRICKLY"),
+        .species = SPECIES_CACNEA,
+        .ivs = {25, 25, 25, 25, 25, 25},
         .abilityNum = 0,
         .otId = 12345,
         .conditions = {10, 10, 10, 10, 10},
@@ -1272,11 +1272,11 @@ static const struct InGameTrade sIngameTrades[] =
         .sheen = 10,
         .requestedSpecies = SPECIES_WHISMUR
     },
-    [INGAME_TRADE_LOUDRED] =
+    [INGAME_TRADE_SNORUNT] =
     {
-        .nickname = _("ECHO"),
-        .species = SPECIES_LOUDRED,
-        .ivs = {16, 17, 13, 13, 13, 13},
+        .nickname = _("SNUGGLES"),
+        .species = SPECIES_SNORUNT,
+        .ivs = {25, 25, 25, 25, 25, 25},
         .abilityNum = 0,
         .otId = 73997,
         .conditions = {5, 5, 30, 5, 5},
