@@ -8789,8 +8789,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_DELCATTY] =
     {
         .baseHP        = 75,
-        .baseAttack    = 75,
-        .baseDefense   = 70,
+        .baseAttack    = 80,
+        .baseDefense   = 65,
         .baseSpeed     = 110,
         .baseSpAttack  = 85,
         .baseSpDefense = 85,
