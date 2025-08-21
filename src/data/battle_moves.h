@@ -4657,7 +4657,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	[MOVE_SUCKER_PUNCH] =
     {
         .effect = EFFECT_HIT,
-        .power = 70,
+        .power = 50,
         .type = TYPE_DARK,
         .accuracy = 100,
         .pp = 8,
