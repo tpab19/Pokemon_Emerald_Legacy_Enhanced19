@@ -4447,7 +4447,7 @@ static const u16 sDustoxLevelUpLearnset[] = {
 static const u16 sLotadLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_BUBBLE),
-    LEVEL_UP_MOVE( 3, MOVE_GROWL),
+    LEVEL_UP_MOVE( 3, MOVE_RAIN_BALL),
     LEVEL_UP_MOVE( 7, MOVE_ABSORB),
     LEVEL_UP_MOVE(12, MOVE_NATURE_POWER),
     LEVEL_UP_MOVE(19, MOVE_BUBBLE_BEAM),

@@ -375,6 +375,7 @@ gBattleAnims_Moves::
 	.4byte Move_LEAF_STORM
 	.4byte Move_BOOMBURST
 	.4byte Move_SUCKER_PUNCH
+	.4byte Move_RAIN_BALL
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -10011,6 +10012,32 @@ WeatherBallIce:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 8, 1
 	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
 	call IceCrystalEffectShort
+	waitforvisualfinish
+	end
+	
+Move_RAIN_BALL:
+	loadspritegfx ANIM_TAG_WEATHER_BALL
+	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, ANIM_ATTACKER
+	delay 8
+	playsewithpan SE_M_SWAGGER, SOUND_PAN_ATTACKER
+	createsprite gWeatherBallUpSpriteTemplate, ANIM_ATTACKER, 2
+	waitforvisualfinish
+	delay 15
+	playsewithpan SE_M_DETECT, 0
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, F_PAL_BG | F_PAL_BATTLERS, 5, 1, RGB_WHITE, 10, RGB_BLACK, 0
+	waitforvisualfinish
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 50, 10
+	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	delay 8
+	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, -20, 20
+	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	delay 13
+	createsprite gWeatherBallWaterDownSpriteTemplate, ANIM_TARGET, 2, -30, -100, 25, 1, 0, 0
+	playsewithpan SE_M_CRABHAMMER, SOUND_PAN_TARGET
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 8, 1
+	playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_TARGET
 	waitforvisualfinish
 	end
 

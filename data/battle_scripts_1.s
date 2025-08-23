@@ -234,6 +234,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
 	.4byte BattleScript_EffectBlizzard               @ EFFECT_BLIZZARD
 	.4byte BattleScript_EffectLeafBlade              @ EFFECT_LEAF_BLADE
+	.4byte BattleScript_EffectRainBall               @ EFFECT_RAIN_BALL
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4677,3 +4678,13 @@ BattleScript_SnowWarningActivates::
 	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
 	call BattleScript_WeatherFormChanges
 	end3
+	
+BattleScript_EffectRainBall::
+	attackcanceler
+	attackstring
+	ppreduce
+	setrain
+	printfromtable gMoveWeatherChangeStringIds
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_WeatherFormChanges
+	goto BattleScript_EffectHit

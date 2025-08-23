@@ -1433,6 +1433,10 @@ static const u8 sSuckerPunchDescription[] = _(
     "An extremely fast punch\n"
     "that usually strikes first.");
 	
+static const u8 sRainBallDescription[] = _(
+    "A water ball attack\n"
+    "that sets up the rain.");
+
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
@@ -1795,4 +1799,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_LEAF_STORM - 1] = sLeafStormDescription,
     [MOVE_BOOMBURST - 1] = sBoomburstDescription,
 	[MOVE_SUCKER_PUNCH - 1] = sSuckerPunchDescription,
+	[MOVE_RAIN_BALL - 1] = sRainBallDescription,
 };
