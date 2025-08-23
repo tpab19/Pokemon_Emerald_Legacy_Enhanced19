@@ -1436,6 +1436,22 @@ static const u8 sSuckerPunchDescription[] = _(
 static const u8 sRainBallDescription[] = _(
     "A water ball attack\n"
     "that sets up the rain.");
+	
+static const u8 sSpiritGrabDescription[] = _(
+    "A ghostly swipe\n"
+    "that drains the targets energy.");
+	
+static const u8 sCopycatDescription[] = _(
+    "Counters the foe's attack\n"
+    "with the same move.");
+	
+static const u8 sSunBallDescription[] = _(
+    "A fire ball attack\n"
+    "that sets up a drought.");
+
+static const u8 sSnowBallDescription[] = _(
+    "An ice ball attack\n"
+    "that sets up a hailstorm.");
 
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
@@ -1800,4 +1816,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_BOOMBURST - 1] = sBoomburstDescription,
 	[MOVE_SUCKER_PUNCH - 1] = sSuckerPunchDescription,
 	[MOVE_RAIN_BALL - 1] = sRainBallDescription,
+	[MOVE_SPIRIT_GRAB - 1] = sSpiritGrabDescription,
+	[MOVE_COPYCAT - 1] = sCopycatDescription,
+	[MOVE_SUN_BALL - 1] = sSunBallDescription,
+	[MOVE_SNOW_BALL - 1] = sSnowBallDescription,
 };

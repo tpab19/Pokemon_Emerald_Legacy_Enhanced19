@@ -235,6 +235,9 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectBlizzard               @ EFFECT_BLIZZARD
 	.4byte BattleScript_EffectLeafBlade              @ EFFECT_LEAF_BLADE
 	.4byte BattleScript_EffectRainBall               @ EFFECT_RAIN_BALL
+	.4byte BattleScript_EffectSpiritGrab             @ EFFECT_SPIRIT_GRAB
+	.4byte BattleScript_EffectSunBall                @ EFFECT_SUN_BALL
+	.4byte BattleScript_EffectSnowBall               @ EFFECT_SNOW_BALL
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -4684,6 +4687,57 @@ BattleScript_EffectRainBall::
 	attackstring
 	ppreduce
 	setrain
+	printfromtable gMoveWeatherChangeStringIds
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_WeatherFormChanges
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSpiritGrab::
+	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
+	attackstring
+	ppreduce
+	critcalc
+	damagecalc
+	typecalc
+	adjustnormaldamage
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	negativedamage
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	jumpifmovehadnoeffect BattleScript_AbsorbTryFainting
+	printfromtable gAbsorbDrainStringIds
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	tryfaintmon BS_TARGET
+	call BattleScript_EffectAttackUp
+	
+BattleScript_EffectSunBall::
+	attackcanceler
+	attackstring
+	ppreduce
+	setsunny
+	printfromtable gMoveWeatherChangeStringIds
+	waitmessage B_WAIT_TIME_LONG
+	call BattleScript_WeatherFormChanges
+	goto BattleScript_EffectHit
+
+BattleScript_EffectSnowBall::
+	attackcanceler
+	attackstring
+	ppreduce
+	sethail
 	printfromtable gMoveWeatherChangeStringIds
 	waitmessage B_WAIT_TIME_LONG
 	call BattleScript_WeatherFormChanges

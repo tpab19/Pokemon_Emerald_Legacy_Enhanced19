@@ -4670,8 +4670,60 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	[MOVE_RAIN_BALL] =
     {
         .effect = EFFECT_RAIN_BALL,
-        .power = 70,
+        .power = 50,
         .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+	
+	[MOVE_SPIRIT_GRAB] =
+    {
+        .effect = EFFECT_SPIRIT_GRAB,
+        .power = 65,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+	
+	[MOVE_COPYCAT] =
+    {
+        .effect = EFFECT_MIRROR_MOVE,
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_DEPENDS,
+        .priority = 0,
+        .flags = 0,
+    },
+	
+	[MOVE_SUN_BALL] =
+    {
+        .effect = EFFECT_SUN_BALL,
+        .power = 50,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
+    },
+	
+	[MOVE_SNOW_BALL] =
+    {
+        .effect = EFFECT_SNOW_BALL,
+        .power = 50,
+        .type = TYPE_ICE,
         .accuracy = 100,
         .pp = 10,
         .secondaryEffectChance = 100,

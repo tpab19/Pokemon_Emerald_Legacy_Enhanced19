@@ -361,8 +361,12 @@
 #define MOVE_BOOMBURST 357
 #define MOVE_SUCKER_PUNCH 358
 #define MOVE_RAIN_BALL 359
+#define MOVE_SPIRIT_GRAB 360
+#define MOVE_COPYCAT 361
+#define MOVE_SUN_BALL 362
+#define MOVE_SNOW_BALL 363
 
-#define MOVES_COUNT 360
+#define MOVES_COUNT 364
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
