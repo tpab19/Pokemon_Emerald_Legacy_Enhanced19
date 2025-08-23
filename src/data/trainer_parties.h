@@ -3693,9 +3693,9 @@ static const struct TrainerMon sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 52,
-    .species = SPECIES_SHIFTRY,
-    .heldItem = ITEM_LUM_BERRY,
-    .moves = {MOVE_LEAF_BLADE, MOVE_FAINT_ATTACK, MOVE_AIR_CUTTER, MOVE_GRASS_WHISTLE}
+    .species = SPECIES_CACTURNE,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_NEEDLE_ARM, MOVE_SUCKER_PUNCH, MOVE_LEECH_SEED, MOVE_CURSE}
     },
     {
     .iv = 200,
@@ -3726,7 +3726,7 @@ static const struct TrainerMon sParty_Phoebe[] = {
     .lvl = 52,
     .species = SPECIES_SABLEYE,
     .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_ENCORE, MOVE_CRUNCH, MOVE_DESTINY_BOND, MOVE_WILL_O_WISP}
+    .moves = {MOVE_ENCORE, MOVE_SPIRIT_GRAB, MOVE_CRUNCH, MOVE_GLARE}
     },
     {
     .iv = 250,
@@ -3784,8 +3784,8 @@ static const struct TrainerMon sParty_Glacia[] = {
     .iv = 250,
     .lvl = 53,
     .species = SPECIES_CASTFORM,
-    .heldItem = ITEM_NONE,
-    .moves = {MOVE_WEATHER_BALL, MOVE_HYDRO_PUMP, MOVE_HAIL, MOVE_THUNDERBOLT}
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_BLIZZARD, MOVE_RAIN_BALL, MOVE_SNOW_BALL, MOVE_THUNDER}
     },
     {
     .iv = 250,
@@ -5048,7 +5048,7 @@ static const struct TrainerMon sParty_Wallace1[] = {
     .lvl = 49,
     .species = SPECIES_WHISCASH,
     .heldItem = ITEM_QUICK_CLAW,
-    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_RAIN_DANCE, MOVE_YAWN}
+    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_DRAGON_DANCE, MOVE_ICE_BEAM}
     },
 	{
     .iv = 255,
@@ -7783,7 +7783,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .lvl = 49,
     .species = SPECIES_DELCATTY,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_SING, MOVE_FAKE_OUT, MOVE_CHARM, MOVE_HEADBUTT}
+    .moves = {MOVE_SING, MOVE_ENCORE, MOVE_FAKE_OUT, MOVE_HEADBUTT}
     },
     {
     .iv = 200,
