@@ -5915,7 +5915,7 @@ Move_LEECH_LIFE:
 	blendoff
 	end
 	
-	Move_SPIRIT_GRAB:
+Move_SPIRIT_GRAB:
 	loadspritegfx ANIM_TAG_NEEDLE
 	loadspritegfx ANIM_TAG_ORBS
 	delay 1
@@ -10075,7 +10075,7 @@ Move_RAIN_BALL:
 	waitforvisualfinish
 	end
 	
-	Move_SUN_BALL:
+Move_SUN_BALL:
 	loadspritegfx ANIM_TAG_WEATHER_BALL
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, ANIM_ATTACKER
 	delay 8
@@ -10101,7 +10101,7 @@ Move_RAIN_BALL:
 	waitforvisualfinish
 	end
 	
-	Move_SNOW_BALL:
+Move_SNOW_BALL:
 	loadspritegfx ANIM_TAG_WEATHER_BALL
 	createsprite gVerticalDipSpriteTemplate, ANIM_ATTACKER, 2, 8, 1, ANIM_ATTACKER
 	delay 8
