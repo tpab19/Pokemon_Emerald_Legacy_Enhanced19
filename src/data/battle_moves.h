@@ -4683,7 +4683,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	[MOVE_SPIRIT_GRAB] =
     {
         .effect = EFFECT_SPIRIT_GRAB,
-        .power = 65,
+        .power = 75,
         .type = TYPE_GHOST,
         .accuracy = 100,
         .pp = 15,
