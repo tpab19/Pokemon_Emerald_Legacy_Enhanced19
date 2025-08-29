@@ -173,12 +173,12 @@ static const struct TrainerMon sParty_Declan[] = {
 static const struct TrainerMon sParty_GruntRusturfTunnel[] = {
     {
     .iv = 20,
-    .lvl = 11,
+    .lvl = 13,
     .species = SPECIES_POOCHYENA,
     },
     {
     .iv = 20,
-    .lvl = 11,
+    .lvl = 14,
     .species = SPECIES_CARVANHA,
     }
 };
@@ -1923,7 +1923,7 @@ static const struct TrainerMon sParty_Jessica5[] = {
 static const struct TrainerMon sParty_Winston1[] = {
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 9,
     .species = SPECIES_SLAKOTH,
     .heldItem = ITEM_NUGGET
     }
@@ -5148,12 +5148,12 @@ static const struct TrainerMon sParty_Ivan[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_MAGIKARP,
+    .species = SPECIES_GOLDEEN,
     },
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_GOLDEEN,
+    .species = SPECIES_WINGULL,
     }
 };
 // Route 114 Fisherman 3
@@ -5202,7 +5202,7 @@ static const struct TrainerMon sParty_Ned[] = {
     {
     .iv = 10,
     .lvl = 11,
-    .species = SPECIES_HORSEA,
+    .species = SPECIES_WINGULL,
     },
 };
 // Route 110 Fisherman
@@ -7265,12 +7265,12 @@ static const struct TrainerMon sParty_AmyAndLiv2[] = {
 static const struct TrainerMon sParty_GinaAndMia1[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 9,
     .species = SPECIES_SEEDOT,
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 9,
     .species = SPECIES_LOTAD,
     }
 };
@@ -9240,7 +9240,7 @@ static const struct TrainerMon sParty_Haley1[] = {
     {
     .iv = 0,
     .lvl = 6,
-    .species = SPECIES_LOTAD,
+    .species = SPECIES_TAILLOW,
     },
     {
     .iv = 0,
@@ -9393,7 +9393,7 @@ static const struct TrainerMon sParty_Rick[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_WURMPLE,
+    .species = SPECIES_SURSKIT,
     }
 };
 //Petalburg Woods Bug Catcher 1
@@ -9410,26 +9410,21 @@ static const struct TrainerMon sParty_Lyle[] = {
     },
     {
     .iv = 0,
-    .lvl = 3,
-    .species = SPECIES_WURMPLE,
+    .lvl = 7,
+    .species = SPECIES_CASCOON,
     },
-    {
-    .iv = 0,
-    .lvl = 3,
-    .species = SPECIES_WURMPLE,
-    }
 };
 // Route 116 Bug Catcher - Wurmple & Nincada
 static const struct TrainerMon sParty_Jose[] = {
     {
     .iv = 50,
     .lvl = 8,
-    .species = SPECIES_SILCOON,
+    .species = SPECIES_TRAPINCH,
     },
     {
     .iv = 50,
-    .lvl = 8,
-    .species = SPECIES_NINCADA,
+    .lvl = 10,
+    .species = SPECIES_DUSTOX,
     }
 };
 // Route 119 Bug Catcher 3
@@ -9470,14 +9465,9 @@ static const struct TrainerMon sParty_Kent[] = {
 static const struct TrainerMon sParty_James1[] = {
     {
     .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_NINCADA,
+    .lvl = 10,
+    .species = SPECIES_BEAUTIFLY,
     },
-    {
-    .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_NINCADA,
-    }
 };
 
 static const struct TrainerMon sParty_James2[] = {
@@ -11636,7 +11626,7 @@ static const struct TrainerMon sParty_Johnson[] = {
     },
     {
     .iv = 0,
-    .lvl = 8,
+    .lvl = 11,
     .species = SPECIES_LOTAD,
     }
 };
