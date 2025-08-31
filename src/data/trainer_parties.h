@@ -4794,7 +4794,7 @@ static const struct TrainerMon sParty_Calvin1[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_POOCHYENA,
+    .species = SPECIES_SEEDOT,
     }
 };
 //Route 104 Youngster
@@ -4807,7 +4807,7 @@ static const struct TrainerMon sParty_Billy[] = {
     {
     .iv = 0,
     .lvl = 7,
-    .species = SPECIES_SEEDOT,
+    .species = SPECIES_WINGULL,
     }
 };
 //Rustboro Gym Youngster 1 (One by himself)
@@ -9231,15 +9231,15 @@ static const struct TrainerMon sParty_Tiana[] = {
     },
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_SHROOMISH,
+    .lvl = 6,
+    .species = SPECIES_LOTAD,
     }
 };
 //Route 104 North Lass
 static const struct TrainerMon sParty_Haley1[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 7,
     .species = SPECIES_TAILLOW,
     },
     {
