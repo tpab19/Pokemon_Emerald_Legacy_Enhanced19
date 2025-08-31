@@ -364,4 +364,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
 	[MOVE_COPYCAT] = _("COPYCAT"),
 	[MOVE_SUN_BALL] = _("SUN BALL"),
 	[MOVE_SNOW_BALL] = _("SNOW BALL"),
+	[MOVE_AQUA_JET] = _("AQUA JET"),
 };

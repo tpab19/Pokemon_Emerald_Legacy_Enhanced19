@@ -365,8 +365,9 @@
 #define MOVE_COPYCAT 361
 #define MOVE_SUN_BALL 362
 #define MOVE_SNOW_BALL 363
+#define MOVE_AQUA_JET 364
 
-#define MOVES_COUNT 364
+#define MOVES_COUNT 365
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF
