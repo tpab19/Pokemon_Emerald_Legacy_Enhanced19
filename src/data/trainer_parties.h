@@ -3861,7 +3861,7 @@ static const struct TrainerMon sParty_Roxanne1[] = {
     .lvl = 13,
     .species = SPECIES_ANORITH,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_FURY_SWIPES, MOVE_FURY_CUTTER, MOVE_NONE, MOVE_NONE}
+    .moves = {MOVE_SCRATCH, MOVE_FURY_CUTTER, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 100,
@@ -3899,7 +3899,7 @@ static const struct TrainerMon sParty_Brawly1[] = {
     .lvl = 19,
     .species = SPECIES_BRELOOM,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_MACH_PUNCH, MOVE_MEGA_DRAIN, MOVE_BULK_UP, MOVE_STUN_SPORE}
+    .moves = {MOVE_DOUBLE_KICK, MOVE_VINE_WHIP, MOVE_STUN_SPORE, MOVE_NONE}
     }
 };
 // Mauville Gym Leader
