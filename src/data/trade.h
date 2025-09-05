@@ -1244,7 +1244,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("MEL"),
         .species = SPECIES_NUMEL,
-        .ivs = {25, 25, 25, 25, 25, 25},
+        .ivs = {15, 15, 15, 15, 15, 15},
         .abilityNum = 0,
         .otId = 38727,
         .conditions = {30, 5, 5, 5, 5},
@@ -1260,7 +1260,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("PRICKLY"),
         .species = SPECIES_CACNEA,
-        .ivs = {25, 25, 25, 25, 25, 25},
+        .ivs = {21, 21, 21, 21, 21, 21},
         .abilityNum = 1,
         .otId = 12345,
         .conditions = {10, 10, 10, 10, 10},
@@ -1276,7 +1276,7 @@ static const struct InGameTrade sIngameTrades[] =
     {
         .nickname = _("SNUGGLES"),
         .species = SPECIES_SNORUNT,
-        .ivs = {25, 25, 25, 25, 25, 25},
+        .ivs = {23, 23, 23, 23, 23, 23},
         .abilityNum = 1,
         .otId = 73997,
         .conditions = {5, 5, 30, 5, 5},
