@@ -1456,6 +1456,10 @@ static const u8 sSnowBallDescription[] = _(
 static const u8 sAquaJetDescription[] = _(
     "An extremely fast water attack\n"
     "that usually strikes first.");
+	
+static const u8 sLavaPlumeDescription[] = _(
+    "A heat blast that may burn\n"
+    "the foe.");
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
@@ -1824,4 +1828,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 	[MOVE_SUN_BALL - 1] = sSunBallDescription,
 	[MOVE_SNOW_BALL - 1] = sSnowBallDescription,
 	[MOVE_AQUA_JET - 1] = sAquaJetDescription,
+	[MOVE_LAVA_PLUME - 1] = sLavaPlumeDescription,
 };
