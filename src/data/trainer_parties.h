@@ -1342,7 +1342,7 @@ static const struct TrainerMon sParty_Brooke1[] = {
     {
     .iv = 100,
     .lvl = 21,
-    .species = SPECIES_NUMEL,
+    .species = SPECIES_VULPIX,
     },
     {
     .iv = 100,
@@ -3971,7 +3971,7 @@ static const struct TrainerMon sParty_Norman1[] = {
     .lvl = 30,
     .species = SPECIES_DELCATTY,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_CHARM, MOVE_HEADBUTT, MOVE_ENCORE, MOVE_FAINT_ATTACK}
+    .moves = {MOVE_TICKLE, MOVE_FAKE_OUT, MOVE_ENCORE, MOVE_HEADBUTT}
     },
 	{
     .iv = 200,
@@ -7153,12 +7153,12 @@ static const struct TrainerMon sParty_Irene[] = {
     {
     .iv = 0,
     .lvl = 22,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_VOLBEAT,
     },
     {
     .iv = 0,
     .lvl = 22,
-    .species = SPECIES_MARILL,
+    .species = SPECIES_LOMBRE,
     }
 };
 
@@ -7783,7 +7783,7 @@ static const struct TrainerMon sParty_WallyVR1[] = {
     .lvl = 49,
     .species = SPECIES_DELCATTY,
     .heldItem = ITEM_SILK_SCARF,
-    .moves = {MOVE_SING, MOVE_ENCORE, MOVE_FAKE_OUT, MOVE_HEADBUTT}
+    .moves = {MOVE_WISH, MOVE_ENCORE, MOVE_SECRET_POWER, MOVE_HEADBUTT}
     },
     {
     .iv = 200,
@@ -11027,7 +11027,7 @@ static const struct TrainerMon sParty_Bianca[] = {
     {
     .iv = 0,
     .lvl = 21,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_CACNEA,
     }
 };
 //Route 111 Mid Kindler
@@ -11095,7 +11095,7 @@ static const struct TrainerMon sParty_Angelina[] = {
     {
     .iv = 0,
     .lvl = 24,
-    .species = SPECIES_SURSKIT,
+    .species = SPECIES_MASQUERAIN,
     }
 };
 // Route 114 Fisherman 2
